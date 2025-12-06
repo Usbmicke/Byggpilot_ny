@@ -3,5 +3,17 @@
 @tailwind utilities;
 
 body {
-  @apply bg-background text-foreground;
+  @apply bg-background text-foreground antialiased;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-hover text-white font-medium py-2.5 px-5 rounded-lg transition-all duration-200 shadow-lg shadow-black/20 active:scale-95;
+  }
+  .input-field {
+    @apply w-full bg-[#383A40] border border-transparent focus:border-primary text-foreground placeholder-muted-foreground rounded-md p-3 focus:outline-none transition-colors;
+  }
+  .card {
+    @apply bg-card rounded-xl p-6 shadow-xl border border-border/50;
+  }
 }

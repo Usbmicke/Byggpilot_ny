@@ -1,0 +1,32 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper function to check if user is authenticated and matches the ID
+    function isOwner(userId) {
+      return request.auth != null && request.auth.uid == userId;
+    }
+
+    // USERS COLLECTION
+    // Allow users to read and write their own profile document.
+    match /users/{userId} {
+      allow read, write: if isOwner(userId);
+    }
+
+    // COMPANIES COLLECTION
+    match /companies/{companyId} {
+      // 1. Allow ANY authenticated user to CREATE a company (needed for first-time login)
+      allow create: if request.auth != null;
+      
+      // 2. Allow owner to read/update/delete existing company
+      // Note: 'resource.data' refers to the EXISTING document
+      allow read, update, delete: if request.auth != null && resource.data.ownerId == request.auth.uid;
+    }
+    
+    // PROJECTS (Basic rule, may need refinement)
+    match /projects/{projectId} {
+       allow create: if request.auth != null;
+       allow read, update, delete: if request.auth != null && resource.data.userId == request.auth.uid;
+    }
+  }
+}

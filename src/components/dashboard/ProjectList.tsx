@@ -17,9 +17,9 @@ export default function ProjectList() {
 
     if (projects.length === 0) {
         return (
-            <div className="text-center py-12 bg-white rounded-lg shadow border border-dashed border-gray-300">
-                <p className="text-gray-500 mb-4">Inga aktiva projekt</p>
-                <button className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
+            <div className="text-center py-12 rounded-lg border border-dashed border-border bg-background/50">
+                <p className="text-muted-foreground mb-4">Inga aktiva projekt</p>
+                <button className="btn-primary">
                     + Skapa ditt första projekt
                 </button>
             </div>
@@ -27,10 +27,10 @@ export default function ProjectList() {
     }
 
     return (
-        <div className="bg-white rounded-lg shadow overflow-hidden">
-            <ul className="divide-y divide-gray-200">
+        <div className="overflow-hidden">
+            <ul className="divide-y divide-border">
                 {projects.map((p) => (
-                    <li key={p.id} className="p-4 hover:bg-gray-50">
+                    <li key={p.id} className="p-4 hover:bg-white/5 transition-colors text-foreground">
                         {p.name}
                     </li>
                 ))}

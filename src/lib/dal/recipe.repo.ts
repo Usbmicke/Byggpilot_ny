@@ -29,6 +29,8 @@ export const RecipeRepo = {
     },
 
     async list(): Promise<Recipe[]> {
+        // NOTE: Currently returns ALL recipes (Global Templates). 
+        // If user-specific recipes are needed, add ownerId filtering here.
         const snapshot = await db.collection(collectionName).get();
         return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Recipe));
     },
