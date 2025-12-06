@@ -1,6 +1,7 @@
 import 'server-only';
 import { db } from './server';
 import { UserRecord } from 'firebase-admin/auth';
+import { Timestamp } from 'firebase-admin/firestore';
 
 // Define the User interface matching Firestore document structure
 export interface UserData {
@@ -8,8 +9,8 @@ export interface UserData {
     email: string | null;
     displayName: string | null;
     onboardingCompleted: boolean;
-    createdAt: FirebaseFirestore.Timestamp;
-    updatedAt: FirebaseFirestore.Timestamp;
+    createdAt: Timestamp;
+    updatedAt: Timestamp;
 }
 
 const COLLECTION = 'users';
@@ -25,7 +26,7 @@ export const UserRepo = {
         await db.collection(COLLECTION).doc(uid).set(
             {
                 ...data,
-                updatedAt: db.Timestamp.now() as any, // Cast to any to avoid type issues with different timestamp implementations
+                updatedAt: Timestamp.now(),
             },
             { merge: true }
         );

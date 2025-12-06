@@ -23,9 +23,8 @@ export default function DashboardPage() {
   const router = useRouter();
   const { user, isLoading: isAuthLoading } = useAuth();
 
-  const { data: profile, isLoading: isProfileLoading } = useGenkit(
-    (client) => client.getUserProfileFlow,
-    undefined
+  const { result: profile, isLoading: isProfileLoading } = useGenkit(
+    'userProfileFlow'
   );
 
   useEffect(() => {
@@ -49,7 +48,7 @@ export default function DashboardPage() {
           <div className="text-2xl font-bold text-foreground">
             {profile?.companyName ? `Välkommen, ${profile.companyName}` : 'Dashboard'}
           </div>
-          <button 
+          <button
             onClick={handleSignOut}
             className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300"
           >
@@ -57,7 +56,7 @@ export default function DashboardPage() {
           </button>
         </nav>
       </header>
-      
+
       <main className="container mx-auto px-6 py-10">
         <h1 className="text-4xl font-bold mb-8">Översikt</h1>
         <div className="bg-card p-8 rounded-xl shadow-lg">
@@ -65,15 +64,15 @@ export default function DashboardPage() {
             Här kommer din anpassade dashboard att visas. Vi har nu framgångsrikt kopplat ihop allting med den nya Guldstandarden!
           </p>
           <div className="mt-6 p-4 bg-background rounded-lg">
-              <h3 className="font-semibold text-lg text-green-400">Checklista för Temabyte:</h3>
-              <ul className="list-disc list-inside mt-2 text-foreground">
-                  <li><span className="text-green-500">✓</span> Definierat ny färgpalett i <code>tailwind.config.ts</code></li>
-                  <li><span className="text-green-500">✓</span> Applicerat globala stilar i <code>globals.css</code></li>
-                  <li><span className="text-green-500">✓</span> Uppdaterat <code>/</code> (Landningssida) med nytt tema</li>
-                  <li><span className="text-green-500">✓</span> Uppdaterat <code>/onboarding</code> med nytt tema</li>
-                  <li><span className="text-green-500">✓</span> Uppdaterat <code>/dashboard</code> med nytt tema</li>
-                  <li><span className="text-yellow-400">-</span> **Återstår:** Byt ut <code>public/logo.png</code> mot en version med transparent bakgrund.</li>
-              </ul>
+            <h3 className="font-semibold text-lg text-green-400">Checklista för Temabyte:</h3>
+            <ul className="list-disc list-inside mt-2 text-foreground">
+              <li><span className="text-green-500">✓</span> Definierat ny färgpalett i <code>tailwind.config.ts</code></li>
+              <li><span className="text-green-500">✓</span> Applicerat globala stilar i <code>globals.css</code></li>
+              <li><span className="text-green-500">✓</span> Uppdaterat <code>/</code> (Landningssida) med nytt tema</li>
+              <li><span className="text-green-500">✓</span> Uppdaterat <code>/onboarding</code> med nytt tema</li>
+              <li><span className="text-green-500">✓</span> Uppdaterat <code>/dashboard</code> med nytt tema</li>
+              <li><span className="text-yellow-400">-</span> **Återstår:** Byt ut <code>public/logo.png</code> mot en version med transparent bakgrund.</li>
+            </ul>
           </div>
         </div>
       </main>

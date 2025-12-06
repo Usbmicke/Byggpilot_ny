@@ -1,11 +1,12 @@
 import 'server-only';
 import { db } from './server';
+import { Timestamp } from 'firebase-admin/firestore';
 
 export interface ProjectData {
     id: string;
     name: string;
     status: 'active' | 'completed' | 'archived';
-    createdAt: FirebaseFirestore.Timestamp;
+    createdAt: Timestamp;
     ownerId: string;
 }
 
@@ -26,7 +27,7 @@ export const ProjectRepo = {
         const newProject: ProjectData = {
             id: docRef.id,
             ...data,
-            createdAt: db.Timestamp.now() as any,
+            createdAt: Timestamp.now(),
         };
         await docRef.set(newProject);
         return newProject;

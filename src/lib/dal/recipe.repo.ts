@@ -1,6 +1,5 @@
 import 'server-only';
 import { getFirestore } from 'firebase-admin/firestore';
-import { serverApp } from './server';
 
 // Define the Recipe Interface
 // "materialåtgång, tidsåtgång, risker (KMA)"
@@ -19,7 +18,7 @@ export interface Recipe {
     kmaRequirements?: string[]; // List of KMA flags e.g., 'chemicals', 'height'
 }
 
-const db = getFirestore(serverApp);
+import { db } from './server';
 const collectionName = 'recipes';
 
 export const RecipeRepo = {

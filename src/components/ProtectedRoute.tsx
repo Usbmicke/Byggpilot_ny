@@ -8,7 +8,7 @@ import { useGenkit } from '@/hooks/useGenkit'; // To access onboarding status if
 // For now, adhering to instructions: "Om onboardingCompleted (hämtat via Genkit) är false -> Onboarding"
 
 export default function ProtectedRoute({ children }: { children: React.ReactNode }) {
-    const { user, loading } = useAuth();
+    const { user, isLoading } = useAuth();
     const router = useRouter();
 
     // We assume user object in AuthProvider implies authentication.
@@ -19,12 +19,12 @@ export default function ProtectedRoute({ children }: { children: React.ReactNode
     // but logic for redirecting to Onboarding should be handled here or in a wrapper.
 
     useEffect(() => {
-        if (!loading && !user) {
+        if (!isLoading && !user) {
             router.push('/login');
         }
-    }, [user, loading, router]);
+    }, [user, isLoading, router]);
 
-    if (loading) return <div>Loading...</div>;
+    if (isLoading) return <div>Loading...</div>;
     if (!user) return null;
 
     return <>{children}</>;

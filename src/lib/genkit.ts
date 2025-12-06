@@ -7,12 +7,13 @@ import { enableFirebaseTelemetry } from '@genkit-ai/firebase';
 enableFirebaseTelemetry();
 
 // Flows imports to ensure registration
-import './flows/onboarding';
-import './flows/chat';
-import './tools/project.tools';
-import './tools/calculation.tools';
-import './tools/pdf.tools';
-import './tools/vision.tools';
+// Flows imports to ensure registration
+import './genkit/flows/onboarding';
+import './genkit/flows/chat';
+import './genkit/tools/project.tools';
+import './genkit/tools/calculation.tools';
+import './genkit/tools/pdf.tools';
+import './genkit/tools/vision.tools';
 
 export const ai = genkit({
   plugins: [googleAI()],

@@ -9,7 +9,7 @@ const auth = new GoogleAuth({
     // keyFile: process.env.GOOGLE_APPLICATION_CREDENTIALS, // Optional if Env var is set correctly
 });
 
-const service = drive({ version: 'v3', auth });
+const service = drive({ version: 'v3', auth: auth as any });
 
 export const GoogleDriveService = {
     async ensureFolderExists(folderName: string, parentId?: string): Promise<string> {

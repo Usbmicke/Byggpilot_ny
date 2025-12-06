@@ -6,13 +6,13 @@ import { auth } from '@/lib/firebase/client';
 
 interface AuthContextType {
   user: User | null;
-  loading: boolean;
+  isLoading: boolean;
   getToken: () => Promise<string | null>;
 }
 
 const AuthContext = createContext<AuthContextType>({
   user: null,
-  loading: true,
+  isLoading: true,
   getToken: async () => null,
 });
 
@@ -20,12 +20,12 @@ export const useAuth = () => useContext(AuthContext);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const unsubscribe = onIdTokenChanged(auth, async (currentUser: User | null) => {
       setUser(currentUser);
-      setLoading(false);
+      setIsLoading(false);
 
       if (user) {
         // Refresh token proactively if needed, or just rely on getIdToken
@@ -42,7 +42,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, getToken }}>
+    <AuthContext.Provider value={{ user, isLoading, getToken }}>
       {children}
     </AuthContext.Provider>
   );
