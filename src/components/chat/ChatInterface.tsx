@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { useGenkit } from '@/hooks/useGenkit';
-import ReactMarkdown from 'react-markdown'; // Ensure this is installed
+import ReactMarkdown from 'react-markdown';
+import { chatAction } from '@/app/actions';
 
 interface Message {
     role: 'user' | 'model' | 'system';
@@ -13,15 +13,8 @@ export default function ChatInterface() {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
-
-    // useGenkit hook for the 'chatFlow'
-    // Note: Standard SWR/fetcher doesn't support streaming easily without custom logic.
-    // For MVP "Streaming UI" (requested in vigtigt.md), we might fake it or fetch full text for now 
-    // until we upgrade the hook to support ReadableStream. 
-    // Given instructions: "Implementera frontend-logik för att rendera texten ord-för-ord ('skrivmaskinseffekt')."
-    // If the backend returns full text, we can simulate typewriter effect here.
-    const { runFlow, isLoading } = useGenkit<any, string>('chatFlow');
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -35,39 +28,47 @@ export default function ChatInterface() {
         if (!input.trim()) return;
 
         const userMsg: Message = { role: 'user', content: input };
-        setMessages((prev) => [...prev, userMsg]);
+        const newHistory = [...messages, userMsg];
+        setMessages(newHistory);
         setInput('');
+        setIsLoading(true);
 
         try {
-            // Call Genkit Flow
-            // Pass history? 
-            // The flow expects { messages: [] }
-            const responseText = await runFlow({
-                messages: [...messages, userMsg]
-            });
+            // Call Server Action
+            const result = await chatAction(newHistory);
 
-            // Typewriter effect simulation since we might get full text at once for now
+            if (!result.success || !result.text) {
+                throw new Error(result.error || 'No response text');
+            }
+
+            const responseText = result.text;
+
+            // Typewriter effect simulation
             const modelMsg: Message = { role: 'model', content: '' };
             setMessages((prev) => [...prev, modelMsg]);
 
-            // Simple typewriter logic
             let i = 0;
             const interval = setInterval(() => {
                 setMessages((prev) => {
-                    const newHistory = [...prev];
-                    const lastMsg = newHistory[newHistory.length - 1];
-                    if (lastMsg.role === 'model') {
-                        lastMsg.content = responseText.slice(0, i + 1);
+                    const latest = [...prev];
+                    const last = latest[latest.length - 1];
+                    // Ensure we are updating the model message we just added
+                    if (last.role === 'model') {
+                        last.content = responseText.slice(0, i + 1);
                     }
-                    return newHistory;
+                    return latest;
                 });
                 i++;
-                if (i === responseText.length) clearInterval(interval);
-            }, 10); // Adjust speed
+                if (i > responseText.length) {
+                    clearInterval(interval);
+                    setIsLoading(false);
+                }
+            }, 10); // Speed
 
         } catch (error) {
             console.error(error);
             setMessages((prev) => [...prev, { role: 'model', content: 'Ursäkta, något gick fel. Försök igen.' }]);
+            setIsLoading(false);
         }
     };
 
@@ -110,8 +111,8 @@ export default function ChatInterface() {
                         >
                             <div
                                 className={`max-w-[85%] rounded-lg p-3 text-sm ${m.role === 'user'
-                                        ? 'bg-indigo-600 text-white rounded-br-none'
-                                        : 'bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-none'
+                                    ? 'bg-indigo-600 text-white rounded-br-none'
+                                    : 'bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-none'
                                     }`}
                             >
                                 {m.role === 'model' ? (

@@ -23,7 +23,7 @@ export const chatFlow = ai.defineFlow(
     },
     async (input) => {
         const { text } = await ai.generate({
-            prompt: input.messages.map(m => `${m.role}: ${m.content}`).join('\n'),
+            prompt: `System: You are ByggPilot Co-Pilot, a helpful AI assistant for Swedish construction projects. Today is ${new Date().toLocaleDateString('sv-SE')}. Answer in Swedish unless asked otherwise.\n\n` + input.messages.map(m => `${m.role}: ${m.content}`).join('\n'),
             model: 'googleai/gemini-2.5-flash',
             config: {
                 temperature: 0.7,

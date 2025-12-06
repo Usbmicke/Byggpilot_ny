@@ -54,3 +54,18 @@ export async function createCompanyDriveFolderAction(accessToken: string, compan
     return { success: false, error: error.message };
   }
 }
+// ... existing code ...
+
+import { chatFlow } from '@/lib/genkit/flows/chat';
+
+export async function chatAction(messages: any[]) {
+  try {
+    console.log('💬 Chat Action Triggered');
+    const response = await chatFlow({ messages });
+    console.log('✅ Chat Action Success');
+    return { success: true, text: response };
+  } catch (error: any) {
+    console.error('❌ Chat Action Failed:', error);
+    return { success: false, error: error.message || 'Unknown error' };
+  }
+}

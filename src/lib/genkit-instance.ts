@@ -4,7 +4,7 @@ import { googleAI } from '@genkit-ai/google-genai';
 import { enableFirebaseTelemetry } from '@genkit-ai/firebase';
 
 // Starta telemetri
-enableFirebaseTelemetry();
+// enableFirebaseTelemetry();
 
 // Create the AI instance (Singleton)
 export const ai = genkit({
