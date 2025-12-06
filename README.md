@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ByggPilot 2.0 🚀
 
-## Getting Started
+ByggPilot är nästa generations affärssystem för byggbranschen, drivet av AI (Genkit + Gemini).
 
-First, run the development server:
+## 🌟 Funktioner
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **AI Co-Pilot**: En intelligent assistent (`gemini-2.5-flash`) som hjälper dig att skapa projekt, räkna på offerter och svara på frågor.
+- **Offer-motor**: Automatiska kalkyleringar med riskbedömning och dokumentgenerering.
+- **KMA-automatisering**: Vision AI (`analyzeReceipt`) för kvitton och automatisk riskanalys (AMP) vid projektstart.
+- **Dashboard**: Modern översikt med widgets och snabbkommandon (Cmd+K).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Teknisk Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: Next.js 16 (App Router)
+- **AI**: Google Genkit + Gemini 2.5 Flash / 3.0 Pro
+- **Backend/DB**: Firebase (Firestore, Auth, Functions)
+- **Språk**: TypeScript (Strict Mode)
+- **Test**: Playwright
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Kom igång
 
-## Learn More
+1. **Installera beroenden**
+   ```bash
+   npm install --legacy-peer-deps
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Starta utvecklingsmiljön (Next.js + Genkit + Firebase Emulator)**
+   ```bash
+   npm run dev:all
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Kör tester**
+   ```bash
+   npm run test:e2e
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 Projektstruktur
 
-## Deploy on Vercel
+- `/src/lib/genkit`: AI-flöden och verktyg.
+- `/src/lib/dal`: Data Access Layer (Server-only).
+- `/src/app/(protected)`: Inloggad del av appen.
+- `/docs`: Projektplanering och arkitektur (t.ex. `viktigt.md`).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Byggt med ❤️ och ☕ för ByggPilot.*

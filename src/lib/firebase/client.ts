@@ -1,7 +1,6 @@
-
-// src/lib/firebase/client.ts
 import { initializeApp, getApps, getApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
 // Korrekt klient-konfiguration från dina instruktioner
 export const firebaseConfig = {
@@ -17,8 +16,9 @@ export const firebaseConfig = {
 // Initiera Firebase App (Singleton Pattern)
 const firebaseApp = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
-// Skapa och exportera Auth-instansen
+// Skapa och exportera Auth- och Firestore-instanser
 const auth = getAuth(firebaseApp);
+const db = getFirestore(firebaseApp);
 
-// Exportera den initierade appen och auth-instansen
-export { firebaseApp, auth };
+// Exportera den initierade appen, auth och db
+export { firebaseApp, auth, db };

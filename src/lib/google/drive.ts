@@ -1,0 +1,53 @@
+import 'server-only';
+import { drive } from '@googleapis/drive'; // Updated import based on package
+import { GoogleAuth } from 'google-auth-library';
+
+// Initialize auth - assumes Application Default Credentials (ADC)
+// or use keyFile/credentials from env
+const auth = new GoogleAuth({
+    scopes: ['https://www.googleapis.com/auth/drive'],
+    // keyFile: process.env.GOOGLE_APPLICATION_CREDENTIALS, // Optional if Env var is set correctly
+});
+
+const service = drive({ version: 'v3', auth });
+
+export const GoogleDriveService = {
+    async ensureFolderExists(folderName: string, parentId?: string): Promise<string> {
+        const query = [
+            `mimeType = 'application/vnd.google-apps.folder'`,
+            `name = '${folderName}'`,
+            `trashed = false`,
+            parentId ? `'${parentId}' in parents` : undefined,
+        ].filter(Boolean).join(' and ');
+
+        const res = await service.files.list({
+            q: query,
+            fields: 'files(id, name)',
+            spaces: 'drive',
+        });
+
+        if (res.data.files && res.data.files.length > 0) {
+            return res.data.files[0].id!;
+        }
+
+        // Create if not exists
+        const fileMetadata: any = {
+            name: folderName,
+            mimeType: 'application/vnd.google-apps.folder',
+        };
+        if (parentId) {
+            fileMetadata.parents = [parentId];
+        }
+
+        const file = await service.files.create({
+            requestBody: fileMetadata,
+            fields: 'id',
+        });
+
+        return file.data.id!;
+    },
+
+    async createProjectFolder(projectName: string, companyFolderId: string) {
+        return this.ensureFolderExists(projectName, companyFolderId);
+    }
+};

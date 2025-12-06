@@ -21,8 +21,8 @@ const eslintConfig = defineConfig([
         {
           "patterns": [
             {
-              "group": ["src/genkit/dal/*"],
-              "message": "DAL-moduler (Data Access Layer) får endast importeras i server-miljöer (t.ex. Genkit-flöden eller Next.js API-routes)."
+              "group": ["src/lib/dal/*", "firebase-admin", "server-only"],
+              "message": "Server-side modules (DAL, firebase-admin, server-only) must NOT be imported in client components."
             }
           ]
         }

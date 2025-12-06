@@ -10,17 +10,16 @@ export default function Error({
   reset: () => void;
 }) {
   useEffect(() => {
-    // Logga felet till en felrapporteringstjänst (t.ex. Sentry)
-    // I detta exempel loggar vi bara till konsolen.
+    // Logga felet till konsolen
     console.error(error);
   }, [error]);
 
   return (
-    <div style={{ 
-      textAlign: 'center', 
-      padding: '50px', 
-      fontFamily: 'sans-serif', 
-      color: '#333' 
+    <div style={{
+      textAlign: 'center',
+      padding: '50px',
+      fontFamily: 'sans-serif',
+      color: '#333'
     }}>
       <h2>Hoppsan! Något gick fel.</h2>
       <p>Ett oväntat fel inträffade. Vårt tekniska team har automatiskt meddelats.</p>
@@ -41,14 +40,14 @@ export default function Error({
       </button>
       {/* För utveckling kan det vara bra att se själva felet */}
       {process.env.NODE_ENV === 'development' && (
-        <pre style={{ 
-          marginTop: '20px', 
-          padding: '15px', 
-          background: '#f3f3f3', 
-          borderRadius: '5px', 
-          textAlign: 'left', 
-          whiteSpace: 'pre-wrap', 
-          wordBreak: 'break-all' 
+        <pre style={{
+          marginTop: '20px',
+          padding: '15px',
+          background: '#f3f3f3',
+          borderRadius: '5px',
+          textAlign: 'left',
+          whiteSpace: 'pre-wrap',
+          wordBreak: 'break-all'
         }}>
           <strong>Error Details:</strong>\n
           {error.message}

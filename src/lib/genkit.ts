@@ -6,6 +6,14 @@ import { enableFirebaseTelemetry } from '@genkit-ai/firebase';
 // Starta telemetri för debugging (valfritt men bra)
 enableFirebaseTelemetry();
 
+// Flows imports to ensure registration
+import './flows/onboarding';
+import './flows/chat';
+import './tools/project.tools';
+import './tools/calculation.tools';
+import './tools/pdf.tools';
+import './tools/vision.tools';
+
 export const ai = genkit({
   plugins: [googleAI()],
 });
