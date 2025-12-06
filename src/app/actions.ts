@@ -5,7 +5,7 @@ import { ai } from '@/lib/genkit';
 export async function generateTextAction(prompt: string) {
   try {
     const { text } = await ai.generate({
-      model: 'googleai/gemini-1.5-flash',
+      model: 'googleai/gemini-2.5-flash',
       prompt: prompt,
       config: {
         temperature: 0.7,

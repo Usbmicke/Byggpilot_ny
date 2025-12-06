@@ -24,7 +24,7 @@ export default function ProtectedLayout({
                 </div>
             </div>
             <CommandCenter />
-            <OnboardingWizard />
+
             <ChatInterface />
         </ProtectedRoute>
     );
