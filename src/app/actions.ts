@@ -69,3 +69,104 @@ export async function chatAction(messages: any[]) {
     return { success: false, error: error.message || 'Unknown error' };
   }
 }
+// ... existing code ...
+
+import { ProjectRepo, ProjectData } from '@/lib/dal/project.repo';
+
+export async function createProjectAction(data: { name: string; address?: string; customerName?: string; description?: string; ownerId: string }) {
+  try {
+    console.log('🏗️ Create Project Action:', data.name);
+    if (!data.ownerId) throw new Error('Missing ownerId');
+
+    const project = await ProjectRepo.create({
+      ownerId: data.ownerId,
+      name: data.name,
+      address: data.address,
+      customerName: data.customerName,
+      description: data.description,
+      status: 'active'
+    });
+
+    return { success: true, project };
+  } catch (error: any) {
+    console.error('❌ Create Project Failed:', error);
+    return { success: false, error: error.message };
+  }
+}
+
+export async function getProjectsAction(ownerId: string) {
+  try {
+    if (!ownerId) return { success: false, error: 'No owner ID provided' };
+    const projects = await ProjectRepo.listByOwner(ownerId);
+    // Serialize timestamps for Client Components if needed (Next.js warns about passing plain objects with methods)
+    // Firestore timestamps have toMillis(), so we might need to convert.
+    // For now, let's return raw and see if Next.js complains (it usually does with class instances).
+    // converting to plain object:
+    const plainProjects = projects.map(p => ({
+      ...p,
+      createdAt: p.createdAt.toDate().toISOString() // Convert Timestamp to string
+    }));
+
+    return { success: true, projects: plainProjects };
+  } catch (error: any) {
+    console.error('❌ Get Projects Failed:', error);
+    return { success: false, error: error.message };
+  }
+}
+// ... existing code ...
+
+import { offerFlow } from '@/lib/genkit/flows/offer';
+import { OfferRepo, OfferData } from '@/lib/dal/offer.repo';
+
+export async function generateOfferAction(projectTitle: string, notes: string) {
+  try {
+    console.log('🤖 AI Generating Offer...');
+    const result = await offerFlow({ projectTitle, notes });
+    return { success: true, data: result };
+  } catch (error: any) {
+    console.error('❌ AI Offer Gen Failed:', error);
+    return { success: false, error: error.message };
+  }
+}
+
+export async function saveOfferAction(data: any) { // Type 'any' for speed, ideally OfferData
+  try {
+    console.log('💾 Saving Offer...');
+    if (!data.ownerId) throw new Error('Missing ownerId');
+
+    // Calculate totals if missing (safety net)
+    const items = data.items || [];
+    const totalAmount = items.reduce((sum: number, item: any) => sum + (item.quantity * item.unitPrice), 0);
+    const vatAmount = totalAmount * 0.25; // 25% Moms default
+
+    const offer = await OfferRepo.create({
+      ownerId: data.ownerId,
+      projectId: data.projectId,
+      title: data.title,
+      items: items,
+      introText: data.introText,
+      closingText: data.closingText,
+      totalAmount,
+      vatAmount,
+      status: 'draft'
+    });
+    return { success: true, offer };
+  } catch (error: any) {
+    console.error('❌ Save Offer Failed:', error);
+    return { success: false, error: error.message };
+  }
+}
+
+export async function getOffersAction(ownerId: string) {
+  try {
+    const offers = await OfferRepo.listByOwner(ownerId);
+    const plainOffers = offers.map(p => ({
+      ...p,
+      createdAt: p.createdAt.toDate().toISOString(),
+      updatedAt: p.updatedAt.toDate().toISOString()
+    }));
+    return { success: true, offers: plainOffers };
+  } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}

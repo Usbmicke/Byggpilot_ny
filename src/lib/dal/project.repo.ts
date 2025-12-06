@@ -5,7 +5,10 @@ import { Timestamp } from 'firebase-admin/firestore';
 export interface ProjectData {
     id: string;
     name: string;
-    status: 'active' | 'completed' | 'archived';
+    status: 'active' | 'completed' | 'paused' | 'archived';
+    address?: string;
+    customerName?: string;
+    description?: string;
     createdAt: Timestamp;
     ownerId: string;
 }
@@ -17,6 +20,7 @@ export const ProjectRepo = {
         const snapshot = await db
             .collection(COLLECTION)
             .where('ownerId', '==', ownerId)
+            // .orderBy('createdAt', 'desc') // Requires index
             .get();
 
         return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as ProjectData));
@@ -26,6 +30,7 @@ export const ProjectRepo = {
         const docRef = db.collection(COLLECTION).doc();
         const newProject: ProjectData = {
             id: docRef.id,
+
             ...data,
             createdAt: Timestamp.now(),
         };

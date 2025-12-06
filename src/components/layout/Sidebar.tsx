@@ -8,7 +8,8 @@ export default function Sidebar() {
 
     const navigation = [
         { name: 'Översikt', href: '/', icon: '🏠' },
-        { name: 'Projekt', href: '/projects', icon: 'dcr' },
+        { name: 'Projekt', href: '/projects', icon: '🏗️' },
+        { name: 'Offerter', href: '/offers', icon: '📄' },
         { name: 'Kunder', href: '/customers', icon: '👥' },
         { name: 'Inställningar', href: '/settings', icon: '⚙️' },
     ];
@@ -26,8 +27,8 @@ export default function Sidebar() {
                             key={item.name}
                             href={item.href}
                             className={`flex items-center px-4 py-3 text-sm font-medium rounded-md transition-colors ${isActive
-                                    ? 'bg-indigo-50 text-indigo-700'
-                                    : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                ? 'bg-indigo-50 text-indigo-700'
+                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                                 }`}
                         >
                             <span className="mr-3">{item.icon}</span>

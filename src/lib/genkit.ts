@@ -9,3 +9,4 @@ import './genkit/tools/project.tools';
 import './genkit/tools/calculation.tools';
 import './genkit/tools/pdf.tools';
 import './genkit/tools/vision.tools';
+import './genkit/flows/offer';

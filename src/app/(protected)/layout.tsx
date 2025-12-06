@@ -1,5 +1,5 @@
 import ProtectedRoute from '@/components/ProtectedRoute';
-import OnboardingWizard from '@/components/OnboardingWizard';
+
 import Sidebar from '@/components/layout/Sidebar';
 import Header from '@/components/layout/Header';
 import CommandCenter from '@/components/CommandCenter';
