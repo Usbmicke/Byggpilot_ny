@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useAuth } from "@/components/AuthProvider";
 import { useState } from 'react';
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
-import { doc, getDoc, setDoc, collection } from 'firebase/firestore';
+import { doc, getDoc, setDoc, collection, writeBatch } from 'firebase/firestore';
 import { auth, db } from '@/lib/firebase/client';
 import { useRouter } from 'next/navigation';
 
@@ -32,6 +32,14 @@ export default function Home() {
             });
 
             const result = await signInWithPopup(auth, provider);
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential?.accessToken;
+
+            if (token) {
+                // Save token for Drive API usage in Onboarding/Dashboard
+                localStorage.setItem('google_access_token', token);
+            }
+
             const loggedInUser = result.user;
 
             // Check if user exists
@@ -41,9 +49,12 @@ export default function Home() {
             let isOnboardingCompleted = false;
 
             if (!userDoc.exists()) {
-                // Create new company
+                // Use a Batch Write to ensure both Company and User are created, or neither.
+                // This prevents "orphaned companies" if the user creation fails.
+                const batch = writeBatch(db);
+
                 const companyRef = doc(collection(db, 'companies'));
-                await setDoc(companyRef, {
+                batch.set(companyRef, {
                     name: `Företag ${loggedInUser.displayName || ''}`,
                     createdAt: new Date(),
                     ownerId: loggedInUser.uid,
@@ -54,7 +65,7 @@ export default function Home() {
                 });
 
                 // Create new user linked to company
-                await setDoc(userDocRef, {
+                batch.set(userDocRef, {
                     email: loggedInUser.email,
                     displayName: loggedInUser.displayName,
                     photoURL: loggedInUser.photoURL,
@@ -64,6 +75,10 @@ export default function Home() {
                     status: 'active',
                     onboardingCompleted: false // Default to false
                 });
+
+                // Commit the batch
+                await batch.commit();
+                console.log("✅ Created new Company and User atomically.");
             } else {
                 // User exists, check onboarding status
                 const userData = userDoc.data();

@@ -1,0 +1,25 @@
+[
+    {
+        "origin": [
+            "http://localhost:3000",
+            "https://byggpilot-v2.web.app",
+            "https://byggpilot-v2.firebaseapp.com"
+        ],
+        "method": [
+            "GET",
+            "PUT",
+            "POST",
+            "DELETE",
+            "HEAD",
+            "OPTIONS"
+        ],
+        "responseHeader": [
+            "Content-Type",
+            "Authorization",
+            "Content-Length",
+            "User-Agent",
+            "x-goog-resumable"
+        ],
+        "maxAgeSeconds": 3600
+    }
+]

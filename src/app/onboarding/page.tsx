@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, FormEvent, useEffect } from 'react';
@@ -7,9 +6,9 @@ import { useAuth } from '@/components/AuthProvider';
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { firebaseApp, db } from '@/lib/firebase/client';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
-// import { runOnboardingAction } from '@/app/actions'; // Deprecated/Unused for now
+import { createCompanyDriveFolderAction } from '@/app/actions';
 
-// --- Ikoner (oförändrade) ---
+// --- Ikoner ---
 const BuildingOfficeIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 mr-2 text-muted-foreground"><path fillRule="evenodd" d="M4.5 2.25a.75.75 0 0 0-.75.75v12.75a.75.75 0 0 0 .75.75h.75v-2.25a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V18h.75a.75.75 0 0 0 .75-.75V3a.75.75 0 0 0-.75-.75h-6ZM9.75 18a.75.75 0 0 0 .75.75h.008a.75.75 0 0 0 .742-.75v-2.25a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 0 .75.75h.75a.75.75 0 0 0 .75-.75V9.313a2.25 2.25 0 0 0-1.23-2.043l-4.5-2.25a2.25 2.25 0 0 0-2.04 0l-4.5 2.25A2.25 2.25 0 0 0 6 9.313V18a.75.75 0 0 0 .75.75h3Z" clipRule="evenodd" /></svg>);
 const ArrowUpTrayIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" /></svg>);
 
@@ -73,6 +72,29 @@ export default function OnboardingPage() {
     return getDownloadURL(storageRef);
   };
 
+  const createCompanyFolder = async (companyName: string): Promise<string | null> => {
+    const token = localStorage.getItem('google_access_token');
+    console.log("🔍 Checking Google Token for Drive...", token ? "Found (Ends with " + token.slice(-5) + ")" : "MISSING");
+
+    if (!token) {
+      console.warn("⚠️ Inget Google Access Token hittades. Kan inte skapa Drive-mappar.");
+      alert("Varning: Vi hittade inget Google-token. Mappar kommer inte skapas. Prova att logga ut och in igen med 'Force Consent'.");
+      return null;
+    }
+
+    // Anropa Server Action istället för manuell fetch
+    console.log("🚀 Calling Server Action: createCompanyDriveFolderAction...");
+    const result = await createCompanyDriveFolderAction(token, companyName);
+    console.log("🏁 Server Action Result:", result);
+
+    if (result.success && result.folderId) {
+      return result.folderId;
+    } else {
+      console.error("❌ Kunde inte skapa mapp via Server Action:", result.error);
+      return null;
+    }
+  };
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!user || !companyName) return;
@@ -82,20 +104,21 @@ export default function OnboardingPage() {
 
     try {
       let logoUrl: string | undefined = undefined;
+      // Försök ladda upp logga om fil finns. ignorera fel (t.ex. CORS) för att inte blockera flödet
       if (logoFile) {
-        logoUrl = await uploadLogo(logoFile, user.uid);
+        try {
+          logoUrl = await uploadLogo(logoFile, user.uid);
+        } catch (logoErr) {
+          console.warn("Logo upload failed (likely CORS), proceeding anyway:", logoErr);
+          // Vi fortsätter ändå
+        }
       }
 
-      // 1. Update User to set onboardingCompleted = true
-      // We assume the user doc already exists from Login page.
+      // 1. Skapa Drive-mappar
+      const driveFolderId = await createCompanyFolder(companyName);
+
+      // 2. Hämta user data för att hitta companyId
       const userRef = doc(db, 'users', user.uid);
-
-      // Get current user data to find companyId
-      // In a real optimized app, we might store companyId in context or fetch it earlier.
-      // But we can just use the userRef to update.
-      // Wait, we need to update the Company document too!
-      // We need to know the companyId.
-
       const userSnap = await getDoc(userRef);
       if (!userSnap.exists()) throw new Error("Användare hittades inte.");
 
@@ -104,15 +127,16 @@ export default function OnboardingPage() {
 
       if (!companyId) throw new Error("Ingen företags-ID kopplat till användaren.");
 
-      // 2. Update Company Document
+      // 3. Update Company Document
       const companyRef = doc(db, 'companies', companyId);
       await setDoc(companyRef, {
         name: companyName,
         logoUrl: logoUrl || null,
+        googleDriveFolderId: driveFolderId || null,
         updatedAt: new Date()
       }, { merge: true });
 
-      // 3. Mark Onboarding as Completed on User Document
+      // 4. Mark Onboarding as Completed on User Document
       await setDoc(userRef, {
         onboardingCompleted: true,
         updatedAt: new Date()

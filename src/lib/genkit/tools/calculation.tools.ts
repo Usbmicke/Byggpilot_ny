@@ -1,5 +1,5 @@
 import 'server-only';
-import { ai } from '@/lib/genkit';
+import { ai } from '@/lib/genkit-instance';
 import { z } from 'genkit';
 import { RecipeRepo } from '@/lib/dal/recipe.repo';
 

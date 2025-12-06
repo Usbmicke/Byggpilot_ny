@@ -4,10 +4,10 @@ import { getFirestore } from 'firebase/firestore';
 
 // Korrekt klient-konfiguration från dina instruktioner
 export const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY!,
+  apiKey: "AIzaSyCZSTGIjL3r5AA3RfqCBCAgGdM8pu-hGNg",
   authDomain: "byggpilot-v2.firebaseapp.com",
   projectId: "byggpilot-v2",
-  storageBucket: "byggpilot-v2.appspot.com",
+  storageBucket: "byggpilot-v2.firebasestorage.app",
   messagingSenderId: "196837910328",
   appId: "1:196837910328:web:d4fbafaf756dbc079903cd",
   measurementId: "G-V3Z2WE286M"

@@ -1,5 +1,5 @@
 import 'server-only';
-import { ai } from '@/lib/genkit';
+import { ai } from '@/lib/genkit-instance';
 import { z } from 'genkit'; // Genkit's Zod export or standard zod
 import { UserRepo } from '@/lib/dal/user.repo';
 
