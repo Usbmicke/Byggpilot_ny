@@ -220,7 +220,7 @@ export default function CreateOfferPage() {
 
                 {/* Preview Column (Simple HTML preview, PDF is generated on download) */}
                 <div className="bg-background/90 p-6 rounded-xl border border-border shadow-sm overflow-y-auto flex items-center justify-center">
-                    <div className="bg-white shadow-2xl w-full max-w-[210mm] min-h-[297mm] p-8 text-[12px] relative transform scale-90 origin-top">
+                    <div className="bg-white text-gray-900 shadow-2xl w-full max-w-[210mm] min-h-[297mm] p-8 text-[12px] relative transform scale-90 origin-top">
                         {/* HTML Preview mirroring the PDF layout */}
                         <div className="flex justify-between border-b pb-4 mb-8">
                             <div>

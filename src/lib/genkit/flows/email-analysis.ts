@@ -34,20 +34,30 @@ export const emailAnalysisFlow = ai.defineFlow(
     },
     async (input) => {
         const prompt = `
-    Analyze this email for a Construction Company (Byggfirma).
+    Analyze this email for a Swedish Construction Company (Byggfirma).
     Sender: ${input.sender}
     Subject: ${input.subject}
     Body: "${input.body}"
 
-    Determine if this is a:
-    - 'meeting': Request for a meeting, site visit, or inspection.
-    - 'lead': New job inquiry, quote request, or project discussion.
-    - 'other': Spam, newsletters, invoices, or irrelevant.
+    Role: You are an intelligent assistant (InboxCopilot).
+    Task:
+    1. Determine the 'intent':
+       - 'meeting': Request for a meeting, site visit (platsbesök), or inspection.
+       - 'lead': Job inquiry, quote request (offertförfrågan), or new project.
+       - 'other': Spam, newsletters, invoices, or irrelevant.
 
-    If 'meeting', extract a suggested date/time (assume current year if missing). Format as ISO (YYYY-MM-DDTHH:mm:ss). If "Next Tuesday at 10", calculate it relative to today (${new Date().toISOString()}).
-    If 'lead', extract contact info.
+    2. If 'meeting', extract the 'suggestedDate'.
+       - Look for dates like "onsdag kl 14" (Wednesday 14:00).
+       - Assume the meeting is in the future relative to today: ${new Date().toISOString()}.
+       - If only generic "next week", pick a likely candidate or leave null.
+       - Format: ISO String (YYYY-MM-DDTHH:mm:ss).
 
-    Return JSON matching the schema.
+    3. Extract 'summary':
+       - This should be a helpful, conversational summary in Swedish.
+       - Example: "Anna vill boka möte på onsdag angående takbyte." or "Ny offertförfrågan från Johan om altanbygge."
+       - Include user intent and key details.
+
+    4. Return JSON matching the schema.
     `;
 
 
