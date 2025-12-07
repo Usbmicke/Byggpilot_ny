@@ -11,6 +11,7 @@ export interface ProjectData {
     description?: string;
     createdAt: Timestamp;
     ownerId: string;
+    driveFolderId?: string;
 }
 
 const COLLECTION = 'projects';
@@ -26,15 +27,27 @@ export const ProjectRepo = {
         return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as ProjectData));
     },
 
+    async get(id: string): Promise<ProjectData | null> {
+        const doc = await db.collection(COLLECTION).doc(id).get();
+        if (!doc.exists) return null;
+        return { id: doc.id, ...doc.data() } as ProjectData;
+    },
+
     async create(data: Omit<ProjectData, 'id' | 'createdAt'>) {
         const docRef = db.collection(COLLECTION).doc();
         const newProject: ProjectData = {
             id: docRef.id,
-
             ...data,
             createdAt: Timestamp.now(),
         };
-        await docRef.set(newProject);
+
+        // Sanitize: Firestore throws on 'undefined', so we remove those keys.
+        const msg = { ...newProject };
+        Object.keys(msg).forEach(key => {
+            if ((msg as any)[key] === undefined) delete (msg as any)[key];
+        });
+
+        await docRef.set(msg as ProjectData); // Cast back or just send msg
         return newProject;
     }
 };

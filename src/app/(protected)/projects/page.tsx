@@ -31,51 +31,51 @@ function CreateProjectModal({ isOpen, onClose, onCreated, ownerId }: any) {
     };
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-            <div className="bg-white rounded-xl shadow-xl p-6 w-full max-w-md animate-in fade-in zoom-in-95 duration-200">
-                <h2 className="text-xl font-bold mb-4 text-gray-900">Nytt Projekt</h2>
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
+            <div className="bg-card rounded-xl shadow-xl p-6 w-full max-w-md animate-in fade-in zoom-in-95 duration-200 border border-border">
+                <h2 className="text-xl font-bold mb-4 text-foreground">Nytt Projekt</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">Projektnamn</label>
+                        <label className="block text-sm font-medium text-foreground mb-1">Projektnamn</label>
                         <input
                             required
-                            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                            className="input-field"
                             value={formData.name}
                             onChange={e => setFormData({ ...formData, name: e.target.value })}
                             placeholder="t.ex. Villa Svensson"
                         />
                     </div>
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">Adress</label>
+                        <label className="block text-sm font-medium text-foreground mb-1">Adress</label>
                         <input
-                            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                            className="input-field"
                             value={formData.address}
                             onChange={e => setFormData({ ...formData, address: e.target.value })}
                         />
                     </div>
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">Kund</label>
+                        <label className="block text-sm font-medium text-foreground mb-1">Kund</label>
                         <input
-                            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                            className="input-field"
                             value={formData.customerName}
                             onChange={e => setFormData({ ...formData, customerName: e.target.value })}
                         />
                     </div>
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">Beskrivning</label>
+                        <label className="block text-sm font-medium text-foreground mb-1">Beskrivning</label>
                         <textarea
-                            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                            className="input-field resize-none"
                             value={formData.description}
                             onChange={e => setFormData({ ...formData, description: e.target.value })}
                             rows={3}
                         />
                     </div>
                     <div className="flex justify-end gap-2 mt-6">
-                        <button type="button" onClick={onClose} className="px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md">Avbryt</button>
+                        <button type="button" onClick={onClose} className="px-4 py-2 text-sm text-muted-foreground hover:bg-background rounded-md transition-colors">Avbryt</button>
                         <button
                             type="submit"
                             disabled={loading}
-                            className="px-4 py-2 text-sm bg-indigo-600 text-white rounded-md hover:bg-indigo-700 disabled:opacity-50"
+                            className="px-4 py-2 text-sm btn-primary disabled:opacity-50"
                         >
                             {loading ? 'Skapar...' : 'Skapa Projekt'}
                         </button>
@@ -110,12 +110,12 @@ export default function ProjectsPage() {
         <div className="space-y-6">
             <div className="flex items-center justify-between">
                 <div>
-                    <h1 className="text-2xl font-bold text-gray-900">Mina Projekt</h1>
-                    <p className="text-gray-500">Hantera dina pågående och avslutade jobb.</p>
+                    <h1 className="text-2xl font-bold text-foreground">Mina Projekt</h1>
+                    <p className="text-muted-foreground">Hantera dina pågående och avslutade jobb.</p>
                 </div>
                 <button
                     onClick={() => setIsModalOpen(true)}
-                    className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors shadow-sm"
+                    className="flex items-center gap-2 btn-primary transition-colors shadow-sm"
                 >
                     <Plus size={20} />
                     Nytt Projekt
@@ -125,13 +125,13 @@ export default function ProjectsPage() {
             {loading ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {[1, 2, 3].map(i => (
-                        <div key={i} className="h-48 bg-gray-200 rounded-xl animate-pulse"></div>
+                        <div key={i} className="h-48 bg-card/50 rounded-xl animate-pulse border border-border"></div>
                     ))}
                 </div>
             ) : projects.length === 0 ? (
-                <div className="text-center py-20 bg-white rounded-xl border border-dashed border-gray-300">
-                    <h3 className="text-lg font-medium text-gray-900">Inga projekt än</h3>
-                    <p className="text-gray-500 mb-6">Skapa ditt första projekt för att komma igång.</p>
+                <div className="text-center py-20 bg-card rounded-xl border border-dashed border-border">
+                    <h3 className="text-lg font-medium text-foreground">Inga projekt än</h3>
+                    <p className="text-muted-foreground mb-6">Skapa ditt första projekt för att komma igång.</p>
                     <button
                         onClick={() => setIsModalOpen(true)}
                         className="text-indigo-600 font-medium hover:underline"
@@ -142,20 +142,20 @@ export default function ProjectsPage() {
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {projects.map((project) => (
-                        <div key={project.id} className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow group">
+                        <div key={project.id} className="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-md transition-all group hover:border-primary/50">
                             <div className="flex justify-between items-start mb-4">
-                                <div className="h-10 w-10 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-600 font-bold text-lg">
+                                <div className="h-10 w-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary font-bold text-lg">
                                     {project.name.charAt(0).toUpperCase()}
                                 </div>
-                                <span className={`px-2 py-1 rounded-full text-xs font-medium ${project.status === 'active' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-600'
+                                <span className={`px-2 py-1 rounded-full text-xs font-medium ${project.status === 'active' ? 'bg-emerald-500/10 text-emerald-500' : 'bg-secondary text-muted-foreground'
                                     }`}>
                                     {project.status === 'active' ? 'Pågående' : project.status}
                                 </span>
                             </div>
-                            <h3 className="font-semibold text-gray-900 text-lg mb-1 group-hover:text-indigo-600 transition-colors">{project.name}</h3>
-                            <p className="text-sm text-gray-500 mb-4 line-clamp-2">{project.description || 'Ingen beskrivning'}</p>
+                            <h3 className="font-semibold text-foreground text-lg mb-1 group-hover:text-primary transition-colors">{project.name}</h3>
+                            <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{project.description || 'Ingen beskrivning'}</p>
 
-                            <div className="space-y-2 text-xs text-gray-500">
+                            <div className="space-y-2 text-xs text-muted-foreground">
                                 {project.address && (
                                     <div className="flex items-center gap-1">
                                         📍 {project.address}
@@ -166,10 +166,10 @@ export default function ProjectsPage() {
                                         👤 {project.customerName}
                                     </div>
                                 )}
-                                <div className="pt-3 border-t border-gray-100 mt-4 flex justify-between items-center">
+                                <div className="pt-3 border-t border-border mt-4 flex justify-between items-center">
                                     <span>Skapad {new Date(project.createdAt).toLocaleDateString('sv-SE')}</span>
                                     {/* Placeholder for future actions */}
-                                    <span className="text-gray-300">Mer info &rarr;</span>
+                                    <span className="text-primary/50 group-hover:text-primary transition-colors">Mer info &rarr;</span>
                                 </div>
                             </div>
                         </div>

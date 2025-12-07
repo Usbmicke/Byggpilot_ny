@@ -8,5 +8,7 @@ import { enableFirebaseTelemetry } from '@genkit-ai/firebase';
 
 // Create the AI instance (Singleton)
 export const ai = genkit({
-    plugins: [googleAI()],
+    plugins: [googleAI({
+        apiKey: process.env.GOOGLE_GENAI_API_KEY || process.env.GOOGLE_API_KEY
+    })],
 });

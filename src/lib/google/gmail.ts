@@ -19,7 +19,7 @@ export const GmailService = {
         // Get list of message IDs
         const response = await gmail.users.messages.list({
             userId: 'me',
-            q: `is:unread ${dateQuery} category:primary -is:spam -is:promotions -is:social`, // Strict filtering to save AI costs
+            q: `is:unread ${dateQuery} -is:spam -is:promotions -is:social`, // Relaxed filtering for better detection
             maxResults: limit,
         });
 

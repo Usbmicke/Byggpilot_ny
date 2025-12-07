@@ -1,10 +1,22 @@
 'use client';
 
+import { auth } from '@/lib/firebase/client';
+import { signOut } from 'firebase/auth';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 export default function Sidebar() {
     const pathname = usePathname();
+    const router = useRouter();
+
+    const handleLogout = async () => {
+        try {
+            await signOut(auth);
+            router.push('/login');
+        } catch (error) {
+            console.error('Logout error:', error);
+        }
+    };
 
     const navigation = [
         { name: 'Översikt', href: '/', icon: '🏠' },
@@ -17,7 +29,9 @@ export default function Sidebar() {
     return (
         <aside className="w-64 bg-card border-r border-border shadow-md hidden md:flex flex-col h-full">
             <div className="p-6">
-                <h1 className="text-2xl font-bold text-indigo-600">ByggPilot</h1>
+                <Link href="/">
+                    <h1 className="text-2xl font-bold text-indigo-600">ByggPilot</h1>
+                </Link>
             </div>
             <nav className="flex-1 px-4 space-y-1">
                 {navigation.map((item) => {
@@ -38,11 +52,11 @@ export default function Sidebar() {
                 })}
             </nav>
             <div className="p-4 border-t border-border">
-                <div className="flex items-center">
+                <div className="flex items-center group cursor-pointer" onClick={handleLogout}>
                     <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center text-xs font-medium text-primary">U</div>
                     <div className="ml-3">
                         <p className="text-sm font-medium text-foreground">Användare</p>
-                        <p className="text-xs text-muted-foreground">Logga ut</p>
+                        <p className="text-xs text-muted-foreground group-hover:text-red-500 transition-colors">Logga ut</p>
                     </div>
                 </div>
             </div>

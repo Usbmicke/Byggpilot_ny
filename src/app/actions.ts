@@ -8,6 +8,9 @@ import { ProjectRepo } from '@/lib/dal/project.repo';
 import { OfferRepo } from '@/lib/dal/offer.repo';
 import { GmailService } from '@/lib/google/gmail';
 import { CalendarService } from '@/lib/google/calendar';
+import { db } from '@/lib/dal/server';
+import { CompanyRepo } from '@/lib/dal/company.repo';
+import { UserRepo } from '@/lib/dal/user.repo';
 
 // --- AI GENERATION ---
 export async function generateTextAction(prompt: string) {
@@ -27,27 +30,52 @@ export async function generateTextAction(prompt: string) {
 // --- GOOGLE DRIVE ---
 export async function createCompanyDriveFolderAction(accessToken: string, companyName: string): Promise<{ success: boolean; folderId?: string; error?: string }> {
   try {
-    const metadata = {
+    // 1. Create Root Folder
+    const rootMetadata = {
       name: `ByggPilot - ${companyName}`,
       mimeType: 'application/vnd.google-apps.folder',
     };
-    console.log("📂 Server Action: Attempting to create Drive folder for:", companyName);
-    const response = await fetch('https://www.googleapis.com/drive/v3/files', {
+
+    console.log("📂 Server Action: Creating Root Drive folder...");
+    const rootRes = await fetch('https://www.googleapis.com/drive/v3/files', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${accessToken}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(metadata),
+      body: JSON.stringify(rootMetadata),
     });
-    if (!response.ok) {
-      const errorData = await response.json();
-      console.error("❌ Drive API Error (Server Action):", errorData);
+
+    if (!rootRes.ok) {
+      const errorData = await rootRes.json();
+      console.error("❌ Drive Root Error:", errorData);
       return { success: false, error: JSON.stringify(errorData) };
     }
-    const file = await response.json();
-    console.log("✅ Drive Folder Created:", file.id);
-    return { success: true, folderId: file.id };
+    const rootFile = await rootRes.json();
+    const rootId = rootFile.id;
+    console.log("✅ Root Folder Created:", rootId);
+
+    // 2. Create Subfolders
+    const subfolders = ['Kunder', 'Projekt', 'Dokumentation', 'Offerter'];
+
+    await Promise.all(subfolders.map(async (name) => {
+      const folderMetadata = {
+        name: name,
+        mimeType: 'application/vnd.google-apps.folder',
+        parents: [rootId]
+      };
+      await fetch('https://www.googleapis.com/drive/v3/files', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${accessToken}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(folderMetadata),
+      });
+    }));
+
+    console.log("✅ Subfolders Created");
+    return { success: true, folderId: rootId };
   } catch (error: any) {
     console.error("❌ Server Action Failed (Exception):", error);
     return { success: false, error: error.message };
@@ -67,17 +95,77 @@ export async function chatAction(messages: any[]) {
 }
 
 // --- PROJECTS ---
-export async function createProjectAction(data: { name: string; address?: string; customerName?: string; description?: string; ownerId: string }) {
+export async function createProjectAction(data: { name: string; address?: string; customerName?: string; description?: string; ownerId: string; accessToken?: string }) {
+  // Helper: Find Folder
+  const findDriveFolder = async (token: string, name: string, parentId: string = 'root') => {
+    const q = `mimeType='application/vnd.google-apps.folder' and name='${name}' and '${parentId}' in parents and trashed=false`;
+    const res = await fetch(`https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent(q)}&fields=files(id,name)`, {
+      headers: { Authorization: `Bearer ${token}` }
+    });
+    const d = await res.json();
+    return d.files?.[0]?.id;
+  };
+
+  // Helper: Create Folder
+  const createDriveFolder = async (token: string, name: string, parentId: string = 'root') => {
+    const res = await fetch('https://www.googleapis.com/drive/v3/files', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, mimeType: 'application/vnd.google-apps.folder', parents: [parentId] })
+    });
+    const d = await res.json();
+    return d.id;
+  };
+
   try {
     console.log('🏗️ Create Project Action:', data.name);
     if (!data.ownerId) throw new Error('Missing ownerId');
+
+    let driveFolderId = undefined;
+
+    // Robust Drive Creation Logic
+    if (data.accessToken) {
+      try {
+        console.log("📂 Initiating Drive Folder Creation...");
+        const user = await UserRepo.get(data.ownerId);
+        if (user?.companyId) {
+          const company = await CompanyRepo.get(user.companyId);
+          if (company) {
+            const rootName = `ByggPilot - ${company.name}`;
+            let rootId = await findDriveFolder(data.accessToken, rootName);
+
+            if (!rootId) {
+              console.log("root folder not found, creating:", rootName);
+              rootId = await createDriveFolder(data.accessToken, rootName);
+            }
+
+            if (rootId) {
+              let projectsId = await findDriveFolder(data.accessToken, 'Projekt', rootId);
+              if (!projectsId) {
+                console.log("Projects folder not found, creating...");
+                projectsId = await createDriveFolder(data.accessToken, 'Projekt', rootId);
+              }
+
+              if (projectsId) {
+                driveFolderId = await createDriveFolder(data.accessToken, data.name, projectsId);
+                console.log("✅ Project Folder Created:", driveFolderId);
+              }
+            }
+          }
+        }
+      } catch (e) {
+        console.error("⚠️ Drive Creation Failed (Non-blocking):", e);
+      }
+    }
+
     const project = await ProjectRepo.create({
       ownerId: data.ownerId,
       name: data.name,
       address: data.address,
       customerName: data.customerName,
       description: data.description,
-      status: 'active'
+      status: 'active',
+      driveFolderId,
     });
     return { success: true, project };
   } catch (error: any) {
@@ -210,7 +298,7 @@ export async function createCalendarEventAction(accessToken: string, eventData: 
 
 export async function getUserStatusAction(uid: string) {
   try {
-    const userDoc = await ProjectRepo.db.collection('users').doc(uid).get();
+    const userDoc = await db.collection('users').doc(uid).get();
     if (!userDoc.exists) return { isOnboardingCompleted: false, exists: false };
     return {
       isOnboardingCompleted: userDoc.data()?.onboardingCompleted === true,
@@ -220,4 +308,21 @@ export async function getUserStatusAction(uid: string) {
     console.error('Error fetching user status:', error);
     return { isOnboardingCompleted: false, exists: false };
   }
+}
+
+// --- ÄTA / CHANGE ORDERS ---
+export async function approveChangeOrderAction(ataId: string, approved: boolean) {
+  try {
+    console.log(`📝 ÄTA Approval: ${ataId} -> ${approved ? 'Approved' : 'Rejected'}`);
+    const { ChangeOrderRepo } = await import('@/lib/dal/ata.repo');
+    await ChangeOrderRepo.updateStatus(ataId, approved ? 'approved' : 'rejected');
+    return { success: true };
+  } catch (error: any) {
+    console.error('❌ ÄTA Approval Failed:', error);
+    return { success: false, error: error.message };
+  }
+}
+
+export async function finalizeProjectAction(projectId: string) {
+  return { success: true, message: "Faktura-generering under konstruktion (PDF)" };
 }
