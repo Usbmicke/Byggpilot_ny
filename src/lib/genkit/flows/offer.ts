@@ -1,6 +1,7 @@
 import 'server-only';
 import { ai } from '@/lib/genkit-instance';
 import { z } from 'genkit';
+import { AI_MODELS, AI_CONFIG } from '../config';
 
 // Input Schema: User provides rough notes
 const OfferInputSchema = z.object({
@@ -42,8 +43,13 @@ export const offerFlow = ai.defineFlow(
         Return ONLY valid JSON matching the schema.
         `;
 
+
+
+        // ... schemas ...
+
         const { output } = await ai.generate({
-            model: 'googleai/gemini-2.5-flash',
+            model: AI_MODELS.SMART,
+            config: { temperature: AI_CONFIG.temperature.creative }, // Creative for writing sales text
             prompt: prompt,
             output: { schema: OfferOutputSchema }
         });

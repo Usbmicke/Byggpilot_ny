@@ -1,17 +1,22 @@
 'use server';
 
 import { ai } from '@/lib/genkit';
+import { chatFlow } from '@/lib/genkit/flows/chat';
+import { offerFlow } from '@/lib/genkit/flows/offer';
+import { emailAnalysisFlow } from '@/lib/genkit/flows/email-analysis';
+import { ProjectRepo } from '@/lib/dal/project.repo';
+import { OfferRepo } from '@/lib/dal/offer.repo';
+import { GmailService } from '@/lib/google/gmail';
+import { CalendarService } from '@/lib/google/calendar';
 
+// --- AI GENERATION ---
 export async function generateTextAction(prompt: string) {
   try {
     const { text } = await ai.generate({
       model: 'googleai/gemini-2.5-flash',
       prompt: prompt,
-      config: {
-        temperature: 0.7,
-      },
+      config: { temperature: 0.7 },
     });
-
     return { success: true, text };
   } catch (error: any) {
     console.error("Genkit Error:", error);
@@ -19,18 +24,14 @@ export async function generateTextAction(prompt: string) {
   }
 }
 
-// NOTE: We removed the top-level firebase-admin import to prevent crashes if credentials are missing locally.
-// If you need admin access, import it dynamically inside the function or ensure GOOGLE_APPLICATION_CREDENTIALS is set.
-
+// --- GOOGLE DRIVE ---
 export async function createCompanyDriveFolderAction(accessToken: string, companyName: string): Promise<{ success: boolean; folderId?: string; error?: string }> {
   try {
     const metadata = {
       name: `ByggPilot - ${companyName}`,
       mimeType: 'application/vnd.google-apps.folder',
     };
-
     console.log("📂 Server Action: Attempting to create Drive folder for:", companyName);
-
     const response = await fetch('https://www.googleapis.com/drive/v3/files', {
       method: 'POST',
       headers: {
@@ -39,13 +40,11 @@ export async function createCompanyDriveFolderAction(accessToken: string, compan
       },
       body: JSON.stringify(metadata),
     });
-
     if (!response.ok) {
       const errorData = await response.json();
       console.error("❌ Drive API Error (Server Action):", errorData);
       return { success: false, error: JSON.stringify(errorData) };
     }
-
     const file = await response.json();
     console.log("✅ Drive Folder Created:", file.id);
     return { success: true, folderId: file.id };
@@ -54,30 +53,24 @@ export async function createCompanyDriveFolderAction(accessToken: string, compan
     return { success: false, error: error.message };
   }
 }
-// ... existing code ...
 
-import { chatFlow } from '@/lib/genkit/flows/chat';
-
+// --- CHAT ---
 export async function chatAction(messages: any[]) {
   try {
     console.log('💬 Chat Action Triggered');
     const response = await chatFlow({ messages });
-    console.log('✅ Chat Action Success');
     return { success: true, text: response };
   } catch (error: any) {
     console.error('❌ Chat Action Failed:', error);
     return { success: false, error: error.message || 'Unknown error' };
   }
 }
-// ... existing code ...
 
-import { ProjectRepo, ProjectData } from '@/lib/dal/project.repo';
-
+// --- PROJECTS ---
 export async function createProjectAction(data: { name: string; address?: string; customerName?: string; description?: string; ownerId: string }) {
   try {
     console.log('🏗️ Create Project Action:', data.name);
     if (!data.ownerId) throw new Error('Missing ownerId');
-
     const project = await ProjectRepo.create({
       ownerId: data.ownerId,
       name: data.name,
@@ -86,7 +79,6 @@ export async function createProjectAction(data: { name: string; address?: string
       description: data.description,
       status: 'active'
     });
-
     return { success: true, project };
   } catch (error: any) {
     console.error('❌ Create Project Failed:', error);
@@ -98,26 +90,18 @@ export async function getProjectsAction(ownerId: string) {
   try {
     if (!ownerId) return { success: false, error: 'No owner ID provided' };
     const projects = await ProjectRepo.listByOwner(ownerId);
-    // Serialize timestamps for Client Components if needed (Next.js warns about passing plain objects with methods)
-    // Firestore timestamps have toMillis(), so we might need to convert.
-    // For now, let's return raw and see if Next.js complains (it usually does with class instances).
-    // converting to plain object:
     const plainProjects = projects.map(p => ({
       ...p,
-      createdAt: p.createdAt.toDate().toISOString() // Convert Timestamp to string
+      createdAt: p.createdAt.toDate().toISOString()
     }));
-
     return { success: true, projects: plainProjects };
   } catch (error: any) {
     console.error('❌ Get Projects Failed:', error);
     return { success: false, error: error.message };
   }
 }
-// ... existing code ...
 
-import { offerFlow } from '@/lib/genkit/flows/offer';
-import { OfferRepo, OfferData } from '@/lib/dal/offer.repo';
-
+// --- OFFERS ---
 export async function generateOfferAction(projectTitle: string, notes: string) {
   try {
     console.log('🤖 AI Generating Offer...');
@@ -129,16 +113,13 @@ export async function generateOfferAction(projectTitle: string, notes: string) {
   }
 }
 
-export async function saveOfferAction(data: any) { // Type 'any' for speed, ideally OfferData
+export async function saveOfferAction(data: any) {
   try {
     console.log('💾 Saving Offer...');
     if (!data.ownerId) throw new Error('Missing ownerId');
-
-    // Calculate totals if missing (safety net)
     const items = data.items || [];
     const totalAmount = items.reduce((sum: number, item: any) => sum + (item.quantity * item.unitPrice), 0);
-    const vatAmount = totalAmount * 0.25; // 25% Moms default
-
+    const vatAmount = totalAmount * 0.25;
     const offer = await OfferRepo.create({
       ownerId: data.ownerId,
       projectId: data.projectId,
@@ -167,6 +148,59 @@ export async function getOffersAction(ownerId: string) {
     }));
     return { success: true, offers: plainOffers };
   } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}
+
+// --- INBOX INTELLIGENCE ---
+export async function checkInboxAction(accessToken: string) {
+  try {
+    console.log('📧 Checking Inbox...');
+    const emails = await GmailService.listUnreadEmails(accessToken, 5);
+    if (emails.length === 0) return { success: true, insights: [] };
+
+    const insights = await Promise.all(emails.map(async (email) => {
+      try {
+        const analysis = await emailAnalysisFlow({
+          subject: email.subject || '',
+          sender: email.from || '',
+          body: email.snippet || '',
+        });
+        return { emailId: email.id, ...analysis, original: email };
+      } catch (e) {
+        console.error('AI Failed for email', email.id, e);
+        return null;
+      }
+    }));
+
+    const actionableInsights = insights
+      .filter(i => i !== null && i.intent !== 'other')
+      .sort((a, b) => b!.confidence - a!.confidence);
+
+    return { success: true, insights: actionableInsights };
+  } catch (error: any) {
+    console.error('❌ Check Inbox Failed:', error);
+    return { success: false, error: error.message };
+  }
+}
+
+export async function createCalendarEventAction(accessToken: string, eventData: any) {
+  try {
+    console.log('📅 Creating Event:', eventData.summary);
+    const startTime = eventData.suggestedDate || new Date().toISOString();
+    const startDate = new Date(startTime);
+    const endDate = new Date(startDate.getTime() + 60 * 60 * 1000);
+
+    const result = await CalendarService.createEvent(accessToken, {
+      summary: eventData.subject,
+      description: eventData.description,
+      startTime: startDate.toISOString(),
+      endTime: endDate.toISOString()
+    });
+
+    return { success: true, eventLink: result.htmlLink };
+  } catch (error: any) {
+    console.error('❌ Create Event Failed:', error);
     return { success: false, error: error.message };
   }
 }

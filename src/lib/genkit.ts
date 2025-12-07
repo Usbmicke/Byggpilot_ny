@@ -10,3 +10,4 @@ import './genkit/tools/calculation.tools';
 import './genkit/tools/pdf.tools';
 import './genkit/tools/vision.tools';
 import './genkit/flows/offer';
+import './genkit/flows/email-analysis';

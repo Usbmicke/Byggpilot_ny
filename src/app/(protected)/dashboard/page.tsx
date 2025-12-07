@@ -3,6 +3,7 @@
 import { useAuth } from '@/components/AuthProvider';
 import ProjectList from '@/components/dashboard/ProjectList';
 import QuickLog from '@/components/dashboard/QuickLog';
+import InboxCopilot from '@/components/dashboard/InboxCopilot';
 
 export default function DashboardPage() {
     const { user } = useAuth();
@@ -31,6 +32,9 @@ export default function DashboardPage() {
                 </div>
 
                 <div className="space-y-8">
+                    {/* Smart Inbox Copilot */}
+                    <InboxCopilot />
+
                     <div className="bg-card rounded-xl p-6 shadow-lg border border-border/50">
                         <h2 className="text-lg font-medium text-foreground mb-4">Snabblogg</h2>
                         <QuickLog />
