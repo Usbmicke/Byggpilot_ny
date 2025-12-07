@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Helvetica',
         fontSize: 10,
         color: '#333',
+        backgroundColor: '#ffffff',
     },
     header: {
         marginBottom: 20,

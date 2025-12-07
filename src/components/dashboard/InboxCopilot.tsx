@@ -53,31 +53,31 @@ export default function InboxCopilot() {
 
     if (!scanned && !loading) {
         return (
-            <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex items-center justify-between">
-                <div>
-                    <h3 className="font-semibold text-gray-900">Smart Inkorg</h3>
-                    <p className="text-sm text-gray-500">Låt ByggPilot skanna efter nya jobb och möten.</p>
+            <div className="bg-card p-6 rounded-xl border border-border shadow-sm flex items-center justify-center">
+                <div className="text-center">
+                    <h3 className="font-semibold text-foreground mb-1">Smart Inkorg</h3>
+                    <p className="text-sm text-muted-foreground mb-4">Låt ByggPilot skanna efter nya jobb och möten.</p>
+                    <button
+                        onClick={handleCheckInbox}
+                        className="bg-primary/10 text-primary px-6 py-3 rounded-lg text-sm font-medium hover:bg-primary/20 transition-colors flex items-center gap-2 mx-auto"
+                    >
+                        <Mail size={16} /> Skanna Inkorg
+                    </button>
                 </div>
-                <button
-                    onClick={handleCheckInbox}
-                    className="bg-indigo-50 text-indigo-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-indigo-100 transition-colors flex items-center gap-2"
-                >
-                    <Mail size={16} /> Skanna Inkorg
-                </button>
             </div>
         );
     }
 
     return (
-        <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm space-y-4">
+        <div className="bg-card p-6 rounded-xl border border-border shadow-sm space-y-4">
             <div className="flex items-center justify-between mb-2">
-                <h3 className="font-semibold text-gray-900 flex items-center gap-2">
-                    <Bell size={18} className="text-indigo-600" />
+                <h3 className="font-semibold text-foreground flex items-center gap-2">
+                    <Bell size={18} className="text-primary" />
                     Inkorgs-insikter
                 </h3>
                 <button
                     onClick={() => { setScanned(false); setInsights([]); }}
-                    className="text-xs text-gray-400 hover:text-gray-600"
+                    className="text-xs text-muted-foreground hover:text-foreground"
                 >
                     Rensa
                 </button>
@@ -95,15 +95,15 @@ export default function InboxCopilot() {
             ) : (
                 <div className="space-y-3">
                     {insights.map((item, idx) => (
-                        <div key={idx} className="bg-indigo-50/50 p-4 rounded-lg border border-indigo-100 flex gap-3 animate-in fade-in slide-in-from-top-2">
+                        <div key={idx} className="bg-background/50 p-4 rounded-lg border border-border flex gap-3 animate-in fade-in slide-in-from-top-2">
                             <div className="mt-1">
-                                {item.intent === 'meeting' ? <Calendar className="text-indigo-600" size={20} /> : <Mail className="text-green-600" size={20} />}
+                                {item.intent === 'meeting' ? <Calendar className="text-primary" size={20} /> : <Mail className="text-emerald-500" size={20} />}
                             </div>
                             <div className="flex-1">
-                                <p className="text-sm font-medium text-gray-900">{item.summary}</p>
-                                <p className="text-xs text-gray-500 mt-1">Från: {item.original.from}</p>
+                                <p className="text-sm font-medium text-foreground">{item.summary}</p>
+                                <p className="text-xs text-muted-foreground mt-1">Från: {item.original.from}</p>
                                 {item.calendarData?.suggestedDate && (
-                                    <p className="text-xs font-semibold text-indigo-700 mt-1">
+                                    <p className="text-xs font-semibold text-primary mt-1">
                                         Förslag: {new Date(item.calendarData.suggestedDate).toLocaleString('sv-SE', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}
                                     </p>
                                 )}
@@ -111,14 +111,14 @@ export default function InboxCopilot() {
                             <div className="flex flex-col gap-2">
                                 <button
                                     onClick={() => handleAccept(item)}
-                                    className="p-2 bg-white text-green-600 rounded-md border border-gray-200 hover:bg-green-50 shadow-sm"
+                                    className="p-2 bg-card text-emerald-500 rounded-md border border-border hover:bg-emerald-500/10 shadow-sm"
                                     title="Godkänn / Boka"
                                 >
                                     <Check size={16} />
                                 </button>
                                 <button
                                     onClick={() => handleDismiss(item)}
-                                    className="p-2 bg-white text-gray-400 rounded-md border border-gray-200 hover:bg-gray-100 shadow-sm"
+                                    className="p-2 bg-card text-muted-foreground rounded-md border border-border hover:bg-background shadow-sm"
                                     title="Avvisa"
                                 >
                                     <X size={16} />

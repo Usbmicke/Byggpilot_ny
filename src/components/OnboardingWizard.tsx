@@ -37,15 +37,15 @@ export default function OnboardingWizard() {
     if (result?.success) {
         return (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-                <div className="bg-white p-8 rounded-lg shadow-xl text-center">
-                    <h2 className="text-2xl font-bold mb-4">Klart!</h2>
-                    <p>Ditt digitala kontor är redo.</p>
+                <div className="bg-card p-8 rounded-lg shadow-xl text-center border border-border">
+                    <h2 className="text-2xl font-bold mb-4 text-foreground">Klart!</h2>
+                    <p className="text-muted-foreground">Ditt digitala kontor är redo.</p>
                     <button
                         onClick={() => {
                             localStorage.setItem('hasSeenOnboarding', 'true');
                             window.location.reload();
                         }}
-                        className="mt-4 px-4 py-2 bg-green-600 text-white rounded"
+                        className="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
                     >
                         Börja jobba
                     </button>
@@ -55,8 +55,8 @@ export default function OnboardingWizard() {
     }
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-            <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-lg relative">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
+            <div className="bg-card p-8 rounded-lg shadow-xl w-full max-w-lg relative border border-border">
                 {/* Dev Close Button */}
                 <button
                     onClick={() => setIsVisible(false)}
@@ -66,17 +66,17 @@ export default function OnboardingWizard() {
                     ✕
                 </button>
 
-                <h2 className="text-2xl font-bold mb-4">Välkommen till ByggPilot</h2>
-                <p className="mb-6 text-gray-600">Vi behöver sätta upp din arbetsmiljö. Detta tar bara ett ögonblick.</p>
+                <h2 className="text-2xl font-bold mb-4 text-foreground">Välkommen till ByggPilot</h2>
+                <p className="mb-6 text-muted-foreground">Vi behöver sätta upp din arbetsmiljö. Detta tar bara ett ögonblick.</p>
 
                 <div className="space-y-4">
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">Visningsnamn</label>
+                        <label className="block text-sm font-medium text-foreground">Visningsnamn</label>
                         <input
                             type="text"
                             value={displayName}
                             onChange={(e) => setDisplayName(e.target.value)}
-                            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2 border"
+                            className="mt-1 block w-full rounded-md border-border bg-background text-foreground shadow-sm focus:border-primary focus:ring-primary sm:text-sm p-2 border outline-none"
                             placeholder="Ditt Namn"
                         />
                     </div>

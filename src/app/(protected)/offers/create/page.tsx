@@ -58,37 +58,37 @@ export default function CreateOfferPage() {
         return (
             <div className="max-w-2xl mx-auto space-y-6">
                 <div className="flex items-center gap-4 mb-8">
-                    <Link href="/dashboard" className="text-gray-500 hover:text-gray-900">
+                    <Link href="/dashboard" className="text-muted-foreground hover:text-foreground transition-colors">
                         <ArrowLeft size={24} />
                     </Link>
-                    <h1 className="text-2xl font-bold">Skapa Offert med AI</h1>
+                    <h1 className="text-2xl font-bold text-foreground">Skapa Offert med AI</h1>
                 </div>
 
-                <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm space-y-4">
+                <div className="bg-card p-6 rounded-xl border border-border shadow-sm space-y-4">
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">Projektnamn / Rubrik</label>
+                        <label className="block text-sm font-medium text-foreground mb-1">Projektnamn / Rubrik</label>
                         <input
-                            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2"
+                            className="input-field"
                             value={inputs.projectTitle}
                             onChange={e => setInputs({ ...inputs, projectTitle: e.target.value })}
                             placeholder="t.ex. Bygga trall hos Andersson"
                         />
                     </div>
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">Anteckningar (Stolpar)</label>
+                        <label className="block text-sm font-medium text-foreground mb-1">Anteckningar (Stolpar)</label>
                         <textarea
-                            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 h-40"
+                            className="input-field h-40 resize-none"
                             value={inputs.notes}
                             onChange={e => setInputs({ ...inputs, notes: e.target.value })}
                             placeholder="Beskriv jobbet... Material: 200m trall, Arbete: 2 gubbar 3 dagar, bortforsling ingår ej."
                         />
-                        <p className="text-xs text-gray-500 mt-2">AI:n kommer att strukturera detta till en proffsig offert.</p>
+                        <p className="text-xs text-muted-foreground mt-2">AI:n kommer att strukturera detta till en proffsig offert.</p>
                     </div>
 
                     <button
                         onClick={handleGenerate}
                         disabled={loading || !inputs.notes}
-                        className="w-full flex items-center justify-center gap-2 bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 disabled:opacity-50 transition-all"
+                        className="w-full flex items-center justify-center gap-2 btn-primary disabled:opacity-50 transition-all"
                     >
                         {loading ? 'Genererar...' : <><Wand2 size={20} /> Generera Förslag med AI</>}
                     </button>
@@ -101,14 +101,14 @@ export default function CreateOfferPage() {
     return (
         <div className="max-w-5xl mx-auto h-[calc(100vh-100px)] flex flex-col">
             <div className="flex items-center justify-between mb-6">
-                <button onClick={() => setStep(1)} className="text-gray-500 hover:text-gray-900 flex items-center gap-1">
+                <button onClick={() => setStep(1)} className="text-muted-foreground hover:text-foreground flex items-center gap-1 transition-colors">
                     <ArrowLeft size={16} /> Tillbaka
                 </button>
                 <div className="flex gap-2">
                     <button
                         onClick={handleSave}
                         disabled={loading}
-                        className="flex items-center gap-2 bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50"
+                        className="flex items-center gap-2 bg-card border border-border text-foreground px-4 py-2 rounded-lg hover:bg-background/50 transition-colors"
                     >
                         <Save size={18} /> Spara Utkast
                     </button>
@@ -130,35 +130,35 @@ export default function CreateOfferPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 flex-1 overflow-hidden">
                 {/* Editor Column */}
-                <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm overflow-y-auto">
-                    <h2 className="text-lg font-semibold mb-4">Redigera Innehåll</h2>
+                <div className="bg-card p-6 rounded-xl border border-border shadow-sm overflow-y-auto">
+                    <h2 className="text-lg font-semibold mb-4 text-foreground">Redigera Innehåll</h2>
 
                     <div className="space-y-4">
                         <div>
-                            <label className="text-xs font-bold text-gray-500 uppercase">Rubrik</label>
+                            <label className="text-xs font-bold text-muted-foreground uppercase">Rubrik</label>
                             <input
-                                className="block w-full border-b border-gray-200 focus:border-indigo-500 outline-none py-1 font-medium"
+                                className="block w-full bg-transparent border-b border-border focus:border-primary outline-none py-1 font-medium text-foreground"
                                 value={offerData.title}
                                 onChange={e => setOfferData({ ...offerData, title: e.target.value })}
                             />
                         </div>
                         <div>
-                            <label className="text-xs font-bold text-gray-500 uppercase">Introtext</label>
+                            <label className="text-xs font-bold text-muted-foreground uppercase">Introtext</label>
                             <textarea
-                                className="block w-full border border-gray-200 rounded p-2 text-sm h-24"
+                                className="input-field h-24"
                                 value={offerData.introText}
                                 onChange={e => setOfferData({ ...offerData, introText: e.target.value })}
                             />
                         </div>
 
                         <div>
-                            <label className="text-xs font-bold text-gray-500 uppercase mb-2 block">Artiklar</label>
+                            <label className="text-xs font-bold text-muted-foreground uppercase mb-2 block">Artiklar</label>
                             <div className="space-y-2">
                                 {offerData.items.map((item: any, idx: number) => (
-                                    <div key={idx} className="flex gap-2 items-start bg-gray-50 p-2 rounded">
+                                    <div key={idx} className="flex gap-2 items-start bg-background/50 p-2 rounded border border-border">
                                         <div className="flex-1">
                                             <input
-                                                className="w-full bg-transparent border-none text-sm font-medium"
+                                                className="w-full bg-transparent border-none text-sm font-medium text-foreground focus:outline-none"
                                                 value={item.description}
                                                 onChange={e => {
                                                     const newItems = [...offerData.items];
@@ -170,7 +170,7 @@ export default function CreateOfferPage() {
                                         <div className="w-16">
                                             <input
                                                 type="number"
-                                                className="w-full bg-white border border-gray-200 text-sm px-1"
+                                                className="w-full bg-card border border-border rounded text-sm px-1 text-foreground"
                                                 value={item.quantity}
                                                 onChange={e => {
                                                     const newItems = [...offerData.items];
@@ -181,7 +181,7 @@ export default function CreateOfferPage() {
                                         </div>
                                         <div className="w-12">
                                             <input
-                                                className="w-full bg-transparent border-none text-xs text-gray-500"
+                                                className="w-full bg-transparent border-none text-xs text-muted-foreground focus:outline-none"
                                                 value={item.unit}
                                                 onChange={e => {
                                                     const newItems = [...offerData.items];
@@ -193,7 +193,7 @@ export default function CreateOfferPage() {
                                         <div className="w-20 text-right">
                                             <input
                                                 type="number"
-                                                className="w-full bg-white border border-gray-200 text-sm px-1 text-right"
+                                                className="w-full bg-card border border-border rounded text-sm px-1 text-right text-foreground"
                                                 value={item.unitPrice}
                                                 onChange={e => {
                                                     const newItems = [...offerData.items];
@@ -208,9 +208,9 @@ export default function CreateOfferPage() {
                         </div>
 
                         <div>
-                            <label className="text-xs font-bold text-gray-500 uppercase">Avslutningstext</label>
+                            <label className="text-xs font-bold text-muted-foreground uppercase">Avslutningstext</label>
                             <textarea
-                                className="block w-full border border-gray-200 rounded p-2 text-sm h-20"
+                                className="input-field h-20"
                                 value={offerData.closingText}
                                 onChange={e => setOfferData({ ...offerData, closingText: e.target.value })}
                             />
@@ -219,7 +219,7 @@ export default function CreateOfferPage() {
                 </div>
 
                 {/* Preview Column (Simple HTML preview, PDF is generated on download) */}
-                <div className="bg-gray-500 p-6 rounded-xl border border-gray-200 shadow-sm overflow-y-auto flex items-center justify-center">
+                <div className="bg-background/90 p-6 rounded-xl border border-border shadow-sm overflow-y-auto flex items-center justify-center">
                     <div className="bg-white shadow-2xl w-full max-w-[210mm] min-h-[297mm] p-8 text-[12px] relative transform scale-90 origin-top">
                         {/* HTML Preview mirroring the PDF layout */}
                         <div className="flex justify-between border-b pb-4 mb-8">

@@ -15,7 +15,7 @@ export default function Sidebar() {
     ];
 
     return (
-        <aside className="w-64 bg-white shadow-md hidden md:flex flex-col h-full">
+        <aside className="w-64 bg-card border-r border-border shadow-md hidden md:flex flex-col h-full">
             <div className="p-6">
                 <h1 className="text-2xl font-bold text-indigo-600">ByggPilot</h1>
             </div>
@@ -27,8 +27,8 @@ export default function Sidebar() {
                             key={item.name}
                             href={item.href}
                             className={`flex items-center px-4 py-3 text-sm font-medium rounded-md transition-colors ${isActive
-                                ? 'bg-indigo-50 text-indigo-700'
-                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                ? 'bg-primary/10 text-primary'
+                                : 'text-muted-foreground hover:bg-primary/5 hover:text-foreground'
                                 }`}
                         >
                             <span className="mr-3">{item.icon}</span>
@@ -37,12 +37,12 @@ export default function Sidebar() {
                     );
                 })}
             </nav>
-            <div className="p-4 border-t border-gray-200">
+            <div className="p-4 border-t border-border">
                 <div className="flex items-center">
-                    <div className="h-8 w-8 rounded-full bg-gray-300 flex items-center justify-center text-xs font-medium">U</div>
+                    <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center text-xs font-medium text-primary">U</div>
                     <div className="ml-3">
-                        <p className="text-sm font-medium text-gray-700">Användare</p>
-                        <p className="text-xs text-gray-500">Logga ut</p>
+                        <p className="text-sm font-medium text-foreground">Användare</p>
+                        <p className="text-xs text-muted-foreground">Logga ut</p>
                     </div>
                 </div>
             </div>

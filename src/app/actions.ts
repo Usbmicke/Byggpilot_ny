@@ -156,6 +156,9 @@ export async function getOffersAction(ownerId: string) {
 export async function checkInboxAction(accessToken: string) {
   try {
     console.log('📧 Checking Inbox...');
+    // Ensure accessToken is valid before calling service
+    if (!accessToken) return { success: false, error: 'Access Token Missing' };
+
     const emails = await GmailService.listUnreadEmails(accessToken, 5);
     if (emails.length === 0) return { success: true, insights: [] };
 
@@ -202,5 +205,19 @@ export async function createCalendarEventAction(accessToken: string, eventData: 
   } catch (error: any) {
     console.error('❌ Create Event Failed:', error);
     return { success: false, error: error.message };
+  }
+}
+
+export async function getUserStatusAction(uid: string) {
+  try {
+    const userDoc = await ProjectRepo.db.collection('users').doc(uid).get();
+    if (!userDoc.exists) return { isOnboardingCompleted: false, exists: false };
+    return {
+      isOnboardingCompleted: userDoc.data()?.onboardingCompleted === true,
+      exists: true
+    };
+  } catch (error) {
+    console.error('Error fetching user status:', error);
+    return { isOnboardingCompleted: false, exists: false };
   }
 }
