@@ -2,17 +2,22 @@ import 'server-only';
 import { drive } from '@googleapis/drive'; // Updated import based on package
 import { GoogleAuth } from 'google-auth-library';
 
-// Initialize auth - assumes Application Default Credentials (ADC)
-// or use keyFile/credentials from env
-const auth = new GoogleAuth({
-    scopes: ['https://www.googleapis.com/auth/drive'],
-    // keyFile: process.env.GOOGLE_APPLICATION_CREDENTIALS, // Optional if Env var is set correctly
-});
+// Lazy init to prevent ADC crash on load if env vars are missing
+let _service: any = null;
 
-const service = drive({ version: 'v3', auth: auth as any });
+const getService = () => {
+    if (!_service) {
+        const auth = new GoogleAuth({
+            scopes: ['https://www.googleapis.com/auth/drive'],
+        });
+        _service = drive({ version: 'v3', auth: auth as any });
+    }
+    return _service;
+};
 
 export const GoogleDriveService = {
     async ensureFolderExists(folderName: string, parentId?: string): Promise<string> {
+        const service = getService();
         const query = [
             `mimeType = 'application/vnd.google-apps.folder'`,
             `name = '${folderName}'`,

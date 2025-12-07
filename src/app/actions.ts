@@ -298,19 +298,34 @@ export async function createCalendarEventAction(accessToken: string, eventData: 
 
 export async function getUserStatusAction(uid: string) {
   try {
+    console.log(`🔍 [getUserStatusAction] Fetching status for uid: ${uid}`);
     const userDoc = await db.collection('users').doc(uid).get();
-    if (!userDoc.exists) return { isOnboardingCompleted: false, exists: false };
+
+    if (!userDoc.exists) {
+      console.log(`⚠️ [getUserStatusAction] User doc not found for uid: ${uid}`);
+      return { isOnboardingCompleted: false, exists: false };
+    }
+
+    const data = userDoc.data();
+    console.log(`📄 [getUserStatusAction] Data retrieved:`, JSON.stringify(data, null, 2));
+
+    // Robust check for boolean true, string "true", or existence implies completed if schema changed
+    const isOnboardingCompleted =
+      data?.onboardingCompleted === true ||
+      data?.onboardingCompleted === 'true';
+
+    console.log(`✅ [getUserStatusAction] Final Status: ${isOnboardingCompleted}`);
+
     return {
-      isOnboardingCompleted: userDoc.data()?.onboardingCompleted === true,
+      isOnboardingCompleted,
       exists: true
     };
-  } catch (error) {
-    console.error('Error fetching user status:', error);
-    return { isOnboardingCompleted: false, exists: false };
+  } catch (error: any) {
+    console.error('❌ [getUserStatusAction] Error fetching user status:', error);
+    return { isOnboardingCompleted: false, exists: false, error: error.message };
   }
 }
 
-// --- ÄTA / CHANGE ORDERS ---
 export async function approveChangeOrderAction(ataId: string, approved: boolean) {
   try {
     console.log(`📝 ÄTA Approval: ${ataId} -> ${approved ? 'Approved' : 'Rejected'}`);

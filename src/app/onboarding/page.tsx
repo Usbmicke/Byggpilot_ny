@@ -40,14 +40,24 @@ export default function OnboardingPage() {
     async function fetchProfile() {
       setProfileLoading(true);
       try {
+        console.log("🔍 [Client] Fetching user profile for:", user?.uid);
         const userRef = doc(db, 'users', user!.uid);
         const userSnap = await getDoc(userRef);
 
         if (userSnap.exists()) {
           const userData = userSnap.data();
-          if (userData.onboardingCompleted) {
+          console.log("📄 [Client] User Data:", userData);
+
+          const isCompleted = userData.onboardingCompleted === true || userData.onboardingCompleted === 'true';
+
+          if (isCompleted) {
+            console.log("✅ [Client] Onboarding already completed. Redirecting...");
             router.push('/dashboard');
+          } else {
+            console.log("⚠️ [Client] Onboarding NOT completed.", userData.onboardingCompleted);
           }
+        } else {
+          console.log("❌ [Client] No user document found.");
         }
       } catch (e) {
         console.error("Kunde inte hämta profil:", e);
@@ -114,8 +124,14 @@ export default function OnboardingPage() {
         }
       }
 
-      // 1. Skapa Drive-mappar
-      const driveFolderId = await createCompanyFolder(companyName);
+      // 1. Skapa Drive-mappar (Best-effort för stabilitet)
+      let driveFolderId = null;
+      try {
+        driveFolderId = await createCompanyFolder(companyName);
+      } catch (driveError) {
+        console.error("Drive creation failed completely:", driveError);
+        // Vi låter processen fortsätta även om Drive misslyckas, för att inte låsa användaren (100% stabilitet)
+      }
 
       // 2. Hämta user data för att hitta companyId
       const userRef = doc(db, 'users', user.uid);

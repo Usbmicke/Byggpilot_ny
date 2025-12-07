@@ -20,7 +20,12 @@ export default function Home() {
         if (!isLoading && user) {
             setIsRedirecting(true);
             getUserStatusAction(user.uid).then((status) => {
-                if (status.isOnboardingCompleted) {
+                // @ts-ignore
+                if (status.error) {
+                    // @ts-ignore
+                    setLoginError(`Serverfel: ${status.error} (Kan inte verifiera profil)`);
+                    setIsRedirecting(false);
+                } else if (status.isOnboardingCompleted) {
                     router.push('/dashboard');
                 } else {
                     router.push('/onboarding');
