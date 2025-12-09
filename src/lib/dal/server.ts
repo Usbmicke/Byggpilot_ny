@@ -9,28 +9,30 @@ if (admin.apps.length === 0) {
     const serviceAccountJson = process.env.FIREBASE_SERVICE_ACCOUNT_KEY || process.env.FIREBASE_SERVICE_ACCOUNT_JSON;
 
     if (serviceAccountJson) {
-        console.log("SEARCHING FOR CREDENTIALS: Found FIREBASE_SERVICE_ACCOUNT_KEY/JSON env var.");
+        // console.log("SEARCHING FOR CREDENTIALS: Found FIREBASE_SERVICE_ACCOUNT_KEY/JSON env var.");
         try {
             // Handle potentially escaped newlines in env vars
             const serviceAccount = JSON.parse(serviceAccountJson);
             credential = admin.credential.cert(serviceAccount);
-            console.log("✅ Successfully parsed Service Account JSON.");
+            console.log("✅ [server.ts] Service Account Loaded:", serviceAccount.client_email);
         } catch (e) {
-            console.error("❌ Failed to parse Service Account JSON. Falling back to ADC.", e);
+            console.error("❌ [server.ts] Failed to parse Service Account JSON:", e);
         }
     } else {
-        console.warn("⚠️ No FIREBASE_SERVICE_ACCOUNT_KEY or FIREBASE_SERVICE_ACCOUNT_JSON found in environment.");
+        console.warn("⚠️ [server.ts] NO Service Account Key found in env. Usage of ADC logic...");
     }
 
     // 2. Fallback to Application Default Credentials (ADC)
     if (!credential) {
-        console.log("SEARCHING FOR CREDENTIALS: Attempting Application Default Credentials (ADC)...");
+        console.log("⚠️ [server.ts] Falling back to ADC...");
         try {
             credential = admin.credential.applicationDefault();
         } catch (e) {
-            console.error("❌ Failed to initialize ADC:", e);
+            console.error("❌ [server.ts] ADC Init Failed:", e);
         }
     }
+
+    console.log("🔥 [server.ts] Initializing Firebase Admin with Project ID:", process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || 'byggpilot-v2');
 
     admin.initializeApp({
         credential,

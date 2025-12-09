@@ -42,8 +42,17 @@ export const startProjectTool = ai.defineTool(
         });
 
         // 2. Create Drive Folder
-        const { GoogleDriveService } = await import('@/lib/google/drive');
-        const folderId = await GoogleDriveService.ensureFolderExists(`PROJEKT - ${input.name}`);
+        // 2. Create Drive Folder
+        let folderId: string | undefined;
+        let driveError: string | undefined;
+
+        try {
+            const { GoogleDriveService } = await import('@/lib/google/drive');
+            folderId = await GoogleDriveService.ensureFolderExists(`PROJEKT - ${input.name}`);
+        } catch (error: any) {
+            console.error('[Tool: startProject] Drive creation failed:', error);
+            driveError = error.message;
+        }
 
         // Phase 7.2: Automatic Risk Analysis (AMP Trigger)
         // Check if description implies high risk
@@ -57,13 +66,20 @@ export const startProjectTool = ai.defineTool(
             // Trigger AMP creation
             console.log(`[Tool: startProject] Risk detected (${risksFound.join(', ')}). Genererar AMP-utkast...`);
             // In a real app, this would use generatePdf
-            ampMessage = `⚠️ Riskfyllda moment identifierade: ${risksFound.join(', ')}. Ett utkast till Arbetsmiljöplan (AMP) har förberetts i projektmappen.`;
+            ampMessage = ` ⚠️ Riskfyllda moment identifierade: ${risksFound.join(', ')}. Ett utkast till Arbetsmiljöplan (AMP) har förberetts.`;
+        }
+
+        let message = `Projekt '${input.name}' skapat. ${ampMessage}`;
+        if (folderId) {
+            message += ` Google Drive-mapp skapad.`;
+        } else {
+            message += ` Obs: Kunde inte skapa Google Drive-mapp (${driveError || 'Okänt fel'}).`;
         }
 
         return {
             projectId: project.id,
             folderId,
-            message: `Project '${input.name}' created successfully. ${ampMessage}`
+            message,
         };
     }
 );

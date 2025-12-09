@@ -167,7 +167,16 @@ export async function createProjectAction(data: { name: string; address?: string
       status: 'active',
       driveFolderId,
     });
-    return { success: true, project };
+
+    // Convert Firestore Timestamps/Dates to plain strings for Client Component compatibility
+    const plainProject = {
+      ...project,
+      createdAt: project.createdAt instanceof Date ? project.createdAt.toISOString() :
+        (project.createdAt?.toDate ? project.createdAt.toDate().toISOString() : new Date().toISOString()),
+      // Add updatedAt if it exists in the schema later
+    };
+
+    return { success: true, project: plainProject };
   } catch (error: any) {
     console.error('❌ Create Project Failed:', error);
     return { success: false, error: error.message };

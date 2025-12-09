@@ -55,9 +55,14 @@ export default function Home() {
             // Check status via Server Action for consistency
             const status = await getUserStatusAction(result.user.uid);
 
+            if (status.error) {
+                // If checking status failed (e.g. server error), DO NOT overwrite user data.
+                setLoginError(`Kunde inte kontrollera profil: ${status.error}`);
+                return;
+            }
+
             if (!status.exists) {
-                // First time setup (Keep client side for Batch creation or move to Server Action later)
-                // For now, keeping existing logic but simplified
+                // Only create new user if we are SURE they don't exist (no error, and exists=false)
                 const batch = writeBatch(db);
                 const userRef = doc(db, 'users', result.user.uid);
                 const companyRef = doc(collection(db, 'companies'));
@@ -77,6 +82,7 @@ export default function Home() {
                     role: 'ADMIN',
                     createdAt: new Date(),
                     status: 'active',
+                    // Default to false primarily, but if this is a re-login it shouldn't happen here
                     onboardingCompleted: false
                 });
 
