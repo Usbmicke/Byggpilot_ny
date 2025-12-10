@@ -1,0 +1,206 @@
+'use client';
+
+import Link from 'next/link';
+import { WeatherWidget } from '@/components/projects/WeatherWidget';
+import { useEffect, useState } from 'react';
+import { getItemColor } from '@/lib/utils/colors';
+import { mitigateRiskAction } from '@/app/actions';
+import { AlertTriangle, X, CheckSquare } from 'lucide-react';
+
+interface RiskModalProps {
+    project: any;
+    risks: any[];
+    onClose: () => void;
+    onMitigate: (riskId: string) => void;
+}
+
+function RiskModal({ project, risks, onClose, onMitigate }: RiskModalProps) {
+    return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+            <div className="bg-card w-full max-w-lg rounded-xl shadow-2xl border border-border overflow-hidden animate-in zoom-in-95 duration-200">
+                <div className="bg-amber-100 p-4 border-b border-amber-200 flex justify-between items-center">
+                    <h3 className="text-amber-900 font-bold flex items-center gap-2">
+                        <AlertTriangle size={20} className="text-amber-600" />
+                        Risker Identifierade
+                    </h3>
+                    <button onClick={onClose} className="text-amber-800 hover:bg-amber-200 p-1 rounded-full transition-colors">
+                        <X size={20} />
+                    </button>
+                </div>
+
+                <div className="p-6 space-y-4 max-h-[60vh] overflow-y-auto">
+                    <p className="text-sm text-foreground">
+                        ByggPilot har hittat potentiella risker i projektet <strong>{project.name}</strong> baserat på sökord.
+                    </p>
+
+                    <div className="space-y-3">
+                        {risks.map((risk) => (
+                            <div key={risk.id} className="flex items-start gap-3 p-3 bg-secondary/30 rounded-lg border border-border/50">
+                                <AlertTriangle size={16} className="text-amber-500 mt-1 shrink-0" />
+                                <div className="flex-1">
+                                    <h4 className="font-semibold text-sm text-foreground">{risk.type}</h4>
+                                    <p className="text-xs text-muted-foreground mt-1">{risk.description}</p>
+                                </div>
+                                <button
+                                    onClick={() => onMitigate(risk.id)}
+                                    className="px-3 py-1.5 bg-background border border-border text-xs font-medium rounded hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200 transition-colors flex items-center gap-1 whitespace-nowrap"
+                                >
+                                    <CheckSquare size={12} />
+                                    Jag förstår
+                                </button>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="p-4 bg-secondary/20 border-t border-border flex justify-end">
+                    <button onClick={onClose} className="px-4 py-2 text-sm text-foreground font-medium hover:bg-background rounded-md transition-colors">
+                        Stäng utan åtgärd
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+function ProjectRiskIndicator({ projectId, projectName, onOpenModal, extraRisks = [] }: { projectId: string; projectName: string; onOpenModal: (risks: any[]) => void, extraRisks?: any[] }) {
+    const [risks, setRisks] = useState<any[]>([]);
+
+    useEffect(() => {
+        import('@/app/actions').then((mod: any) => {
+            if (mod.getRisksAction) {
+                mod.getRisksAction(projectId).then((res: any) => {
+                    if (res.success && res.risks) {
+                        const active = res.risks.filter((r: any) => r.status !== 'mitigated');
+                        setRisks(active);
+                    }
+                });
+            }
+        });
+    }, [projectId]);
+
+    const totalRisks = [...risks, ...extraRisks];
+
+    if (totalRisks.length === 0) return null;
+
+    return (
+        <button
+            onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                onOpenModal(totalRisks);
+            }}
+            className="absolute top-0 right-0 m-0 z-20 flex items-center gap-1.5 bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1.5 rounded-bl-xl border-b border-l border-amber-200 hover:bg-amber-200 transition-all shadow-sm rounded-tr-xl"
+        >
+            <AlertTriangle size={14} className="fill-amber-500 text-amber-600" />
+            <span>{totalRisks.length} Risk{totalRisks.length > 1 ? 'er' : ''}</span>
+        </button>
+    );
+}
+
+interface ProjectCardProps {
+    project: any;
+    variant?: 'grid' | 'horizontal';
+}
+
+export function ProjectCard({ project, variant = 'grid' }: ProjectCardProps) {
+    const [isRiskModalOpen, setIsRiskModalOpen] = useState(false);
+    const [activeRisks, setActiveRisks] = useState<any[]>([]);
+    const [weatherRisk, setWeatherRisk] = useState<any | null>(null);
+
+    const theme = getItemColor(project.customerName || project.name); // Color Key: Customer Name -> Project Name
+    const isHorizontal = variant === 'horizontal';
+
+    const handleMitigate = async (riskId: string) => {
+        if (riskId === 'weather-risk') {
+            setWeatherRisk(null);
+            const remaining = activeRisks.filter(r => r.id !== riskId);
+            setActiveRisks(remaining);
+            if (remaining.length === 0) setIsRiskModalOpen(false);
+            return;
+        }
+        const res = await mitigateRiskAction(riskId);
+        if (res.success) {
+            // Optimistic update
+            const remaining = activeRisks.filter(r => r.id !== riskId);
+            setActiveRisks(remaining);
+            if (remaining.length === 0) setIsRiskModalOpen(false);
+        }
+    };
+
+    return (
+        <>
+            {isRiskModalOpen && (
+                <RiskModal
+                    project={project}
+                    risks={activeRisks}
+                    onClose={() => setIsRiskModalOpen(false)}
+                    onMitigate={handleMitigate}
+                />
+            )}
+
+            <Link
+                href={`/projects/${project.id}`}
+                className={`relative block bg-card rounded-xl border border-border shadow-sm hover:shadow-md transition-all group hover:border-primary/50 overflow-hidden ${isHorizontal ? 'flex flex-col sm:flex-row' : ''}`}
+            >
+                {/* Risk Indicator (Positioned absolute top-right) */}
+                <ProjectRiskIndicator
+                    projectId={project.id}
+                    projectName={project.name}
+                    extraRisks={weatherRisk ? [weatherRisk] : []}
+                    onOpenModal={(risks) => {
+                        setActiveRisks(risks);
+                        setIsRiskModalOpen(true);
+                    }}
+                />
+
+                {/* Color/Icon Sidebar */}
+                <div className={`${isHorizontal ? 'w-full sm:w-24 border-b sm:border-b-0 sm:border-r' : 'h-24 border-b'} ${theme.bg} ${theme.border} flex items-center justify-center shrink-0`}>
+                    <div className={`h-12 w-12 rounded-xl bg-white/70 shadow-sm flex items-center justify-center text-xl font-bold ${theme.text}`}>
+                        {(project.customerName || project.name).charAt(0).toUpperCase()}
+                    </div>
+                </div>
+
+                {/* Content */}
+                <div className={`p-5 flex-1 flex ${isHorizontal ? 'flex-col justify-between' : 'flex-col'}`}>
+                    <div>
+                        <div className="flex justify-between items-start mb-2 pr-20"> {/* pr-20 to avoid overlap with Risk Badge */}
+                            <div>
+                                <h3 className="font-semibold text-foreground text-lg group-hover:text-primary transition-colors line-clamp-1">
+                                    {project.name}
+                                </h3>
+                                {project.customerName && (
+                                    <p className={`text-xs font-medium ${theme.text} opacity-80 mb-1`}>
+                                        {project.customerName}
+                                    </p>
+                                )}
+                            </div>
+                        </div>
+
+                        <p className="text-sm text-muted-foreground mb-4 line-clamp-2 min-h-[2.5em]">{project.description || 'Ingen beskrivning'}</p>
+                    </div>
+
+                    <div className={`flex flex-wrap gap-x-4 gap-y-2 text-xs text-muted-foreground items-end ${isHorizontal ? 'mt-0' : 'mt-auto'}`}>
+                        <span className={`px-2 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider ${project.status === 'active' ? 'bg-emerald-100 text-emerald-600' : 'bg-secondary text-muted-foreground'}`}>
+                            {project.status === 'active' ? 'Pågående' : project.status}
+                        </span>
+
+                        {project.projectNumber && (
+                            <span className="font-mono opacity-70">#{project.projectNumber}</span>
+                        )}
+
+                        <div className="ml-auto w-full sm:w-auto mt-2 sm:mt-0 max-w-[200px]">
+                            <WeatherWidget
+                                address={project.address}
+                                projectId={project.id}
+                                projectName={project.name}
+                                projectDescription={project.description}
+                                onRiskDetected={setWeatherRisk}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </Link>
+        </>
+    );
+}

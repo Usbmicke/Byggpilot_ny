@@ -41,12 +41,7 @@ export default function DashboardPage() {
                     </div>
 
                     {/* Placeholder Widgets */}
-                    <div className="bg-card rounded-xl shadow-lg border border-border/50 p-6 flex flex-col items-center justify-center text-muted-foreground h-40 group hover:border-primary/50 transition-colors cursor-pointer">
-                        <div className="p-3 bg-background rounded-full mb-3 group-hover:bg-primary/10 transition-colors">
-                            <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>
-                        </div>
-                        <span className="text-sm font-medium">Väder Widget</span>
-                    </div>
+                    {/* (Weather is now on Project Cards as requested) */}
 
                     <div className="bg-card rounded-xl shadow-lg border border-border/50 p-6 flex flex-col items-center justify-center text-muted-foreground h-64 group hover:border-primary/50 transition-colors cursor-pointer">
                         <div className="p-3 bg-background rounded-full mb-3 group-hover:bg-primary/10 transition-colors">

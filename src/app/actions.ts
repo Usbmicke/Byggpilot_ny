@@ -672,6 +672,17 @@ export async function getRisksAction(projectId: string) {
   }
 }
 
+export async function mitigateRiskAction(riskId: string) {
+  try {
+    const { db } = await import('@/lib/dal/server'); // Direct DB access for speed or use repo
+    // Let's use repo if possible, but for now direct update is fine for this specific flag
+    await db.collection('risks').doc(riskId).update({ status: 'mitigated' });
+    return { success: true };
+  } catch (e: any) {
+    return { success: false, error: e.message };
+  }
+}
+
 // --- WEATHER (PHASE 9) ---
 export async function getWeatherAction(address: string) {
   if (!address) return { success: false, error: 'No address provided' };

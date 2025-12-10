@@ -6,6 +6,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/lib/**/*.{js,ts,jsx,tsx,mdx}", // Ensure safe-listed colors are picked up
   ],
   theme: {
     extend: {
@@ -25,6 +26,12 @@ const config: Config = {
       },
     },
   },
+  safelist: [
+    { pattern: /bg-(blue|green|purple|amber|rose|indigo|teal|cyan)-100/ },
+    { pattern: /text-(blue|green|purple|amber|rose|indigo|teal|cyan)-700/ },
+    { pattern: /border-(blue|green|purple|amber|rose|indigo|teal|cyan)-200/ },
+    { pattern: /ring-(blue|green|purple|amber|rose|indigo|teal|cyan)-500/ },
+  ],
   plugins: [],
 };
 export default config;
