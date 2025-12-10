@@ -5,8 +5,31 @@ import Link from 'next/link';
 import { useAuth } from '@/components/AuthProvider';
 import { getProjectsAction, createProjectAction } from '@/app/actions';
 import { Plus } from 'lucide-react'; // Ensure lucide-react is available (usually is in shadcn setups)
+import { WeatherWidget } from '@/components/projects/WeatherWidget';
 
 // Simple Modal Component (Inline for speed, can extract later)
+function ProjectRiskIndicator({ projectId }: { projectId: string }) {
+    const [risks, setRisks] = useState<any[]>([]);
+
+    useEffect(() => {
+        import('@/app/actions').then((mod: any) => {
+            if (mod.getRisksAction) {
+                mod.getRisksAction(projectId).then((res: any) => {
+                    if (res.success && res.risks) setRisks(res.risks);
+                });
+            }
+        });
+    }, [projectId]);
+
+    if (risks.length === 0) return null;
+
+    return (
+        <span className="flex items-center gap-1 text-xs font-semibold text-amber-600 bg-amber-100 px-2 py-0.5 rounded-full border border-amber-200">
+            ⚠️ {risks.length} Risk{risks.length > 1 ? 'er' : ''}
+        </span>
+    );
+}
+
 function CreateProjectModal({ isOpen, onClose, onCreated, ownerId }: any) {
     const [loading, setLoading] = useState(false);
     const [customers, setCustomers] = useState<any[]>([]);
@@ -236,6 +259,13 @@ export default function ProjectsPage() {
                                 )}
                                 <div className="pt-3 border-t border-border mt-4 flex justify-between items-center">
                                     <span>Skapad {new Date(project.createdAt).toLocaleDateString('sv-SE')}</span>
+                                    {/* Risk Indicator (The Putter) */}
+                                    <ProjectRiskIndicator projectId={project.id} />
+                                    {/* Weather Widget (Phase 9) */}
+                                    <div className="mt-2 w-full">
+                                        <WeatherWidget address={project.address} projectId={project.id} />
+                                    </div>
+
                                     {/* Placeholder for future actions */}
                                     <span className="text-primary/50 group-hover:text-primary transition-colors">Mer info &rarr;</span>
                                 </div>

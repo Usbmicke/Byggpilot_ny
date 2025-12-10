@@ -200,6 +200,16 @@ export async function createProjectAction(data: { name: string; address?: string
       projectNumber
     });
 
+    // --- PHASE 7: THE PUTTER (RISK ENGINE) ---
+    try {
+      const { RiskEngine } = await import('@/lib/logic/risk-engine');
+      await RiskEngine.scanProject(project.id, data.description || '', data.name);
+    } catch (e) {
+      console.error("⚠️ Risk Engine Failed:", e);
+      // Non-blocking
+    }
+    // -----------------------------------------
+
     // Convert Firestore Timestamps/Dates to plain strings for Client Component compatibility
     const plainProject = {
       ...project,
@@ -279,6 +289,18 @@ export async function updateProjectAction(projectId: string, data: Partial<any>)
         // Non-blocking error
       }
     }
+
+    // --- PHASE 7: THE PUTTER (RISK ENGINE) ---
+    // If description or name changed, re-scan
+    if (data.description || data.name) {
+      try {
+        const { RiskEngine } = await import('@/lib/logic/risk-engine');
+        await RiskEngine.scanProject(projectId, data.description || existingProject.description || '', data.name || existingProject.name);
+      } catch (e) {
+        console.error("⚠️ Risk Engine Failed (Update):", e);
+      }
+    }
+    // -----------------------------------------
 
     return { success: true };
   } catch (error: any) {
@@ -635,6 +657,37 @@ export async function createOfferPdfAction(input: any) {
     const result = await generateOfferTool(input);
     return { success: true, data: result };
   } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}
+
+// --- RISKS (PHASE 7) ---
+export async function getRisksAction(projectId: string) {
+  try {
+    const { RiskRepo } = await import('@/lib/dal/risk.repo');
+    const risks = await RiskRepo.listByProject(projectId);
+    return { success: true, risks };
+  } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}
+
+// --- WEATHER (PHASE 9) ---
+export async function getWeatherAction(address: string) {
+  if (!address) return { success: false, error: 'No address provided' };
+
+  try {
+    const { GeocodingService } = await import('@/lib/external/geocoding');
+    const coords = await GeocodingService.getCoordinates(address);
+
+    if (!coords) return { success: false, error: 'Address not found' };
+
+    const { SMHIService } = await import('@/lib/external/smhi');
+    const weather = await SMHIService.getForecast(coords.lat, coords.lon);
+
+    return { success: true, weather };
+  } catch (error: any) {
+    console.error("Weather Action Failed:", error);
     return { success: false, error: error.message };
   }
 }
