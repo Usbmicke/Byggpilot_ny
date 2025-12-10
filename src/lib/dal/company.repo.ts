@@ -32,7 +32,8 @@ export interface CompanyData {
     driveStructure?: DriveStructure;
     profile?: CompanyProfile;
     context?: CompanyContext;
-    projectCounter?: number; // Last used project number
+    projectCounter?: number; // Last used counter (YYY)
+    projectSeriesId?: number; // Random 4-digit series ID (XXXX)
 }
 
 const COLLECTION = 'companies';
@@ -64,7 +65,7 @@ export const CompanyRepo = {
         );
     },
 
-    async getNextProjectNumber(companyId: string): Promise<number> {
+    async getNextProjectNumber(companyId: string): Promise<string> {
         const ref = db.collection(COLLECTION).doc(companyId);
 
         return await db.runTransaction(async (t) => {
@@ -72,18 +73,24 @@ export const CompanyRepo = {
             if (!doc.exists) throw new Error("Company not found");
 
             const data = doc.data() as CompanyData;
-            let current = data.projectCounter;
 
-            // Random Start if missing
-            if (!current) {
-                // Generate random start between 3000 and 6000
-                current = Math.floor(Math.random() * (6000 - 3000 + 1) + 3000);
-            } else {
-                current += 1;
+            // 1. Ensure Series ID (Random 4 digits: 1000-9999)
+            let seriesId = data.projectSeriesId;
+            if (!seriesId) {
+                seriesId = Math.floor(Math.random() * (9999 - 1000 + 1) + 1000);
+                t.set(ref, { projectSeriesId: seriesId }, { merge: true });
             }
 
-            t.set(ref, { projectCounter: current }, { merge: true });
-            return current;
+            // 2. Increment Counter (Start at 100 if missing or low)
+            let counter = data.projectCounter || 100;
+            if (counter < 100) counter = 100; // Enforce minimum 3 digits
+
+            counter += 1;
+
+            t.set(ref, { projectCounter: counter }, { merge: true });
+
+            // Format: "2453-101"
+            return `${seriesId}-${counter}`;
         });
     }
 };

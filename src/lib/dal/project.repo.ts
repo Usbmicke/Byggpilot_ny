@@ -13,7 +13,7 @@ export interface ProjectData {
     createdAt: Timestamp;
     ownerId: string;
     driveFolderId?: string;
-    projectNumber?: number;
+    projectNumber?: string;
 }
 
 const COLLECTION = 'projects';

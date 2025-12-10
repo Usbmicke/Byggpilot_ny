@@ -124,7 +124,7 @@ export async function createProjectAction(data: { name: string; address?: string
     let driveFolderId = undefined;
 
     // 0. Get Project Number
-    let projectNumber: number | undefined;
+    let projectNumber: string | undefined;
     try {
       const user = await UserRepo.get(data.ownerId);
       if (user?.companyId) {
