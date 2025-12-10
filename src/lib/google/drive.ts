@@ -54,5 +54,30 @@ export const GoogleDriveService = {
 
     async createProjectFolder(projectName: string, companyFolderId: string) {
         return this.ensureFolderExists(projectName, companyFolderId);
+    },
+
+    async uploadFile(name: string, mimeType: string, body: any, parentId?: string): Promise<{ id: string, webViewLink: string }> {
+        const service = getService();
+
+        const media = {
+            mimeType: mimeType,
+            body: body,
+        };
+
+        const fileMetadata: any = {
+            name: name,
+            parents: parentId ? [parentId] : [],
+        };
+
+        const res = await service.files.create({
+            requestBody: fileMetadata,
+            media: media,
+            fields: 'id, webViewLink',
+        });
+
+        return {
+            id: res.data.id!,
+            webViewLink: res.data.webViewLink!,
+        };
     }
 };

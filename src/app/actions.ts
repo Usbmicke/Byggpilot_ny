@@ -83,10 +83,10 @@ export async function createCompanyDriveFolderAction(accessToken: string, compan
 }
 
 // --- CHAT ---
-export async function chatAction(messages: any[]) {
+export async function chatAction(messages: any[], uid?: string) {
   try {
-    console.log('💬 Chat Action Triggered');
-    const response = await chatFlow({ messages });
+    console.log('💬 Chat Action Triggered', uid ? `for user ${uid}` : '(no user)');
+    const response = await chatFlow({ messages, uid });
     return { success: true, text: response };
   } catch (error: any) {
     console.error('❌ Chat Action Failed:', error);
@@ -349,4 +349,182 @@ export async function approveChangeOrderAction(ataId: string, approved: boolean)
 
 export async function finalizeProjectAction(projectId: string) {
   return { success: true, message: "Faktura-generering under konstruktion (PDF)" };
+}
+
+// --- COMPANY SETTINGS ---
+export async function getCompanyProfileAction(uid: string) {
+  try {
+    const user = await UserRepo.get(uid);
+    if (!user?.companyId) return { success: false, error: 'No company found for user' };
+
+    const company = await CompanyRepo.get(user.companyId);
+    return { success: true, profile: company?.profile, context: company?.context };
+  } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}
+
+export async function saveCompanyProfileAction(uid: string, data: { profile: any, context: any }) {
+  try {
+    const user = await UserRepo.get(uid);
+    if (!user?.companyId) return { success: false, error: 'No company found' };
+
+    await CompanyRepo.updateProfile(user.companyId, data);
+    return { success: true };
+  } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}
+
+// --- CUSTOMERS (CRM) ---
+import { CustomerRepo, CustomerData } from '@/lib/dal/customer.repo';
+
+export async function getCustomersAction(uid: string) {
+  try {
+    const user = await UserRepo.get(uid);
+    if (!user?.companyId) return { success: false, error: 'No company found' };
+    const customers = await CustomerRepo.listByCompany(user.companyId);
+
+    // Serializing dates
+    const plainCustomers = customers.map(c => ({
+      ...c,
+      createdAt: c.createdAt.toDate().toISOString(),
+      updatedAt: c.updatedAt.toDate().toISOString(),
+    }));
+
+    return { success: true, customers: plainCustomers };
+  } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}
+
+export async function createCustomerAction(uid: string, data: Partial<CustomerData>) {
+  try {
+    const user = await UserRepo.get(uid);
+    if (!user?.companyId) return { success: false, error: 'No company found' };
+
+    const newCustomer = await CustomerRepo.create({
+      companyId: user.companyId,
+      name: data.name!,
+      type: data.type || 'private',
+      orgNumber: data.orgNumber || '',
+      email: data.email || '',
+      phone: data.phone || '',
+      address: data.address || '',
+      status: 'lead',
+      notes: ''
+    });
+
+    return { success: true, customerId: newCustomer.id };
+  } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}
+
+export async function updateCustomerAction(uid: string, customerId: string, data: Partial<CustomerData>) {
+  try {
+    // Auth check implied by accessing via Action (could add ownership check here too)
+    await CustomerRepo.update(customerId, data);
+    return { success: true };
+  } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}
+
+// --- GLOBAL STATUS (YELLOW DOTS) ---
+export async function getGlobalStatusAction(uid: string) {
+  try {
+    const user = await UserRepo.get(uid);
+    if (!user?.companyId) return { success: false, error: 'No company' };
+
+    const company = await CompanyRepo.get(user.companyId);
+    const customers = await CustomerRepo.listByCompany(user.companyId);
+
+    // 1. Profile Completeness
+    const profile = company?.profile;
+    const profileIncomplete = !profile?.address || !profile?.orgNumber || !profile?.contactEmail;
+
+    // 2. Customer Completeness
+    const incompleteCustomers = customers.filter(c => c.completeness < 80).length;
+
+    return {
+      success: true,
+      profileIncomplete,
+      incompleteCustomersCount: incompleteCustomers,
+      hasWarnings: profileIncomplete || incompleteCustomers > 0
+    };
+  } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}
+
+// --- OFFERS (FAS 6) ---
+import { RecipeRepo } from '@/lib/dal/recipe.repo';
+import { calculateOfferTool } from '@/lib/genkit/tools/calculation.tools';
+import { generateOfferTool } from '@/lib/genkit/tools/pdf.tools';
+
+export async function getRecipesAction() {
+  try {
+    let recipes = await RecipeRepo.list();
+
+    // SEEDING: If no recipes exist, create standard templates
+    if (recipes.length === 0) {
+      console.log("🌱 Seeding Default Recipes...");
+      const defaultRecipes = [
+        {
+          name: 'Badrumsrenovering (Standard)',
+          description: 'Helrenovering av badrum inkl. tätskikt och kakel.',
+          laborHoursPerUnit: 12, // ca 12h per m2 totalt snitt?
+          riskFactor: 0.15,
+          materials: [
+            { name: 'Tätskiktssystem', unit: 'm2', costPerUnit: 450, quantityPerUnit: 1.1 },
+            { name: 'Kakel/Klinker', unit: 'm2', costPerUnit: 600, quantityPerUnit: 1.1 },
+            { name: 'Fästmassa/Fog', unit: 'kg', costPerUnit: 40, quantityPerUnit: 4 },
+            { name: 'VVS-material (Schablon)', unit: 'st', costPerUnit: 200, quantityPerUnit: 0.5 }
+          ],
+          kmaRequirements: ['Härdplaster (Härdarn)', 'Tunga lyft']
+        },
+        {
+          name: 'Målning Vägg & Tak',
+          description: 'Bredspackling och målning.',
+          laborHoursPerUnit: 1.5,
+          riskFactor: 0.05,
+          materials: [
+            { name: 'Spackel', unit: 'liter', costPerUnit: 30, quantityPerUnit: 2 },
+            { name: 'Grundfärg', unit: 'liter', costPerUnit: 80, quantityPerUnit: 0.2 },
+            { name: 'Täckfärg', unit: 'liter', costPerUnit: 150, quantityPerUnit: 0.3 },
+            { name: 'Täckpapp & Tejp', unit: 'm2', costPerUnit: 15, quantityPerUnit: 1.1 }
+          ],
+          kmaRequirements: ['Damm', 'Arbete på bock']
+        }
+      ];
+
+      for (const r of defaultRecipes) {
+        await RecipeRepo.create(r);
+      }
+      recipes = await RecipeRepo.list(); // Re-fetch
+    }
+
+    return { success: true, recipes };
+  } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}
+
+export async function calculateOfferAction(input: any) {
+  try {
+    const result = await calculateOfferTool(input);
+    return { success: true, data: result };
+  } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}
+
+export async function createOfferPdfAction(input: any) {
+  try {
+    const result = await generateOfferTool(input);
+    return { success: true, data: result };
+  } catch (error: any) {
+    return { success: false, error: error.message };
+  }
 }

@@ -1,18 +1,46 @@
 import 'server-only';
+// Rebuild trigger: pdf-lib installed
 import { ai } from '@/lib/genkit-instance';
 import { z } from 'genkit';
+import { PDFDocument, StandardFonts, rgb, PDFFont, PDFPage } from 'pdf-lib';
+import { GoogleDriveService } from '@/lib/google/drive';
+import { Readable } from 'stream';
 
-const GeneratePdfInput = z.object({
-    title: z.string(),
-    content: z.string(),
+const H17Input = z.object({
+    contractor: z.object({
+        name: z.string(),
+        orgNumber: z.string(),
+        address: z.string(),
+        contact: z.string().optional(),
+    }),
+    customer: z.object({
+        name: z.string(),
+        idNumber: z.string().describe("Personnummer/Orgnummer"),
+        address: z.string(),
+        contact: z.string().optional(),
+    }),
+    scope: z.object({
+        address: z.string(),
+        description: z.string(),
+    }),
+    price: z.object({
+        type: z.enum(['fixed', 'hourly', 'approx']),
+        amount: z.number(),
+        vatIncluded: z.boolean().default(true),
+    }),
+    time: z.object({
+        startDate: z.string(),
+        endDate: z.string(),
+    }),
+    rot: z.boolean().default(true),
     targetFolderId: z.string().optional(),
 });
 
 export const generatePdfTool = ai.defineTool(
     {
         name: 'generatePdf',
-        description: 'Generates a PDF document and saves it to Google Drive.',
-        inputSchema: GeneratePdfInput,
+        description: 'Generates a "Hantverkarformuläret 17" contract PDF and saves it to Google Drive.',
+        inputSchema: H17Input,
         outputSchema: z.object({
             fileId: z.string(),
             webViewLink: z.string(),
@@ -20,25 +48,355 @@ export const generatePdfTool = ai.defineTool(
         }),
     },
     async (input) => {
-        // Phase 6.3: "Implementera logik för att ta kalkyl-JSON och populera en Google Docs-mall"
-        // For MVP/Prototype without Docs API fully configured:
-        // We will simulate success and logging.
+        console.log(`[Tool: generatePdf] Creating H17 for ${input.customer.name}`);
 
-        console.log(`[Tool: generatePdf] Generating PDF "${input.title}"`);
-        console.log(`Content: ${input.content.substring(0, 50)}...`);
+        // 1. Create PDF
+        const pdfDoc = await PDFDocument.create();
+        const page = pdfDoc.addPage([595.28, 841.89]); // A4
+        const { width, height } = page.getSize();
+        const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+        const fontBold = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
+        const smallFont = await pdfDoc.embedFont(StandardFonts.HelveticaOblique);
 
-        // In a real implementation ensuring "Google Drive Integration":
-        // 1. Create a dummy PDF bytes buffer (e.g., using `jspdf` or just plain text content)
-        // 2. Upload to Drive using `GoogleDriveService.uploadFile` (needs to be added if not exists)
+        let y = height - 50;
+        const margin = 50;
 
-        // Check if we can use GoogleDriveService
-        // We haven't implemented `uploadFile` yet in `drive.ts`. 
+        // Helpers
+        const drawText = (text: string, size: number = 10, isBold: boolean = false, xOffset: number = 0) => {
+            page.drawText(text, {
+                x: margin + xOffset,
+                y,
+                size,
+                font: isBold ? fontBold : font,
+                color: rgb(0, 0, 0),
+            });
+            y -= (size + 5);
+        };
 
-        // For now, return a dummy success to unblock the Flow
+        const drawSection = (title: string) => {
+            y -= 10;
+            page.drawRectangle({ x: margin, y, width: width - (margin * 2), height: 20, color: rgb(0.9, 0.9, 0.9) });
+            page.drawText(title, { x: margin + 5, y: y + 5, size: 12, font: fontBold });
+            y -= 25;
+        };
+
+        // --- DRAW CONTENT ---
+
+        // Header
+        drawText('Hantverkarformuläret 17', 24, true);
+        drawText('Avtal för reparations- och ombyggnadsarbeten (Konsumentverket/Byggindustrin)', 8, false);
+        y -= 20;
+
+        // A. Parter
+        drawSection('A. PARTER');
+
+        // Contractor
+        const startY = y;
+        drawText('HANTVERKARE (Näringsidkare):', 10, true);
+        drawText(`Namn/Firma: ${input.contractor.name}`);
+        drawText(`Org.nr: ${input.contractor.orgNumber}`);
+        drawText(`Adress: ${input.contractor.address}`);
+        if (input.contractor.contact) drawText(`Kontakt: ${input.contractor.contact}`);
+
+        // Customer (Right Column logic sim)
+        // Reset Y for second column but keep min Y
+        const col2X = width / 2;
+        let y2 = startY;
+
+        page.drawText('BESTÄLLARE (Konsument):', { x: col2X, y: y2, size: 10, font: fontBold });
+        y2 -= 15;
+        page.drawText(`Namn: ${input.customer.name}`, { x: col2X, y: y2, size: 10, font: font });
+        y2 -= 15;
+        page.drawText(`Pers.nr: ${input.customer.idNumber}`, { x: col2X, y: y2, size: 10, font: font });
+        y2 -= 15;
+        page.drawText(`Adress: ${input.customer.address}`, { x: col2X, y: y2, size: 10, font: font });
+
+        // Sync Y
+        y = Math.min(y, y2) - 20;
+
+        // B. Omfattning
+        drawSection('B. OMFATTNING');
+        drawText(`Arbetsplats: ${input.scope.address}`);
+        drawText('Arbetsbeskrivning:', 10, true);
+
+        // Multiline handling for description
+        const descLines = input.scope.description.match(/.{1,90}/g) || [];
+        descLines.forEach(line => drawText(line, 10));
+
+        y -= 10;
+
+        // D. Pris
+        drawSection('D. PRIS');
+        let priceText = '';
+        if (input.price.type === 'fixed') priceText = `FAST PRIS: ${input.price.amount} kr`;
+        else if (input.price.type === 'hourly') priceText = `LÖPANDE RÄKNING: ${input.price.amount} kr/tim`;
+        else priceText = `UNGEFÄRLIGT PRIS: ${input.price.amount} kr`;
+
+        if (input.price.vatIncluded) priceText += ' (Inklusive moms)';
+        else priceText += ' (Exklusive moms)';
+
+        drawText(priceText, 12, true);
+
+        // E. ROT
+        drawSection('E. ROT-AVDRAG');
+        if (input.rot) drawText('[X] Ja, arbete ska utföras med ROT-avdrag (30% arbetskostnad).');
+        else drawText('[ ] Nej, inget ROT-avdrag.');
+
+        // F. Tider
+        drawSection('F. TIDER');
+        drawText(`Startdatum: ${input.time.startDate}`);
+        drawText(`Slutdatum: ${input.time.endDate}`);
+
+        // Signatures (Placeholder)
+        y -= 50;
+        drawSection('SIGNATURER');
+        drawText('..................................................          ..................................................');
+        drawText('Datum & Underskrift Hantverkare                 Datum & Underskrift Beställare');
+
+
+        // 2. Serialize
+        const pdfBytes = await pdfDoc.save();
+
+        // 3. Upload to Drive using our new Service
+        // We need to convert Uint8Array to a format Node stream understands or just pass buffer if supported.
+        // googleapis create usually accepts stream. Readable.from(Buffer.from(pdfBytes))
+
+        let fileId = 'error';
+        let webViewLink = 'error';
+
+        if (input.targetFolderId) {
+            try {
+                // Convert Uint8Array to Buffer
+                const buffer = Buffer.from(pdfBytes);
+                // Create readable stream
+                const stream = Readable.from(buffer);
+
+                const uploadRes = await GoogleDriveService.uploadFile(
+                    `Avtal - ${input.customer.name}.pdf`,
+                    'application/pdf',
+                    stream,
+                    input.targetFolderId
+                );
+                fileId = uploadRes.id;
+                webViewLink = uploadRes.webViewLink;
+
+            } catch (error: any) {
+                console.error("PDF Gen Upload Failed:", error);
+                return {
+                    fileId: 'error',
+                    webViewLink: '',
+                    message: `PDF generated but upload failed: ${error.message}`
+                };
+            }
+        } else {
+            console.warn("No targetFolderId provided. PDF generated in memory but not saved.");
+            return {
+                fileId: 'mock-id-no-folder',
+                webViewLink: 'about:blank',
+                message: 'PDF generated in memory (No Folder ID provided to save)'
+            }
+        }
+
         return {
-            fileId: 'mock-file-id-12345',
-            webViewLink: 'https://docs.google.com/document/d/mock-id',
-            message: 'PDF generated successfully (MOCK). Real PDF conversion requires templates.',
+            fileId,
+            webViewLink,
+            message: `Hantverkarformuläret 17 generated for ${input.customer.name}`,
+        };
+    }
+);
+
+const OfferInput = z.object({
+    contractor: z.object({
+        name: z.string(),
+        orgNumber: z.string(),
+        address: z.string(),
+        contact: z.string().optional(),
+        email: z.string().optional(),
+    }),
+    customer: z.object({
+        name: z.string(),
+        address: z.string(),
+    }),
+    project: z.object({
+        name: z.string(),
+        description: z.string(),
+    }),
+    items: z.array(z.object({
+        description: z.string(),
+        quantity: z.number(),
+        unit: z.string(),
+        pricePerUnit: z.number(),
+        total: z.number(),
+    })),
+    totals: z.object({
+        subtotal: z.number(),
+        vatAmount: z.number(),
+        rotDeduction: z.number().optional(),
+        totalToPay: z.number(), // Net total after ROT and VAT
+    }),
+    targetFolderId: z.string().optional(),
+});
+
+export const generateOfferTool = ai.defineTool(
+    {
+        name: 'generateOffer',
+        description: 'Generates a professional Offer/Quote PDF and saves it to Google Drive.',
+        inputSchema: OfferInput,
+        outputSchema: z.object({
+            fileId: z.string(),
+            webViewLink: z.string(),
+            message: z.string(),
+        }),
+    },
+    async (input) => {
+        console.log(`[Tool: generateOffer] Creating Offer for ${input.customer.name}`);
+
+        const pdfDoc = await PDFDocument.create();
+        const page = pdfDoc.addPage([595.28, 841.89]); // A4
+        const { width, height } = page.getSize();
+        const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+        const fontBold = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
+
+        // Colors
+        const primaryColor = rgb(0.2, 0.2, 0.8); // Blue-ish
+        const grayColor = rgb(0.5, 0.5, 0.5);
+
+        let y = height - 50;
+        const margin = 50;
+
+        // Helpers
+        const drawText = (text: string, options: any = {}) => {
+            page.drawText(text, {
+                x: margin,
+                y,
+                size: 10,
+                font: font,
+                color: rgb(0, 0, 0),
+                ...options
+            });
+        };
+
+        // --- HEADER ---
+        drawText('OFFERT', { size: 24, font: fontBold, color: primaryColor });
+        y -= 30;
+        drawText(`Datum: ${new Date().toLocaleDateString('sv-SE')}`, { color: grayColor });
+        y -= 40;
+
+        // --- PARTIES ---
+        const startY = y;
+
+        // Contractor (Left)
+        drawText(input.contractor.name, { font: fontBold, size: 11 });
+        y -= 15;
+        drawText(input.contractor.address);
+        y -= 15;
+        drawText(`Org.nr: ${input.contractor.orgNumber}`);
+        y -= 15;
+        if (input.contractor.email) drawText(input.contractor.email);
+
+        // Customer (Right)
+        y = startY; // Reset Y
+        const col2X = width / 2 + 20;
+
+        page.drawText('Mottagare:', { x: col2X, y: y, size: 9, font: font, color: grayColor });
+        y -= 15;
+        page.drawText(input.customer.name, { x: col2X, y: y, size: 11, font: fontBold });
+        y -= 15;
+        page.drawText(input.customer.address, { x: col2X, y: y, size: 10, font: font });
+
+        y = startY - 80;
+
+        // --- PROJECT ---
+        page.drawLine({ start: { x: margin, y }, end: { x: width - margin, y }, thickness: 1, color: rgb(0.9, 0.9, 0.9) });
+        y -= 20;
+        drawText('Projekt:', { font: fontBold });
+        drawText(input.project.name, { x: margin + 60 });
+        y -= 20;
+
+        // --- ITEMS TABLE ---
+        // Header
+        page.drawRectangle({ x: margin, y: y - 5, width: width - (margin * 2), height: 25, color: rgb(0.95, 0.95, 0.95) });
+        drawText('Beskrivning', { y, font: fontBold });
+        page.drawText('Antal', { x: width - 200, y, size: 10, font: fontBold });
+        page.drawText('A-pris', { x: width - 130, y, size: 10, font: fontBold });
+        page.drawText('Totalt', { x: width - margin - 40, y, size: 10, font: fontBold }); // Right align-ish
+        y -= 30;
+
+        // Rows
+        input.items.forEach(item => {
+            // Check page break (simplified)
+            if (y < 50) {
+                // Add new page if needed (not implemented for simplicity in this artifact)
+            }
+
+            drawText(item.description);
+            page.drawText(`${item.quantity} ${item.unit}`, { x: width - 200, y, size: 10, font });
+            page.drawText(`${item.pricePerUnit} kr`, { x: width - 130, y, size: 10, font });
+            page.drawText(`${item.total} kr`, { x: width - margin - 40, y, size: 10, font });
+
+            y -= 20;
+            page.drawLine({ start: { x: margin, y: y + 10 }, end: { x: width - margin, y: y + 10 }, thickness: 0.5, color: rgb(0.9, 0.9, 0.9) });
+        });
+
+        // --- TOTALS ---
+        y -= 20;
+        const totalX = width - 200;
+
+        drawText('Delsumma (exkl. moms):', { x: totalX - 50 });
+        drawText(`${input.totals.subtotal} kr`, { x: width - margin - 40 });
+        y -= 20;
+
+        drawText('Moms (25%):', { x: totalX - 50 });
+        drawText(`${input.totals.vatAmount} kr`, { x: width - margin - 40 });
+        y -= 20;
+
+        if (input.totals.rotDeduction) {
+            drawText('ROT-avdrag (30% arbetskostnad):', { x: totalX - 50, color: rgb(0, 0.6, 0.2) });
+            drawText(`-${input.totals.rotDeduction} kr`, { x: width - margin - 40, color: rgb(0, 0.6, 0.2) });
+            y -= 20;
+        }
+
+        page.drawLine({ start: { x: totalX - 50, y: y + 10 }, end: { x: width - margin, y: y + 10 }, thickness: 2, color: primaryColor });
+        y -= 10;
+
+        drawText('ATT BETALA:', { x: totalX - 50, size: 14, font: fontBold });
+        drawText(`${input.totals.totalToPay} kr`, { x: width - margin - 40, size: 14, font: fontBold });
+
+        // --- FOOTER ---
+        const bottomY = 50;
+        page.drawText('Detta dokument är genererat av ByggPilot.', { x: margin, y: bottomY, size: 8, color: grayColor });
+
+        // --- SAVE ---
+        const pdfBytes = await pdfDoc.save();
+
+        // Upload
+        let fileId = 'error';
+        let webViewLink = 'error';
+
+        if (input.targetFolderId) {
+            try {
+                const buffer = Buffer.from(pdfBytes);
+                const stream = Readable.from(buffer);
+                const uploadRes = await GoogleDriveService.uploadFile(
+                    `Offert - ${input.project.name}.pdf`,
+                    'application/pdf',
+                    stream,
+                    input.targetFolderId
+                );
+                fileId = uploadRes.id;
+                webViewLink = uploadRes.webViewLink;
+            } catch (error: any) {
+                console.error("PDF Gen Upload Failed:", error);
+                return { fileId: 'error', webViewLink: '', message: error.message };
+            }
+        } else {
+            return { fileId: 'mock-id', webViewLink: '#', message: 'PDF generated in memory (No drive folder)' };
+        }
+
+        return {
+            fileId,
+            webViewLink,
+            message: `Offer PDF generated successfully for ${input.customer.name}`,
         };
     }
 );

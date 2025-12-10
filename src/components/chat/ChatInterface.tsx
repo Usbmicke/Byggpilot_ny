@@ -3,7 +3,8 @@
 import { useState, useRef, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { chatAction, approveChangeOrderAction } from '@/app/actions';
-import { processVoiceCommandAction } from '@/app/actions/voice'; // We need to export/create this properly
+import { processVoiceCommandAction } from '@/app/actions/voice';
+import { useAuth } from '@/components/AuthProvider';
 import { Mic, Square, Send, X, MessageSquare, FileText, Check, Ban } from 'lucide-react';
 
 interface Message {
@@ -13,8 +14,11 @@ interface Message {
 }
 
 export default function ChatInterface() {
+    const { user } = useAuth();
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([]);
+
+    // ... rest of state ...
     const [input, setInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [isRecording, setIsRecording] = useState(false);
@@ -30,7 +34,9 @@ export default function ChatInterface() {
         scrollToBottom();
     }, [messages, isOpen]);
 
+    // ... voice functions ...
     const startRecording = async () => {
+        // ... implementation same as before ... 
         try {
             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
             const recorder = new MediaRecorder(stream);
@@ -125,10 +131,11 @@ export default function ChatInterface() {
         setIsLoading(true);
 
         try {
-            const result = await chatAction(newHistory);
+            // Pass user.uid to inject context!
+            const result = await chatAction(newHistory, user?.uid);
             if (!result.success || !result.text) throw new Error(result.error || 'No response text');
 
-            setMessages((prev) => [...prev, { role: 'model', content: result.text }]);
+            setMessages((prev) => [...prev, { role: 'model', content: result.text! }]);
         } catch (error) {
             console.error(error);
             setMessages((prev) => [...prev, { role: 'model', content: 'Ursäkta, något gick fel.' }]);

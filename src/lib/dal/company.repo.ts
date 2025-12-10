@@ -10,12 +10,28 @@ export interface DriveStructure {
     offersId?: string;
 }
 
+export interface CompanyProfile {
+    name: string;
+    orgNumber: string;
+    address: string;
+    contactEmail?: string;
+    contactPhone?: string;
+    logoUrl?: string; // URL to storage
+}
+
+export interface CompanyContext {
+    preferences?: string; // e.g. "Vi föredrar Byggmax", "Vi använder inte gips från X"
+    risks?: string; // e.g. "Har haft problem med fuktskador i källare förr"
+}
+
 export interface CompanyData {
     name: string;
     ownerId: string;
     createdAt: Timestamp;
     settings?: any;
     driveStructure?: DriveStructure;
+    profile?: CompanyProfile;
+    context?: CompanyContext;
 }
 
 const COLLECTION = 'companies';
@@ -30,6 +46,13 @@ export const CompanyRepo = {
     async updateDriveStructure(companyId: string, structure: DriveStructure) {
         await db.collection(COLLECTION).doc(companyId).set(
             { driveStructure: structure },
+            { merge: true }
+        );
+    },
+
+    async updateProfile(companyId: string, data: { profile?: CompanyProfile; context?: CompanyContext }) {
+        await db.collection(COLLECTION).doc(companyId).set(
+            { ...data },
             { merge: true }
         );
     }
