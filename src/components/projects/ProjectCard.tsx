@@ -189,14 +189,25 @@ export function ProjectCard({ project, variant = 'grid' }: ProjectCardProps) {
                             <span className="font-mono opacity-70">#{project.projectNumber}</span>
                         )}
 
-                        <div className="ml-auto w-full sm:w-auto mt-2 sm:mt-0 max-w-[200px]">
-                            <WeatherWidget
-                                address={project.address}
-                                projectId={project.id}
-                                projectName={project.name}
-                                projectDescription={project.description}
-                                onRiskDetected={setWeatherRisk}
-                            />
+                        <div className="flex gap-2 items-center ml-auto mt-2 sm:mt-0">
+                            <Link
+                                href={`/projects/${project.id}/ata`}
+                                onClick={(e) => e.stopPropagation()}
+                                className="flex items-center gap-1 px-3 py-1.5 bg-blue-500/10 text-blue-400 hover:bg-blue-500/20 rounded-lg text-xs font-semibold transition-colors border border-blue-500/20"
+                                title="Hantera ÄTA"
+                            >
+                                <span>ÄTA</span>
+                            </Link>
+
+                            <div className="w-full sm:w-auto max-w-[200px]">
+                                <WeatherWidget
+                                    address={project.address}
+                                    projectId={project.id}
+                                    projectName={project.name}
+                                    projectDescription={project.description}
+                                    onRiskDetected={setWeatherRisk}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>

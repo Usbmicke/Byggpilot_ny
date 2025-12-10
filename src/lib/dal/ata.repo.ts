@@ -13,7 +13,8 @@ export interface ChangeOrderData {
     status: 'draft' | 'approved' | 'rejected';
     createdAt: Timestamp;
     approvedAt?: Timestamp;
-    driveFileId?: string; // If a separate doc is created
+    driveFileId?: string;
+    driveWebViewLink?: string;
 }
 
 const COLLECTION = 'change_orders';
@@ -44,6 +45,19 @@ export const ChangeOrderRepo = {
         await db.collection(COLLECTION).doc(id).update({
             status,
             approvedAt: status === 'approved' ? Timestamp.now() : undefined
+        });
+    },
+
+    async get(id: string): Promise<ChangeOrderData | null> {
+        const doc = await db.collection(COLLECTION).doc(id).get();
+        if (!doc.exists) return null;
+        return doc.data() as ChangeOrderData;
+    },
+
+    async updatePdf(id: string, driveFileId: string, driveWebViewLink: string) {
+        await db.collection(COLLECTION).doc(id).update({
+            driveFileId,
+            driveWebViewLink
         });
     }
 };

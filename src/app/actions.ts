@@ -466,6 +466,31 @@ export async function approveChangeOrderAction(ataId: string, approved: boolean)
   }
 }
 
+export async function getChangeOrdersAction(projectId: string) {
+  try {
+    const { ChangeOrderRepo } = await import('@/lib/dal/ata.repo');
+    const orders = await ChangeOrderRepo.listByProject(projectId);
+    const plainOrders = orders.map(o => ({
+      ...o,
+      createdAt: o.createdAt.toDate().toISOString(),
+      approvedAt: o.approvedAt?.toDate().toISOString()
+    }));
+    return { success: true, orders: plainOrders };
+  } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}
+
+export async function createChangeOrderAction(data: { projectId: string, description: string, estimatedCost: number, quantity: number, unit: string, type: 'material' | 'work' | 'other' }) {
+  try {
+    const { ChangeOrderRepo } = await import('@/lib/dal/ata.repo');
+    const newOrder = await ChangeOrderRepo.create(data);
+    return { success: true, order: { ...newOrder, createdAt: newOrder.createdAt.toDate().toISOString() } };
+  } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}
+
 export async function finalizeProjectAction(projectId: string) {
   return { success: true, message: "Faktura-generering under konstruktion (PDF)" };
 }

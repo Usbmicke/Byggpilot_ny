@@ -58,12 +58,52 @@ export const RiskEngine = {
         }
 
         // 5. Chemicals (Badrum, Isocyanater)
-        if (text.includes('badrum') || text.includes('fog') || text.includes('epoxi')) {
+        if (text.includes('badrum') || text.includes('fog') || text.includes('epoxi') || text.includes('lim')) {
             risksFound.push({
                 type: 'kma',
                 severity: 'medium',
                 description: 'Kemiska hälsorisker (Härdplaster/Isocyanater?). Kontrollera produktblad.',
-                keywords: ['badrum', 'fog']
+                keywords: ['badrum', 'fog', 'epoxi']
+            });
+        }
+
+        // 6. Financial Risk (Löpande utan tak, Muntliga avtal)
+        if (text.includes('löpande') && !text.includes('takpris')) {
+            risksFound.push({
+                type: 'financial',
+                severity: 'medium',
+                description: 'Ekonomisk Risk: Löpande räkning utan takpris definierat.',
+                keywords: ['löpande']
+            });
+        }
+        if (text.includes('muntligt')) {
+            risksFound.push({
+                type: 'financial',
+                severity: 'high',
+                description: 'Hög Risk: Muntliga överenskommelser. Skriv alltid avtal!',
+                keywords: ['muntligt']
+            });
+        }
+
+        // 7. Time Risk (Vinter, Utomhus)
+        const currentMonth = new Date().getMonth(); // 0-11
+        const isWinter = currentMonth >= 10 || currentMonth <= 2; // Nov-Mar
+        if (isWinter && (text.includes('utomhus') || text.includes('fasad') || text.includes('tak') || text.includes('grund'))) {
+            risksFound.push({
+                type: 'time',
+                severity: 'medium',
+                description: 'Tidsrisk: Utomhusarbete under vintertid. Planera för väderstopp.',
+                keywords: ['vinter', 'utomhus']
+            });
+        }
+
+        // 8. Electricity (Behörighet)
+        if (text.includes('el') || text.includes('kabel') || text.includes('uttag')) {
+            risksFound.push({
+                type: 'kma',
+                severity: 'high',
+                description: 'El-arbeten kräver behörig elektriker och egenkontroll.',
+                keywords: ['el', 'kabel']
             });
         }
 
