@@ -25,6 +25,8 @@ import { UserRepo } from '@/lib/dal/user.repo';
 import { CompanyRepo } from '@/lib/dal/company.repo';
 import { CustomerRepo } from '@/lib/dal/customer.repo';
 
+import { ProjectRepo } from '@/lib/dal/project.repo';
+
 export const chatFlow = ai.defineFlow(
     {
         name: 'chatFlow',
@@ -39,6 +41,7 @@ export const chatFlow = ai.defineFlow(
         let contextContext = "";
         let profileContext = "";
         let customerContext = "";
+        let projectContext = "";
 
         if (input.uid) {
             try {
@@ -66,9 +69,19 @@ export const chatFlow = ai.defineFlow(
                                 if (!c.address) missing.push('Address');
                                 if (!c.orgNumber) missing.push('SSN/OrgNr');
 
-                                customerContext += `- ${c.name} (${c.type}): ${missing.length > 0 ? `INCOMPLETE (Missing: ${missing.join(', ')})` : 'COMPLETE'}. Info: ${c.address || ''}, ${c.orgNumber || ''}, ${c.email || ''}.\n`;
+                                customerContext += `- ${c.name} [ID: ${c.id}] (${c.type}): ${missing.length > 0 ? `INCOMPLETE (Missing: ${missing.join(', ')})` : 'COMPLETE'}. Info: ${c.address || ''}, ${c.orgNumber || ''}, ${c.email || ''}.\n`;
                             });
                             customerContext += "(Matches to these names should pull this data automatically. Warn if INCOMPLETE but allow user to provide missing info in chat).";
+                        }
+
+                        // Project Context (NEW)
+                        const projects = await ProjectRepo.listByOwner(input.uid); // Projects are owned by User, not Company in current schema, but functionally same here
+                        if (projects.length > 0) {
+                            projectContext = "ACTIVE PROJECTS (Use these IDs/Folders for tools):\n";
+                            projects.forEach(p => {
+                                projectContext += `- ${p.name} [ID: ${p.id}]. Status: ${p.status}. FolderID: ${p.driveFolderId || 'MISSING'}. ${p.address ? `Address: ${p.address}` : ''}\n`;
+                            });
+                            projectContext += "(When generating PDFs, ALWAYS use the 'driveFolderId' from a matching project if available).";
                         }
                     }
                 }
@@ -85,6 +98,7 @@ export const chatFlow = ai.defineFlow(
         Capabilities:
         1. PROJECT MANAGEMENT: You can start new projects.
         2. CONTRACTS: You can generate "Hantverkarformuläret 17" contracts for renovation work. Use the 'generatePdf' tool for this. Ask for missing details like Customer Name, Address, Price, and Dates if needed.
+        IMPORTANT: Always try to find a matching PROJECT folder to save the PDF to. Use the Project Context below.
         3. CALCULATIONS: You can calculate offers based on recipes.
         4. RECEIPT ANALYSIS: You can analyze receipts for KMA risks.
         
@@ -95,7 +109,9 @@ export const chatFlow = ai.defineFlow(
         
         ${contextContext}
 
-        ${customerContext}`;
+        ${customerContext}
+
+        ${projectContext}`;
 
         const { text } = await ai.generate({
             prompt: `${systemPrompt}\n\n` + recentMessages.map(m => `${m.role}: ${m.content}`).join('\n'),

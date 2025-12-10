@@ -34,6 +34,7 @@ const H17Input = z.object({
     }),
     rot: z.boolean().default(true),
     targetFolderId: z.string().optional(),
+    projectId: z.string().optional().describe("The ID of the project this belongs to. IF FolderID is missing in context, provide this!")
 });
 
 export const generatePdfTool = ai.defineTool(
@@ -49,6 +50,47 @@ export const generatePdfTool = ai.defineTool(
     },
     async (input) => {
         console.log(`[Tool: generatePdf] Creating H17 for ${input.customer.name}`);
+
+        // --- JIT FOLDER REPAIR ---
+        let finalFolderId = input.targetFolderId;
+
+        if (!finalFolderId && input.projectId) {
+            console.log(`[Tool: generatePdf] No folder ID provided, checking project ${input.projectId}...`);
+            try {
+                const { ProjectRepo } = await import('@/lib/dal/project.repo');
+                const project = await ProjectRepo.get(input.projectId);
+
+                if (project) {
+                    if (project.driveFolderId) {
+                        // ISO Structure: Save into "1_Ritningar & Kontrakt"
+                        console.log(`[Tool: generatePdf] Project found. Ensuring subfolder '1_Ritningar & Kontrakt'...`);
+                        const { GoogleDriveService } = await import('@/lib/google/drive');
+                        finalFolderId = await GoogleDriveService.ensureFolderExists('1_Ritningar & Kontrakt', project.driveFolderId);
+                    } else {
+                        console.log(`[Tool: generatePdf] Project has no folder. Creating Full Structure...`);
+                        const { GoogleDriveService } = await import('@/lib/google/drive');
+
+                        // We need the parent "02_Pågående Projekt" generally, but relying on "ByggPilot - Mitt Företag" lookup might be slow/complex here without context.
+                        // Ideally we use createProjectStructure. 
+                        // For self-healing fallback, let's keep it simple or call the new robust method?
+                        // Let's call ensureRootStructure to be safe and Get "02_Pågående Projekt"
+
+                        // Mock/Stub company name if not available in project (Project schema doesn't strictly have it but usually 'Mitt Företag' implies root owner)
+                        const rootStruct = await GoogleDriveService.ensureRootStructure("Mitt Företag");
+                        const projectsRoot = rootStruct.folders['02_Pågående Projekt'];
+
+                        const res = await GoogleDriveService.createProjectStructure(project.name, projectsRoot);
+                        await ProjectRepo.update(project.id, { driveFolderId: res.projectRootId });
+
+                        finalFolderId = res.subfolders['1_Ritningar & Kontrakt'];
+                        console.log(`[Tool: generatePdf] Created ISO Structure. Target: ${finalFolderId}`);
+                    }
+                }
+            } catch (err) {
+                console.error("JIT Folder Repair Failed:", err);
+            }
+        }
+        // -------------------------
 
         // 1. Create PDF
         const pdfDoc = await PDFDocument.create();
@@ -175,7 +217,7 @@ export const generatePdfTool = ai.defineTool(
                     `Avtal - ${input.customer.name}.pdf`,
                     'application/pdf',
                     stream,
-                    input.targetFolderId
+                    finalFolderId
                 );
                 fileId = uploadRes.id;
                 webViewLink = uploadRes.webViewLink;

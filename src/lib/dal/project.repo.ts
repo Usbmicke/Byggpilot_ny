@@ -8,10 +8,12 @@ export interface ProjectData {
     status: 'active' | 'completed' | 'paused' | 'archived';
     address?: string;
     customerName?: string;
+    customerId?: string; // Link to Customer Collection
     description?: string;
     createdAt: Timestamp;
     ownerId: string;
     driveFolderId?: string;
+    projectNumber?: number;
 }
 
 const COLLECTION = 'projects';
@@ -49,5 +51,15 @@ export const ProjectRepo = {
 
         await docRef.set(msg as ProjectData); // Cast back or just send msg
         return newProject;
+    },
+
+    async update(id: string, data: Partial<ProjectData>) {
+        // Sanitize
+        const msg = { ...data };
+        Object.keys(msg).forEach(key => {
+            if ((msg as any)[key] === undefined) delete (msg as any)[key];
+        });
+
+        await db.collection(COLLECTION).doc(id).set(msg, { merge: true });
     }
 };

@@ -1,13 +1,14 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, use } from 'react';
 import { useAuth } from '@/components/AuthProvider';
-import { getCustomersAction, updateCustomerAction } from '@/app/actions';
+import { getCustomersAction, updateCustomerAction, deleteCustomerAction } from '@/app/actions';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, User, Building, Phone, Mail, MapPin, Hash, Save, Trash } from 'lucide-react';
+import { ArrowLeft, User, Building, Phone, Mail, MapPin, Hash, Save, Trash, X } from 'lucide-react';
 
-export default function EditCustomerPage({ params }: { params: { id: string } }) {
+export default function EditCustomerPage({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = use(params);
     const { user } = useAuth();
     const router = useRouter();
     const [loading, setLoading] = useState(true);
@@ -15,18 +16,21 @@ export default function EditCustomerPage({ params }: { params: { id: string } })
     const [saving, setSaving] = useState(false);
     const [msg, setMsg] = useState('');
 
+    // Delete Modal State
+    const [showDeleteModal, setShowDeleteModal] = useState(false);
+    const [deleteConfirmation, setDeleteConfirmation] = useState('');
+    const [deleting, setDeleting] = useState(false);
+
     useEffect(() => {
-        if (user && params.id) loadCustomer();
-    }, [user, params.id]);
+        if (user && id) loadCustomer();
+    }, [user, id]);
 
     const loadCustomer = async () => {
         setLoading(true);
-        // We reuse getCustomersAction and find by ID for simplicity in this MVP
-        // In a larger app we would have a specific getCustomerAction(id)
         if (!user) return;
         const res = await getCustomersAction(user.uid);
         if (res.success && res.customers) {
-            const found = res.customers.find((c: any) => c.id === params.id);
+            const found = res.customers.find((c: any) => c.id === id);
             if (found) setCustomer(found);
             else setMsg('Kunden hittades inte.');
         }
@@ -52,18 +56,82 @@ export default function EditCustomerPage({ params }: { params: { id: string } })
         if (res.success) {
             setMsg('✅ Ändringar sparade.');
             setTimeout(() => setMsg(''), 3000);
-            // Reload to recalc completeness (done on server during update)
             loadCustomer();
         } else {
             setMsg('❌ Fel vid sparning: ' + res.error);
         }
     };
 
+    const handleDelete = async () => {
+        if (!user || !customer) return;
+        if (deleteConfirmation !== 'RADERA') return;
+
+        setDeleting(true);
+        const res = await deleteCustomerAction(user.uid, customer.id);
+        if (res.success) {
+            router.push('/customers');
+        } else {
+            setMsg('❌ Kunde inte radera: ' + res.error);
+            setShowDeleteModal(false);
+        }
+        setDeleting(false);
+    };
+
     if (loading) return <div className="p-10 text-center animate-pulse text-slate-400">Laddar kunddata...</div>;
     if (!customer) return <div className="p-10 text-center">Kunden hittades inte. <Link href="/customers" className="underline">Tillbaka</Link></div>;
 
     return (
-        <div className="p-8 max-w-3xl mx-auto space-y-8">
+        <div className="p-8 max-w-3xl mx-auto space-y-8 relative">
+            {/* Delete Modal */}
+            {showDeleteModal && (
+                <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
+                    <div className="bg-slate-900 border border-slate-700 rounded-xl p-6 max-w-md w-full shadow-2xl">
+                        <div className="flex justify-between items-center mb-4">
+                            <h3 className="text-xl font-bold text-white flex items-center gap-2">
+                                <Trash size={20} className="text-red-500" /> Radera Kund?
+                            </h3>
+                            <button onClick={() => setShowDeleteModal(false)} className="text-slate-400 hover:text-white">
+                                <X size={20} />
+                            </button>
+                        </div>
+
+                        <div className="space-y-4">
+                            <p className="text-slate-300">
+                                Är du säker på att du vill radera <strong>{customer.name}</strong>?
+                                Detta går inte att ångra och all historik kopplad till kunden kan påverkas.
+                            </p>
+
+                            <div className="space-y-2">
+                                <label className="text-xs uppercase font-bold text-slate-500">Skriv "RADERA" för att bekräfta</label>
+                                <input
+                                    type="text"
+                                    value={deleteConfirmation}
+                                    onChange={(e) => setDeleteConfirmation(e.target.value)}
+                                    placeholder="RADERA"
+                                    className="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-white font-mono placeholder:text-slate-600 focus:ring-2 focus:ring-red-500 outline-none"
+                                />
+                            </div>
+
+                            <div className="flex gap-3 pt-4">
+                                <button
+                                    onClick={() => setShowDeleteModal(false)}
+                                    className="flex-1 py-2.5 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 font-medium transition-colors"
+                                >
+                                    Avbryt
+                                </button>
+                                <button
+                                    onClick={handleDelete}
+                                    disabled={deleteConfirmation !== 'RADERA' || deleting}
+                                    className="flex-1 py-2.5 rounded-lg bg-red-600 text-white hover:bg-red-700 font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center gap-2"
+                                >
+                                    {deleting ? 'Raderar...' : 'Radera Kund'}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
             <div className="flex items-center justify-between">
                 <Link href="/customers" className="flex items-center text-slate-500 hover:text-slate-800 transition-colors">
                     <ArrowLeft size={20} className="mr-2" />
@@ -72,16 +140,16 @@ export default function EditCustomerPage({ params }: { params: { id: string } })
                 {msg && <span className={`${msg.includes('✅') ? 'text-emerald-600' : 'text-red-500'} font-medium animate-in fade-in`}>{msg}</span>}
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+            <div className="bg-slate-900 rounded-xl shadow-lg border border-slate-800 overflow-hidden">
                 {/* Header/Cover */}
-                <div className="h-32 bg-slate-900 flex items-end p-6">
+                <div className="h-32 bg-slate-950 flex items-end p-6">
                     <div className="flex items-center gap-4 translate-y-8">
-                        <div className="w-20 h-20 rounded-xl bg-white shadow-md flex items-center justify-center text-3xl font-bold text-slate-800 border-4 border-white">
+                        <div className="w-20 h-20 rounded-xl bg-slate-800 shadow-md flex items-center justify-center text-3xl font-bold text-white border-4 border-slate-900">
                             {customer.name?.charAt(0).toUpperCase()}
                         </div>
                         <div className="mb-6">
                             <h1 className="text-2xl font-bold text-white">{customer.name}</h1>
-                            <span className="text-slate-300 text-sm bg-white/10 px-2 py-0.5 rounded backdrop-blur-sm">
+                            <span className="text-slate-300 text-sm bg-white/5 px-2 py-0.5 rounded backdrop-blur-sm border border-white/10">
                                 {customer.type === 'company' ? 'Företagskund' : 'Privatkund'}
                             </span>
                         </div>
@@ -91,11 +159,11 @@ export default function EditCustomerPage({ params }: { params: { id: string } })
                 <div className="p-8 pt-12 space-y-6">
                     {/* Completeness Alert */}
                     {customer.completeness < 80 && (
-                        <div className="bg-amber-50 border border-amber-200 text-amber-800 p-4 rounded-lg flex gap-3 items-start">
-                            <AlertCircle className="shrink-0 mt-0.5" size={18} />
+                        <div className="bg-amber-500/10 border border-amber-500/20 text-amber-200 p-4 rounded-lg flex gap-3 items-start">
+                            <AlertCircle className="shrink-0 mt-0.5 text-amber-400" size={18} />
                             <div>
-                                <h3 className="font-semibold text-sm">Information saknas</h3>
-                                <p className="text-sm opacity-90 mt-1">
+                                <h3 className="font-semibold text-sm text-amber-100">Information saknas</h3>
+                                <p className="text-sm opacity-80 mt-1">
                                     För att automatiska avtal och AI-funktioner ska fungera optimalt bör du fylla i <strong>Adress</strong> och <strong>Org/Personnummer</strong>.
                                 </p>
                             </div>
@@ -104,40 +172,40 @@ export default function EditCustomerPage({ params }: { params: { id: string } })
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-4">
-                            <label className="block text-sm font-medium text-slate-700">Namn</label>
+                            <label className="block text-sm font-medium text-slate-400">Namn</label>
                             <div className="relative">
-                                <User className="absolute left-3 top-3 text-slate-400" size={18} />
+                                <User className="absolute left-3 top-3 text-slate-500" size={18} />
                                 <input
                                     type="text"
-                                    className="input-field w-full pl-10 p-2.5 bg-slate-50 border rounded focus:bg-white"
+                                    className="input-field w-full pl-10 p-2.5 bg-slate-950 border border-slate-800 rounded-lg focus:bg-slate-900 focus:border-indigo-500 text-white placeholder-slate-600 outline-none transition-all"
                                     value={customer.name}
                                     onChange={e => setCustomer({ ...customer, name: e.target.value })}
                                 />
                             </div>
                         </div>
                         <div className="space-y-4">
-                            <label className="block text-sm font-medium text-slate-700">Kundtyp</label>
-                            <div className="flex bg-slate-50 p-1 rounded-lg border border-slate-200 overflow-hidden">
+                            <label className="block text-sm font-medium text-slate-400">Kundtyp</label>
+                            <div className="flex bg-slate-950 p-1 rounded-lg border border-slate-800 overflow-hidden">
                                 <button
                                     onClick={() => setCustomer({ ...customer, type: 'private' })}
-                                    className={`flex-1 py-2 text-sm font-medium rounded transition-colors flex items-center justify-center gap-2 ${customer.type === 'private' ? 'bg-white shadow-sm text-slate-900' : 'text-slate-400 hover:text-slate-600'}`}>
+                                    className={`flex-1 py-2 text-sm font-medium rounded-md transition-all flex items-center justify-center gap-2 ${customer.type === 'private' ? 'bg-slate-800 shadow-sm text-white' : 'text-slate-500 hover:text-slate-300'}`}>
                                     <User size={16} /> Privat
                                 </button>
                                 <button
                                     onClick={() => setCustomer({ ...customer, type: 'company' })}
-                                    className={`flex-1 py-2 text-sm font-medium rounded transition-colors flex items-center justify-center gap-2 ${customer.type === 'company' ? 'bg-white shadow-sm text-slate-900' : 'text-slate-400 hover:text-slate-600'}`}>
+                                    className={`flex-1 py-2 text-sm font-medium rounded-md transition-all flex items-center justify-center gap-2 ${customer.type === 'company' ? 'bg-slate-800 shadow-sm text-white' : 'text-slate-500 hover:text-slate-300'}`}>
                                     <Building size={16} /> Företag
                                 </button>
                             </div>
                         </div>
 
                         <div className="space-y-4">
-                            <label className="block text-sm font-medium text-slate-700">Org.nr / Personnummer</label>
+                            <label className="block text-sm font-medium text-slate-400">Org.nr / Personnummer</label>
                             <div className="relative">
-                                <Hash className="absolute left-3 top-3 text-slate-400" size={18} />
+                                <Hash className="absolute left-3 top-3 text-slate-500" size={18} />
                                 <input
                                     type="text"
-                                    className="input-field w-full pl-10 p-2.5 bg-slate-50 border rounded focus:bg-white"
+                                    className="input-field w-full pl-10 p-2.5 bg-slate-950 border border-slate-800 rounded-lg focus:bg-slate-900 focus:border-indigo-500 text-white placeholder-slate-600 outline-none transition-all"
                                     value={customer.orgNumber}
                                     onChange={e => setCustomer({ ...customer, orgNumber: e.target.value })}
                                     placeholder={customer.type === 'company' ? '556XXX-XXXX' : 'ÅÅMMDD-XXXX'}
@@ -146,12 +214,12 @@ export default function EditCustomerPage({ params }: { params: { id: string } })
                         </div>
 
                         <div className="space-y-4">
-                            <label className="block text-sm font-medium text-slate-700">Telefon</label>
+                            <label className="block text-sm font-medium text-slate-400">Telefon</label>
                             <div className="relative">
-                                <Phone className="absolute left-3 top-3 text-slate-400" size={18} />
+                                <Phone className="absolute left-3 top-3 text-slate-500" size={18} />
                                 <input
                                     type="text"
-                                    className="input-field w-full pl-10 p-2.5 bg-slate-50 border rounded focus:bg-white"
+                                    className="input-field w-full pl-10 p-2.5 bg-slate-950 border border-slate-800 rounded-lg focus:bg-slate-900 focus:border-indigo-500 text-white placeholder-slate-600 outline-none transition-all"
                                     value={customer.phone}
                                     onChange={e => setCustomer({ ...customer, phone: e.target.value })}
                                 />
@@ -159,12 +227,12 @@ export default function EditCustomerPage({ params }: { params: { id: string } })
                         </div>
 
                         <div className="space-y-4 md:col-span-2">
-                            <label className="block text-sm font-medium text-slate-700">E-post</label>
+                            <label className="block text-sm font-medium text-slate-400">E-post</label>
                             <div className="relative">
-                                <Mail className="absolute left-3 top-3 text-slate-400" size={18} />
+                                <Mail className="absolute left-3 top-3 text-slate-500" size={18} />
                                 <input
                                     type="email"
-                                    className="input-field w-full pl-10 p-2.5 bg-slate-50 border rounded focus:bg-white"
+                                    className="input-field w-full pl-10 p-2.5 bg-slate-950 border border-slate-800 rounded-lg focus:bg-slate-900 focus:border-indigo-500 text-white placeholder-slate-600 outline-none transition-all"
                                     value={customer.email}
                                     onChange={e => setCustomer({ ...customer, email: e.target.value })}
                                 />
@@ -172,11 +240,11 @@ export default function EditCustomerPage({ params }: { params: { id: string } })
                         </div>
 
                         <div className="space-y-4 md:col-span-2">
-                            <label className="block text-sm font-medium text-slate-700">Adress (Gata, Postnr, Ort)</label>
+                            <label className="block text-sm font-medium text-slate-400">Adress (Gata, Postnr, Ort)</label>
                             <div className="relative">
-                                <MapPin className="absolute left-3 top-3 text-slate-400" size={18} />
+                                <MapPin className="absolute left-3 top-3 text-slate-500" size={18} />
                                 <textarea
-                                    className="input-field w-full pl-10 p-2.5 bg-slate-50 border rounded focus:bg-white min-h-[100px]"
+                                    className="input-field w-full pl-10 p-2.5 bg-slate-950 border border-slate-800 rounded-lg focus:bg-slate-900 focus:border-indigo-500 text-white placeholder-slate-600 outline-none transition-all min-h-[100px]"
                                     value={customer.address}
                                     onChange={e => setCustomer({ ...customer, address: e.target.value })}
                                     placeholder="Storgatan 1&#10;123 45 Staden"
@@ -185,18 +253,18 @@ export default function EditCustomerPage({ params }: { params: { id: string } })
                         </div>
                     </div>
 
-                    <div className="pt-6 border-t border-slate-100 flex justify-end gap-3">
+                    <div className="pt-6 border-t border-slate-800 flex justify-end gap-3">
                         <button
-                            className="px-4 py-2 text-sm text-red-500 hover:bg-red-50 rounded transition-colors flex items-center gap-2 opacity-50 hover:opacity-100"
-                            title="Ta bort kund (Ej implementerat i demo)"
-                            disabled
+                            onClick={() => setShowDeleteModal(true)}
+                            className="px-4 py-2 text-sm text-red-500 hover:bg-red-500/10 rounded-lg transition-colors flex items-center gap-2"
+                            title="Ta bort kund"
                         >
                             <Trash size={18} /> Ta bort
                         </button>
                         <button
                             onClick={handleSave}
                             disabled={saving}
-                            className="bg-indigo-600 text-white px-6 py-2.5 rounded-lg shadow-md hover:bg-indigo-700 transition-all flex items-center gap-2 font-medium"
+                            className="bg-indigo-600 text-white px-6 py-2.5 rounded-lg shadow-lg hover:bg-indigo-500 transition-all flex items-center gap-2 font-medium"
                         >
                             {saving ? 'Sparar...' : <><Save size={18} /> Spara Ändringar</>}
                         </button>

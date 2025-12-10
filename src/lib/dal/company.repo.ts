@@ -32,6 +32,7 @@ export interface CompanyData {
     driveStructure?: DriveStructure;
     profile?: CompanyProfile;
     context?: CompanyContext;
+    projectCounter?: number; // Last used project number
 }
 
 const COLLECTION = 'companies';
@@ -55,5 +56,28 @@ export const CompanyRepo = {
             { ...data },
             { merge: true }
         );
+    },
+
+    async getNextProjectNumber(companyId: string): Promise<number> {
+        const ref = db.collection(COLLECTION).doc(companyId);
+
+        return await db.runTransaction(async (t) => {
+            const doc = await t.get(ref);
+            if (!doc.exists) throw new Error("Company not found");
+
+            const data = doc.data() as CompanyData;
+            let current = data.projectCounter;
+
+            // Random Start if missing
+            if (!current) {
+                // Generate random start between 3000 and 6000
+                current = Math.floor(Math.random() * (6000 - 3000 + 1) + 3000);
+            } else {
+                current += 1;
+            }
+
+            t.set(ref, { projectCounter: current }, { merge: true });
+            return current;
+        });
     }
 };
