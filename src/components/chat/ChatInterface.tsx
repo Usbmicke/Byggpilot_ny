@@ -132,10 +132,14 @@ export default function ChatInterface() {
 
         try {
             // Pass user.uid to inject context!
-            const result = await chatAction(newHistory, user?.uid);
+            // Retrieve Google Access Token from storage (saved during login)
+            const accessToken = localStorage.getItem('google_access_token') || undefined;
+            console.log("🔐 [ChatInterface] Access Token found:", !!accessToken);
+
+            const result = await chatAction(newHistory, user?.uid, accessToken);
             if (!result.success || !result.text) throw new Error(result.error || 'No response text');
 
-            setMessages((prev) => [...prev, { role: 'model', content: result.text! }]);
+            setMessages((prev) => [...prev, { role: 'model', content: result.text || '' }]);
         } catch (error) {
             console.error(error);
             setMessages((prev) => [...prev, { role: 'model', content: 'Ursäkta, något gick fel.' }]);

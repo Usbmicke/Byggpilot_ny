@@ -48,8 +48,11 @@ export const generatePdfTool = ai.defineTool(
             message: z.string(),
         }),
     },
-    async (input) => {
-        console.log(`[Tool: generatePdf] Creating H17 for ${input.customer.name}`);
+    async (input, context: any) => {
+        // Handle nested context from Genkit
+        const accessToken = context?.accessToken || context?.context?.accessToken as string | undefined;
+        console.log(`[Tool: generatePdf] Creating H17 for ${input.customer.name}. Access Token present: ${!!accessToken}`);
+
 
         // --- JIT FOLDER REPAIR ---
         let finalFolderId = input.targetFolderId;
@@ -75,11 +78,22 @@ export const generatePdfTool = ai.defineTool(
                         // For self-healing fallback, let's keep it simple or call the new robust method?
                         // Let's call ensureRootStructure to be safe and Get "02_Pågående Projekt"
 
-                        // Mock/Stub company name if not available in project (Project schema doesn't strictly have it but usually 'Mitt Företag' implies root owner)
-                        const rootStruct = await GoogleDriveService.ensureRootStructure("Mitt Företag");
+                        const { UserRepo } = await import('@/lib/dal/user.repo');
+                        const { CompanyRepo } = await import('@/lib/dal/company.repo');
+
+                        let companyName = "Mitt Företag";
+                        if (project.ownerId) {
+                            const user = await UserRepo.get(project.ownerId);
+                            if (user?.companyId) {
+                                const comp = await CompanyRepo.get(user.companyId);
+                                if (comp) companyName = comp.profile?.name || comp.name || "Mitt Företag";
+                            }
+                        }
+
+                        const rootStruct = await GoogleDriveService.ensureRootStructure(companyName, accessToken);
                         const projectsRoot = rootStruct.folders['02_Pågående Projekt'];
 
-                        const res = await GoogleDriveService.createProjectStructure(project.name, projectsRoot);
+                        const res = await GoogleDriveService.createProjectStructure(project.name, projectsRoot, accessToken);
                         await ProjectRepo.update(project.id, { driveFolderId: res.projectRootId });
 
                         finalFolderId = res.subfolders['1_Ritningar & Kontrakt'];
@@ -206,7 +220,7 @@ export const generatePdfTool = ai.defineTool(
         let fileId = 'error';
         let webViewLink = 'error';
 
-        if (input.targetFolderId) {
+        if (finalFolderId) {
             try {
                 // Convert Uint8Array to Buffer
                 const buffer = Buffer.from(pdfBytes);
@@ -217,7 +231,8 @@ export const generatePdfTool = ai.defineTool(
                     `Avtal - ${input.customer.name}.pdf`,
                     'application/pdf',
                     stream,
-                    finalFolderId
+                    finalFolderId,
+                    accessToken
                 );
                 fileId = uploadRes.id;
                 webViewLink = uploadRes.webViewLink;
@@ -231,11 +246,14 @@ export const generatePdfTool = ai.defineTool(
                 };
             }
         } else {
-            console.warn("No targetFolderId provided. PDF generated in memory but not saved.");
+            console.warn("No targetFolderId or Project Context provided. Returning Base64 Data URI.");
+            const base64Pdf = Buffer.from(pdfBytes).toString('base64');
+            const dataUri = `data:application/pdf;base64,${base64Pdf}`;
+
             return {
-                fileId: 'mock-id-no-folder',
-                webViewLink: 'about:blank',
-                message: 'PDF generated in memory (No Folder ID provided to save)'
+                fileId: 'memory-only',
+                webViewLink: dataUri,
+                message: `PDF genererad (Kunde ej sparas till Drive). [📄 Klicka här för att öppna/ladda ner PDF](${dataUri})`
             }
         }
 
@@ -290,8 +308,9 @@ export const generateOfferTool = ai.defineTool(
             message: z.string(),
         }),
     },
-    async (input) => {
+    async (input, context: any) => {
         console.log(`[Tool: generateOffer] Creating Offer for ${input.customer.name}`);
+        const accessToken = context?.accessToken as string | undefined;
 
         const pdfDoc = await PDFDocument.create();
         const page = pdfDoc.addPage([595.28, 841.89]); // A4
@@ -423,7 +442,8 @@ export const generateOfferTool = ai.defineTool(
                     `Offert - ${input.project.name}.pdf`,
                     'application/pdf',
                     stream,
-                    input.targetFolderId
+                    input.targetFolderId,
+                    accessToken
                 );
                 fileId = uploadRes.id;
                 webViewLink = uploadRes.webViewLink;
@@ -432,7 +452,13 @@ export const generateOfferTool = ai.defineTool(
                 return { fileId: 'error', webViewLink: '', message: error.message };
             }
         } else {
-            return { fileId: 'mock-id', webViewLink: '#', message: 'PDF generated in memory (No drive folder)' };
+            const base64Pdf = Buffer.from(pdfBytes).toString('base64');
+            const dataUri = `data:application/pdf;base64,${base64Pdf}`;
+            return {
+                fileId: 'memory-only',
+                webViewLink: dataUri,
+                message: 'Offer PDF generated in memory (Not saved to Drive. Click link to download/view). To save permanently, ensure a Project is active.'
+            };
         }
 
         return {

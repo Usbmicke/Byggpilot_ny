@@ -21,15 +21,18 @@ export const startProjectTool = ai.defineTool(
             message: z.string(),
         }),
     },
-    async (input) => {
-        // Auth check logic disabled for build pass
-        const user = { uid: 'stub_user' }; // Stub user for now
+    async (input, context: any) => {
+        // Handle nested context from Genkit
+        const userId = context?.uid || context?.context?.uid || context?.auth?.uid;
+        const accessToken = context?.accessToken || context?.context?.accessToken;
 
-        if (!user) {
-            console.warn('Tool startProject called without auth context?');
+        if (!userId) {
+            console.warn('Tool startProject called without auth context. Cannot create project.');
+            return {
+                projectId: 'error',
+                message: 'Error: No user context found. Please log in again.'
+            };
         }
-
-        const userId = user?.uid || 'unknown_user';
 
         console.log(`[Tool: startProject] Creating project: ${input.name} for user: ${userId}`);
 
@@ -73,14 +76,14 @@ export const startProjectTool = ai.defineTool(
             const { GoogleDriveService } = await import('@/lib/google/drive');
 
             // Ensure Root & Projects Folder
-            const rootStruct = await GoogleDriveService.ensureRootStructure(companyName);
+            const rootStruct = await GoogleDriveService.ensureRootStructure(companyName, accessToken);
             const projectsFolderId = rootStruct.folders['02_Pågående Projekt'];
 
             // Create Project Structure with Numbered Name
             // e.g. "3450 - Anna Fönsterbyte"
             const folderName = projectNumber ? `${projectNumber} - ${input.name}` : input.name;
 
-            const projectStruct = await GoogleDriveService.createProjectStructure(folderName, projectsFolderId);
+            const projectStruct = await GoogleDriveService.createProjectStructure(folderName, projectsFolderId, accessToken);
             folderId = projectStruct.projectRootId;
 
             console.log(`[Tool: startProject] Created ISO Structure. Root: ${folderId}`);

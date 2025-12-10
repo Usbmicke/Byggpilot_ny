@@ -61,5 +61,9 @@ export const ProjectRepo = {
         });
 
         await db.collection(COLLECTION).doc(id).set(msg, { merge: true });
+    },
+
+    async delete(id: string) {
+        await db.collection(COLLECTION).doc(id).delete();
     }
 };

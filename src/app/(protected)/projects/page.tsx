@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { startTransition, useState, useEffect } from 'react';
+import Link from 'next/link';
 import { useAuth } from '@/components/AuthProvider';
 import { getProjectsAction, createProjectAction } from '@/app/actions';
 import { Plus } from 'lucide-react'; // Ensure lucide-react is available (usually is in shadcn setups)
@@ -8,12 +9,43 @@ import { Plus } from 'lucide-react'; // Ensure lucide-react is available (usuall
 // Simple Modal Component (Inline for speed, can extract later)
 function CreateProjectModal({ isOpen, onClose, onCreated, ownerId }: any) {
     const [loading, setLoading] = useState(false);
+    const [customers, setCustomers] = useState<any[]>([]);
+    const [useExistingCustomer, setUseExistingCustomer] = useState(true);
+
+    // Load customers on open
+    useEffect(() => {
+        if (isOpen && ownerId) {
+            import('@/app/actions').then(({ getCustomersAction }) => {
+                getCustomersAction(ownerId).then(res => {
+                    if (res.success && res.customers) setCustomers(res.customers);
+                });
+            });
+        }
+    }, [isOpen, ownerId]);
+
     const [formData, setFormData] = useState({
         name: '',
         address: '',
         customerName: '',
+        customerId: '',
         description: ''
     });
+
+    // Auto-fill address/name when customer is selected
+    const handleCustomerSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        const cId = e.target.value;
+        const customer = customers.find(c => c.id === cId);
+        if (customer) {
+            setFormData(prev => ({
+                ...prev,
+                customerId: customer.id,
+                customerName: customer.name,
+                address: customer.address || prev.address // Fill address if available
+            }));
+        } else {
+            setFormData(prev => ({ ...prev, customerId: '', customerName: '' }));
+        }
+    };
 
     if (!isOpen) return null;
 
@@ -42,9 +74,44 @@ function CreateProjectModal({ isOpen, onClose, onCreated, ownerId }: any) {
                             className="input-field"
                             value={formData.name}
                             onChange={e => setFormData({ ...formData, name: e.target.value })}
-                            placeholder="t.ex. Villa Svensson"
+                            placeholder="t.ex. Takbyte 2024"
                         />
                     </div>
+
+                    {/* Customer Selection */}
+                    <div className="bg-secondary/20 p-3 rounded-lg border border-border/50">
+                        <div className="flex justify-between items-center mb-2">
+                            <label className="text-sm font-medium text-foreground">Kund</label>
+                            <button
+                                type="button"
+                                onClick={() => setUseExistingCustomer(!useExistingCustomer)}
+                                className="text-xs text-primary hover:underline"
+                            >
+                                {useExistingCustomer ? '+ Skapa ny / Manuell' : 'Välj befintlig'}
+                            </button>
+                        </div>
+
+                        {useExistingCustomer ? (
+                            <select
+                                className="input-field"
+                                value={formData.customerId}
+                                onChange={handleCustomerSelect}
+                            >
+                                <option value="">-- Välj Kund --</option>
+                                {customers.map(c => (
+                                    <option key={c.id} value={c.id}>{c.name}</option>
+                                ))}
+                            </select>
+                        ) : (
+                            <input
+                                className="input-field"
+                                value={formData.customerName}
+                                onChange={e => setFormData({ ...formData, customerName: e.target.value, customerId: '' })}
+                                placeholder="Kundnamn"
+                            />
+                        )}
+                    </div>
+
                     <div>
                         <label className="block text-sm font-medium text-foreground mb-1">Adress</label>
                         <input
@@ -53,14 +120,7 @@ function CreateProjectModal({ isOpen, onClose, onCreated, ownerId }: any) {
                             onChange={e => setFormData({ ...formData, address: e.target.value })}
                         />
                     </div>
-                    <div>
-                        <label className="block text-sm font-medium text-foreground mb-1">Kund</label>
-                        <input
-                            className="input-field"
-                            value={formData.customerName}
-                            onChange={e => setFormData({ ...formData, customerName: e.target.value })}
-                        />
-                    </div>
+
                     <div>
                         <label className="block text-sm font-medium text-foreground mb-1">Beskrivning</label>
                         <textarea
@@ -68,6 +128,7 @@ function CreateProjectModal({ isOpen, onClose, onCreated, ownerId }: any) {
                             value={formData.description}
                             onChange={e => setFormData({ ...formData, description: e.target.value })}
                             rows={3}
+                            placeholder="Vad ska göras? (Detta analyseras för risker)"
                         />
                     </div>
                     <div className="flex justify-end gap-2 mt-6">
@@ -142,15 +203,22 @@ export default function ProjectsPage() {
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {projects.map((project) => (
-                        <div key={project.id} className="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-md transition-all group hover:border-primary/50">
+                        <Link href={`/projects/${project.id}`} key={project.id} className="block bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-md transition-all group hover:border-primary/50">
                             <div className="flex justify-between items-start mb-4">
                                 <div className="h-10 w-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary font-bold text-lg">
                                     {project.name.charAt(0).toUpperCase()}
                                 </div>
-                                <span className={`px-2 py-1 rounded-full text-xs font-medium ${project.status === 'active' ? 'bg-emerald-500/10 text-emerald-500' : 'bg-secondary text-muted-foreground'
-                                    }`}>
-                                    {project.status === 'active' ? 'Pågående' : project.status}
-                                </span>
+                                <div className="flex flex-col items-end gap-1">
+                                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${project.status === 'active' ? 'bg-emerald-500/10 text-emerald-500' : 'bg-secondary text-muted-foreground'
+                                        }`}>
+                                        {project.status === 'active' ? 'Pågående' : project.status}
+                                    </span>
+                                    {project.projectNumber && (
+                                        <span className="text-xs font-mono text-muted-foreground">
+                                            #{project.projectNumber}
+                                        </span>
+                                    )}
+                                </div>
                             </div>
                             <h3 className="font-semibold text-foreground text-lg mb-1 group-hover:text-primary transition-colors">{project.name}</h3>
                             <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{project.description || 'Ingen beskrivning'}</p>
@@ -172,7 +240,7 @@ export default function ProjectsPage() {
                                     <span className="text-primary/50 group-hover:text-primary transition-colors">Mer info &rarr;</span>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             )}

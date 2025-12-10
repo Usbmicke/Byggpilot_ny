@@ -83,10 +83,10 @@ export async function createCompanyDriveFolderAction(accessToken: string, compan
 }
 
 // --- CHAT ---
-export async function chatAction(messages: any[], uid?: string) {
+export async function chatAction(messages: any[], uid?: string, accessToken?: string) {
   try {
-    console.log('💬 Chat Action Triggered', uid ? `for user ${uid}` : '(no user)');
-    const response = await chatFlow({ messages, uid });
+    console.log('💬 Chat Action Triggered', uid ? `for user ${uid}` : '(no user)', accessToken ? '[Has Access Token]' : '[MISSING Access Token]');
+    const response = await chatFlow({ messages, uid, accessToken });
     return { success: true, text: response };
   } catch (error: any) {
     console.error('❌ Chat Action Failed:', error);
@@ -226,6 +226,71 @@ export async function getProjectsAction(ownerId: string) {
     return { success: true, projects: plainProjects };
   } catch (error: any) {
     console.error('❌ Get Projects Failed:', error);
+    return { success: false, error: error.message };
+  }
+}
+
+export async function getProjectAction(projectId: string) {
+  try {
+    const project = await ProjectRepo.get(projectId);
+    if (!project) return { success: false, error: 'Project not found' };
+
+    return {
+      success: true,
+      project: {
+        ...project,
+        createdAt: project.createdAt.toDate().toISOString()
+      }
+    };
+  } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}
+
+// Helper to get Google Drive Service imported dynamically (server-only constraint)
+const getDriveService = async () => {
+  const { GoogleDriveService } = await import('@/lib/google/drive');
+  return GoogleDriveService;
+};
+
+export async function updateProjectAction(projectId: string, data: Partial<any>) {
+  try {
+    const existingProject = await ProjectRepo.get(projectId);
+    if (!existingProject) throw new Error('Project not found');
+
+    // 1. Update Firestore
+    await ProjectRepo.update(projectId, data);
+
+    // 2. Check if name or projectNumber changed, and if we need to rename Drive folder
+    const newName = data.name || existingProject.name;
+    const newNumber = data.projectNumber !== undefined ? data.projectNumber : existingProject.projectNumber;
+
+    // Only rename if something relevant changed AND we have a driveFolderId
+    if (existingProject.driveFolderId && (data.name || data.projectNumber)) {
+      const folderName = newNumber ? `${newNumber} - ${newName}` : newName;
+      console.log(`📂 Renaming Drive Folder to: ${folderName}`);
+
+      try {
+        const drive = await getDriveService();
+        await drive.renameFolder(existingProject.driveFolderId, folderName);
+        console.log("✅ Drive Folder Renamed");
+      } catch (e) {
+        console.error("⚠️ Failed to rename Drive folder:", e);
+        // Non-blocking error
+      }
+    }
+
+    return { success: true };
+  } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}
+
+export async function deleteProjectAction(projectId: string) {
+  try {
+    await ProjectRepo.delete(projectId);
+    return { success: true };
+  } catch (error: any) {
     return { success: false, error: error.message };
   }
 }

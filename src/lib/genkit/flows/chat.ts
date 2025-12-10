@@ -1,9 +1,10 @@
 import 'server-only';
 import { ai } from '@/lib/genkit-instance';
 import { z } from 'genkit';
-import { startProjectTool } from '../tools/project.tools';
-import { generatePdfTool } from '../tools/pdf.tools';
-import { calculateOfferTool } from '../tools/calculation.tools';
+import { startProjectTool } from '@/lib/genkit/tools/project.tools';
+import { generatePdfTool, generateOfferTool } from '@/lib/genkit/tools/pdf.tools';
+import { calculateOfferTool } from '@/lib/genkit/tools/calculation.tools';
+import { repairDriveTool } from '@/lib/genkit/tools/drive.tools';
 import { analyzeReceiptTool } from '../tools/vision.tools';
 import { AI_MODELS, AI_CONFIG } from '../config';
 
@@ -15,7 +16,8 @@ const MessageSchema = z.object({
 
 const ChatInput = z.object({
     messages: z.array(MessageSchema),
-    uid: z.string().optional(), // New field for context injection
+    uid: z.string().optional(),
+    accessToken: z.string().optional(), // Passed from client for Google Drive Access
 });
 
 // ... existing schema code ...
@@ -34,6 +36,7 @@ export const chatFlow = ai.defineFlow(
         outputSchema: z.string(),
     },
     async (input) => {
+        console.log(`🌊 [chatFlow] Triggered. UID: ${input.uid}, Token Length: ${input.accessToken?.length || 0}`);
         // Optimize Context: Keep only last N messages to save tokens and prevent context overflow
         const recentMessages = input.messages.slice(-AI_CONFIG.maxHistory);
 
@@ -52,12 +55,12 @@ export const chatFlow = ai.defineFlow(
                         // Profile Context
                         if (company.profile) {
                             const p = company.profile;
-                            profileContext = `MY COMPANY PROFILE:\nName: ${p.name}\nOrgNr: ${p.orgNumber || 'MISSING'}\nAddress: ${p.address || 'MISSING'}\nPhone: ${p.contactPhone}\nEmail: ${p.contactEmail}\n(Auto-use this for contracts/PDFs)`;
+                            profileContext = `MY COMPANY PROFILE: \nName: ${p.name} \nOrgNr: ${p.orgNumber || 'MISSING'} \nAddress: ${p.address || 'MISSING'} \nPhone: ${p.contactPhone} \nEmail: ${p.contactEmail} \n(Auto - use this for contracts / PDFs)`;
                             if (!p.orgNumber || !p.address) profileContext += "\nWARNING: Company profile is incomplete. Please ask user to update Settings.";
                         }
                         // Preferences Context
                         if (company.context) {
-                            contextContext = `MY PREFERENCES & CONTEXT:\n${company.context.preferences}\n\nRISKS/WARNINGS:\n${company.context.risks}\n(Use this to guide advice)`;
+                            contextContext = `MY PREFERENCES & CONTEXT: \n${company.context.preferences} \n\nRISKS / WARNINGS: \n${company.context.risks} \n(Use this to guide advice)`;
                         }
 
                         // Customer Context
@@ -69,7 +72,7 @@ export const chatFlow = ai.defineFlow(
                                 if (!c.address) missing.push('Address');
                                 if (!c.orgNumber) missing.push('SSN/OrgNr');
 
-                                customerContext += `- ${c.name} [ID: ${c.id}] (${c.type}): ${missing.length > 0 ? `INCOMPLETE (Missing: ${missing.join(', ')})` : 'COMPLETE'}. Info: ${c.address || ''}, ${c.orgNumber || ''}, ${c.email || ''}.\n`;
+                                customerContext += `- ${c.name} [ID: ${c.id}](${c.type}): ${missing.length > 0 ? `INCOMPLETE (Missing: ${missing.join(', ')})` : 'COMPLETE'}.Info: ${c.address || ''}, ${c.orgNumber || ''}, ${c.email || ''}.\n`;
                             });
                             customerContext += "(Matches to these names should pull this data automatically. Warn if INCOMPLETE but allow user to provide missing info in chat).";
                         }
@@ -79,7 +82,7 @@ export const chatFlow = ai.defineFlow(
                         if (projects.length > 0) {
                             projectContext = "ACTIVE PROJECTS (Use these IDs/Folders for tools):\n";
                             projects.forEach(p => {
-                                projectContext += `- ${p.name} [ID: ${p.id}]. Status: ${p.status}. FolderID: ${p.driveFolderId || 'MISSING'}. ${p.address ? `Address: ${p.address}` : ''}\n`;
+                                projectContext += `- ${p.name} [ID: ${p.id}].Status: ${p.status}.FolderID: ${p.driveFolderId || 'MISSING'}. ${p.address ? `Address: ${p.address}` : ''} \n`;
                             });
                             projectContext += "(When generating PDFs, ALWAYS use the 'driveFolderId' from a matching project if available).";
                         }
@@ -90,36 +93,44 @@ export const chatFlow = ai.defineFlow(
             }
         }
 
-        const systemPrompt = `System: You are ByggPilot Co-Pilot, a helpful AI assistant for Swedish construction projects. 
+        const systemPrompt = `System: You are ByggPilot Co - Pilot, a helpful AI assistant for Swedish construction projects. 
         Current Date: ${new Date().toLocaleDateString('sv-SE')}.
-        Role: Act as a senior construction project manager. Be concise, professional, and safety-conscious.
-        Language: Answer in Swedish unless asked otherwise.
-        
+Role: Act as a senior construction project manager.Be concise, professional, and safety - conscious.
+    Language: Answer in Swedish unless asked otherwise.
+
         Capabilities:
-        1. PROJECT MANAGEMENT: You can start new projects.
-        2. CONTRACTS: You can generate "Hantverkarformuläret 17" contracts for renovation work. Use the 'generatePdf' tool for this. Ask for missing details like Customer Name, Address, Price, and Dates if needed.
-        IMPORTANT: Always try to find a matching PROJECT folder to save the PDF to. Use the Project Context below.
+1. PROJECT MANAGEMENT: You can start new projects.
+        2. CONTRACTS: You can generate "Hantverkarformuläret 17" contracts. 
+           - CRITICAL: You MUST try to identify the 'projectId' from the ACTIVE PROJECTS list ensuring it matches the customer.
+           - If a valid Project matches, pass its 'projectId' to the 'generatePdf' tool.The tool will handle saving.
+           - If NO project exists for this customer, ASK the user: "Ska jag skapa ett nytt projekt för [Kundnamn] och spara avtalet där?" before generating.
+           - If the user insists on just a quick draft, generate it without a project ID(it will be partial).
         3. CALCULATIONS: You can calculate offers based on recipes.
         4. RECEIPT ANALYSIS: You can analyze receipts for KMA risks.
+        5. DRIVE REPAIR: If the user says their Google Drive folders are missing or broken, use the 'repairDrive' tool.
         
-        When the user asks for an agreement/contract ("avtal"), actively propose generating Hantverkarformuläret 17.
-        Check the Customer Registry below. If a customer matches, PRE-FILL the data. If data is missing (INCOMPLETE), ask the user for it politely or use it if they provide it in the chat.
-        
-        ${profileContext}
+        When the user asks for an agreement / contract("avtal"), actively propose generating Hantverkarformuläret 17.
+        Check the Customer Registry below.If a customer matches, PRE - FILL the data.If data is missing(INCOMPLETE), ask the user for it politely or use it if they provide it in the chat.
+
+    ${profileContext}
         
         ${contextContext}
 
         ${customerContext}
 
-        ${projectContext}`;
+        ${projectContext} `;
 
         const { text } = await ai.generate({
-            prompt: `${systemPrompt}\n\n` + recentMessages.map(m => `${m.role}: ${m.content}`).join('\n'),
+            prompt: `${systemPrompt} \n\n` + recentMessages.map(m => `${m.role}: ${m.content} `).join('\n'),
             model: AI_MODELS.FAST,
             config: {
                 temperature: AI_CONFIG.temperature.creative,
             },
-            tools: [startProjectTool, generatePdfTool, calculateOfferTool, analyzeReceiptTool],
+            tools: [startProjectTool, generatePdfTool, calculateOfferTool, analyzeReceiptTool, repairDriveTool],
+            context: {
+                accessToken: input.accessToken,
+                uid: input.uid
+            }
         });
 
         return text;

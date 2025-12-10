@@ -52,8 +52,14 @@ export const CompanyRepo = {
     },
 
     async updateProfile(companyId: string, data: { profile?: CompanyProfile; context?: CompanyContext }) {
+        const updateData: any = { ...data };
+        // Sync root "name" if profile "name" is updated, to keep folder structure consistent
+        if (data.profile?.name) {
+            updateData.name = data.profile.name;
+        }
+
         await db.collection(COLLECTION).doc(companyId).set(
-            { ...data },
+            updateData,
             { merge: true }
         );
     },

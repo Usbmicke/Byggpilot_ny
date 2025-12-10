@@ -1,12 +1,24 @@
 import 'server-only';
-import { drive } from '@googleapis/drive'; // Updated import based on package
+import { google } from 'googleapis';
+import { drive_v3 } from '@googleapis/drive'; // Needed for types/instantiation
 import { GoogleAuth } from 'google-auth-library';
 
 // Lazy init to prevent ADC crash on load if env vars are missing
 let _service: any = null;
 
-const getService = () => {
+const getService = (accessToken?: string) => {
+    if (accessToken) {
+        // console.log("🔐 [drive.ts] Using provided Access Token for Drive Service");
+        // Create an OAuth2 client with the provided token
+        const auth = new GoogleAuth();
+
+        const oauth2 = new google.auth.OAuth2();
+        oauth2.setCredentials({ access_token: accessToken });
+        return google.drive({ version: 'v3', auth: oauth2 });
+    }
+
     if (!_service) {
+        console.log("⚙️ [drive.ts] Initializing Service Account Drive Client...");
         let authOptions: any = {
             scopes: ['https://www.googleapis.com/auth/drive'],
         };
@@ -21,20 +33,23 @@ const getService = () => {
                     private_key: credentials.private_key,
                 };
                 authOptions.projectId = credentials.project_id; // IMPORTANT: Set Project ID
+                console.log(`✅ [drive.ts] Service Account Credentials loaded for: ${credentials.client_email}`);
             } catch (e) {
                 console.error("❌ [drive.ts] Failed to parse Service Account for Drive:", e);
             }
+        } else {
+            console.warn("⚠️ [drive.ts] No Service Account Key found in env. Drive operations without Token will fail.");
         }
 
         const auth = new GoogleAuth(authOptions);
-        _service = drive({ version: 'v3', auth: auth as any });
+        _service = google.drive({ version: 'v3', auth: auth as any });
     }
     return _service;
 };
 
 export const GoogleDriveService = {
-    async ensureFolderExists(folderName: string, parentId?: string): Promise<string> {
-        const service = getService();
+    async ensureFolderExists(folderName: string, parentId?: string, accessToken?: string): Promise<string> {
+        const service = getService(accessToken);
         const query = [
             `mimeType = 'application/vnd.google-apps.folder'`,
             `name = '${folderName}'`,
@@ -69,12 +84,12 @@ export const GoogleDriveService = {
         return file.data.id!;
     },
 
-    async createProjectFolder(projectName: string, companyFolderId: string) {
-        return this.ensureFolderExists(projectName, companyFolderId);
+    async createProjectFolder(projectName: string, companyFolderId: string, accessToken?: string) {
+        return this.ensureFolderExists(projectName, companyFolderId, accessToken);
     },
 
-    async uploadFile(name: string, mimeType: string, body: any, parentId?: string): Promise<{ id: string, webViewLink: string }> {
-        const service = getService();
+    async uploadFile(name: string, mimeType: string, body: any, parentId?: string, accessToken?: string): Promise<{ id: string, webViewLink: string }> {
+        const service = getService(accessToken);
 
         const media = {
             mimeType: mimeType,
@@ -98,12 +113,22 @@ export const GoogleDriveService = {
         };
     },
 
+    async renameFolder(fileId: string, newName: string, accessToken?: string) {
+        const service = getService(accessToken);
+        await service.files.update({
+            fileId: fileId,
+            requestBody: {
+                name: newName
+            }
+        });
+    },
+
     // --- ISO OFFICE STRUCTURE ---
 
-    async ensureRootStructure(companyName: string) {
+    async ensureRootStructure(companyName: string, accessToken?: string) {
         // 1. Root Folder: "ByggPilot - [Company]"
         const rootName = `ByggPilot - ${companyName}`;
-        const rootId = await this.ensureFolderExists(rootName);
+        const rootId = await this.ensureFolderExists(rootName, undefined, accessToken);
 
         // 2. Standard Subfolders
         const folders = [
@@ -117,24 +142,24 @@ export const GoogleDriveService = {
         const folderIds: Record<string, string> = {};
 
         for (const folder of folders) {
-            folderIds[folder] = await this.ensureFolderExists(folder, rootId);
+            folderIds[folder] = await this.ensureFolderExists(folder, rootId, accessToken);
         }
 
         // 3. Bokföring sub-structure
         const accountingId = folderIds['05_Bokföringsunderlag'];
         const currentYear = new Date().getFullYear().toString();
-        const yearId = await this.ensureFolderExists(currentYear, accountingId);
-        await this.ensureFolderExists('Q1_Kvitton', yearId);
-        await this.ensureFolderExists('Q2_Kvitton', yearId);
-        await this.ensureFolderExists('Q3_Kvitton', yearId);
-        await this.ensureFolderExists('Q4_Kvitton', yearId);
+        const yearId = await this.ensureFolderExists(currentYear, accountingId, accessToken);
+        await this.ensureFolderExists('Q1_Kvitton', yearId, accessToken);
+        await this.ensureFolderExists('Q2_Kvitton', yearId, accessToken);
+        await this.ensureFolderExists('Q3_Kvitton', yearId, accessToken);
+        await this.ensureFolderExists('Q4_Kvitton', yearId, accessToken);
 
         return { rootId, folders: folderIds };
     },
 
-    async createProjectStructure(projectName: string, projectsRootId: string) {
+    async createProjectStructure(projectName: string, projectsRootId: string, accessToken?: string) {
         // 1. Create Project Root inside "02_Pågående Projekt"
-        const projectRootId = await this.ensureFolderExists(projectName, projectsRootId);
+        const projectRootId = await this.ensureFolderExists(projectName, projectsRootId, accessToken);
 
         // 2. Create Sub-folders
         const subfolders = [
@@ -147,7 +172,7 @@ export const GoogleDriveService = {
 
         const ids: Record<string, string> = {};
         for (const folder of subfolders) {
-            ids[folder] = await this.ensureFolderExists(folder, projectRootId);
+            ids[folder] = await this.ensureFolderExists(folder, projectRootId, accessToken);
         }
 
         return { projectRootId, subfolders: ids };
