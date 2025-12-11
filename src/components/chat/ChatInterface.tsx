@@ -156,7 +156,7 @@ export default function ChatInterface() {
             {/* Backdrop (Only when expanded) - Use z-40 to be behind panels but above content */}
             {isExpanded && (
                 <div
-                    className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 transition-opacity"
+                    className="fixed inset-0 z-40 transition-opacity bg-transparent"
                     onClick={() => setIsExpanded(false)}
                 />
             )}
@@ -195,7 +195,17 @@ export default function ChatInterface() {
                                 : 'bg-transparent text-zinc-200 pl-0'
                                 }`}>
                                 {m.role === 'model'
-                                    ? <div className="prose prose-invert prose-sm max-w-none prose-p:text-zinc-300"><ReactMarkdown>{m.content}</ReactMarkdown></div>
+                                    ? <div className="prose prose-invert prose-sm max-w-none prose-p:text-zinc-300">
+                                        <ReactMarkdown
+                                            components={{
+                                                a: ({ node, ...props }) => (
+                                                    <a {...props} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 hover:underline font-medium break-all" />
+                                                )
+                                            }}
+                                        >
+                                            {m.content}
+                                        </ReactMarkdown>
+                                    </div>
                                     : m.content}
                             </div>
                             {/* ÄTA Draft Rendering logic... */}
