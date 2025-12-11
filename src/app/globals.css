@@ -10,12 +10,13 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply text-gray-900 font-medium py-2.5 px-5 rounded-lg transition-all duration-200 shadow-lg shadow-black/20 active:scale-95;
-    background-color: theme('colors.primary');
+    @apply text-zinc-100 font-medium py-2.5 px-5 rounded-lg transition-all duration-200 shadow-md shadow-black/40 active:scale-95 border border-zinc-600;
+    background-color: theme('colors.primary-bg');
   }
 
   .btn-primary:hover {
     background-color: theme('colors.primary-hover');
+    @apply border-zinc-500;
   }
 
   .input-field {

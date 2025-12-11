@@ -1,16 +1,47 @@
 'use client';
 
 import { useAuth } from '@/components/AuthProvider';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Header() {
     const { user } = useAuth();
 
+    const pathname = usePathname();
+    const pathSegments = pathname.split('/').filter(Boolean);
+
+    const breadcrumbs = pathSegments.map((segment, index) => {
+        const href = `/${pathSegments.slice(0, index + 1).join('/')}`;
+        const label = segment.charAt(0).toUpperCase() + segment.slice(1);
+        const isLast = index === pathSegments.length - 1;
+
+        // Custom Labels
+        const displayLabel = label === 'Dashboard' ? 'Översikt' :
+            label === 'Projects' ? 'Projekt' :
+                label === 'Customers' ? 'Kunder' :
+                    label === 'Offers' ? 'Offerter' :
+                        label === 'Settings' ? 'Inställningar' :
+                            label === 'Ata' ? 'ÄTA' :
+                                label.length > 20 ? label.substring(0, 20) + '...' : label;
+
+        return (
+            <span key={href} className="flex items-center">
+                {index > 0 && <span className="mx-2 text-muted-foreground">/</span>}
+                {isLast ? (
+                    <span className="font-semibold text-foreground">{displayLabel}</span>
+                ) : (
+                    <Link href={href} className="text-muted-foreground hover:text-foreground transition-colors">
+                        {displayLabel}
+                    </Link>
+                )}
+            </span>
+        );
+    });
+
     return (
         <header className="bg-card shadow-sm h-16 flex items-center justify-between px-6 z-10 border-b border-border">
-            <div className="flex items-center">
-                <h2 className="text-lg font-semibold text-foreground">
-                    Dashboard {/* Breadcrumb placeholder */}
-                </h2>
+            <div className="flex items-center text-sm">
+                {breadcrumbs.length > 0 ? breadcrumbs : <span className="font-semibold text-foreground">Översikt</span>}
             </div>
 
             <div className="flex items-center space-x-4">

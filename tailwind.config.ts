@@ -11,13 +11,27 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: '#131314', // NotebookLM Dark Background
-        card: '#1E1F20',       // NotebookLM Card Surface
-        primary: '#A8C7FA',    // Google Material 3 Muted Blue (Secondary/Primary)
-        'primary-hover': '#82B1FF', // Slightly brighter on hover
-        foreground: '#E3E3E3', // High contrast text
-        'muted-foreground': '#C4C7C5', // Muted text
-        border: '#444746', // Subtle border
+        // PREMIUM GREY SCALE (Gemini/Google Dark Mode Inspired)
+        background: '#09090b', // Zinc-950 (Deepest)
+        card: '#18181b',       // Zinc-900 (Surface)
+        subtle: '#27272a',     // Zinc-800 (Highlight)
+
+        // BORDERS & LINES
+        border: '#3f3f46',     // Zinc-700
+
+        // TEXT
+        foreground: '#f4f4f5', // Zinc-100 (Primary Text)
+        'muted-foreground': '#a1a1aa', // Zinc-400 (Secondary Text)
+
+        // ACTIONS (No Blue - "Grå och annan nyans av grå")
+        primary: '#e4e4e7',    // Zinc-200 (Button Text / Accents)
+        'primary-bg': '#3f3f46', // Zinc-700 (Button Background)
+        'primary-hover': '#52525b', // Zinc-600 (Button Hover)
+
+        // STATUS (Keep these colorful as requested)
+        success: '#22c55e',    // Green-500
+        warning: '#eab308',    // Yellow-500
+        error: '#ef4444',      // Red-500
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

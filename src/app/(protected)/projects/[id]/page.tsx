@@ -130,10 +130,7 @@ export default function ProjectDetailsPage({ params }: { params: Promise<{ id: s
             )}
 
             <div className="flex items-center justify-between">
-                <Link href="/projects" className="flex items-center text-muted-foreground hover:text-foreground transition-colors">
-                    <ArrowLeft size={20} className="mr-2" />
-                    Tillbaka till projekt
-                </Link>
+                <div>{/* Breadcrumbs are in Header */}</div>
                 {msg && <span className={`${msg.includes('✅') ? 'text-emerald-500' : 'text-red-500'} font-medium animate-in fade-in`}>{msg}</span>}
             </div>
 

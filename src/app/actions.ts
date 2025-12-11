@@ -542,6 +542,23 @@ export async function getCustomersAction(uid: string) {
   }
 }
 
+export async function getCustomerAction(customerId: string) {
+  try {
+    const customer = await CustomerRepo.get(customerId);
+    if (!customer) return { success: false, error: 'Customer not found' };
+    return {
+      success: true,
+      customer: {
+        ...customer,
+        createdAt: customer.createdAt.toDate().toISOString(),
+        updatedAt: customer.updatedAt.toDate().toISOString(),
+      }
+    };
+  } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}
+
 export async function createCustomerAction(uid: string, data: Partial<CustomerData>) {
   try {
     const user = await UserRepo.get(uid);

@@ -48,7 +48,7 @@ export default function Sidebar() {
         <aside className="w-64 bg-card border-r border-border shadow-md hidden md:flex flex-col h-full">
             <div className="p-6">
                 <Link href="/dashboard">
-                    <h1 className="text-2xl font-bold text-indigo-600">ByggPilot</h1>
+                    <h1 className="text-2xl font-bold bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">ByggPilot</h1>
                 </Link>
             </div>
             <nav className="flex-1 px-4 space-y-1">

@@ -139,20 +139,29 @@ export function ProjectCard({ project, variant = 'grid' }: ProjectCardProps) {
                 />
             )}
 
-            <Link
-                href={`/projects/${project.id}`}
-                className={`relative block bg-card rounded-xl border border-border shadow-sm hover:shadow-md transition-all group hover:border-primary/50 overflow-hidden ${isHorizontal ? 'flex flex-col sm:flex-row' : ''}`}
+            <div
+                className={`relative block bg-card rounded-xl border border-border shadow-sm hover:shadow-md transition-all group hover:border-zinc-500/50 overflow-hidden ${isHorizontal ? 'flex flex-col sm:flex-row' : ''}`}
             >
-                {/* Risk Indicator (Positioned absolute top-right) */}
-                <ProjectRiskIndicator
-                    projectId={project.id}
-                    projectName={project.name}
-                    extraRisks={weatherRisk ? [weatherRisk] : []}
-                    onOpenModal={(risks) => {
-                        setActiveRisks(risks);
-                        setIsRiskModalOpen(true);
-                    }}
+                {/* Main Link Overlay */}
+                <Link
+                    href={`/projects/${project.id}`}
+                    className="absolute inset-0 z-10 focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-xl"
+                    aria-label={`Öppna ${project.name}`}
                 />
+
+                {/* Risk Indicator (Positioned absolute top-right) */}
+                {/* Must be z-20 to sit above the overlay link */}
+                <div className="relative z-20 pointer-events-auto">
+                    <ProjectRiskIndicator
+                        projectId={project.id}
+                        projectName={project.name}
+                        extraRisks={weatherRisk ? [weatherRisk] : []}
+                        onOpenModal={(risks) => {
+                            setActiveRisks(risks);
+                            setIsRiskModalOpen(true);
+                        }}
+                    />
+                </div>
 
                 {/* Color/Icon Sidebar */}
                 <div className={`${isHorizontal ? 'w-full sm:w-24 border-b sm:border-b-0 sm:border-r' : 'h-24 border-b'} ${theme.bg} ${theme.border} flex items-center justify-center shrink-0`}>
@@ -180,7 +189,7 @@ export function ProjectCard({ project, variant = 'grid' }: ProjectCardProps) {
                         <p className="text-sm text-muted-foreground mb-4 line-clamp-2 min-h-[2.5em]">{project.description || 'Ingen beskrivning'}</p>
                     </div>
 
-                    <div className={`flex flex-wrap gap-x-4 gap-y-2 text-xs text-muted-foreground items-end ${isHorizontal ? 'mt-0' : 'mt-auto'}`}>
+                    <div className={`flex flex-wrap gap-x-4 gap-y-2 text-xs text-muted-foreground items-end relative z-20 pointer-events-auto ${isHorizontal ? 'mt-0' : 'mt-auto'}`}>
                         <span className={`px-2 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider ${project.status === 'active' ? 'bg-emerald-100 text-emerald-600' : 'bg-secondary text-muted-foreground'}`}>
                             {project.status === 'active' ? 'Pågående' : project.status}
                         </span>
@@ -193,7 +202,7 @@ export function ProjectCard({ project, variant = 'grid' }: ProjectCardProps) {
                             <Link
                                 href={`/projects/${project.id}/ata`}
                                 onClick={(e) => e.stopPropagation()}
-                                className="flex items-center gap-1 px-3 py-1.5 bg-blue-500/10 text-blue-400 hover:bg-blue-500/20 rounded-lg text-xs font-semibold transition-colors border border-blue-500/20"
+                                className="flex items-center gap-1 px-3 py-1.5 bg-zinc-800 text-zinc-300 hover:bg-zinc-700 hover:text-white rounded-lg text-xs font-semibold transition-colors border border-zinc-700 shadow-sm"
                                 title="Hantera ÄTA"
                             >
                                 <span>ÄTA</span>
@@ -211,7 +220,7 @@ export function ProjectCard({ project, variant = 'grid' }: ProjectCardProps) {
                         </div>
                     </div>
                 </div>
-            </Link>
+            </div>
         </>
     );
 }
