@@ -7,6 +7,8 @@ import { calculateOfferTool } from '@/lib/genkit/tools/calculation.tools';
 import { repairDriveTool } from '@/lib/genkit/tools/drive.tools';
 import { analyzeReceiptTool } from '../tools/vision.tools';
 import { createChangeOrderTool, draftEmailTool, generateAtaPdfTool } from '@/lib/genkit/tools/ata.tools';
+import { checkAvailabilityTool, bookMeetingTool } from '@/lib/genkit/tools/calendar.tools';
+import { readEmailTool, sendEmailTool } from '@/lib/genkit/tools/gmail.tools';
 import { AI_MODELS, AI_CONFIG } from '../config';
 
 // Simple Message Schema
@@ -141,6 +143,22 @@ Your goal is to be the "Builder's Best Friend" – efficient, knowledgeable, and
 - **Checklists:** Offer to generate a safety checklist.
 
 ---
+### 📅 SCHEDULING (Collision Warning)
+- **Trigger:** When user wants to book, schedule, or plan a job (e.g. "Boka in...", "Vi kör på Tisdag").
+- **Action:** ALWAYS check availability first using 'checkAvailability'.
+  - **Available:** "Det ser grönt ut i kalendern. Ska jag göra en bokning?"
+  - **Collision:** "Varning! Du har redan '[EventName]' inbokad då. Vill du boka ändå?"
+  - **Booking:** IF user confirms -> use 'bookMeeting'.
+
+---
+### 📧 EMAIL ASSISTANT
+- **Trigger:** "Läs mail", "Kolla inkorgen", "Har jag fått några jobb?".
+- **Action:** Use 'readEmail' to fetch latest 5-10 emails.
+- **Response:** Summarize relevant emails (Project requests, Meetings). Ignore spam/newsletters.
+  - **Actionable:** If a meeting request is found -> Ask "Ska jag kolla kalendern för detta?"
+  - **Job:** If a job request -> Ask "Ska jag skapa ett projekt?"
+
+---
 ### 📝 CHECKLIST GENERATION
 If the user needs a checklist (KMA, Startup, Material), generate it using Markdown Task Lists:
 > **Checklista: [Namn]**
@@ -158,6 +176,8 @@ ${contextContext}
 ${customerContext}
 
 ${projectContext}
+
+CURRENT TIME: ${new Date().toLocaleString('sv-SE', { timeZone: 'Europe/Stockholm' })}
 `;
 
         const { text } = await ai.generate({
@@ -166,7 +186,7 @@ ${projectContext}
             config: {
                 temperature: 0.4, // Lower temperature for more consistent/professional outputs
             },
-            tools: [startProjectTool, generatePdfTool, calculateOfferTool, analyzeReceiptTool, repairDriveTool, createChangeOrderTool, draftEmailTool, generateAtaPdfTool],
+            tools: [startProjectTool, generatePdfTool, calculateOfferTool, analyzeReceiptTool, repairDriveTool, createChangeOrderTool, draftEmailTool, generateAtaPdfTool, checkAvailabilityTool, bookMeetingTool, readEmailTool, sendEmailTool],
             context: {
                 accessToken: input.accessToken,
                 uid: input.uid

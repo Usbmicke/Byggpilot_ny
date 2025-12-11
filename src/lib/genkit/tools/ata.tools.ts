@@ -67,9 +67,12 @@ export const draftEmailTool = ai.defineTool(
         outputSchema: z.string(),
     },
     async (input) => {
-        // In a real app, this might save to a 'Drafts' collection or call Gmail API directly if we had 'send' scope.
-        // For now, we return the text so the UI can display it or the user can copy it.
-        return `[EMAIL DRAFT SAVED]\nTo: ${input.recipientEmail}\nSubject: ${input.subject}\n\n${input.body}`;
+        // Create mailto link
+        const subject = encodeURIComponent(input.subject);
+        const body = encodeURIComponent(input.body);
+        const mailtoLink = `mailto:${input.recipientEmail}?subject=${subject}&body=${body}`;
+
+        return `[📧 Skicka E-post (Klicka här)](${mailtoLink})\n\n**Utkast:**\nTill: ${input.recipientEmail}\nÄmne: ${input.subject}\n${input.body}`;
     }
 );
 

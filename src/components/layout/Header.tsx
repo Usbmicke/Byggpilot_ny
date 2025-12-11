@@ -3,6 +3,7 @@
 import { useAuth } from '@/components/AuthProvider';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import NotificationBell from './NotificationBell';
 
 export default function Header() {
     const { user } = useAuth();
@@ -52,6 +53,7 @@ export default function Header() {
                     <span className="sr-only">Sök</span>
                     🔍 <span className="text-xs ml-1 bg-background px-2 py-0.5 rounded border border-border">Cmd+K</span>
                 </button>
+                <NotificationBell />
                 <div className="h-6 w-px bg-border" aria-hidden="true" />
                 <span className="text-sm text-muted-foreground">{user?.displayName || 'Välkommen'}</span>
             </div>

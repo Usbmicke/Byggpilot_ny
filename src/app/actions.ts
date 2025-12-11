@@ -379,6 +379,18 @@ export async function checkInboxAction(accessToken: string) {
     if (emails.length === 0) return { success: true, insights: [] };
 
     const insights = await Promise.all(emails.map(async (email) => {
+      // COST OPTIMIZATION: Keyword Heuristic Check
+      // Only proceed to AI analysis if email looks relevant (Job, Meeting, etc)
+      const combinedText = (email.subject + " " + (email.snippet || "")).toLowerCase();
+      const relevantKeywords = ['boka', 'möte', 'tid', 'jobb', 'offert', 'renovering', 'badrum', 'kök', 'bygg', 'projekt', 'adress', 'pris', 'kostnad', 'hjälp', 'förfrågan'];
+
+      const seemsRelevant = relevantKeywords.some(kw => combinedText.includes(kw));
+
+      if (!seemsRelevant) {
+        console.log(`⏩ Skipping irrelevant email: ${email.subject}`);
+        return null;
+      }
+
       try {
         const analysis = await emailAnalysisFlow({
           subject: email.subject || '',
@@ -420,6 +432,16 @@ export async function createCalendarEventAction(accessToken: string, eventData: 
     return { success: true, eventLink: result.htmlLink };
   } catch (error: any) {
     console.error('❌ Create Event Failed:', error);
+    return { success: false, error: error.message };
+  }
+}
+
+export async function checkAvailabilityAction(accessToken: string, timeMin: string, timeMax: string) {
+  try {
+    const events = await CalendarService.listEvents(accessToken, timeMin, timeMax);
+    const hasConflict = events.length > 0;
+    return { success: true, hasConflict, conflicts: events };
+  } catch (error: any) {
     return { success: false, error: error.message };
   }
 }
