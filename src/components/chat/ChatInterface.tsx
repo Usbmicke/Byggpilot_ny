@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import { chatAction, approveChangeOrderAction } from '@/app/actions';
 import { processVoiceCommandAction } from '@/app/actions/voice';
 import { useAuth } from '@/components/AuthProvider';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { Mic, Square, Send, X, MessageSquare, FileText, Check, Ban, ChevronUp, ChevronDown, Sparkles } from 'lucide-react';
 
 interface Message {
@@ -112,9 +113,11 @@ export default function ChatInterface() {
         await approveChangeOrderAction(draftId, approved);
     };
 
-    const handleSend = async () => {
-        if (!input.trim()) return;
-        const userMsg: Message = { role: 'user', content: input };
+    const handleSend = async (arg?: string | React.MouseEvent | React.KeyboardEvent) => {
+        const textToSend = typeof arg === 'string' ? arg : input;
+        if (!textToSend.trim()) return;
+
+        const userMsg: Message = { role: 'user', content: textToSend };
         const newHistory = [...messages, userMsg];
         setMessages(newHistory);
         setInput('');
@@ -131,6 +134,21 @@ export default function ChatInterface() {
             setIsLoading(false);
         }
     };
+
+    // Auto-Prompt from URL
+    const searchParams = useSearchParams();
+    const router = useRouter();
+
+    useEffect(() => {
+        const query = searchParams.get('chatQuery');
+        if (query && !isLoading) {
+            handleSend(query);
+            // Clear param to avoid re-trigger
+            const params = new URLSearchParams(searchParams.toString());
+            params.delete('chatQuery');
+            router.replace(`?${params.toString()}`);
+        }
+    }, [searchParams]);
 
     return (
         <div className={`fixed bottom-0 right-0 left-0 md:left-64 z-50 flex flex-col justify-end font-sans`}>

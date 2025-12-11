@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { Mail, Calendar, Bell, X, Check, Loader2 } from 'lucide-react';
 import { checkInboxAction, createCalendarEventAction } from '@/app/actions';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
@@ -135,7 +136,11 @@ export default function NotificationBell() {
 }
 
 function NotificationItem({ item, onDismiss }: { item: any, onDismiss: () => void }) {
+    const router = useRouter();
     const [conflictWarning, setConflictWarning] = useState<string | null>(null);
+    const [viewState, setViewState] = useState<'normal' | 'conflict' | 'success'>('normal');
+    const [eventLink, setEventLink] = useState<string | null>(null);
+    const [isBooking, setIsBooking] = useState(false);
 
     // Proactive Conflict Check on Mount
     useEffect(() => {
@@ -169,6 +174,48 @@ function NotificationItem({ item, onDismiss }: { item: any, onDismiss: () => voi
         check();
     }, [item]);
 
+    const handleBooking = async (ignoreConflict = false) => {
+        // If we have a conflict and haven't ignored it yet, show conflict UI
+        if (conflictWarning && !ignoreConflict) {
+            setViewState('conflict');
+            return;
+        }
+
+        const token = localStorage.getItem('google_access_token');
+        if (!token) return;
+
+        setIsBooking(true);
+        const res = await createCalendarEventAction(token, item.calendarData);
+        setIsBooking(false);
+
+        if (res.success) {
+            setEventLink(res.eventLink);
+            setViewState('success');
+        } else {
+            alert('Fel: ' + res.error); // Fallback for actual errors
+        }
+    };
+
+    const handleDraftEmail = () => {
+        // Construct prompt with thread context
+        let prompt = `Jag har bokat möte med ${item.original.from} den ${item.calendarData.suggestedDate}. Skriv ett trevligt bekräftelsemail.`;
+
+        // Add Thread ID context if available
+        if (item.original?.threadId) {
+            prompt += ` Svara på mailet som hör till tråd ID: ${item.original.threadId}.`;
+        } else {
+            prompt += ` (Starta en ny tråd då tråd-ID saknas).`;
+        }
+
+        // Navigate without reload
+        const params = new URLSearchParams();
+        params.set('chatQuery', prompt);
+        router.push(`?${params.toString()}`);
+
+        // Close notification
+        onDismiss();
+    };
+
     const handleAction = async () => {
         const token = localStorage.getItem('google_access_token');
         if (!token) return;
@@ -182,7 +229,19 @@ function NotificationItem({ item, onDismiss }: { item: any, onDismiss: () => voi
 
             const res = await createCalendarEventAction(token, item.calendarData);
             if (res.success) {
-                alert(`Möte bokat via snabbval! 📅\n${res.eventLink}`);
+                // SUCCESS - Ask flow
+                const askEmail = confirm(`Möte bokat! ✅\n\nVill du förbereda ett bekräftelsemail till ${item.original.from}?`);
+                if (askEmail) {
+                    // Redirect to chat with query
+                    const prompt = `Jag har bokat möte med ${item.original.from} den ${item.calendarData.suggestedDate}. Skriv ett trevligt bekräftelsemail.`;
+                    // Use window.location or router? NotificationBell uses useRouter?
+                    // We need to import useRouter.
+                    // Since we are in a client component, we can use window.location.href to be safe or useRouter.
+                    // Let's use router.
+                    window.location.href = `?chatQuery=${encodeURIComponent(prompt)}`;
+                } else {
+                    alert(`Möte bokat via snabbval! 📅\n${res.eventLink}`);
+                }
                 onDismiss();
             } else {
                 alert('Fel: ' + res.error);
@@ -196,8 +255,53 @@ function NotificationItem({ item, onDismiss }: { item: any, onDismiss: () => voi
         }
     };
 
+    // --- RENDER STATES ---
+
+    if (viewState === 'success') {
+        return (
+            <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-lg p-3 animate-in fade-in duration-300">
+                <div className="flex items-center gap-2 mb-2">
+                    <div className="bg-emerald-500 text-white rounded-full p-1">
+                        <Check size={12} strokeWidth={3} />
+                    </div>
+                    <p className="font-semibold text-sm text-emerald-700 dark:text-emerald-400">Möte bokat!</p>
+                </div>
+                <p className="text-xs text-muted-foreground mb-3">Vill du skicka en bekräftelse till {item.original.from}?</p>
+
+                <div className="grid grid-cols-2 gap-2">
+                    <button onClick={handleDraftEmail} className="col-span-1 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold py-2 rounded-md transition-colors shadow-sm">
+                        Ja, förbered mail
+                    </button>
+                    <button onClick={onDismiss} className="col-span-1 bg-background border border-border hover:bg-accent text-xs font-medium py-2 rounded-md transition-colors">
+                        Nej, klar
+                    </button>
+                </div>
+            </div>
+        );
+    }
+
+    if (viewState === 'conflict') {
+        return (
+            <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3 animate-in slide-in-from-right-2 duration-200">
+                <p className="text-xs font-bold text-red-600 dark:text-red-400 mb-1">⚠️ Dubbelbokning varnad!</p>
+                <p className="text-xs text-red-800 dark:text-red-300 mb-3">{conflictWarning}</p>
+                <div className="flex gap-2">
+                    <button onClick={() => handleBooking(true)} className="flex-1 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-2 rounded-md shadow-sm">
+                        Boka ändå
+                    </button>
+                    <button onClick={() => setViewState('normal')} className="flex-1 bg-background border border-border hover:bg-accent text-xs font-medium py-2 rounded-md">
+                        Avbryt
+                    </button>
+                </div>
+            </div>
+        );
+    }
+
+    // NORMAL STATE
+    const hasConflict = !!conflictWarning;
+
     return (
-        <div className={`bg-background/50 border rounded-lg p-3 transition-colors ${conflictWarning ? 'border-red-500/30 bg-red-500/5' : 'border-border hover:bg-accent/5'}`}>
+        <div className={`bg-background/50 border rounded-lg p-3 transition-colors ${hasConflict ? 'border-red-500/30 bg-red-500/5' : 'border-border hover:bg-accent/5'}`}>
             <div className="flex gap-3">
                 <div className="mt-1 text-primary">
                     {item.intent === 'meeting' ? <Calendar size={18} /> : <Mail size={18} />}
@@ -210,7 +314,7 @@ function NotificationItem({ item, onDismiss }: { item: any, onDismiss: () => voi
                             <span className="text-xs text-primary bg-primary/10 px-2 py-1 rounded inline-block w-fit">
                                 📅 {new Date(item.calendarData.suggestedDate).toLocaleDateString('sv-SE')} kl {new Date(item.calendarData.suggestedDate).toLocaleTimeString('sv-SE', { hour: '2-digit', minute: '2-digit' })}
                             </span>
-                            {conflictWarning && (
+                            {hasConflict && (
                                 <span className="text-xs text-red-400 font-medium mt-1 block">
                                     {conflictWarning}
                                 </span>
@@ -220,8 +324,13 @@ function NotificationItem({ item, onDismiss }: { item: any, onDismiss: () => voi
                 </div>
             </div>
             <div className="grid grid-cols-2 gap-2 mt-3 pt-2 border-t border-border/50">
-                {/* Primary Action - FORCE VIVID COLOR */}
-                <button onClick={handleAction} className="col-span-1 text-xs bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors font-semibold shadow-sm">
+                {/* Primary Action */}
+                <button
+                    onClick={() => handleBooking(false)}
+                    disabled={isBooking}
+                    className="col-span-1 text-xs bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors font-semibold shadow-sm flex items-center justify-center gap-2"
+                >
+                    {isBooking && <Loader2 size={12} className="animate-spin" />}
                     {item.intent === 'meeting' ? 'Boka i kalendern' : 'Hantera'}
                 </button>
 

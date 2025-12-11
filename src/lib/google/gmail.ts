@@ -40,40 +40,56 @@ export const GmailService = {
                 const snippet = fullMsg.data.snippet;
                 const id = msg.id;
 
-                return { id, subject, from, snippet, body: snippet }; // Using snippet as body proxy for efficiency
+                const threadId = msg.threadId;
+
+                return { id, threadId, subject, from, snippet, body: snippet }; // Using snippet as body proxy for efficiency
             })
         );
 
         return emails;
     },
 
-    async sendEmail(accessToken: string, to: string, subject: string, body: string) {
+    async sendEmail(accessToken: string, to: string, subject: string, body: string, threadId?: string) {
         const auth = new google.auth.OAuth2();
         auth.setCredentials({ access_token: accessToken });
         const gmail = google.gmail({ version: 'v1', auth });
 
         // Create email content
         const utf8Subject = `=?utf-8?B?${Buffer.from(subject).toString('base64')}?=`;
-        const messageParts = [
+        const headers = [
             `To: ${to}`,
             'Content-Type: text/html; charset=utf-8',
             'MIME-Version: 1.0',
             `Subject: ${utf8Subject}`,
-            '',
-            body,
         ];
-        const message = messageParts.join('\n');
+
+        if (threadId) {
+            headers.push(`In-Reply-To: <${threadId}@mail.gmail.com>`); // Best effort, usually requires actual Message-ID of parent
+            headers.push(`References: <${threadId}@mail.gmail.com>`); // Simplification. For robust threading we need the parent Message-ID.
+            // Ideally we should fetch the thread logic here, but for now we try to just associate it via threadId in the API call object.
+        }
+
+        headers.push(''); // Empty line before body
+        headers.push(body);
+
+        const message = headers.join('\n');
         const encodedMessage = Buffer.from(message)
             .toString('base64')
             .replace(/\+/g, '-')
             .replace(/\//g, '_')
             .replace(/=+$/, '');
 
+        const requestBody: any = {
+            raw: encodedMessage,
+        };
+
+        if (threadId) {
+            requestBody.threadId = threadId;
+        }
+
         const res = await gmail.users.messages.send({
             userId: 'me',
-            requestBody: {
-                raw: encodedMessage,
-            },
+            requestBody,
         });
 
         return res.data;

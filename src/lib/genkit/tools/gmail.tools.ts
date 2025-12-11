@@ -43,7 +43,6 @@ export const readEmailTool = ai.defineTool(
             return { success: false, emails: [], error: `Kunde inte läsa mail: ${e.message}` };
         }
     }
-    }
 );
 
 export const sendEmailTool = ai.defineTool(
@@ -54,6 +53,7 @@ export const sendEmailTool = ai.defineTool(
             to: z.string().email(),
             subject: z.string(),
             body: z.string().describe('HTML body of the email'),
+            threadId: z.string().optional().describe('Thread ID to reply to existing conversation'),
         }),
         outputSchema: z.object({
             success: z.boolean(),
@@ -66,8 +66,8 @@ export const sendEmailTool = ai.defineTool(
         if (!token) return { success: false, error: "Saknar behörighet (Google Token)." };
 
         try {
-            console.log(`📧 Sending email to ${input.to}`);
-            const res = await GmailService.sendEmail(token, input.to, input.subject, input.body);
+            console.log(`📧 Sending email to ${input.to} (Thread: ${input.threadId || 'New'})`);
+            const res = await GmailService.sendEmail(token, input.to, input.subject, input.body, input.threadId);
             return { success: true, messageId: res.id || undefined };
         } catch (e: any) {
             console.error("Send Email Failed", e);
