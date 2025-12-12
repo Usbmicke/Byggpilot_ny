@@ -18,11 +18,22 @@ const FullPageLoader = ({ text }: { text: string }) => (
   </div>
 );
 
+import { Building2, MapPin, Mail, Phone, Globe, CreditCard, Wallet, Hash } from 'lucide-react';
+
 export default function OnboardingPage() {
   const router = useRouter();
   const { user, isLoading: isAuthLoading } = useAuth();
 
   const [companyName, setCompanyName] = useState('');
+  const [orgNumber, setOrgNumber] = useState('');
+  const [address, setAddress] = useState('');
+  const [contactEmail, setContactEmail] = useState('');
+  const [contactPhone, setContactPhone] = useState('');
+  const [website, setWebsite] = useState('');
+  const [bankgiro, setBankgiro] = useState('');
+  const [plusgiro, setPlusgiro] = useState('');
+  const [swish, setSwish] = useState('');
+
   const [logoFile, setLogoFile] = useState<File | null>(null);
 
   // State för att hantera laddning och fel från Server Actions
@@ -147,7 +158,15 @@ export default function OnboardingPage() {
       const companyRef = doc(db, 'companies', companyId);
       await setDoc(companyRef, {
         name: companyName,
+        orgNumber,
+        address,
+        contactEmail,
+        contactPhone,
         logoUrl: logoUrl || null,
+        website: website || null,
+        bankgiro: bankgiro || null,
+        plusgiro: plusgiro || null,
+        swish: swish || null,
         googleDriveFolderId: driveFolderId || null,
         updatedAt: new Date()
       }, { merge: true });
@@ -206,6 +225,55 @@ export default function OnboardingPage() {
                 className="w-full bg-transparent p-3 text-foreground placeholder-muted-foreground focus:outline-none"
                 required
               />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-muted-foreground mb-2">Org.nummer</label>
+              <div className="flex items-center bg-[#383A40] rounded-lg border border-border focus-within:ring-2 focus-within:ring-primary focus-within:border-transparent transition-all">
+                <div className="pl-3 text-muted-foreground"><Hash size={18} /></div>
+                <input type="text" value={orgNumber} onChange={e => setOrgNumber(e.target.value)} placeholder="556XXX-XXXX" className="w-full bg-transparent p-3 text-foreground placeholder-muted-foreground focus:outline-none" required />
+              </div>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-muted-foreground mb-2">Adress</label>
+              <div className="flex items-center bg-[#383A40] rounded-lg border border-border focus-within:ring-2 focus-within:ring-primary focus-within:border-transparent transition-all">
+                <div className="pl-3 text-muted-foreground"><MapPin size={18} /></div>
+                <input type="text" value={address} onChange={e => setAddress(e.target.value)} placeholder="Gata, Postnr, Ort" className="w-full bg-transparent p-3 text-foreground placeholder-muted-foreground focus:outline-none" required />
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-muted-foreground mb-2">E-post</label>
+              <div className="flex items-center bg-[#383A40] rounded-lg border border-border focus-within:ring-2 focus-within:ring-primary focus-within:border-transparent transition-all">
+                <div className="pl-3 text-muted-foreground"><Mail size={18} /></div>
+                <input type="email" value={contactEmail} onChange={e => setContactEmail(e.target.value)} placeholder="kontakt@foretag.se" className="w-full bg-transparent p-3 text-foreground placeholder-muted-foreground focus:outline-none" required />
+              </div>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-muted-foreground mb-2">Telefon</label>
+              <div className="flex items-center bg-[#383A40] rounded-lg border border-border focus-within:ring-2 focus-within:ring-primary focus-within:border-transparent transition-all">
+                <div className="pl-3 text-muted-foreground"><Phone size={18} /></div>
+                <input type="text" value={contactPhone} onChange={e => setContactPhone(e.target.value)} placeholder="070-123 45 67" className="w-full bg-transparent p-3 text-foreground placeholder-muted-foreground focus:outline-none" required />
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-4 pt-4 border-t border-border/50">
+            <p className="text-xs text-muted-foreground uppercase tracking-widest font-semibold">Ekonomi & Webb (Valfritt)</p>
+            <div>
+              <div className="flex items-center bg-[#383A40] rounded-lg border border-border focus-within:ring-2 focus-within:ring-primary focus-within:border-transparent transition-all">
+                <div className="pl-3 text-muted-foreground"><Globe size={18} /></div>
+                <input type="text" value={website} onChange={e => setWebsite(e.target.value)} placeholder="www.dittforetag.se" className="w-full bg-transparent p-3 text-foreground placeholder-muted-foreground focus:outline-none" />
+              </div>
+            </div>
+            <div className="grid grid-cols-3 gap-2">
+              <input type="text" value={bankgiro} onChange={e => setBankgiro(e.target.value)} placeholder="Bankgiro" className="bg-[#383A40] rounded-lg border border-border p-3 text-sm text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+              <input type="text" value={plusgiro} onChange={e => setPlusgiro(e.target.value)} placeholder="PlusGiro" className="bg-[#383A40] rounded-lg border border-border p-3 text-sm text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+              <input type="text" value={swish} onChange={e => setSwish(e.target.value)} placeholder="Swish" className="bg-[#383A40] rounded-lg border border-border p-3 text-sm text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
             </div>
           </div>
 

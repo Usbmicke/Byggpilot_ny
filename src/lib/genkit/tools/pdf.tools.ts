@@ -272,6 +272,11 @@ const OfferInput = z.object({
         address: z.string(),
         contact: z.string().optional(),
         email: z.string().optional(),
+        phone: z.string().optional(),
+        website: z.string().optional(),
+        bankgiro: z.string().optional(),
+        plusgiro: z.string().optional(),
+        swish: z.string().optional(),
     }),
     customer: z.object({
         name: z.string(),
@@ -425,7 +430,24 @@ export const generateOfferTool = ai.defineTool(
 
         // --- FOOTER ---
         const bottomY = 50;
-        page.drawText('Detta dokument är genererat av ByggPilot.', { x: margin, y: bottomY, size: 8, color: grayColor });
+        page.drawLine({ start: { x: margin, y: bottomY + 20 }, end: { x: width - margin, y: bottomY + 20 }, thickness: 1, color: grayColor });
+
+        let footerX = margin;
+        const footerStep = 150;
+
+        drawText(input.contractor.name, { x: footerX, y: bottomY, size: 8, font: fontBold });
+        drawText(`Org.nr: ${input.contractor.orgNumber}`, { x: footerX, y: bottomY - 12, size: 8 });
+        if (input.contractor.website) drawText(input.contractor.website, { x: footerX, y: bottomY - 24, size: 8 });
+
+        footerX += footerStep;
+        if (input.contractor.bankgiro) drawText(`Bankgiro: ${input.contractor.bankgiro}`, { x: footerX, y: bottomY, size: 8 });
+        if (input.contractor.plusgiro) drawText(`PlusGiro: ${input.contractor.plusgiro}`, { x: footerX, y: bottomY - 12, size: 8 });
+
+        footerX += footerStep;
+        if (input.contractor.swish) drawText(`Swish: ${input.contractor.swish}`, { x: footerX, y: bottomY, size: 8 });
+        if (input.contractor.email) drawText(`Email: ${input.contractor.email}`, { x: footerX, y: bottomY - 12, size: 8 });
+
+        page.drawText('Genererat av ByggPilot', { x: width - margin - 80, y: bottomY - 30, size: 6, color: grayColor });
 
         // --- SAVE ---
         const pdfBytes = await pdfDoc.save();

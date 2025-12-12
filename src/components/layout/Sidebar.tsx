@@ -19,8 +19,8 @@ export default function Sidebar() {
             getGlobalStatusAction(user.uid).then(res => {
                 if (res.success) {
                     setStatus({
-                        profileIncomplete: res.profileIncomplete,
-                        incompleteCustomersCount: res.incompleteCustomersCount
+                        profileIncomplete: !!res.profileIncomplete,
+                        incompleteCustomersCount: res.incompleteCustomersCount || 0
                     });
                 }
             });

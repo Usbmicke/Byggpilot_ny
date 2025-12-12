@@ -17,6 +17,10 @@ export interface CompanyProfile {
     contactEmail?: string;
     contactPhone?: string;
     logoUrl?: string; // URL to storage
+    website?: string;
+    bankgiro?: string;
+    plusgiro?: string;
+    swish?: string;
 }
 
 export interface CompanyContext {

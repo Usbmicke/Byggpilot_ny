@@ -3,12 +3,16 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/components/AuthProvider';
 import { getCompanyProfileAction, saveCompanyProfileAction } from '@/app/actions';
-import { Save, Building, Brain, Settings } from 'lucide-react';
+import { Save, Building, Brain, Settings, Upload } from 'lucide-react';
+import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { firebaseApp } from '@/lib/firebase/client';
 
 export default function SettingsPage() {
     const { user } = useAuth();
     const [saving, setSaving] = useState(false);
     const [msg, setMsg] = useState('');
+
+    const [logoFile, setLogoFile] = useState<File | null>(null);
 
     // Local state for form
     const [profile, setProfile] = useState({
@@ -18,6 +22,10 @@ export default function SettingsPage() {
         contactEmail: '',
         contactPhone: '',
         logoUrl: '',
+        website: '',
+        bankgiro: '',
+        plusgiro: '',
+        swish: '',
     });
 
     const [context, setContext] = useState({
@@ -37,11 +45,38 @@ export default function SettingsPage() {
         }
     }, [user]);
 
+    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (e.target.files?.[0]) setLogoFile(e.target.files[0]);
+    };
+
+    const uploadLogo = async (file: File, userId: string): Promise<string> => {
+        const storage = getStorage(firebaseApp);
+        const filePath = `logos/${userId}/${Date.now()}_${file.name}`;
+        const storageRef = ref(storage, filePath);
+        await uploadBytes(storageRef, file);
+        return getDownloadURL(storageRef);
+    };
+
     const handleSave = async () => {
         if (!user) return;
         setSaving(true);
         setMsg('');
-        const res = await saveCompanyProfileAction(user.uid, { profile, context });
+
+        // Upload Logo if changed
+        let updatedProfile = { ...profile };
+        if (logoFile) {
+            try {
+                const url = await uploadLogo(logoFile, user.uid);
+                updatedProfile.logoUrl = url;
+            } catch (e) {
+                console.error("Upload failed", e);
+                setMsg('❌ Kunde inte ladda upp loggan');
+                setSaving(false);
+                return;
+            }
+        }
+
+        const res = await saveCompanyProfileAction(user.uid, { profile: updatedProfile, context });
         setSaving(false);
         if (res.success) {
             setMsg('✅ Sparat! AI:n är nu uppdaterad.');
@@ -81,6 +116,25 @@ export default function SettingsPage() {
                     </h2>
                     <p className="text-xs text-muted-foreground -mt-4 pb-2 border-b border-border">Visas på offerter och dokument.</p>
 
+                    {/* Logo Upload */}
+                    <div className="flex justify-center py-2">
+                        <div className="relative group cursor-pointer w-24 h-24">
+                            <div className="w-full h-full rounded-full bg-zinc-800 border-2 border-dashed border-zinc-600 flex items-center justify-center overflow-hidden hover:border-primary transition-colors">
+                                {logoFile ? (
+                                    <img src={URL.createObjectURL(logoFile)} className="w-full h-full object-cover" />
+                                ) : profile.logoUrl ? (
+                                    <img src={profile.logoUrl} className="w-full h-full object-cover" />
+                                ) : (
+                                    <Upload className="text-zinc-500" />
+                                )}
+                            </div>
+                            <input type="file" onChange={handleFileChange} className="absolute inset-0 opacity-0 cursor-pointer" accept="image/*" />
+                            <div className="absolute bottom-0 right-0 bg-primary text-white p-1 rounded-full shadow-lg scale-90">
+                                <Settings size={12} />
+                            </div>
+                        </div>
+                    </div>
+
                     <div className="space-y-4">
                         <div>
                             <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-1.5 block">Företagsnamn</label>
@@ -115,6 +169,40 @@ export default function SettingsPage() {
                                 <input type="text"
                                     className="w-full bg-zinc-900/50 border border-border rounded-lg px-4 py-2 text-foreground focus:ring-1 focus:ring-primary/50 focus:border-primary/50 outline-none transition-all"
                                     value={profile.contactPhone} onChange={e => setProfile({ ...profile, contactPhone: e.target.value })} />
+                            </div>
+                        </div>
+
+                        {/* Financials & Web */}
+                        <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border/50">
+                            <div>
+                                <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-1.5 block">Hemsida</label>
+                                <input type="text"
+                                    className="w-full bg-zinc-900/50 border border-border rounded-lg px-4 py-2 text-foreground focus:ring-1 focus:ring-primary/50 focus:border-primary/50 outline-none transition-all"
+                                    value={profile.website || ''} onChange={e => setProfile({ ...profile, website: e.target.value })}
+                                    placeholder="www.mittforetag.se" />
+                            </div>
+                            <div>
+                                <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-1.5 block">Bankgiro</label>
+                                <input type="text"
+                                    className="w-full bg-zinc-900/50 border border-border rounded-lg px-4 py-2 text-foreground focus:ring-1 focus:ring-primary/50 focus:border-primary/50 outline-none transition-all"
+                                    value={profile.bankgiro || ''} onChange={e => setProfile({ ...profile, bankgiro: e.target.value })}
+                                    placeholder="123-4567" />
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                            <div>
+                                <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-1.5 block">PlusGiro</label>
+                                <input type="text"
+                                    className="w-full bg-zinc-900/50 border border-border rounded-lg px-4 py-2 text-foreground focus:ring-1 focus:ring-primary/50 focus:border-primary/50 outline-none transition-all"
+                                    value={profile.plusgiro || ''} onChange={e => setProfile({ ...profile, plusgiro: e.target.value })}
+                                    placeholder="12 34 56-7" />
+                            </div>
+                            <div>
+                                <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-1.5 block">Swish</label>
+                                <input type="text"
+                                    className="w-full bg-zinc-900/50 border border-border rounded-lg px-4 py-2 text-foreground focus:ring-1 focus:ring-primary/50 focus:border-primary/50 outline-none transition-all"
+                                    value={profile.swish || ''} onChange={e => setProfile({ ...profile, swish: e.target.value })}
+                                    placeholder="123 456 78 90" />
                             </div>
                         </div>
                     </div>

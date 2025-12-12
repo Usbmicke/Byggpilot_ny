@@ -2,6 +2,7 @@ import 'server-only';
 import { ai } from '@/lib/genkit-instance';
 import { z } from 'genkit';
 import { startProjectTool } from '@/lib/genkit/tools/project.tools';
+import { updateProjectTool } from '@/lib/genkit/tools/update_project.tool';
 import { generatePdfTool, generateOfferTool } from '@/lib/genkit/tools/pdf.tools';
 import { calculateOfferTool } from '@/lib/genkit/tools/calculation.tools';
 import { repairDriveTool } from '@/lib/genkit/tools/drive.tools';
@@ -9,6 +10,7 @@ import { analyzeReceiptTool } from '../tools/vision.tools';
 import { createChangeOrderTool, draftEmailTool, generateAtaPdfTool } from '@/lib/genkit/tools/ata.tools';
 import { checkAvailabilityTool, bookMeetingTool } from '@/lib/genkit/tools/calendar.tools';
 import { readEmailTool, sendEmailTool } from '@/lib/genkit/tools/gmail.tools';
+import { createDocDraftTool } from '@/lib/genkit/tools/docs.tools';
 import { AI_MODELS, AI_CONFIG } from '../config';
 
 // Simple Message Schema
@@ -112,8 +114,12 @@ Your goal is to be the "Builder's Best Friend" – efficient, knowledgeable, and
 
 ---
 ### 📋 CAPABILITIES & TOOLS
-1. **PROJECTS ('startProject'):**
-   - Initiates new jobs. Warn if Customer seems new/unknown.
+1. **PROJECTS ('startProject' / 'updateProject'):**
+   - **New:** "Starta nytt projekt..." -> 'startProject'.
+   - **Update:** "Vi ska även byta taket..." -> Check if this is an ÄTA (Billing Extra) or just Scope Update.
+     - IF Scope Update (Ingår i originalpris): Use 'updateProject'.
+     - IF ÄTA (Extra Cost): Use 'createChangeOrder'.
+     - **Refusal to Update?** NEVER say "I cannot update". Use 'updateProject'.
 2. **CONTRACTS ('generatePdf'):**
    - **Trigger:** When user mentions "avtal", "hantverkarformulär", "kontrakt".
    - **Context:** Use [MY COMPANY PROFILE] and [ACTIVE PROJECTS] to pre-fill data.
@@ -139,8 +145,25 @@ Your goal is to be the "Builder's Best Friend" – efficient, knowledgeable, and
 ---
 ### ⚠️ RISK MANAGEMENT ("The Putter")
 - **Keywords:** If user mentions "Tak", "Asbest", "Schakt", "Våtrum", "Heta arbeten" -> **STOP & WARN**.
-- **Action:** Remind them of risks. "Obs: Takjobb innebär fallrisk. Har du en AMP?"
+- **Logic:**
+  1. **Scan:** Does this project already have an AMP? (Assume No unless stated).
+  2. **Persuade:** "Obs: Detta arbetsmoment innebär risker (t.ex. fall/kemi). Enligt AFS 2023:3 måste en Arbetsmiljöplan (AMP) upprättas INNAN arbetet påbörjas. Missar vi detta kan Arbetsmiljöverket utdöma sanktionsavgifter (ofta 50 000 kr+)."
+  3. **Solution:** "Jag har förberett ett vasst UTKAST enligt Arbetsmiljöverkets krav (Bas-P/Bas-U). Det innehåller datumstämplar och ansvarsfördelning. Ska jag skapa det i projektmappen?"
+  4. **Action:** Use 'createDocDraft' with the identified risks pre-filled.
+  5. **Content Rule:** The AMP Draft MUST include:
+     - Header with Project Name & Date.
+     - Section for **Bas-P** (Planning) vs **Bas-U** (Execution).
+     - **Tidplan** (Start/End dates).
+     - **Riskanalys** (The identified risks + measures).
+     - **Nödlägesberedskap** (Emergency contacts).
+     - **Ordningsregler** (Safety rules).
+     - **Signaturrader** (Date & Signature).
 - **Checklists:** Offer to generate a safety checklist.
+
+---
+### 📄 DOCUMENT WORKFLOW
+- **Drafts (Google Docs):** For "living documents" (AMPs, Specifications, Meeting Minutes), ALWAYS use 'createDocDraft' to create an editable Google Doc first.
+- **Final (PDF):** Only use 'generatePdf' or 'generateOffer' (PDFs) when the user explicitly asks for a final/signed version or "Offert för utskick".
 
 ---
 ### 📅 SCHEDULING (Collision Warning)
@@ -194,7 +217,7 @@ CURRENT TIME: ${new Date().toLocaleString('sv-SE', { timeZone: 'Europe/Stockholm
             config: {
                 temperature: 0.4, // Lower temperature for more consistent/professional outputs
             },
-            tools: [startProjectTool, generatePdfTool, calculateOfferTool, analyzeReceiptTool, repairDriveTool, createChangeOrderTool, draftEmailTool, generateAtaPdfTool, checkAvailabilityTool, bookMeetingTool, readEmailTool, sendEmailTool],
+            tools: [startProjectTool, updateProjectTool, generatePdfTool, calculateOfferTool, analyzeReceiptTool, repairDriveTool, createChangeOrderTool, draftEmailTool, generateAtaPdfTool, checkAvailabilityTool, bookMeetingTool, readEmailTool, sendEmailTool, createDocDraftTool],
             context: {
                 accessToken: input.accessToken,
                 uid: input.uid

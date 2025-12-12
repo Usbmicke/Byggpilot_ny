@@ -113,6 +113,32 @@ export const GoogleDriveService = {
         };
     },
 
+    async createGoogleDoc(title: string, htmlContent: string, parentId?: string, accessToken?: string): Promise<{ id: string, webViewLink: string }> {
+        const service = getService(accessToken);
+
+        const fileMetadata = {
+            name: title,
+            mimeType: 'application/vnd.google-apps.document',
+            parents: parentId ? [parentId] : []
+        };
+
+        const media = {
+            mimeType: 'text/html',
+            body: htmlContent
+        };
+
+        const res = await service.files.create({
+            requestBody: fileMetadata,
+            media: media,
+            fields: 'id, webViewLink',
+        });
+
+        return {
+            id: res.data.id!,
+            webViewLink: res.data.webViewLink!,
+        };
+    },
+
     async renameFolder(fileId: string, newName: string, accessToken?: string) {
         const service = getService(accessToken);
         await service.files.update({

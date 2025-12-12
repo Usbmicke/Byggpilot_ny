@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { getChangeOrdersAction, createChangeOrderAction, approveChangeOrderAction } from '@/app/actions';
-import { ArrowLeftIcon, PlusIcon, CheckCircleIcon, XCircleIcon, ClockIcon, DocumentTextIcon } from '@heroicons/react/24/outline';
+import { ArrowLeft, Plus, CheckCircle, XCircle, Clock, FileText } from 'lucide-react';
 
 // Simple Badge Component
 const StatusBadge = ({ status }: { status: string }) => {
@@ -86,7 +86,7 @@ export default function AtaPage() {
             {/* Header */}
             <div className="flex items-center justify-between mb-8 max-w-4xl mx-auto">
                 <button onClick={() => router.back()} className="flex items-center text-slate-400 hover:text-white transition-colors">
-                    <ArrowLeftIcon className="w-5 h-5 mr-2" />
+                    <ArrowLeft className="w-5 h-5 mr-2" />
                     Tillbaka
                 </button>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
@@ -101,7 +101,7 @@ export default function AtaPage() {
                         onClick={() => setShowModal(true)}
                         className="flex items-center bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg shadow-blue-900/20 transition-all active:scale-95"
                     >
-                        <PlusIcon className="w-5 h-5 mr-2" />
+                        <Plus className="w-5 h-5 mr-2" />
                         Ny ÄTA
                     </button>
                 </div>
@@ -111,7 +111,7 @@ export default function AtaPage() {
                     <div className="text-center text-slate-500 py-12">Laddar ÄTA-ärenden...</div>
                 ) : orders.length === 0 ? (
                     <div className="text-center bg-slate-900/50 border border-slate-800 rounded-2xl p-12">
-                        <ClockIcon className="w-12 h-12 mx-auto text-slate-600 mb-4" />
+                        <Clock className="w-12 h-12 mx-auto text-slate-600 mb-4" />
                         <h3 className="text-lg font-medium text-slate-300">Inga ändringar än</h3>
                         <p className="text-slate-500 mt-2">Tryck på "Ny ÄTA" för att registrera extraarbete.</p>
                     </div>
@@ -139,13 +139,13 @@ export default function AtaPage() {
                                             onClick={() => handleApprove(order.id, false)}
                                             className="p-2 text-red-400 hover:bg-red-500/10 rounded-lg transition-colors" title="Neka"
                                         >
-                                            <XCircleIcon className="w-6 h-6" />
+                                            <XCircle className="w-6 h-6" />
                                         </button>
                                         <button
                                             onClick={() => handleApprove(order.id, true)}
                                             className="p-2 text-green-400 hover:bg-green-500/10 rounded-lg transition-colors" title="Godkänn / Skicka"
                                         >
-                                            <CheckCircleIcon className="w-6 h-6" />
+                                            <CheckCircle className="w-6 h-6" />
                                         </button>
                                     </div>
                                 )}
@@ -153,7 +153,7 @@ export default function AtaPage() {
                                     <div className="flex items-center gap-2 shrink-0">
                                         {/* Status */}
                                         <div className="text-green-500 flex items-center gap-1">
-                                            <CheckCircleIcon className="w-5 h-5" />
+                                            <CheckCircle className="w-5 h-5" />
                                             <span className="text-sm hidden sm:inline">Signerad</span>
                                         </div>
 
@@ -166,7 +166,7 @@ export default function AtaPage() {
                                                 className="p-2 text-blue-400 hover:text-blue-300 hover:bg-blue-500/10 rounded-lg transition-colors"
                                                 title="Öppna PDF Underlag"
                                             >
-                                                <DocumentTextIcon className="w-6 h-6" />
+                                                <FileText className="w-6 h-6" />
                                             </a>
                                         )}
                                     </div>

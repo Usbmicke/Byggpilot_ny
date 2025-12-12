@@ -59,7 +59,8 @@ export const checkAvailabilityTool = ai.defineTool(
 
             return {
                 available: conflicts.length === 0,
-                conflicts: conflicts
+                conflicts: conflicts,
+                error: undefined
             };
         } catch (e: any) {
             return { available: false, conflicts: [], error: `Failed to check calendar: ${e.message}` };
@@ -86,7 +87,7 @@ export const bookMeetingTool = ai.defineTool(
     },
     async (input, context) => {
         const token = (context as any).context?.accessToken;
-        if (!token) return { success: false, message: "Saknar behörighet (Google Token)." };
+        if (!token) return { success: false, eventId: undefined, link: undefined, message: "Saknar behörighet (Google Token)." };
 
         try {
             console.log(`📅 Booking Meeting: ${input.summary} @ ${input.startTime}`);
@@ -99,13 +100,13 @@ export const bookMeetingTool = ai.defineTool(
 
             return {
                 success: true,
-                eventId: event.id,
-                link: event.htmlLink,
+                eventId: event.id || undefined,
+                link: event.htmlLink || undefined,
                 message: `Möte bokat! Länk: ${event.htmlLink}`
             };
         } catch (e: any) {
             console.error("Booking Failed", e);
-            return { success: false, message: `Kunde inte boka möte: ${e.message}` };
+            return { success: false, eventId: undefined, link: undefined, message: `Kunde inte boka möte: ${e.message}` };
         }
     }
 );
