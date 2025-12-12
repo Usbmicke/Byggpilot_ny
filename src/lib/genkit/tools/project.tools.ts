@@ -37,7 +37,7 @@ export const startProjectTool = ai.defineTool(
         console.log(`[Tool: startProject] Creating project: ${input.name} for user: ${userId}`);
 
         // 0. Get Project Number
-        let projectNumber: number | undefined;
+        let projectNumber: string | undefined;
         let companyName = "Mitt Företag"; // Default
 
         try {
@@ -65,7 +65,7 @@ export const startProjectTool = ai.defineTool(
             description: input.description,
             status: 'active',
             ownerId: userId,
-            projectNumber // Save number
+            projectNumber: projectNumber?.toString() // Save number as string
         });
 
         // 2. Create Drive Structure (Digital Office)

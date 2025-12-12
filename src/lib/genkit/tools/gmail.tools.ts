@@ -63,7 +63,7 @@ export const sendEmailTool = ai.defineTool(
     },
     async (input, context) => {
         const token = (context as any).context?.accessToken;
-        if (!token) return { success: false, error: "Saknar behörighet (Google Token)." };
+        if (!token) return { success: false, messageId: undefined, error: "Saknar behörighet (Google Token)." };
 
         try {
             console.log(`📧 Sending email to ${input.to} (Thread: ${input.threadId || 'New'})`);

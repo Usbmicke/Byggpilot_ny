@@ -189,7 +189,7 @@ function NotificationItem({ item, onDismiss }: { item: any, onDismiss: () => voi
         setIsBooking(false);
 
         if (res.success) {
-            setEventLink(res.eventLink);
+            setEventLink(res.eventLink || null);
             setViewState('success');
         } else {
             alert('Fel: ' + res.error); // Fallback for actual errors
