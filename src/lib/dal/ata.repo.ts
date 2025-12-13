@@ -38,9 +38,10 @@ export const ChangeOrderRepo = {
         const snapshot = await db
             .collection(COLLECTION)
             .where('projectId', '==', projectId)
-            .orderBy('createdAt', 'desc')
             .get();
-        return snapshot.docs.map(doc => doc.data() as ChangeOrderData);
+        // Sort in memory to avoid Composite Index requirement
+        const docs = snapshot.docs.map(doc => doc.data() as ChangeOrderData);
+        return docs.sort((a, b) => b.createdAt.toMillis() - a.createdAt.toMillis());
     },
 
     async updateStatus(id: string, status: 'approved' | 'rejected', method: 'link' | 'email' | 'manual' = 'manual', evidence: string = '') {

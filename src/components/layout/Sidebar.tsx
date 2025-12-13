@@ -40,6 +40,7 @@ export default function Sidebar() {
         { name: 'Översikt', href: '/dashboard', icon: '🏠', warning: false },
         { name: 'Projekt', href: '/projects', icon: '🏗️', warning: false },
         { name: 'Offerter', href: '/offers', icon: '📄', warning: false },
+        { name: 'Ekonomi', href: '/economy', icon: '💸', warning: false },
         { name: 'Kunder', href: '/customers', icon: '👥', warning: status.incompleteCustomersCount > 0 },
         { name: 'Inställningar', href: '/settings', icon: '⚙️', warning: status.profileIncomplete },
     ];

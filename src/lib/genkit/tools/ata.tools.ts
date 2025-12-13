@@ -11,10 +11,11 @@ export const createChangeOrderTool = ai.defineTool(
         inputSchema: z.object({
             projectId: z.string().describe('The ID of the project'),
             description: z.string().describe('Description of work/material'),
-            quantity: z.number().describe('Quantity (e.g. hours or pieces)'),
-            unit: z.string().describe('Unit (e.g. tim, st, m2)'),
-            estimatedCost: z.number().describe('Estimated TOTAL cost ex VAT'),
-            type: z.enum(['material', 'work', 'other']).describe('Type of expense')
+            quantity: z.number().optional().describe('Quantity (default 1)'),
+            unit: z.string().optional().describe('Unit (default st)'),
+            estimatedCost: z.number().optional().describe('Estimated TOTAL cost ex VAT. If unknown/hourly, leave empty (0).'),
+            type: z.enum(['material', 'work', 'other']).describe('Type of expense'),
+            isRunningCost: z.boolean().optional().describe('Set to true if price is Löpande/Unknown') // Added for explicit tracking
         }),
         outputSchema: z.object({
             success: z.boolean(),
@@ -30,16 +31,24 @@ export const createChangeOrderTool = ai.defineTool(
             const project = await ProjectRepo.get(input.projectId);
             if (!project) throw new Error(`Project ${input.projectId} not found.`);
 
+            const finalCost = input.estimatedCost || 0;
+            const description = input.isRunningCost && finalCost === 0
+                ? `${input.description} (Löpande räkning)`
+                : input.description;
+
             const ata = await ChangeOrderRepo.create({
-                ...input,
                 projectId: input.projectId,
+                description: description,
+                quantity: input.quantity || 1,
+                unit: input.unit || 'st',
+                estimatedCost: finalCost,
                 type: input.type as any
             });
 
             return {
                 success: true,
                 id: ata.id,
-                message: `ÄTA skapad: ${input.description} (${input.estimatedCost} kr). Finns nu i utkast.`
+                message: `ÄTA skapad: ${description}. Status: Utkast.`
             };
         } catch (e: any) {
             return { success: false, id: '', message: e.message };

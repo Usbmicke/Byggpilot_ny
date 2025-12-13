@@ -151,19 +151,19 @@ export default function ChatInterface() {
     }, [searchParams]);
 
     return (
-        <div className={`fixed bottom-0 right-0 left-0 md:left-64 z-50 flex flex-col justify-end font-sans`}>
+        <div className={`fixed bottom-0 right-0 left-0 md:left-64 z-[100001] flex flex-col justify-end font-sans`}>
 
-            {/* Backdrop (Only when expanded) - Use z-40 to be behind panels but above content */}
+            {/* Backdrop (Only when expanded) - Use z-[100000] to be behind panels but above everything else */}
             {isExpanded && (
                 <div
-                    className="fixed inset-0 z-40 transition-opacity bg-transparent"
+                    className="fixed inset-0 z-[100000] transition-opacity bg-transparent"
                     onClick={() => setIsExpanded(false)}
                 />
             )}
 
             {/* Chat Panel (History) - Expands UP to Header (h-16 = 64px) */}
             {/* Using fixed positioning to guarantee full screen coverage (minus header/side) */}
-            <div className={`fixed top-16 bottom-24 left-4 right-4 md:left-[17rem] md:right-4 bg-zinc-900/95 border border-zinc-700/50 backdrop-blur-2xl shadow-2xl rounded-3xl overflow-hidden flex flex-col transition-all duration-500 transform origin-bottom z-50 ${isExpanded ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-20 opacity-0 scale-95 pointer-events-none'}`}>
+            <div className={`fixed top-16 bottom-24 left-4 right-4 md:left-[17rem] md:right-4 bg-zinc-900/95 border border-zinc-700/50 backdrop-blur-2xl shadow-2xl rounded-3xl overflow-hidden flex flex-col transition-all duration-500 transform origin-bottom z-[100001] ${isExpanded ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-20 opacity-0 scale-95 pointer-events-none'}`}>
 
                 {/* Header */}
                 <div className="p-4 border-b border-zinc-800/50 flex items-center justify-between bg-zinc-900/50">
@@ -252,7 +252,7 @@ export default function ChatInterface() {
             </div>
 
             {/* Input Bar (Always Visible) */}
-            <div className="h-24 bg-zinc-950/80 backdrop-blur-md border-t border-zinc-800/50 px-4 md:px-6 flex items-center justify-center relative z-50">
+            <div className="h-24 bg-zinc-950/80 backdrop-blur-md border-t border-zinc-800/50 px-4 md:px-6 flex items-center justify-center relative z-[100002]">
 
                 {/* Full Width Container */}
                 <div className="w-full relative group">

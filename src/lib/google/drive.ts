@@ -1,55 +1,87 @@
 import 'server-only';
 import { google } from 'googleapis';
 import { drive_v3 } from '@googleapis/drive'; // Needed for types/instantiation
-import { GoogleAuth } from 'google-auth-library';
+import { GoogleAuth, JWT } from 'google-auth-library';
 
-// Lazy init to prevent ADC crash on load if env vars are missing
-let _service: any = null;
+// Shared Auth Client Cache
+let _authClient: any = null;
+let _driveService: any = null;
 
-const getService = (accessToken?: string) => {
+// --- CENTRAL AUTH FACTORY ---
+const getAuthClient = async (accessToken?: string) => {
+    // 1. If Access Token provided (User Context), return ephemeral OAuth2 client
     if (accessToken) {
-        // console.log("🔐 [drive.ts] Using provided Access Token for Drive Service");
-        // Create an OAuth2 client with the provided token
-        const auth = new GoogleAuth();
-
         const oauth2 = new google.auth.OAuth2();
         oauth2.setCredentials({ access_token: accessToken });
-        return google.drive({ version: 'v3', auth: oauth2 });
+        return oauth2;
     }
 
-    if (!_service) {
-        console.log("⚙️ [drive.ts] Initializing Service Account Drive Client...");
-        let authOptions: any = {
-            scopes: ['https://www.googleapis.com/auth/drive'],
-        };
+    // 2. If Service Account (Server Context), use cached JWT/GoogleAuth
+    if (_authClient) return _authClient;
 
-        // Try to use the same Service Account as Firebase
-        const saKey = process.env.FIREBASE_SERVICE_ACCOUNT_KEY || process.env.FIREBASE_SERVICE_ACCOUNT_JSON;
-        if (saKey) {
-            try {
-                const credentials = JSON.parse(saKey);
-                authOptions.credentials = {
-                    client_email: credentials.client_email,
-                    private_key: credentials.private_key,
-                };
-                authOptions.projectId = credentials.project_id; // IMPORTANT: Set Project ID
-                console.log(`✅ [drive.ts] Service Account Credentials loaded for: ${credentials.client_email}`);
-            } catch (e) {
-                console.error("❌ [drive.ts] Failed to parse Service Account for Drive:", e);
-            }
-        } else {
-            console.warn("⚠️ [drive.ts] No Service Account Key found in env. Drive operations without Token will fail.");
+    console.log("⚙️ [drive.ts] Initializing Server Auth Client...");
+
+    const saKey = process.env.FIREBASE_SERVICE_ACCOUNT_KEY || process.env.FIREBASE_SERVICE_ACCOUNT_JSON;
+    if (saKey) {
+        try {
+            const credentials = JSON.parse(saKey);
+
+            const jwtClient = new JWT(
+                credentials.client_email,
+                undefined,
+                credentials.private_key.replace(/\\n/g, '\n'),
+                [
+                    'https://www.googleapis.com/auth/drive',
+                    'https://www.googleapis.com/auth/documents', // Added for Docs support
+                    'https://www.googleapis.com/auth/spreadsheets' // Future proof
+                ]
+            );
+
+            // VERIFY AUTH IMMEDIATELY
+            await jwtClient.authorize();
+            console.log(`✅ [drive.ts] JWT Auth Verified for: ${credentials.client_email}`);
+
+            _authClient = jwtClient;
+            return _authClient;
+
+        } catch (e) {
+            console.error("❌ [drive.ts] Service Account JWT Init Failed:", e);
         }
-
-        const auth = new GoogleAuth(authOptions);
-        _service = google.drive({ version: 'v3', auth: auth as any });
     }
-    return _service;
+
+    // Fallback to ADC
+    console.log("⚠️ [drive.ts] Falling back to default GoogleAuth...");
+    try {
+        const auth = new GoogleAuth({
+            scopes: ['https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/documents']
+        });
+        _authClient = auth; // GoogleAuth is an auth client factory but can be passed to google APIs
+        return _authClient;
+    } catch (e: any) {
+        console.error("❌ [drive.ts] ADC Auth Failed:", e.message);
+        throw new Error("Failed to initialize Google Auth");
+    }
+};
+
+const getService = async (accessToken?: string) => {
+    // If specific access token, always new instance
+    if (accessToken) {
+        const auth = await getAuthClient(accessToken);
+        return google.drive({ version: 'v3', auth: auth as any });
+    }
+
+    // If cached service exists and no custom token, return it
+    if (_driveService) return _driveService;
+
+    // Initialize Service Account Drive
+    const auth = await getAuthClient();
+    _driveService = google.drive({ version: 'v3', auth: auth });
+    return _driveService;
 };
 
 export const GoogleDriveService = {
     async ensureFolderExists(folderName: string, parentId?: string, accessToken?: string): Promise<string> {
-        const service = getService(accessToken);
+        const service = await getService(accessToken);
         const query = [
             `mimeType = 'application/vnd.google-apps.folder'`,
             `name = '${folderName}'`,
@@ -89,7 +121,7 @@ export const GoogleDriveService = {
     },
 
     async uploadFile(name: string, mimeType: string, body: any, parentId?: string, accessToken?: string): Promise<{ id: string, webViewLink: string }> {
-        const service = getService(accessToken);
+        const service = await getService(accessToken);
 
         const media = {
             mimeType: mimeType,
@@ -114,7 +146,7 @@ export const GoogleDriveService = {
     },
 
     async createGoogleDoc(title: string, htmlContent: string, parentId?: string, accessToken?: string): Promise<{ id: string, webViewLink: string }> {
-        const service = getService(accessToken);
+        const service = await getService(accessToken);
 
         const fileMetadata = {
             name: title,
@@ -140,7 +172,7 @@ export const GoogleDriveService = {
     },
 
     async renameFolder(fileId: string, newName: string, accessToken?: string) {
-        const service = getService(accessToken);
+        const service = await getService(accessToken);
         await service.files.update({
             fileId: fileId,
             requestBody: {
@@ -184,10 +216,9 @@ export const GoogleDriveService = {
     },
 
     async appendContentToDoc(docId: string, textContent: string, accessToken?: string) {
-        // Need Docs Service
-        const auth = new google.auth.OAuth2();
-        if (accessToken) auth.setCredentials({ access_token: accessToken });
-        const docs = google.docs({ version: 'v1', auth });
+        // CORRECTED: Use shared Auth Client (fixes 401 on Service Account)
+        const auth = await getAuthClient(accessToken);
+        const docs = google.docs({ version: 'v1', auth: auth as any });
 
         // 1. Get Document to find end index
         const doc = await docs.documents.get({ documentId: docId });
@@ -232,7 +263,7 @@ export const GoogleDriveService = {
     },
 
     async exportPdf(fileId: string, accessToken?: string): Promise<{ buffer: Buffer }> {
-        const service = getService(accessToken);
+        const service = await getService(accessToken);
         const res = await service.files.export({
             fileId: fileId,
             mimeType: 'application/pdf',
