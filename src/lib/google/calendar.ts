@@ -68,8 +68,20 @@ export const CalendarService = {
             const results = await Promise.all(promises);
             const allEvents = results.flat();
 
-            console.log(`✅ Total events found across all calendars: ${allEvents.length}`);
-            return allEvents;
+            // FILTER: Remove 'transparent' (Available) events and known noise like Week Numbers
+            const conflictEvents = allEvents.filter(e => {
+                // 1. Transparency Check (Google Calendar 'Available' flag)
+                if (e.transparency === 'transparent') return false;
+
+                // 2. Week Number Heuristic (Native Swedish calendars sometimes misuse this)
+                if (e.summary && /^Vecka \d+/.test(e.summary)) return false;
+                if (e.summary && /^Week \d+/.test(e.summary)) return false;
+
+                return true;
+            });
+
+            console.log(`✅ Total conflicts found (after filtering): ${conflictEvents.length}`);
+            return conflictEvents;
 
         } catch (error: any) {
             console.error("❌ Failed to list calendar events (General Error):", error.message);

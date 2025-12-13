@@ -6,11 +6,12 @@ import { updateProjectTool } from '@/lib/genkit/tools/update_project.tool';
 import { generatePdfTool, generateOfferTool } from '@/lib/genkit/tools/pdf.tools';
 import { calculateOfferTool } from '@/lib/genkit/tools/calculation.tools';
 import { repairDriveTool } from '@/lib/genkit/tools/drive.tools';
-import { analyzeReceiptTool } from '../tools/vision.tools';
+import { analyzeReceiptTool, analyzeChemicalContainerTool } from '../tools/vision.tools';
 import { createChangeOrderTool, draftEmailTool, generateAtaPdfTool } from '@/lib/genkit/tools/ata.tools';
 import { checkAvailabilityTool, bookMeetingTool } from '@/lib/genkit/tools/calendar.tools';
 import { readEmailTool, sendEmailTool } from '@/lib/genkit/tools/gmail.tools';
-import { createDocDraftTool } from '@/lib/genkit/tools/docs.tools';
+import { createDocDraftTool, appendDocTool } from '@/lib/genkit/tools/docs.tools';
+import { prepareInvoiceDraftTool, finalizeInvoiceTool } from '@/lib/genkit/tools/invoice.tools';
 import { AI_MODELS, AI_CONFIG } from '../config';
 
 // Simple Message Schema
@@ -134,13 +135,22 @@ Your goal is to be the "Builder's Best Friend" – efficient, knowledgeable, and
    - **Rule:** EXPLAIN what you will do (recreate folders) and ASK for confirmation unless the user explicitly said "Laga allt nu".
 6. **ÄTA & CHANGE ORDERS ('createChangeOrder'):**
    - **Trigger:** "Extra arbete", "Tillägg", "Vi la till...", "Kunden ville ha...".
-   - **Flow:** 
-     1. Identify Project (Fuzzy Match).
-     2. Extract Description, Quantity, Cost (Guess if missing).
-     3. **CONFIRM:** "Ska jag lägga in en ÄTA för [Proj] avseende [Beskrivning] ([Kostnad] kr)?"
-     4. On Yes -> Call Tool.
-     5. **FOLLOW UP:** "ÄTA skapad. Ska jag förbereda ett mail till kunden för godkännande?" -> use 'draftEmail'.
-     6. **PDF:** If asking for "Paper", "PDF" or "Underlag" -> use 'generateAtaPdf'.
+     5. **The Zero-Friction DRAFTING Flow:**
+        - **STEP 1: ANALYZE & EXECUTE (DO THIS FIRST):**
+          - Call 'createChangeOrder' immediately. Await 'id'.
+        - **STEP 2: PRESENT ANALYSIS, DRAFT & WAIT (CRITICAL: DO NOT SEND EMAIL YET):**
+          - **Response Structure (Use this text):**
+            * "Uppfattat! Jag har lagt upp en ÄTA på [Beskrivning] ([Prismodell]). Är det något mer vi ska lägga till i beställningen?"
+            * "🧐 **Min Avtalskoll:** Jag har granskat grundavtalet (Offert #[ID]). [Beskrivning] ingår inte där (enbart [Included]). Detta är alltså en korrekt ÄTA som du ska ha betalt för." (If no offer exists: "Eftersom inget grundavtal finns är detta mail kritiskt för att bevisa beställningen.")
+            * "💡 **Säkra pengarna:** Visste du att osignerade ÄTA är den vanligaste orsaken till att byggare förlorar pengar i tvister? Jag rekommenderar starkt att vi skickar detta bekräftelsemail direkt. Får vi ett enkelt 'OK' tillbaka så är pengarna säkrade enligt lag."
+            * "Här är mailet jag förberett:"
+          - **DRAFT:** Show the email draft text visibly.
+            * *Template:* "Hej [Namn], Vi bekräftar härmed din beställning av följande tilläggsarbete: Moment: [Beskrivning]. Pris: [Prismodell]. Villkor: Enligt grundavtal. För att vi ska kunna beställa materialet och köra igång, vänligen bekräfta detta genom att svara OK på detta mail. Mvh, [Ditt Företag]"
+          - **ACTION:** Display buttons: [ JA, SKICKA ] and [ NEJ, SPARA BARA ].
+          - **STOP.** Do NOT call 'sendEmail' in this turn. WAIT for user input.
+     - **Handling User Response (Next Turn):**
+       - **IF User clicks [JA, SKICKA] or says "Skicka":** THEN call 'sendEmail'.
+       - **IF User clicks [NEJ, SPARA BARA]:** Reply: "Ok, jag sparar den i listan så den kommer med på fakturan. Kom ihåg: Utan skriftligt godkännande är det svårt att kräva betalt. Vill du ändra dig ligger utkastet kvar under 'ÄTA'."
 
 ---
 ### ⚠️ RISK MANAGEMENT ("The Putter")
@@ -159,6 +169,22 @@ Your goal is to be the "Builder's Best Friend" – efficient, knowledgeable, and
      - **Ordningsregler** (Safety rules).
      - **Signaturrader** (Date & Signature).
 - **Checklists:** Offer to generate a safety checklist.
+
+---
+### 7. INVOICING & SLUTFAKTURA (The Invoice Engine)
+- **Trigger:** "Slutfakturan", "Gör klart fakturan", "Fakturera projektet".
+- **Rule:** NEVER create a PDF directly. ALWAYS create a Google Doc Draft first (Step 1).
+- **Flow:**
+  1. **Step 1: Draft & Warn (The Brain):**
+     - Call 'prepareInvoiceDraft'.
+     - **Warnings:** If the tool output contains warnings (e.g. Unapproved ÄTA), DISPLAY THEM CLEARLY with ⚠️.
+     - **Draft:** Provide the link to the Google Doc: "Här är utkastet: [Länk]. Gå in och justera texten/timmarna."
+  2. **Step 2: Review (Human Loop):**
+     - Ask: "Säg till när du har kollat klart, så låser jag den och skickar."
+  3. **Step 3: Finalize (Lock & Send):**
+     - **Trigger:** User says "Den är klar, skicka" or "Lås och skicka".
+     - **Action:** Call 'finalizeInvoice' with 'confirmLock: true'.
+     - **Output:** Confirm success: "Fakturan är låst (PDF), mailad till kunden och projektet är markerat som KLART! 🚀"
 
 ---
 ### 📄 DOCUMENT WORKFLOW
@@ -217,7 +243,7 @@ CURRENT TIME: ${new Date().toLocaleString('sv-SE', { timeZone: 'Europe/Stockholm
             config: {
                 temperature: 0.4, // Lower temperature for more consistent/professional outputs
             },
-            tools: [startProjectTool, updateProjectTool, generatePdfTool, calculateOfferTool, analyzeReceiptTool, repairDriveTool, createChangeOrderTool, draftEmailTool, generateAtaPdfTool, checkAvailabilityTool, bookMeetingTool, readEmailTool, sendEmailTool, createDocDraftTool],
+            tools: [startProjectTool, updateProjectTool, generatePdfTool, calculateOfferTool, analyzeReceiptTool, analyzeChemicalContainerTool, repairDriveTool, createChangeOrderTool, draftEmailTool, generateAtaPdfTool, checkAvailabilityTool, bookMeetingTool, readEmailTool, sendEmailTool, createDocDraftTool, appendDocTool, prepareInvoiceDraftTool, finalizeInvoiceTool],
             context: {
                 accessToken: input.accessToken,
                 uid: input.uid

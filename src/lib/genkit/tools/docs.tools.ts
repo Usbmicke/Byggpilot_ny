@@ -40,3 +40,28 @@ export const createDocDraftTool = ai.defineTool(
         }
     }
 );
+
+export const appendDocTool = ai.defineTool(
+    {
+        name: 'appendDoc',
+        description: 'Appends text to the end of an existing Google Doc. Use this to update "living documents" like AMP (Work Environment Plan) with new risks or info.',
+        inputSchema: z.object({
+            fileId: z.string().describe("The Google Drive File ID of the document."),
+            textContent: z.string().describe("The text content to append."),
+        }),
+        outputSchema: z.object({
+            success: z.boolean(),
+            message: z.string(),
+        }),
+    },
+    async (input, context: any) => {
+        const accessToken = context?.accessToken || context?.context?.accessToken as string | undefined;
+        try {
+            await GoogleDriveService.appendContentToDoc(input.fileId, input.textContent, accessToken);
+            return { success: true, message: "Dokumentet uppdaterat!" };
+        } catch (e: any) {
+            console.error("Failed to append doc:", e);
+            return { success: false, message: `Update failed: ${e.message}` };
+        }
+    }
+);

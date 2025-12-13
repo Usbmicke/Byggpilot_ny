@@ -378,7 +378,20 @@ export async function checkInboxAction(accessToken: string) {
     const emails = await GmailService.listUnreadEmails(accessToken, 5);
     if (emails.length === 0) return { success: true, insights: [] };
 
+    let myEmail = '';
+    try {
+      const profile = await GmailService.getProfile(accessToken);
+      myEmail = profile.emailAddress || '';
+    } catch (e) {
+      console.warn("Could not fetch user profile for filtering", e);
+    }
+
     const insights = await Promise.all(emails.map(async (email) => {
+      // 1. FILTER SELF-EMAILS (Prevent loops)
+      if (myEmail && email.from && email.from.includes(myEmail)) {
+        console.log("⏩ Skipping self-email:", email.subject);
+        return null;
+      }
       // COST OPTIMIZATION: Keyword Heuristic Check
       // Only proceed to AI analysis if email looks relevant (Job, Meeting, etc)
       const combinedText = (email.subject + " " + (email.snippet || "")).toLowerCase();
@@ -476,11 +489,11 @@ export async function getUserStatusAction(uid: string) {
   }
 }
 
-export async function approveChangeOrderAction(ataId: string, approved: boolean) {
+export async function approveChangeOrderAction(ataId: string, approved: boolean, method: 'link' | 'email' | 'manual' = 'manual', evidence: string = '') {
   try {
-    console.log(`📝 ÄTA Approval: ${ataId} -> ${approved ? 'Approved' : 'Rejected'}`);
+    console.log(`📝 ÄTA Approval: ${ataId} -> ${approved ? 'Approved' : 'Rejected'} via ${method}`);
     const { ChangeOrderRepo } = await import('@/lib/dal/ata.repo');
-    await ChangeOrderRepo.updateStatus(ataId, approved ? 'approved' : 'rejected');
+    await ChangeOrderRepo.updateStatus(ataId, approved ? 'approved' : 'rejected', method, evidence);
     return { success: true };
   } catch (error: any) {
     console.error('❌ ÄTA Approval Failed:', error);

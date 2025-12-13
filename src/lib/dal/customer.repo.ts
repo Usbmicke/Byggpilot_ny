@@ -6,7 +6,8 @@ export interface CustomerData {
     id: string;
     companyId: string; // The construction company that owns this customer record
     name: string;
-    type: 'private' | 'company';
+    type: 'private' | 'company' | 'subcontractor';
+    role?: string; // e.g. "Electrician", "Plumber" (Mostly for subcontractors)
     orgNumber?: string; // SSN or OrgNr
     email?: string;
     phone?: string;

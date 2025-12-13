@@ -10,10 +10,11 @@ const EmailAnalysisInput = z.object({
 });
 
 const EmailAnalysisOutput = z.object({
-    intent: z.enum(['meeting', 'lead', 'other']),
+    intent: z.enum(['meeting', 'lead', 'ata_approval', 'other']),
     confidence: z.number(),
     summary: z.string(),
     proposedAction: z.string().optional(),
+    ataId: z.string().optional(),
     calendarData: z.object({
         subject: z.string(),
         description: z.string(),
@@ -42,20 +43,19 @@ export const emailAnalysisFlow = ai.defineFlow(
     Role: You are an intelligent assistant (InboxCopilot).
     Task:
     1. Determine the 'intent':
-       - 'meeting': Request for a meeting, site visit (platsbesök), or inspection.
-       - 'lead': Job inquiry, quote request (offertförfrågan), or new project.
+       - 'meeting': Request for a meeting, site visit (platsbesök).
+       - 'lead': Job inquiry ("Kan du hjälpa mig...", "Offertförfrågan").
+       - 'ata_approval': Customer replying "Ok", "Ja", "Kör på" to an ÄTA/Change Order email.
+          * Triggers: Subject contains "ÄTA" or "Godkännande". Body contains affirmative short response.
        - 'other': Spam, newsletters, invoices, or irrelevant.
 
-    2. If 'meeting', extract the 'suggestedDate'.
-       - Look for dates like "onsdag kl 14" (Wednesday 14:00).
-       - Assume the meeting is in the future relative to today: ${new Date().toISOString()}.
-       - If only generic "next week", pick a likely candidate or leave null.
-       - Format: ISO String (YYYY-MM-DDTHH:mm:ss).
+    2. Logic Specifics:
+       - IF 'ata_approval': Try to find the ÄTA ID (e.g. "ata_..." or UUID) in the quoted body/subject. If found, put in 'ataId'.
+       - IF 'meeting': Extract 'suggestedDate' (ISO). Today is ${new Date().toLocaleDateString('sv-SE')}.
 
-    3. Extract 'summary':
-       - This should be a helpful, conversational summary in Swedish.
-       - Example: "Anna vill boka möte på onsdag angående takbyte." or "Ny offertförfrågan från Johan om altanbygge."
-       - Include user intent and key details.
+    3. Extract 'summary' (For Notification):
+       - Concise Swedish one-liner.
+       - Example: "ÄTA Godkänd: Spotlights (Anna)" or "Nytt jobb: Köksrenovering".
 
     4. Return JSON matching the schema.
     `;

@@ -37,6 +37,14 @@ export const OfferRepo = {
         return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as OfferData));
     },
 
+    async listByProject(projectId: string): Promise<OfferData[]> {
+        const snapshot = await db
+            .collection(COLLECTION)
+            .where('projectId', '==', projectId)
+            .get();
+        return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as OfferData));
+    },
+
     async getById(id: string): Promise<OfferData | null> {
         const doc = await db.collection(COLLECTION).doc(id).get();
         if (!doc.exists) return null;

@@ -3,6 +3,17 @@ import { google } from 'googleapis';
 
 export const GmailService = {
     /**
+     * Get User Profile (email address)
+     */
+    async getProfile(accessToken: string) {
+        const auth = new google.auth.OAuth2();
+        auth.setCredentials({ access_token: accessToken });
+        const gmail = google.gmail({ version: 'v1', auth });
+        const res = await gmail.users.getProfile({ userId: 'me' });
+        return res.data;
+    },
+
+    /**
      * List unread messages from the last 2 days.
      */
     async listUnreadEmails(accessToken: string, limit = 10) {
@@ -90,6 +101,52 @@ export const GmailService = {
         const res = await gmail.users.messages.send({
             userId: 'me',
             requestBody,
+        });
+
+        return res.data;
+    },
+
+    async sendEmailWithAttachment(accessToken: string, to: string, subject: string, body: string, attachment: { filename: string, content: Buffer }) {
+        const auth = new google.auth.OAuth2();
+        auth.setCredentials({ access_token: accessToken });
+        const gmail = google.gmail({ version: 'v1', auth });
+
+        const boundary = "foo_bar_baz";
+        const utf8Subject = `=?utf-8?B?${Buffer.from(subject).toString('base64')}?=`;
+
+        let messageParts = [
+            `To: ${to}`,
+            `Subject: ${utf8Subject}`,
+            `MIME-Version: 1.0`,
+            `Content-Type: multipart/mixed; boundary="${boundary}"`,
+            ``,
+            `--${boundary}`,
+            `Content-Type: text/html; charset=utf-8`,
+            ``,
+            body,
+            ``,
+            `--${boundary}`,
+            `Content-Type: application/pdf; name="${attachment.filename}"`,
+            `Content-Disposition: attachment; filename="${attachment.filename}"`,
+            `Content-Transfer-Encoding: base64`,
+            ``,
+            attachment.content.toString('base64'),
+            ``,
+            `--${boundary}--`
+        ];
+
+        const message = messageParts.join('\n');
+        const encodedMessage = Buffer.from(message)
+            .toString('base64')
+            .replace(/\+/g, '-')
+            .replace(/\//g, '_')
+            .replace(/=+$/, '');
+
+        const res = await gmail.users.messages.send({
+            userId: 'me',
+            requestBody: {
+                raw: encodedMessage
+            }
         });
 
         return res.data;

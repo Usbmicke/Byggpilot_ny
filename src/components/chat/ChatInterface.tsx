@@ -203,11 +203,27 @@ export default function ChatInterface() {
                                                 )
                                             }}
                                         >
-                                            {m.content}
+                                            {m.content.replace(/\[OPTIONS:.*?\]/g, '') /* Hide Options Tag */}
                                         </ReactMarkdown>
                                     </div>
                                     : m.content}
                             </div>
+
+                            {/* Quick Action Buttons */}
+                            {m.content.match(/\[OPTIONS:(.*?)\]/) && (
+                                <div className="flex flex-wrap gap-2 mt-2 justify-end w-full max-w-[85%]">
+                                    {m.content.match(/\[OPTIONS:(.*?)\]/)![1].split(',').map((opt, i) => (
+                                        <button
+                                            key={i}
+                                            onClick={() => handleSend(opt.trim())}
+                                            className="bg-zinc-800 hover:bg-zinc-700 text-zinc-300 border border-zinc-700/50 px-4 py-2 rounded-full text-sm font-medium transition-colors shadow-sm"
+                                        >
+                                            {opt.trim()}
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
+
                             {/* ÄTA Draft Rendering logic... */}
                             {m.draft && (
                                 <div className="mt-2 w-[90%] bg-zinc-900 border border-amber-900/40 rounded-xl p-4 shadow-lg">

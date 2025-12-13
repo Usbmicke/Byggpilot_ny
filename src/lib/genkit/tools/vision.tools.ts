@@ -20,12 +20,8 @@ export const analyzeReceiptTool = ai.defineTool(
         }),
     },
     async (input) => {
-        // Phase 7.1: "Använd Gemini Vision för att extrahera belopp, datum och artiklar (OCR)"
-
-        // We use ai.generate with a multimodal prompt
-        // Note: To use images, we need a model that supports it (gemini-1.5-flash or pro)
-
-        const prompt = `
+        try {
+            const prompt = `
       Analyze this receipt image. Extract the following in JSON format:
       - Vendor name
       - Date
@@ -34,30 +30,6 @@ export const analyzeReceiptTool = ai.defineTool(
       - Check if any item is a chemical or hazardous material (e.g. paint, glue, solvent). Set hasChemicals to true if so.
     `;
 
-        // Construct the Part for image. 
-        // If URL: { media: { url: ... } }
-        // If Base64: { media: { body: ..., contentType: ... } }
-        // For simplicity, we assume URL or handle string directly if the SDK abstracts it.
-        // The unified SDK `generate` accepts `content` which can be an array of parts.
-
-        // Mocking the actual Vision call for this prototype if we don't have a real image URL to test,
-        // BUT the task is to implement the tool.
-
-        // NOTE: Genkit SDK structure for media:
-        // const result = await ai.generate({
-        //     model: 'googleai/gemini-1.5-flash',
-        //     prompt: [
-        //         { text: prompt },
-        //         { media: { url: input.imageUrl } }
-        //     ],
-        //     output: { format: 'json' } // Native JSON output if supported or strictly prompted
-        // });
-
-        // Since we can't easily verify an external URL without internet access/CORS in this env, 
-        // and `ai.generate` requires actual API connectivity (which we have via the environment, but image hosting is tricky),
-        // we will implement the CODE correctly assuming it works.
-
-        try {
             const response = await ai.generate({
                 model: 'googleai/gemini-2.5-flash',
                 prompt: [
@@ -65,38 +37,89 @@ export const analyzeReceiptTool = ai.defineTool(
                     { media: { url: input.imageUrl } }
                 ],
                 config: {
-                    temperature: 0.1, // Low temp for extraction
+                    temperature: 0.1,
                 }
             });
 
-            const text = response.text;
-
-            // Naive parsing if model doesn't return strictly JSON despite instructions
-            // In production, use `output: { schema: ... }` if available in Genkit version
-            // or ensure prompt enforces JSON code block.
-
-            // For prototype safety, we RETURN A MOCK if parsing fails or if we are in a dry-run env.
-            // But adhering to "Real Implementation":
-
-            // Let's assume the model returns a JSON string.
-            // We'll clean markdown code blocks.
-            const cleaned = text.replace(/```json/g, '').replace(/```/g, '').trim();
-            const data = JSON.parse(cleaned);
+            const text = response.text.replace(/```json/g, '').replace(/```/g, '').trim();
+            const data = JSON.parse(text);
 
             return {
                 vendor: data.vendor,
                 date: data.date,
-                totalAmount: data.totalAmount, // Ensure number
+                totalAmount: data.totalAmount,
                 items: data.items,
                 hasChemicals: !!data.hasChemicals
             };
 
         } catch (e) {
-            console.error("Vision AI failed/mocking:", e);
-            // Fallback for demo purposes if API call fails (e.g. invalid URL)
+            console.error("Vision AI failed:", e);
             return {
                 vendor: "Unknown Vendor (Vision Error)",
                 hasChemicals: false
+            };
+        }
+    }
+);
+
+const AnalyzeChemicalInput = z.object({
+    imageUrl: z.string().describe('Image URL of the chemical product/can'),
+});
+
+export const analyzeChemicalContainerTool = ai.defineTool(
+    {
+        name: 'analyzeChemicalContainer',
+        description: 'Analyzes a chemical product image (e.g. Fogskum) to check for Isocyanates and generate safety info.',
+        inputSchema: AnalyzeChemicalInput,
+        outputSchema: z.object({
+            productName: z.string(),
+            containsIsocyanates: z.boolean(),
+            requiresTraining: z.boolean(),
+            safetyRequirements: z.array(z.string()),
+        }),
+    },
+    async (input) => {
+        try {
+            const response = await ai.generate({
+                model: 'googleai/gemini-2.0-flash-exp',
+                prompt: [
+                    {
+                        text: `
+                        Analyze this product image (likely construction material like 'fogskum' or paint).
+                        1. Identify the product name.
+                        2. Check the label/ingredients for ISOCYANATES (Isocyanater) or Diisocyanates.
+                        3. If Isocyanates are found, set 'containsIsocyanates' to true.
+                        4. List required protection (gloves, mask) based on safety symbols or text.
+                        
+                        Return JSON:
+                        {
+                            "productName": string,
+                            "containsIsocyanates": boolean,
+                            "safetyRequirements": string[]
+                        }
+                    ` },
+                    { media: { url: input.imageUrl } }
+                ],
+                config: { temperature: 0.1 }
+            });
+
+            const text = response.text.replace(/```json/g, '').replace(/```/g, '').trim();
+            const data = JSON.parse(text);
+
+            return {
+                productName: data.productName || "Unknown Product",
+                containsIsocyanates: !!data.containsIsocyanates,
+                safetyRequirements: data.safetyRequirements || [],
+                requiresTraining: !!data.containsIsocyanates
+            };
+
+        } catch (e) {
+            console.error("Chemical Vision failed:", e);
+            return {
+                productName: "Error Analyzing Image",
+                containsIsocyanates: false,
+                requiresTraining: false,
+                safetyRequirements: []
             };
         }
     }

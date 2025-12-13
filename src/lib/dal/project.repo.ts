@@ -14,6 +14,11 @@ export interface ProjectData {
     ownerId: string;
     driveFolderId?: string;
     projectNumber?: string;
+    team?: {
+        contactId: string;
+        role: string; // e.g. "Elansvarig", "Rörläggare"
+        isMainContact?: boolean; // If they are the "Huvudansvarig" for their domain or the proj.
+    }[];
 }
 
 const COLLECTION = 'projects';

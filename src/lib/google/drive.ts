@@ -183,6 +183,33 @@ export const GoogleDriveService = {
         return { rootId, folders: folderIds };
     },
 
+    async appendContentToDoc(docId: string, textContent: string, accessToken?: string) {
+        // Need Docs Service
+        const auth = new google.auth.OAuth2();
+        if (accessToken) auth.setCredentials({ access_token: accessToken });
+        const docs = google.docs({ version: 'v1', auth });
+
+        // 1. Get Document to find end index
+        const doc = await docs.documents.get({ documentId: docId });
+        const content = doc.data.body?.content;
+        const endIndex = content ? content[content.length - 1].endIndex! - 1 : 1;
+
+        // 2. Insert Text
+        await docs.documents.batchUpdate({
+            documentId: docId,
+            requestBody: {
+                requests: [
+                    {
+                        insertText: {
+                            location: { index: endIndex },
+                            text: '\n' + textContent + '\n'
+                        }
+                    }
+                ]
+            }
+        });
+    },
+
     async createProjectStructure(projectName: string, projectsRootId: string, accessToken?: string) {
         // 1. Create Project Root inside "02_Pågående Projekt"
         const projectRootId = await this.ensureFolderExists(projectName, projectsRootId, accessToken);
@@ -202,5 +229,15 @@ export const GoogleDriveService = {
         }
 
         return { projectRootId, subfolders: ids };
+    },
+
+    async exportPdf(fileId: string, accessToken?: string): Promise<{ buffer: Buffer }> {
+        const service = getService(accessToken);
+        const res = await service.files.export({
+            fileId: fileId,
+            mimeType: 'application/pdf',
+        }, { responseType: 'arraybuffer' });
+
+        return { buffer: Buffer.from(res.data) };
     }
 };

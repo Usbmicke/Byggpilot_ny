@@ -15,6 +15,8 @@ export interface ChangeOrderData {
     approvedAt?: Timestamp;
     driveFileId?: string;
     driveWebViewLink?: string;
+    approvalMethod?: 'link' | 'email' | 'manual';
+    approvalEvidence?: string; // e.g. "Email from anna@test.se" or "IP: 127.0.0.1"
 }
 
 const COLLECTION = 'change_orders';
@@ -41,10 +43,12 @@ export const ChangeOrderRepo = {
         return snapshot.docs.map(doc => doc.data() as ChangeOrderData);
     },
 
-    async updateStatus(id: string, status: 'approved' | 'rejected') {
+    async updateStatus(id: string, status: 'approved' | 'rejected', method: 'link' | 'email' | 'manual' = 'manual', evidence: string = '') {
         await db.collection(COLLECTION).doc(id).update({
             status,
-            approvedAt: status === 'approved' ? Timestamp.now() : undefined
+            approvedAt: status === 'approved' ? Timestamp.now() : undefined,
+            approvalMethod: method,
+            approvalEvidence: evidence
         });
     },
 

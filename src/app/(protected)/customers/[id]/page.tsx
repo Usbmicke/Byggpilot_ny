@@ -19,7 +19,7 @@ export default function CustomerDetailPage({ params }: { params: Promise<{ id: s
     // Form State
     const [formData, setFormData] = useState({
         name: '',
-        type: 'private' as 'private' | 'company',
+        type: 'private' as 'private' | 'company' | 'subcontractor',
         orgNumber: '',
         email: '',
         phone: '',
@@ -63,7 +63,7 @@ export default function CustomerDetailPage({ params }: { params: Promise<{ id: s
     };
 
     const handleDelete = async () => {
-        if (!confirm('Är du säker på att du vill ta bort denna kund? Detta går inte att ångra.') || !user) return;
+        if (!confirm('Är du säker på att du vill ta bort denna kontakt? Detta går inte att ångra.') || !user) return;
         setSaving(true);
         const res = await deleteCustomerAction(user.uid, id);
         if (res.success) {
@@ -74,7 +74,7 @@ export default function CustomerDetailPage({ params }: { params: Promise<{ id: s
         }
     };
 
-    if (loading) return <div className="p-10 text-center text-muted-foreground animate-pulse">Laddar kundinformation...</div>;
+    if (loading) return <div className="p-10 text-center text-muted-foreground animate-pulse">Laddar information...</div>;
     if (error) return <div className="p-10 text-center text-red-500">{error}</div>;
 
     return (
@@ -83,14 +83,14 @@ export default function CustomerDetailPage({ params }: { params: Promise<{ id: s
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-border pb-6">
                 <div className="flex items-center gap-4">
                     <div className={`h-16 w-16 rounded-2xl flex items-center justify-center text-2xl font-bold font-mono shadow-sm
-                        ${formData.type === 'company' ? 'bg-zinc-800 text-zinc-300' : 'bg-zinc-800 text-zinc-300'}`}>
+                        ${formData.type === 'company' ? 'bg-zinc-800 text-zinc-300' : formData.type === 'subcontractor' ? 'bg-blue-900/50 text-blue-200' : 'bg-zinc-800 text-zinc-300'}`}>
                         {formData.name.charAt(0).toUpperCase()}
                     </div>
                     <div>
                         <h1 className="text-3xl font-bold text-foreground tracking-tight">{formData.name}</h1>
                         <p className="text-muted-foreground capitalize flex items-center gap-2">
-                            {formData.type === 'company' ? <Building size={14} /> : <User size={14} />}
-                            {formData.type === 'company' ? 'Företagskund' : 'Privatkund'}
+                            {formData.type === 'company' ? <Building size={14} /> : formData.type === 'subcontractor' ? <Building size={14} /> : <User size={14} />}
+                            {formData.type === 'company' ? 'Företagskund' : formData.type === 'subcontractor' ? 'Underentreprenör' : 'Privatkund'}
                         </p>
                     </div>
                 </div>
@@ -131,24 +131,30 @@ export default function CustomerDetailPage({ params }: { params: Promise<{ id: s
                                 value={formData.name}
                                 onChange={e => setFormData({ ...formData, name: e.target.value })}
                                 className="w-full bg-zinc-900/50 border border-border rounded-lg px-4 py-2 text-foreground focus:ring-1 focus:ring-primary/50 focus:border-primary/50 outline-none transition-all"
-                                placeholder="Kundens namn"
+                                placeholder="Namn"
                             />
                         </div>
 
                         <div>
-                            <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-1.5 block">Kundtyp</label>
+                            <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-1.5 block">Typ</label>
                             <div className="flex bg-zinc-900/50 p-1 rounded-lg border border-border">
                                 <button
                                     onClick={() => setFormData({ ...formData, type: 'private' })}
-                                    className={`flex-1 py-1.5 text-sm font-medium rounded-md transition-all ${formData.type === 'private' ? 'bg-zinc-700 text-white shadow-sm' : 'text-zinc-400 hover:text-zinc-200'}`}
+                                    className={`flex-1 py-1.5 text-xs font-medium rounded-md transition-all ${formData.type === 'private' ? 'bg-zinc-700 text-white shadow-sm' : 'text-zinc-400 hover:text-zinc-200'}`}
                                 >
                                     Privat
                                 </button>
                                 <button
                                     onClick={() => setFormData({ ...formData, type: 'company' })}
-                                    className={`flex-1 py-1.5 text-sm font-medium rounded-md transition-all ${formData.type === 'company' ? 'bg-zinc-700 text-white shadow-sm' : 'text-zinc-400 hover:text-zinc-200'}`}
+                                    className={`flex-1 py-1.5 text-xs font-medium rounded-md transition-all ${formData.type === 'company' ? 'bg-zinc-700 text-white shadow-sm' : 'text-zinc-400 hover:text-zinc-200'}`}
                                 >
                                     Företag
+                                </button>
+                                <button
+                                    onClick={() => setFormData({ ...formData, type: 'subcontractor' })}
+                                    className={`flex-1 py-1.5 text-xs font-medium rounded-md transition-all ${formData.type === 'subcontractor' ? 'bg-blue-700/80 text-white shadow-sm' : 'text-zinc-400 hover:text-zinc-200'}`}
+                                >
+                                    UE/Partner
                                 </button>
                             </div>
                         </div>

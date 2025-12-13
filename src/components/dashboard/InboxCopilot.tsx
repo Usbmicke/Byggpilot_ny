@@ -74,6 +74,21 @@ export default function InboxCopilot() {
         } else if (item.intent === 'lead') {
             alert('Lead sparat (Simulerat) ✅');
             setInsights(prev => prev.filter(i => i !== item));
+        } else if (item.intent === 'ata_approval') {
+            if (!item.ataId) {
+                alert('Kunde inte hitta vilket ÄTA-ID detta gäller automatiskt. Godkänn manuellt via projektvyn.');
+                return;
+            }
+            // Import approve action (it's server action, so okay)
+            const { approveChangeOrderAction } = await import('@/app/actions');
+            const res = await approveChangeOrderAction(item.ataId, true, 'email', `Kunden svarade "${item.original.snippet}" via mail: ${item.original.from}`);
+
+            if (res.success) {
+                alert('ÄTA Godkänd! ✅\nStatus är nu uppdaterad i systemet.');
+                setInsights(prev => prev.filter(i => i !== item));
+            } else {
+                alert('Kunde inte godkänna ÄTA: ' + res.error);
+            }
         }
     };
 

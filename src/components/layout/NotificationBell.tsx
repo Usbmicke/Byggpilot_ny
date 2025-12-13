@@ -233,7 +233,7 @@ function NotificationItem({ item, onDismiss }: { item: any, onDismiss: () => voi
                 const askEmail = confirm(`Möte bokat! ✅\n\nVill du förbereda ett bekräftelsemail till ${item.original.from}?`);
                 if (askEmail) {
                     // Redirect to chat with query
-                    const prompt = `Jag har bokat möte med ${item.original.from} den ${item.calendarData.suggestedDate}. Skriv ett trevligt bekräftelsemail.`;
+                    const prompt = `Jag har bokat möte med ${item.original.from} den ${item.calendarData.suggestedDate}. Föreslå ett utkast till bekräftelsemail (Skicka inte än).`;
                     // Use window.location or router? NotificationBell uses useRouter?
                     // We need to import useRouter.
                     // Since we are in a client component, we can use window.location.href to be safe or useRouter.
@@ -246,6 +246,26 @@ function NotificationItem({ item, onDismiss }: { item: any, onDismiss: () => voi
             } else {
                 alert('Fel: ' + res.error);
             }
+        } else if (item.intent === 'lead') {
+            // LEAD ACTION: Propose Project Creation
+            const prompt = `Jag har hittat en jobbförfrågan från ${item.original.from}: '${item.summary}'. Ska jag starta ett nytt projekt? (Analysera mailet för detaljer om adress osv).`;
+
+            // Navigate to Chat
+            // Note: In Next.js client component, pushing with query param is tricky if layout doesn't re-render chat.
+            // But ChatInterface listens to useSearchParams, so pushing to current path + query should work.
+            if (window.location.search) {
+                const current = new URLSearchParams(window.location.search);
+                current.set('chatQuery', prompt);
+                window.history.pushState(null, '', `?${current.toString()}`);
+            } else {
+                window.history.pushState(null, '', `?chatQuery=${encodeURIComponent(prompt)}`);
+            }
+            // Force a small delay or event to notify Chat? 
+            // The ChatInterface poll interval or useEffect on searchParams should pick it up. 
+            // Better: user router.push logic as before, just reusing the existing draft logic.
+            window.location.href = `?chatQuery=${encodeURIComponent(prompt)}`;
+
+            onDismiss();
         }
     };
 
@@ -331,7 +351,7 @@ function NotificationItem({ item, onDismiss }: { item: any, onDismiss: () => voi
                     className="col-span-1 text-xs bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors font-semibold shadow-sm flex items-center justify-center gap-2"
                 >
                     {isBooking && <Loader2 size={12} className="animate-spin" />}
-                    {item.intent === 'meeting' ? 'Boka i kalendern' : 'Hantera'}
+                    {item.intent === 'meeting' ? 'Boka i kalendern' : item.intent === 'lead' ? 'Starta projektförslag' : 'Hantera'}
                 </button>
 
                 {/* Secondary Actions */}

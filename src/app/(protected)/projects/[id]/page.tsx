@@ -2,10 +2,11 @@
 
 import { useState, useEffect, use } from 'react';
 import { useAuth } from '@/components/AuthProvider';
-import { getProjectAction, updateProjectAction, deleteProjectAction } from '@/app/actions';
+import { getProjectAction, updateProjectAction, deleteProjectAction, getCustomersAction } from '@/app/actions';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, Folder, MapPin, User, Save, Trash, X, FileText } from 'lucide-react';
+import { ProjectTeam } from '@/components/projects/ProjectTeam';
 
 export default function ProjectDetailsPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = use(params);
@@ -13,6 +14,7 @@ export default function ProjectDetailsPage({ params }: { params: Promise<{ id: s
     const router = useRouter();
     const [loading, setLoading] = useState(true);
     const [project, setProject] = useState<any>(null);
+    const [contacts, setContacts] = useState<any[]>([]); // For Team
     const [saving, setSaving] = useState(false);
     const [msg, setMsg] = useState('');
 
@@ -22,7 +24,10 @@ export default function ProjectDetailsPage({ params }: { params: Promise<{ id: s
     const [deleting, setDeleting] = useState(false);
 
     useEffect(() => {
-        if (user && id) loadProject();
+        if (user && id) {
+            loadProject();
+            loadContacts();
+        }
     }, [user, id]);
 
     const loadProject = async () => {
@@ -35,6 +40,12 @@ export default function ProjectDetailsPage({ params }: { params: Promise<{ id: s
             setMsg('Projektet hittades inte.');
         }
         setLoading(false);
+    };
+
+    const loadContacts = async () => {
+        if (!user) return;
+        const res = await getCustomersAction(user.uid);
+        if (res.success) setContacts(res.customers || []);
     };
 
     const handleSave = async () => {
@@ -78,7 +89,7 @@ export default function ProjectDetailsPage({ params }: { params: Promise<{ id: s
     if (!project) return <div className="p-10 text-center">Projektet hittades inte. <Link href="/projects" className="underline">Tillbaka</Link></div>;
 
     return (
-        <div className="p-8 max-w-4xl mx-auto space-y-8 relative">
+        <div className="p-8 max-w-6xl mx-auto space-y-8 relative">
             {/* Delete Modal */}
             {showDeleteModal && (
                 <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
@@ -134,119 +145,137 @@ export default function ProjectDetailsPage({ params }: { params: Promise<{ id: s
                 {msg && <span className={`${msg.includes('✅') ? 'text-emerald-500' : 'text-red-500'} font-medium animate-in fade-in`}>{msg}</span>}
             </div>
 
-            <div className="bg-card rounded-xl shadow-lg border border-border overflow-hidden">
-                <div className="h-32 bg-primary/5 flex items-end p-6 border-b border-border">
-                    <div className="flex items-center gap-4 translate-y-8">
-                        <div className="w-20 h-20 rounded-xl bg-card shadow-md flex items-center justify-center text-3xl font-bold text-primary border-4 border-card">
-                            {project.name.charAt(0).toUpperCase()}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                {/* Left Column: Main Info */}
+                <div className="lg:col-span-2 space-y-6">
+                    <div className="bg-card rounded-xl shadow-lg border border-border overflow-hidden">
+                        <div className="h-32 bg-primary/5 flex items-end p-6 border-b border-border">
+                            <div className="flex items-center gap-4 translate-y-8">
+                                <div className="w-20 h-20 rounded-xl bg-card shadow-md flex items-center justify-center text-3xl font-bold text-primary border-4 border-card">
+                                    {project.name.charAt(0).toUpperCase()}
+                                </div>
+                                <div className="mb-6">
+                                    <h1 className="text-2xl font-bold text-foreground">{project.name}</h1>
+                                    <span className={`text-xs px-2 py-0.5 rounded-full border ${project.status === 'active' ? 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20' : 'bg-secondary text-muted-foreground border-border'}`}>
+                                        {project.status === 'active' ? 'Pågående' : project.status}
+                                    </span>
+                                </div>
+                            </div>
                         </div>
-                        <div className="mb-6">
-                            <h1 className="text-2xl font-bold text-foreground">{project.name}</h1>
-                            <span className={`text-xs px-2 py-0.5 rounded-full border ${project.status === 'active' ? 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20' : 'bg-secondary text-muted-foreground border-border'}`}>
-                                {project.status === 'active' ? 'Pågående' : project.status}
-                            </span>
+
+                        <div className="p-8 pt-12 space-y-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="space-y-4">
+                                    <label className="block text-sm font-medium text-muted-foreground">Projektnamn</label>
+                                    <div className="relative">
+                                        <Folder className="absolute left-3 top-3 text-muted-foreground" size={18} />
+                                        <input
+                                            type="text"
+                                            className="input-field w-full pl-10"
+                                            value={project.name}
+                                            onChange={e => setProject({ ...project, name: e.target.value })}
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="space-y-4">
+                                    <label className="block text-sm font-medium text-muted-foreground">Projektnummer</label>
+                                    <div className="relative">
+                                        <span className="absolute left-3 top-2.5 text-muted-foreground font-mono text-sm">#</span>
+                                        <input
+                                            type="number"
+                                            className="input-field w-full pl-8 font-mono"
+                                            value={project.projectNumber || ''}
+                                            onChange={e => setProject({ ...project, projectNumber: parseInt(e.target.value) || 0 })}
+                                            placeholder="3000"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="space-y-4">
+                                    <label className="block text-sm font-medium text-muted-foreground">Status</label>
+                                    <select
+                                        className="input-field w-full appearance-none"
+                                        value={project.status}
+                                        onChange={e => setProject({ ...project, status: e.target.value })}
+                                    >
+                                        <option value="active">Pågående</option>
+                                        <option value="completed">Avslutad</option>
+                                        <option value="paused">Pausad</option>
+                                    </select>
+                                </div>
+
+                                <div className="space-y-4">
+                                    <label className="block text-sm font-medium text-muted-foreground">Adress</label>
+                                    <div className="relative">
+                                        <MapPin className="absolute left-3 top-3 text-muted-foreground" size={18} />
+                                        <input
+                                            type="text"
+                                            className="input-field w-full pl-10"
+                                            value={project.address || ''}
+                                            onChange={e => setProject({ ...project, address: e.target.value })}
+                                            placeholder="Adress"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="space-y-4">
+                                    <label className="block text-sm font-medium text-muted-foreground">Kund</label>
+                                    <div className="relative">
+                                        <User className="absolute left-3 top-3 text-muted-foreground" size={18} />
+                                        <input
+                                            type="text"
+                                            className="input-field w-full pl-10 disabled:opacity-60"
+                                            value={project.customerName || ''}
+                                            disabled
+                                            title="Kund kan inte ändras här än"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="space-y-4 md:col-span-2">
+                                    <label className="block text-sm font-medium text-muted-foreground">Beskrivning</label>
+                                    <div className="relative">
+                                        <FileText className="absolute left-3 top-3 text-muted-foreground" size={18} />
+                                        <textarea
+                                            className="input-field w-full pl-10 resize-none min-h-[100px]"
+                                            value={project.description || ''}
+                                            onChange={e => setProject({ ...project, description: e.target.value })}
+                                            placeholder="Beskrivning av projektet..."
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="pt-6 border-t border-border flex justify-end gap-3">
+                                <button
+                                    onClick={() => setShowDeleteModal(true)}
+                                    className="px-4 py-2 text-sm text-red-500 hover:bg-red-500/10 rounded-lg transition-colors flex items-center gap-2"
+                                >
+                                    <Trash size={18} /> Ta bort
+                                </button>
+                                <button
+                                    onClick={handleSave}
+                                    disabled={saving}
+                                    className="btn-primary flex items-center gap-2"
+                                >
+                                    {saving ? 'Sparar...' : <><Save size={18} /> Spara Ändringar</>}
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="p-8 pt-12 space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="space-y-4">
-                            <label className="block text-sm font-medium text-muted-foreground">Projektnamn</label>
-                            <div className="relative">
-                                <Folder className="absolute left-3 top-3 text-muted-foreground" size={18} />
-                                <input
-                                    type="text"
-                                    className="input-field w-full pl-10"
-                                    value={project.name}
-                                    onChange={e => setProject({ ...project, name: e.target.value })}
-                                />
-                            </div>
-                        </div>
-
-                        <div className="space-y-4">
-                            <label className="block text-sm font-medium text-muted-foreground">Projektnummer</label>
-                            <div className="relative">
-                                <span className="absolute left-3 top-2.5 text-muted-foreground font-mono text-sm">#</span>
-                                <input
-                                    type="number"
-                                    className="input-field w-full pl-8 font-mono"
-                                    value={project.projectNumber || ''}
-                                    onChange={e => setProject({ ...project, projectNumber: parseInt(e.target.value) || 0 })}
-                                    placeholder="3000"
-                                />
-                            </div>
-                        </div>
-
-                        <div className="space-y-4">
-                            <label className="block text-sm font-medium text-muted-foreground">Status</label>
-                            <select
-                                className="input-field w-full appearance-none"
-                                value={project.status}
-                                onChange={e => setProject({ ...project, status: e.target.value })}
-                            >
-                                <option value="active">Pågående</option>
-                                <option value="completed">Avslutad</option>
-                                <option value="paused">Pausad</option>
-                            </select>
-                        </div>
-
-                        <div className="space-y-4">
-                            <label className="block text-sm font-medium text-muted-foreground">Adress</label>
-                            <div className="relative">
-                                <MapPin className="absolute left-3 top-3 text-muted-foreground" size={18} />
-                                <input
-                                    type="text"
-                                    className="input-field w-full pl-10"
-                                    value={project.address || ''}
-                                    onChange={e => setProject({ ...project, address: e.target.value })}
-                                    placeholder="Adress"
-                                />
-                            </div>
-                        </div>
-
-                        <div className="space-y-4">
-                            <label className="block text-sm font-medium text-muted-foreground">Kund</label>
-                            <div className="relative">
-                                <User className="absolute left-3 top-3 text-muted-foreground" size={18} />
-                                <input
-                                    type="text"
-                                    className="input-field w-full pl-10 disabled:opacity-60"
-                                    value={project.customerName || ''}
-                                    disabled
-                                    title="Kund kan inte ändras här än"
-                                />
-                            </div>
-                        </div>
-
-                        <div className="space-y-4 md:col-span-2">
-                            <label className="block text-sm font-medium text-muted-foreground">Beskrivning</label>
-                            <div className="relative">
-                                <FileText className="absolute left-3 top-3 text-muted-foreground" size={18} />
-                                <textarea
-                                    className="input-field w-full pl-10 resize-none min-h-[100px]"
-                                    value={project.description || ''}
-                                    onChange={e => setProject({ ...project, description: e.target.value })}
-                                    placeholder="Beskrivning av projektet..."
-                                />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="pt-6 border-t border-border flex justify-end gap-3">
-                        <button
-                            onClick={() => setShowDeleteModal(true)}
-                            className="px-4 py-2 text-sm text-red-500 hover:bg-red-500/10 rounded-lg transition-colors flex items-center gap-2"
-                        >
-                            <Trash size={18} /> Ta bort
-                        </button>
-                        <button
-                            onClick={handleSave}
-                            disabled={saving}
-                            className="btn-primary flex items-center gap-2"
-                        >
-                            {saving ? 'Sparar...' : <><Save size={18} /> Spara Ändringar</>}
-                        </button>
+                {/* Right Column: Settings & Team */}
+                <div className="space-y-6">
+                    {/* Team Section */}
+                    <div className="bg-card rounded-xl shadow-lg border border-border p-6">
+                        <ProjectTeam
+                            projectId={project.id}
+                            initialTeam={project.team || []}
+                            contacts={contacts}
+                            onUpdate={loadProject} // Refresh to ensure sync
+                        />
                     </div>
                 </div>
             </div>
