@@ -2,11 +2,11 @@
 
 import { useState, useRef, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { chatAction, approveChangeOrderAction } from '@/app/actions';
+import { chatAction, approveChangeOrderAction, syncChecklistAction } from '@/app/actions';
 import { processVoiceCommandAction } from '@/app/actions/voice';
 import { useAuth } from '@/components/AuthProvider';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { Mic, Square, Send, X, MessageSquare, FileText, Check, Ban, ChevronUp, ChevronDown, Sparkles } from 'lucide-react';
+import { Mic, Square, Send, X, MessageSquare, FileText, Check, Ban, ChevronUp, ChevronDown, Sparkles, ListChecks } from 'lucide-react';
 
 interface Message {
     role: 'user' | 'model' | 'system';
@@ -103,6 +103,7 @@ export default function ChatInterface() {
         };
     };
 
+
     const handleApproval = async (draftId: string, approved: boolean) => {
         setMessages(prev => prev.map(msg => {
             if (msg.draft && msg.draft.id === draftId) {
@@ -134,6 +135,26 @@ export default function ChatInterface() {
             setIsLoading(false);
         }
     };
+
+
+    const handleTaskSync = async (title: string, items: string[]) => {
+        setIsLoading(true);
+        try {
+            const accessToken = localStorage.getItem('google_access_token') || undefined;
+            const res = await syncChecklistAction(title, items, undefined, accessToken);
+            if (res.success) {
+                setMessages(prev => [...prev, { role: 'model', content: `✅ ${res.message}` }]);
+            } else {
+                setMessages(prev => [...prev, { role: 'model', content: `❌ Misslyckades: ${res.message}` }]);
+            }
+        } catch (e) {
+            setMessages(prev => [...prev, { role: 'model', content: `❌ Fel uppstod.` }]);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+
 
     // Auto-Prompt from URL
     const searchParams = useSearchParams();
@@ -203,7 +224,7 @@ export default function ChatInterface() {
                                                 )
                                             }}
                                         >
-                                            {m.content.replace(/\[OPTIONS:.*?\]/g, '') /* Hide Options Tag */}
+                                            {m.content.replace(/\[OPTIONS:.*?\]/g, '').replace(/\[CHECKLIST_DRAFT:.*?\]/g, '') /* Hide Tags */}
                                         </ReactMarkdown>
                                     </div>
                                     : m.content}
@@ -224,7 +245,38 @@ export default function ChatInterface() {
                                 </div>
                             )}
 
-                            {/* ÄTA Draft Rendering logic... */}
+
+                            {/* Checklist Draft Rendering */}
+                            {m.content.match(/\[CHECKLIST_DRAFT:(.*?)\]/) && (
+                                <div className="mt-2 w-[90%] bg-zinc-900 border border-blue-500/30 rounded-xl p-4 shadow-lg">
+                                    <div className="flex items-center gap-2 mb-3 text-blue-500 font-bold text-xs uppercase tracking-wider">
+                                        <ListChecks size={14} /> <span>Förslag: Google Tasks</span>
+                                    </div>
+                                    <div className="mb-4">
+                                        <h4 className="font-bold text-zinc-100 mb-2 text-sm">{m.content.match(/\[CHECKLIST_DRAFT:(.*?)\]/)![1].split('|')[0].trim()}</h4>
+                                        <ul className="space-y-2">
+                                            {m.content.match(/\[CHECKLIST_DRAFT:(.*?)\]/)![1].split('|').slice(1).map((item, i) => (
+                                                <li key={i} className="flex items-start gap-2 text-sm text-zinc-400">
+                                                    <div className="mt-1 min-w-[12px] h-[12px] border border-zinc-600 rounded-sm"></div>
+                                                    <span>{item.trim()}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <button
+                                        onClick={() => {
+                                            const raw = m.content.match(/\[CHECKLIST_DRAFT:(.*?)\]/)![1];
+                                            const parts = raw.split('|').map(s => s.trim());
+                                            handleTaskSync(parts[0], parts.slice(1));
+                                        }}
+                                        className="w-full bg-blue-600/20 hover:bg-blue-600/40 text-blue-400 border border-blue-500/50 py-2.5 rounded-lg text-sm font-bold transition-all shadow-sm flex items-center justify-center gap-2"
+                                    >
+                                        <ListChecks size={16} />
+                                        Spara till Mina Uppgifter
+                                    </button>
+                                </div>
+                            )}
+
                             {m.draft && (
                                 <div className="mt-2 w-[90%] bg-zinc-900 border border-amber-900/40 rounded-xl p-4 shadow-lg">
                                     <div className="flex items-center gap-2 mb-3 text-amber-500 font-medium text-xs uppercase tracking-wider">

@@ -1,6 +1,7 @@
 'use server';
 
 import { ai } from '@/lib/genkit';
+import { runFlow } from '@genkit-ai/flow';
 import { chatFlow } from '@/lib/genkit/flows/chat';
 import { offerFlow } from '@/lib/genkit/flows/offer';
 import { emailAnalysisFlow } from '@/lib/genkit/flows/email-analysis';
@@ -11,6 +12,9 @@ import { CalendarService } from '@/lib/google/calendar';
 import { db } from '@/lib/dal/server';
 import { CompanyRepo } from '@/lib/dal/company.repo';
 import { UserRepo } from '@/lib/dal/user.repo';
+
+export * from '@/app/actions/tasks';
+
 
 // --- AI GENERATION ---
 export async function generateTextAction(prompt: string) {
@@ -86,7 +90,7 @@ export async function createCompanyDriveFolderAction(accessToken: string, compan
 export async function chatAction(messages: any[], uid?: string, accessToken?: string) {
   try {
     console.log('💬 Chat Action Triggered', uid ? `for user ${uid}` : '(no user)', accessToken ? '[Has Access Token]' : '[MISSING Access Token]');
-    const response = await chatFlow({ messages, uid, accessToken });
+    const response = await runFlow(chatFlow, { messages, uid, accessToken });
     return { success: true, text: response };
   } catch (error: any) {
     console.error('❌ Chat Action Failed:', error);

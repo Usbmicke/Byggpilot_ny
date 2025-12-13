@@ -3,6 +3,7 @@
 import { useAuth } from '@/components/AuthProvider';
 import ProjectList from '@/components/dashboard/ProjectList';
 import QuickLog from '@/components/dashboard/QuickLog';
+import TasksWidget from '@/components/dashboard/TasksWidget';
 
 
 export default function DashboardPage() {
@@ -42,11 +43,8 @@ export default function DashboardPage() {
                     {/* Placeholder Widgets */}
                     {/* (Weather is now on Project Cards as requested) */}
 
-                    <div className="bg-card rounded-xl shadow-lg border border-border/50 p-6 flex flex-col items-center justify-center text-muted-foreground h-64 group hover:border-primary/50 transition-colors cursor-pointer">
-                        <div className="p-3 bg-background rounded-full mb-3 group-hover:bg-primary/10 transition-colors">
-                            <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
-                        </div>
-                        <span className="text-sm font-medium">Google Tasks</span>
+                    <div className="h-96">
+                        <TasksWidget />
                     </div>
                 </div>
             </div>

@@ -8,7 +8,7 @@ let _authClient: any = null;
 let _driveService: any = null;
 
 // --- CENTRAL AUTH FACTORY ---
-const getAuthClient = async (accessToken?: string) => {
+export const getAuthClient = async (accessToken?: string) => {
     // 1. If Access Token provided (User Context), return ephemeral OAuth2 client
     if (accessToken) {
         const oauth2 = new google.auth.OAuth2();
@@ -33,7 +33,8 @@ const getAuthClient = async (accessToken?: string) => {
                 [
                     'https://www.googleapis.com/auth/drive',
                     'https://www.googleapis.com/auth/documents', // Added for Docs support
-                    'https://www.googleapis.com/auth/spreadsheets' // Future proof
+                    'https://www.googleapis.com/auth/spreadsheets', // Future proof
+                    'https://www.googleapis.com/auth/tasks' // Google Tasks
                 ]
             );
 
@@ -53,7 +54,7 @@ const getAuthClient = async (accessToken?: string) => {
     console.log("⚠️ [drive.ts] Falling back to default GoogleAuth...");
     try {
         const auth = new GoogleAuth({
-            scopes: ['https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/documents']
+            scopes: ['https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/documents', 'https://www.googleapis.com/auth/tasks']
         });
         _authClient = auth; // GoogleAuth is an auth client factory but can be passed to google APIs
         return _authClient;

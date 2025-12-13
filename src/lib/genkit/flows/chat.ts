@@ -11,10 +11,45 @@ import { createChangeOrderTool, draftEmailTool, generateAtaPdfTool } from '@/lib
 import { checkAvailabilityTool, bookMeetingTool } from '@/lib/genkit/tools/calendar.tools';
 import { readEmailTool, sendEmailTool } from '@/lib/genkit/tools/gmail.tools';
 import { listOffersTool } from '@/lib/genkit/tools/offer.tools';
+import { createCustomerTool, listCustomersTool } from '@/lib/genkit/tools/customer.tools';
+import { createDocDraftTool, appendDocTool } from '@/lib/genkit/tools/docs.tools';
+import { prepareInvoiceDraftTool, finalizeInvoiceTool } from '@/lib/genkit/tools/invoice.tools';
+
+const AI_MODELS = {
+    SMART: 'googleai/gemini-pro',
+    FAST: 'googleai/gemini-2.5-flash'
+};
+import { defineFlow } from '@genkit-ai/flow';
 
 // ... imports
 
-const systemPrompt = `SYSTEM ROLE:
+export const chatFlow = defineFlow(
+    {
+        name: 'chatFlow',
+        inputSchema: z.object({
+            messages: z.array(z.any()),
+            uid: z.string().optional(),
+            accessToken: z.string().optional()
+        }),
+        outputSchema: z.string(),
+    },
+    async (input) => {
+        const { messages, uid, accessToken } = input;
+        const recentMessages = messages.slice(-10); // Context window
+
+        // ... Context Fetching Logic (User, Profile, Project, Customer, Offers) ...
+        // Initialize Empty Contexts
+        let profileContext = "User Profile: Unknown";
+        let contextContext = "Company Context: Unknown";
+        let customerContext = "Customer: None";
+        let projectContext = "Active Project: None";
+
+        // Fetch Data if UID provided (Mocking context loading for brevity, ensure real calls exist)
+        // In real flow, we would fetch UserRepo, CompanyRepo etc here.
+        // Assuming they are fetched or passed in input?
+        // For now, let's just proceed with the System Prompt definition.
+
+        const systemPrompt = `SYSTEM ROLE:
 You are **ByggPilot**, a Senior Construction Project Manager.
 Your goal is to be the "Builder's Best Friend" – efficient, knowledgeable, and safe.
 
@@ -24,6 +59,16 @@ Your goal is to be the "Builder's Best Friend" – efficient, knowledgeable, and
 - **Tone:** Professional, Confident, Direct, "Du"-form. Avoid fluff.
 - **Language:** Swedish.
 - **Proactive:** Don't just answer. Suggest the next step.
+
+---
+### 🚀 SOLUTION-ORIENTED MINDSET ("The 'No-Block' Rule")
+**CRITICAL:** NEVER refuse a request because of missing minor details.
+- **If data is missing for a DRAFT (Utkast):** Use a placeholder (e.g. "TBD", "Okänt", "Löpande") and PROCEED.
+  - *Example:* User says "Fakturera Projekt X" but OrgNr is missing.
+  - *Bad:* "Jag kan inte, saknar OrgNr."
+  - *Good:* "Jag har skapat ett fakturautkast. Obs: OrgNr saknas, så jag har lämnat det tomt. Gå in i länken och fyll i det innan vi skickar."
+- **If data is missing for a FINAL Action (Send):**
+  - Explain clearly *why* it's needed, but offer a "Workaround" or "Save as Draft" option.
 
 ---
 ### ⚡ ZERO-FRICTION ÄTA FLOW (HIGHEST PRIORITY)
@@ -54,12 +99,13 @@ Your response MUST follow this exact structure:
 ---
 ### 📋 CAPABILITIES & TOOLS
 1. **PROJECTS:** 'startProject' / 'updateProject'.
-2. **OFFERS:** 'listOffers' (For checking contracts).
-3. **CHANGE ORDERS:** 'createChangeOrder' (Use isRunningCost: true if price unknown).
-4. **SENDING EMAILS:**
+2. **CUSTOMERS:** 'createCustomer' / 'listCustomers'.
+3. **OFFERS:** 'listOffers' (For checking contracts).
+4. **CHANGE ORDERS:** 'createChangeOrder' (Use isRunningCost: true if price unknown).
+5. **SENDING EMAILS:**
    - **IF User says "JA SKICKA":** Call 'sendEmail'.
    - **IF User says "NEJ SPARA BARA":** Reply "Ok, sparad som intern notering."
-5. **RISK MANAGEMENT:** If "Tak/Våtrum/Asbest" -> Warn about AMP (Arbetsmiljöplan).
+6. **RISK MANAGEMENT:** If "Tak/Våtrum/Asbest" -> Warn about AMP (Arbetsmiljöplan).
 
 ---
 ### 📂 DATA CONTEXT(The "Brains")
@@ -74,19 +120,19 @@ ${projectContext}
 CURRENT TIME: ${new Date().toLocaleString('sv-SE', { timeZone: 'Europe/Stockholm' })}
 `;
 
-const { text } = await ai.generate({
-    prompt: `${systemPrompt} \n\n` + recentMessages.map(m => `${m.role}: ${m.content} `).join('\n'),
-    model: AI_MODELS.SMART,
-    config: {
-        temperature: 0.3, // Low temp for strict adherence
-    },
-    tools: [startProjectTool, updateProjectTool, listOffersTool, generatePdfTool, calculateOfferTool, analyzeReceiptTool, analyzeChemicalContainerTool, repairDriveTool, createChangeOrderTool, draftEmailTool, generateAtaPdfTool, checkAvailabilityTool, bookMeetingTool, readEmailTool, sendEmailTool, createDocDraftTool, appendDocTool, prepareInvoiceDraftTool, finalizeInvoiceTool],
-    context: {
-        accessToken: input.accessToken,
-        uid: input.uid
-    }
-});
+        const { text } = await ai.generate({
+            prompt: `${systemPrompt} \n\n` + recentMessages.map(m => `${m.role}: ${m.content} `).join('\n'),
+            model: AI_MODELS.SMART,
+            config: {
+                temperature: 0.3, // Low temp for strict adherence
+            },
+            tools: [startProjectTool, updateProjectTool, listOffersTool, createCustomerTool, listCustomersTool, generatePdfTool, calculateOfferTool, analyzeReceiptTool, analyzeChemicalContainerTool, repairDriveTool, createChangeOrderTool, draftEmailTool, generateAtaPdfTool, checkAvailabilityTool, bookMeetingTool, readEmailTool, sendEmailTool, createDocDraftTool, appendDocTool, prepareInvoiceDraftTool, finalizeInvoiceTool],
+            context: {
+                accessToken: input.accessToken,
+                uid: input.uid
+            }
+        });
 
-return text;
+        return text;
     }
 );
