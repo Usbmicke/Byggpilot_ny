@@ -13,7 +13,8 @@ import { db } from '@/lib/dal/server';
 import { CompanyRepo } from '@/lib/dal/company.repo';
 import { UserRepo } from '@/lib/dal/user.repo';
 
-export * from '@/app/actions/tasks';
+import { syncChecklistAction, getTasksAction } from '@/app/actions/tasks';
+export { syncChecklistAction, getTasksAction };
 
 
 // --- AI GENERATION ---
@@ -87,14 +88,69 @@ export async function createCompanyDriveFolderAction(accessToken: string, compan
 }
 
 // --- CHAT ---
+// --- CHAT ---
 export async function chatAction(messages: any[], uid?: string, accessToken?: string) {
   try {
-    console.log('💬 Chat Action Triggered', uid ? `for user ${uid}` : '(no user)', accessToken ? '[Has Access Token]' : '[MISSING Access Token]');
-    const response = await runFlow(chatFlow, { messages, uid, accessToken });
-    return { success: true, text: response };
+    console.log('💬 Chat Action Triggered', uid ? `for user ${uid}` : '(no user)');
+
+    // 1. Persistence Setup
+    let sessionId = null;
+    let history: any[] = [];
+
+    if (uid) {
+      const { ChatRepo } = await import('@/lib/dal/chat.repo');
+      const session = await ChatRepo.getOrCreateActiveSession(uid);
+      sessionId = session.id;
+
+      // 2. Add Newest User Message (The last one in the Client array)
+      const lastMsg = messages[messages.length - 1];
+      if (lastMsg && lastMsg.role === 'user') {
+        await ChatRepo.addMessage(session.id, 'user', lastMsg.content);
+      }
+
+      // 3. Load DB History for Context (Limit ~20 for AI speed)
+      const dbMsgs = await ChatRepo.getHistory(session.id, 20);
+      history = dbMsgs.map(m => ({ role: m.role, content: m.content }));
+    } else {
+      // Fallback for anonymous (shouldn't happen in protected app)
+      history = messages.slice(-10);
+    }
+
+    // 4. Run AI
+    const response = await runFlow(chatFlow, { messages: history, uid, accessToken });
+
+    // 5. Save AI Response
+    if (uid && sessionId) {
+      const { ChatRepo } = await import('@/lib/dal/chat.repo');
+      // Check if response has structured data (drafts)? Currently chatFlow returns string text mostly.
+      // If we want to capture tool outputs we need to refactor flow return type. 
+      // For now, chatFlow returns "text".
+      await ChatRepo.addMessage(sessionId, 'model', response);
+    }
+
+    return { success: true, text: response, sessionId };
   } catch (error: any) {
     console.error('❌ Chat Action Failed:', error);
     return { success: false, error: error.message || 'Unknown error' };
+  }
+}
+
+export async function loadChatHistoryAction(uid: string) {
+  try {
+    const { ChatRepo } = await import('@/lib/dal/chat.repo');
+    const session = await ChatRepo.getOrCreateActiveSession(uid);
+    const msgs = await ChatRepo.getHistory(session.id, 50); // initial load limit
+
+    // Map to UI format
+    const uiMsgs = msgs.map(m => ({
+      role: m.role,
+      content: m.content,
+      draft: m.draft
+    }));
+
+    return { success: true, messages: uiMsgs, sessionId: session.id };
+  } catch (e: any) {
+    return { success: false, error: e.message };
   }
 }
 

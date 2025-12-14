@@ -32,11 +32,31 @@ export default function ChatInterface() {
 
     const mediaRecorderRef = useRef<MediaRecorder | null>(null);
     const audioChunksRef = useRef<Blob[]>([]);
+    const [sessionId, setSessionId] = useState<string | null>(null);
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
+
+    // Load History on Mount
+    useEffect(() => {
+        if (!user) return;
+
+        setIsLoading(true);
+        import('@/app/actions').then(({ loadChatHistoryAction }) => {
+            loadChatHistoryAction(user.uid).then(res => {
+                if (res.success && res.messages) {
+                    // Force TS cast if needed or ensure types match
+                    setMessages(res.messages as any[]);
+                    setSessionId(res.sessionId || null);
+                    // If we have history, user might want to see it? 
+                    // Or keep closed until interaction? Let's arguably keep closed to not annoy.
+                }
+                setIsLoading(false);
+            });
+        });
+    }, [user]);
 
     useEffect(() => {
         if (isExpanded) scrollToBottom();

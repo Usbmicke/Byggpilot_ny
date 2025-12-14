@@ -128,6 +128,29 @@ export function ProjectCard({ project, variant = 'grid' }: ProjectCardProps) {
         }
     };
 
+    // --- TRAFFIC LIGHT LOGIC ---
+    // 1. Red: Active Risks Detected
+    const hasRisks = activeRisks.length > 0 || !!weatherRisk;
+
+    // 2. Yellow: "Waiting" states (e.g. Draft ÄTA, Pending Offer - implied by data or status)
+    // For MVP, if status is 'onboarding' or 'pending', we show Yellow. 
+    // Ideally we check for draft_atas count if available in project object.
+    const isPending = project.status === 'onboarding' || project.status === 'pending';
+
+    // 3. Green: Active and Risk Free
+    const isGreen = !hasRisks && !isPending;
+
+    let statusColor = "bg-emerald-500";
+    let statusText = "Allt rullar";
+
+    if (hasRisks) {
+        statusColor = "bg-red-500 animate-pulse";
+        statusText = "Åtgärd Krävs";
+    } else if (isPending) {
+        statusColor = "bg-amber-400";
+        statusText = "Väntar / Utkast";
+    }
+
     return (
         <>
             {isRiskModalOpen && (
@@ -149,9 +172,8 @@ export function ProjectCard({ project, variant = 'grid' }: ProjectCardProps) {
                     aria-label={`Öppna ${project.name}`}
                 />
 
-                {/* Risk Indicator (Positioned absolute top-right) */}
-                {/* Must be z-20 to sit above the overlay link */}
-                <div className="relative z-20 pointer-events-auto">
+                {/* Risk Indicator (Functional / Logic Container) */}
+                <div className="absolute top-0 right-0 z-20 pointer-events-auto">
                     <ProjectRiskIndicator
                         projectId={project.id}
                         projectName={project.name}
@@ -163,42 +185,56 @@ export function ProjectCard({ project, variant = 'grid' }: ProjectCardProps) {
                     />
                 </div>
 
-                {/* Color/Icon Sidebar */}
-                <div className={`${isHorizontal ? 'w-full sm:w-24 border-b sm:border-b-0 sm:border-r' : 'h-24 border-b'} ${theme.bg} ${theme.border} flex items-center justify-center shrink-0`}>
-                    <div className={`h-12 w-12 rounded-xl bg-white/70 shadow-sm flex items-center justify-center text-xl font-bold ${theme.text}`}>
+                {/* Color/Icon Sidebar (Now with Traffic Light Strip) */}
+                <div className={`${isHorizontal ? 'w-full sm:w-24 border-b sm:border-b-0 sm:border-r' : 'h-24 border-b'} ${theme.bg} ${theme.border} flex flex-col items-center justify-center shrink-0 relative overflow-hidden`}>
+
+                    {/* Traffic Light Bar */}
+                    <div className={`absolute top-0 left-0 w-1.5 h-full ${statusColor}`} title={`Status: ${statusText}`} />
+
+                    <div className={`h-12 w-12 rounded-xl bg-white/70 shadow-sm flex items-center justify-center text-xl font-bold ${theme.text} z-10`}>
                         {(project.customerName || project.name).charAt(0).toUpperCase()}
                     </div>
                 </div>
 
                 {/* Content */}
-                <div className={`p-5 flex-1 flex ${isHorizontal ? 'flex-col justify-between' : 'flex-col'}`}>
+                <div className={`p-4 pl-5 flex-1 flex ${isHorizontal ? 'flex-col justify-between' : 'flex-col'}`}>
                     <div>
-                        <div className="flex justify-between items-start mb-2 pr-20"> {/* pr-20 to avoid overlap with Risk Badge */}
+                        <div className="flex justify-between items-start mb-1 pr-20">
                             <div>
                                 <h3 className="font-semibold text-foreground text-lg group-hover:text-primary transition-colors line-clamp-1">
                                     {project.name}
                                 </h3>
-                                {project.customerName && (
-                                    <p className={`text-xs font-medium ${theme.text} opacity-80 mb-1`}>
-                                        {project.customerName}
-                                    </p>
-                                )}
+
+                                <div className="flex items-center gap-2 mt-0.5">
+                                    {/* Traffic Light Dot (Visible Info) */}
+                                    <div className={`w-2.5 h-2.5 rounded-full ${statusColor}`} />
+                                    <span className="text-xs font-medium text-muted-foreground">{statusText}</span>
+
+                                    {project.projectNumber && (
+                                        <span className="text-[10px] font-mono opacity-50 ml-1">#{project.projectNumber}</span>
+                                    )}
+                                </div>
                             </div>
                         </div>
 
-                        <p className="text-sm text-muted-foreground mb-4 line-clamp-2 min-h-[2.5em]">{project.description || 'Ingen beskrivning'}</p>
+                        <div className="flex items-center gap-2 mt-2">
+                            {project.customerName && (
+                                <Link
+                                    href={project.customerId ? `/customers/${project.customerId}` : '#'}
+                                    className={`relative z-20 flex items-center gap-1.5 text-xs font-medium ${theme.text} bg-white/50 px-2 py-1 rounded-md border border-black/5 hover:bg-white hover:shadow-sm transition-all`}
+                                    onClick={(e) => {
+                                        if (!project.customerId) e.preventDefault();
+                                    }}
+                                >
+                                    <span className="capitalize">{project.customerName}</span>
+                                    {project.customerId && <span className="text-[10px] opacity-50 group-hover/link:opacity-100">✏️</span>}
+                                </Link>
+                            )}
+                        </div>
                     </div>
 
-                    <div className={`flex flex-wrap gap-x-4 gap-y-2 text-xs text-muted-foreground items-end relative z-20 pointer-events-auto ${isHorizontal ? 'mt-0' : 'mt-auto'}`}>
-                        <span className={`px-2 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider ${project.status === 'active' ? 'bg-emerald-100 text-emerald-600' : 'bg-secondary text-muted-foreground'}`}>
-                            {project.status === 'active' ? 'Pågående' : project.status}
-                        </span>
-
-                        {project.projectNumber && (
-                            <span className="font-mono opacity-70">#{project.projectNumber}</span>
-                        )}
-
-                        <div className="flex gap-2 items-center ml-auto mt-2 sm:mt-0">
+                    <div className={`flex flex-wrap gap-x-4 gap-y-2 items-end relative z-20 pointer-events-auto mt-4`}>
+                        <div className="flex gap-2 items-center ml-auto">
                             <Link
                                 href={`/projects/${project.id}/ata`}
                                 onClick={(e) => e.stopPropagation()}

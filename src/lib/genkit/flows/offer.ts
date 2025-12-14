@@ -29,32 +29,39 @@ export const offerFlow = ai.defineFlow(
         outputSchema: OfferOutputSchema,
     },
     async (input) => {
+        const { PriceService } = await import('@/lib/services/price.service');
+
         const prompt = `
         You are an expert construction estimator (Byggmästare) in Sweden.
-        Create a professional offer based on these notes:
+        Based on these notes:
         Project: "${input.projectTitle}"
         Notes: "${input.notes}"
 
-        1. Break down the work into logical line items (Material, Labor/Arbete, ROT if applicable).
-        2. Estimate realistic prices in SEK (Swedish Krona).
-        3. Write a professional Intro and Closing text in Swedish.
+        1. Break down work into logical line items (Arbete, Material, etc).
+        2. ESTIMATE QUANTITIES CAREFULLY.
+        3. IGNORE PRICES. Set 'unitPrice' to 0. The system will price them.
         4. "unit" should be Swedish (tim, st, m2, lpm).
-        
-        Return ONLY valid JSON matching the schema.
+        5. Write professional Intro and Closing texts.
+
+        Return valid JSON.
         `;
-
-
-
-        // ... schemas ...
 
         const { output } = await ai.generate({
             model: AI_MODELS.SMART,
-            config: { temperature: AI_CONFIG.temperature.creative }, // Creative for writing sales text
+            config: { temperature: AI_CONFIG.temperature.creative },
             prompt: prompt,
             output: { schema: OfferOutputSchema }
         });
 
         if (!output) throw new Error('AI failed to generate offer structure');
-        return output;
+
+        // --- SAFE PRICING ENGINE ---
+        // Overwrite AI prices with Standard Price Book
+        const pricedItems = PriceService.priceItems(output.items);
+
+        return {
+            ...output,
+            items: pricedItems
+        };
     }
 );

@@ -83,24 +83,129 @@ export const InvoiceService = {
     /**
      * Finalizes the Invoice: Locks PDF, Emails Customer, Updates Project & ÄTAs.
      */
+    /**
+     * Finalizes the Invoice: Locks PDF, Emails Customer, Updates Project & ÄTAs.
+     * NOW USES NATIVE PDF GENERATION (PdfService)
+     */
     async finalizeInvoice(input: {
         projectId: string,
-        draftDocId: string,
+        draftDocId?: string, // Optional now, we use DB data
         customerEmail: string,
         emailSubject: string,
         emailBody: string
     }, accessToken?: string) {
 
         console.log(`🔒 [InvoiceService] Finalizing Project: ${input.projectId}`);
+        const { PdfService } = await import('@/lib/services/pdf.service');
+        const { ProjectRepo } = await import('@/lib/dal/project.repo');
+        const { UserRepo } = await import('@/lib/dal/user.repo');
+        const { CompanyRepo } = await import('@/lib/dal/company.repo');
 
-        // 1. Export PDF
-        const { buffer } = await GoogleDriveService.exportPdf(input.draftDocId, accessToken);
+        // 1. Gather Data (Source of Truth = DB)
+        const projectData = await InvoiceRepo.collectProjectData(input.projectId);
+
+        // Fetch Contractor (Company) Info
+        const project = await ProjectRepo.get(input.projectId);
+        if (!project) throw new Error("Project not found");
+
+        let contractor: any = {
+            name: "Mitt Företag",
+            orgNumber: "556000-0000",
+            address: "Adressvägen 1, 123 45 Staden"
+        };
+
+        if (project.ownerId) {
+            const user = await UserRepo.get(project.ownerId);
+            if (user?.companyId) {
+                const comp = await CompanyRepo.get(user.companyId);
+                if (comp) {
+                    contractor = {
+                        name: comp.profile?.name || comp.name,
+                        orgNumber: comp.profile?.orgNumber || "",
+                        address: comp.profile?.address || "",
+                        email: comp.profile?.contactEmail || "",
+                        phone: comp.profile?.contactPhone || "",
+                        bankgiro: comp.profile?.bankgiro,
+                        plusgiro: comp.profile?.plusgiro,
+                        swish: comp.profile?.swish,
+                        website: comp.profile?.website
+                    };
+                }
+            }
+        }
+
+        // Map Items (Offer + ÄTAs)
+        const pdfItems: any[] = [];
+
+        // Offer Items
+        if (projectData.offer && projectData.offer.items) {
+            projectData.offer.items.forEach((item: any) => {
+                const isRot = (item.description.toLowerCase().includes('arbete') || item.description.toLowerCase().includes('montering'));
+                pdfItems.push({
+                    description: item.description,
+                    quantity: item.quantity,
+                    unit: item.unit,
+                    pricePerUnit: item.unitPrice,
+                    total: item.quantity * item.unitPrice,
+                    isRotEligible: isRot
+                });
+            });
+        }
+
+        // Approved ÄTAs
+        projectData.changeOrders.approved.forEach((ata: any) => {
+            pdfItems.push({
+                description: `ÄTA: ${ata.description}`,
+                quantity: ata.quantity || 1,
+                unit: ata.unit || 'st',
+                pricePerUnit: ata.estimatedCost, // Assuming estimatedCost is unit price or total? Usually total for ÄTA.
+                // If estimatedCost is TOTAL, we should adjust.
+                // Repo says: estimatedCost: number; // Exkl moms
+                // Let's assume quantity 1 for simplicity if not specified
+                total: ata.estimatedCost,
+                isRotEligible: (ata.type === 'work') // Explicit type check from Repo
+            });
+        });
+
+        // Calculations
+        let subtotal = 0;
+        let rotDeduction = 0;
+        const vatRate = 0.25;
+
+        pdfItems.forEach(item => {
+            subtotal += item.total;
+            if (item.isRotEligible) {
+                rotDeduction += Math.round(item.total * 0.30); // 30% ROT
+            }
+        });
+
+        const vatAmount = subtotal * vatRate;
+        const totalToPay = subtotal + vatAmount - rotDeduction;
+
+        const pdfData = {
+            id: `FAK-${Date.now().toString().slice(-6)}`, // Simple auto-gen ID
+            date: new Date().toLocaleDateString('sv-SE'),
+            projectTitle: projectData.projectTitle,
+            contractor: contractor,
+            customer: {
+                name: projectData.customerName,
+                address: "" // We should fetch customer address if possible, leaving empty for now
+            },
+            items: pdfItems,
+            totals: {
+                subtotal,
+                vatAmount,
+                rotDeduction: rotDeduction > 0 ? rotDeduction : undefined,
+                totalToPay
+            }
+        };
+
+        // 2. Generate PDF
+        const buffer = await PdfService.generateInvoice(pdfData);
         const pdfName = `Slutfaktura_${input.projectId}_${new Date().toISOString().split('T')[0]}.pdf`;
 
-        // 2. Upload PDF to Drive (Keep Record)
-        const project = await ProjectRepo.get(input.projectId);
+        // 3. Upload PDF to Drive
         const targetFolder = project?.driveFolderId;
-
         const pdfStream = Readable.from(buffer);
         const pdfUpload = await GoogleDriveService.uploadFile(pdfName, 'application/pdf',
             pdfStream,
@@ -108,18 +213,17 @@ export const InvoiceService = {
             accessToken
         );
 
-        // 3. Send Email
+        // 4. Send Email
         await GmailService.sendEmailWithAttachment(accessToken!, input.customerEmail, input.emailSubject, input.emailBody, {
             filename: pdfName,
             content: buffer
         });
 
-        // 4. Update Database
+        // 5. Update Database
         await ProjectRepo.update(input.projectId, { status: 'completed' });
 
         // Mark Draft ÄTAs as Approved (Internal Record)
-        const atas = await ChangeOrderRepo.listByProject(input.projectId);
-        const drafts = atas.filter(a => a.status === 'draft');
+        const drafts = projectData.changeOrders.draft;
         for (const ata of drafts) {
             await ChangeOrderRepo.updateStatus(ata.id, 'approved', 'manual', 'Invoice Finalization');
         }
@@ -127,7 +231,7 @@ export const InvoiceService = {
         return {
             success: true,
             pdfLink: pdfUpload.webViewLink,
-            message: "Slutfaktura skickad! Projektet markerat som klart."
+            message: "Slutfaktura (PDF) skapad och skickad! Projektet markerat som klart."
         };
     }
 };

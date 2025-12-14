@@ -7,7 +7,7 @@ import { ProjectRepo } from '@/lib/dal/project.repo';
 export const createChangeOrderTool = ai.defineTool(
     {
         name: 'createChangeOrder',
-        description: 'Creates a Change Order (ÄTA) for a project. Use this when user wants to add extra work or materials.',
+        description: 'Creates a Change Order (ÄTA). Use this when user mentions: "extra jobb", "tillägg", "kunden vill ha", "ändring", "merarbete", or "lägg till".',
         inputSchema: z.object({
             projectId: z.string().describe('The ID of the project'),
             description: z.string().describe('Description of work/material'),

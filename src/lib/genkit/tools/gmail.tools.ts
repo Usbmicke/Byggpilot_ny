@@ -48,7 +48,7 @@ export const readEmailTool = ai.defineTool(
 export const sendEmailTool = ai.defineTool(
     {
         name: 'sendEmail',
-        description: 'Sends an email to a recipient. Use this when the user approves a draft or explicitly asks to send an email.',
+        description: 'Sends an email to a recipient. Use this for ALL customer communication, including: "maila", "fråga", "kolla med", "skicka", "svara", or "kontakta". Handles drafts and direct sends.',
         inputSchema: z.object({
             to: z.string().email(),
             subject: z.string(),

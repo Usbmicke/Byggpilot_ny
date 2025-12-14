@@ -2,6 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
+  serverExternalPackages: [
+    'genkit',
+    '@genkit-ai/ai',
+    '@genkit-ai/core',
+    '@genkit-ai/flow',
+    '@genkit-ai/google-genai',
+    'google-auth-library'
+  ],
   async headers() {
     return [
       {

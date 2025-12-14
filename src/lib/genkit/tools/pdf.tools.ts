@@ -73,11 +73,6 @@ export const generatePdfTool = ai.defineTool(
                         console.log(`[Tool: generatePdf] Project has no folder. Creating Full Structure...`);
                         const { GoogleDriveService } = await import('@/lib/google/drive');
 
-                        // We need the parent "02_Pågående Projekt" generally, but relying on "ByggPilot - Mitt Företag" lookup might be slow/complex here without context.
-                        // Ideally we use createProjectStructure. 
-                        // For self-healing fallback, let's keep it simple or call the new robust method?
-                        // Let's call ensureRootStructure to be safe and Get "02_Pågående Projekt"
-
                         const { UserRepo } = await import('@/lib/dal/user.repo');
                         const { CompanyRepo } = await import('@/lib/dal/company.repo');
 
@@ -112,7 +107,7 @@ export const generatePdfTool = ai.defineTool(
         const { width, height } = page.getSize();
         const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
         const fontBold = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
-        const smallFont = await pdfDoc.embedFont(StandardFonts.HelveticaOblique);
+        // const smallFont = await pdfDoc.embedFont(StandardFonts.HelveticaOblique); // Unused
 
         let y = height - 50;
         const margin = 50;
@@ -213,18 +208,14 @@ export const generatePdfTool = ai.defineTool(
         // 2. Serialize
         const pdfBytes = await pdfDoc.save();
 
-        // 3. Upload to Drive using our new Service
-        // We need to convert Uint8Array to a format Node stream understands or just pass buffer if supported.
-        // googleapis create usually accepts stream. Readable.from(Buffer.from(pdfBytes))
-
+        // 3. Upload to Drive
         let fileId = 'error';
         let webViewLink = 'error';
 
         if (finalFolderId) {
             try {
-                // Convert Uint8Array to Buffer
+                // Convert Uint8Array to Buffer to Stream
                 const buffer = Buffer.from(pdfBytes);
-                // Create readable stream
                 const stream = Readable.from(buffer);
 
                 const uploadRes = await GoogleDriveService.uploadFile(
@@ -265,6 +256,8 @@ export const generatePdfTool = ai.defineTool(
     }
 );
 
+// --- NEW PDF SERVICE INTEGRATION ---
+
 const OfferInput = z.object({
     contractor: z.object({
         name: z.string(),
@@ -281,6 +274,7 @@ const OfferInput = z.object({
     customer: z.object({
         name: z.string(),
         address: z.string(),
+        idNumber: z.string().optional(),
     }),
     project: z.object({
         name: z.string(),
@@ -292,12 +286,13 @@ const OfferInput = z.object({
         unit: z.string(),
         pricePerUnit: z.number(),
         total: z.number(),
+        isRotEligible: z.boolean().optional(),
     })),
     totals: z.object({
         subtotal: z.number(),
         vatAmount: z.number(),
         rotDeduction: z.number().optional(),
-        totalToPay: z.number(), // Net total after ROT and VAT
+        totalToPay: z.number(),
     }),
     targetFolderId: z.string().optional(),
 });
@@ -315,151 +310,28 @@ export const generateOfferTool = ai.defineTool(
     },
     async (input, context: any) => {
         console.log(`[Tool: generateOffer] Creating Offer for ${input.customer.name}`);
-        const accessToken = context?.accessToken as string | undefined;
+        const accessToken = context?.accessToken || context?.context?.accessToken as string | undefined;
 
-        const pdfDoc = await PDFDocument.create();
-        const page = pdfDoc.addPage([595.28, 841.89]); // A4
-        const { width, height } = page.getSize();
-        const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
-        const fontBold = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
+        try {
+            const { PdfService } = await import('@/lib/services/pdf.service');
 
-        // Colors
-        const primaryColor = rgb(0.2, 0.2, 0.8); // Blue-ish
-        const grayColor = rgb(0.5, 0.5, 0.5);
+            // Map Input to PdfData
+            const pdfData: any = { // using any to bypass strict type check for now, but structure matches
+                id: "UTKAST", // Offer Number generator not yet implemented
+                date: new Date().toLocaleDateString('sv-SE'),
+                projectTitle: input.project.name,
+                contractor: input.contractor,
+                customer: input.customer,
+                items: input.items,
+                totals: input.totals
+            };
 
-        let y = height - 50;
-        const margin = 50;
+            const pdfBuffer = await PdfService.generateOffer(pdfData);
 
-        // Helpers
-        const drawText = (text: string, options: any = {}) => {
-            page.drawText(text, {
-                x: margin,
-                y,
-                size: 10,
-                font: font,
-                color: rgb(0, 0, 0),
-                ...options
-            });
-        };
-
-        // --- HEADER ---
-        drawText('OFFERT', { size: 24, font: fontBold, color: primaryColor });
-        y -= 30;
-        drawText(`Datum: ${new Date().toLocaleDateString('sv-SE')}`, { color: grayColor });
-        y -= 40;
-
-        // --- PARTIES ---
-        const startY = y;
-
-        // Contractor (Left)
-        drawText(input.contractor.name, { font: fontBold, size: 11 });
-        y -= 15;
-        drawText(input.contractor.address);
-        y -= 15;
-        drawText(`Org.nr: ${input.contractor.orgNumber}`);
-        y -= 15;
-        if (input.contractor.email) drawText(input.contractor.email);
-
-        // Customer (Right)
-        y = startY; // Reset Y
-        const col2X = width / 2 + 20;
-
-        page.drawText('Mottagare:', { x: col2X, y: y, size: 9, font: font, color: grayColor });
-        y -= 15;
-        page.drawText(input.customer.name, { x: col2X, y: y, size: 11, font: fontBold });
-        y -= 15;
-        page.drawText(input.customer.address, { x: col2X, y: y, size: 10, font: font });
-
-        y = startY - 80;
-
-        // --- PROJECT ---
-        page.drawLine({ start: { x: margin, y }, end: { x: width - margin, y }, thickness: 1, color: rgb(0.9, 0.9, 0.9) });
-        y -= 20;
-        drawText('Projekt:', { font: fontBold });
-        drawText(input.project.name, { x: margin + 60 });
-        y -= 20;
-
-        // --- ITEMS TABLE ---
-        // Header
-        page.drawRectangle({ x: margin, y: y - 5, width: width - (margin * 2), height: 25, color: rgb(0.95, 0.95, 0.95) });
-        drawText('Beskrivning', { y, font: fontBold });
-        page.drawText('Antal', { x: width - 200, y, size: 10, font: fontBold });
-        page.drawText('A-pris', { x: width - 130, y, size: 10, font: fontBold });
-        page.drawText('Totalt', { x: width - margin - 40, y, size: 10, font: fontBold }); // Right align-ish
-        y -= 30;
-
-        // Rows
-        input.items.forEach(item => {
-            // Check page break (simplified)
-            if (y < 50) {
-                // Add new page if needed (not implemented for simplicity in this artifact)
-            }
-
-            drawText(item.description);
-            page.drawText(`${item.quantity} ${item.unit}`, { x: width - 200, y, size: 10, font });
-            page.drawText(`${item.pricePerUnit} kr`, { x: width - 130, y, size: 10, font });
-            page.drawText(`${item.total} kr`, { x: width - margin - 40, y, size: 10, font });
-
-            y -= 20;
-            page.drawLine({ start: { x: margin, y: y + 10 }, end: { x: width - margin, y: y + 10 }, thickness: 0.5, color: rgb(0.9, 0.9, 0.9) });
-        });
-
-        // --- TOTALS ---
-        y -= 20;
-        const totalX = width - 200;
-
-        drawText('Delsumma (exkl. moms):', { x: totalX - 50 });
-        drawText(`${input.totals.subtotal} kr`, { x: width - margin - 40 });
-        y -= 20;
-
-        drawText('Moms (25%):', { x: totalX - 50 });
-        drawText(`${input.totals.vatAmount} kr`, { x: width - margin - 40 });
-        y -= 20;
-
-        if (input.totals.rotDeduction) {
-            drawText('ROT-avdrag (30% arbetskostnad):', { x: totalX - 50, color: rgb(0, 0.6, 0.2) });
-            drawText(`-${input.totals.rotDeduction} kr`, { x: width - margin - 40, color: rgb(0, 0.6, 0.2) });
-            y -= 20;
-        }
-
-        page.drawLine({ start: { x: totalX - 50, y: y + 10 }, end: { x: width - margin, y: y + 10 }, thickness: 2, color: primaryColor });
-        y -= 10;
-
-        drawText('ATT BETALA:', { x: totalX - 50, size: 14, font: fontBold });
-        drawText(`${input.totals.totalToPay} kr`, { x: width - margin - 40, size: 14, font: fontBold });
-
-        // --- FOOTER ---
-        const bottomY = 50;
-        page.drawLine({ start: { x: margin, y: bottomY + 20 }, end: { x: width - margin, y: bottomY + 20 }, thickness: 1, color: grayColor });
-
-        let footerX = margin;
-        const footerStep = 150;
-
-        drawText(input.contractor.name, { x: footerX, y: bottomY, size: 8, font: fontBold });
-        drawText(`Org.nr: ${input.contractor.orgNumber}`, { x: footerX, y: bottomY - 12, size: 8 });
-        if (input.contractor.website) drawText(input.contractor.website, { x: footerX, y: bottomY - 24, size: 8 });
-
-        footerX += footerStep;
-        if (input.contractor.bankgiro) drawText(`Bankgiro: ${input.contractor.bankgiro}`, { x: footerX, y: bottomY, size: 8 });
-        if (input.contractor.plusgiro) drawText(`PlusGiro: ${input.contractor.plusgiro}`, { x: footerX, y: bottomY - 12, size: 8 });
-
-        footerX += footerStep;
-        if (input.contractor.swish) drawText(`Swish: ${input.contractor.swish}`, { x: footerX, y: bottomY, size: 8 });
-        if (input.contractor.email) drawText(`Email: ${input.contractor.email}`, { x: footerX, y: bottomY - 12, size: 8 });
-
-        page.drawText('Genererat av ByggPilot', { x: width - margin - 80, y: bottomY - 30, size: 6, color: grayColor });
-
-        // --- SAVE ---
-        const pdfBytes = await pdfDoc.save();
-
-        // Upload
-        let fileId = 'error';
-        let webViewLink = 'error';
-
-        if (input.targetFolderId) {
-            try {
-                const buffer = Buffer.from(pdfBytes);
-                const stream = Readable.from(buffer);
+            // Upload
+            if (input.targetFolderId) {
+                const { Readable } = await import('stream');
+                const stream = Readable.from(pdfBuffer);
                 const uploadRes = await GoogleDriveService.uploadFile(
                     `Offert - ${input.project.name}.pdf`,
                     'application/pdf',
@@ -467,26 +339,100 @@ export const generateOfferTool = ai.defineTool(
                     input.targetFolderId,
                     accessToken
                 );
-                fileId = uploadRes.id;
-                webViewLink = uploadRes.webViewLink;
-            } catch (error: any) {
-                console.error("PDF Gen Upload Failed:", error);
-                return { fileId: 'error', webViewLink: '', message: error.message };
+                return {
+                    fileId: uploadRes.id,
+                    webViewLink: uploadRes.webViewLink,
+                    message: `Offer generated: ${uploadRes.webViewLink}`
+                };
+            } else {
+                const base64Pdf = pdfBuffer.toString('base64');
+                const dataUri = `data:application/pdf;base64,${base64Pdf}`;
+                return {
+                    fileId: 'memory-only',
+                    webViewLink: dataUri,
+                    message: `Offer PDF generated (memory only). [Link](${dataUri})`
+                };
             }
-        } else {
-            const base64Pdf = Buffer.from(pdfBytes).toString('base64');
-            const dataUri = `data:application/pdf;base64,${base64Pdf}`;
+        } catch (e: any) {
+            console.error("Generate Offer Tool Failed:", e);
             return {
-                fileId: 'memory-only',
-                webViewLink: dataUri,
-                message: 'Offer PDF generated in memory (Not saved to Drive. Click link to download/view). To save permanently, ensure a Project is active.'
+                fileId: 'error',
+                webViewLink: '',
+                message: `Failed to generate offer: ${e.message}`
             };
         }
+    }
+);
 
-        return {
-            fileId,
-            webViewLink,
-            message: `Offer PDF generated successfully for ${input.customer.name}`,
-        };
+export const generateInvoiceTool = ai.defineTool(
+    {
+        name: 'generateInvoice',
+        description: 'Generates a professional Invoice PDF (Slutfaktura) and saves it to Google Drive. Calculates ROT automatically if applicable.',
+        inputSchema: OfferInput.extend({
+            invoiceNumber: z.string().default("UTKAST"),
+            dueDate: z.string().optional(),
+            ocr: z.string().optional(),
+        }),
+        outputSchema: z.object({
+            fileId: z.string(),
+            webViewLink: z.string(),
+            message: z.string(),
+        }),
+    },
+    async (input, context: any) => {
+        console.log(`[Tool: generateInvoice] Creating Invoice for ${input.customer.name}`);
+        const accessToken = context?.accessToken || context?.context?.accessToken as string | undefined;
+
+        try {
+            const { PdfService } = await import('@/lib/services/pdf.service');
+
+            // Map Input to PdfData
+            const pdfData: any = {
+                id: input.invoiceNumber,
+                date: new Date().toLocaleDateString('sv-SE'),
+                projectTitle: input.project.name,
+                contractor: input.contractor,
+                customer: input.customer,
+                items: input.items,
+                totals: input.totals,
+                dueDate: input.dueDate || new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toLocaleDateString('sv-SE'), // Default 30 days
+                ocr: input.ocr
+            };
+
+            const pdfBuffer = await PdfService.generateInvoice(pdfData);
+
+            // Upload
+            if (input.targetFolderId) {
+                const { Readable } = await import('stream');
+                const stream = Readable.from(pdfBuffer);
+                const uploadRes = await GoogleDriveService.uploadFile(
+                    `Faktura - ${input.project.name}.pdf`,
+                    'application/pdf',
+                    stream,
+                    input.targetFolderId,
+                    accessToken
+                );
+                return {
+                    fileId: uploadRes.id,
+                    webViewLink: uploadRes.webViewLink,
+                    message: `Invoice generated: ${uploadRes.webViewLink}`
+                };
+            } else {
+                const base64Pdf = pdfBuffer.toString('base64');
+                const dataUri = `data:application/pdf;base64,${base64Pdf}`;
+                return {
+                    fileId: 'memory-only',
+                    webViewLink: dataUri,
+                    message: `Invoice PDF generated (memory only). [Link](${dataUri})`
+                };
+            }
+        } catch (e: any) {
+            console.error("Generate Invoice Tool Failed:", e);
+            return {
+                fileId: 'error',
+                webViewLink: '',
+                message: `Failed to generate invoice: ${e.message}`
+            };
+        }
     }
 );
