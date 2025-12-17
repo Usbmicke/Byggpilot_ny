@@ -1,10 +1,10 @@
 import 'server-only';
 import { z } from 'genkit';
-import { tool } from 'genkit';
+import { ai } from '@/lib/genkit-instance';
 import { CustomerRepo } from '@/lib/dal/customer.repo';
 import { UserRepo } from '@/lib/dal/user.repo';
 
-export const createCustomerTool = tool(
+export const createCustomerTool = ai.defineTool(
     {
         name: 'createCustomer',
         description: 'Creates a new customer in the system.',
@@ -34,7 +34,7 @@ export const createCustomerTool = tool(
                 companyId: user.companyId,
                 email: input.email || '',
                 phone: input.phone || '',
-                type: input.type || 'private',
+                type: (input.type === 'brf' ? 'company' : input.type) || 'private',
                 status: 'active'
             });
 
@@ -49,7 +49,7 @@ export const createCustomerTool = tool(
     }
 );
 
-export const listCustomersTool = tool(
+export const listCustomersTool = ai.defineTool(
     {
         name: 'listCustomers',
         description: 'Lists all customers for the current user/company. Use to check if customer exists.',

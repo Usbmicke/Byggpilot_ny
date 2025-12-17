@@ -38,6 +38,8 @@ export const prepareInvoiceDraftTool = ai.defineTool(
 export const finalizeInvoiceTool = ai.defineTool(
     {
         name: 'finalizeInvoice',
+        // MASTER PLAN v2: This tool is currently DETERMINISTIC (Logic).
+        // If AI is added here, it MUST use AI_MODELS.SMART.
         description: 'LOCKS & SENDS the Final Invoice. Converts the Google Doc Draft to PDF, emails it to the customer, updates project status to "completed", and marks all drafted ÄTAs as approved. REQUIRES USER CONFIRMATION.',
         inputSchema: z.object({
             projectId: z.string(),

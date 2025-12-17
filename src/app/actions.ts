@@ -1,6 +1,7 @@
 'use server';
 
 import { ai } from '@/lib/genkit';
+import { AI_MODELS } from '@/lib/genkit/config';
 import { runFlow } from '@genkit-ai/flow';
 import { chatFlow } from '@/lib/genkit/flows/chat';
 import { offerFlow } from '@/lib/genkit/flows/offer';
@@ -21,7 +22,7 @@ export { syncChecklistAction, getTasksAction };
 export async function generateTextAction(prompt: string) {
   try {
     const { text } = await ai.generate({
-      model: 'googleai/gemini-2.5-flash',
+      model: AI_MODELS.FAST,
       prompt: prompt,
       config: { temperature: 0.7 },
     });
@@ -151,6 +152,16 @@ export async function loadChatHistoryAction(uid: string) {
     return { success: true, messages: uiMsgs, sessionId: session.id };
   } catch (e: any) {
     return { success: false, error: e.message };
+  }
+}
+
+export async function resetChatAction(uid: string) {
+  try {
+    const { ChatRepo } = await import('@/lib/dal/chat.repo');
+    await ChatRepo.archiveActiveSession(uid);
+    return { success: true };
+  } catch (error: any) {
+    return { success: false, error: error.message };
   }
 }
 
@@ -431,10 +442,12 @@ export async function getOffersAction(ownerId: string) {
 // --- INBOX INTELLIGENCE ---
 export async function checkInboxAction(accessToken: string) {
   try {
-    console.log('📧 Checking Inbox...');
     // Ensure accessToken is valid before calling service
     if (!accessToken) return { success: false, error: 'Access Token Missing' };
 
+    console.log('📧 [SmartInbox] Checking for new messages...');
+
+    // 1. Fetch Unread (CHEAP API CALL)
     const emails = await GmailService.listUnreadEmails(accessToken, 5);
     if (emails.length === 0) return { success: true, insights: [] };
 
@@ -446,23 +459,68 @@ export async function checkInboxAction(accessToken: string) {
       console.warn("Could not fetch user profile for filtering", e);
     }
 
+    // 2. Process each email with Smart Filter
     const insights = await Promise.all(emails.map(async (email) => {
-      // 1. FILTER SELF-EMAILS (Prevent loops)
+
+      // A. Self-Filter (Zero Cost)
       if (myEmail && email.from && email.from.includes(myEmail)) {
-        console.log("⏩ Skipping self-email:", email.subject);
         return null;
       }
-      // COST OPTIMIZATION: Keyword Heuristic Check
-      // Only proceed to AI analysis if email looks relevant (Job, Meeting, etc)
+
+      // Ensure ID exists (TS Guard)
+      if (!email.id) return null;
+
+      // --- STAGE 1: THE MEMORY (Firestore Cache) ---
+      // Check if we have already analyzed this specific email ID
+      const cacheRef = db.collection('processed_emails').doc(email.id);
+      const cacheDoc = await cacheRef.get();
+
+      if (cacheDoc.exists) {
+        const cachedData = cacheDoc.data();
+        console.log(`🧠 [SmartInbox] Hit Cache for ${email.id.substring(0, 5)}... Intent: ${cachedData?.intent}`);
+
+        // If it was marked as 'other' (spam/irrelevant), return null to hide it
+        if (cachedData?.intent === 'other') return null;
+
+        // Return the cached insight without calling AI
+        return {
+          emailId: email.id,
+          intent: cachedData?.intent,
+          confidence: cachedData?.confidence,
+          summary: cachedData?.summary,
+          proposedAction: cachedData?.proposedAction,
+          ataId: cachedData?.ataId,
+          calendarData: cachedData?.calendarData,
+          leadData: cachedData?.leadData,
+          original: email
+        };
+      }
+
+      // --- STAGE 2: THE BOUNCER (Keyword Heuristic) ---
+      // Zero Cost check to see if it's even worth annoying the AI
       const combinedText = (email.subject + " " + (email.snippet || "")).toLowerCase();
-      const relevantKeywords = ['boka', 'möte', 'tid', 'jobb', 'offert', 'renovering', 'badrum', 'kök', 'bygg', 'projekt', 'adress', 'pris', 'kostnad', 'hjälp', 'förfrågan'];
+      const relevantKeywords = ['boka', 'möte', 'tid', 'jobb', 'offert', 'renovering', 'badrum', 'kök', 'bygg', 'projekt', 'adress', 'pris', 'kostnad', 'hjälp', 'förfrågan', 'godkän', 'svar', 'hej'];
+
+      // Loose check: "hej" is included to catch casual warm replies, but generally we want substance.
+      // Let's stick to the user's previous strong list but add 'godkänner' for ÄTA.
 
       const seemsRelevant = relevantKeywords.some(kw => combinedText.includes(kw));
 
       if (!seemsRelevant) {
-        console.log(`⏩ Skipping irrelevant email: ${email.subject}`);
+        console.log(`🛡️ [SmartInbox] Bounced irrelevant email: ${email.subject}`);
+        // Cache this as 'other' so we don't check it again
+        await cacheRef.set({
+          intent: 'other',
+          summary: 'Irrelevant (Heuristic)',
+          analyzedAt: new Date(),
+          subject: email.subject
+        });
         return null;
       }
+
+      // --- STAGE 3: THE EXPERT (AI Analysis) ---
+      // We only pay here!
+      console.log(`🤖 [SmartInbox] Analyzing NEW potential lead/task: ${email.subject}`);
 
       try {
         const analysis = await emailAnalysisFlow({
@@ -470,13 +528,25 @@ export async function checkInboxAction(accessToken: string) {
           sender: email.from || '',
           body: email.snippet || '',
         });
+
+        // Save result to Cache
+        await cacheRef.set({
+          ...analysis,
+          analyzedAt: new Date(),
+          subject: email.subject,
+          sender: email.from
+        });
+
+        // Return result
         return { emailId: email.id, ...analysis, original: email };
+
       } catch (e) {
-        console.error('AI Failed for email', email.id, e);
-        return null;
+        console.error('❌ AI Analysis Failed:', e);
+        return null; // Don't cache failures, retry next time
       }
     }));
 
+    // Filter out nulls (Self-emails, Irrelevant, Cached 'Other')
     const actionableInsights = insights
       .filter(i => i !== null && i.intent !== 'other')
       .sort((a, b) => b!.confidence - a!.confidence);

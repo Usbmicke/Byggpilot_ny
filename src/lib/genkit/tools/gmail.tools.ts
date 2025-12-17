@@ -45,10 +45,27 @@ export const readEmailTool = ai.defineTool(
     }
 );
 
+// NEW SAFETY TOOL: Preview Only
+export const previewEmailTool = ai.defineTool(
+    {
+        name: 'previewEmail',
+        description: 'MANDATORY STEP 1: Drafts an email for user review. Call this BEFORE sendEmail. Returns the content for display.',
+        inputSchema: z.object({
+            to: z.string(),
+            subject: z.string(),
+            body: z.string(),
+        }),
+        outputSchema: z.string(),
+    },
+    async (input) => {
+        return `✅ **EMAIL DRAFT CREATED**\n\n**To:** ${input.to}\n**Subject:** ${input.subject}\n\n${input.body}\n\n---\n*System: User must reply "JA" or "SKICKA" to proceed.*`;
+    }
+);
+
 export const sendEmailTool = ai.defineTool(
     {
         name: 'sendEmail',
-        description: 'Sends an email to a recipient. Use this for ALL customer communication, including: "maila", "fråga", "kolla med", "skicka", "svara", or "kontakta". Handles drafts and direct sends.',
+        description: 'MANDATORY STEP 2: Sends the email. ONLY use this AFTER the user has explicitly confirmed the draft from previewEmail.',
         inputSchema: z.object({
             to: z.string().email(),
             subject: z.string(),
@@ -67,6 +84,11 @@ export const sendEmailTool = ai.defineTool(
 
         try {
             console.log(`📧 Sending email to ${input.to} (Thread: ${input.threadId || 'New'})`);
+            // Anti-Hallucination Check: If body contains "sen" or "late", warn the system logs (cannot stop it here easily without complex regex, but good for debugging)
+            if (input.body.toLowerCase().includes('jag kan bli sen') || input.body.toLowerCase().includes('15 min')) {
+                console.warn("⚠️ AI tried to send 'late' excuse. This should have been caught in Draft.");
+            }
+
             const res = await GmailService.sendEmail(token, input.to, input.subject, input.body, input.threadId);
             return { success: true, messageId: res.id || undefined };
         } catch (e: any) {

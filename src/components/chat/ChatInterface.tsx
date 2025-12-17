@@ -2,11 +2,11 @@
 
 import { useState, useRef, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { chatAction, approveChangeOrderAction, syncChecklistAction } from '@/app/actions';
+import { chatAction, approveChangeOrderAction, syncChecklistAction, resetChatAction } from '@/app/actions';
 import { processVoiceCommandAction } from '@/app/actions/voice';
 import { useAuth } from '@/components/AuthProvider';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { Mic, Square, Send, X, MessageSquare, FileText, Check, Ban, ChevronUp, ChevronDown, Sparkles, ListChecks } from 'lucide-react';
+import { Mic, Square, Send, X, MessageSquare, FileText, Check, Ban, ChevronUp, ChevronDown, Sparkles, ListChecks, Trash2 } from 'lucide-react';
 
 interface Message {
     role: 'user' | 'model' | 'system';
@@ -174,6 +174,19 @@ export default function ChatInterface() {
         }
     };
 
+    const handleReset = async () => {
+        if (!confirm("Vill du rensa chatthistoriken och börja om?")) return;
+        setIsLoading(true);
+        try {
+            if (user?.uid) await resetChatAction(user.uid);
+            setMessages([]);
+        } catch (e) {
+            console.error("Reset failed", e);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
 
 
     // Auto-Prompt from URL
@@ -214,9 +227,14 @@ export default function ChatInterface() {
                         </div>
                         <span className="font-semibold text-sm tracking-wide">ByggPilot AI</span>
                     </div>
-                    <button onClick={() => setIsExpanded(false)} className="p-2 hover:bg-zinc-800 rounded-full text-zinc-500 hover:text-zinc-300 transition-colors">
-                        <ChevronDown size={18} />
-                    </button>
+                    <div className="flex items-center gap-2">
+                        <button onClick={handleReset} className="p-2 hover:bg-zinc-800 rounded-full text-zinc-500 hover:text-red-400 transition-colors" title="Ny Chatt (Rensa historik)">
+                            <Trash2 size={16} />
+                        </button>
+                        <button onClick={() => setIsExpanded(false)} className="p-2 hover:bg-zinc-800 rounded-full text-zinc-500 hover:text-zinc-300 transition-colors">
+                            <ChevronDown size={18} />
+                        </button>
+                    </div>
                 </div>
 
                 {/* Messages Area */}

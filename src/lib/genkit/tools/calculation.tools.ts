@@ -14,6 +14,9 @@ export const calculateOfferTool = ai.defineTool(
     {
         name: 'calculateOffer',
         description: 'Calculates the price and cost for a job based on a recipe and quantity.',
+        // MASTER PLAN v2: This tool is currently DETERMINISTIC (Math).
+        // If AI is added here (e.g. for analysis), it MUST use AI_MODELS.SMART.
+        // We do not gamble with customer money.
         inputSchema: CalculateOfferInput,
         outputSchema: z.object({
             totalPrice: z.number(),

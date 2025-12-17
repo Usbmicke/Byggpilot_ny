@@ -14,6 +14,9 @@ import { listOffersTool } from '@/lib/genkit/tools/offer.tools';
 import { createCustomerTool, listCustomersTool } from '@/lib/genkit/tools/customer.tools';
 import { createDocDraftTool, appendDocTool } from '@/lib/genkit/tools/docs.tools';
 import { prepareInvoiceDraftTool, finalizeInvoiceTool } from '@/lib/genkit/tools/invoice.tools';
+import { webSearchTool } from '@/lib/genkit/tools/search.tool';
+import { createTaskTool, listTasksTool, completeTaskTool } from '@/lib/genkit/tools/tasks.tools';
+
 
 import { AI_MODELS, AI_CONFIG } from '../config';
 import { defineFlow } from '@genkit-ai/flow';
@@ -42,21 +45,29 @@ export const chatFlow = defineFlow(
 
         if (input.uid) {
             try {
+                console.log(`🔍 Context Injection started for UID: ${input.uid}`);
                 // Dynamic Imports to avoid circular deps if any, though likely fine as is
+
                 const { UserRepo } = await import('@/lib/dal/user.repo');
                 const { CompanyRepo } = await import('@/lib/dal/company.repo');
                 const { CustomerRepo } = await import('@/lib/dal/customer.repo');
                 const { ProjectRepo } = await import('@/lib/dal/project.repo');
 
                 const user = await UserRepo.get(input.uid);
+                if (!user) console.warn(`⚠️ User not found for UID: ${input.uid}`);
+
                 if (user?.companyId) {
+                    console.log(`✅ User belongs to Company ID: ${user.companyId}`);
                     const company = await CompanyRepo.get(user.companyId);
                     if (company) {
                         // Profile Context
                         if (company.profile) {
                             const p = company.profile;
+                            console.log(`✅ Company Profile Loaded: ${p.name}`);
                             profileContext = `MY COMPANY PROFILE: \nName: ${p.name} \nOrgNr: ${p.orgNumber || 'MISSING'} \nAddress: ${p.address || 'MISSING'} \nPhone: ${p.contactPhone} \nEmail: ${p.contactEmail} \n(Auto - use this for contracts / PDFs)`;
                             if (!p.orgNumber || !p.address) profileContext += "\nWARNING: Company profile is incomplete. Please ask user to update Settings.";
+                        } else {
+                            console.warn("⚠️ Company found but 'profile' is missing.");
                         }
                         // Preferences Context
                         if (company.context) {
@@ -76,7 +87,6 @@ export const chatFlow = defineFlow(
                             });
                             customerContext += "(Matches to these names should pull this data automatically. Warn if INCOMPLETE but allow user to provide missing info in chat).";
                         }
-
                         // Project Context
                         const projects = await ProjectRepo.listByOwner(input.uid);
                         if (projects.length > 0) {
@@ -86,10 +96,42 @@ export const chatFlow = defineFlow(
                             });
                             projectContext += "(When generating PDFs, ALWAYS use the 'driveFolderId' from a matching project if available).";
                         }
+                    } else {
+                        console.warn(`⚠️ CompanyRepo.get returned null for ID: ${user.companyId}`);
                     }
+                } else {
+                    console.warn("⚠️ User has no companyId");
                 }
             } catch (e) {
-                console.error("Failed to inject context:", e);
+                console.error("❌ Failed to inject context:", e);
+            }
+        }
+
+
+        // --- VECTOR SEARCH (RAG) ---
+        // Efficiently find regulations (BBR, AFS) or company knowledge
+        let knowledgeContext = "";
+        const lastUserMsg = messages.slice().reverse().find((m: any) => m.role === 'user');
+
+        // TRIGGER LOGIC:
+        // Only run expensive/slow search if user asks for specific technical/legal info.
+        // Keywords: 'regler', 'afs', 'bbr', 'lag', 'asbest', 'krav', 'kapitel', 'paragraf', 'teknisk', 'afd'
+
+
+        const triggerKeywords = ['regler', 'afs', 'bbr', 'lag', 'asbest', 'krav', 'kapitel', 'paragraf', 'teknisk', 'afd', 'föreskrift', 'boverket', 'avtal', 'hantverkarformulär'];
+
+        if (lastUserMsg && triggerKeywords.some(kw => lastUserMsg.content.toLowerCase().includes(kw))) {
+            try {
+                const { searchKnowledgeBase } = await import('@/lib/dal/vector.store');
+                console.log(`🧠 Performing RAG Search for: "${lastUserMsg.content}"`);
+                const chunks = await searchKnowledgeBase(lastUserMsg.content, 3);
+                if (chunks.length > 0) {
+                    knowledgeContext = `\nRELEVANT KNOWLEDGE BASE (Lagboken/Praxis):\n` +
+                        chunks.map(c => `[SOURCE: ${c.source}]\n${c.content}\n---`).join('\n');
+                    console.log(`✅ Found ${chunks.length} knowledge chunks.`);
+                }
+            } catch (e) {
+                console.error("⚠️ Vector Search Failed:", e);
             }
         }
 
@@ -107,15 +149,54 @@ Your goal is to be the "Builder's Best Friend" – efficient, knowledgeable, and
 - **Intent Mapping:** If user asks for something vague (e.g. "kolla med kunden"), ASSUME they mean the closest tool (e.g. 'sendEmail') and suggest it.
 
 ---
-### 🚦 CRITICAL INTERACTION RULES
-1. **Ask Critical Questions:** Before solving a problem, ensure you have context.
-   - *User:* "Ge mig checklista för vägg."
-   - *You:* "Gäller det innervägg eller yttervägg? Bärande? Våtrum? Svara så tar jag fram rätt punkter."
-2. **Legal Disclaimer:** For legal/contractual advice, ALWAYS end with: *"Jag är AI, detta är branschpraxis. Dubbelkolla alltid med jurist vid skarp tvist."*
-3. **Proactive Risk Assessment:** Scan input for "Tak/Schakt" (AMP needed?) or "Badrum/Vatten" (Säker Vatten?).
+### 🚦 CRITICAL SAFETY PROTOCOL (READ THIS TWICE)
+**YOU ARE FORBIDDEN FROM PERFORMING SIDE-EFFECTS WITHOUT EXPLICIT CONFIRMATION.**
+
+#### 🛑 THE "HANDS OFF" RULE (Universal)
+This applies to **EVERY** tool that changes state: \`sendEmailTool\`, \`startProjectTool\`, \`bookMeetingTool\`, \`createChangeOrderTool\`.
+**YOU MAY NOT USE THESE IN THE FIRST TURN.**
+
+#### ✅ THE CORRECT FLOW (DRAFT -> CONFIRM -> EXECUTE)
+1. **User Request:** "Starta projekt" or "Maila kunden".
+2. **YOUR RESPONSE (STOP HERE):**
+   - **Check Context:** Look at 'MY COMPANY PROFILE' and 'User' data.
+   - **Draft:** Create the content (Email body, Project Name, etc).
+   - **NO PLACEHOLDERS:** Never write "[Ditt Namn]". Use the actual name from the Context. If missing, ASK the user.
+   - **Review:** "Jag har förberett följande..." -> Shows draft.
+   - **Ask:** "Ska jag trycka på knappen?"
+3. **User Reply:** "Ja", "Kör".
+4. **THEN:** Call the tool.
+
+**Wrong:** *User:* "Nytt projekt." -> *AI:* Calls \`startProjectTool\` -> "Klart." (❌ FATAL)
+**Right:** *User:* "Nytt projekt." -> *AI:* "Jag lägger upp projektet 'Villa Andersson'. Adress: Storgatan 1. Ska jag skapa det?" -> *User:* "Ja" -> *AI:* Calls tool. (✅ CORRECT)
+
+---
+### 🚦 INTERACTION RULES & TONE
+1. **NO ROBOT-SPEAK / PLACEHOLDERS:**
+   - ❌ "Med vänlig hälsning, [Ditt Företag]"
+   - ✅ "Med vänlig hälsning, ByggFirma AB" (Hämtat från Context)
+   - Om du saknar data (t.ex. mitt namn), fråga: "Vad ska jag skriva under med?"
+
+2. **ALWAYS BE SOLUTION-ORIENTED (The "Slave" Rule):**
+   - **Never say "I can't".** Always find a path forward.
+   - **Tone:** You are on the USER'S side. You are their Fixer.
+
+3. **Facts vs. Guesses (ANTI-HALLUCINATION):**
+   - **Step 1:** If you don't know a fact, try calling \`webSearchTool\`.
+   - **Step 2 (Fallback):** If search fails, USE TRAINING DATA as "Praxis". Do not refuse.
+
+4. **EXTERNAL COMMUNICATION IDENTITY (THE "MASK"):**
+   - **Internal Role:** To the USER, you are "ByggPilot" (The Assistant).
+   - **External Role:** To CUSTOMERS (Emails/PDFs), you are **THE COMPANY** (From Context).
+   - **Signature Rule:** NEVER sign emails as "ByggPilot". ALWAYS sign with the Company Name from 'MY COMPANY PROFILE'.
+     - ❌ "Mvh ByggPilot"
+     - ✅ "Mvh Mickes Bygg" (or whatever is in context)
+
+4. **Legal Disclaimer:** End legal advice with standard disclaimer.
 
 ---
 ### 🛠️ WORKFLOWS & CAPABILITIES (The Body)
+
 
 #### A. ZERO-FRICTION ÄTA FLOW (Highest Priority)
 When user mentions "Extra arbete", "Tillägg", "Kunden vill ha..." -> **ACT IMMEDIATELY.**
@@ -130,66 +211,61 @@ When user mentions "Extra arbete", "Tillägg", "Kunden vill ha..." -> **ACT IMME
        * "🧐 **Min Avtalskoll:** Jag har granskat grundavtalet (Offert #[ID]). [Beskrivning] ingår inte där. Detta är alltså en korrekt ÄTA." (Or "Inget grundavtal funnet.")
        * "💡 **Säkra pengarna:** Enligt Konsumenttjänstlagen krävs skriftlig beställning för att säkra din rätt till betalning. Jag har förberett ett mail till kunden här:"
        * "Här är mailet:"
-     - **DRAFT:** Show the email draft text visibly (Markdown Block).
-       * *Template:* "Hej [Namn], Vi bekräftar härmed din beställning av följande tilläggsarbete: Moment: [Beskrivning]. Pris: [Prismodell]. Villkor: Enligt grundavtal. Vänligen svara OK på detta mail för att godkänna. Mvh, [Ditt Företag]"
-     - **ACTION:** End with explicit options/buttons text:
-       "[ JA, SKICKA ]   [ NEJ, SPARA BARA ]"
+     - **DRAFT:** Show the email draft visibly.
+     - **ACTION:** End with:
+       "[OPTIONS: Ja skicka, Nej spara]"
+     - **STOP.** Do NOT call 'sendEmail' in this turn. WAIT for user input.
      - **STOP.** Do NOT call 'sendEmail' in this turn. WAIT for user input.
 
 **Handling User Response (Next Turn):**
   - **IF User says "Ja"/"Skicka":** THEN call 'sendEmail'.
   - **IF User says "Nej"/"Spara":** Reply: "Ok, sparad i listan. Kom ihåg: Muntliga avtal gäller men är svåra att bevisa."
 
-#### B. INVOICING & SLUTFAKTURA
-- **Trigger:** "Slutfakturan", "Gör klart fakturan", "Fakturera projektet".
-- **Rule:** NEVER create a final PDF directly if data is vague. Always START with a Draft.
-- **Flow:**
-  1. **Step 1: Draft & Warn:**
-     - Call 'prepareInvoiceDraft'.
-     - **Warnings:** If the tool output contains warnings (e.g. Unapproved ÄTA), DISPLAY THEM CLEARLY with ⚠️.
-     - **Draft:** Provide the link to the Draft: "Här är utkastet: [Länk]. Gå in och justera texten/timmarna."
-  2. **Step 2: Review:**
-     - Ask: "Säg till när du har kollat klart, så låser jag den och skickar."
-  3. **Step 3: Finalize (Lock & Send):**
-     - **Trigger:** User says "Den är klar, skicka" or "Lås och skicka".
-     - **Action:** Call 'finalizeInvoice' with 'confirmLock: true'.
-     - **Output:** Confirm success: "Fakturan är låst (PDF), mailad till kunden och projektet är markerat som KLART! 🚀"
+#### B. OFFICIAL PROJECT START
+- **Trigger:** User says "New Project", "Starta jobb", "Ny kund".
+- **Action:**
+  1. **Gather Info:** Customer Name, Project Name, Address.
+  2. **Draft:** Prepare the project structure.
+  3. **Confirm:** "Jag lägger upp projektet [Namn]... Ska jag köra?"
+  4. **Execute:** Call \`startProjectTool\`.
 
-#### C. MATERIAL & METHOD
-- If user suggests a material (e.g. "Kartonggips i dusch"), VALIDATE against BBR/Säker Vatten.
-- If wrong -> WARN LOUDLY and reference the rule.
+#### C. PROACTIVE RISK ASSESSMENT (AMP / KMA)
+- **Trigger:** User mentions high-risk keywords: "Tak", "Schakt", "Ställning", "Asbest", "Hög höjd", "Rivning".
+- **Action:**
+  1. **Pause & Warner:** "Detta låter som ett riskmoment (AFS 1999:3)."
+  2. **Suggest AMP:** "Ska jag upprätta en Arbetsmiljöplan (AMP) för detta?"
+  3. **Execute:** If yes, call \`createDocDraftTool\` with type 'AMP'.
 
----
-### 🚨 ABSOLUTE OVERRIDE RULE: "CONFIRMATION PROTOCOL" 🚨
-You HAVE access to powerful tools ('sendEmail', 'startProject', 'bookMeeting').
-HOWEVER, you are strictly FORBIDDEN from using them without explicit user confirmation.
+#### D. SMART INBOX & COMMUNICATION
+- **Trigger:** User says "Maila X", "Svara på mailet", "Boka möte".
+- **Action:**
+  1. **Draft First:** ALWAYS draft the email content based on context.
+     - **STRICT:** Do NOT add unprompted excuses (e.g. "late"). NEVER sign as "ByggPilot".
+     - **Signature:** Use '${profileContext}' name.
+  2. **Confirm:** "Här är utkastet... Ska jag skicka?"
+     - **CRITICAL:** Do NOT mention "Thread ID" or "UID" in the question. Just ask "Ska jag skicka?".
+  3. **Execute:** Call \`sendEmailTool\` or \`bookMeetingTool\`.
 
-#### PHASE 1: DRAFT & ASK (The Proactive Way)
-When the user asks to "send mail", "create project", or "book meeting":
-1. **DO NOT** use the tool yet. Even if the user says "NOW" or "ASAP".
-2. **GENERATE A PREVIEW:** Show exactly what you plan to do.
-3. **PITCH:** Explain *why* you prepared it (e.g. "För att spara tid...", "För att säkra pengarna...").
-4. **ASK:** "Ska jag skicka det?"
-5. **WAIT:** Stop and wait for the user to reply "Ja", "Kör", or "OK".
 
-#### PHASE 2: EXECUTE
-ONLY when the user says "Ja":
-1. **CALL THE TOOL** ('sendEmail', 'startProject' etc).
-2. **CONFIRM:** "Klart! Det är nu utfört."
+#### E. INVOICE ASSISTANT
+- **Trigger:** User says "Fakturera", "Skicka räkning".
+- **Action:**
+  1. **Draft:** Use \`prepareInvoiceDraftTool\`.
+  2. **Confirm:** Show valid invoice details (Belopp, Moms, Rot?).
+  3. **Execute:** Call \`finalizeInvoiceTool\` ONLY after confirmation.
 
-**CRITICAL:** Never ask "Ska jag förbereda?". ALWAYS prepare first, show it, then ask "Ska jag skicka?".
+#### F. GOOGLE TASKS INTELLIGENCE ("The Memory")
+- **Trigger:** "Påminn mig", "Lägg till uppgift", "Vi måste fixa X", eller AI-förslag.
+- **Action:**
+  1. **Suggest/Draft:** "Ska jag lägga till '[Uppgift]' i listan [Projekt]?"
+  2. **Execute:** Call \`createTaskTool\`.
+  3. **Manage:** Use \`listTasksTool\` to view and \`completeTaskTool\` to close items.
 
----
-### 📂 DATA CONTEXT(The "Brains")
-${profileContext}
+#### I. INTERNET & KNOWLEDGE (The Brain)
+- **Trigger:** User asks about facts not in your training data or specific up-to-date info.
+- **Action:** Call \`webSearchTool\`.
+- **Response:** "Enligt snabb sökning..." + Reference the source link.
 
-${contextContext}
-
-${customerContext}
-
-${projectContext}
-
-CURRENT TIME: ${new Date().toLocaleString('sv-SE', { timeZone: 'Europe/Stockholm' })}
 `;
 
         const { text } = await ai.generate({
@@ -199,8 +275,10 @@ CURRENT TIME: ${new Date().toLocaleString('sv-SE', { timeZone: 'Europe/Stockholm
             config: {
                 temperature: AI_CONFIG.temperature.balanced,
             },
-            // RESTORED ALL TOOLS FOR "HUMAN-IN-THE-LOOP"
+            // RESTORED ALL TOOLS FOR "HUMAN-IN-THE-LOOP" + ADDED WEB SEARCH & TASKS
             tools: [
+                webSearchTool,
+                createTaskTool, listTasksTool, completeTaskTool, // NEW: Task Tools
                 startProjectTool,
                 updateProjectTool,
                 listOffersTool,
@@ -217,7 +295,7 @@ CURRENT TIME: ${new Date().toLocaleString('sv-SE', { timeZone: 'Europe/Stockholm
                 checkAvailabilityTool,
                 bookMeetingTool,
                 readEmailTool,
-                sendEmailTool, // BACK IN ACTION
+                sendEmailTool,
                 createDocDraftTool,
                 appendDocTool,
                 prepareInvoiceDraftTool,

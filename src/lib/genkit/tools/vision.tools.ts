@@ -1,6 +1,7 @@
 import 'server-only';
 import { ai } from '@/lib/genkit-instance';
 import { z } from 'genkit';
+import { AI_MODELS } from '../config';
 
 const AnalyzeReceiptInput = z.object({
     imageUrl: z.string().describe('The URL or Base64 string of the receipt image'),
@@ -31,7 +32,7 @@ export const analyzeReceiptTool = ai.defineTool(
     `;
 
             const response = await ai.generate({
-                model: 'googleai/gemini-2.5-flash',
+                model: AI_MODELS.FAST,
                 prompt: [
                     { text: prompt },
                     { media: { url: input.imageUrl } }
@@ -81,7 +82,7 @@ export const analyzeChemicalContainerTool = ai.defineTool(
     async (input) => {
         try {
             const response = await ai.generate({
-                model: 'googleai/gemini-2.0-flash-exp',
+                model: AI_MODELS.FAST,
                 prompt: [
                     {
                         text: `

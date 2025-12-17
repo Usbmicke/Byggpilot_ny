@@ -7,8 +7,7 @@ const nextConfig: NextConfig = {
     '@genkit-ai/ai',
     '@genkit-ai/core',
     '@genkit-ai/flow',
-    '@genkit-ai/google-genai',
-    'google-auth-library'
+    '@genkit-ai/google-genai'
   ],
   async headers() {
     return [

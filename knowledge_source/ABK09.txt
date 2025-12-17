@@ -1,0 +1,407 @@
+Allmänna Bestämmelser ABK 09 
+
+FÖR KONSULTUPPDRAG INOM ARKITEKT- OCH INGENJÖRSVERKSAMНЕТ BRK BYGGANDETS KONTRAKTSKOMMITTÉ Allmänna Bestämmelser FÖR KONSULTUPPDRAG INOM ARKITEKT- OCH INGENJÖRSVERKSAMHET AV ÅR 2009 ABK 09 
+
+Dessa bestämmelser med kommentartexter har utarbetats av Föreningen Byggandets Kontraktskommitté, ВKK. 
+
+Medlemmar i BKK är:
+BANVERKET 
+BYGGHERRARNA 
+ELEKTRISKA INSTALLATÖRSORGANISATIONEN EIO 
+FASTIGHETSÄGARNA 
+FORTIFIKATIONSVERKET 
+HSBS RIKSFÖRBUND 
+ISOLERFIRMORNAS FÖRENING 
+KYLENTREPRENÖRERNAS FÖRENING 
+LUFTFARTSVERKET 
+RIKSBYGGEN 
+STATENS FASTIGHETSVERK 
+STD SVENSK TEKNIK OCH DESIGN 
+SVENSK VENTILATION 
+SVERIGES ALLMÄNNYTTIGA BOSTADSFÖRETAG. SABO 
+SVERIGES BYGGINDUSTRIER 
+SVERIGES KOMMUNER OCH LANDSTING 
+VVS FÖRETAGEN 
+VÄGVERKET 
+
+INNEHÅLL 
+
+Förord. 3 
+Begreppsbestämningar med anmärkningar 4 
+Kapitel 1 Omfattning 5 
+Kapitel 2 Genomförande 6 
+Kapitel 3 Organisation 8 
+Kapitel 4 Tider .9 
+Kapitel 5 Ansvar 10 
+Kapitel 6 Ekonomi 12 
+Kapitel 7 Rätt till uppdragsresultatet....... 14 
+Kapitel 8 Hävning. 16 
+Kapitel 9 Tvistelösning. 17 
+Kapitel 10 Förenklad tvistelösning. 17 
+
+BBR BYGGANDETS KONTRAKTSKOMMITTÉ Förlag AB Svensk Byggtjänst 113 87 Stockholm Tel: 08-457 10 00 www.byggtjanst.se ©2009 AB Svensk Byggtjänst och 
+Föreningen Byggandets Kontraktskommitté, BKK Andra tryckningen Tryck: AB Fälth & Hässler, Värnamo 2010 ISBN 978-91-7333-383-2 
+
+Förord 
+
+Dessa allmänna bestämmelser är avsedda att användas vid konsultuppdrag inom arkitekt- och ingenjörsverksamhet. Bestämmelserna kan användas inom alla teknikområden från inledande skeden på idéstadiet till avslutande detaljprojektering under utförandeskedet. Bestämmelserna kan även användas vid andra typer av konsultuppdrag, exempelvis olika slag av utredningar, projektledning, byggledning och besiktning. 
+
+Vid utformningen av ABK 09 har en målsättning varit att bestämmelserna ska ge förutsättningar för hög kvalitet i uppdragsresultatet. Det kräver att beställaren och konsulten har en samstämmig uppfattning om uppdragets syfte, omfattning och kvalitetsnivå avseende det färdiga objektet. Konsultuppdragens karaktär gör att det ställs särskilda krav på att avtalet är tydligt i fråga om vad som ingår i uppdraget, förutsättningar för uppdraget och formerna i övrigt för genomförande av uppdraget. 
+
+Med hänsyn till den komplexitet som ofta kännetecknar konsultuppdragen är en god kommunikation och samverkan vid genomförande av uppdragen nödvändig. Parterna bör därför finna former för en fortlöpande dialog samt inom ramen den allmänna lojalitetsplikten visa varandra förtroende och öppenhet. 
+
+För att underlätta användningen av dokumentet och så långt möjligt skapa enhetlighet bland standardavtalen har ABK 09 anpassats till den struktur som används för motsvarande dokument inom entreprenadområdet, AB 04 och ABT 06. Bland de områden som särskilt uppmärksammats under revideringsarbetet kan nämnas ansvarsfrågorna samt frågor avseende nyttjanderätten till uppdragsresultatet där ökad tydlighet har eftersträvats. 
+
+I ABK 09 har genom så kallade täckbestämmelser lämnats öppet för parterna att avtala om en annan reglering än den som framgår av ABK 09. Dessa markeras med formuleringen "om inte annat avtalats" eller motsvarande. Paragrafer som innehåller täckbestämmelser markeras med *. Övriga bestämmelser är så kallade fasta bestämmelser. 
+
+Kommentartexter och anmärkningar till begreppsbestämningar ska vara vägledande vid tillämpning och tolkning av bestämmelserna. I ABK 09 har begreppet "vårdslöshet" ersatt formuleringen "vårdslöshet eller försummelse" i ABK 96. I sak innebär detta ingen ändring. 
+
+Vid förhandlingsarbetet avseende ABK 09 har i övrigt målsättningen varit att utforma bestämmelserna på ett sätt som i lämplig omfattning och även utifrån ett övergripande branschperspektiv tillgodoser såväl beställarens som konsultens intressen vid genomförande av konsultuppdrag inom arkitekt- och ingenjörsverksamhet. ABK 09 bygger på en rimlig balans mellan rättigheter och skyldigheter som syftar till en ekonomiskt optimal riskfördelning mellan parterna. Ändringar av dessa bestämmelser ska därför undvikas. 
+
+Begreppsbestämningar med anmärkningar 
+
+Beställning: Handling upprättad av beställaren som utvisar omfattning och övriga villkor för uppdraget. 
+Betalningsplan: Handling med föreskrifter om den ordning som gäller för betalning. 
+Budget: Kostnadsbedömning avseende konsultens arbete. En budget upprättas vid ersättningsformen rörligt arvode, vanligtvis på grundval av den tid som beräknas läggas ned på uppdraget. Kostnadsbedömningen ska vara fackmässigt utförd och baserad på av beställaren givna förutsättningar. Den är dock inte bindande, vilket innebär att konsulten inte är fråntagen rätten till betalning på den grund att budgeten överskridits. Med "budgetpris" avses om inte annat anges samma sak som "budget". 
+
+Förfrågningsunderlag: Det underlag som beställaren tillhandahåller för utarbetande av anbud. 
+
+Kontrakt: Handling som undertecknas av parterna och som utvisar deras överenskommelse. 
+Exempel på kontrakt är - utöver handling som rubriceras som kontrakt - uppgörelseprotokoll och beställningsskrivelse som undertecknats av parterna och som utvisar parternas överenskommelse. 
+
+Kontraktshandlingar: Kontrakt jämte handlingar som är fogade till detta eller som i någon av dessa är angivna som gällande för uppdraget. Om parterna inte har upprättat ett kontrakt är de handlingar som utvisar parternas överenskommelse att betrakta som kontraktshandlingar. 
+
+Objektet: Fysiskt slutresultat på grundval av konsultens projektering. Objektet är vanligen en byggnad, anläggning eller del därav. 
+
+Prisbasbelopp: Prisbasbelopp enligt lagen (1962:381) om allmän försäkring. 
+
+Sidokonsult: Den som vid sidan av konsulten utför konsultuppdrag åt beställaren inom projektet. 
+
+Skriftligen: Information som kan läsas och lagras. Exempel på överföringssätt av sådan information är post, fax och e-post. 
+
+Underkonsult: Den som inom uppdraget utför konsultuppdrag åt konsulten. 
+
+Uppdragsbekräftelse: Handling upprättad av konsulten som utvisar omfattning och övriga villkor för uppdraget. 
+
+Ändring av ABK: Särreglering av fast bestämmelse. 
+
+Ändring av uppdrag: Ändring eller tillägg som påverkar omfattningen av eller tidplanen för uppdraget. Som ändring räknas även att del av uppdraget avgår. 
+
+
+KAPITEL 1 
+
+OMFATTNING 
+
+För uppdrag preciserat i samråd gäller följande. 
+Konsulten ska, innan uppdraget i övrigt påbörjas, efter samråd med beställaren klargöra: 
+
+a. omfattning av uppdraget och kvalitetsnivå för objektet 
+b. form och detaljeringsgrad för redovisning av uppdraget
+c. ersättningsform för uppdraget, och vid rörligt arvode upprätta budget 
+d. eventuell rätt till nyttjande av inom uppdraget upprättade handlingar, utöver vad som framgår av kapitel 7 § 1 
+e. om konsulten ska arkivera handlingar och i så fall på vilket sätt. 
+
+Kan inte parterna enas vid samrådet har part rätt att avbryta uppdraget. Konsulten har därvid rätt till skälig ersättning för utfört arbete i uppdraget. 
+
+Resultatet av samrådet ska dokumenteras i kontrakt, beställning eller uppdragsbekräftelse. Om fler handlingar finns som definierar uppdraget rangordnas dessa i tillämpliga delar enligt § 2. 
+
+Kommentar till kapitel 1 § 1 
+
+Med skrivningen "... innan uppdraget i övrigt påbörjas..." i andra stycket avses att arbete i uppdraget kan ha påbörjats innan precisering av uppdraget har skett. I den mån sådant arbete utförts och uppdraget därefter avbryts innan parterna enats om uppdragsprecisering är konsulten berättigad till skälig ersättning för utfört arbete. 
+
+För uppdrag preciserat i förfrågningsunderlag gäller följande. §2
+
+Uppdragets omfattning bestäms av kontraktshandlingarna. Kontraktshandlingarna kompletterar varandra om inte omständigheterna föranleder annat. Om kontraktshandlingarna innehåller uppgifter som strider mot varandra ska handlingarna gälla i följande ordning om inte omständigheterna uppenbarligen föranleder annat: 
+1 kontrakt 
+2 ändringar i ABK 09 som är upptagna i särskild sammanställning 
+3 ABK 09
+4 beställning 
+5 uppdragsbekräftelse 
+6 anbud 
+7 förfrågningsunderlag 
+8 övriga handlingar. 
+
+Om det i förfrågningsunderlaget förekommer mot varandra stridande uppgifter eller föreskrifter, ska den uppgift eller föreskrift gälla som medför lägsta kostnad för konsulten, om inte omständigheterna föranleder annat. 
+
+Kommentar till kapitel 1 § 2
+
+Vid uppdrag preciserat i förfrågningsunderlag förutsätts att anbudsgivarna får ett fullständigt och entydigt förfrågningsunderlag, innefattande bland annat uppgifter om nyttjande av uppdragsresultatet utöver vad som framgår av kapitel 7 § 1. 
+
+Om beställaren i förfrågningsunderlaget (administrativa föreskrifter eller motsvarande) intar bestämmelser som skiljer sig från vad som anges i ABK 09, så kallade särregleringar, måste dessa vara tydliga för att gälla före ABK 09. För såväl fasta bestämmelser som täckbestämmelser (se förordet) gäller att en särreglering uppfyller kravet på tydlighet om särregleringen i sig är tydlig och återfinns på lämplig plats. För att en ändring av en fast bestämmelse ska anses vara tydlig krävs därutöver att hänvisning görs till den i en sammanställning i förfrågningsunderlaget (administrativa föreskrifter eller motsvarande) över ändringar i förhållande till ABK 09. I en sådan hänvisning ska anges var i förfrågningsunderlaget som ändringen återfinns. 
+
+ Kapitel 2 
+GENOMFÖRANDE 
+
+1§ Konsulten ska genomföra uppdraget fackmässigt och med omsorg samt även i övrigt iaktta god yrkessed. 
+
+Kommentar till kapitel 2 § 1 
+
+Kraven på konsulten innefattar bland annat skyldighet att, till följd av omständigheter som framkommer under uppdragets genomförande, kontrollera uppgifter och komplettera utredningar som beställaren lämnat. Konsulten ska i dessa fall upplysa om konsekvenser samt begära precisering av uppdraget i berörd del. Ändras förutsättningarna för uppdraget kan kapitel 6 § 3 bli tillämplig. 
+
+Kraven innebär vidare att konsulten ska tillgodose beställarens intresse när en produkt eller lösning föreslås. Konsulten får till exempel inte i samband med uppdraget ta emot ersättning i någon form från annan än beställaren utan dennes medgivande. Konsulten ska även upplysa beställaren om exempelvis licensavgifter och royalties som, enligt vad konsulten känner till, beställaren kan få betala till leverantör eller annan till följd av konsultens arbete. 
+
+Inom ramen för god yrkessed är konsulten skyldig att iaktta sedvanlig sekretess beträffande den information som konsulten får genom uppdraget om beställarens verksamhet och uppdraget. I de fall beställaren önskar sekretess därutöver ska detta avtalas särskilt. 
+
+§2  Parterna ska på konsultens begäran gå igenom den information, de uppgifter och de handlingar som beställaren förfogar över och som konsulten behöver för att genomföra uppdraget. Beställaren ska överlämna dessa handlingar till konsulten. Parterna ska även i övrigt hålla varandra underrättade om förhållanden som kan antas ha betydelse för uppdraget. 
+
+§3 Konsulten ska, om så avtalats, upprätta en plan för kvalitets- och miljöstyrning för uppdraget och genomföra sina åtaganden enligt planen. Om konsulten trots uppmaning inte fullgör sina skyldigheter enligt upprättad plan för kvalitets- och miljöstyrning, får beställaren vidta rimliga åtgärder på konsultens bekostnad. 
+
+§4 I uppdraget ingår att inhämta de yttranden, godkännanden och tillstånd som krävs för att uppdraget ska kunna genomföras enligt gällande författningar, om inte annat avtalats. 
+
+§5 Beställaren ska klargöra hur och till vem information, uppgifter och handlingar ska redovisas i uppdraget. Konsulten får inte utan beställarens medgivande lämna handlingar till entreprenör eller annan för utförande av det objekt uppdraget avser. 
+
+§6 Beställarens godkännande befriar inte konsulten från ansvar för uppgifter, undersökningsmaterial eller tekniska lösningar. Konsulten är dock befriad från ansvar om denne föreslagit eller redovisat tekniska lösningar som denne bedömer vara förenade med särskilda risker och beställaren godkänt lösningarna. Om konsulten så begär ska beställaren lämna besked i sådan godkännandefråga. 
+
+Kommentar till kapitel 2 § 6 
+
+Om konsulten föreslår eller redovisar en teknisk lösning som denne bedömer vara förenad med särskilda risker följer av kravet på fackmässighet att konsulten ska informera beställaren om dessa samt vilka för- och nackdelar som föreligger. 
+
+§7 Konsulten är, om inte annat följer av författning, berättigad och skyldig att under uppdragstiden utföra av beställaren beställda ändringar av uppdraget, förutsatt att dessa står i omedelbart samband med uppdraget och inte är av väsentligt annan natur. 
+
+Kommentar till kapitel 2 § 7 
+
+Vid offentlig upphandling finns regler som i vissa situationer innebär att beställaren inte utan ny upphandling är berättigad att låta konsulten utföra tillkommande arbete. 
+
+§8 Konsulten ska utan dröjsmål skriftligen till beställaren anmäla behov av arbete som inte ingår i uppdraget eller behov av nya eller ändrade direktiv. Om beställaren framställer krav på arbete som konsulten anser ligger utanför uppdraget ska konsulten utan dröjsmål och senast innan sådant arbete påbörjas skriftligen anmäla detta till beställaren. 
+
+Kommentar till kapitel 2 § 8 
+
+Fristen "utan dröjsmål” ger möjlighet till anpassning i det enskilda fallet. En bestämd tidsfrist går inte att uppställa utan denna förutsätter en avvägning mellan kraven på att beställaren ges erforderlig tid för att kunna ta ställning till konsultens anmälan samtidigt som konsultens utförande av sitt uppdrag inte försenas. En viss fråga kan vara lämplig att anmäla och behandla först vid projekteringsmöte någon vecka efter det att frågan aktualiserats för konsulten medan, exempelvis, en fråga som har ett omedelbart samband med pågående produktion bör anmälas omedelbart. 
+
+§9 Arbete som har utförts utan beställning eller som har utförts utan att anmälan gjorts enligt § 8 berättigar inte till ersättning om inte sådan påföljd med hänsyn till omständigheterna skulle vara oskälig.
+
+Kommentar till kapitel 2 § 9 
+
+Undantagsbestämmelsen kan bli tillämplig exempelvis om konsulten måste vidta omedelbara åtgärder eller om beställaren insett eller bort inse att kravet inte omfattas av tidigare överenskommet uppdrag. 
+
+§10 Om beställaren innan objektet utförts avser att beträffande förhållande av betydelse avvika från konsultens rekommendationer eller anvisningar ska beställaren ge konsulten möjlighet att informera om de konsekvenser en tänkt avvikelse kan medföra. 
+
+Kapitel 3 
+ORGANISATION 
+
+§1 Vardera parten ska utse ett ombud för uppdraget. Ombudet, eller den ombudet utser, har behörighet att företräda sin huvudman med bindande verkan i ekonomiska och andra frågor som rör uppdraget. 
+
+§2 Konsulten får ta emot eller inhämta direktiv för uppdraget endast av sådana personer som beställaren utsett. 
+
+§3 Part ska redovisa den projektorganisation som är av väsentlig betydelse för uppdraget. Ändringar av projektorganisationen får ske först efter samråd mellan parterna. Konsulten får inte byta ut för uppdraget väsentlig personal utan medgivande av beställaren. Medgivande får inte nekas om ersättaren minst har likvärdig kompetens och i övrigt är lämplig för uppdraget. Konsulten får inte anlita underkonsult utan beställarens medgivande såvida det inte är fråga om arbetsuppgifter av rutinmässig art eller av mindre betydelse. Innan beställaren utser sidokonsult, som konsulten ska samarbeta med, ska konsulten ges tillfälle att lämna synpunkter. 
+
+§4 Beställaren ska svara för att egna, konsultens och beställarens eventuella övriga avtalsparters arbeten samordnas med varandra, om inte annat avtalats. Beställarens samordningsansvar inskränker inte konsultens skyldighet att inhämta erforderliga uppgifter för sitt eget arbete. 
+
+§5 Part har inte rätt att utan den andra partens medgivande överlåta avtalet på någon annan, om överlåtelsen är av beaktansvärd betydelse för den andra parten. 
+
+Kommentar till kapitel 3 § 5 
+
+Vid offentlig upphandling kan konsultens överlåtelse av avtalet till annan konsult betraktas som en väsentlig ändring av avtalet, vilket inte är tillåtet enligt upphandlingsreglerna. 
+
+§6 Möten ska hållas och dokumenteras i den omfattning som parterna kommit överens om. Parterna är skyldiga att delta i sådana möten och därvid företrädas av behörig person. Mellan parterna är krav på skriftlighet uppfyllt genom anteckning i mötesprotokoll. 
+
+Kommentar till kapitel 3 § 6 
+
+Vid uppdragets inledning bör startmöte hållas där parterna klargör frågor om behörighet, informationsutbyte samt övriga frågor av betydelse för parternas samverkan. 
+
+Kapitel 4 
+TIDER 
+§1 Konsulten ska på beställarens begäran upprätta förslag till den tidplan som efter överenskommelse ska gälla för uppdraget. Beställaren ska lämna underlag till förslaget. §1 Konsulten ska följa tidplanen. Beställaren ska lämna underlag, granska mottagna handlingar och lämna besked så att tidplanen kan följas. 
+
+§2 Konsulten har rätt till tidsförlängning om konsulten försenas på grund av förhållande som denne inte orsakat och vars effekt denne inte rimligen kunnat undanröja. 
+
+§3 Part som får kännedom om förhållande som kan medföra ändring av tidplanen ska utan dröjsmål skriftligen underrätta den andra parten. §3 Om part inte lämnar sådan underrättelse, får parten inte åberopa förhållandet annat än om den andra parten insett eller bort inse förhållandet och att det inverkar på tidplanen. Efter underrättelse ska konsulten upprätta förslag till den ändring av tidplanen som förhållandena föranleder. 
+
+§4 Om beställaren begär att tidplanen ska ändras eller att arbetet ska avbrytas under viss tid eller forceras, har konsulten rätt till skälig ersättning för merkostnad enligt kapitel 6 § 3. 
+
+§5 Uppdraget är, om inte annat avtalats, slutfört när uppdragsresultatet redovisats på det sätt parterna kommit överens om. 
+
+Försening 
+
+§6 Vite kan avtalas för överskridande av bestämd tid för leverans av hela eller del av uppdraget. Om konsulten överskrider sådan tid och inte har rätt till tidsförlängning ska avtalat vite betalas. Om vite inte avtalats, kan konsulten bli skadeståndsskyldig för förseningen. Sådant skadestånd är begränsat till arvodets storlek, dock högst tio prisbasbelopp. Har vite avtalats är konsulten inte skyldig att betala annat skadestånd för förseningen. Om en vitesgrundande försening uppstått som en oundviklig följd av annan vitesgrundande försening ska det sammanlagda vitet jämkas i skälig mån. 
+
+§7 Beställarens rätt till skadestånd eller vite enligt § 6 är förverkad om anspråk på ersättning inte framställts skriftligen senast tre månader efter det att uppdraget slutförts eller annars upphört. 
+
+Kapitel 5 
+ANSVAR 
+
+Ansvar för skada m.m. 
+
+§1 Konsulten ansvarar, med nedan angivna begränsningar, för skada som denne orsakat beställaren genom bristande fackmässighet, åsidosättande av sedvanlig omsorg eller annan vårdslöshet vid genomförande av uppdraget. Har beställaren visat att skada uppstått och gjort sannolikt att skadan beror på en felaktighet i konsultens handlingar eller en underlåtenhet av konsulten, ska konsulten för att fria sig från ansvar visa att han inte är ansvarig för skadan. 
+
+Kommentar till kapitel 5 § 1 
+Den skada som avses i bestämmelsen behöver inte bestå i en sakskada utan kan även avse exempelvis ekonomisk skada. Enligt allmänna kontraktsrättsliga regler föreligger en skyldighet för en skadelidande att minimera sin skada. Mot bakgrund härav bör beställaren inte avhjälpa fel eller åtgärda skada och inte heller träffa överenskommelse med en entreprenör eller en leverantör om kostnadsreglering som kan ligga till grund för skadestândskrav mot konsulten utan att först bereda konsulten tillfälle att yttra sig i frågan. 
+
+§2 Konsulten ansvarar för skador som upptäcks inom tio år från den dag konsultens uppdrag slutförts eller annars upphört. 
+
+§3 Konsultens sammanlagda skadeståndsskyldighet för uppdraget är begränsad till 120 prisbasbelopp, om inte annat avtalats. I detta belopp ska inte vite eller skadestånd för försening räknas in. 
+
+§4 Konsulten ansvarar gentemot beställaren för underkonsulters arbete som för eget arbete. Detsamma gäller det arbete som utförts av andra personer som konsulten anlitat. 
+
+§5 Konsulten är under uppdragstiden och den tid som anges i § 2 skyldig att på egen bekostnad avhjälpa fel i handlingar som konsulten tillhandahållit, om det inte medför olägenheter och kostnader för konsulten som är oskäligt stora i förhållande till felets betydelse för beställaren. Krav på att avhjälpa felet ska framföras av beställaren inom skälig tid efter det att felet upptäckts eller bort upptäckas. Om kravet framförs senare, ska beställaren svara för den merkostnad som den för sent framförda underrättelsen orsakat konsulten. Felet ska avhjälpas inom skälig tid efter det att beställaren har gett konsulten tillfälle till det. Om felet inte avhjälps trots att konsulten är skyldig att göra det, har beställaren rätt att avhjälpa felet på konsultens bekostnad. 
+
+§6 Krav på skadestånd ska för att kunna medföra rätt till ersättning framföras skriftligen inom tre månader efter det att beställaren fått skälig anledning att anta att konsulten är ansvarig för skadan, dock senast nio månader efter det att beställaren fått kännedom om skadan. Kravet ska dessutom ha framställts inom ansvarstiden som anges i § 2. 
+
+§7 Oavsett vad som anges ovan får part kvittningsvis framställa anspråk på vite eller annat skadestånd enligt kapitel 4 och 5 inom en månad efter det att den andra parten framställt krav på skadestånd med anledning av uppdraget. 
+
+§8 Beställaren får inte, som säkerhet för krav på skadestånd, hålla inne ersättning till konsulten utöver ett prisbasbelopp efter det att konsulten genom skriftlig bekräftelse från sin försäkringsgivare visat att försäkringen omfattar det skadeståndsansvar som kan komma att åläggas konsulten. 
+
+Kommentar till kapitel 5 § 8 
+
+Konsulten är enligt § 10 skyldig att ha en konsultansvarsförsäkring. Kravet på att konsultens försäkringsgivare ska bekräfta att försäkringen omfattar det skadeståndsansvar som kan åläggas konsulten innebär endast att försäkringsgivaren ska bekräfta att skadeståndskravet i och för sig omfattas av konsultansvarsförsäkringen. Det förutsätts att beställaren inte innehåller ersättning utan att ha rimlig anledning att anta att skadeståndsskyldighet föreligger för konsulten. 
+
+Försäkring 
+§9 Handlingar och datamedia som förvaras hos konsulten ska av denne vara försäkrade till betryggande belopp. 
+
+§10 Konsulten ska teckna och under ansvarstiden ha en konsultansvarsförsäkring med ett försäkringsbelopp som motsvarar avtalat skadeståndsansvar. Självrisken ska vara högst ett prisbasbelopp, om inte annat avtalats. 
+
+§11 Konsulten ska på begäran lämna beställaren bevis om att sådan konsultansvarsförsäkring finns. 
+
+Kommentar till kapitel 5 § 11 
+Saknas föreskriven försäkring är detta normalt att betrakta som ett väsentligt kontraktsbrott, vilket ger beställaren hävningsrätt enligt kapitel 8 § 1 om det inte med hänsyn till omständigheterna i det enskilda fallet skulle framstå som oskäligt. 
+
+§12 Om beställaren har framställt krav på skadestånd ska konsulten inom tre månader lämna in en skadeanmälan till sin försäkringsgivare. 
+
+Kommentar till kapitel 5 § 12 
+
+Tidsfristen om tre månader är avsedd att ge konsulten möjlighet att bedöma kravet och föra en dialog om detta med beställaren. 
+
+§13 Med prisbasbelopp enligt detta kapitel avses prisbasbeloppet vid tiden för skadans upptäckt. 
+
+Kapitel 6 
+
+EKONOMI 
+Ersättning 
+
+§1 Konsultens ersättning består av arvode och om så avtalats särskild ersättning för kostnader. Ersättningen ska indexregleras, om parterna avtalat om detta. 
+
+§2 Arvodet är rörligt eller fast. 
+a. Rörligt arvode betalas efter nedlagd tid eller annan avtalad grund. 
+b. Fast arvode avser uppdraget såsom det preciserats enligt kapitel 1. 
+
+Kommentar till kapitel 6 § 2 
+Parterna kan överenskomma om andra former för beräkning av arvodet. Sådana former kan vara incitaments- eller bonusbaserade, relaterade till uppställda mål, uppnådda resultat eller prestation, eller på annat sätt överenskomna utifrån ansvarstagande och riskfördelning. 
+
+§3 Om uppdraget förändras och detta påverkar konsultens kostnader, ska ersättningen justeras vid: 
+a. ändringar av uppdraget som beställts eller anmälts i enlighet med kapitel 2§7 eller kapitel 2 § 8 
+b. forcering av arbetet på beställarens begäran  
+c. ändring av tidplan som beror på en omständighet som beställaren svarar för 
+d. oförutsedda beslut eller åtgärder av en myndighet som i mer än ringa mån påverkar uppdragets omfattning. 
+
+Vid justering av fast arvode ska i första hand en överenskommelse om nytt fast arvode träffas. Kan en sådan överenskommelse inte träffas ska arvodet justeras utifrån avtalat eller skäligt timarvode. 
+
+§4 Om beställaren anlitar någon annan än konsulten för sådant arbete som anges kapitel 2 § 7, är konsulten berättigad till ersättning för därigenom uppkomna kostnader jämte ersättning för utebliven vinst. 
+
+§5 Särskild ersättning för kostnader ska, om så avtalats, betalas för underkonsult och för följande: 
+a. instrument, fältutrustning eller laboratorieundersökning 
+b. dator och/eller datorprogram för beräkningar, ritningsarbete e.d. 
+c. kopiering 
+d. modelltillverkning 
+e. rese-och traktamentskostnader 
+f. övriga i avtalet specificerade kostnader. 
+
+På särskild ersättning kan avtalas om procentuella pålägg på konsultens verifierade självkostnad. 
+
+§6 Om inte annat avtalats, ska konsulten vid rörligt arvode månadsvis underrätta beställaren om totalt på uppdraget upparbetat arvode och nedlagda kostnader. Om överenskommen budget inte kan hållas, ska konsulten utan dröjsmål skriftligen underrätta beställaren om detta. 
+
+§7 Ersättning lämnas inte för konsultens avhjälpande av fel i handlingar som upprättats eller tillhandahållits av konsulten. Om felet föranletts av oriktig uppgift från myndighet, beställaren eller någon som beställaren anlitat, ska dock avhjälpandet ersättas med avtalat eller annars skäligt belopp, såvida inte konsulten insåg eller bort inse att uppgiften var oriktig. 
+
+Betalning 
+
+§8 Betalning erläggs enligt avtalad betalningsplan och mot faktura. Om inte annat avtalats genom betalningsplan eller på annat sätt får konsulten fakturera en gång varje månad motsvarande värdet av utfört arbete. Fakturering och betalning av ändringar av uppdraget ska ske månadsvis. 
+
+§9 Av fakturan, eller i samband med fakturering lämnad redovisning, ska arten och omfattningen av utfört arbete framgå. Fakturan ska betalas inom 30 dagar efter mottagandet, om inte annat avtalats. Om parterna är oense om någon del av fakturan ska dock ostridigt belopp betalas inom denna tid. §9* Vid försenad betalning utgår ränta enligt räntelagen. 
+
+§10 Beställaren ska utöver ersättning betala den mervärdesskatt som följer av författning. 
+
+§11 Om det finns starka skäl för en part att anta att den andra parten inte kommer att §11 uppfylla en väsentlig del av sina skyldigheter, får parten innehålla sin egen prestation. I sådant fall ska den andra parten genast underrättas. Om denne ställer godtagbar säkerhet för att skyldigheterna kommer att fullgöras har parten inte längre rätt att innehålla sin prestation. 
+
+§12 För konsultens fordringar avseende uppdraget gäller en preskriptionstid om fyra månader räknat från det att uppdraget slutförts. Detta gäller dock inte konsultens fordringar till den del de avser överenskommet fast arvode och mervärdesskatten på arvodet. Om konsulten inte känt till eller borde ha känt till sin fordran och kan visa detta, räknas preskriptionstiden om fyra månader från den tidpunkt då konsulten först borde ha känt till den. Preskriptionstiden ska dock aldrig vara längre än tio år räknat från uppdragets slutförande. 
+
+Avbeställning 
+§13 Beställaren har rätt att avbeställa sådana delar av uppdraget som inte genomförts. Om avbeställningen beror på myndighetsbeslut som beställaren inte kunnat råda över, har konsulten rätt till ersättning för utfört arbete, nedlagd kostnad och skälig kostnad för avveckling som inte ersätts på annat sätt. Detsamma gäller om förutsättningarna för fullföljandet av uppdraget, utanför beställarens rådighet, har ändrats i väsentlig omfattning och det med hänsyn till detta inte är rimligt att fullfölja uppdraget. Vid annan avbeställning har konsulten därutöver, med hänsyn till uppdragets art och omfattning, rätt till ersättning för utebliven skälig vinst på sådan del av uppdraget som inte ska genomföras till följd av avbeställningen. Vid avbeställning ska resultatet av utfört arbete redovisas och överlämnas beställaren senast när beställaren fullgjort sin betalningsskyldighet. Efter överlämnande får resultatet av uppdraget användas på samma sätt som om uppdraget fullföljts. 
+
+Kapitel 7 
+RÄTT TILL UPPDRAGSRESULTATET 
+
+§1* Beställaren har, om inte annat avtalats, rätt att använda och kopiera redovisat uppdragsresultat endast för det med uppdraget avsedda ändamålet. 
+Kommentar till kapitel 7 § 1 
+Bestämmelsen understryker vikten av att parterna i avtalet noga anger ändamålet med uppdraget. Bestämmelsen avser uppdragsresultatet i dess helhet. Beställaren får normalt utöver avtalat uppdrag, på eget ansvar, använda enskilda i uppdragsresultatet redovisade lösningar. Användande av sådana lösningar får endast ske under förutsättning att upphovsrätt och andra immaterialrättigheter beaktas. 
+
+§2 Den som efter det att uppdraget slutförts, i egenskap av ägare eller brukare av objektet, avser att ändra i detta eller vidta någon annan åtgärd för dess förvaltning får utan konsultens medgivande och utan att betala ersättning, använda resultatet av uppdraget i ett sådant syfte. Därvid ska, i den utsträckning god sed kräver, konsultens intressen beaktas och konsulten namnges. 
+
+§3 Beställaren ska skydda uppdragsresultatet från otillbörlig kopiering och spridning. 
+
+§4 Den som tagit emot idéförslag eller annan handling som lämnats i samband med anbud eller förhandling om uppdrag får inte utan förslagsställarens medgivande använda eller sprida sådan handling. 
+
+Kommentar till kapitel 7 § 3 och § 4 
+Utlämnande av uppgifter med stöd av offentlighetsprincipen kan aldrig anses som otillbörligt eller på annat sätt otillåtet. 
+
+§5 Part ansvarar för att de handlingar som tillhandahålls av denne får användas för avsett eller särskilt avtalat ändamål. Detta gäller dock inte om den andra parten insett eller bort inse att så inte är fallet. 
+
+§6 Beställaren ska namnge konsulten då uppdragsresultatet eller objektet presenteras.
+
+§7 Beställaren får inte överlåta nyttjanderätten eller andra rättigheter till uppdragsresultatet på någon annan, om inte konsulten fått avtalsenlig betalning eller godtagbar säkerhet ställts. 
+
+Kommentar till kapitel 7 § 7 
+Bestämmelsen tar upp överlåtelse av rättigheterna till uppdragsresultatet. Överlåtelse av själva uppdragsavtalet regleras i kapitel 3 § 5. Bestämmelsen om överlåtelse av rättigheter gäller oavsett om uppdragsresultatet är upphovsrättsligt skyddat eller inte. 
+
+§8 Konsulten har, om inte annat avtalats, äganderätten till originalhandlingarna liksom till de datafiler som handlingarna framställts ur. 
+
+Kommentar till kapitel 7 § 8 
+ABK 09 innehåller inga bestämmelser om skyldighet för konsulten att arkivera uppdragsresultatet. Anledning härtill är dels att beställaren tillerkänns en kopieringsrätt enligt § 1, dels att behovet av arkivering varierar mellan olika uppdrag. Parterna bör därför i det enskilda avtalet överväga behovet av arkivering vad gäller omfattning och tid. 
+
+§9 Demonstrationsmaterial som beställaren särskilt beställt och bekostat är dennes egendom. 
+
+Rätt till uppfinning 
+§10 Om en uppfinning har tillkommit väsentligen som ett resultat av ett uppdrag som innebär forsknings- eller utvecklingsarbete eller om uppfinningen innebär lösningen av en i uppdraget närmare angiven uppgift, har beställaren rätt att helt eller delvis inträda som rättsinnehavare med avseende på uppfinningen. Konsulten ska utan dröjsmål upplysa beställaren när en uppfinning tillkommit som ger beställaren rättighet enligt denna paragraf. Vill beställaren förvärva sådan rätt ska beställaren meddela konsulten detta senast tre månader från den tidpunkt beställaren av konsulten fått upplysning om att det är fråga om en uppfinning. Parterna ska omedelbart efter det att meddelandet lämnats samråda om skydd mot uppfinningens spridning till utomstående. 
+
+§11 Andra uppfinningar än de som anges i § 10 och som tillkommit i samband med uppdraget, har beställaren rätt att nyttja för objektet. 
+
+§12 Om värdet av den rätt till uppfinningen som beställaren får uppenbarligen överstiger vad som kunnat förutsättas med hänsyn till konsultens arvode och andra omständigheter, har konsulten rätt till skälig ersättning utöver arvodet. Krav på sådan ersättning ska framställas senast en månad efter den tidpunkt då konsulten fått giltigt ersättningskrav från anställd uppfinnare dock senast sex månader efter det att konsulten slutfört uppdraget. 
+
+Kapitel 8 
+HÄVNING 
+
+§1 Beställaren har rätt att häva avtalet och få ersättning för skada om konsulten
+ 
+a. väsentligt misskött uppdraget och inte utan dröjsmål efter skriftlig anmodan vidtagit rättelse 
+b. i väsentligt hänseende brutit mot avtalet och inte utan dröjsmål efter skriftlig anmodan vidtagit rättelse 
+c. kommer på obestånd och inte ofördröjligen efter begäran ställer betryggande säkerhet för sitt åtagande 
+d. utan medgivande från beställaren överlåter avtalet på annan och detta är beaktansvärd betydelse för beställaren. 
+
+Konsulten har rätt till den ersättning som svarar mot vad arbetet är värt. av Konsulten ska snarast efter besked om hävning överlämna resultatet av utfört arbete till beställaren. Hävning ska ske skriftligen. 
+
+§2 Konsulten har rätt att häva avtalet om beställaren 
+
+a. i väsentligt hänseende brutit mot avtalet och inte utan dröjsmål efter skriftlig anmodan vidtagit rättelse 
+b. vidhåller begäran som innebär att konsulten ska efterge kravet på god yrkessed 
+c. kommer på obestånd och inte ofördröjligen efter begäran ställer betryggande säkerhet för sitt åtagande. 
+d. utan medgivande från konsulten överlåter avtalet på någon annan och detta är av beaktansvärd betydelse för konsulten. 
+
+Konsulten är i dessa fall berättigad till ersättning för utförd del av uppdraget, skälig kostnad för avveckling samt utebliven skälig vinst på den del av uppdraget som inte blivit utförd. Konsulten ska överlämna uppdragsresultatet senast när beställaren fullgjort sin betalningsskyldighet. Hävning ska ske skriftligen. 
+
+§3 Efter överlämnande enligt § 1 och § 2 får resultatet av uppdraget användas på§3 samma sätt som om uppdraget fullföljts. 
+
+Kapitel 9 
+TVISTELÖSNING 
+
+§1 Om parterna inte kommer överens om annat, ska tvist avgöras av allmän domstol. 
+
+§2 Den omständigheten att en tvist har hänskjutits till rättsligt avgörande berättigar inte konsulten att avbryta uppdraget. Beställaren har inte heller på sådan grunp rätt att innehâlla belopp som inte direkt omfattas av tvisten, eller underlåta att i övrigt fullgöra sina åligganden. 
+
+§3 Oberoende av vad som föreskrivs i detta kapitel har part rätt att ansöka hos myndighet om betalning av ostridig och förfallen fordran avseende uppdraget. 
+
+Kapitel 10 
+FÖRENKLAD TVISTELÖSNING 
+
+§1 Råder oenighet mellan parterna på grund av uppdraget kan de gemensamt hänskjuta frågan till avgörande av en därtill lämpad ojävig skiljeperson (förenklad tvistelösning). 
+
+Sedan parterna kommit överens om att pröva en fråga genom förenklad tvistelösning, ska de gemensamt utse en skiljeperson, om inte sådan utsetts i kontraktshandlingarna. 
+
+Part ska inom en vecka från det att en skiljeperson utsetts eller, om sådan utsetts i kontraktshandlingarna, inom en vecka från det att parterna kommit överens om förenklad tvistelösning, skriftligen yttra sig och därvid klargöra sin inställning i frågan samt ange om sammanträde inför skiljepersonen begärs. Yttrandet och de handlingar som parten vill åberopa ska skickas över till såväl skiljepersonen som motparten. 
+
+Part har därefter rätt att yttra sig en gång över vad motparten anfört, om inte skiljepersonen anser det nödvändigt med ytterligare skriftväxling. Yttrandet ska skickas till skiljepersonen och motparten inom en vecka från det att parten mottagit motpartens yttrande enligt stycket ovan. 
+
+Skiljepersonen ska inom fyra veckor från mottagandet av de handlingar som parterna åberopar skriftligen meddela parterna sitt beslut med en kort motivering. I beslutet ska anges vem av parterna som slutligt ska betala skiljepersonens arvode. Vardera parten står för sina egna kostnader. Skiljepersonens beslut är bindande för parterna intill dess de enas om annan lösning eller frågan, efter missnöjesanmälan, slutligt avgörs av antingen allmän domstol eller skiljenämnd. 
+
+Anmälan om missnöje mot skiljepersonens beslut ska göras skriftligen till motparten senast en månad efter det att parten fått del av skiljepersonens beslut. Om ingen av parterna anmält missnöje i rätt tid ska parterna anses ha godtagit skiljepersonens beslut, vilket innebär att frågan ska anses slutligt avgjord. 
+
+Om part väcker talan enligt kapitel 9 i fråga som är föremål för förenklad tvistelösning ska den förenklade tvistelösningen avbrytas. Den part som väcker talan under den förenklade tvistelösningen ska i så fall betala skiljepersonens arvode. 
+
+ABK 09 svenskbyggtjänst ISBN 978-91-7333-383-2 9 789173 333832

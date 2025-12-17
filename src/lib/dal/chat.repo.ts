@@ -56,6 +56,19 @@ export const ChatRepo = {
         return newSession;
     },
 
+    async archiveActiveSession(userId: string) {
+        const snapshot = await db.collection(SESSION_COLLECTION)
+            .where('userId', '==', userId)
+            .where('status', '==', 'active')
+            .get();
+
+        const batch = db.batch();
+        snapshot.docs.forEach(doc => {
+            batch.update(doc.ref, { status: 'archived', updatedAt: Timestamp.now() });
+        });
+        await batch.commit();
+    },
+
     async addMessage(sessionId: string, role: 'user' | 'model' | 'system', content: string, draft?: any) {
         const sessionRef = db.collection(SESSION_COLLECTION).doc(sessionId);
 
