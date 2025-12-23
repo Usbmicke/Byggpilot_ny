@@ -3,7 +3,8 @@ export const AI_MODELS = {
     SMART: 'googleai/gemini-3-pro-preview',
     // Found via Search: 'gemini-2.5-flash'
     FAST: 'googleai/gemini-2.5-flash',
-    EMBEDDING: 'googleai/text-embedding-004'
+    EMBEDDING: 'googleai/text-embedding-004',
+    MOCK: 'mock-free'
 };
 
 export const AI_CONFIG = {

@@ -11,6 +11,8 @@
     "start": "next start",
     "lint": "next lint",
     "genkit": "genkit start",
+    "genkit:mock": "set GENKIT_ENV=mock && genkit start",
+    "dev:mock": "set GENKIT_ENV=mock && next dev",
     "dev:all": "concurrently --kill-others-on-fail \"npm:genkit\" \"npm:dev\"",
     "test:e2e": "playwright test"
   },

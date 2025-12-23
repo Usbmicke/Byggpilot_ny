@@ -1,0 +1,40 @@
+# .antigravityrules
+
+## 0. META-RULES (NON-NEGOTIABLE)
+1. **NO LEGACY CODE**:
+   - ❌ NO `pages/api` (App Router ONLY).
+   - ❌ NO `useEffect` for data fetching (Use SWR or Server Actions).
+   - ❌ NO manual `fetch()` calls for internal APIs.
+   - ❌ NO `next-auth` or `@auth/firebase-adapter`.
+   - ❌ NO `axios`.
+   - ❌ NO `src/services` layer (Use `src/lib/dal`).
+
+2. **ARCHITECTURE: THE GREAT DIVIDE**
+   - **Server-Zone (`src/lib/genkit/`, `src/genkit/`, `src/lib/dal/`)**:
+     - MUST start with `import 'server-only';`.
+     - `src/lib/dal` is the **ONLY** place for `firebase-admin` and direct DB access.
+   - **Client-Zone (`src/app/`, `src/components/`, `src/hooks/`)**:
+     - MUST use `'use client'` if interactive.
+     - NEVER import Server-Zone directly (will crash build).
+   - **The Bridge (`src/app/actions.ts` or `src/app/api/[[...genkit]]/route.ts`)**:
+     - `actions.ts`: Must start with `'use server';`.
+     - `src/app/api/[[...genkit]]/route.ts`: The **ONLY** allowed API route.
+
+3. **GENKIT IMPLEMENTATION (GOLD STANDARD)**
+   - Use `genkit` from `genkit` package (NOT `configureGenkit`).
+   - Use `ai.generate()` NOT `getGenerativeModel`.
+   - Import auth from `@genkit-ai/firebase/auth`.
+   - **ALL** flows must use Zod for `inputSchema` and `outputSchema`.
+   - **ALL** flows must have an `authPolicy`.
+
+4. **DATA & STATE**
+   - **Frontend**: Use `useGenkit` hook (SWR wrapper) for calling flows.
+   - **Backend**: Use `src/lib/dal` Repositories (`user.repo.ts`, etc.) for data access.
+
+5. **SAFETY & PROCESS**
+   - **Plan First**: Create/update `implementation_plan.md` before coding.
+   - **Sanitize**: Run `ls -R` before creating files.
+   - **Type Safety**: TypeScript Strict Mode (`noImplicitAny`).
+   - **Error Handling**: 
+     - Frontend: Sentry + Error Boundaries (`error.tsx`).
+     - Backend: JSON logging for Google Cloud Error Reporting.
