@@ -78,22 +78,28 @@ export const CompanyRepo = {
 
             const data = doc.data() as CompanyData;
 
-            // 1. Ensure Series ID (Random 4 digits: 1000-9999)
+            // 1. Ensure Series ID (Random range 3000-9999)
             let seriesId = data.projectSeriesId;
             if (!seriesId) {
-                seriesId = Math.floor(Math.random() * (9999 - 1000 + 1) + 1000);
+                // Random integer between 3000 and 9999
+                seriesId = Math.floor(Math.random() * (9999 - 3000 + 1) + 3000);
                 t.set(ref, { projectSeriesId: seriesId }, { merge: true });
             }
 
-            // 2. Increment Counter (Start at 100 if missing or low)
-            let counter = data.projectCounter || 100;
-            if (counter < 100) counter = 100; // Enforce minimum 3 digits
+            // 2. Increment Counter
+            let counter = data.projectCounter;
 
-            counter += 1;
+            // If no counter exists, start at a random number between 100 and 499
+            // This gives the "entered in the middle" feel the user requested
+            if (!counter) {
+                counter = Math.floor(Math.random() * (499 - 100 + 1) + 100);
+            } else {
+                counter += 1;
+            }
 
             t.set(ref, { projectCounter: counter }, { merge: true });
 
-            // Format: "2453-101"
+            // Format: "3450-123"
             return `${seriesId}-${counter}`;
         });
     }

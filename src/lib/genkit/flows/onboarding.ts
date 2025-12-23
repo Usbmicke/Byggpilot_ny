@@ -27,7 +27,7 @@ export const onboardingFlow = ai.defineFlow(
         // Stub implementation
         return {
             success: true,
-            message: 'Onboarding stub completed',
+            message: 'Onboarding stub completed (TODO: Implement full logic)',
             user: {}
         };
     }

@@ -65,7 +65,7 @@ export const emailAnalysisFlow = ai.defineFlow(
         // ... schemas ...
 
         const { output } = await ai.generate({
-            model: AI_MODELS.FAST, // Speed is key for batch processing
+            model: process.env.GENKIT_ENV === 'mock' ? AI_MODELS.MOCK : AI_MODELS.FAST, // Speed is key for batch processing (or Mock)
             config: { temperature: AI_CONFIG.temperature.precise }, // Precision is key for data extraction
             prompt: prompt,
             output: { schema: EmailAnalysisOutput },

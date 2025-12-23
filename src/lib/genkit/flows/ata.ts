@@ -52,7 +52,7 @@ export const ataFlow = ai.defineFlow(
     `;
 
         const { output } = await ai.generate({
-            model: AI_MODELS.FAST, // Gemini Flash for speed/cost
+            model: process.env.GENKIT_ENV === 'mock' ? AI_MODELS.MOCK : AI_MODELS.FAST, // Gemini Flash for speed/cost (or Mock)
             config: { temperature: 0.3 }, // Low temp for precision
             prompt: prompt,
             output: { schema: AtaOutput },

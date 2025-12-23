@@ -37,17 +37,24 @@ export const offerFlow = ai.defineFlow(
         Project: "${input.projectTitle}"
         Notes: "${input.notes}"
 
-        1. Break down work into logical line items (Arbete, Material, etc).
-        2. ESTIMATE QUANTITIES CAREFULLY.
-        3. IGNORE PRICES. Set 'unitPrice' to 0. The system will price them.
-        4. "unit" should be Swedish (tim, st, m2, lpm).
-        5. Write professional Intro and Closing texts.
+        **YOUR MISSION: Create a STRUCTURED DRAFT for the user to review.**
+        
+        Rules:
+        1. Break down work into logical line items (Arbete, Material, Etablering, etc).
+        2. **ESTIMATE QUANTITIES CAREFULLY**, but if unsure, be conservative.
+        3. **PRICING:** Set 'unitPrice' to 0. The system has a Price Book that will overwrite this.
+        4. **UNITS:** Use Swedish standard: "tim" (hours), "st" (pieces), "m2", "lpm", "kpl" (complete package).
+        5. **TEXTS:** Write professional Intro and Closing texts.
+           - Intro: "Här kommer offert på..."
+           - Closing: "Offereras enligt ABT 06..."
+        
+        **IMPORTANT:** If you are guessing a quantity (e.g. guessing 20m2 from "small room"), append "(UPPSKATTAT)" to the description so the user knows to check it.
 
-        Return valid JSON.
+        Return valid JSON matching the schema.
         `;
 
         const { output } = await ai.generate({
-            model: AI_MODELS.SMART,
+            model: process.env.GENKIT_ENV === 'mock' ? AI_MODELS.MOCK : AI_MODELS.SMART,
             config: { temperature: AI_CONFIG.temperature.creative },
             prompt: prompt,
             output: { schema: OfferOutputSchema }

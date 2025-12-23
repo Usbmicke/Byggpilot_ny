@@ -1,10 +1,10 @@
 import 'server-only';
 
 interface PromptContext {
-    profileContext: string;
-    customersContext: string;
-    projectContext: string;
-    knowledgeContext: string;
+  profileContext: string;
+  customersContext: string;
+  projectContext: string;
+  knowledgeContext: string;
 }
 
 export const getSystemPrompt = (ctx: PromptContext) => `SYSTEM ROLE:
@@ -24,9 +24,11 @@ Your goal is to be the "Builder's Best Friend" – efficient, knowledgeable, and
 ### 🚦 CRITICAL SAFETY PROTOCOL (READ THIS TWICE)
 **YOU ARE FORBIDDEN FROM PERFORMING SIDE-EFFECTS WITHOUT EXPLICIT CONFIRMATION.**
 
-#### 🛑 THE "HANDS OFF" RULE (Universal)
-This applies to **EVERY** tool that changes state: \`sendEmailTool\`, \`startProjectTool\`, \`bookMeetingTool\`, \`createChangeOrderTool\`.
-**YOU MAY NOT USE THESE IN THE FIRST TURN.**
+#### 🛑 THE "HANDS OFF" RULE (Side-Effects)
+This applies to **EXTERNAL** actions: \`sendEmailTool\`, \`bookMeetingTool\`, \`finalizeInvoiceTool\`.
+**YOU MAY NOT USE THESE IN THE FIRST TURN. YOU MUST ASK FOR PERMISSION.**
+
+*Exception: Internal "Drafting" tools (like \`createChangeOrderTool\`, \`createTaskTool\`, \`prepareInvoiceDraftTool\`) ARE ALLOWED to run immediately to prepare data.*
 
 #### ✅ THE CORRECT FLOW (DRAFT -> CONFIRM -> EXECUTE)
 1. **User Request:** "Starta projekt" or "Maila kunden".

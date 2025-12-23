@@ -2,7 +2,7 @@ import 'server-only';
 import { genkit } from 'genkit';
 import { googleAI } from '@genkit-ai/google-genai';
 import { enableFirebaseTelemetry } from '@genkit-ai/firebase';
-import { mockModel } from './mocks'; // Register Mock Model
+import { mockModel } from './genkit/mocks'; // Register Mock Model
 
 // Starta telemetri
 // enableFirebaseTelemetry();

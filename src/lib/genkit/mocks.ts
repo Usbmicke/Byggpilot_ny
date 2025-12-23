@@ -1,11 +1,11 @@
 import 'server-only';
-import { defineModel, GenerationCommonConfigSchema } from 'genkit';
+import { defineModel, GenerationCommonConfigSchema } from 'genkit/model';
 
 export const mockModel = defineModel({
     name: 'mock-free',
     label: 'Mock Model (Free)',
     configSchema: GenerationCommonConfigSchema,
-}, async (input) => {
+}, async (input: any) => {
     const lastMsg = input.messages[input.messages.length - 1];
     const query = lastMsg?.content?.[0]?.text || "(No text)";
 

@@ -58,8 +58,31 @@ export const InvoiceService = {
             html += `</ul>`;
         }
 
-        // Section 4: Goodwill / Quality Log
-        html += `<h2>3. Kvalitetslogg & Mervärde</h2>`;
+        // Fetch Logs
+        const { LogRepo } = await import('@/lib/dal/log.repo');
+        const logs = await LogRepo.listUnbilledByProject(projectId);
+
+        // Section 4: Work Logs (Time & Mileage)
+        if (logs.length > 0) {
+            html += `<h2>3. Tid & Resor (Löpande)</h2>`;
+            html += `<table border="1" style="border-collapse: collapse; width: 100%;"><tr><th>Beskrivning</th><th>Antal</th><th>Enhetspris</th><th>Summa</th></tr>`;
+
+            logs.forEach(log => {
+                const unit = log.type === 'time' ? 'h' : 'km';
+                const price = log.type === 'time' ? 650 : 25; // Default rates: 650kr/h, 25kr/km
+                const total = log.amount * price;
+                html += `<tr>
+                    <td>${log.type === 'time' ? 'Arbetstid' : 'Milersättning'} - ${log.description || new Date(log.date.toDate()).toLocaleDateString()}</td>
+                    <td>${log.amount} ${unit}</td>
+                    <td>${price} kr</td>
+                    <td>${total} kr</td>
+                </tr>`;
+            });
+            html += `</table>`;
+        }
+
+        // Section 5: Goodwill / Quality Log
+        html += `<h2>4. Kvalitetslogg & Mervärde</h2>`;
         html += `<p>För att säkerställa långsiktig kvalitet har vi även utfört följande kontroller utan extra debitering:</p>`;
         html += `<ul><li>Kontrollmätt fuktkvot i underlag.</li><li>Grovstädat arbetsplats dagligen.</li><li>(Fyll på med egna punkter...)</li></ul>`;
 
@@ -82,9 +105,6 @@ export const InvoiceService = {
 
     /**
      * Finalizes the Invoice: Locks PDF, Emails Customer, Updates Project & ÄTAs.
-     */
-    /**
-     * Finalizes the Invoice: Locks PDF, Emails Customer, Updates Project & ÄTAs.
      * NOW USES NATIVE PDF GENERATION (PdfService)
      */
     async finalizeInvoice(input: {
@@ -100,9 +120,11 @@ export const InvoiceService = {
         const { ProjectRepo } = await import('@/lib/dal/project.repo');
         const { UserRepo } = await import('@/lib/dal/user.repo');
         const { CompanyRepo } = await import('@/lib/dal/company.repo');
+        const { LogRepo } = await import('@/lib/dal/log.repo');
 
         // 1. Gather Data (Source of Truth = DB)
         const projectData = await InvoiceRepo.collectProjectData(input.projectId);
+        const logs = await LogRepo.listUnbilledByProject(input.projectId);
 
         // Fetch Contractor (Company) Info
         const project = await ProjectRepo.get(input.projectId);
@@ -134,7 +156,7 @@ export const InvoiceService = {
             }
         }
 
-        // Map Items (Offer + ÄTAs)
+        // Map Items (Offer + ÄTAs + Logs)
         const pdfItems: any[] = [];
 
         // Offer Items
@@ -158,12 +180,22 @@ export const InvoiceService = {
                 description: `ÄTA: ${ata.description}`,
                 quantity: ata.quantity || 1,
                 unit: ata.unit || 'st',
-                pricePerUnit: ata.estimatedCost, // Assuming estimatedCost is unit price or total? Usually total for ÄTA.
-                // If estimatedCost is TOTAL, we should adjust.
-                // Repo says: estimatedCost: number; // Exkl moms
-                // Let's assume quantity 1 for simplicity if not specified
+                pricePerUnit: ata.estimatedCost,
                 total: ata.estimatedCost,
-                isRotEligible: (ata.type === 'work') // Explicit type check from Repo
+                isRotEligible: (ata.type === 'work')
+            });
+        });
+
+        // Time & Mileage Logs
+        logs.forEach(log => {
+            const price = log.type === 'time' ? 650 : 25;
+            pdfItems.push({
+                description: `${log.type === 'time' ? 'Arbetstid' : 'Resa'}: ${log.description || '-'}`,
+                quantity: log.amount,
+                unit: log.type === 'time' ? 'h' : 'km',
+                pricePerUnit: price,
+                total: log.amount * price,
+                isRotEligible: log.type === 'time' // Time is ROT eligible
             });
         });
 

@@ -54,7 +54,7 @@ function PrimaryButton({ onClick, disabled, loading, children, className, varian
 }
 
 export function FinalInvoiceModal({ isOpen, onClose, projectId, projectTitle, customerEmail }: { isOpen: boolean, onClose: () => void, projectId: string, projectTitle: string, customerEmail?: string }) {
-    const accessToken = "";
+    const { getToken } = useAuth();
 
     const [step, setStep] = useState<1 | 2 | 3 | 4>(1);
     const [loading, setLoading] = useState(false);
@@ -79,7 +79,8 @@ export function FinalInvoiceModal({ isOpen, onClose, projectId, projectTitle, cu
     const handleCreateDraft = async () => {
         setLoading(true);
         setError(null);
-        const res = await prepareDraftAction(projectId, accessToken);
+        const accessToken = await getToken();
+        const res = await prepareDraftAction(projectId, accessToken || "");
         setLoading(false);
         if (res.success) {
             setDraftLink(res.link);
@@ -93,6 +94,7 @@ export function FinalInvoiceModal({ isOpen, onClose, projectId, projectTitle, cu
     const handleFinalize = async () => {
         setLoading(true);
         setError(null);
+        const accessToken = await getToken();
         const res = await finalizeInvoiceAction({
             projectId,
             draftDocId: draftId,
@@ -100,7 +102,7 @@ export function FinalInvoiceModal({ isOpen, onClose, projectId, projectTitle, cu
             emailSubject,
             emailBody,
             confirmLock: true
-        }, accessToken);
+        }, accessToken || "");
 
         setLoading(false);
         if (res.success) {

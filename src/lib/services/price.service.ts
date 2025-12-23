@@ -11,7 +11,7 @@ export interface PriceItem {
 // MOCK PRICE BOOK
 const PRICE_BOOK: PriceItem[] = [
     // Work
-    { id: 'w1', description: 'Snickare', unit: 'tim', unitPrice: 650000, category: 'work' }, // WTF? 650000? No, 650. Fixed below.
+    { id: 'w1', description: 'Snickare', unit: 'tim', unitPrice: 650, category: 'work' },
     { id: 'w2', description: 'Målare', unit: 'tim', unitPrice: 600, category: 'work' },
     { id: 'w3', description: 'Elektriker', unit: 'tim', unitPrice: 750, category: 'work' },
     { id: 'w4', description: 'Rörmokare', unit: 'tim', unitPrice: 750, category: 'work' },
