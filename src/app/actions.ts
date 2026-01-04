@@ -13,6 +13,7 @@ import { CalendarService } from '@/lib/google/calendar';
 import { db } from '@/lib/dal/server';
 import { CompanyRepo } from '@/lib/dal/company.repo';
 import { UserRepo } from '@/lib/dal/user.repo';
+import { getAuthenticatedUser, checkOwnership } from '@/lib/auth';
 
 import { syncChecklistAction, getTasksAction } from '@/app/actions/tasks';
 export { syncChecklistAction, getTasksAction };
@@ -36,6 +37,8 @@ export async function generateTextAction(prompt: string) {
 // --- GOOGLE DRIVE ---
 export async function createCompanyDriveFolderAction(accessToken: string, companyName: string): Promise<{ success: boolean; folderId?: string; error?: string }> {
   try {
+    await getAuthenticatedUser(); // Verify session exists
+
     // 1. Create Root Folder
     const rootMetadata = {
       name: `ByggPilot - ${companyName}`,
@@ -89,45 +92,32 @@ export async function createCompanyDriveFolderAction(accessToken: string, compan
 }
 
 // --- CHAT ---
-// --- CHAT ---
-export async function chatAction(messages: any[], uid?: string, accessToken?: string) {
+// REMOVED unsafe args (uid). Now derives user from session.
+export async function chatAction(messages: any[], accessToken?: string) {
   try {
-    console.log('💬 Chat Action Triggered', uid ? `for user ${uid}` : '(no user)');
+    const user = await getAuthenticatedUser();
+    console.log('💬 Chat Action Triggered for user', user.uid);
 
     // 1. Persistence Setup
-    let sessionId = null;
-    let history: any[] = [];
+    const { ChatRepo } = await import('@/lib/dal/chat.repo');
+    const session = await ChatRepo.getOrCreateActiveSession(user.uid);
+    const sessionId = session.id;
 
-    if (uid) {
-      const { ChatRepo } = await import('@/lib/dal/chat.repo');
-      const session = await ChatRepo.getOrCreateActiveSession(uid);
-      sessionId = session.id;
-
-      // 2. Add Newest User Message (The last one in the Client array)
-      const lastMsg = messages[messages.length - 1];
-      if (lastMsg && lastMsg.role === 'user') {
-        await ChatRepo.addMessage(session.id, 'user', lastMsg.content);
-      }
-
-      // 3. Load DB History for Context (Limit ~20 for AI speed)
-      const dbMsgs = await ChatRepo.getHistory(session.id, 20);
-      history = dbMsgs.map(m => ({ role: m.role, content: m.content }));
-    } else {
-      // Fallback for anonymous (shouldn't happen in protected app)
-      history = messages.slice(-10);
+    // 2. Add Newest User Message (The last one in the Client array)
+    const lastMsg = messages[messages.length - 1];
+    if (lastMsg && lastMsg.role === 'user') {
+      await ChatRepo.addMessage(session.id, 'user', lastMsg.content);
     }
+
+    // 3. Load DB History for Context (Limit ~20 for AI speed)
+    const dbMsgs = await ChatRepo.getHistory(session.id, 20);
+    const history = dbMsgs.map(m => ({ role: m.role, content: m.content }));
 
     // 4. Run AI
-    const response = await runFlow(chatFlow, { messages: history, uid, accessToken });
+    const response = await runFlow(chatFlow, { messages: history, uid: user.uid, accessToken });
 
     // 5. Save AI Response
-    if (uid && sessionId) {
-      const { ChatRepo } = await import('@/lib/dal/chat.repo');
-      // Check if response has structured data (drafts)? Currently chatFlow returns string text mostly.
-      // If we want to capture tool outputs we need to refactor flow return type. 
-      // For now, chatFlow returns "text".
-      await ChatRepo.addMessage(sessionId, 'model', response);
-    }
+    await ChatRepo.addMessage(sessionId, 'model', response);
 
     return { success: true, text: response, sessionId };
   } catch (error: any) {
@@ -136,10 +126,11 @@ export async function chatAction(messages: any[], uid?: string, accessToken?: st
   }
 }
 
-export async function loadChatHistoryAction(uid: string) {
+export async function loadChatHistoryAction() {
   try {
+    const user = await getAuthenticatedUser();
     const { ChatRepo } = await import('@/lib/dal/chat.repo');
-    const session = await ChatRepo.getOrCreateActiveSession(uid);
+    const session = await ChatRepo.getOrCreateActiveSession(user.uid);
     const msgs = await ChatRepo.getHistory(session.id, 50); // initial load limit
 
     // Map to UI format
@@ -155,10 +146,11 @@ export async function loadChatHistoryAction(uid: string) {
   }
 }
 
-export async function resetChatAction(uid: string) {
+export async function resetChatAction() {
   try {
+    const user = await getAuthenticatedUser();
     const { ChatRepo } = await import('@/lib/dal/chat.repo');
-    await ChatRepo.archiveActiveSession(uid);
+    await ChatRepo.archiveActiveSession(user.uid);
     return { success: true };
   } catch (error: any) {
     return { success: false, error: error.message };
@@ -166,7 +158,8 @@ export async function resetChatAction(uid: string) {
 }
 
 // --- PROJECTS ---
-export async function createProjectAction(data: { name: string; address?: string; customerName?: string; customerId?: string; description?: string; ownerId: string; accessToken?: string }) {
+// Removed ownerId from input.
+export async function createProjectAction(data: { name: string; address?: string; customerName?: string; customerId?: string; description?: string; accessToken?: string }) {
   // Helper: Find Folder
   const findDriveFolder = async (token: string, name: string, parentId: string = 'root') => {
     const q = `mimeType='application/vnd.google-apps.folder' and name='${name}' and '${parentId}' in parents and trashed=false`;
@@ -189,17 +182,18 @@ export async function createProjectAction(data: { name: string; address?: string
   };
 
   try {
+    const user = await getAuthenticatedUser();
+    const ownerId = user.uid;
     console.log('🏗️ Create Project Action:', data.name);
-    if (!data.ownerId) throw new Error('Missing ownerId');
 
     let driveFolderId = undefined;
 
     // 0. Get Project Number
     let projectNumber: string | undefined;
     try {
-      const user = await UserRepo.get(data.ownerId);
-      if (user?.companyId) {
-        projectNumber = await CompanyRepo.getNextProjectNumber(user.companyId);
+      const dbUser = await UserRepo.get(ownerId);
+      if (dbUser?.companyId) {
+        projectNumber = await CompanyRepo.getNextProjectNumber(dbUser.companyId);
         console.log(`🔢 Assigned Project Number: ${projectNumber}`);
       }
     } catch (e) {
@@ -212,9 +206,9 @@ export async function createProjectAction(data: { name: string; address?: string
     if (data.accessToken) {
       try {
         console.log("📂 Initiating Drive Folder Creation...");
-        const user = await UserRepo.get(data.ownerId);
-        if (user?.companyId) {
-          const company = await CompanyRepo.get(user.companyId);
+        const dbUser = await UserRepo.get(ownerId);
+        if (dbUser?.companyId) {
+          const company = await CompanyRepo.get(dbUser.companyId);
           if (company) {
             const rootName = `ByggPilot - ${company.name}`;
             let rootId = await findDriveFolder(data.accessToken, rootName);
@@ -235,19 +229,6 @@ export async function createProjectAction(data: { name: string; address?: string
               }
 
               if (projectsId) {
-                // Modified: Use driveFolderName with Number
-                // And use createProjectStructure from Drive Service if possible? 
-                // Currently this action uses raw fetch. 
-                // Ideally we should import GoogleDriveService, but that requires backend Node env (which this is server action, so ok).
-                // Let's stick to the inline helpers for now to match file style or switch to service?
-                // The prompt asked for "Robust", switching to Service is better as it handles subfolders.
-
-                // Converting to use GoogleDriveService would be cleaner but let's just create the root project folder here 
-                // and let the "Self-Healing" or "Digital Office" logic in startProjectTool handle subfolders?
-                // No, createProjectAction is the main entry point from UI. It SHOULD create subfolders.
-                // But implementing full subfolder creation via raw fetch here is verbose.
-
-                // Let's just create the main folder here with the Number Prefix.
                 driveFolderId = await createDriveFolder(data.accessToken, driveFolderName, projectsId);
                 console.log("✅ Project Folder Created:", driveFolderId);
               }
@@ -260,7 +241,7 @@ export async function createProjectAction(data: { name: string; address?: string
     }
 
     const project = await ProjectRepo.create({
-      ownerId: data.ownerId,
+      ownerId: ownerId,
       name: data.name,
       address: data.address,
       customerName: data.customerName,
@@ -286,7 +267,6 @@ export async function createProjectAction(data: { name: string; address?: string
       ...project,
       createdAt: project.createdAt instanceof Date ? project.createdAt.toISOString() :
         (project.createdAt?.toDate ? project.createdAt.toDate().toISOString() : new Date().toISOString()),
-      // Add updatedAt if it exists in the schema later
     };
 
     return { success: true, project: plainProject };
@@ -296,10 +276,10 @@ export async function createProjectAction(data: { name: string; address?: string
   }
 }
 
-export async function getProjectsAction(ownerId: string) {
+export async function getProjectsAction() {
   try {
-    if (!ownerId) return { success: false, error: 'No owner ID provided' };
-    const projects = await ProjectRepo.listByOwner(ownerId);
+    const user = await getAuthenticatedUser();
+    const projects = await ProjectRepo.listByOwner(user.uid);
     const plainProjects = projects.map(p => ({
       ...p,
       createdAt: p.createdAt.toDate().toISOString()
@@ -313,8 +293,9 @@ export async function getProjectsAction(ownerId: string) {
 
 export async function getProjectAction(projectId: string) {
   try {
-    const project = await ProjectRepo.get(projectId);
-    if (!project) return { success: false, error: 'Project not found' };
+    const user = await getAuthenticatedUser();
+    // SECURE: Check Ownership
+    const project = await checkOwnership(projectId, 'projects', user) as any;
 
     return {
       success: true,
@@ -336,8 +317,8 @@ const getDriveService = async () => {
 
 export async function updateProjectAction(projectId: string, data: Partial<any>) {
   try {
-    const existingProject = await ProjectRepo.get(projectId);
-    if (!existingProject) throw new Error('Project not found');
+    const user = await getAuthenticatedUser();
+    const existingProject = await checkOwnership(projectId, 'projects', user) as any;
 
     // 1. Update Firestore
     await ProjectRepo.update(projectId, data);
@@ -381,6 +362,8 @@ export async function updateProjectAction(projectId: string, data: Partial<any>)
 
 export async function deleteProjectAction(projectId: string) {
   try {
+    const user = await getAuthenticatedUser();
+    await checkOwnership(projectId, 'projects', user);
     await ProjectRepo.delete(projectId);
     return { success: true };
   } catch (error: any) {
@@ -391,6 +374,7 @@ export async function deleteProjectAction(projectId: string) {
 // --- OFFERS ---
 export async function generateOfferAction(projectTitle: string, notes: string) {
   try {
+    await getAuthenticatedUser(); // Just auth check
     console.log('🤖 AI Generating Offer...');
     const result = await offerFlow({ projectTitle, notes });
     return { success: true, data: result };
@@ -402,13 +386,14 @@ export async function generateOfferAction(projectTitle: string, notes: string) {
 
 export async function saveOfferAction(data: any) {
   try {
+    const user = await getAuthenticatedUser();
     console.log('💾 Saving Offer...');
-    if (!data.ownerId) throw new Error('Missing ownerId');
+
     const items = data.items || [];
     const totalAmount = items.reduce((sum: number, item: any) => sum + (item.quantity * item.unitPrice), 0);
     const vatAmount = totalAmount * 0.25;
     const offer = await OfferRepo.create({
-      ownerId: data.ownerId,
+      ownerId: user.uid,
       projectId: data.projectId,
       title: data.title,
       items: items,
@@ -425,9 +410,10 @@ export async function saveOfferAction(data: any) {
   }
 }
 
-export async function getOffersAction(ownerId: string) {
+export async function getOffersAction() {
   try {
-    const offers = await OfferRepo.listByOwner(ownerId);
+    const user = await getAuthenticatedUser();
+    const offers = await OfferRepo.listByOwner(user.uid);
     const plainOffers = offers.map(p => ({
       ...p,
       createdAt: p.createdAt.toDate().toISOString(),
@@ -442,6 +428,8 @@ export async function getOffersAction(ownerId: string) {
 // --- INBOX INTELLIGENCE ---
 export async function checkInboxAction(accessToken: string) {
   try {
+    const user = await getAuthenticatedUser(); // Verify user session first!
+
     // Ensure accessToken is valid before calling service
     if (!accessToken) return { success: false, error: 'Access Token Missing' };
 
@@ -459,19 +447,19 @@ export async function checkInboxAction(accessToken: string) {
       console.warn("Could not fetch user profile for filtering", e);
     }
 
-    // 2. Process each email with Smart Filter
-    const insights = await Promise.all(emails.map(async (email) => {
+    // 2. Process each email with Smart Filter (Sequential to prevent Flash Mob)
+    const insights = [];
 
+    for (const email of emails) {
       // A. Self-Filter (Zero Cost)
       if (myEmail && email.from && email.from.includes(myEmail)) {
-        return null;
+        continue;
       }
 
       // Ensure ID exists (TS Guard)
-      if (!email.id) return null;
+      if (!email.id) continue;
 
       // --- STAGE 1: THE MEMORY (Firestore Cache) ---
-      // Check if we have already analyzed this specific email ID
       const cacheRef = db.collection('processed_emails').doc(email.id);
       const cacheDoc = await cacheRef.get();
 
@@ -479,47 +467,39 @@ export async function checkInboxAction(accessToken: string) {
         const cachedData = cacheDoc.data();
         console.log(`🧠 [SmartInbox] Hit Cache for ${email.id.substring(0, 5)}... Intent: ${cachedData?.intent}`);
 
-        // If it was marked as 'other' (spam/irrelevant), return null to hide it
-        if (cachedData?.intent === 'other') return null;
-
-        // Return the cached insight without calling AI
-        return {
-          emailId: email.id,
-          intent: cachedData?.intent,
-          confidence: cachedData?.confidence,
-          summary: cachedData?.summary,
-          proposedAction: cachedData?.proposedAction,
-          ataId: cachedData?.ataId,
-          calendarData: cachedData?.calendarData,
-          leadData: cachedData?.leadData,
-          original: email
-        };
+        if (cachedData?.intent !== 'other') {
+          insights.push({
+            emailId: email.id,
+            intent: cachedData?.intent,
+            confidence: cachedData?.confidence,
+            summary: cachedData?.summary,
+            proposedAction: cachedData?.proposedAction,
+            ataId: cachedData?.ataId,
+            calendarData: cachedData?.calendarData,
+            leadData: cachedData?.leadData,
+            original: email
+          });
+        }
+        continue;
       }
 
       // --- STAGE 2: THE BOUNCER (Keyword Heuristic) ---
-      // Zero Cost check to see if it's even worth annoying the AI
       const combinedText = (email.subject + " " + (email.snippet || "")).toLowerCase();
       const relevantKeywords = ['boka', 'möte', 'tid', 'jobb', 'offert', 'renovering', 'badrum', 'kök', 'bygg', 'projekt', 'adress', 'pris', 'kostnad', 'hjälp', 'förfrågan', 'godkän', 'svar', 'hej'];
-
-      // Loose check: "hej" is included to catch casual warm replies, but generally we want substance.
-      // Let's stick to the user's previous strong list but add 'godkänner' for ÄTA.
-
       const seemsRelevant = relevantKeywords.some(kw => combinedText.includes(kw));
 
       if (!seemsRelevant) {
         console.log(`🛡️ [SmartInbox] Bounced irrelevant email: ${email.subject}`);
-        // Cache this as 'other' so we don't check it again
         await cacheRef.set({
           intent: 'other',
           summary: 'Irrelevant (Heuristic)',
           analyzedAt: new Date(),
           subject: email.subject
         });
-        return null;
+        continue;
       }
 
       // --- STAGE 3: THE EXPERT (AI Analysis) ---
-      // We only pay here!
       console.log(`🤖 [SmartInbox] Analyzing NEW potential lead/task: ${email.subject}`);
 
       try {
@@ -529,7 +509,6 @@ export async function checkInboxAction(accessToken: string) {
           body: email.snippet || '',
         });
 
-        // Save result to Cache
         await cacheRef.set({
           ...analysis,
           analyzedAt: new Date(),
@@ -537,19 +516,16 @@ export async function checkInboxAction(accessToken: string) {
           sender: email.from
         });
 
-        // Return result
-        return { emailId: email.id, ...analysis, original: email };
+        insights.push({ emailId: email.id, ...analysis, original: email });
 
       } catch (e) {
         console.error('❌ AI Analysis Failed:', e);
-        return null; // Don't cache failures, retry next time
+        // Don't cache failures
       }
-    }));
+    }
 
-    // Filter out nulls (Self-emails, Irrelevant, Cached 'Other')
-    const actionableInsights = insights
-      .filter(i => i !== null && i.intent !== 'other')
-      .sort((a, b) => b!.confidence - a!.confidence);
+    // Sort by confidence
+    const actionableInsights = insights.sort((a, b) => (b.confidence || 0) - (a.confidence || 0));
 
     return { success: true, insights: actionableInsights };
   } catch (error: any) {
@@ -560,6 +536,7 @@ export async function checkInboxAction(accessToken: string) {
 
 export async function createCalendarEventAction(accessToken: string, eventData: any) {
   try {
+    await getAuthenticatedUser();
     console.log('📅 Creating Event:', eventData.summary);
     const startTime = eventData.suggestedDate || new Date().toISOString();
     const startDate = new Date(startTime);
@@ -581,6 +558,7 @@ export async function createCalendarEventAction(accessToken: string, eventData: 
 
 export async function checkAvailabilityAction(accessToken: string, timeMin: string, timeMax: string) {
   try {
+    await getAuthenticatedUser();
     const events = await CalendarService.listEvents(accessToken, timeMin, timeMax);
     const hasConflict = events.length > 0;
     return { success: true, hasConflict, conflicts: events };
@@ -589,20 +567,24 @@ export async function checkAvailabilityAction(accessToken: string, timeMin: stri
   }
 }
 
-export async function getUserStatusAction(uid: string) {
+export async function getUserStatusAction(uid?: string) {
   try {
-    console.log(`🔍 [getUserStatusAction] Fetching status for uid: ${uid}`);
-    const userDoc = await db.collection('users').doc(uid).get();
+    // If no UID arg, use authenticated user (safe)
+    const user = await getAuthenticatedUser();
+    // If UID is provided, we could check if it matches, OR allow admin to check? 
+    // Stick to strict self-check for now
+
+    console.log(`🔍 [getUserStatusAction] Fetching status for uid: ${user.uid}`);
+    const userDoc = await db.collection('users').doc(user.uid).get();
 
     if (!userDoc.exists) {
-      console.log(`⚠️ [getUserStatusAction] User doc not found for uid: ${uid}`);
+      console.log(`⚠️ [getUserStatusAction] User doc not found for uid: ${user.uid}`);
       return { isOnboardingCompleted: false, exists: false };
     }
 
     const data = userDoc.data();
     console.log(`📄 [getUserStatusAction] Data retrieved:`, JSON.stringify(data, null, 2));
 
-    // Robust check for boolean true, string "true", or existence implies completed if schema changed
     const isOnboardingCompleted =
       data?.onboardingCompleted === true ||
       data?.onboardingCompleted === 'true';
@@ -621,8 +603,17 @@ export async function getUserStatusAction(uid: string) {
 
 export async function approveChangeOrderAction(ataId: string, approved: boolean, method: 'link' | 'email' | 'manual' = 'manual', evidence: string = '') {
   try {
-    console.log(`📝 ÄTA Approval: ${ataId} -> ${approved ? 'Approved' : 'Rejected'} via ${method}`);
+    const user = await getAuthenticatedUser();
+    // Use checkOwnership on the Project (ata stores projectId, need to traverse or trust ATA repo checks if implemented)
+    // ATA Repo likely lacks check. We must fetch ATA, get ProjectID, check Project Ownership.
     const { ChangeOrderRepo } = await import('@/lib/dal/ata.repo');
+    const ata = await ChangeOrderRepo.get(ataId);
+    if (!ata) throw new Error("ATA not found");
+
+    // Verify ownership of the PARENT project
+    await checkOwnership(ata.projectId, 'projects', user);
+
+    console.log(`📝 ÄTA Approval: ${ataId} -> ${approved ? 'Approved' : 'Rejected'} via ${method}`);
     await ChangeOrderRepo.updateStatus(ataId, approved ? 'approved' : 'rejected', method, evidence);
     return { success: true };
   } catch (error: any) {
@@ -633,6 +624,9 @@ export async function approveChangeOrderAction(ataId: string, approved: boolean,
 
 export async function getChangeOrdersAction(projectId: string) {
   try {
+    const user = await getAuthenticatedUser();
+    await checkOwnership(projectId, 'projects', user);
+
     const { ChangeOrderRepo } = await import('@/lib/dal/ata.repo');
     const orders = await ChangeOrderRepo.listByProject(projectId);
     const plainOrders = orders.map(o => ({
@@ -648,6 +642,9 @@ export async function getChangeOrdersAction(projectId: string) {
 
 export async function createChangeOrderAction(data: { projectId: string, description: string, estimatedCost: number, quantity: number, unit: string, type: 'material' | 'work' | 'other' }) {
   try {
+    const user = await getAuthenticatedUser();
+    await checkOwnership(data.projectId, 'projects', user);
+
     const { ChangeOrderRepo } = await import('@/lib/dal/ata.repo');
     const newOrder = await ChangeOrderRepo.create(data);
     return { success: true, order: { ...newOrder, createdAt: newOrder.createdAt.toDate().toISOString() } };
@@ -657,28 +654,33 @@ export async function createChangeOrderAction(data: { projectId: string, descrip
 }
 
 export async function finalizeProjectAction(projectId: string) {
+  const user = await getAuthenticatedUser();
+  await checkOwnership(projectId, 'projects', user);
   return { success: true, message: "Faktura-generering under konstruktion (PDF)" };
 }
 
 // --- COMPANY SETTINGS ---
-export async function getCompanyProfileAction(uid: string) {
+export async function getCompanyProfileAction() {
   try {
-    const user = await UserRepo.get(uid);
-    if (!user?.companyId) return { success: false, error: 'No company found for user' };
+    const user = await getAuthenticatedUser();
+    const dbUser = await UserRepo.get(user.uid);
+    if (!dbUser?.companyId) return { success: false, error: 'No company found for user' };
 
-    const company = await CompanyRepo.get(user.companyId);
+    const company = await CompanyRepo.get(dbUser.companyId);
+    // Implicit ownership check: We only got company from User's OWN record
     return { success: true, profile: company?.profile, context: company?.context };
   } catch (error: any) {
     return { success: false, error: error.message };
   }
 }
 
-export async function saveCompanyProfileAction(uid: string, data: { profile: any, context: any }) {
+export async function saveCompanyProfileAction(data: { profile: any, context: any }) {
   try {
-    const user = await UserRepo.get(uid);
-    if (!user?.companyId) return { success: false, error: 'No company found' };
+    const user = await getAuthenticatedUser();
+    const dbUser = await UserRepo.get(user.uid);
+    if (!dbUser?.companyId) return { success: false, error: 'No company found' };
 
-    await CompanyRepo.updateProfile(user.companyId, data);
+    await CompanyRepo.updateProfile(dbUser.companyId, data);
     return { success: true };
   } catch (error: any) {
     return { success: false, error: error.message };
@@ -688,11 +690,12 @@ export async function saveCompanyProfileAction(uid: string, data: { profile: any
 // --- CUSTOMERS (CRM) ---
 import { CustomerRepo, CustomerData } from '@/lib/dal/customer.repo';
 
-export async function getCustomersAction(uid: string) {
+export async function getCustomersAction() {
   try {
-    const user = await UserRepo.get(uid);
-    if (!user?.companyId) return { success: false, error: 'No company found' };
-    const customers = await CustomerRepo.listByCompany(user.companyId);
+    const user = await getAuthenticatedUser();
+    const dbUser = await UserRepo.get(user.uid);
+    if (!dbUser?.companyId) return { success: false, error: 'No company found' };
+    const customers = await CustomerRepo.listByCompany(dbUser.companyId);
 
     // Serializing dates
     const plainCustomers = customers.map(c => ({
@@ -709,8 +712,16 @@ export async function getCustomersAction(uid: string) {
 
 export async function getCustomerAction(customerId: string) {
   try {
+    const user = await getAuthenticatedUser();
     const customer = await CustomerRepo.get(customerId);
     if (!customer) return { success: false, error: 'Customer not found' };
+
+    // Check Ownership/Company
+    const dbUser = await UserRepo.get(user.uid);
+    if (customer.companyId !== dbUser?.companyId) {
+      throw new Error("Unauthorized");
+    }
+
     return {
       success: true,
       customer: {
@@ -724,13 +735,14 @@ export async function getCustomerAction(customerId: string) {
   }
 }
 
-export async function createCustomerAction(uid: string, data: Partial<CustomerData>) {
+export async function createCustomerAction(data: Partial<CustomerData>) {
   try {
-    const user = await UserRepo.get(uid);
-    if (!user?.companyId) return { success: false, error: 'No company found' };
+    const user = await getAuthenticatedUser();
+    const dbUser = await UserRepo.get(user.uid);
+    if (!dbUser?.companyId) return { success: false, error: 'No company found' };
 
     const newCustomer = await CustomerRepo.create({
-      companyId: user.companyId,
+      companyId: dbUser.companyId,
       name: data.name!,
       type: data.type || 'private',
       orgNumber: data.orgNumber || '',
@@ -747,9 +759,15 @@ export async function createCustomerAction(uid: string, data: Partial<CustomerDa
   }
 }
 
-export async function updateCustomerAction(uid: string, customerId: string, data: Partial<CustomerData>) {
+export async function updateCustomerAction(customerId: string, data: Partial<CustomerData>) {
   try {
-    // Auth check implied by accessing via Action (could add ownership check here too)
+    const user = await getAuthenticatedUser();
+    const customer = await CustomerRepo.get(customerId);
+    if (!customer) throw new Error("NotFound");
+
+    const dbUser = await UserRepo.get(user.uid);
+    if (customer.companyId !== dbUser?.companyId) throw new Error("Unauthorized");
+
     await CustomerRepo.update(customerId, data);
     return { success: true };
   } catch (error: any) {
@@ -757,12 +775,15 @@ export async function updateCustomerAction(uid: string, customerId: string, data
   }
 }
 
-export async function deleteCustomerAction(uid: string, customerId: string) {
+export async function deleteCustomerAction(customerId: string) {
   try {
-    const user = await UserRepo.get(uid);
-    if (!user?.companyId) return { success: false, error: 'No company found' };
+    const user = await getAuthenticatedUser();
+    const customer = await CustomerRepo.get(customerId);
+    if (!customer) throw new Error("NotFound");
 
-    // Potentially verify ownership here if strictly needed, but basic company check covers most
+    const dbUser = await UserRepo.get(user.uid);
+    if (customer.companyId !== dbUser?.companyId) throw new Error("Unauthorized");
+
     await CustomerRepo.delete(customerId);
     return { success: true };
   } catch (error: any) {
@@ -771,13 +792,14 @@ export async function deleteCustomerAction(uid: string, customerId: string) {
 }
 
 // --- GLOBAL STATUS (YELLOW DOTS) ---
-export async function getGlobalStatusAction(uid: string) {
+export async function getGlobalStatusAction() {
   try {
-    const user = await UserRepo.get(uid);
-    if (!user?.companyId) return { success: false, error: 'No company' };
+    const user = await getAuthenticatedUser();
+    const dbUser = await UserRepo.get(user.uid);
+    if (!dbUser?.companyId) return { success: false, error: 'No company' };
 
-    const company = await CompanyRepo.get(user.companyId);
-    const customers = await CustomerRepo.listByCompany(user.companyId);
+    const company = await CompanyRepo.get(dbUser.companyId);
+    const customers = await CustomerRepo.listByCompany(dbUser.companyId);
 
     // 1. Profile Completeness
     const profile = company?.profile;
@@ -804,6 +826,7 @@ import { generateOfferTool } from '@/lib/genkit/tools/pdf.tools';
 
 export async function getRecipesAction() {
   try {
+    await getAuthenticatedUser();
     let recipes = await RecipeRepo.list();
 
     // SEEDING: If no recipes exist, create standard templates
@@ -852,6 +875,7 @@ export async function getRecipesAction() {
 
 export async function calculateOfferAction(input: any) {
   try {
+    await getAuthenticatedUser();
     const result = await calculateOfferTool(input);
     return { success: true, data: result };
   } catch (error: any) {
@@ -861,6 +885,7 @@ export async function calculateOfferAction(input: any) {
 
 export async function createOfferPdfAction(input: any) {
   try {
+    await getAuthenticatedUser();
     const result = await generateOfferTool(input);
     return { success: true, data: result };
   } catch (error: any) {
@@ -871,6 +896,9 @@ export async function createOfferPdfAction(input: any) {
 // --- RISKS (PHASE 7) ---
 export async function getRisksAction(projectId: string) {
   try {
+    const user = await getAuthenticatedUser();
+    await checkOwnership(projectId, 'projects', user);
+
     const { RiskRepo } = await import('@/lib/dal/risk.repo');
     const risks = await RiskRepo.listByProject(projectId);
     return { success: true, risks };
@@ -881,6 +909,7 @@ export async function getRisksAction(projectId: string) {
 
 export async function mitigateRiskAction(riskId: string) {
   try {
+    await getAuthenticatedUser();
     const { db } = await import('@/lib/dal/server'); // Direct DB access for speed or use repo
     // Let's use repo if possible, but for now direct update is fine for this specific flag
     await db.collection('risks').doc(riskId).update({ status: 'mitigated' });
@@ -895,6 +924,7 @@ export async function getWeatherAction(address: string) {
   if (!address) return { success: false, error: 'No address provided' };
 
   try {
+    await getAuthenticatedUser();
     const { GeocodingService } = await import('@/lib/external/geocoding');
     const coords = await GeocodingService.getCoordinates(address);
 

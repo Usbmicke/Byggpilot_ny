@@ -1,7 +1,7 @@
 import 'server-only';
 import { ai } from '@/lib/genkit-instance';
 import { z } from 'genkit';
-import { startProjectTool } from '@/lib/genkit/tools/project.tools';
+import { startProjectTool, listProjectsTool } from '@/lib/genkit/tools/project.tools';
 import { updateProjectTool } from '@/lib/genkit/tools/update_project.tool';
 import { generatePdfTool, generateOfferTool } from '@/lib/genkit/tools/pdf.tools';
 import { calculateOfferTool } from '@/lib/genkit/tools/calculation.tools';
@@ -10,10 +10,14 @@ import { analyzeReceiptTool, analyzeChemicalContainerTool } from '../tools/visio
 import { createChangeOrderTool, draftEmailTool, generateAtaPdfTool } from '@/lib/genkit/tools/ata.tools';
 import { checkAvailabilityTool, bookMeetingTool } from '@/lib/genkit/tools/calendar.tools';
 import { readEmailTool, sendEmailTool } from '@/lib/genkit/tools/gmail.tools';
+import { weatherTool } from '@/lib/genkit/tools/weather.tools';
 import { listOffersTool } from '@/lib/genkit/tools/offer.tools';
 import { createCustomerTool, listCustomersTool } from '@/lib/genkit/tools/customer.tools';
 import { createDocDraftTool, appendDocTool } from '@/lib/genkit/tools/docs.tools';
-import { prepareInvoiceDraftTool, finalizeInvoiceTool } from '@/lib/genkit/tools/invoice.tools';
+import {
+    prepareInvoiceDraftTool, finalizeInvoiceTool,
+    checkInvoiceStatusTool
+} from '@/lib/genkit/tools/invoice.tools';
 import { webSearchTool } from '@/lib/genkit/tools/search.tool';
 import { createTaskTool, listTasksTool, completeTaskTool } from '@/lib/genkit/tools/tasks.tools';
 import { getSystemPrompt } from '@/lib/genkit/prompts/system.prompt'; // Extracted Prompt
@@ -66,26 +70,8 @@ export const chatFlow = defineFlow(
                             contextContext = `MY PREFERENCES & CONTEXT: \n${company.context.preferences} \n\nRISKS / WARNINGS: \n${company.context.risks} \n(Use this to guide advice)`;
                         }
 
-                        // Customers
-                        const customers = await CustomerRepo.listByCompany(user.companyId);
-                        if (customers.length > 0) {
-                            customerContext = "CUSTOMER REGISTRY (Known Clients):\n";
-                            customers.forEach(c => {
-                                const missing = [];
-                                if (!c.address) missing.push('Address');
-                                if (!c.orgNumber) missing.push('SSN/OrgNr');
-                                customerContext += `- ${c.name} [ID: ${c.id}](${c.type}): ${missing.length > 0 ? `INCOMPLETE (Missing: ${missing.join(', ')})` : 'COMPLETE'}. Info: ${c.address || ''}, ${c.orgNumber || ''}, Email: ${c.email || 'MISSING'}.\n`;
-                            });
-                        }
 
-                        // Projects
-                        const projects = await ProjectRepo.listByOwner(input.uid);
-                        if (projects.length > 0) {
-                            projectContext = "ACTIVE PROJECTS (Use these IDs/Folders for tools):\n";
-                            projects.forEach(p => {
-                                projectContext += `- ${p.name} [ID: ${p.id}]. Status: ${p.status}. FolderID: ${p.driveFolderId || 'MISSING'}. ${p.address ? `Address: ${p.address}` : ''} \n`;
-                            });
-                        }
+                        // Customers & Projects: Removed mass injection. AI must use Tools.
                     }
                 }
             } catch (e) {
@@ -115,8 +101,6 @@ export const chatFlow = defineFlow(
         // --- ASSEMBLE PROMPT ---
         const systemPrompt = getSystemPrompt({
             profileContext,
-            customersContext: customerContext,
-            projectContext,
             knowledgeContext
         });
 
@@ -131,16 +115,17 @@ export const chatFlow = defineFlow(
             tools: [
                 webSearchTool,
                 createTaskTool, listTasksTool, completeTaskTool,
-                startProjectTool, updateProjectTool,
+                startProjectTool, updateProjectTool, listProjectsTool,
                 listOffersTool, createCustomerTool, listCustomersTool,
                 generatePdfTool, calculateOfferTool,
                 analyzeReceiptTool, analyzeChemicalContainerTool,
                 repairDriveTool,
                 createChangeOrderTool, draftEmailTool, generateAtaPdfTool,
+                weatherTool,
                 checkAvailabilityTool, bookMeetingTool,
                 readEmailTool, sendEmailTool,
                 createDocDraftTool, appendDocTool,
-                prepareInvoiceDraftTool, finalizeInvoiceTool
+                prepareInvoiceDraftTool, finalizeInvoiceTool, checkInvoiceStatusTool
             ],
             context: {
                 accessToken: input.accessToken,

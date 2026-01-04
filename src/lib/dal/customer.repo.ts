@@ -60,15 +60,27 @@ export const CustomerRepo = {
         return doc.data() as CustomerData;
     },
 
-    async listByCompany(companyId: string): Promise<CustomerData[]> {
+    async listByCompany(companyId: string, limit: number = 100): Promise<CustomerData[]> {
         const snap = await db.collection(COLLECTION)
             .where('companyId', '==', companyId)
             .orderBy('createdAt', 'desc')
+            .limit(limit)
             .get();
         return snap.docs.map(d => d.data() as CustomerData);
     },
 
     async delete(id: string): Promise<void> {
+        // SAFETY CHECK: Do not delete if customer has active projects
+        const { ProjectRepo } = await import('@/lib/dal/project.repo');
+        const projects = await ProjectRepo.listByCustomer(id);
+
+        // Check for ANY non-archived projects
+        const activeProjects = projects.filter(p => p.status !== 'archived');
+
+        if (activeProjects.length > 0) {
+            throw new Error(`Cannot delete customer. They have ${activeProjects.length} active/completed projects. Archive projects first.`);
+        }
+
         await db.collection(COLLECTION).doc(id).delete();
     }
 };

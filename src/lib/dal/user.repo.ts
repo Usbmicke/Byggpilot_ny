@@ -18,6 +18,18 @@ const COLLECTION = 'users';
 
 export const UserRepo = {
     async get(uid: string): Promise<UserData | null> {
+        // DEV MOCK
+        if (process.env.NODE_ENV === 'development' && uid === 'dev-user-123') {
+            return {
+                uid: 'dev-user-123',
+                email: 'dev@test.se',
+                displayName: 'Dev User',
+                companyId: 'dev-company-abc',
+                onboardingCompleted: true,
+                createdAt: Timestamp.now(),
+                updatedAt: Timestamp.now()
+            };
+        }
         const doc = await db.collection(COLLECTION).doc(uid).get();
         if (!doc.exists) return null;
         return doc.data() as UserData;

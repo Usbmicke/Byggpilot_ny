@@ -39,7 +39,7 @@ function CreateProjectModal({ isOpen, onClose, onCreated, ownerId }: any) {
     useEffect(() => {
         if (isOpen && ownerId) {
             import('@/app/actions').then(({ getCustomersAction }) => {
-                getCustomersAction(ownerId).then(res => {
+                getCustomersAction().then(res => {
                     if (res.success && res.customers) setCustomers(res.customers);
                 });
             });
@@ -75,7 +75,7 @@ function CreateProjectModal({ isOpen, onClose, onCreated, ownerId }: any) {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
-        const res = await createProjectAction({ ...formData, ownerId });
+        const res = await createProjectAction({ ...formData });
         setLoading(false);
         if (res.success) {
             onCreated();
@@ -179,7 +179,7 @@ export default function ProjectsPage() {
     const fetchProjects = async () => {
         if (!user?.uid) return;
         setLoading(true);
-        const res = await getProjectsAction(user.uid);
+        const res = await getProjectsAction();
         if (res.success && res.projects) {
             setProjects(res.projects);
         }

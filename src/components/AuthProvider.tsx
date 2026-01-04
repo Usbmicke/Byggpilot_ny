@@ -27,9 +27,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setUser(currentUser);
       setIsLoading(false);
 
-      if (user) {
-        // Refresh token proactively if needed, or just rely on getIdToken
-        // Note: onIdTokenChanged triggers on token refresh too
+      if (currentUser) {
+        // Sync Session with Server
+        try {
+          const idToken = await currentUser.getIdToken();
+          await fetch('/api/auth/session', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ idToken }),
+          });
+        } catch (e) {
+          console.error("Failed to sync session", e);
+        }
+      } else {
+        // Optional: Call logout endpoint to clear cookie
+        // For now, simpler to just let it expire or rely on new login overriding it
       }
     });
 

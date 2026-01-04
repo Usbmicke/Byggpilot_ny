@@ -52,7 +52,7 @@ export default function CustomerDetailPage({ params }: { params: Promise<{ id: s
     const handleSave = async () => {
         if (!user) return;
         setSaving(true);
-        const res = await updateCustomerAction(user.uid, id, formData);
+        const res = await updateCustomerAction(id, formData);
         if (res.success) {
             router.refresh();
             // Show optimistic success or toast? For now just stay.
@@ -65,7 +65,7 @@ export default function CustomerDetailPage({ params }: { params: Promise<{ id: s
     const handleDelete = async () => {
         if (!confirm('Är du säker på att du vill ta bort denna kontakt? Detta går inte att ångra.') || !user) return;
         setSaving(true);
-        const res = await deleteCustomerAction(user.uid, id);
+        const res = await deleteCustomerAction(id);
         if (res.success) {
             router.push('/customers');
         } else {

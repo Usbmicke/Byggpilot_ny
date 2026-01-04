@@ -38,39 +38,88 @@ export const prepareInvoiceDraftTool = ai.defineTool(
 export const finalizeInvoiceTool = ai.defineTool(
     {
         name: 'finalizeInvoice',
-        // MASTER PLAN v2: This tool is currently DETERMINISTIC (Logic).
-        // If AI is added here, it MUST use AI_MODELS.SMART.
-        description: 'LOCKS & SENDS the Final Invoice. Converts the Google Doc Draft to PDF, emails it to the customer, updates project status to "completed", and marks all drafted ÄTAs as approved. REQUIRES USER CONFIRMATION.',
+        description: 'Sends the Final Invoice via Email (HTML). Supports "Email-First". Also saves the tracking record. REQUIRES USER CONFIRMATION.',
         inputSchema: z.object({
             projectId: z.string(),
-            draftDocId: z.string().describe("The Google Doc ID of the reviewed invoice draft."),
             customerEmail: z.string().email(),
             emailSubject: z.string(),
             emailBody: z.string(),
-            confirmLock: z.boolean().describe("Must be true to proceed. Confirms user has reviewed the draft."),
+            generatePdf: z.boolean().optional().describe("If true, generates and attaches a PDF (Old School). Default false."),
         }),
         outputSchema: z.object({
             success: z.boolean(),
-            pdfLink: z.string(),
+            invoiceId: z.string().optional(),
             message: z.string(),
         }),
     },
     async (input, context: any) => {
         const accessToken = context?.accessToken || context?.context?.accessToken as string | undefined;
 
-        if (!input.confirmLock) {
-            return { success: false, pdfLink: "", message: "Avbruten: Du måste bekräfta låsning." };
-        }
-
         try {
-            return await InvoiceService.finalizeInvoice(input, accessToken);
+            return await InvoiceService.finalizeInvoice({
+                projectId: input.projectId,
+                customerEmail: input.customerEmail,
+                emailSubject: input.emailSubject,
+                emailBody: input.emailBody,
+                generatePdf: input.generatePdf
+            }, accessToken);
         } catch (e: any) {
             console.error("Finalize Failed:", e);
             return {
                 success: false,
-                pdfLink: "",
                 message: `Fel vid finalisering: ${e.message}`
             };
         }
+    }
+);
+
+export const checkInvoiceStatusTool = ai.defineTool(
+    {
+        name: 'checkInvoiceStatusTool',
+        description: 'Checks the status of sent invoices. Use this to see if a customer has viewed the invoice or if it is overdue. Needed for "Smart Reminders".',
+        inputSchema: z.object({
+            projectId: z.string().optional(),
+            status: z.enum(['sent', 'viewed', 'paid', 'overdue']).optional()
+        }),
+        outputSchema: z.object({
+            invoices: z.array(z.object({
+                id: z.string(),
+                recipient: z.string(),
+                amount: z.number(),
+                status: z.string(),
+                viewedAt: z.string().optional(),
+                dueDate: z.string(),
+                daysUntilDue: z.number()
+            }))
+        })
+    },
+    async (input) => {
+        const { db } = await import('@/lib/dal/server');
+        // Simple query
+        let query = db.collection('invoices');
+        if (input.projectId) query = query.where('projectId', '==', input.projectId) as any;
+        if (input.status) query = query.where('status', '==', input.status) as any;
+
+        const snapshot = await query.get();
+        const invoices = snapshot.docs.map(doc => {
+            const data = doc.data();
+            const due = data.dueDate?.toDate ? data.dueDate.toDate() : new Date();
+            const viewed = data.viewedAt?.toDate ? data.viewedAt.toDate() : null;
+            const now = new Date();
+            const diffTime = due.getTime() - now.getTime();
+            const daysUntilDue = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+            return {
+                id: data.id,
+                recipient: data.customerId, // Should ideally be name
+                amount: data.amount,
+                status: data.status,
+                viewedAt: viewed ? viewed.toISOString() : undefined,
+                dueDate: due.toISOString().split('T')[0],
+                daysUntilDue
+            };
+        });
+
+        return { invoices };
     }
 );

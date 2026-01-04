@@ -126,3 +126,40 @@ export const startProjectTool = ai.defineTool(
         };
     }
 );
+
+export const listProjectsTool = ai.defineTool(
+    {
+        name: 'listProjects',
+        description: 'Lists the user\'s active projects. Use this to find project IDs for other tools or to summarize ongoing work.',
+        inputSchema: z.object({
+            limit: z.number().optional().describe('Max number of projects to return (default 10)'),
+        }),
+        outputSchema: z.object({
+            projects: z.array(z.object({
+                id: z.string(),
+                name: z.string(),
+                status: z.string(),
+                projectNumber: z.string().optional()
+            }))
+        }),
+    },
+    async (input, context: any) => {
+        const userId = context?.uid || context?.context?.uid || context?.auth?.uid;
+        if (!userId) return { projects: [] };
+
+        const { ProjectRepo } = await import('@/lib/dal/project.repo');
+        // NOTE: In Phase 3, we will add server-side pagination to Repo.
+        // For now, we list all and slice for safety.
+        const projects = await ProjectRepo.listByOwner(userId);
+
+        const limit = input.limit || 10;
+        const sliced = projects.slice(0, limit).map(p => ({
+            id: p.id,
+            name: p.name,
+            status: p.status,
+            projectNumber: p.projectNumber
+        }));
+
+        return { projects: sliced };
+    }
+);

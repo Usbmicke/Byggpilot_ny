@@ -45,7 +45,7 @@ export default function ChatInterface() {
 
         setIsLoading(true);
         import('@/app/actions').then(({ loadChatHistoryAction }) => {
-            loadChatHistoryAction(user.uid).then(res => {
+            loadChatHistoryAction().then(res => {
                 if (res.success && res.messages) {
                     // Force TS cast if needed or ensure types match
                     setMessages(res.messages as any[]);
@@ -146,7 +146,7 @@ export default function ChatInterface() {
         setIsExpanded(true); // Ensure stays open
         try {
             const accessToken = localStorage.getItem('google_access_token') || undefined;
-            const result = await chatAction(newHistory, user?.uid, accessToken);
+            const result = await chatAction(newHistory, accessToken);
             if (!result.success) throw new Error(result.error);
             setMessages((prev) => [...prev, { role: 'model', content: result.text || '' }]);
         } catch (error) {
@@ -178,7 +178,7 @@ export default function ChatInterface() {
         if (!confirm("Vill du rensa chatthistoriken och börja om?")) return;
         setIsLoading(true);
         try {
-            if (user?.uid) await resetChatAction(user.uid);
+            if (user?.uid) await resetChatAction();
             setMessages([]);
         } catch (e) {
             console.error("Reset failed", e);

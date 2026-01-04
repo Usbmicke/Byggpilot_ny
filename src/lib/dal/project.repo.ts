@@ -24,13 +24,22 @@ export interface ProjectData {
 const COLLECTION = 'projects';
 
 export const ProjectRepo = {
-    async listByOwner(ownerId: string): Promise<ProjectData[]> {
+    async listByOwner(ownerId: string, limit: number = 100): Promise<ProjectData[]> {
         const snapshot = await db
             .collection(COLLECTION)
             .where('ownerId', '==', ownerId)
+            .limit(limit)
             // .orderBy('createdAt', 'desc') // Requires index
             .get();
 
+        return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as ProjectData));
+    },
+
+    async listByCustomer(customerId: string): Promise<ProjectData[]> {
+        const snapshot = await db
+            .collection(COLLECTION)
+            .where('customerId', '==', customerId)
+            .get();
         return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as ProjectData));
     },
 

@@ -20,6 +20,13 @@ export interface InvoiceData {
     };
     expenses: any[];
     warnings: string[];
+    // Tracking Fields (New)
+    status?: 'draft' | 'sent' | 'viewed' | 'paid' | 'overdue';
+    invoiceId?: string; // FAK-xxxx
+    sentAt?: any; // Timestamp
+    viewedAt?: any; // Timestamp
+    dueDate?: any; // Timestamp
+    reminderSentAt?: any; // Timestamp
 }
 
 export const InvoiceRepo = {
