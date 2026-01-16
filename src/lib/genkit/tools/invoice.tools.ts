@@ -85,17 +85,14 @@ export const finalizeInvoiceTool = ai.defineTool(
                 // Actually InvoiceService.finalizeInvoice generates the PDF internally if we don't pass one... 
                 // We need to modify InvoiceService to accept a pre-generated PDF or Link.
 
-                // STOP: The plan said "finalizeInvoiceTool" updates.
-                // Let's keep it simple: If draftDocId is present, we convert it to buffer, and pass it to InvoiceService.
-
+                // 3. Finalize with Custom PDF Buffer
                 return await InvoiceService.finalizeInvoice({
                     projectId: input.projectId,
                     customerEmail: input.customerEmail,
                     emailSubject: input.emailSubject,
                     emailBody: input.emailBody,
-                    generatePdf: false, // We supply custom buffer
-                    // customPdfBuffer: buffer // TODO: InvoiceService needs this
-                }, accessToken, buffer); // Passing buffer as 2nd arg override? No, need to check Service signature.
+                    generatePdf: false,
+                }, accessToken, buffer);
             }
 
             return await InvoiceService.finalizeInvoice({

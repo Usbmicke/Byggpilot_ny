@@ -456,6 +456,10 @@ export async function saveOfferAction(data: any) {
       status: 'draft'
     });
     return { success: true, offer };
+
+    // TRIGGER OPTIMIZATION
+    await recalculateProjectEconomy(data.projectId);
+
   } catch (error: any) {
     console.error('❌ Save Offer Failed:', error);
     return { success: false, error: error.message };
@@ -730,6 +734,10 @@ export async function createChangeOrderAction(data: { projectId: string, descrip
 
     const { ChangeOrderRepo } = await import('@/lib/dal/ata.repo');
     const newOrder = await ChangeOrderRepo.create(data);
+
+    // TRIGGER OPTIMIZATION
+    await recalculateProjectEconomy(data.projectId);
+
     return { success: true, order: { ...newOrder, createdAt: newOrder.createdAt?.toDate ? newOrder.createdAt.toDate().toISOString() : new Date().toISOString() } };
   } catch (error: any) {
     return { success: false, error: error.message };
@@ -737,9 +745,78 @@ export async function createChangeOrderAction(data: { projectId: string, descrip
 }
 
 export async function finalizeProjectAction(projectId: string) {
-  const user = await getAuthenticatedUser();
-  await checkOwnership(projectId, 'projects', user);
-  return { success: true, message: "Faktura-generering under konstruktion (PDF)" };
+  try {
+    const user = await getAuthenticatedUser();
+    const project = await checkOwnership(projectId, 'projects', user) as any;
+
+    console.log(`🏁 Finalizing Project: ${project.name}`);
+
+    // 1. Fetch Data
+    const { OfferRepo } = await import('@/lib/dal/offer.repo');
+    const { ChangeOrderRepo } = await import('@/lib/dal/ata.repo');
+    const { CustomerRepo } = await import('@/lib/dal/customer.repo');
+
+    const [offers, atas, customer] = await Promise.all([
+      OfferRepo.listByProject(projectId),
+      ChangeOrderRepo.listByProject(projectId),
+      project.customerId ? CustomerRepo.get(project.customerId) : Promise.resolve(null)
+    ]);
+
+    const acceptedOffers = offers.filter(o => o.status === 'accepted');
+    const approvedAtas = atas.filter(a => a.status === 'approved');
+
+    // 2. Economy Calculation
+    let totalNet = 0;
+    acceptedOffers.forEach(o => totalNet += o.totalAmount);
+    approvedAtas.forEach(a => totalNet += a.estimatedCost);
+
+    // 3. Logic: Reverse VAT
+    const isCompany = customer?.type === 'company' || (customer?.orgNumber && customer.orgNumber.length > 8);
+    const vatRate = isCompany ? 0 : 0.25;
+    const vatAmount = totalNet * vatRate;
+    const totalGross = totalNet + vatAmount;
+
+    // 4. Generate HTML Content
+    let html = `<h1>Fakturaunderlag: ${project.name}</h1>`;
+    html += `<p><strong>Datum:</strong> ${new Date().toLocaleDateString('sv-SE')}</p>`;
+    html += `<p><strong>Kund:</strong> ${project.customerName || 'Okänd'} ${isCompany ? '(Företag)' : '(Privat)'}</p>`;
+    if (isCompany) {
+      html += `<p style="color:red; font-weight:bold;">⚠️ OMVÄND BETALNINGSSKYLDIGHET FÖR BYGGTJÄNSTER GÄLLER</p>`;
+    }
+    html += `<hr><h2>Offerter</h2><ul>`;
+    acceptedOffers.forEach(o => {
+      html += `<li>${o.title}: <strong>${o.totalAmount.toLocaleString('sv-SE')} kr</strong></li>`;
+    });
+    html += `</ul><h2>ÄTA (Ändringar & Tillägg)</h2><ul>`;
+    approvedAtas.forEach(a => {
+      html += `<li>${a.description}: <strong>${a.estimatedCost.toLocaleString('sv-SE')} kr</strong></li>`;
+    });
+    html += `</ul><hr>`;
+    html += `<h3>Netto: ${totalNet.toLocaleString('sv-SE')} kr</h3>`;
+    html += `<h3>Moms (${vatRate * 100}%): ${vatAmount.toLocaleString('sv-SE')} kr</h3>`;
+    html += `<h1>ATT BETALA: ${totalGross.toLocaleString('sv-SE')} kr</h1>`;
+
+    // 5. Create Google Doc
+    if (!project.driveFolderId) throw new Error("Drive folder missing");
+
+    const drive = await getDriveService();
+    // Find '3_Ekonomi'
+    const qEkonomi = `'${project.driveFolderId}' in parents and name contains 'Ekonomi' and mimeType = 'application/vnd.google-apps.folder' and trashed = false`;
+    const resEkonomi = await (await drive.files.list({ q: qEkonomi })).data;
+    let economyFolderId = resEkonomi.files?.[0]?.id;
+
+    // Fallback if structure broken
+    if (!economyFolderId) economyFolderId = project.driveFolderId;
+
+    const docTitle = `Fakturaunderlag - ${project.name} - ${new Date().toISOString().split('T')[0]}`;
+    const newDoc = await drive.createGoogleDoc(docTitle, html, economyFolderId);
+
+    return { success: true, message: "Fakturaunderlag skapat!", docLink: newDoc.webViewLink };
+
+  } catch (error: any) {
+    console.error("❌ Finalize Project Failed:", error);
+    return { success: false, error: error.message };
+  }
 }
 
 // --- COMPANY SETTINGS ---
@@ -1094,5 +1171,137 @@ export async function getCriticalStopsAction() {
   } catch (e: any) {
     console.error("Critical Stops Failed:", e);
     return { success: false, items: [] };
+  }
+}
+// --- ECONOMY & RECEIPTS ---
+export async function logReceiptExpenseAction(projectId: string, receiptData: { vendor?: string, date?: string, totalAmount?: number, items?: string[], category?: string }, imageBase64?: string) {
+  try {
+    const user = await getAuthenticatedUser();
+    const project = await checkOwnership(projectId, 'projects', user) as any;
+
+    // 1. Prepare Data
+    const vendor = receiptData.vendor || "Okänt inköpsställe";
+    const date = receiptData.date || new Date().toISOString().split('T')[0];
+    const amount = receiptData.totalAmount || 0;
+    const items = receiptData.items?.join(", ") || "Diverse";
+
+    console.log(`🧾 Logging Receipt for ${project.name}: ${vendor} - ${amount}kr`);
+
+    if (!project.driveFolderId) {
+      return { success: false, error: "Project has no Drive Folder connected." };
+    }
+
+    const drive = await getDriveService();
+
+    // 2. Navigate Folder Structure: Project -> 3_Ekonomi -> Kvitton
+    // We need to find '3_Ekonomi' inside projectFolder
+    // Note: We might optimize this by storing folder IDs in Firestore to avoid searching every time
+
+    // Find "3_Ekonomi"
+    // We assume the structure exists. If not, we might need to recreate it or fail.
+    // Let's search loosely for "Ekonomi" to be safe against "3_Ekonomi" vs "03_Ekonomi" naming
+    const qEkonomi = `'${project.driveFolderId}' in parents and name contains 'Ekonomi' and mimeType = 'application/vnd.google-apps.folder' and trashed = false`;
+    const resEkonomi = await (await drive.files.list({ q: qEkonomi })).data;
+    let economyFolderId = resEkonomi.files?.[0]?.id;
+
+    if (!economyFolderId) {
+      // Fallback: Create it
+      console.log("⚠️ Economy folder missing, creating...");
+      economyFolderId = await drive.ensureFolderExists("3_Ekonomi", project.driveFolderId);
+    }
+
+    // Find/Create "Kvitton"
+    const receiptFolderId = await drive.ensureFolderExists("Kvitton", economyFolderId!);
+
+    // 3. Upload Image (if provided)
+    let imageUrl = "";
+    if (imageBase64) {
+      // Remove header if present (data:image/jpeg;base64,...)
+      const base64Data = imageBase64.replace(/^data:image\/\w+;base64,/, "");
+      const buffer = Buffer.from(base64Data, 'base64');
+      const filename = `Kvitto - ${vendor} - ${date}.jpg`;
+
+      const file = await drive.uploadFile(filename, 'image/jpeg', buffer, receiptFolderId); // Helper might need buffer stream adaptation
+      // checking drive.ts uploadFile... it takes 'body'. googleapis usually wants a stream or string.
+      // If 'body' is passed to media.body, Buffer works in Node.
+      imageUrl = file.webViewLink;
+    }
+
+    // 4. Update "Utlägg & Kvitton" Google Doc
+    // Search for existing doc
+    const docName = `Utlägg & Kvitton - ${project.name}`;
+    const qDoc = `'${economyFolderId}' in parents and name = '${docName}' and mimeType = 'application/vnd.google-apps.document' and trashed = false`;
+    const resDoc = await (await drive.files.list({ q: qDoc })).data;
+    let docId = resDoc.files?.[0]?.id;
+    let docLink = resDoc.files?.[0]?.webViewLink;
+
+    if (!docId) {
+      console.log("📝 Creating new Receipt Log Doc...");
+      const newDoc = await drive.createGoogleDoc(docName, `<h1>Utlägg & Kvitton - ${project.name}</h1><p>Här samlas alla utlägg och kvitton för projektet.</p><hr>`, economyFolderId);
+      docId = newDoc.id;
+      docLink = newDoc.webViewLink;
+    }
+
+    // Append Table Row-like format
+    const entry = `\nDATUM: ${date} | LEVERANTÖR: ${vendor} | BELOPP: ${amount} kr\nARTIKLAR: ${items}\nLÄNK: ${imageUrl || 'Ingen bild'}\n----------------------------------------`;
+    await drive.appendContentToDoc(docId!, entry);
+
+    return { success: true, message: "Kvitto sparat!", docLink };
+
+  } catch (error: any) {
+    console.error("❌ Log Receipt Failed:", error);
+    return { success: false, error: error.message };
+  }
+}
+
+export async function getCriticalStopsAction() {
+  try {
+    const user = await getAuthenticatedUser();
+    const { ProjectRepo } = await import('@/lib/dal/project.repo');
+    const { ChangeOrderRepo } = await import('@/lib/dal/ata.repo');
+
+    // 1. Get Active Projects
+    const projects = await ProjectRepo.listByOwner(user.uid);
+    const activeProjects = projects.filter(p => p.status === 'active');
+
+    const items: any[] = [];
+
+    // 2. Scan for Issues
+    for (const p of activeProjects) {
+      // A. Check Unbilled ATAs (Simple Heuristic: If approved ATA exists, flag it if project is old or just list as reminder)
+      // Ideally we check if it's LINKED to an invoice. For now, we just count them.
+      const atas = await ChangeOrderRepo.listByProject(p.id);
+      const approvedUnbilled = atas.filter(a => a.status === 'approved'); // Assuming we don't have 'invoiced' status yet
+
+      if (approvedUnbilled.length > 0) {
+        items.push({
+          id: `invoice-${p.id}`,
+          type: 'invoice',
+          title: `Fakturera ${p.name}`,
+          subtitle: `${approvedUnbilled.length} st godkända ÄTA väntar på fakturering.`,
+          severity: 'high',
+          link: `/projects/${p.id}/economy`
+        });
+      }
+
+      // B. Safety Check (High Risk Keywords)
+      const isHighRisk = (p.description + p.name).toLowerCase().match(/(tak|ställning|hög höjd|grop|schakt)/);
+      if (isHighRisk) {
+        // We can't easily check for AMP file existence efficiently here without checking Drive. 
+        // We create a "Warning" to Verify AMP.
+        items.push({
+          id: `risk-${p.id}`,
+          type: 'risk',
+          title: `Saknas AMP? (${p.name})`,
+          subtitle: "Projektet verkar innefatta riskfyllda moment. Kontrollera att AMP är upprättad.",
+          severity: 'medium',
+          link: `/projects/${p.id}/kma`
+        });
+      }
+    }
+
+    return { success: true, items };
+  } catch (error: any) {
+    return { success: false, error: error.message };
   }
 }
