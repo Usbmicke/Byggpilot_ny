@@ -46,7 +46,21 @@ export const CompanyRepo = {
     async get(companyId: string): Promise<CompanyData | null> {
         const doc = await db.collection(COLLECTION).doc(companyId).get();
         if (!doc.exists) return null;
-        return doc.data() as CompanyData;
+        return { id: doc.id, ...doc.data() } as CompanyData & { id: string };
+    },
+
+    async create(data: CompanyData): Promise<{ id: string }> {
+        const docRef = await db.collection(COLLECTION).add({
+            ...data,
+            createdAt: Timestamp.now(),
+            projectCounter: 100, // Explicit start
+            projectSeriesId: Math.floor(Math.random() * (9999 - 3000 + 1) + 3000)
+        });
+        return { id: docRef.id };
+    },
+
+    async update(companyId: string, data: Partial<CompanyData>) {
+        await db.collection(COLLECTION).doc(companyId).set(data, { merge: true });
     },
 
     async updateDriveStructure(companyId: string, structure: DriveStructure) {

@@ -29,7 +29,7 @@ export default function CustomersPage() {
         if (!user) return;
         setLoading(true);
         setError(null);
-        const res = await getCustomersAction(user.uid);
+        const res = await getCustomersAction();
         if (res.success && res.customers) {
             setCustomers(res.customers);
         } else {
@@ -46,7 +46,7 @@ export default function CustomersPage() {
         // Auto-assign role for clarity if creating UE
         const role = newType === 'subcontractor' ? 'Underentreprenör' : undefined;
 
-        const res = await createCustomerAction(user.uid, {
+        const res = await createCustomerAction({
             name: newName,
             type: newType,
             role
@@ -166,10 +166,10 @@ export default function CustomersPage() {
                                 <div className="flex items-center gap-3 mb-4">
                                     <div className={`w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold
                                         ${c.type === 'subcontractor' ? 'bg-blue-900/50 text-blue-200' : 'bg-zinc-800 text-zinc-300'}`}>
-                                        {c.name.charAt(0).toUpperCase()}
+                                        {(c.name || '?').charAt(0).toUpperCase()}
                                     </div>
                                     <div>
-                                        <h3 className="font-semibold text-foreground group-hover:text-zinc-200 transition-colors truncate max-w-[150px]">{c.name}</h3>
+                                        <h3 className="font-semibold text-foreground group-hover:text-zinc-200 transition-colors truncate max-w-[150px]">{c.name || 'Namnlös'}</h3>
                                         <span className="text-xs text-muted-foreground capitalize">
                                             {c.role || (c.type === 'private' ? 'Privatperson' : c.type === 'company' ? 'Företag' : 'Partner')}
                                         </span>

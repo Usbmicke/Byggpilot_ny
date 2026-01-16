@@ -22,6 +22,7 @@ export { syncChecklistAction, getTasksAction };
 // --- AI GENERATION ---
 export async function generateTextAction(prompt: string) {
   try {
+    await getAuthenticatedUser();
     const { text } = await ai.generate({
       model: AI_MODELS.FAST,
       prompt: prompt,
@@ -276,15 +277,66 @@ export async function createProjectAction(data: { name: string; address?: string
   }
 }
 
+// --- ECONOMY OPTIMIZATION HELPER ---
+async function recalculateProjectEconomy(projectId: string) {
+  try {
+    console.log(`💰 Recalculating Economy for ${projectId}...`);
+    const { OfferRepo } = await import('@/lib/dal/offer.repo');
+    const { ChangeOrderRepo } = await import('@/lib/dal/ata.repo');
+
+    const [offers, atas] = await Promise.all([
+      OfferRepo.listByProject(projectId),
+      ChangeOrderRepo.listByProject(projectId)
+    ]);
+
+    const offerTotal = offers
+      .filter(o => o.status === 'accepted')
+      .reduce((sum, o) => sum + o.totalAmount, 0);
+
+    const ataTotal = atas
+      .filter(a => a.status === 'approved')
+      .reduce((sum, a) => sum + a.estimatedCost, 0);
+
+    const economy = {
+      offerTotal,
+      ataTotal,
+      totalValue: offerTotal + ataTotal,
+      updatedAt: new Date().toISOString()
+    };
+
+    await ProjectRepo.update(projectId, { economy });
+    console.log(`✅ Economy Updated: ${economy.totalValue} kr`);
+  } catch (e) {
+    console.error("Economy Recalculation Failed:", e);
+  }
+}
+
 export async function getProjectsAction() {
   try {
     const user = await getAuthenticatedUser();
-    const projects = await ProjectRepo.listByOwner(user.uid);
-    const plainProjects = projects.map(p => ({
-      ...p,
-      createdAt: p.createdAt.toDate().toISOString()
+    const projects = await ProjectRepo.listByOwner(user.uid, 50);
+
+    const enrichedProjects = await Promise.all(projects.map(async (p) => {
+      // LAZY MIGRATION: If economy is missing, trigger async calc
+      if (!p.economy) {
+        recalculateProjectEconomy(p.id).catch(console.error);
+      }
+
+      const economy = p.economy || { offerTotal: 0, ataTotal: 0, totalValue: 0, updatedAt: new Date().toISOString() };
+
+      // Sanitize: Exclude original timestamps, convert to string
+      const { createdAt, updatedAt, ...rest } = p as any;
+
+      return {
+        ...rest,
+        id: p.id,
+        createdAt: p.createdAt instanceof Date ? p.createdAt.toISOString() : (p.createdAt?.toDate ? p.createdAt.toDate().toISOString() : new Date().toISOString()),
+        updatedAt: updatedAt instanceof Date ? updatedAt.toISOString() : (updatedAt?.toDate ? updatedAt.toDate().toISOString() : undefined),
+        economy
+      };
     }));
-    return { success: true, projects: plainProjects };
+
+    return { success: true, projects: enrichedProjects };
   } catch (error: any) {
     console.error('❌ Get Projects Failed:', error);
     return { success: false, error: error.message };
@@ -410,15 +462,39 @@ export async function saveOfferAction(data: any) {
   }
 }
 
+export async function updateOfferAction(offerId: string, data: Partial<any>) {
+  try {
+    const user = await getAuthenticatedUser();
+    // Verify ownership via repo or checkOwnership
+    const existing = await OfferRepo.getById(offerId);
+    if (!existing || existing.ownerId !== user.uid) throw new Error("Unauthorized");
+
+    await OfferRepo.update(offerId, data);
+
+    // TRIGGER OPTIMIZATION: If status changed or amount changed
+    if (existing.projectId) {
+      await recalculateProjectEconomy(existing.projectId);
+    }
+
+    return { success: true };
+  } catch (error: any) {
+    console.error('❌ Update Offer Failed:', error);
+    return { success: false, error: error.message };
+  }
+}
+
 export async function getOffersAction() {
   try {
     const user = await getAuthenticatedUser();
     const offers = await OfferRepo.listByOwner(user.uid);
-    const plainOffers = offers.map(p => ({
-      ...p,
-      createdAt: p.createdAt.toDate().toISOString(),
-      updatedAt: p.updatedAt.toDate().toISOString()
-    }));
+    const plainOffers = offers.map(p => {
+      const { createdAt, updatedAt, ...rest } = p as any;
+      return {
+        ...rest,
+        createdAt: p.createdAt?.toDate ? p.createdAt.toDate().toISOString() : new Date().toISOString(),
+        updatedAt: p.updatedAt?.toDate ? p.updatedAt.toDate().toISOString() : undefined
+      };
+    });
     return { success: true, offers: plainOffers };
   } catch (error: any) {
     return { success: false, error: error.message };
@@ -615,6 +691,10 @@ export async function approveChangeOrderAction(ataId: string, approved: boolean,
 
     console.log(`📝 ÄTA Approval: ${ataId} -> ${approved ? 'Approved' : 'Rejected'} via ${method}`);
     await ChangeOrderRepo.updateStatus(ataId, approved ? 'approved' : 'rejected', method, evidence);
+
+    // TRIGGER OPTIMIZATION
+    await recalculateProjectEconomy(ata.projectId);
+
     return { success: true };
   } catch (error: any) {
     console.error('❌ ÄTA Approval Failed:', error);
@@ -629,11 +709,14 @@ export async function getChangeOrdersAction(projectId: string) {
 
     const { ChangeOrderRepo } = await import('@/lib/dal/ata.repo');
     const orders = await ChangeOrderRepo.listByProject(projectId);
-    const plainOrders = orders.map(o => ({
-      ...o,
-      createdAt: o.createdAt.toDate().toISOString(),
-      approvedAt: o.approvedAt?.toDate().toISOString()
-    }));
+    const plainOrders = orders.map(o => {
+      const { createdAt, approvedAt, ...rest } = o as any;
+      return {
+        ...rest,
+        createdAt: o.createdAt?.toDate ? o.createdAt.toDate().toISOString() : new Date().toISOString(),
+        approvedAt: o.approvedAt?.toDate ? o.approvedAt.toDate().toISOString() : undefined
+      };
+    });
     return { success: true, orders: plainOrders };
   } catch (error: any) {
     return { success: false, error: error.message };
@@ -647,7 +730,7 @@ export async function createChangeOrderAction(data: { projectId: string, descrip
 
     const { ChangeOrderRepo } = await import('@/lib/dal/ata.repo');
     const newOrder = await ChangeOrderRepo.create(data);
-    return { success: true, order: { ...newOrder, createdAt: newOrder.createdAt.toDate().toISOString() } };
+    return { success: true, order: { ...newOrder, createdAt: newOrder.createdAt?.toDate ? newOrder.createdAt.toDate().toISOString() : new Date().toISOString() } };
   } catch (error: any) {
     return { success: false, error: error.message };
   }
@@ -698,11 +781,14 @@ export async function getCustomersAction() {
     const customers = await CustomerRepo.listByCompany(dbUser.companyId);
 
     // Serializing dates
-    const plainCustomers = customers.map(c => ({
-      ...c,
-      createdAt: c.createdAt.toDate().toISOString(),
-      updatedAt: c.updatedAt.toDate().toISOString(),
-    }));
+    const plainCustomers = customers.map(c => {
+      const { createdAt, updatedAt, ...rest } = c as any;
+      return {
+        ...rest,
+        createdAt: c.createdAt?.toDate ? c.createdAt.toDate().toISOString() : new Date().toISOString(),
+        updatedAt: c.updatedAt?.toDate ? c.updatedAt.toDate().toISOString() : undefined,
+      };
+    });
 
     return { success: true, customers: plainCustomers };
   } catch (error: any) {
@@ -726,8 +812,8 @@ export async function getCustomerAction(customerId: string) {
       success: true,
       customer: {
         ...customer,
-        createdAt: customer.createdAt.toDate().toISOString(),
-        updatedAt: customer.updatedAt.toDate().toISOString(),
+        createdAt: customer.createdAt?.toDate ? customer.createdAt.toDate().toISOString() : undefined,
+        updatedAt: customer.updatedAt?.toDate ? customer.updatedAt.toDate().toISOString() : undefined,
       }
     };
   } catch (error: any) {
@@ -909,9 +995,16 @@ export async function getRisksAction(projectId: string) {
 
 export async function mitigateRiskAction(riskId: string) {
   try {
-    await getAuthenticatedUser();
-    const { db } = await import('@/lib/dal/server'); // Direct DB access for speed or use repo
-    // Let's use repo if possible, but for now direct update is fine for this specific flag
+    const user = await getAuthenticatedUser();
+
+    // IDOR Check: Risk -> Project -> Owner
+    const { RiskRepo } = await import('@/lib/dal/risk.repo');
+    const risk = await RiskRepo.get(riskId);
+    if (!risk) throw new Error("Risk not found");
+
+    await checkOwnership(risk.projectId, 'projects', user);
+
+    const { db } = await import('@/lib/dal/server');
     await db.collection('risks').doc(riskId).update({ status: 'mitigated' });
     return { success: true };
   } catch (e: any) {
@@ -937,5 +1030,69 @@ export async function getWeatherAction(address: string) {
   } catch (error: any) {
     console.error("Weather Action Failed:", error);
     return { success: false, error: error.message };
+  }
+}
+
+// --- DASHBOARD (PHASE 8) ---
+export async function getCriticalStopsAction() {
+  try {
+    const user = await getAuthenticatedUser();
+
+    // 1. Fetch Draft ÄTAs (Unapproved Money)
+    const { db } = await import('@/lib/dal/server');
+    const projectsRef = db.collection('projects').where('ownerId', '==', user.uid).where('status', '==', 'active').limit(10);
+    const projectsSnap = await projectsRef.get();
+    const projectIds = projectsSnap.docs.map(d => d.id);
+    const projectNames: Record<string, string> = {};
+    projectsSnap.docs.forEach(d => projectNames[d.id] = d.data().name);
+
+    const stops: any[] = [];
+
+    if (projectIds.length > 0) {
+      // Find Draft ÄTAs
+      const ataRef = db.collection('change_orders')
+        .where('projectId', 'in', projectIds.slice(0, 10))
+        .where('status', '==', 'draft');
+
+      const ataSnap = await ataRef.get();
+      ataSnap.docs.forEach(d => {
+        const data = d.data();
+        stops.push({
+          id: d.id,
+          type: 'ata',
+          title: `Utkast ÄTA: ${data.description}`,
+          subtitle: `${projectNames[data.projectId]} - ${data.estimatedCost} kr (Ej godkänd)`,
+          severity: 'medium',
+          link: `/projects/${data.projectId}/ata`
+        });
+      });
+
+      // Find Overdue Invoices
+      const invRef = db.collection('invoices')
+        .where('projectId', 'in', projectIds.slice(0, 10))
+        .where('status', '==', 'sent'); // Check if overdue in code
+
+      const invSnap = await invRef.get();
+      const now = new Date();
+      invSnap.docs.forEach(d => {
+        const data = d.data();
+        const due = data.dueDate?.toDate ? data.dueDate.toDate() : new Date(); // Safety check
+        if (due < now) {
+          stops.push({
+            id: d.id,
+            type: 'invoice',
+            title: `Förfallen Faktura: ${data.id}`,
+            subtitle: `${projectNames[data.projectId]} - ${data.amount} kr`,
+            severity: 'high',
+            link: `/projects/${data.projectId}`
+          });
+        }
+      });
+    }
+
+    return { success: true, items: stops };
+  } catch (e: any) {
+    console.error("Critical Stops Failed:", e);
+    return { success: false, items: [] };
   }
 }

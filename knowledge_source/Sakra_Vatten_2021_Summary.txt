@@ -1,0 +1,32 @@
+SÄKRA VATTENINSTALLATION 2021:1 (SAMMANFATTNING FÖR BYGG)
+
+Gäller från: 1 jan 2021.
+Mål: Förebygga person- och egendomsskador (vattenskador, brännskador, legionella).
+
+1. GRUNDLÄGGANDE KRAV
+- Auktorisation: Arbeten ska utföras av auktoriserat VVS-företag.
+- Intyg: Efter avslutat arbete ska intyg överlämnas till beställaren (viktigt för försäkring).
+- Material: Endast godkända produkter (systemgodkända) får användas. Blanda inte fabrikat i kopplingar.
+
+2. RÖRGENOMFÖRINGAR & TÄTSKIKT (Golv & Vägg)
+- Avstånd (Vägg): c/c 60 mm mellan rör är standardkrav för att tätskikt ska kunna anslutas korrekt.
+- Avstånd till vägghörn: Minst 60 mm från rörsida till vägghörn.
+- Golvgenomföringar: Undviks i möjligaste mån i våtrum (utom avlopp).
+- Rör ur vägg: "Prisolrör" och kopparrör ska vara fixerade. PEX-rör i skyddsrör ska ha fixtur.
+
+3. KÖK & DISKMASKIN
+- Läckageskydd: Ska finnas under diskmaskin, kyl och frys (även inbyggda).
+- Avstängning: Diskmaskin ska ha lättåtkomlig avstängningsventil ovan bänk.
+- Under bänkskåp: Tätskiktsmatta eller tråg krävs i diskbänkskåp för att leda fram läckagevatten.
+
+4. SCHAKT & INBYGGDA RÖR
+- Inspektionslucka: Krävs för avstängningsventiler.
+- Läckageindikering: Schaktbottnar ska vara täta och ha skvallerrör som mynnar i rum med golvavlopp (t.ex. badrum).
+- Pasbitar: Utbytbara passbitar för vattenmätare/ventiler.
+
+5. TAPPEVATTEN & LEGIONELLA
+- Temperatur: Varmvatten ska vara minst 50°C vid tappstället (efter 1 min) och 60°C i beredaren.
+- VVC: Cirkulationsledningar ska vara korrekt isolerade.
+- "Döda stick": Rör som inte används ska proppas vid huvudledningen för att undvika stillastående vatten.
+
+NOTERA: Vid osäkerhet, se branschregler.se eller kontakta Säker Vatten.

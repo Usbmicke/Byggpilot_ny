@@ -1,0 +1,4824 @@
+AFS 2023:14 
+Arbetsmiljöverkets föreskrifter  och allmänna råd (AFS 2023:14)  om gränsvärden för luftvägs exponering i arbetsmiljön 
+Arbetsmiljöverkets författningssamling
+
+ISBN 978-91-8042-013-6 
+ISSN 1650-3163 
+ARBETSMILJÖVERKET Box 9082, 171 09 Solna  
+Telefon: 010-730 90 00 
+E-post: arbetsmiljoverket@av.se www.av.se 
+BESTÄLLNINGSADRESS Arbetsmiljöverket 
+Box 9082, 171 09 Solna 
+Telefon 010-730 90 00 www.av.se 
+
+I Arbetsmiljöverkets författningssamling (AFS) publiceras myndighetens föreskrifter  och allmänna råd.  
+Föreskrifter är bindande regler. Allmänna råd har en annan juridisk status än föreskrifter.  Allmänna råd är inte bindande, utan innehåller rekommendationer om tillämpningen av  föreskrifterna som anger hur någon kan eller bör handla i ett visst hänseende. De kan till  exempel upplysa om lämpliga sätt att uppfylla kraven och visa på praktiska lösningar.  
+Observera att hänvisningar till författningar alltid avser författningens ursprungliga  nummer. Senare ändringar och omtryck kan förekomma. 
+När det gäller ändringar och omtryck av Arbetarskyddsstyrelsens och Arbetsmiljöverkets  författningar hänvisas till senaste Förteckning över föreskrifter och allmänna råd. 
+Utgivare: Eva Nilsson
+3 
+Innehåll 
+Varför föreskrifterna finns ....................................................................... 7 Då gäller föreskrifterna........................................................................... 8 Vem riktar sig föreskrifterna till ............................................................... 8 Definitioner........................................................................................... 9 Kunskaper .......................................................................................... 10 Mätningar ........................................................................................... 10 Åtgärder vid överskridande av gränsvärden ............................................. 12 
+Övergångsbestämmelser.......................................................13 
+Bilagor 
+Bilaga 1 Gränsvärdeslistan med förklaringar ...................................... 14 Bilaga 2 Uppgifter som ska redovisas i en mätrapport......................... 68 Bilaga 3 Index med CAS-nummer..................................................... 70
+5 
+
+Arbetsmiljöverkets 
+författningssamling 
+Arbetsmiljöverkets föreskrifter och allmänna  råd om gränsvärden för luftvägsexponering  i arbetsmiljön;  
+beslutade den 15 september 2023. 
+Arbetsmiljöverket föreskriver1 följande med stöd av 18 §  
+
+AFS 2023:14 
+Utkom från trycket den 22 november 2023 
+
+arbetsmiljöförordningen (1977:1166) och beslutar följande allmänna råd. 
+Varför föreskrifterna finns 
+1 § Dessa föreskrifter finns för att förebygga ohälsa hos arbetstagare som  exponeras för de ämnen som finns listade i dessa föreskrifter. 
+1 Jämför följande direktiv: 
+Kommissionens direktiv 91/322/EEG av den 29 maj 1991 om fastställande av indikativa  gränsvärden vid genomförande av rådets direktiv 80/1107/EEG av den 27 november 1980  om skydd för arbetstagare mot risker vid exponering för kemiska, fysikaliska och biologiska  agenser i arbetet, 
+Rådets direktiv 98/24/EG av den 7 april 1998 om skydd av arbetstagares hälsa och säkerhet  mot risker som har samband med kemiska agenser i arbetet (fjortonde särdirektivet enligt  artikel 16.1 i direktiv 89/391/EEG), i lydelsen enligt Europaparlamentets och rådets  förordning (EU) 2019/1243 av den 20 juni 2019, 
+Kommissionens direktiv 2000/39/EG av den 8 juni 2000 om upprättande av en första  förteckning över indikativa yrkeshygieniska gränsvärden vid genomförande av rådets  direktiv 98/24/EG om skydd av arbetstagares hälsa och säkerhet mot risker som har  samband med kemiska agenser i arbetet, i lydelsen enligt Kommissionens direktiv  (EU) 2019/1831 av den 24 oktober 2019 om en femte förteckning över indikativa  yrkeshygieniska gränsvärden,
+7 
+AFS 2023:14
+Då gäller föreskrifterna 
+2 § Bestämmelserna i dessa föreskrifter reglerar all verksamhet där  luftföroreningar förekommer eller bildas. 
+3 § I Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:10) om  risker i arbetsmiljön, i kapitlet om övergripande bestämmelser för kemiska  riskkällor, finns det krav på att arbetsgivaren ska bedöma om halten av  luftföroreningar är godtagbar i förhållande till de hygieniska gränsvärden  som anges i bilaga 1 i dessa föreskrifter. Det finns också krav på att  arbetsgivare ska se till att yrkeshygieniska mätningar genomförs, om man  inte på annat sätt kan bedöma om halten av luftföroreningar är godtagbar. 
+Vem riktar sig föreskrifterna till 
+4 § Arbetsgivaren ansvarar för att bestämmelserna i dessa föreskrifter följs.  Med arbetsgivare likställs den som hyr in arbetskraft. 
+Av 3 kap. 5 § andra stycket arbetsmiljölagen (1977:1160) följer att den som  ensam eller gemensamt med familjemedlem driver yrkesmässig verksamhet  utan anställda, omfattas av bestämmelserna i dessa föreskrifter.  
+Av 1 och 3 kap. arbetsmiljölagen följer att bestämmelserna i dessa föreskrifter  under vissa omständigheter kan medföra skyldigheter även för andra  än arbetsgivaren.  
+Europaparlamentets och rådets direktiv 2004/37/EG av den 29 april 2004 om skydd för  arbetstagare mot risker vid exponering för carcinogener eller mutagena ämnen i arbetet  (sjätte särdirektivet enligt artikel 16.1 i rådets direktiv 89/391/EEG) i lydelsen enligt  Europaparlamentets och rådets direktiv (EU) 2022/431 av den 9 mars 2022, och 
+Europaparlamentets och rådets direktiv 2009/148/EG av den 30 november 2009 om  skydd för arbetstagare mot risker vid exponering för asbest i arbetet, i lydelsen enligt  Europaparlamentets och rådets förordning (EU) 2019/1243 av den 20 juni 2019. 
+8 
+AFS 2023:14
+Definitioner 
+5 § I dessa föreskrifter har följande begrepp dessa betydelser. Begrepp Betydelse 
+Luftförorening Ämne eller blandning av ämnen i  luft som kan medföra ohälsa. 
+Hygieniskt gränsvärde Gränsvärde för genomsnittshalt av  en luftförorening i inandningsluften  
+beräknat som ett tidsvägt  
+medelvärde. 
+Nivågränsvärde Hygieniskt gränsvärde under en  arbetsdag, upp till 8 timmar. 
+Korttidsgränsvärde Hygieniskt gränsvärde under  15 minuter. För ammoniak,  
+monoisocyanater och diisocyanater  
+gäller referenstiden 5 minuter.  
+För akrylsyra gäller referenstiden  
+1 minut. 
+Hygienisk effekt Ska beräknas för ämnen med likartad  toxikologisk effekt på samma organ.  
+Exponeringen är godtagbar om den  
+hygieniska effekten är högst 1. Den  
+hygieniska effekten sammanfattas i  
+följande formel: 
+
+där C1, C2, Cn är uppmätta halter  
+för ämnena och G1, G2, Gn är  
+gränsvärdena för dessa ämnen  
+uttryckta i samma enhet. 
+9 
+AFS 2023:14 
+Begrepp Betydelse 
+Tidsvägt medelvärde Den uppmätta halten av  luftföroreningen ska beräknas  
+som ett tidsvägt medelvärde. Vid  
+deltidsprovtagning får man det  
+tidsvägda medelvärdet, Cm, ur  
+följande formel: 
+
+där C1, C2, C3, Cn är den uppmätta  
+halten för varje deltidsprov och t1,  
+t2, t3, tn är provtagningstiden för  
+varje deltidsprov. 
+Kunskaper 
+6 § Arbetsgivaren ska se till att den som mäter luftföroreningar har  kunskaper som minst omfattar hur man 
+1. planerar och genomför mätningar, 
+2. behandlar mätdata, 
+3. tolkar resultat, och 
+4. redovisar resultat i en mätrapport enligt bilaga 2. 
+Allmänna råd 
+När mätningar genomförs kan man använda sig av standarden  SS-EN 689:2018+AC:2019 Arbetsplatsluft – Bedömning av  exponering genom inandning av kemiska ämnen – Mätstrategi för  överensstämmelse med gränsvärden för exponering på arbetsplats.  Utgåva 1. 
+Mätningar 
+Utförande av mätningar 
+7 § Arbetsgivaren ska se till att mätningar utförs enligt 8–12 §§. Mätningarna  ska planeras i samverkan mellan arbetsgivare och berörda arbetstagare samt  skyddsombud alternativt arbetsmiljöombud om ett sådant finns.
+10 
+AFS 2023:14 
+8 § Den som genomför mätningen ska göra det i inandningsluften på så  många arbetstagare att det går att bedöma exponeringen för alla som är  exponerade. Mätningarna ska avse förhållandena vid normal drift. Det ska  vid behov även utföras mätningar under andra förhållanden. 
+Den som mäter ska även jämföra den uppmätta exponeringen med de  hygieniska gränsvärden som finns i bilaga 1. 
+9 § I Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:10) om  risker i arbetsmiljön, i kapitlet om ytterligare bestämmelser för vissa grupper  av kemiska ämnen, finns det krav på obligatoriska mätningar när det kan  förekomma exponering via inandning av 
+1. bly och oorganiska blyföreningar, 
+2. etylenoxid, 
+3. kadmium och oorganiska kadmiumföreningar, 
+4. styren, vinyltoluen eller andra reaktiva monomerer vid  esterplastframställning, eller 
+5. särskilt farliga syntetiska oorganiska fibrer. 
+10 § Om arbetstagarna exponeras för flera ämnen som påverkar samma del  av kroppen, med likartad verkningsmekanism, ska den som mäter bedöma  ämnenas sammanlagda påverkan. Detta ska man göra genom att beräkna  den hygieniska effekten. 
+Nivågränsvärde 
+11 § Den som mäter ska se till att mätningen pågår så länge att resultatet  kan jämföras med ämnets nivågränsvärde såsom det anges i bilaga 1.  Den del av arbetstiden som mäts ska vara representativ för exponeringen.  Exponeringen ska beräknas som ett tidsvägt medelvärde. 
+Nivågränsvärden är bindande och får inte överskridas. 
+Allmänna råd 
+En arbetsdag är normalt åtta timmar och då behöver man mäta under  minst 75 procent av arbetstiden.
+11 
+AFS 2023:14 
+Korttidsgränsvärde 
+12 § Den som mäter ska se till att mätningen pågår så länge att resultatet  kan jämföras med ämnets korttidsgränsvärde såsom det anges i bilaga 1.  Mätningen ska utföras vid de tidpunkter då misstanke om höga kortvariga  exponeringar förekommer. 
+Bindande korttidsgränsvärden får inte överskridas. 
+Allmänna råd 
+Exponering motsvarande ett 15-minuters korttidsgränsvärde bör inte  förkomma under längre tid än 15 minuter per timme. Exponering  motsvarande ett 5-minuters korttidsgränsvärde bör inte förekomma  mer än en gång per 20 minuter. 
+Dokumentera mätresultaten 
+13 § Arbetsgivaren ska se till att mätresultaten finns dokumenterade i en  rapport med de uppgifter som framgår av bilaga 2. 
+Enligt 3 § arbetsmiljöförordningen (1977:1166) ska arbetsgivaren spara  mätrapporterna i minst 5 år. 
+Åtgärder vid överskridande av gränsvärden 
+14 § I Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:10) om  risker i arbetsmiljön, i kapitlet om övergripande bestämmelser för kemiska  riskkällor, finns krav på att arbetsgivaren ska vidta åtgärder om hygieniska  
+gränsvärden överskrids och att åtgärderna ska väljas enligt åtgärdstrappan i  samma föreskrifter.
+12 
+AFS 2023:14 
+Övergångsbestämmelser 
+Övergångsbestämmelser 
+1. Denna författning träder i kraft den 1 januari 2025. 
+2. Genom denna författning upphävs Arbetsmiljöverkets föreskrifter  och allmänna råd (AFS 2018:1) om hygieniska gränsvärden. 3. Nivågränsvärdet 0,05 mg/m3 mätt som inhalerbar fraktion och  0,01 mg/m3 mätt som respirabel fraktion för nickelföreningar börjar  gälla den 18 januari 2025. Fram till dess gäller nivågränsvärdet  0,1 mg/m3 mätt som inhalerbar fraktion. 
+4. Gränsvärdet för dieselavgaser vid gruvdrift under jord och  tunnelbygge börjar gälla den 21 februari 2026. 
+5. Nivågränsvärdet 1 mg/m3 (0,45 ppm) för akrylnitril börjar gälla  den 5 april 2026. Fram till dess gäller nivågränsvärdet  
+4,5 mg/m3 (2 ppm). 
+6. Nivågränsvärdet 0,66 mg/m3 (0,2 ppm) för bensen börjar gälla  den 5 april 2026. Fram till dess gäller nivågränsvärdet 1,5 mg/m3 (0,5 ppm). 
+7. Nivågränsvärdet 0,0002 mg/m3 för beryllium och oorganiska  föreningar börjar gälla den 11 juli 2026. Fram till dess gäller  nivågränsvärdet 0,0006 mg/m3. 
+8. Nivågränsvärdet 0,001 mg/m3 för kadmium och oorganiska  föreningar börjar gälla den 11 juli 2027. Fram till dess gäller  nivågränsvärdet 0,004 mg/m3. 
+9. Tillstånd, godkännanden, undantag, dispenser, villkor,  förelägganden, förbud, avgiftsförelägganden, anmälningar,  registreringar, rapporter, intyg, journaler och annan  
+dokumentation, samt andra beslut eller åtgärder i enskilda fall  enligt de upphävda föreskrifterna, fortsätter att gälla enligt  motsvarande bestämmelser i de nya föreskrifterna. 
+ERNA ZELMIN 
+Eva Nilsson
+13 
+AFS 2023:14 
+Bilaga 1 
+Bilaga 1 Gränsvärdeslistan med förklaringar 
+Förklaringar av gränsvärdeslistans kolumnrubriker 
+Gränsvärden finns för olika typer av luftföroreningar och även för grupper  av ämnen. Gränsvärden är normalt bindande. Vissa kortidsgränsvärden  är dock vägledande, de har anmärkning V i gränsvärdeslistan och ska  användas som ett rekommenderat högsta värde. 
+Olika kemiska ämnen mäts på olika sätt. För ångor anges gränsvärden med  ppm. För fasta ämnen anges i listan om det är inhalerbar fraktion, totaldamm  eller respirabel fraktion som avses. Vid omräkning mellan ppm och mg/m3 har följande formel använts. Den gäller vid 20 °C och 101,3 kPa (760 mm Hg). 
+
+24,1 = molvolym vid 20 °C och 101,3 kPa. 
+CAS-nummer 
+Ämnets identifikationsnummer anges enligt Chemical Abstract Service  (CAS). I bilaga 3 finns ämnena på gränsvärdeslistan i CAS-nummerordning. 
+Asterisk (*) 
+En asterisk (*) används när gruppgränsvärden anges för bara ett  CAS-nummer. För till exempel koppar och oorganiska föreningar anges  CAS-numret för koppar. Ämnet och CAS-numret är då markerade  med asterisken *. 
+År 
+I kolumnen år anges när ämnet infördes på listan eller senast omprövades. 
+Noter 
+Kolumnen noter innehåller hänvisningar till kompletterande information till  vissa ämnen. Det finns två typer av noter. Not 1–22 är föreskrifter och 
+14 
+AFS 2023:14 
+Bilaga 1 
+Anmärkningar 
+I kolumnen anmärkningar (Anm.) används följande förkortningar: 
+Förkortning Förklaring 
+B Ämnet är ototoxiskt och kan  orsaka hörselskada. Exponering  
+för ämnet nära det befintliga  
+yrkeshygieniska gränsvärdet och vid  
+samtidig exponering för buller, nära  
+insatsvärdet 80 dB, kan ge en ökad  
+skaderisk. 
+C Ämnet är cancerframkallande. 
+H Ämnet tas lätt upp genom huden.  Gränsvärdet bedöms ge tillräckligt  
+skydd om huden är skyddad. 
+M Medicinska kontroller kan krävas  för hantering av ämnet. 
+R Reproduktionsstörande ämnen,  som kan skada fertiliteten och det  
+ofödda barnet. 
+SH Sensibiliserande ämnen som  kan ge allergi eller annan  
+överkänslighet i huden.  
+SL Sensibiliserande ämnen som  kan ge allergi eller annan  
+överkänslighet i övre och nedre  
+luftvägarna.  
+V Vägledande korttidsgränsvärde  som ska användas som ett  
+rekommenderat högsta värde som  
+inte bör överskridas.
+15 
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+Korttidsgränsvärde 
+mg/m3 
+C, V 90 
+C, V 60 
+1 
+C − 
+23 
+V 1200 
+23 H, V 100 
+23 0,12 
+24 C, H, SH 
+0,1 
+24 C, H, SH 
+4 
+2, 23 59 
+23 
+H 12 
+H, V 14 
+H, V 9 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+50 
+mg/m3 
+45 
+25 
+25 
+− 
+− 
+500 
+600 
+60 
+50 
+0,05 
+0,05 
+− 
+0,03 
+1,8 
+4,5 
+12 
+20 
+29 
+5 
+5 
+6 
+5 
+
+
+
+3 
+3 
+
+År 
+CAS-nummer 
+Gränsvärdeslistan Ämne 
+(NGV) 
+ppm 
+25 1990 
+75-07-0 Acetaldehyd 
+10 1993 
+60-35-5 Acetamid 
+− 
+53-96-3 2-Acetamidofluoren 
+250 1993 
+67-64-1 Aceton 
+30 1993 
+75-05-8 Acetonitril 
+0,02 2018 107-02-8 
+Akrolein 
+− 
+2018 79-06-1 
+Akrylamid 
+2 2022 107-13-1 
+Akrylnitril 
+0,452 
+10 2018 
+79-10-7 Akrylsyra 
+2 2015 107-18-6 
+Allylalkohol 
+2 1984 107-11-9 
+Allylamin 
+1 1993 107-05-1 
+Allylklorid 
+2 Gäller från och med den 5 april 2026.
+
+16 
+
+Noter 
+Anm. Korttidsgränsvärde 
+mg/m3 
+25 − 
+25 − 
+25 − 
+3 
+C − 
+1 
+C − 
+23 
+H 8,92 
+23 − 
+2, 23 36 
+AFS 2023:14 Bilaga 1 
+23
+C, H 
+8 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+− 
+mg/m3 
+5 
+− 
+2 
+− 
+1 
+− 
+− 
+− 
+− 
+2 
+4,46 
+− 
+0,2 
+50 
+14 
+
+
+
+2 
+4 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+− 
+1996 7429-90-5* 
+Aluminium* –  
+metall och oxid  
+(totaldamm som Al)  
+Se även respirabel fraktion 
+− 
+1996 7429-90-5* 
+Aluminium* –  
+metall och oxid 
+(respirabel fraktion som Al)  
+Se även totaldamm 
+− 
+1996 Aluminium –  
+lösliga föreningar 
+(totaldamm som Al)  
+− 
+60-09-3 p-Aminoazobensen 
+− 
+92-67-1 4-Aminodifenyl 
+1 2020 106-49-0 
+4-Aminotoluen 
+− 
+2018 61-82-5 
+Amitrol 
+20 2011 7664-41-7 
+Ammoniak 
+1 2020 
+62-53-3 Anilin 
+
+17 
+
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+25 
+24, 25 C 
+24, 25 C 
+3 C 
+26
+
+Korttidsgränsvärde (KGV) 
+mg/m3 
+− 
+− 
+− 
+− 
+− 
+
+Nivågränsvärde (NGV) 
+ppm 
+− 
+mg/m3 
+0,25 
+− 
+0,3 
+− 
+0,01 
+− 
+0,01 
+
+
+
+
+− 
+− 
+
+
+
+
+År CAS-nummer 
+Ämne 
+ppm 
+− 
+2011 7440-36-0* Antimon* och föreningar 
+(inhalerbar fraktion som Sb)  
+utom antimontrihydrid 
+0,05 1974 7803-52-3 
+Antimontrihydrid 
+− 
+2021 7440-38-2* 
+Arsenik* och oorg.  
+föreningar 
+(inhalerbar fraktion som As) 
+− 
+2020 7778-39-4 
+Arseniksyra  
+(inhalerbar fraktion som As) 
+Asbest 
+Se fibrer – naturligt  
+kristallina 
+Attapulgit 
+Se fibrer – naturligt  
+kristallina, övriga fibrer  
+− 
+492-80-8 Auramin 
+Avgaser 
+Se dieselavgaser,  
+kolmonoxid och kvävedioxid 
+
+18 
+Noter 
+Anm. Korttidsgränsvärde 
+mg/m3 
+23, 25 − 
+3 
+C − 
+24 C, H 9 
+V 250 
+4 
+V 1200 
+V 1400 
+V 1,3 
+27 C, H, R, V 
+0,02 
+3 
+C − 
+5, 28 R, V 5 
+C, V 11 
+AFS 2023:14 Bilaga 1 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+− 
+mg/m3 
+0,5 
+− 
+− 
+3 
+0,663 
+1,5 
+75 
+180 
+300 
+800 
+300 
+900 
+0,3 
+0,4 
+− 
+0,002 
+− 
+− 
+− 
+3 
+
+
+
+2 
+5 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+− 
+1990 Barium – lösliga föreningar 
+(totaldamm som Ba) 
+− 
+98-87-3 Bensalklorid 
+0,5 2022 
+71-43-2 Bensen 
+0,23 
+50 1989 
+Bensin – industri hexantyp 
+200 1989 
+Bensin – industri heptantyp 
+200 1989 
+Bensin – industri oktantyp 
+0,1 1978 106-51-4 
+p-Bensokinon 
+− 
+1993 50-32-8 
+Benso(a)pyren 
+− 
+98-07-7 Bensotriklorid 
+− 
+1987 85-68-7 
+Bensylbutylftalat 
+1 1978 100-44-7 
+Bensylklorid 
+3 Gäller från och med den 5 april 2026.
+
+19 
+
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+1 C 
+24, 25 C, SH 
+23, 25 R 
+24, 25,  C, M, R 
+28 
+6, 24, 25 B, M, R 
+6, 24, 25 B, M, R 
+25 H, V 
+Korttidsgränsvärde (KGV) 
+mg/m3 
+− 
+− 
+− 
+0,015 
+− 
+− 
+5 
+
+Nivågränsvärde (NGV) 
+ppm 
+− 
+mg/m3 
+− 
+− 
+0,00024 
+0,0006 
+− 
+2 
+− 
+0,005 
+− 
+0,1 
+− 
+0,05 
+
+
+
+
+
+− 
+2 
+
+År CAS-nummer 
+Ämne 
+ppm 
+− 
+92-87-5 Benzidin 
+− 
+2020 7440-41-7* Beryllium* och oorganiska  
+föreningar  
+(inhalerbar fraktion som Be) 
+− 
+2018 80-05-7 
+Bisfenol A  
+(inhalerbar fraktion) 
+− 
+2018 7758-97-6 
+Blykromat 
+(inhalerbar fraktion som Cr) 
+− 
+2011 7439-92-1* Bly* och oorg. föreningar  
+(inhalerbar fraktion som Pb) 
+Se även respirabel fraktion 
+− 
+2011 7439-92-1* Bly* och oorg. föreningar 
+(respirabel fraktion som Pb)  
+Se även inhalerbar fraktion 
+Bomullsdamm 
+Se damm – bomull 
+− 
+1978 1303-96-4 
+Borax (totaldamm) 
+4 Gäller från och med den 11 juli 2026.
+
+20 
+Noter 
+Anm. Korttidsgränsvärde 
+mg/m3 
+23 
+V 2 
+24 
+C 10 
+H 90 
+H, V 250 
+H, V 250 
+H, V 250 
+23 723 
+23 723 
+23 723 
+723 
+23 M, SH 53 
+H 15 
+H 15 
+AFS 2023:14 Bilaga 1 
+H
+15 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+0,3 
+mg/m3 
+0,7 
+5 
+1 
+30 
+45 
+75 
+150 
+75 
+150 
+75 
+150 
+150 
+241 
+150 
+241 
+150 
+241 
+150 
+241 
+10 
+11 
+5 
+− 
+5 
+− 
+
+
+
+5 
+− 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+0,1 1974 7726-95-6 
+Brom 
+0,5 2018 106-99-0 
+1,3-Butadien 
+15 1989 
+71-36-3 n-Butanol 
+50 1987 
+78-83-1 iso-Butanol 
+50 1987 
+78-92-2 sek-Butanol 
+50 1987 
+75-65-0 tert-Butanol 
+50 2020 123-86-4 
+n-Butylacetat 
+50 2020 110-19-0 
+iso-Butylacetat 
+50 2020 105-46-4 
+sek-Butylacetat 
+50 2020 540-88-5 
+tert-Butylacetat 
+2 2015 141-32-2 
+n-Butylakrylat 
+− 
+1984 109-73-9 
+n-Butylamin 
+− 
+1984 78-81-9 
+iso-Butylamin 
+− 
+1984 13952-84-6 
+sek-Butylamin 
+21 
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+H 
+SH, V 
+7 V 
+M, SH, V 
+23 SH 
+3 C 
+V 
+V 
+V 
+23 H, SH 
+25 H 
+23 
+V 
+V
+Korttidsgränsvärde (KGV) 
+mg/m3 
+15 
+80 
+60 
+450 
+− 
+− 
+4500 
+4000 
+6000 
+− 
+4 
+0,8 
+− 
+300 
+
+Nivågränsvärde (NGV) 
+ppm 
+5 
+mg/m3 
+− 
+15 
+50 
+10 
+30 
+75 
+300 
+− 
+0,5 
+− 
+− 
+750 
+3000 
+750 
+2500 
+750 
+4000 
+− 
+1 
+− 
+1 
+0,3 
+0,3 
+− 
+700 
+
+
+
+75 
+200 
+
+År CAS-nummer 
+Ämne 
+ppm 
+− 
+1984 75-64-9 
+tert-Butylamin 
+10 1981 2426-08-6 
+Butylglycidyleter 
+5 1996 138-22-7 
+Butyllaktat 
+50 1987 
+97-88-1 Butylmetakrylat 
+− 
+2018 110-65-6 
+2-Butyn-1,4-diol 
+− 
+3068-88-0 β-Butyrolakton 
+500 1984 
+75-69-4 CFC 11 
+500 1984 
+75-71-8 CFC 12 
+500 1981 
+76-13-1 CFC 113 
+0,58 2015 420-04-2 
+Cyanamid 
+− 
+2018 Cyanider  
+(inhalerbar fraktion som CN) 
+0,1 1978 506-77-4 
+Cyanklorid 
+200 2015 110-82-7 
+Cyklohexan 
+50 1978 108-93-0 
+Cyklohexanol 
+
+22 
+
+Noter 
+Anm. Korttidsgränsvärde 
+mg/m3 
+23 
+H 81 
+V 40 
+8, 25 − 
+8, 25 − 
+8, 25 − 
+25 − 
+9, 25 − 
+AFS 2023:14 Bilaga 1 
+25
+− 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+20 
+mg/m3 
+41 
+10 
+20 
+− 
+5 
+− 
+2,5 
+− 
+5 
+− 
+0,5 
+− 
+3 
+
+
+
+− 
+3 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+10 2015 108-94-1 
+Cyklohexanon 
+5 1993 108-91-8 
+Cyklohexylamin 
+− 
+2018 Damm – oorganiskt 
+(inhalerbar fraktion) 
+Se även respirabel fraktion  
+− 
+2018 Damm – oorganiskt  
+(respirabel fraktion)  
+Se även inhalerbar fraktion 
+− 
+2018 Damm och dimma –  
+organiskt 
+(inhalerbar fraktion) 
+− 
+2018 Damm – bomull inkl.  
+råbomull  
+(inhalerbar fraktion) 
+− 
+2018 Damm – härdplast  
+(inhalerbar fraktion) 
+− 
+2018 Damm – kol inkl. kimrök 
+(inhalerbar fraktion) 
+
+23 
+
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+25 SL 
+25 
+25 
+25 
+25 
+24, 25 C 
+25 
+25
+
+Korttidsgränsvärde (KGV) 
+mg/m3 
+− 
+− 
+− 
+− 
+− 
+− 
+− 
+− 
+
+Nivågränsvärde (NGV) 
+ppm 
+− 
+mg/m3 
+3 
+− 
+2 
+− 
+1 
+− 
+0,5 
+− 
+1 
+− 
+2 
+− 
+2 
+
+
+
+− 
+0,5 
+
+År CAS-nummer 
+Ämne 
+ppm 
+− 
+2000 Damm – mjöl  
+(inhalerbar fraktion) 
+− 
+2018 Damm – papper  
+(inhalerbar fraktion) 
+− 
+2018 9002-86-2 
+Damm – PVC  
+(inhalerbar fraktion) 
+Se även respirabel fraktion 
+− 
+2018 9002-86-2 
+Damm – PVC  
+(respirabel fraktion) 
+Se även inhalerbar fraktion 
+− 
+2018 Damm – textil  
+(inhalerbar fraktion) 
+− 
+2018 Damm – hårda träslag  
+(lövträ), 
+(inhalerbar fraktion) 
+− 
+2018 Damm – mjuka träslag  
+(barrträ), 
+(inhalerbar fraktion) 
+− 
+2018 Damm – tryckimpregnerat  
+virke 
+(inhalerbar fraktion)  
+
+24 
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. Korttidsgränsvärde 
+mg/m3 
+10 
+V 500 
+V 140 
+23 0,36 
+24, 28 C, H − 
+3 
+C − 
+3 C, SH 
+− 
+3 
+C − 
+3 
+C − 
+5 
+V 5 
+1 C, R − 
+24C, H, R 
+− 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+− 
+mg/m3 
+350 
+20 
+70 
+0,1 
+0,07 
+− 
+0,01 
+− 
+− 
+− 
+− 
+− 
+− 
+− 
+− 
+− 
+3 
+− 
+− 
+
+
+
+− 
+0,8 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+− 
+1989 Dekaner och andra högre  
+alifatiska kolväten 
+10 2000 57041-67-5 
+Desfluran 
+0,02 2018 431-03-8 
+Diacetyl 
+− 
+2020 101-14-4 
+4,4´-Diamino-3,3´- 
+diklordifenylmetan 
+(Metylenbis-(o-kloranilin)) 
+− 
+615-05-4 2,4-Diamino-1- 
+metoxibensen 
+(2,4-Diaminoanisol) 
+− 
+95-80-7 2,4-Diaminotoluen 
+− 
+119-90-4 Dianisidin  
+(3,3´-Dimetoxibensidin) 
+− 
+334-88-3 Diazometan 
+− 
+1987 523-31-9 
+Dibensylftalat 
+− 
+96-12-8 1,2-Dibrom-3-klorpropan 
+0,1 2018 106-93-4 
+1,2-Dibrometan  
+(Etyldibromid) 
+25 
+
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+5, 28 R, V 
+3 C 
+24, 26 C 
+23 
+H, V 
+H, V 
+23 
+H, V 
+V 
+H, V 
+H, V
+
+Korttidsgränsvärde (KGV) 
+mg/m3 
+5 
+− 
+ − 
+30 
+30 
+50 
+90 
+101 
+250 
+170 
+220 
+
+Nivågränsvärde (NGV) 
+ppm 
+− 
+mg/m3 
+3 
+− 
+− 
+ −
+ 0,05
+6 
+15 
+10 
+15 
+10 
+10 
+20 
+45 
+15 
+68 
+30 
+130 
+30 
+80 
+
+
+
+30 
+110 
+
+År CAS-nummer 
+Ämne 
+ppm 
+− 
+1987 84-74-2 
+Dibutylftalat 
+− 
+1464-53-5 1,2:3,4-Diepoxibutan 
+−
+2020 Dieselavgaser 
+(elementärt kol) 
+Se även kolmonoxid och  
+kvävedioxid  
+3 1993 111-42-2 
+Dietanolamin 
+5 2015 109-89-7 
+Dietylamin 
+2 1996 100-37-8 2-Dietylaminoetanol 
+10 1993 111-46-6 
+Dietylenglykol 
+10 
+2015 
+112-34-5 
+Dietylenglykolmonobutyl eter 
+15 
+1996 
+124-17-4 
+Dietylenglykolmonobutyl eteracetat 
+15 
+2000 
+111-90-0 
+Dietylenglykolmonoetyl eter 
+15 
+2000 
+112-15-2 
+Dietylenglykolmonoetyl eteracetat 
+
+26 
+
+Noter 
+23 
+23 
+5 
+5, 28 
+3 
+23 
+23 
+2, 11 
+AFS 2023:14 Bilaga 1 
+5 
+
+Anm. Korttidsgränsvärde 
+mg/m3 
+H, R − 
+H, SH, V 10 
+616 
+V 5 
+R, V 5 
+C − 
+V 2,5 
+V 12 
+14 
+− 
+SH 1,1 
+M, SH,L − 
+R, V 5 
+H, V40 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+− 
+mg/m3 
+50 
+2 
+4,5 
+200 
+308 
+− 
+3 
+− 
+3 
+− 
+− 
+0,4 
+1,3 
+− 
+4 
+2 
+7 
+− 
+1 
+0,2 
+− 
+0,005 
+− 
+− 
+3 
+
+
+
+10 
+20 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+10 
+2015 
+111-77-3 
+Dietylenglykolmonometyl eter 
+1 1996 111-40-0 
+Dietylentriamin 
+100 2015 
+60-29-7 Dietyleter 
+− 
+1987 84-66-2 
+Dietylftalat 
+− 
+1987 117-81-7 Di(2-etylhexyl)ftalat 
+− 
+64-67-5 Dietylsulfat 
+0,2 1974 
+92-52-4 Difenyl 
+− 
+1996 122-39-4 
+Difenylamin 
+1 2018 101-84-8 
+Difenyleter 
+− 
+2015 1314-80-3 
+Difosforpentasulfid 
+− 
+1981 2238-07-5 
+Diglycidyleter 
+0,002 2005 
+Diisocyanater 
+− 
+1987 26761-40-0 
+Diisodecylftalat 
+5 1993 108-18-9 
+Diisopropylamin 
+
+27 
+
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+2 M, SH,L 
+23 H 
+23 H 
+3 C, SH 
+3 C 
+3 C 
+1 C 
+23 H 
+24, 28 C, H 
+23 
+23, 29 H, R 
+
+Korttidsgränsvärde (KGV) 
+mg/m3 
+0,08 
+306 
+60 
+− 
+− 
+− 
+− 
+− 
+20 
+20 
+70 
+−
+
+Nivågränsvärde (NGV) 
+0,01 
+ppm 
+mg/m3 
+0,04 
+50 
+122 
+10 
+12 
+− 
+− 
+− 
+− 
+− 
+− 
+
+
+− 
+− 
+− 
+412 
+5 
+4 
+5 
+8 
+20 
+35 
+
+
+
+− 
+36 
+
+År CAS-nummer 
+Ämne 
+ppm 
+0,005 
+2005 
+28178-42-9 
+2,6-Diisopropylfenyl isocyanat 
+20 2018 
+95-50-1 o-Diklorbensen 
+2 2018 106-46-7 
+p-Diklorbensen 
+− 
+91-94-1 3,3´-Diklorbenzidin 
+− 
+111-44-4 2,2´-Diklordietyleter 
+− 
+505-60-2 2,2´-Diklordietylsulfid  
+(Senapsgas) 
+Diklordifluormetan 
+Se CFC 12 
+− 
+542-88-1 1,1-Diklordimetyleter 
+100 2015 
+75-34-3 1,1-Dikloretan 
+1 2018 107-06-2 
+1,2-Dikloretan 
+2 2018 
+75-35-4 1,1-Dikloreten 
+10 2015 127-19-5 N,N-Dimetylacetamid 
+5 2005 627-93-0 
+Dimetyladipat 
+28 
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. Korttidsgränsvärde 
+mg/m3 
+23 9 
+1 
+C − 
+3 SH,L − 
+H, V 10 
+V 1100 
+V 1100 
+12 SH − 
+23 
+V 1500 
+V 15 
+23, 30 H, R 30 
+5 
+V 5 
+−
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+5 
+mg/m3 
+3,5 
+− 
+− 
+− 
+− 
+2 
+5 
+
+
+300 
+700 
+300 
+700 
+− 
+− 
+800 
+950 
+5 
+6 
+10 
+6 
+− 
+3 
+
+
+
+− 
+33 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+2 2015 124-40-3 
+Dimetylamin 
+− 
+60-11-7 N,N-Dimetyl-4- 
+aminoazobensen 
+− 
+16111-27-6 S-(2-(Dimetylamino) 
+etyl)-pseudotiourea  
+dihydroklorid (PBA 1) 
+1 1993 121-69-7 
+N,N-Dimetylanilin 
+3,3´-Dimetylbenzidin 
+Se o-Tolidin 
+200 1989 
+75-83-2 2,2-Dimetylbutan 
+200 1989 
+79-29-8 2,3-Dimetylbutan 
+1 1993 624-92-0 
+Dimetyldisulfid 
+500 1996 115-10-6 
+Dimetyleter 
+2 1993 598-56-1 
+Dimetyletylamin 
+2 2022 
+68-12-2 N,N-Dimetylformamid 
+− 
+1987 131-11-3 
+Dimetylftalat 
+5 2005 1119-40-0 
+Dimetylglutarat 
+29 
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+3 C 
+3 C 
+23 
+3 C, SH 
+12 
+H, V 
+H, V 
+H, V 
+H, V 
+H, V 
+28 C, H, V 
+28 C, H, V 
+C, H, V 
+5R, V 
+Korttidsgränsvärde (KGV) 
+mg/m3 
+− 
+− 
+540 
+− 
+− 
+− 
+500 
+2 
+2 
+2 
+2 
+0,3 
+0,3 
+0,3 
+5 
+
+Nivågränsvärde (NGV) 
+ppm 
+− 
+mg/m3 
+− 
+− 
+− 
+100 
+270 
+− 
+30 
+− 
+− 
+− 
+− 
+150 
+150 
+0,3 
+1 
+0,3 
+1 
+0,3 
+1 
+0,3 
+1 
+− 
+0,15 
+− 
+0,15 
+− 
+0,15 
+
+
+
+− 
+3 
+
+År CAS-nummer 
+Ämne 
+ppm 
+− 
+57-14-7 1,1-Dimetylhydrazin 
+− 
+540-73-8 1,2-Dimetylhydrazin 
+50 2015 625-16-1 1,1-Dimetylpropylacetat 
+5 2005 106-65-0 
+Dimetylsuccinat 
+− 
+77-78-1 Dimetylsulfat 
+1 1993 
+75-18-3 Dimetylsulfid 
+50 1993 
+67-68-5 Dimetylsulfoxid 
+0,15 1978 25154-54-5 
+Dinitrobensen 
+0,15 1978 528-29-0 
+1,2-Dinitrobensen 
+0,15 1978 
+99-65-0 1,3-Dinitrobensen 
+0,15 1978 100-25-4 
+1,4-Dinitrobensen 
+− 
+1993 25321-14-6 
+Dinitrotoluen 
+− 
+1993 121-14-2 
+2,4-Dinitrotoluen 
+− 
+1993 606-20-2 
+2,6-Dinitrotoluen 
+− 
+1987 117-84-0 
+Di-n-oktylftalat 
+30 
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. Korttidsgränsvärde 
+mg/m3 
+23 C, V 90 
+23 H, V 450 
+SH, V 2 
+V 150 
+13 
+SL 3 glycinenheter/m3 
+24 C, H, SH 
+4 
+1 
+C − 
+V 1900 
+23 
+H 7,5 
+V 1200 
+23 1100 
+23 M, SH 40 
+23
+V 18,8 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+25 
+mg/m3 
+35 
+75 
+300 
+− 
+1 
+20 
+80 
+
+
+
+1 glycinenhet/m3 
+1 
+1,9 
+− 
+− 
+1000 
+1000 
+3 
+2,5 
+1000 
+330 
+300 
+550 
+10 
+20 
+
+
+
+10 9,4 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+10 1996 123-91-1 
+Dioxan 
+50 
+1993 
+34590-94-8 
+Dipropylenglykolmono metyleter 
+− 
+1993 97-77-8 
+Disulfiram 
+10 1981 13838-16-9 
+Enfluran 
+1996 1395-21-7 Enzymer (subtilisiner) 
+9014-01-1 
+0,5 2018 106-89-8 
+Epiklorhydrin 
+− 
+12510-42-8 Erionit 
+66733-21-9 
+500 1993 
+64-17-5 Etanol 
+1 2015 141-43-5 
+Etanolamin 
+250 2000 
+74-85-1 Eten 
+150 2018 141-78-6 
+Etylacetat 
+5 2015 140-88-5 
+Etylakrylat 
+5 2015 
+75-04-7 Etylamin 
+
+31 
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+23 H 
+M, SH,L, V 
+SH,L, V 
+14, 23 H 
+H 
+23 H 
+23 H 
+15, 23 H, R 
+15, 23 H, R 
+H, V 
+H, V 
+15, 23H, R 
+Korttidsgränsvärde (KGV) 
+mg/m3 
+884 
+20 
+35 
+104 
+0,2 
+246 
+333 
+− 
+− 
+90 
+120 
+− 
+
+Nivågränsvärde (NGV) 
+200 
+ppm 
+mg/m3 
+220 
+4 
+10 
+15 
+25 
+40 
+25 
+0,03 
+0,1 
+50 
+50 
+50 
+70 
+− 
+8 
+− 
+11 
+20 
+45 
+20 
+60 
+
+
+
+− 
+− 
+
+År CAS-nummer 
+Ämne 
+ppm 
+50 2015 100-41-4 
+Etylbensen 
+2 2000 7085-85-0 
+Etyl-2-cyanoakrylat 
+10 1978 107-15-3 
+Etylendiamin 
+10 2015 107-21-1 
+Etylenglykol 
+0,016 2018 628-96-6 Etylenglykoldinitrat 
+10 2015 111-76-2 Etylenglykolmonobutyleter 
+10 
+2015 
+112-07-2 
+Etylenglykolmonobutyleter acetat 
+2 2015 110-80-5 Etylenglykolmonoetyleter 
+2 
+2015 
+111-15-9 
+Etylenglykolmonoetyleter acetat 
+10 
+1996 
+109-59-1 
+Etylenglykolmonoisopropyl eter 
+10 
+1996 
+19234-20-9 
+Etylenglykolmonoisopropyl eteracetat 
+1 2018 109-86-4 Etylenglykolmonometyleter 
+32 
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. Korttidsgränsvärde 
+mg/m3 
+15, 23 H, R 
+− 
+H, V 90 
+3 
+C − 
+24 C, H, R 
+9 
+3 
+R − 
+23 − 
+7 
+V 80 
+7 
+V 50 
+M, SH, V 350 
+3 
+C − 
+H, V 50 
+23, 29 
+H 16 
+C, SH,L, V 90 
+2M, SH,L 0,05 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+− 
+mg/m3 
+− 
+20 
+45 
+− 
+− 
+5 
+1,8 
+− 
+ − 
+− 
+5,4 
+10 
+40 
+10 
+25 
+75 
+250 
+− 
+− 
+10 
+25 
+4 
+4 
+15 
+60 
+
+
+
+0,01 
+0,02 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+1 
+2018 
+110-49-6 
+Etylenglykolmonometyleter acetat 
+10 
+1996 
+2807-30-9 
+Etylenglykolmonopropyl eter 
+− 
+151-56-4 Etylenimin (Aziridin) 
+1 2018 
+75-21-8 Etylenoxid 
+−
+96-45-7 Etylentiourea 
+1 2018 104-76-7 
+2-Etylhexanol 
+5 1996 6283-86-9 
+2-Etylhexyllaktat 
+5 1996 
+97-64-3 Etyllaktat 
+50 1987 
+97-63-2 Etylmetakrylat 
+− 
+62-50-0 Etylmetansulfonat 
+5 1984 100-74-3 
+N-Etylmorfolin 
+1 2015 108-95-2 
+Fenol 
+10 1981 122-60-1 
+Fenylglycidyleter 
+0,005 1984 103-71-9 
+Fenylisocyanat 
+33 
+
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+3 C, SH 
+16, 24, 31 C, M 
+16, 32 
+16, 24, 33 C, M 
+16 C, M 
+16, 34 
+16, 35 M 
+23 
+17, 23 
+24C, H, SH 
+
+Korttidsgränsvärde (KGV) 
+mg/m3 
+− 
+− 
+− 
+− 
+− 
+− 
+− 
+3,16 
+− 
+0,74 
+
+Nivågränsvärde (NGV) 
+ppm 
+− 
+mg/m3 
+− 
+
+
+
+− 
+0,1 fibrer/cm3 
+− 
+0,5 fibrer/cm3 
+− 
+0,2 fibrer/cm3 
+− 
+0,2 fibrer/cm3 
+− 
+1 fibrer/cm3 
+− 
+0,2 fibrer/cm³ 
+2 
+0,2 
+− 
+2 
+
+
+
+0,6 0,37 
+
+År CAS-nummer 
+Ämne 
+ppm 
+− 
+135-88-6 Fenyl-β-naftylamin 
+Fibrer – naturliga  
+kristallina utom erionit: 
+2005 - Asbest 
+1990 
+- Övriga fibrer 
+Fibrer – syntetiska oorg.  
+glasartade (amorfa) fibrer:  
+2018 - Eldfasta keramiska fibrer 
+2005 - Specialfibrer 
+2005 
+- Övriga fibrer 
+2005 Fibrer – syntetiska oorg.  
+kristallina fibrer 
+0,1 2015 7782-41-4 
+Fluor 
+− 
+1978 Fluorider (som F) utom  
+vätefluorid 
+0,3 2020 
+50-00-0 Formaldehyd 
+
+34 
+Noter 
+Anm. Korttidsgränsvärde 
+mg/m3 
+H, R, V 30 
+23 0,28 
+23 
+V 2 
+23 
+V 5 
+23 2 
+V 2,4 
+23 0,13 
+23 0,2 
+5 
+V 5 
+M, SH,L 0,4 
+H, V 20 
+H, V 40 
+AFS 2023:14 Bilaga 1 
+SH,L
+0,4 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+15 
+mg/m3 
+20 
+0,2 
+0,14 
+− 
+1 
+− 
+1 
+− 
+1 
+0,4 
+1,2 
+0,02 
+0,064 
+0,05 
+0,08 
+− 
+3 
+0,06 
+0,2 
+5 
+8 
+10 
+20 
+
+
+
+
+
+0,1 
+− 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+10 1993 
+75-12-7 Formamid 
+0,1 2015 7803-51-2 
+Fosfin 
+− 
+2005 10026-13-8 
+Fosforpentaklorid 
+− 
+2000 1314-56-3 
+Fosforpentoxid 
+− 
+2015 7664-38-2 
+Fosforsyra 
+0,2 2005 7719-12-2 
+Fosfortriklorid 
+0,01 2020 10025-87-3 
+Fosforylklorid 
+0,02 2015 
+75-44-5 Fosgen 
+− 
+1987 Ftalater 
+0,03 2011 
+85-44-9 Ftalsyraanhydrid 
+2 1990 
+98-01-1 Furfural 
+5 1990 
+98-00-0 Furfurylalkohol 
+Glasfibrer  
+Se fibrer – syntetiskt oorg.  
+glasartade, övriga fibrer 
+− 
+2011 111-30-8 
+Glutaraldehyd 
+
+35 
+
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+V 
+23 V 
+23 V 
+23 
+23 
+3, 36 M, SH,L 
+2 M, SH,L 
+SH, V 
+1C 
+
+Korttidsgränsvärde (KGV) 
+mg/m3 
+80 
+2500 
+1200 
+475 
+250 
+− 
+0,03 
+5 
+− 
+
+Nivågränsvärde (NGV) 
+ppm 
+mg/m3 
+10 
+40 
+
+
+750 
+1800 
+300 
+800 
+100 
+120 
+50 
+95 
+− 
+− 
+0,005 
+0,02 
+− 
+3 
+
+
+
+− 
+− 
+
+År CAS-nummer 
+Ämne 
+ppm 
+Grafitfibrer 
+Se fibrer – syntetiskt oorg.  
+kristallina fibrer 
+5 1990 151-67-7 
+Halotan 
+Halloysit 
+Se fibrer – naturligt  
+kristallina, övriga fibrer 
+500 1984 
+75-45-6 HCFC 22 
+200 1989 142-82-5* n-Heptan* och andra  
+heptaner 
+25 2015 110-43-0 
+2-Heptanon 
+20 2018 106-35-4 
+3-Heptanon 
+− 
+85-42-7 Hexahydroftalsyraanhydrid 
+13149-00-3 
+14166-21-3 
+0,002 2005 822-06-0 Hexametylendiisocyanat 
+− 
+1984 100-97-0 Hexametylentetramin 
+− 
+680-31-9 Hexametylfosfortriamid 
+
+36 
+
+Noter 
+23 
+24 
+25 
+23 
+AFS 2023:14 Bilaga 1 
+2 
+
+Anm. Korttidsgränsvärde 
+mg/m3 
+180 
+V 1100 
+H, V 8 
+V 3000 
+C, H, SH − 
+SH, V 1,5 
+H, M, SH,  10 
+V 
+V 240 
+− 
+H 37 
+M, SH, V 450 
+M, SL 0,036 
+V150 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+50 
+mg/m3 
+72 
+300 
+700 
+2 
+4 
+750 
+2000 
+− 
+0,013 
+− 
+0,5 
+2 
+5 
+50 
+120 
+− 
+0,1 
+10 
+18 
+75 
+300 
+0,02 
+0,018 
+
+
+
+20 
+75 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+20 2018 110-54-3 
+n-Hexan 
+200 1989 
+Hexaner, utom n-hexan 
+1 1993 591-78-6 
+2-Hexanon 
+500 1996 811-97-2 
+HFC 134a 
+0,01 2018 302-01-2 
+Hydrazin 
+− 
+1993 123-31-9 
+Hydrokinon 
+1 1981 818-61-1 2-Hydroxietylakrylat 
+25 1993 123-42-2 4-Hydroxi-4-metyl-2- 
+pentanon 
+− 
+1996 7440-74-6* 
+Indium* och oorg.  
+föreningar  
+(totaldamm som In) 
+5 2020 123-51-3 
+Isoamylalkohol 
+50 1987 
+97-86-9 Isobutylmetakrylat 
+0,01 2005 
+75-13-8 Isocyansyra 
+10 1990 26675-46-7 
+Isofluran 
+37 
+
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+2 M, SH,L 
+V 
+V 
+23 H 
+25 
+V 
+6, 24, 25 C, M 
+6, 24, 25 C, M, R 
+6, 24, 25 C, M, R 
+
+Korttidsgränsvärde (KGV) 
+mg/m3 
+30 
+0,046 
+600 
+25 
+250 
+70 
+1 
+− 
+− 
+− 
+− 
+
+Nivågränsvärde (NGV) 
+ppm 
+5 
+mg/m3 
+− 
+0,005 
+0,018 
+250 
+350 
+10 
+12 
+50 
+50 
+15 
+45 
+0,1 
+− 
+− 
+3,5 
+− 
+0,0015 
+0,004 
+− 
+0,0015 
+0,004 
+
+
+
+− 
+0,0015 
+0,004 
+
+År CAS-nummer 
+Ämne 
+ppm 
+− 
+1993 78-59-1 
+Isoforon 
+0,002 2005 4098-71-9 
+Isoforondiisocyanat 
+150 1989 
+67-63-0 Isopropanol 
+5 1993 
+75-31-0 Isopropylamin 
+10 2020 
+98-82-8 Isopropylbensen 
+10 1978 1712-64-7 
+Isopropylnitrat 
+− 
+1974 7553-56-2 
+Jod 
+− 
+1978 1309-37-1 
+Järnoxid  
+(respirabel fraktion som Fe)  
+− 
+2020 7440-43-9* Kadmium* och oorg.  
+föreningar  
+(inhalerbar fraktion som Cd) 
+− 
+2020 7790-79-6 
+Kadmiumdifluorid 
+(inhalerbar fraktion som Cd) 
+− 
+2020 10108-64-2 
+Kadmiumdiklorid 
+(inhalerbar fraktion som Cd)  
+5 Gäller från och med den 11 juli 2027.
+38 
+
+Noter 
+Anm. Korttidsgränsvärde 
+mg/m3 
+23, 25 4 
+23, 25 4 
+25 − 
+25 
+H 4 
+24, 25, 28 C, R, SH,L 0,015 
+25 2 
+23 40 
+SH, V 300 
+AFS 2023:14 Bilaga 1 
+C, H, V 
+40 
+
+
+ppm 
+− 
+mg/m3 
+1 
+− 
+1 
+− 
+0,4 
+− 
+1 
+− 
+0,005 
+− 
+1 
+− 
+5 
+50 
+150 
+10 
+20 
+
+
+
+(KGV) 
+Nivågränsvärde  
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+− 
+2018 1305-62-0 
+Kalciumhydroxid  
+(respirabel fraktion) 
+− 
+2018 1305-78-8 
+Kalciumoxid  
+(respirabel fraktion) 
+− 
+2005 
+60304-36-1 
+Kaliumaluminiumtetra fluorid  
+(inhalerbar fraktion) 
+− 
+2018 151-50-8 
+Kaliumcyanid  
+(inhalerbar fraktion som CN) 
+− 
+2018 7778-50-9 
+Kaliumdikromat 
+(inhalerbar fraktion som Cr) 
+− 
+2005 1310-58-3 
+Kaliumhydroxid 
+(inhalerbar fraktion) 
+− 
+2015 105-60-2 
+Kaprolaktam 
+(damm och ånga) 
+25 1990 13466-78-9 
+3-Karen 
+5 1993 120-80-9 
+Katekol 
+Kimrök  
+Se damm – kol inkl. kimrök 
+39 
+
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+23 
+23 
+C, H, V 
+23 
+30 H 
+H, V 
+SH, V 
+23 C, H, V 
+25 C, H, R, 
+SH,L 
+25C, H, R, 
+SH,L 
+
+Korttidsgränsvärde (KGV) 
+mg/m3 
+1,5 
+70 
+18 
+0,8 
+− 
+3,5 
+1,5 
+6 
+25 
+− 
+− 
+
+Nivågränsvärde (NGV) 
+ppm 
+0,5 
+mg/m3 
+− 
+15 
+23 
+5 
+3,5 
+
+
+0,3 
+0,3 
+− 
+268 
+1 
+− 
+− 
+0,5 
+− 
+3 
+5 
+10 
+− 
+0,02 
+
+
+
+− 
+0,02 
+
+År CAS-nummer 
+Ämne 
+ppm 
+− 
+2015 7782-50-5 
+Klor 
+5 2015 108-90-7 
+Klorbensen 
+1 1990 126-99-8 2-Klor-1,3-butadien 
+Klordifluormetan 
+Se HCFC 22 
+0,1 1996 10049-04-4 
+Klordioxid 
+100 2015 
+75-00-3 Kloretan 
+− 
+1981 107-07-3 
+2-Kloretanol 
+− 
+1990 Klorfenoler och salter  
+(som klorfenol) 
+− 
+1993 59-50-7 
+Klorkresol 
+2 1978 
+67-66-3 Kloroform 
+− 
+2011 7440-48-4* Kobolt* och oorg. föreningar 
+(inhalerbar fraktion som Co) 
+− 
+2011 7646-79-9 
+Koboltdiklorid  
+(inhalerbar fraktion) 
+
+40 
+Noter 
+Anm. Korttidsgränsvärde 
+mg/m3 
+25 C, H, R, 
+− 
+SH,L 
+23 
+V 18000 
+23 B, H, R,  
+25 
+V 
+23 B, R 117 
+23 C, H 19 
+25 − 
+23 H, V 
+9 
+23 H, V 
+9 
+23 H, V 
+9 
+23 H, V 
+9 
+SH, V 100 
+AFS 2023:14 Bilaga 1 
+25
+C, M 
+− 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+− 
+mg/m3 
+0,02 
+10000 
+9000 
+8 
+16 
+100 
+23 
+3 
+6,4 
+− 
+0,01 
+2 
+4,5 
+2 
+4,5 
+2 
+4,5 
+2 
+4,5 
+15 
+70 
+
+
+
+− 
+0,05 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+− 
+2011 10026-24-1 
+Koboltsulfat x 7H2O  
+(inhalerbar fraktion) 
+5000 1974 124-38-9 
+Koldioxid 
+5 1978 
+75-15-0 Koldisulfid 
+20 2018 630-08-0 
+Kolmonoxid 
+1 2018 
+56-23-5 Koltetraklorid 
+− 
+2018 7440-50-8* Koppar* och oorg. föreningar 
+(respirabel fraktion som Cu) 
+1 2000 1319-77-3 
+Kresol 
+1 2000 
+95-48-7 o-Kresol 
+1 2000 108-39-4 
+m-Kresol 
+1 2000 106-44-5 
+p-Kresol 
+10 1981 2186-24-5 
+p-Kresylglycidyleter 
+− 
+1996 14464-46-1 
+Kristobalit  
+(respirabel fraktion) 
+
+41 
+
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+23, 25 
+24, 25 C, SH,L 
+24, 25,  C, SH,L 
+28 
+24, 25 C, M 
+6, 23 B, M, R 
+23, 26 
+B, H, M 
+23, 26 
+18 H, V 
+H, V
+
+Korttidsgränsvärde (KGV) 
+mg/m3 
+− 
+0,015 
+0,015 
+− 
+− 
+− 
+1,9 
+− 
+350 
+600 
+
+Nivågränsvärde (NGV) 
+ppm 
+− 
+mg/m3 
+0,5 
+− 
+0,005 
+− 
+0,005 
+− 
+0,1 
+− 
+0,02 
+− 
+0,01 
+1 
+0,96 
+− 
+2,5 
+60 
+175 
+
+
+
+100 
+300 
+
+År CAS-nummer 
+Ämne 
+ppm 
+− 
+2005 7440-47-3* 
+Krom* och oorg.  
+(II, III)-föreningar  
+(totaldamm som Cr)  
+− 
+2018 Krom (VI)-föreningar  
+(inhalerbar fraktion som Cr) 
+− 
+2018 1333-82-0 
+Kromtrioxid  
+(inhalerbar fraktion som Cr) 
+− 
+2018 14808-60-7 Kvarts (respirabel fraktion) 
+Se även kristobalit och  
+tridymit 
+− 
+2015 7439-97-6* Kvicksilver* och oorg.  
+föreningar (som Hg) 
+− 
+1993 Kvicksilver, org. föreningar 
+(som Hg)  
+0,5 2018 10102-44-0 
+Kvävedioxid 
+2 2018 10102-43-9 
+Kvävemonoxid 
+30 2011 
+Lacknafta  
+(2–25 % aromater) 
+50 2011 
+Lacknafta (< 2 % aromater) 
+
+42 
+
+Noter Anm. 
+23, 25 
+SH, V 
+23 
+V 
+23, 25 
+M, SH,L 
+23, 25 
+V 
+AFS 2023:14 Bilaga 1 
+23 
+H, V 
+
+Korttidsgränsvärde 
+mg/m3 
+300 
+0,02 
+0,02 
+900 
+0,4 
+− 
+− 
+100 
+350 
+−
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+50 
+mg/m3 
+150 
+− 
+− 
+− 
+− 
+500 
+180 
+0,1 
+0,2 
+− 
+0,2 
+− 
+0,05 
+30 
+70 
+250 
+250 
+
+
+
+− 
+− 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+25 1990 138-86-3 
+Limonen 
+− 
+2018 7439-93-2* Litium* och föreningar  
+(inhalerbar fraktion som Li)  
+− 
+2018 7580-67-8 
+Litiumhydrid  
+(inhalerbar fraktion som Li) 
+100 1981 10024-97-2 
+Lustgas 
+0,05 2011 108-31-6 Maleinsyraanhydrid 
+− 
+2018 7439-96-5* 
+Mangan* och oorg.  
+föreningar  
+(inhalerbar fraktion som Mn)  
+Se även respirabel fraktion 
+− 
+2018 7439-96-5* 
+Mangan* och oorg.  
+föreningar 
+(respirabel fraktion som Mn) 
+Se även inhalerbar fraktion 
+20 1987 
+79-41-4 Metakrylsyra 
+200 1990 
+67-56-1 Metanol 
+1 1993 
+74-93-1 Metantiol 
+
+43 
+
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+23 H 
+23 H 
+V 
+23 M, SH 
+H, V 
+23 
+H, V 
+23 
+M, SH,L, V 
+24, 28 C, H, SH 
+2 M, SH,L 
+23, 37 C, H 
+23
+
+Korttidsgränsvärde (KGV) 
+mg/m3 
+568 
+550 
+900 
+36 
+25 
+40 
+540 
+540 
+540 
+18 
+− 
+0,05 
+250 
+900 
+
+Nivågränsvärde (NGV) 
+150 
+ppm 
+mg/m3 
+190 
+100 
+275 
+300 
+450 
+10 
+18 
+20 
+13 
+10 
+19 
+100 
+270 
+100 
+270 
+100 
+270 
+4 
+9 
+− 
+0,08 
+0,005 
+0,03 
+70 
+120 
+
+
+
+300 
+150 
+
+År CAS-nummer 
+Ämne 
+ppm 
+50 2015 107-98-2 1-Metoxi-2-propanol 
+50 2015 108-65-6 1-Metoxi-2-propylacetat 
+150 1993 
+79-20-9 Metylacetat 
+5 2015 
+96-33-3 Metylakrylat 
+10 1984 
+74-89-5 Metylamin 
+5 1990 
+74-83-9 Metylbromid 
+50 2015 626-38-0 
+1-Metylbutylacetat 
+50 2015 624-41-9 
+2-Metylbutylacetat 
+50 2015 123-92-2 
+3-Metylbutylacetat 
+2 2000 137-05-3 Metyl-2-cyanoakrylat 
+0,01 2018 101-77-9 4,4´-Metylendianilin 
+0,002 
+2005 
+101-68-8 
+4,4´-Metylendifenyl diisocyanat 
+35 2018 
+75-09-2 Metylenklorid 
+50 2015 
+78-93-3 Metyletylketon 
+44 
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. Korttidsgränsvärde 
+mg/m3 
+1,5 
+23 
+H 250 
+23 107 
+3, 36 M, SH,L 
+− 
+23 250 
+23 200 
+2, 23 M, SH,L 0,047 
+V 190 
+C, H, V 30 
+23 
+V 40 
+1
+C − 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+0,2 
+mg/m3 
+− 
+100 
+125 
+20 
+53 
+− 
+− 
+50 
+95 
+
+
+50 
+83 
+0,02 
+0,024 
+35 
+140 
+5 
+6 
+20 
+20 
+
+
+
+− 
+− 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+− 
+1981 1338-23-4 Metyletylketonperoxid 
+50 2018 107-31-3 
+Metylformiat 
+10 2015 541-85-5 5-Metyl-3-heptanon 
+− 
+25550-51-0 19438-60-9 Metylhexahydroftalsyra anhydrid 
+48122-14-1 
+57110-29-9 
+20 2018 110-12-3 
+5-Metyl-2-hexanon 
+Metylisoamylketon 
+Se 5-Metyl-2-hexanon 
+20 2018 108-10-1 
+Metylisobutylketon 
+0,01 2005 624-83-9 
+Metylisocyanat 
+25 1984 
+99-87-6 4-Metylisopropylbensen 
+1 1981 
+74-88-4 Metyljodid 
+10 2020 
+74-87-3 Metylklorid 
+− 
+107-30-2 Metylklormetyleter 
+45 
+
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+1 C 
+23 M, SH 
+3 C 
+H, V 
+1 C 
+V 
+V 
+H, V 
+23 H, R 
+23 
+23
+
+Korttidsgränsvärde (KGV) 
+mg/m3 
+− 
+400 
+− 
+40 
+− 
+1100 
+1100 
+120 
+170 
+80 
+492 
+367 
+
+Nivågränsvärde (NGV) 
+ppm 
+− 
+mg/m3 
+− 
+100 
+200 
+− 
+− 
+10 
+20 
+− 
+− 
+300 
+700 
+300 
+700 
+25 
+− 
+40 
+110 
+20 
+14,4 
+100 
+98 
+
+
+
+100 
+110 
+
+År CAS-nummer 
+Ämne 
+ppm 
+− 
+56-49-5 3-Metylkolantren 
+(20-Metylkolantren) 
+50 2015 
+80-62-6 Metylmetakrylat 
+− 
+66-27-3 Metylmetansulfonat 
+5 1984 109-02-4 
+N-Metylmorfolin 
+− 
+684-93-5 N-Metyl-N-nitrosourea 
+200 1989 107-83-5 
+2-Metylpentan 
+200 1989 
+96-14-0 3-Metylpentan 
+− 
+1996 107-41-5 2-Metyl-2,4-pentandiol 
+25 1996 108-11-2 4-Metyl-2-pentanol 
+3,6 2020 872-50-4 N-Metyl-2-pyrrolidon  
+(NMP) 
+20 2015 
+98-83-9 α-Metylstyren 
+30 2015 1634-04-4 Metyltertiärbutyleter 
+46 
+
+Noter 
+Anm. Korttidsgränsvärde 
+mg/m3 
+3, 36 M, SH,L 
+− 
+38 C, H − 
+25− 
+AFS 2023:14 Bilaga 1 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+− 
+mg/m3 
+− 
+− 
+− 
+
+
+
+
+
+
+
+− 
+10 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+− 
+26590-20-5 11070-44-3 Metyltetrahydroftalsyra anhydrid 
+34090-76-1 
+1694-82-2 
+3425-89-6 
+5333-84-6 
+42498-58-8 
+− 
+2018 Mineralolja  
+(gammal använd) 
+Mineralull 
+Se fibrer – syntetiska oorg. 
+glasartade, övriga fibrer 
+Mjöldamm  
+Se damm – mjöl 
+− 
+1984 7439-98-7* Molybden* – metall och  
+svårlösliga föreningar  
+(totaldamm som Mo)  
+Se även respirabel fraktion 
+
+47 
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+25 
+25 
+H, V 
+3 C 
+23 
+23 V 
+23 V 
+2 M, SL 
+H, V 
+3 C 
+1 C 
+23
+Korttidsgränsvärde (KGV) 
+mg/m3 
+− 
+− 
+8 
+− 
+72 
+9 
+80 
+0,044 
+0,6 
+− 
+− 
+0,3 
+
+Nivågränsvärde (NGV) 
+ppm 
+− 
+mg/m3 
+5 
+− 
+5 
+2 
+4 
+− 
+− 
+20 
+35 
+5 
+5 
+15 
+50 
+0,005 
+0,017 
+− 
+0,2 
+− 
+− 
+− 
+− 
+
+
+
+− 
+0,1 
+
+År CAS-nummer 
+Ämne 
+ppm 
+− 
+1984 7439-98-7* Molybden* – metall och  
+svårlösliga föreningar  
+(respirabel fraktion som Mo) 
+Se även totaldamm 
+− 
+1984 Molybden – lättlösliga  
+föreningar  
+(totaldamm som Mo) 
+1 1993 
+79-11-8 Monoklorättiksyra 
+− 
+60-34-4 Monometylhydrazin 
+10 2015 110-91-8 
+Morfolin 
+3 1990 
+64-18-6 Myrsyra 
+10 2000 
+91-20-3 Naftalen 
+0,002 2005 3173-72-6 1,5-Naftalendiisocyanat 
+− 
+1978 1321-65-9 Naftalener (klorerade) 
+− 
+134-32-7 α-Naftylamin 
+− 
+91-59-8 β-Naftylamin 
+− 
+2015 26628-22-8 
+Natriumazid 
+
+48 
+
+Noter 
+25 
+24, 25,  
+28 
+25 
+25 
+24, 25 
+24, 25 
+AFS 2023:14 Bilaga 1 
+23 
+
+Anm. 
+Korttidsgränsvärde 
+(KGV) 
+Nivågränsvärde  
+H 
+mg/m3 
+4 
+C, R, SH,L 
+0,015 
+2 
+SH 
+− 
+C, SH 
+− 
+C, SH 
+− 
+C, R
+− 
+ppm 
+− 
+mg/m3 
+1 
+− 
+0,005 
+− 
+1 
+− 
+0,5 
+− 
+0,056 
+0,1 
+− 
+0,016 
+− 
+0,007 
+
+
+
+H 
+− 
+− 
+0,1 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+− 
+2018 143-33-9 
+Natriumcyanid  
+(inhalerbar fraktion som CN) 
+− 
+2018 10588-01-9 
+Natriumdikromat  
+(inhalerbar fraktion som Cr) 
+− 
+2005 1310-73-2 
+Natriumhydroxid  
+(inhalerbar fraktion) 
+− 
+1978 7440-02-0 Nickel – metall (totaldamm) 
+− 
+2022 Nickelföreningar  
+(inhalerbar fraktion som Ni)  
+utom nickelkarbonyl 
+Se även respirabel fraktion  
+− 
+2022 Nickelföreningar  
+(respirabel fraktion som Ni)  
+utom nickelkarbonyl 
+Se även inhalerbar fraktion  
+0,001 1974 13463-39-3 
+Nickelkarbonyl 
+− 
+2011 54-11-5 
+Nikotin 
+6 Gäller från och med den 18 januari 2025.
+
+49 
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+23 H, R 
+1 C 
+23 H 
+23 H 
+V 
+24 C, H 
+3 C 
+C, H, R, V  
+C, H, R, V 
+H, R, V 
+H, V 
+V 
+V 
+V
+Korttidsgränsvärde (KGV) 
+mg/m3 
+− 
+− 
+150 
+0,19 
+130 
+35 
+20 
+− 
+11 
+11 
+11 
+11 
+1100 
+1400 
+3 
+
+Nivågränsvärde (NGV) 
+ppm 
+− 
+mg/m3 
+1 
+− 
+− 
+50 
+62 
+0,02 
+0,095 
+50 
+50 
+10 
+18 
+6 
+7 
+− 
+− 
+2 
+6 
+2 
+6 
+2 
+6 
+2 
+6 
+200 
+800 
+300 
+900 
+
+
+
+− 
+1 
+
+År CAS-nummer 
+Ämne 
+ppm 
+0,2 2018 
+98-95-3 Nitrobensen 
+− 
+92-93-3 4-Nitrodifenyl 
+20 2018 
+79-24-3 Nitroetan 
+0,01 2018 
+55-63-0 Nitroglycerin 
+20 1993 
+75-52-5 Nitrometan 
+5 1990 108-03-2 
+1-Nitropropan 
+2 2018 
+79-46-9 2-Nitropropan 
+− 
+62-75-9 N-Nitrosodimetylamin 
+1 1993 1321-12-6 
+Nitrotoluen 
+1 1993 
+88-72-2 2-Nitrotoluen 
+1 1993 
+99-08-1 3-Nitrotoluen 
+1 1993 
+99-99-0 4-Nitrotoluen 
+150 1989 
+Nonaner 
+200 1989 
+Oktaner 
+− 
+1990 Oljedimma inkl. oljerök 
+
+50 
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. Korttidsgränsvärde 
+mg/m3 
+23 
+V 2 
+23 
+V 2 
+0,6 
+C, H, V 0,03 
+25 SH,L − 
+25 − 
+V 3750 
+H, V 1,5 
+23 
+V 2000 
+23 
+V 2000 
+23
+V 2000 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+− 
+mg/m3 
+1 
+− 
+1 
+0,3 
+0,2 
+
+
+− 
+0,01 
+− 
+0,1 
+− 
+5 
+750 
+2500 
+− 
+0,5 
+750 
+1800 
+750 
+1800 
+
+
+
+750 
+1800 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+− 
+1990 144-62-7 
+Oxalsyra 
+− 
+1990 6153-56-6 
+Oxalsyra dihydrat 
+0,1 1990 10028-15-6 
+Ozon 
+PAH  
+(polycykliska aromatiska  
+kolväten) 
+Se benso(a)pyren 
+− 
+1978 PCB 
+− 
+2011 Penicillin  
+(inhalerbar fraktion) 
+− 
+1996 115-77-5 Pentaerytritol (totaldamm) 
+500 2005 354-33-6 1,1,1,2,2-Pentafluoretan 
+− 
+1974 87-86-5* Pentaklorfenol* och salter  
+(som pentaklorfenol) 
+600 1978 109-66-0 
+n-Pentan 
+600 1978 
+78-78-4 iso-Pentan 
+600 1978 463-82-1 
+tert-Pentan 
+
+51 
+
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+23 
+23 
+23 SH 
+SH, V 
+SH, V 
+23 SH,L 
+23, 25 
+25 SH,L 
+V 
+3C 
+
+Korttidsgränsvärde (KGV) 
+mg/m3 
+540 
+540 
+540 
+− 
+300 
+300 
+0,3 
+− 
+− 
+600 
+− 
+
+Nivågränsvärde (NGV) 
+100 
+ppm 
+mg/m3 
+270 
+100 
+270 
+100 
+270 
+− 
+0,1 
+50 
+150 
+50 
+150 
+0,08 
+0,1 
+− 
+1 
+− 
+0,002 
+
+
+250 
+350 
+
+
+
+− 
+− 
+
+År CAS-nummer 
+Ämne 
+ppm 
+50 2015 
+Pentylacetater 
+50 2015 628-63-7 
+n-Pentylacetat 
+50 2015 620-11-1 
+3-Pentylacetat 
+− 
+2015 88-89-1 
+Pikrinsyra 
+25 1990 
+80-56-8 α-Pinen 
+25 1990 127-91-3 
+β-Pinen 
+0,03 2015 110-85-0* Piperazin* och salter  
+(som piperazin) 
+− 
+2000 7440-06-4* Platina* – metall och  
+svårlösliga föreningar  
+(totaldamm som Pt) 
+− 
+2000 Platina – lösliga föreningar  
+(totaldamm som Pt) 
+Polyklorerade bifenyler 
+Se PCB 
+150 1989 
+71-23-8 n-Propanol 
+− 
+1120-71-4 1,3-Propansulton 
+
+52 
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. Korttidsgränsvärde 
+mg/m3 
+− 
+3 
+C − 
+23 62 
+V 800 
+H, V 2 
+H, V 300 
+3 
+C − 
+24 C, SH 12,5 
+23 − 
+23 
+V 10 
+19 C 
+20 C 
+23 
+H − 
+232,6 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+− 
+mg/m3 
+900 
+− 
+− 
+20 
+30 
+200 
+400 
+0,3 
+0,7 
+75 
+190 
+− 
+− 
+5 
+2,4 
+− 
+1 
+3 
+7 
+
+
+
+
+− 
+45 
+
+
+
+1 
+1,3 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+500 1996 115-07-1 
+Propen 
+− 
+57-57-8 β-Propiolakton 
+10 2015 
+79-09-4 Propionsyra 
+100 1996 109-60-4 
+Propylacetat 
+0,1 1987 6423-43-4 1,2-Propylenglykoldinitrat 
+50 
+1990 
+1320-67-8 
+Propylenglykolmonometyl eter – isomerblandning 
+− 
+75-55-8 1,2-Propylenimin 
+1 2018 
+75-56-9 Propylenoxid 
+− 
+2015 8003-34-7 
+Pyretrum 
+2 1996 110-86-1 
+Pyridin 
+2011 10043-92-2 Radon (underjordsarbete) 
+2011 10043-92-2 Radon (övrigt arbete) 
+10 1993 108-46-3 
+Resorcinol 
+0,5 2015 7697-37-2 
+Salpetersyra 
+53 
+
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+23 
+V 
+23, 25 
+25 
+39 SH,L 
+21, 25 
+24, 25,  C 
+28 
+B, H, V 
+
+Korttidsgränsvärde (KGV) 
+mg/m3 
+6 
+− 
+170 
+− 
+− 
+− 
+0,015 
+86 
+−
+
+Nivågränsvärde (NGV) 
+ppm 
+4 
+mg/m3 
+3 
+− 
+0,1 
+20 
+80 
+− 
+0,1 
+− 
+0,01 
+
+
+− 
+5 
+− 
+0,005 
+20 
+43 
+
+
+
+− 
+− 
+
+År CAS-nummer 
+Ämne 
+ppm 
+2 2015 7647-01-0 
+Saltsyra 
+− 
+1990 7782-49-2* Selen* och oorg. föreningar  
+(totaldamm som Se) utom  
+väteselenid  
+10 2000 28523-86-6 
+Sevofluran 
+− 
+1990 7440-22-4* 
+Silver* – metall och  
+svårlösliga föreningar  
+(totaldamm som Ag)  
+− 
+1990 Silver – lösliga föreningar  
+(totaldamm som Ag)  
+2018 Skärvätska 
+− 
+1996 Stearater (totaldamm) 
+− 
+2018 7789-06-2 
+Strontiumkromat  
+(inhalerbar fraktion som Cr)  
+10 2011 100-42-5 
+Styren 
+1 1993 
+Sulfider  
+(summan av dimetyl disulfid, dimetylsulfid och  
+metantiol) 
+
+54 
+
+Noter 
+Anm. Korttidsgränsvärde 
+mg/m3 
+23 
+H − 
+23, 40 2,7 
+− 
+22, 23,  C, V 0,2 
+25 
+0,4 
+25 − 
+25 − 
+25 − 
+23, 25 − 
+AFS 2023:14 Bilaga 1 
+25
+H, V 
+0,2 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+− 
+mg/m3 
+0,1 
+1 
+1,3 
+− 
+6000 
+− 
+0,1 
+0,1 
+− 
+− 
+2 
+− 
+1 
+− 
+0,1 
+− 
+2 
+
+
+
+− 
+0,1 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+− 
+2015 3689-24-5 
+Sulfotep 
+0,5 2018 7446-09-5 
+Svaveldioxid 
+1000 1993 2551-62-4 
+Svavelhexafluorid 
+− 
+2011 7664-93-9 Svavelsyra (inhalerbar  
+fraktion) 
+− 
+1993 7783-60-0 
+Svaveltetrafluorid 
+− 
+1996 14807-96-6 
+Talk (totaldamm) 
+Se även respirabel fraktion 
+− 
+1996 14807-96-6 Talk (respirabel fraktion) 
+Se även totaldamm 
+− 
+1981 13494-80-9* 
+Tellur* – metall och  
+föreningar 
+(totaldamm som Te) 
+− 
+2011 7440-31-5* Tenn* – metall och oorg.  
+föreningar  
+(inhalerbar fraktion som Sn)  
+− 
+1978 Tennorganiska föreningar 
+(totaldamm som Sn) 
+55 
+
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+23 
+SH, V 
+H, SH, V 
+V 
+23 
+H, M, R, V 
+3, 36 M, SH,L 
+23 H 
+23 C, H 
+H, V
+
+Korttidsgränsvärde (KGV) 
+mg/m3 
+48 
+300 
+300 
+30 
+0,2 
+86 
+− 
+300 
+170 
+1,5 
+
+Nivågränsvärde (NGV) 
+ppm 
+5 
+mg/m3 
+19 
+50 
+150 
+50 
+150 
+2 
+14 
+− 
+0,05 
+10 
+44 
+
+
+
+
+− 
+− 
+100 
+150 
+25 
+70 
+
+
+
+− 
+0,5 
+
+År CAS-nummer 
+Ämne 
+ppm 
+2 2018 61788-32-7 
+Terfenyl (hydrerad) 
+25 1990 
+Terpener 
+25 1990 8006-64-2 
+Terpentin 
+1 1993 
+79-27-6 1,1,2,2-Tetrabrometan 
+− 
+1981 78-00-2 Tetraetylbly (som Pb) 
+5 2018 
+78-10-4 Tetraetylortosilikat 
+1,1,1,2-Tetrafluoretan 
+Se HFC 134a 
+1,2,2,2-Tetrafluoroetyl difluormetyleter 
+Se desfluran 
+− 
+85-43-8 Tetrahydroftalsyraanhydrid 
+935-79-5 
+50 2015 109-99-9 
+Tetrahydrofuran 
+10 2018 127-18-4 
+Tetrakloretylen 
+− 
+1990 4901-51-3* 2,3,4,5-Tetraklorfenol*  
+och salter  
+(som tetraklorfenol) 
+56 
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. Korttidsgränsvärde 
+mg/m3 
+H, V 1,5 
+H, V 1,5 
+3, 36 M, SH,L 
+− 
+H, M, R, V 0,2 
+V 0,8 
+3 
+C − 
+H, V 8 
+SH, V 2 
+25 − 
+3 
+C − 
+23 B, H 384 
+2C, M, SH,L 
+0,04 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+− 
+mg/m3 
+0,5 
+− 
+0,5 
+− 
+− 
+− 
+0,05 
+0,1 
+0,4 
+− 
+− 
+2 
+4 
+− 
+1 
+− 
+5 
+− 
+− 
+100 
+192 
+
+
+
+0,005 
+0,014 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+− 
+1990 58-90-2* 2,3,4,6-Tetraklorfenol*  
+och salter  
+(som tetraklorfenol) 
+− 
+1990 935-95-5* 2,3,5,6-Tetraklorfenol*  
+och salter  
+(som tetraklorfenol) 
+− 
+117-08-8 Tetraklorftalsyraanhydrid 
+− 
+1981 75-74-1 Tetrametylbly (som Pb) 
+0,05 1993 509-14-8 
+Tetranitrometan 
+− 
+62-55-5 Tioacetamid 
+1 1996 
+68-11-1 Tioglykolsyra 
+− 
+1993 137-26-8 
+Tiram 
+− 
+1990 13463-67-7 Titandioxid (totaldamm) 
+− 
+119-93-7 o-Tolidin  
+(3,3´-Dimetylbensidin) 
+50 2015 108-88-3 
+Toluen 
+0,002 2005 26471-62-5 
+Toluendiisocyanat 
+57 
+
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+2 C, M, SH,L 
+2 C, M, SH,L 
+24 C, H 
+25 C, M 
+H, V 
+23 H 
+SH, V 
+V 
+23 H 
+23
+
+Korttidsgränsvärde (KGV) 
+mg/m3 
+0,04 
+0,04 
+ − 
+− 
+10 
+12,6 
+12 
+2625 
+38 
+1110 
+
+Nivågränsvärde (NGV) 
+0,005 
+ppm 
+mg/m3 
+0,014 
+0,005 
+0,014 
+ −
+0,5
+− 
+0,05 
+1,6 
+5 
+3 
+4,2 
+2 
+6 
+750 
+1750 
+
+
+
+
+5 
+15 
+
+
+
+200 
+300 
+
+År CAS-nummer 
+Ämne 
+ppm 
+0,002 2005 584-84-9 2,4-Toluendiisocyanat 
+0,002 2005 
+91-08-7 2,6-Toluendiisocyanat 
+0,1 2018 
+95-53-4 o-Toluidin 
+− 
+1996 15468-32-3 Tridymit (respirabel fraktion) 
+0,8 2011 102-71-6 
+Trietanolamin 
+1 2015 121-44-8 
+Trietylamin 
+1 1984 112-24-3 
+Trietylentetramin 
+500 2005 420-46-2 
+1,1,1-Trifluoretan 
+1,1,2-Trifluor-2-kloretyl difluormetyleter 
+Se enfluran 
+2,2,2-Trifluor-1-kloretyl difluormetyleter 
+Se isofluran 
+2 2015 120-82-1 1,2,4-Triklorbensen 
+50 2015 
+71-55-6 1,1,1-Trikloretan 
+58 
+
+Noter 
+Anm. Korttidsgränsvärde 
+mg/m3 
+24, 28 C, H 140 
+C, H, V 1,5 
+C, H, V 1,5 
+C, H, V 1,5 
+C, H, V 1,5 
+C, H, V 1,5 
+C, H, V1,5 
+AFS 2023:14 Bilaga 1 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+25 
+mg/m3 
+54 
+− 
+0,5 
+− 
+0,5 
+− 
+0,5 
+− 
+0,5 
+− 
+0,5 
+
+
+
+− 
+0,5 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+10 2018 
+79-01-6 1,1,2-Trikloretylen 
+− 
+1990 15950-66-0* 2,3,4-Triklorfenol* och  
+salter  
+(som triklorfenol) 
+− 
+1990 933-78-8* 2,3,5-Triklorfenol* och  
+salter  
+(som triklorfenol) 
+− 
+1990 933-75-5* 2,3,6-Triklorfenol* och  
+salter  
+(som triklorfenol) 
+− 
+1990 95-95-4* 2,4,5-Triklorfenol* och  
+salter  
+(som triklorfenol) 
+− 
+1990 88-06-2* 2,4,6-Triklorfenol* och  
+salter  
+(som triklorfenol) 
+− 
+1990 609-19-8* 3,4,5-Triklorfenol* och  
+salter  
+(som triklorfenol) 
+59 
+
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+3 M, SH,L 
+23 
+23 
+23 
+23 
+2 M, SH,L 
+2 M, SH,L 
+2M, SL 
+
+Korttidsgränsvärde (KGV) 
+mg/m3 
+0,04 
+12,5 
+170  
+170 
+170 
+170 
+0,044 
+0,044 
+0,044 
+
+Nivågränsvärde (NGV) 
+ppm 
+mg/m3 
+
+
+0,005 
+0,02 
+5 
+4,9 
+35 
+100 
+35 
+100 
+35 
+100 
+35 
+100 
+0,005 
+0,017 
+0,005 
+0,017 
+
+
+
+0,005 
+0,017 
+
+År CAS-nummer 
+Ämne 
+ppm 
+Triklorfluormetan 
+Se CFC 11 
+1,1,2-Triklor-1,2,2-tri fluoretan 
+Se CFC 113 
+0,002 2011 552-30-7 Trimellitsyraanhydrid 
+2 2020 
+75-50-3 Trimetylamin 
+20 2018 25551-13-7 
+Trimetylbensen 
+20 2018 526-73-8 1,2,3-Trimetylbensen 
+20 2018 
+95-63-6 1,2,4-Trimetylbensen 
+20 2018 108-67-8 1,3,5-Trimetylbensen 
+0,002 
+2005 
+28679-16-5 
+Trimetylhexametylen diisocyanat 
+0,002 
+2005 
+2,2,4-Trimetylhexametylen diisocyanat 16938-22-0 
+0,002 
+2005 
+2,4,4-Trimetylhexametylen diisocyanat 15646-96-5 
+60 
+
+Noter 
+3 
+3 
+25 
+25 
+23 
+24 
+24 
+AFS 2023:14 Bilaga 1 
+
+Anm. Korttidsgränsvärde 
+mg/m3 
+− 
+H, V 0,2 
+C  − 
+C − 
+− 
+0,05 
+35 
+C − 
+C, H, V 13 
+H, V 150 
+H, V150 
+
+(KGV) 
+Nivågränsvärde  
+ppm 
+− 
+mg/m3 
+5 
+− 
+0,1 
+ −
+ −
+
+
+− 
+− 
+− 
+0,2 
+− 
+− 
+10 
+18 
+− 
+4,4 
+5 
+2,6 
+30 
+50 
+
+
+
+30 
+50 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+− 
+1996 77-99-6 1,1,1-Trimetylolpropan 
+− 
+1993 118-96-7 2,4,6-Trinitrotoluen 
+ −
+126-72-7Tris(2,3-dibrompropyl)fosfat 
+Trädamm 
+Se damm – trä 
+− 
+51-79-6 Uretan 
+− 
+1987 1314-62-1 
+Vanadinpentoxid  
+(totaldamm som V) 
+Se även respirabel fraktion 
+− 
+1987 1314-62-1 
+Vanadinpentoxid  
+(respirabel fraktion som V) 
+Se även totaldamm 
+5 1993 108-05-4 
+Vinylacetat 
+1 2018 593-60-2 
+Vinylbromid 
+1 2018 
+75-01-4 Vinylklorid 
+10 1993 25013-15-4 
+Vinyltoluen 
+10 1993 611-15-4 
+2-Vinyltoluen 
+
+61 
+
+AFS 2023:14 Bilaga 1 
+Noter 
+Anm. 
+H, V 
+25 
+H, V 
+25 
+23 
+23 H 
+17, 23 
+23 
+23 
+23H 
+
+Korttidsgränsvärde (KGV) 
+mg/m3 
+150 
+150 
+− 
+− 
+7 
+4 
+1,7 
+3 
+0,2 
+14 
+442 
+
+Nivågränsvärde (NGV) 
+ppm 
+30 
+mg/m3 
+50 
+30 
+50 
+− 
+5 
+− 
+1 
+2 
+3,5 
+3,6 
+1 
+2 
+1,5 
+
+
+2 
+1,4 
+0,05 
+0,03 
+10 
+7 
+
+
+
+100 
+221 
+
+År CAS-nummer 
+Ämne 
+ppm 
+10 1993 100-80-1 
+3-Vinyltoluen 
+10 1993 622-97-9 
+4-Vinyltoluen 
+− 
+1981 7440-33-7* Volfram* – metall och  
+svårlösliga föreningar  
+(totaldamm som W) 
+− 
+1981 Volfram – lättlösliga  
+föreningar 
+(totaldamm som W)  
+1 2000 10035-10-6 
+Vätebromid 
+0,9 2018 
+74-90-8 Vätecyanid (som CN) 
+1,8 2015 7664-39-3 
+Vätefluorid 
+Väteklorid  
+Se saltsyra 
+1 1990 7722-84-1 
+Väteperoxid 
+0,01 2015 7783-07-5 
+Väteselenid 
+5 2015 7783-06-4 
+Vätesulfid 
+50 2015 1330-20-7 
+Xylen 
+
+62 
+Noter 
+Anm. Korttidsgränsvärde 
+mg/m3 
+23 
+H 442 
+23 
+H 442 
+23 
+H 442 
+25 − 
+24, 25,  
+C, SH 0,015 
+28 
+25 − 
+SH, V 2 
+23 25 
+20
+AFS 2023:14 Bilaga 1 
+
+(KGV) 
+Nivågränsvärde  
+100 
+ppm 
+mg/m3 
+221 
+100 
+221 
+100 
+221 
+− 
+1 
+− 
+0,005 
+− 
+5 
+− 
+1 
+10 
+13 
+
+
+
+5 
+− 
+
+År CAS-nummer 
+Ämne 
+(NGV) 
+ppm 
+50 2015 
+95-47-6 o-Xylen 
+50 2015 108-38-3 
+m-Xylen 
+50 2015 106-42-3 
+p-Xylen 
+− 
+1974 7646-85-7 
+Zinkklorid  
+(respirabel fraktion) 
+− 
+2018 13530-65-9 
+Zinkkromat  
+(inhalerbar fraktion som Cr) 
+− 
+1974 1314-13-2 Zinkoxid (totaldamm) 
+− 
+1993 137-30-4 
+Ziram 
+5 
+2018 
+64-19-7 
+Ättiksyra 
+− 
+1974 
+108-24-7 
+Ättiksyraanhydrid 
+
+63 
+AFS 2023:14 
+Bilaga 1 
+Noter till gränsvärdeslistan 
+Not 1–22 är föreskrifter och not 23–40 är allmänna råd. 
+1. Ämnet får inte hanteras. Vissa undantag finns i Arbetsmiljöverkets  föreskrifter och allmänna råd (AFS 2023:10) om risker i arbetsmiljön,  kapitlet om ytterligare bestämmelser för vissa grupper av kemiska  ämnen, se även bilaga 6, grupp A, till dessa föreskrifter. 
+2. Korttidsgränsvärdet för en 5-minutersperiod gäller för ammoniak,  diisocyanater, 2,6-diisopropylfenylisocyanat, fenylisocyanat,  isocyansyra och metylisocyanat. Korttidsgränsvärdet för en  1-minutersperiod gäller för akrylsyra. 
+3. För hantering av ämnet krävs tillstånd av Arbetsmiljöverket,  se vidare i Arbetsmiljöverkets föreskrifter och allmänna råd  (AFS 2023:10) om risker i arbetsmiljön, kapitlet om ytterligare  bestämmelser för vissa grupper av kemiska ämnen, se även bilaga  6, grupp B till dessa föreskrifter. 
+4. Gränsvärdet avser bensin som innehåller mindre än 5 procent n-hexan. 5. För de ftalater som inte har ämnesspecifika gränsvärden gäller  gränsvärdet för ftalater uttryckt i mg/m3. 
+6. För bly, kadmium och kvicksilver finns biologiska gränsvärden,  se Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:15)  om medicinska kontroller i arbetslivet. 
+7. Samma gränsvärde uttryckt i ppm ska tillämpas för de laktater som  inte har fastställda gränsvärden. 
+8. För de ämnen som har specifika gränsvärden ska dessa  gränsvärden tillämpas även för deras damm- och dimfraktioner. 9. Gäller för sluthärdad eller nästan sluthärdad epoxi-, akrylat-,  polyuretan- och esterplast, bakelit eller dylikt. Hit räknas även  damm från ohärdat pulvermaterial av epoxityp. 
+10. Gränsvärdet avser kolväten i ångform det vill säga upp till  12 kolatomer. Vid exponering för kolväten med mer än  
+12 kolatomer som förekommer i form av aerosol, partiklar eller  vätskedroppar, tillämpas gränsvärdet för organiskt damm och  dimma, 5 mg/m3. Gränsvärdet gäller inte för lacknafta som har  egna gränsvärden. 
+11. Samma gränsvärde uttryckt i ppm ska tillämpas även för de  diisocyanater som inte har fastställda gränsvärden. Det samma  gäller för prepolymeriserade diisocyanater.
+64 
+AFS 2023:14 
+Bilaga 1 
+12. Nivågränsvärdet 1 ppm gäller för summan av halterna av  dimetyldisulfid, dimetylsulfid och metantiol. 
+13. Gränsvärdet gäller för proteolytiska enzymer. 
+14. Gränsvärdet gäller den sammanlagda koncentrationen av ånga och aerosol. 
+15. Vid samtidig exponering för flera lösningsmedel ska den  hygieniska effekten för reproduktionsstörande etylenglykoletrar  och andra lösningsmedel beräknas separat. 
+16. Gränsvärdet avser respirabla fibrer, som har ett längd breddförhållande större än 3:1, en diameter mindre än 3 µm och  en längd större än 5 µm. Gränsvärdet förutsätter att fiberräkningen  utförs med faskontrastmikroskop eller svepelektronmikroskop.  Vid exponering för fiberhaltigt damm gäller också gränsvärdet för  oorganiskt damm. 
+17. Vid exponering för blandningar av fluorider och vätefluorid ska  nivågränsvärdet för fluorider tillämpas. 
+18. Avser lacknafta med sina huvudsakliga beståndsdelar i  området C7 till C12 och med upp till 22 viktprocent aromater  (ca 20 volymprocent) och mindre än 0,1 viktprocent bensen. 
+19. Med underjordsarbete avses berg- och gruvarbete, byggnadsarbete  och liknande arbete under jord samt tillfälligt arbete i lokaler,  bergrum, tunnlar och liknade under jord. Vid dessa arbeten gäller  gränsvärdet för radon som totalexponering under ett år och får  inte överstiga 2,1 x 106 Bq h/m3 (årsarbetstid = 1 600 h).  Detta värde motsvarar en exponering på cirka 1 300 Bq/m3. För övrigt underjordsarbete, såsom arbete i färdigställda och  inredda bergrum och berganläggningar, källarlokaler och liknande,  gäller gränsvärdet för radon som totalexponering under ett år och  får inte överstiga 0,72 x 106 Bq h/m3 (årsarbetstid = 1 800 h).  Detta värde motsvarar en exponering på cirka 400 Bq/m3. Bestämning av radonhalt bör ske enligt Strålsäkerhetsmyndighetens  metodbeskrivning för mätning av radon på arbetsplatser.  Om radonhalten vid all typ av underjordsarbete överskrider  200 Bq/m3 ska verksamheten anmälas till Strålsäkerhetsmyndigheten,  se Strålsäkerhetsmyndighetens föreskrifter om anmälningspliktiga  verksamheter. I dessa fall är Strålsäkerhetsmyndigheten  tillsynsmyndighet. 
+20. För annat arbete än underjordsarbete anges gränsvärdet för  radon som totalexponering under ett år och får inte överstiga  0,36 x 106 Bq h/m3 (årsarbetstid = 1 800 h). Detta värde 
+65 
+AFS 2023:14 
+Bilaga 1 
+motsvarar en exponering på cirka 200 Bq/m3. Bestämning  av radonhalt bör ske enligt Strålsäkerhetsmyndighetens  
+metodbeskrivning för mätning av radon på arbetsplatser. Om  radonhalten överskrider 200 Bq/m3 ska verksamheten anmälas  till Strålsäkerhetsmyndigheten, se Strålsäkerhetsmyndighetens  föreskrifter om anmälningspliktiga verksamheter. I dessa fall är  Strålsäkerhetsmyndigheten tillsynsmyndighet. 
+21. Gränsvärdet gäller inte sådana metallstearater som innehåller  toxiska metaller, till exempel bly. I detta fall ska gränsvärdet för  bly användas. 
+22. Anmärkningen att svavelsyra är cancerframkallande gäller bara  aerosoler av svavelsyra. 
+Allmänna råd 
+Allmänna råden hänför sig till gränsvärdeslistan. 
+23. Ämnet har ett indikativt EU-gränsvärde. 
+24. Ämnet har ett bindande EU-gränsvärde. 
+25. Med inhalerbar och respirabel fraktion menas de dammfraktioner  som definieras i svensk standard SS-EN 481, Arbetsplatsluft –  Partikelstorleksfraktioner för mätning av luftburna partiklar  (utgåva 1, 1993).  
+Med totaldamm menas de partiklar (aerosoler) som fastnar på ett  filter i en totaldammprovtagare. 
+26. Vid exponering för avgaser från bensin- och gasoldrivna motorer  räcker det ofta att jämföra exponeringen mot gränsvärdena för  kolmonoxid. Vid exponering för avgaser från dieselmotorer räcker  det ofta att jämföra exponeringen mot gränsvärdena för elementärt  kol och kvävedioxid. 
+27. Benso(a)pyren kan förekomma i polycykliska aromatiska kolväten  (PAH) i rök, damm eller dimma från till exempel tjära och asfalt  samt i vissa oljor och förbränningsprodukter. 
+28. Ämnen som ingår i bilaga XIV till Reach-förordningen, kräver  tillstånd för att få användas och släppas ut på marknaden. För  aktuell lista se Echas (Europeiska kemikaliemyndigheten) webbplats. 29. I ångform kan ämnet lätt tas upp genom huden. 
+30. Upptaget av ämnet i vätskeform genom huden är så stort att det  kan ge livshotande skador.
+66 
+AFS 2023:14 
+Bilaga 1 
+31. Asbestfibrer är till exempel 
+– aktinolit (77536-66-4), 
+– amosit (12172-73-5), 
+– antofyllit (77536-67-5), 
+– krokidolit (12001-28-4), 
+– krysotil (12001-29-5), och 
+– tremolit (77536-68-6). 
+32. Naturligt kristallina fibrer är till exempel attapulgit, halloysit,  sepiolit och wollastonit. 
+33. Eldfasta keramiska fibrer är till exempel aluminiumsilikatfibrer  (142844-00-6). 
+34. Syntetiska oorganiska glasartade övriga fibrer är till exempel  stenull, mineralull och kontinuerliga glasfibrer. 
+35. Syntetiska oorganiska kristallina fibrer är till exempel  kiselkarbidfibrer och grafitfibrer. 
+36. Vid hantering av 
+– hexahydroftalsyraanhydrid, 
+– metylhexahydroftalsyraanhydrid, 
+– metyltetrahydroftalsyraanhydrid, 
+– tetrahydroftalsyraanhydrid, eller 
+– tetraklorftalsyraanhydrid 
+bör ett riktvärde på 0,005 mg/m3 för den sammanlagda  exponeringen för syraanhydrider under 15 minuter inte  överskridas. Se bilaga 6 i Arbetsmiljöverkets föreskrifter och  allmänna råd (AFS 2023:10) om arbetsmiljörisker. 
+37. Metylenklorid regleras även i Kemikalieinspektionens föreskrifter.  Det krävs dispens från Kemikalieinspektionen för att saluhålla,  överlåta och använda metylenklorid yrkesmässigt i Sverige  undantaget forskning, utveckling och analysarbete. 
+38. Vid upphettning av vissa oljor kan polycykliska aromatiska  kolväten (PAH) bildas som är cancerframkallande. Även  mineraloljor kan innehålla PAH. 
+39. Ett riktvärde på 0,2 mg/m3 mätt som inhalerbar fraktion under  8 timmar bör inte överskridas. 
+40. För att skydda astmatiker bör exponeringen av svaveldioxid ligga  under 0,2 ppm.
+67 
+AFS 2023:14 
+Bilaga 2 
+Bilaga 2 Uppgifter som ska redovisas i en mätrapport 
+1. Företagets namn, adress och arbetsställe. 
+2. Typ av verksamhet. 
+3. Syfte med mätningen. 
+4. Vilket ämne/vilka ämnen som omfattas av mätningen. 5. Antal arbetstagare som berörs av den luftförorening som är orsak  till mätningen. 
+6. Vilken typ av ventilation som används. 
+7. Produktionsförhållanden vid mättillfället. 
+8. Klimatuppgifter vid mätning utomhus. 
+9. Skiss eller fotografi över arbetsplatsen. 
+10. Vilken typ av andningsskydd och annan personlig  
+skyddsutrustning som har använts och när den användes. 11. Kontaktuppgifter till den som utfört mätningen. 
+12. Datum när mätningen genomfördes. 
+13. Total arbetstid per dag. Ange start och stopptid samt tider för  längre pauser och raster. 
+14. Hur länge varje arbetsmoment pågått i genomsnitt. Ange både per  dag och per vecka. 
+15. Om fysiskt tungt arbete förekommer ska tiden anges. 
+16. Uppgifter som gör det möjligt att identifiera de arbetstagare som  mätningen utförts på. 
+17. Uppgifter om de arbetsmoment som omfattas av mätningen och  vid vilka tidsintervall mätningarna utförts. 
+18. Vid stationära mätningar ska provplatser och provtagningstider  anges för varje prov. 
+19. Mätmetod och mätutrustning. 
+20. Analysmetod och analysresultat samt vilket analyslaboratorium  som anlitats.
+68 
+AFS 2023:14 
+Bilaga 2
+21. Sammanställning som innehåller 
+– vilka arbetsmoment som omfattas av mätningarna, 
+– mätresultaten jämfört med de hygieniska gränsvärdena, – eventuella tidigare mätningar, och 
+– rekommenderade åtgärder. 
+22. Om mätningen har genomförts med flera delmätningar under en  arbetsdag ska ett tidsvägt dagsmedelvärde anges. 
+69 
+AFS 2023:14 
+Bilaga 3 
+Bilaga 3 Index med CAS-nummer 
+CAS-nummer för ämnen i gränsvärdeslistan. Under rubriken information  finns ämnen som omfattas av förbud (A) eller tillståndskrav (B) enligt bilaga  6, Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:10) om  risker i arbetsmiljön. 
+CAS-nr Ämne Information 50-00-0 Formaldehyd 
+50-32-8 Benso(a)pyren 
+51-79-6 Uretan (Etylkarbamat) B 53-96-3 2-Acetamidofluoren A 54-11-5 Nikotin 
+55-63-0 Nitroglycerin 
+56-23-5 Koltetraklorid 
+56-49-5 20-Metylkolantren (3-Metylkolantren) A 57-14-7 1,1-Dimetylhydrazin B 57-57-8 β-Propiolakton B 58-90-2 2,3,4,6-Tetraklorfenol 
+59-50-7 Klorkresol 
+60-09-3 p-Aminoazobensen B 60-11-7 N,N-Dimetyl-4-aminoazobensen A 60-29-7 Dietyleter 
+60-34-4 Monometylhydrazin B 60-35-5 Acetamid 
+61-82-5 Amitrol 
+62-50-0 Etylmetansulfonat B
+70 
+AFS 2023:14 
+Bilaga 3
+CAS-nr Ämne Information 62-53-3 Anilin 
+62-55-5 Tioacetamid B 62-75-9 N-Nitrosodimetylamin B 64-17-5 Etanol 
+64-18-6 Myrsyra 
+64-19-7 Ättiksyra 
+64-67-5 Dietylsulfat B 66-27-3 Metylmetansulfonat B 67-56-1 Metanol 
+67-63-0 Isopropanol 
+67-64-1 Aceton 
+67-66-3 Kloroform 
+67-68-5 Dimetylsulfoxid 
+68-11-1 Tioglykolsyra 
+68-12-2 N,N-Dimetylformamid (DMF) 
+71-23-8 n-Propanol 
+71-36-3 n-Butanol 
+71-43-2 Bensen 
+71-55-6 1,1,1-Trikloretan 
+74-83-9 Metylbromid 
+74-85-1 Eten 
+74-87-3 Metylklorid 
+74-88-4 Metyljodid 
+71 
+AFS 2023:14 
+Bilaga 3 
+CAS-nr Ämne Information 74-89-5 Metylamin 
+74-90-8 Vätecyanid 
+74-93-1 Metantiol 
+75-00-3 Kloretan 
+75-01-4 Vinylklorid 
+75-04-7 Etylamin 
+75-05-8 Acetonitril 
+75-07-0 Acetaldehyd 
+75-09-2 Metylenklorid 
+75-12-7 Formamid 
+75-13-8 Isocyansyra 
+75-15-0 Koldisulfid 
+75-18-3 Dimetylsulfid 
+75-21-8 Etylenoxid 
+75-31-0 Isopropylamin 
+75-34-3 1,1-Dikloretan 
+75-35-4 1,1-Dikloreten 
+75-44-5 Fosgen 
+75-45-6 HCFC 22 (Klordifluormetan) 
+75-50-3 Trimetylamin 
+75-52-5 Nitrometan 
+75-55-8 1,2-Propylenimin B 75-56-9 Propylenoxid
+72 
+AFS 2023:14 
+Bilaga 3
+CAS-nr Ämne Information 75-64-9 tert-Butylamin 
+75-65-0 tert-Butanol 
+75-69-4 CFC 11 
+75-71-8 CFC 12 
+75-74-1 Tetrametylbly 
+75-83-2 2,2-Dimetylbutan 
+76-13-1 CFC 113 
+77-78-1 Dimetylsulfat B 77-99-6 1,1,1-Trimetylolpropan 
+78-00-2 Tetraetylbly 
+78-10-4 Tetraetylortosilikat 
+78-59-1 Isoforon 
+78-78-4 iso-Pentan 
+78-81-9 iso-Butylamin 
+78-83-1 iso-Butanol 
+78-92-2 sek-Butanol 
+78-93-3 Metyletylketon 
+79-01-6 1,1,2-Trikloretylen 
+79-06-1 Akrylamid 
+79-09-4 Propionsyra 
+79-10-7 Akrylsyra 
+79-11-8 Monoklorättiksyra 
+79-20-9 Metylacetat 
+73 
+AFS 2023:14 
+Bilaga 3 
+CAS-nr Ämne Information 79-24-3 Nitroetan 
+79-27-6 1,1,2,2-Tetrabrometan 
+79-29-8 2,3-Dimetylbutan 
+79-41-4 Metakrylsyra 
+79-46-9 2-Nitropropan 
+80-05-7 Bisfenol A 
+80-56-8 α-Pinen 
+80-62-6 Metylmetakrylat 
+84-66-2 Dietylftalat 
+84-74-2 Dibutylftalat 
+85-42-7 Hexahydroftalsyraanhydrid B 85-43-8 Tetrahydroftalsyraanhydrid B 85-44-9 Ftalsyraanhydrid 
+85-68-7 Bensylbutylftalat 
+87-86-5 Pentaklorfenol 
+88-06-2 2,4,6-Triklorfenol 
+88-72-2 2-Nitrotoluen 
+88-89-1 Pikrinsyra 
+91-08-7 2,6-Toluendiisocyanat 
+91-20-3 Naftalen 
+91-59-8 β-Naftylamin A 91-94-1 3,3´-Diklorbenzidin B 92-52-4 Difenyl 
+74 
+AFS 2023:14 
+Bilaga 3
+CAS-nr Ämne Information 92-67-1 4-Aminodifenyl A 92-87-5 Benzidin A 92-93-3 4-Nitrodifenyl A 95-47-6 o-Xylen 
+95-48-7 o-Kresol 
+95-50-1 o-Diklorbensen 
+95-53-4 o-Toluidin 
+95-63-6 1,2,4-Trimetylbensen 
+95-80-7 2,4-Diaminotoluen B 95-95-4 2,4,5-Triklorfenol 
+96-12-8 1,2-Dibrom-3-klorpropan A 96-14-0 3-Metylpentan 
+96-33-3 Metylakrylat 
+96-45-7 Etylentiourea B 97-63-2 Etylmetakrylat 
+97-64-3 Etyllaktat 
+97-77-8 Disulfiram 
+97-86-9 Isobutylmetakrylat 
+97-88-1 Butylmetakrylat 
+98-00-0 Furfurylalkohol 
+98-01-1 Furfural 
+98-07-7 Bensotriklorid B 98-82-8 Isopropylbensen 
+75 
+AFS 2023:14 
+Bilaga 3 
+CAS-nr Ämne Information 98-83-9 α-Metylstyren 
+98-87-3 Bensalklorid B 98-95-3 Nitrobensen 
+99-08-1 3-Nitrotoluen 
+99-65-0 1,3-Dinitrobensen 
+99-87-6 4-Metylisopropylbensen 
+99-99-0 4-Nitrotoluen 
+100-25-4 1,4-Dinitrobensen 
+100-37-8 2-Dietylaminoetanol 
+100-41-4 Etylbensen 
+100-42-5 Styren 
+100-44-7 Bensylklorid 
+100-74-3 N-Etylmorfolin 
+100-80-1 3-Vinyltoluen 
+100-97-0 Hexametylentetramin 
+101-14-4 4,4´-Diamino-3,3´-diklordifenylmetan  
+(Metylenbis(o-kloranilin)) 
+101-68-8 4,4´-Metylendifenyldiisocyanat 
+101-77-9 4,4´-Metylendianilin 
+(4,4´-Diaminodifenylmetan)  
+101-84-8 Difenyleter 
+102-71-6 Trietanolamin 
+103-71-9 Fenylisocyanat 
+104-76-7 2-Etylhexanol
+76 
+AFS 2023:14 
+Bilaga 3
+CAS-nr Ämne Information 105-46-4 sek-Butylacetat 
+105-60-2 Kaprolaktam  
+106-35-4 3-Heptanon 
+106-42-3 p-Xylen 
+106-44-5 p-Kresol 
+106-46-7 p-Diklorbensen 
+106-51-4 p-Bensokinon 
+106-49-0 4-Aminotoluen 
+106-65-0 Dimetylsuccinat 
+106-89-8 Epiklorhydrin 
+106-93-4 1,2-Dibrometan (Etyldibromid) 
+106-99-0 1,3-Butadien 
+107-02-8 Akrolein 
+107-05-1 Allylklorid 
+107-06-2 1,2-Dikloretan 
+107-07-3 2-Kloretanol 
+107-11-9 Allylamin 
+107-13-1 Akrylnitril 
+107-15-3 Etylendiamin 
+107-18-6 Allylalkohol 
+107-21-1 Etylenglykol 
+107-30-2 Metylklormetyleter A 107-31-3 Metylformiat 
+77 
+AFS 2023:14 
+Bilaga 3 
+CAS-nr Ämne Information 107-41-5 2-Metyl-2,4-pentandiol 
+107-83-5 2-Metylpentan 
+107-98-2 1-Metoxi-2-propanol 
+108-03-2 1-Nitropropan 
+108-05-4 Vinylacetat 
+108-10-1 Metylisobutylketon 
+108-11-2 4-Metyl-2-pentanol 
+108-18-9 Diisopropylamin 
+108-24-7 Ättiksyraanhydrid 
+108-31-6 Maleinsyraanhydrid 
+108-38-3 m-Xylen 
+108-39-4 m-Kresol 
+108-46-3 Resorcinol 
+108-65-6 1-Metoxi-2-propylacetat 
+108-67-8 1,3,5-Trimetylbensen 
+108-88-3 Toluen 
+108-90-7 Klorbensen 
+108-91-8 Cyklohexylamin 
+108-93-0 Cyklohexanol 
+108-94-1 Cyklohexanon 
+108-95-2 Fenol 
+109-02-4 N-Metylmorfolin 
+109-59-1 Etylenglykolmonoisopropyleter
+78 
+AFS 2023:14 
+Bilaga 3
+CAS-nr Ämne Information 109-60-4 Propylacetat 
+109-66-0 n-Pentan 
+109-73-9 n-Butylamin 
+109-86-4 Etylenglykolmonometyleter 
+109-89-7 Dietylamin 
+109-99-9 Tetrahydrofuran 
+110-12-3 5-Metyl-2-hexanon 
+110-19-0 iso-Butylacetat 
+110-43-0 2-Heptanon 
+110-49-6 Etylenglykolmonometyleteracetat 
+110-54-3 n-Hexan 
+110-65-6 2-Butyn-1,4-diol 
+110-80-5 Etylenglykolmonoetyleter 
+110-82-7 Cyklohexan 
+110-85-0 Piperazin 
+110-86-1 Pyridin 
+110-91-8 Morfolin 
+111-15-9 Etylenglykolmonoetyleteracetat 
+111-30-8 Glutaraldehyd 
+111-40-0 Dietylentriamin 
+111-42-2 Dietanolamin 
+111-44-4 2,2´-Diklordietyleter B 111-46-6 Dietylenglykol 
+79 
+AFS 2023:14 
+Bilaga 3
+CAS-nr Ämne Information 111-76-2 Etylenglykolmonobutyleter 
+111-77-3 Dietylenglykolmonometyleter 
+111-90-0 Dietylenglykolmonoetyleter 
+112-07-2 Etylenglykolmonobutyleteracetat 
+112-15-2 Dietylenglykolmonoetyleteracetat 
+112-24-3 Trietylentetramin 
+112-34-5 Dietylenglykolmonobutyleter 
+115-07-1 Propen 
+115-10-6 Dimetyleter 
+115-77-5 Pentaerytritol 
+117-08-8 Tetraklorftalsyraanhydrid B 117-81-7 Di(2-etylhexyl)ftalat 
+117-84-0 Di-n-oktylftalat 
+118-96-7 2,4,6-Trinitrotoluen 
+119-90-4 Dianisidin (3,3´-Dimetoxibenzidin) B 119-93-7 o-Tolidin (3,3´-Dimetylbenzidin) B 120-80-9 Katekol 
+120-82-1 1,2,4-Triklorbensen 
+121-14-2 2,4-Dinitrotoluen 
+121-44-8 Trietylamin 
+121-69-7 N,N-Dimetylanilin 
+122-39-4 Difenylamin 
+122-60-1 Fenylglycidyleter 
+80 

@@ -60,35 +60,97 @@ export const GmailService = {
         return emails;
     },
 
-    async sendEmail(accessToken: string, to: string, subject: string, body: string, threadId?: string) {
+    async sendEmail(accessToken: string, to: string, subject: string, body: string, attachmentsOrThreadId?: string | { filename: string, content: Buffer }[], potentialThreadId?: string) {
         const auth = new google.auth.OAuth2();
         auth.setCredentials({ access_token: accessToken });
         const gmail = google.gmail({ version: 'v1', auth });
 
-        // Create email content
-        const utf8Subject = `=?utf-8?B?${Buffer.from(subject).toString('base64')}?=`;
-        const headers = [
-            `To: ${to}`,
-            'Content-Type: text/html; charset=utf-8',
-            'MIME-Version: 1.0',
-            `Subject: ${utf8Subject}`,
-        ];
+        // Arg parsing for backward compatibility
+        let threadId: string | undefined = undefined;
+        let attachments: { filename: string, content: Buffer }[] = [];
 
-        if (threadId) {
-            headers.push(`In-Reply-To: <${threadId}@mail.gmail.com>`); // Best effort, usually requires actual Message-ID of parent
-            headers.push(`References: <${threadId}@mail.gmail.com>`); // Simplification. For robust threading we need the parent Message-ID.
-            // Ideally we should fetch the thread logic here, but for now we try to just associate it via threadId in the API call object.
+        if (typeof attachmentsOrThreadId === 'string') {
+            threadId = attachmentsOrThreadId;
+        } else if (Array.isArray(attachmentsOrThreadId)) {
+            attachments = attachmentsOrThreadId;
+            if (potentialThreadId) threadId = potentialThreadId;
         }
 
-        headers.push(''); // Empty line before body
-        headers.push(body);
+        const utf8Subject = `=?utf-8?B?${Buffer.from(subject).toString('base64')}?=`;
+        const boundary = "foo_bar_baz";
 
-        const message = headers.join('\n');
-        const encodedMessage = Buffer.from(message)
-            .toString('base64')
-            .replace(/\+/g, '-')
-            .replace(/\//g, '_')
-            .replace(/=+$/, '');
+        // Logic Branch: Attachments vs Simple
+        let encodedMessage = '';
+
+        if (attachments.length > 0) {
+            // MULTIPART
+            let messageParts = [
+                `To: ${to}`,
+                `Subject: ${utf8Subject}`,
+                `MIME-Version: 1.0`,
+                `Content-Type: multipart/mixed; boundary="${boundary}"`,
+                ``,
+                `--${boundary}`,
+                `Content-Type: text/html; charset=utf-8`,
+                ``,
+                body,
+                ``
+            ];
+
+            // Add Attachments
+            attachments.forEach(att => {
+                messageParts.push(`--${boundary}`);
+                messageParts.push(`Content-Type: application/pdf; name="${att.filename}"`);
+                messageParts.push(`Content-Disposition: attachment; filename="${att.filename}"`);
+                messageParts.push(`Content-Transfer-Encoding: base64`);
+                messageParts.push(``);
+                messageParts.push(att.content.toString('base64'));
+                messageParts.push(``);
+            });
+
+            messageParts.push(`--${boundary}--`);
+
+            // Headers are inside the body for multipart, but we need standard headers for the 'raw' wrapper?
+            // Actually, the whole things IS the raw message.
+            if (threadId) {
+                // In multipart, In-Reply-To/References should be in the top headers block
+                // Insert after Subject
+                // We rely on 'threadId' param in API, but explicit headers help clients.
+                messageParts.splice(2, 0, `In-Reply-To: <${threadId}@mail.gmail.com>`);
+                messageParts.splice(3, 0, `References: <${threadId}@mail.gmail.com>`);
+            }
+
+            const message = messageParts.join('\n');
+            encodedMessage = Buffer.from(message)
+                .toString('base64')
+                .replace(/\+/g, '-')
+                .replace(/\//g, '_')
+                .replace(/=+$/, '');
+
+        } else {
+            // SIMPLE (Text/HTML)
+            const headers = [
+                `To: ${to}`,
+                'Content-Type: text/html; charset=utf-8',
+                'MIME-Version: 1.0',
+                `Subject: ${utf8Subject}`,
+            ];
+
+            if (threadId) {
+                headers.push(`In-Reply-To: <${threadId}@mail.gmail.com>`);
+                headers.push(`References: <${threadId}@mail.gmail.com>`);
+            }
+
+            headers.push(''); // Empty line
+            headers.push(body);
+
+            const message = headers.join('\n');
+            encodedMessage = Buffer.from(message)
+                .toString('base64')
+                .replace(/\+/g, '-')
+                .replace(/\//g, '_')
+                .replace(/=+$/, '');
+        }
 
         const requestBody: any = {
             raw: encodedMessage,
@@ -101,52 +163,6 @@ export const GmailService = {
         const res = await gmail.users.messages.send({
             userId: 'me',
             requestBody,
-        });
-
-        return res.data;
-    },
-
-    async sendEmailWithAttachment(accessToken: string, to: string, subject: string, body: string, attachment: { filename: string, content: Buffer }) {
-        const auth = new google.auth.OAuth2();
-        auth.setCredentials({ access_token: accessToken });
-        const gmail = google.gmail({ version: 'v1', auth });
-
-        const boundary = "foo_bar_baz";
-        const utf8Subject = `=?utf-8?B?${Buffer.from(subject).toString('base64')}?=`;
-
-        let messageParts = [
-            `To: ${to}`,
-            `Subject: ${utf8Subject}`,
-            `MIME-Version: 1.0`,
-            `Content-Type: multipart/mixed; boundary="${boundary}"`,
-            ``,
-            `--${boundary}`,
-            `Content-Type: text/html; charset=utf-8`,
-            ``,
-            body,
-            ``,
-            `--${boundary}`,
-            `Content-Type: application/pdf; name="${attachment.filename}"`,
-            `Content-Disposition: attachment; filename="${attachment.filename}"`,
-            `Content-Transfer-Encoding: base64`,
-            ``,
-            attachment.content.toString('base64'),
-            ``,
-            `--${boundary}--`
-        ];
-
-        const message = messageParts.join('\n');
-        const encodedMessage = Buffer.from(message)
-            .toString('base64')
-            .replace(/\+/g, '-')
-            .replace(/\//g, '_')
-            .replace(/=+$/, '');
-
-        const res = await gmail.users.messages.send({
-            userId: 'me',
-            requestBody: {
-                raw: encodedMessage
-            }
         });
 
         return res.data;

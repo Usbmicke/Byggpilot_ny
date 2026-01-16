@@ -242,6 +242,28 @@ export const GoogleDriveService = {
         });
     },
 
+    async getDocContent(docId: string, accessToken?: string): Promise<string> {
+        const auth = await getAuthClient(accessToken);
+        const docs = google.docs({ version: 'v1', auth: auth as any });
+
+        const doc = await docs.documents.get({ documentId: docId });
+        const content = doc.data.body?.content;
+
+        if (!content) return "";
+
+        let text = "";
+        content.forEach((element) => {
+            if (element.paragraph) {
+                element.paragraph.elements?.forEach((el) => {
+                    if (el.textRun?.content) {
+                        text += el.textRun.content;
+                    }
+                });
+            }
+        });
+        return text;
+    },
+
     async createProjectStructure(projectName: string, projectsRootId: string, accessToken?: string) {
         // 1. Create Project Root inside "02_Pågående Projekt"
         const projectRootId = await this.ensureFolderExists(projectName, projectsRootId, accessToken);

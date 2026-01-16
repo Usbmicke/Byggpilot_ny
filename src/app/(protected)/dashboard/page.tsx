@@ -4,6 +4,7 @@ import { useAuth } from '@/components/AuthProvider';
 import ProjectList from '@/components/dashboard/ProjectList';
 import QuickLog from '@/components/dashboard/QuickLog';
 import TasksWidget from '@/components/dashboard/TasksWidget';
+import CriticalStopsWidget from '@/components/dashboard/CriticalStopsWidget';
 
 
 export default function DashboardPage() {
@@ -33,6 +34,8 @@ export default function DashboardPage() {
                 </div>
 
                 <div className="space-y-8">
+                    {/* Critical Stops (Strategic Audit) */}
+                    <CriticalStopsWidget />
 
 
                     <div className="bg-card rounded-xl p-6 shadow-lg border border-border/50">

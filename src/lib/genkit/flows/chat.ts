@@ -19,6 +19,7 @@ import {
     checkInvoiceStatusTool
 } from '@/lib/genkit/tools/invoice.tools';
 import { webSearchTool } from '@/lib/genkit/tools/search.tool';
+import { ingestKnowledgeTool } from '@/lib/genkit/tools/knowledge.tools';
 import { createTaskTool, listTasksTool, completeTaskTool } from '@/lib/genkit/tools/tasks.tools';
 import { getSystemPrompt } from '@/lib/genkit/prompts/system.prompt'; // Extracted Prompt
 
@@ -40,19 +41,28 @@ export const chatFlow = defineFlow(
         const { messages, uid, accessToken } = input;
         const recentMessages = messages.slice(-10); // Context window
 
+        // --- MODERATION LAYER (Safety First) ---
+        const lastUserMsg = messages.slice().reverse().find((m: any) => m.role === 'user');
+        const bannedWords = ['sex', 'porr', 'droger', 'bomb', 'vapen', 'attack', 'döda'];
+        if (lastUserMsg && bannedWords.some(w => lastUserMsg.content.toLowerCase().includes(w))) {
+            console.warn(`🛑 Moderation Blocked content from User ${uid}`);
+            return "Jag kan tyvärr inte hjälpa dig med det ämnet. Jag är en AI-assistent för byggbranschen.";
+        }
+
         // --- CONTEXT INJECTION ---
         let profileContext = "";
         let contextContext = ""; // For preferences
-        let customerContext = "";
-        let projectContext = "";
+        let weatherContext = ""; // [NEW] Proactivity
 
         if (input.uid) {
             try {
                 console.log(`🔍 Context Injection started for UID: ${input.uid}`);
                 const { UserRepo } = await import('@/lib/dal/user.repo');
                 const { CompanyRepo } = await import('@/lib/dal/company.repo');
-                const { CustomerRepo } = await import('@/lib/dal/customer.repo');
                 const { ProjectRepo } = await import('@/lib/dal/project.repo');
+                // Proactivity Imports
+                const { GeocodingService } = await import('@/lib/external/geocoding');
+                const { SMHIService } = await import('@/lib/external/smhi');
 
                 const user = await UserRepo.get(input.uid);
 
@@ -63,15 +73,34 @@ export const chatFlow = defineFlow(
                         if (company.profile) {
                             const p = company.profile;
                             profileContext = `MY COMPANY PROFILE: \nName: ${p.name} \nOrgNr: ${p.orgNumber || 'MISSING'} \nAddress: ${p.address || 'MISSING'} \nPhone: ${p.contactPhone} \nEmail: ${p.contactEmail} \n(Auto - use this for contracts / PDFs)`;
-                            if (!p.orgNumber || !p.address) profileContext += "\nWARNING: Company profile is incomplete. Please ask user to update Settings.";
-                        }
-                        // Preferences
-                        if (company.context) {
-                            contextContext = `MY PREFERENCES & CONTEXT: \n${company.context.preferences} \n\nRISKS / WARNINGS: \n${company.context.risks} \n(Use this to guide advice)`;
                         }
 
+                        // [NEW] Weather Proactivity (Check top 3 active projects)
+                        const projects = await ProjectRepo.listByOwner(input.uid, 5);
+                        const activeProjects = projects.filter(p => p.status === 'active' && p.address).slice(0, 3);
 
-                        // Customers & Projects: Removed mass injection. AI must use Tools.
+                        let riskyWeather = [];
+                        for (const p of activeProjects) {
+                            try {
+                                const coords = await GeocodingService.getCoordinates(p.address!);
+                                if (coords) {
+                                    const forecast = await SMHIService.getForecast(coords.lat, coords.lon);
+                                    // Check next 24h for Rain/Wind
+                                    const badDay = forecast.slice(0, 5).find(d => {
+                                        const rain = d.symbol >= 11 && d.symbol <= 20;
+                                        const storm = d.wind >= 10;
+                                        return rain || storm;
+                                    });
+                                    if (badDay) {
+                                        riskyWeather.push(`- Project "${p.name}" (${p.address}): Risk for ${badDay.rain ? 'RAIN' : ''} ${badDay.wind >= 10 ? 'STORM' : ''} on ${badDay.time.split('T')[0]}. Suggest checking schedule.`);
+                                    }
+                                }
+                            } catch (e) { console.error(`Weather check failed for ${p.name}`, e); }
+                        }
+
+                        if (riskyWeather.length > 0) {
+                            weatherContext = `\n\n🚨 WEATHER ALERTS (PROACTIVE): \n${riskyWeather.join('\n')}\n(If relevant to user query, ALERT THEM immediately!)`;
+                        }
                     }
                 }
             } catch (e) {
@@ -81,8 +110,11 @@ export const chatFlow = defineFlow(
 
         // --- VECTOR SEARCH (RAG) ---
         let knowledgeContext = "";
-        const lastUserMsg = messages.slice().reverse().find((m: any) => m.role === 'user');
-        const triggerKeywords = ['regler', 'afs', 'bbr', 'lag', 'asbest', 'krav', 'kapitel', 'paragraf', 'teknisk', 'afd', 'föreskrift', 'boverket', 'avtal', 'hantverkarformulär'];
+        const triggerKeywords = [
+            'regler', 'afs', 'bbr', 'lag', 'asbest', 'krav', 'kapitel', 'paragraf',
+            'teknisk', 'afd', 'föreskrift', 'boverket', 'avtal', 'hantverkarformulär',
+            'säkra vatten', 'el ', 'elsäkerhet', 'branschregler', 'abk', 'ab 04', 'abt 06'
+        ];
 
         if (lastUserMsg && triggerKeywords.some(kw => lastUserMsg.content.toLowerCase().includes(kw))) {
             try {
@@ -102,7 +134,7 @@ export const chatFlow = defineFlow(
         const systemPrompt = getSystemPrompt({
             profileContext,
             knowledgeContext
-        });
+        }) + weatherContext; // Append Weather Alerts
 
         // --- GENERATE ---
         const { text } = await ai.generate({
@@ -113,7 +145,7 @@ export const chatFlow = defineFlow(
             },
             maxTurns: 5, // STOP INFINITE LOOPS
             tools: [
-                webSearchTool,
+                webSearchTool, ingestKnowledgeTool,
                 createTaskTool, listTasksTool, completeTaskTool,
                 startProjectTool, updateProjectTool, listProjectsTool,
                 listOffersTool, createCustomerTool, listCustomersTool,

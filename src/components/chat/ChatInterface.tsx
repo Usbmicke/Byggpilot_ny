@@ -145,7 +145,13 @@ export default function ChatInterface() {
         setIsLoading(true);
         setIsExpanded(true); // Ensure stays open
         try {
-            const accessToken = localStorage.getItem('google_access_token') || undefined;
+            let accessToken = localStorage.getItem('google_access_token') || undefined;
+            const expiry = localStorage.getItem('google_token_expiry');
+            if (expiry && Date.now() > parseInt(expiry)) {
+                console.warn("Google Token Expired - sending without external auth.");
+                accessToken = undefined; // Proceed without token to avoid 401 crash in server action
+            }
+
             const result = await chatAction(newHistory, accessToken);
             if (!result.success) throw new Error(result.error);
             setMessages((prev) => [...prev, { role: 'model', content: result.text || '' }]);

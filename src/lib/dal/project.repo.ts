@@ -19,6 +19,13 @@ export interface ProjectData {
         role: string; // e.g. "Elansvarig", "Rörläggare"
         isMainContact?: boolean; // If they are the "Huvudansvarig" for their domain or the proj.
     }[];
+    // ECONOMY AGGREGATION (OPTIMIZATION)
+    economy?: {
+        offerTotal: number;
+        ataTotal: number;
+        totalValue: number;
+        updatedAt: string;
+    };
 }
 
 const COLLECTION = 'projects';
@@ -43,10 +50,19 @@ export const ProjectRepo = {
         return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as ProjectData));
     },
 
-    async get(id: string): Promise<ProjectData | null> {
+    async get(id: string, ownerId?: string): Promise<ProjectData | null> {
         const doc = await db.collection(COLLECTION).doc(id).get();
         if (!doc.exists) return null;
-        return { id: doc.id, ...doc.data() } as ProjectData;
+
+        const data = doc.data() as ProjectData;
+
+        // Security Hardening: If ownerId is provided, enforce it.
+        if (ownerId && data.ownerId !== ownerId) {
+            console.warn(`🔒 ProjectRepo.get BLOCKED access to ${id} for user ${ownerId} (Owner is ${data.ownerId})`);
+            return null;
+        }
+
+        return { id: doc.id, ...data };
     },
 
     async create(data: Omit<ProjectData, 'id' | 'createdAt'>) {

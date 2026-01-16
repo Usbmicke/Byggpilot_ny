@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { getItemColor } from '@/lib/utils/colors';
 import { mitigateRiskAction } from '@/app/actions';
 import { AlertTriangle, X, CheckSquare } from 'lucide-react';
+import { ErrorBoundary } from '@/components/ui/ErrorBoundary';
 
 interface RiskModalProps {
     project: any;
@@ -174,15 +175,17 @@ export function ProjectCard({ project, variant = 'grid' }: ProjectCardProps) {
 
                 {/* Risk Indicator (Functional / Logic Container) */}
                 <div className="absolute top-0 right-0 z-20 pointer-events-auto">
-                    <ProjectRiskIndicator
-                        projectId={project.id}
-                        projectName={project.name}
-                        extraRisks={weatherRisk ? [weatherRisk] : []}
-                        onOpenModal={(risks) => {
-                            setActiveRisks(risks);
-                            setIsRiskModalOpen(true);
-                        }}
-                    />
+                    <ErrorBoundary>
+                        <ProjectRiskIndicator
+                            projectId={project.id}
+                            projectName={project.name}
+                            extraRisks={weatherRisk ? [weatherRisk] : []}
+                            onOpenModal={(risks) => {
+                                setActiveRisks(risks);
+                                setIsRiskModalOpen(true);
+                            }}
+                        />
+                    </ErrorBoundary>
                 </div>
 
                 {/* Color/Icon Sidebar (Now with Traffic Light Strip) */}
@@ -245,15 +248,34 @@ export function ProjectCard({ project, variant = 'grid' }: ProjectCardProps) {
                             </Link>
 
                             <div className="w-full sm:w-auto max-w-[200px]">
-                                <WeatherWidget
-                                    address={project.address}
-                                    projectId={project.id}
-                                    projectName={project.name}
-                                    projectDescription={project.description}
-                                    onRiskDetected={setWeatherRisk}
-                                />
+                                <ErrorBoundary fallback={<div className="h-6 w-full bg-muted/10 rounded animate-pulse" />}>
+                                    <WeatherWidget
+                                        address={project.address}
+                                        projectId={project.id}
+                                        projectName={project.name}
+                                        projectDescription={project.description}
+                                        onRiskDetected={setWeatherRisk}
+                                    />
+                                </ErrorBoundary>
                             </div>
                         </div>
+
+                        {/* Economy Stats (New) */}
+                        {project.economy && project.economy.totalValue > 0 && (
+                            <div className="flex flex-col mr-auto">
+                                <span className="text-[10px] text-muted-foreground uppercase tracking-wider font-semibold">Projektvärde</span>
+                                <div className="flex items-baseline gap-2">
+                                    <span className="text-sm font-semibold text-foreground">
+                                        {new Intl.NumberFormat('sv-SE', { style: 'currency', currency: 'SEK', maximumFractionDigits: 0 }).format(project.economy.totalValue)}
+                                    </span>
+                                </div>
+                                {project.economy.ataTotal > 0 && (
+                                    <span className="text-[10px] text-amber-600 font-medium bg-amber-50 px-1.5 py-0.5 rounded border border-amber-100 self-start mt-0.5">
+                                        + {new Intl.NumberFormat('sv-SE', { style: 'currency', currency: 'SEK', maximumFractionDigits: 0 }).format(project.economy.ataTotal)} ÄTA
+                                    </span>
+                                )}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

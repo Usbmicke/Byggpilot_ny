@@ -14,21 +14,59 @@ export default function NotificationBell() {
     const [insights, setInsights] = useState<any[]>([]);
     const [isOpen, setIsOpen] = useState(false);
     const [needsAuth, setNeedsAuth] = useState(false);
+    const [hasCritical, setHasCritical] = useState(false); // New
 
-    // Poll for inbox updates
+    const [globalStatus, setGlobalStatus] = useState<any>(null);
+
+    // Poll for inbox updates & global status
     useEffect(() => {
         if (user) {
             checkInbox();
-            // Optional: Poll every 5 minutes
-            const interval = setInterval(checkInbox, 5 * 60 * 1000);
+            checkGlobalStatus();
+            checkCriticalStops(); // New
+            // Polling
+            const interval = setInterval(() => {
+                checkInbox();
+                checkGlobalStatus();
+                checkCriticalStops(); // New
+            }, 60 * 1000);
             return () => clearInterval(interval);
         }
     }, [user]);
 
+    const checkCriticalStops = () => {
+        import('@/app/actions').then(async ({ getCriticalStopsAction }) => {
+            if (getCriticalStopsAction) {
+                const res = await getCriticalStopsAction();
+                if (res.success && res.items && res.items.length > 0) {
+                    setHasCritical(true);
+                } else {
+                    setHasCritical(false);
+                }
+            }
+        });
+    };
+
+    const checkGlobalStatus = async () => {
+        try {
+            // Dynamically import to avoid build issues if mixed server/client env not perfect
+            const { getGlobalStatusAction } = await import('@/app/actions');
+            const status = await getGlobalStatusAction();
+            if (status.success) {
+                setGlobalStatus(status);
+            }
+        } catch (e) {
+            console.error("Global status check failed", e);
+        }
+    };
+
     const checkInbox = async () => {
         const token = localStorage.getItem('google_access_token');
-        if (!token) {
-            setNeedsAuth(true); // Don't nag, just show yellow dot maybe?
+        const expiry = localStorage.getItem('google_token_expiry');
+        const now = Date.now();
+
+        if (!token || (expiry && now > parseInt(expiry))) {
+            setNeedsAuth(true);
             return;
         }
 
@@ -38,7 +76,7 @@ export default function NotificationBell() {
             if (res.success && res.insights) {
                 setInsights(res.insights);
                 setNeedsAuth(false);
-            } else if (res.error?.includes('credentials')) {
+            } else if (res.error?.includes('credentials') || res.error?.includes('Token')) {
                 setNeedsAuth(true);
             }
         } catch (e) {
@@ -57,6 +95,9 @@ export default function NotificationBell() {
             const credential = GoogleAuthProvider.credentialFromResult(result);
             if (credential?.accessToken) {
                 localStorage.setItem('google_access_token', credential.accessToken);
+                // 1 hour expiry (minus 5 min safety buffer)
+                const expiry = Date.now() + (60 * 60 * 1000) - (5 * 60 * 1000);
+                localStorage.setItem('google_token_expiry', expiry.toString());
                 setNeedsAuth(false);
                 checkInbox();
             }
@@ -68,6 +109,7 @@ export default function NotificationBell() {
     // Derived State
     const hasNotifications = insights.length > 0;
     const isAuthWarning = needsAuth;
+    const hasGlobalWarning = globalStatus?.hasWarnings;
 
     return (
         <div className="relative">
@@ -77,7 +119,7 @@ export default function NotificationBell() {
                 className={`relative p-2 rounded-full transition-colors ${isOpen ? 'bg-accent text-accent-foreground' : 'hover:bg-accent/50 text-muted-foreground'
                     }`}
             >
-                <Bell size={20} className={isAuthWarning ? 'text-amber-500' : hasNotifications ? 'text-primary' : ''} />
+                <Bell size={20} className={hasGlobalWarning ? 'text-red-500' : isAuthWarning ? 'text-amber-500' : hasNotifications ? 'text-primary' : ''} />
 
                 {/* Ping Animation for Notifications */}
                 {hasNotifications && !isOpen && (
@@ -90,6 +132,14 @@ export default function NotificationBell() {
                 {/* Warning Dot for Auth */}
                 {isAuthWarning && !hasNotifications && (
                     <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-amber-500" />
+                )}
+
+                {/* CRITICAL STOP DOT (Strategic Audit - "Avisering måste lysa") */}
+                {hasCritical && !hasNotifications && !isAuthWarning && (
+                    <span className="absolute top-2 right-2 flex h-2.5 w-2.5">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+                    </span>
                 )}
             </button>
 
@@ -107,6 +157,23 @@ export default function NotificationBell() {
                     </div>
 
                     <div className="max-h-[400px] overflow-y-auto p-2 space-y-2">
+                        {/* Global Status Warnings */}
+                        {globalStatus?.hasWarnings && (
+                            <div className="p-3 bg-red-500/10 border border-red-500/20 rounded-lg text-sm mb-2">
+                                <p className="text-red-600 font-bold mb-1">⚠️ Åtgärd krävs</p>
+                                <ul className="list-disc list-inside text-xs text-red-700 space-y-1">
+                                    {globalStatus.profileIncomplete && <li>Företagsprofil saknar uppgifter (OrgNr/Adress)</li>}
+                                    {globalStatus.incompleteCustomersCount > 0 && <li>{globalStatus.incompleteCustomersCount} kunder saknar kontaktuppgifter</li>}
+                                </ul>
+                                <button
+                                    onClick={() => router.push('/settings')}
+                                    className="mt-2 text-xs bg-red-600 text-white px-3 py-1.5 rounded hover:bg-red-700 w-full"
+                                >
+                                    Gå till inställningar
+                                </button>
+                            </div>
+                        )}
+
                         {isAuthWarning && (
                             <div className="p-3 bg-amber-500/10 border border-amber-500/20 rounded-lg text-sm">
                                 <p className="text-amber-600 font-medium mb-2">Anslut Google för att se aviseringar</p>
@@ -119,7 +186,7 @@ export default function NotificationBell() {
                             </div>
                         )}
 
-                        {!isAuthWarning && insights.length === 0 && (
+                        {!isAuthWarning && !globalStatus?.hasWarnings && insights.length === 0 && (
                             <div className="py-8 text-center text-muted-foreground text-sm">
                                 Inga nya händelser just nu.
                             </div>

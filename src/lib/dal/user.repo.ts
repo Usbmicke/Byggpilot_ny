@@ -43,5 +43,27 @@ export const UserRepo = {
             },
             { merge: true }
         );
+    },
+
+    async ensureUser(uid: string, email?: string): Promise<UserData> {
+        const existing = await this.get(uid);
+        if (existing) return existing;
+
+        const newUser: UserData = {
+            uid,
+            email: email || null,
+            displayName: null,
+            companyId: '',
+            onboardingCompleted: false,
+            createdAt: Timestamp.now(),
+            updatedAt: Timestamp.now()
+        };
+
+        await db.collection(COLLECTION).doc(uid).set(newUser);
+        return newUser;
+    },
+
+    async update(uid: string, data: Partial<UserData>) {
+        return this.createOrUpdate(uid, data);
     }
 };

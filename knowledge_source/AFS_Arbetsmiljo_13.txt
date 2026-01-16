@@ -1,0 +1,1285 @@
+AFS 2023:13 
+Arbetsmiljöverkets föreskrifter och  allmänna råd (AFS 2023:13) om  risker vid vissa typer av arbeten 
+Arbetsmiljöverkets författningssamling
+
+ISBN 978-91-8042-012-9 
+ISSN 1650-3163 
+ARBETSMILJÖVERKET Box 9082, 171 09 Solna  
+Telefon: 010-730 90 00 
+E-post: arbetsmiljoverket@av.se www.av.se 
+BESTÄLLNINGSADRESS Arbetsmiljöverket 
+Box 9082, 171 09 Solna 
+Telefon 010-730 90 00 www.av.se 
+
+I Arbetsmiljöverkets författningssamling (AFS) publiceras myndighetens föreskrifter  och allmänna råd.  
+Föreskrifter är bindande regler. Allmänna råd har en annan juridisk status än föreskrifter.  Allmänna råd är inte bindande, utan innehåller rekommendationer om tillämpningen av  föreskrifterna som anger hur någon kan eller bör handla i ett visst hänseende. De kan till  exempel upplysa om lämpliga sätt att uppfylla kraven och visa på praktiska lösningar.  
+Observera att hänvisningar till författningar alltid avser författningens ursprungliga  nummer. Senare ändringar och omtryck kan förekomma. 
+När det gäller ändringar och omtryck av Arbetarskyddsstyrelsens och Arbetsmiljöverkets  författningar hänvisas till senaste Förteckning över föreskrifter och allmänna råd. 
+Utgivare: Eva Nilsson
+3 
+Innehåll 
+1 kap. Allmänna bestämmelser.............................................13 Varför föreskrifterna finns ..................................................................... 13 Systematiskt arbetsmiljöarbete.............................................................. 14 
+2 kap. Arbete med djur.........................................................15 Då gäller föreskrifterna......................................................................... 15 Vem föreskrifterna riktar sig till ............................................................. 15 Byggnader och anordningar................................................................... 15 Åtgärder.............................................................................................. 15 Rutiner och kunskaper ......................................................................... 16 Behandling av djur............................................................................... 17 Bestämmelser för olika typer av djur...................................................... 17 
+3 kap. Arbete med risk för exponering för asbest...................19 Då gäller föreskrifterna......................................................................... 19 Vem föreskrifterna riktar sig till ............................................................. 19 Definitioner......................................................................................... 20 Tillstånd ............................................................................................. 21 Ansökan om tillstånd ........................................................................... 24 Anmälan om rivning............................................................................. 25 Handlingar på arbetsplatsen vid rivning ................................................. 26 Allmänna åtgärder vid arbete med asbest eller asbesthaltigt material........ 27 Exponeringskontroller........................................................................... 29 Personlig skyddsutrustning och hygien................................................... 29 Märkning ............................................................................................ 30 
+Särskilda åtgärder vid arbete med asbest eller asbesthaltigt  material i samband med rivning ............................................................ 30 
+Medicinska kontroller........................................................................... 34 Exponeringsregister.............................................................................. 34
+5 
+4 kap. Berg- och gruvarbete.................................................35 Då gäller föreskrifterna......................................................................... 35 Vem föreskrifterna riktar sig till ............................................................. 35 Definitioner......................................................................................... 36 Undersökning och riskbedömning.......................................................... 38  
+Åtgärder.............................................................................................. 39  Fjärrstyrning, arbetsutrustning, fordon och maskiner ............................... 40  Transportvägar och tippställen............................................................... 41  Prospektering och geotekniska arbeten .................................................. 42  Radon ................................................................................................ 42  Utrymning, undsättning och brandskydd ................................................ 43  Bergarbete .......................................................................................... 44  Gruvhissar........................................................................................... 47  Gravida arbetstagare ............................................................................ 47  Samordning mellan flera arbetsgivare .................................................... 48  
+5 kap. Byggnads- och anläggningsarbete..............................49 Då gäller föreskrifterna......................................................................... 49 Vem föreskrifterna riktar sig till ............................................................. 50 
+Ytterligare bestämmelser för ensam- och familjeföretagare om  utökat arbetsmiljöansvar för att säkerställa deras hälsa och säkerhet......... 51 
+Definitioner......................................................................................... 52 
+Ansvar och uppgifter för de som bedriver verksamhet  
+på byggarbetsplatsen ........................................................................... 56 Planera och ordna byggarbetsplatsen och etableringsområdet................... 59 Välja arbetsmetoder och utrustning........................................................ 68 Hantera material och avfall................................................................... 70 Risk för fall till lägre nivå och takarbete ................................................. 72 Andra risker ........................................................................................ 79 Arbetsmoment som kräver särskilda åtgärder .......................................... 82
+6 
+6 kap. Dykeriarbete .............................................................90 Då gäller föreskrifterna......................................................................... 90 Vem föreskrifterna riktar sig till ............................................................. 90 Definitioner......................................................................................... 91 Upprättande av dykplan ....................................................................... 93 Undersökning och riskbedömning.......................................................... 94 Åtgärder.............................................................................................. 94 
+Kunskaper, certifikat, utbildningsbevis och upprätthållande  av kunskaper....................................................................................... 95 
+Utrustning .......................................................................................... 97 Bemanning ......................................................................................... 98 Medicinska kontroller med bedömning för tjänstbarhetsintyg ................. 101 Gravida arbetstagare .......................................................................... 101 Andningsgas och partialtryck för oxygen............................................... 101 Tryckkammare ................................................................................... 102 Utrustning för första hjälpen ............................................................... 102 
+7 kap. Frisörarbete ............................................................103 Då gäller föreskrifterna....................................................................... 103 Vem föreskrifterna riktar sig till ........................................................... 103 Åtgärder............................................................................................ 103
+7 
+8 kap. Hamnarbete ............................................................105 Då gäller föreskrifterna....................................................................... 105 Vem föreskrifterna riktar sig till ........................................................... 105 Definitioner....................................................................................... 105 Allmänt ............................................................................................ 106 Arbetsplatsens beskaffenhet ............................................................... 107 Organisation...................................................................................... 111 Tekniska anordningar ......................................................................... 113 Olika arbetsmoment........................................................................... 113 Utrustning ........................................................................................ 118 
+9 kap. Innesluten användning av genetiskt  
+modifierade mikroorganismer .............................................120 Då gäller föreskrifterna....................................................................... 120 Vem föreskrifterna riktar sig till ........................................................... 120 Definitioner....................................................................................... 121 
+Utredning för bedömning av vilka skyddsåtgärder  
+som är nödvändiga............................................................................. 122 Dokumentation.................................................................................. 123 Skyddsnivå, skyddsåtgärder ................................................................ 123 Klassificering för anmälan och ansökan om tillstånd.............................. 124 Skyltning och märkning...................................................................... 124 Avfall, dekontaminering och rengöring ................................................. 124 Utbildning och kunskaper................................................................... 125 Beredskapsplan och rapportering......................................................... 125 Anmälan och ansökan om tillstånd ...................................................... 126 Ändring och uppdatering av lämnade uppgifter..................................... 126
+8 
+10 kap. Arbete i kylda livsmedelslokaler ............................127 Då gäller föreskrifterna....................................................................... 127 Vem föreskrifterna riktar sig till ........................................................... 127 Åtgärder mot avkylning....................................................................... 127 
+11 kap. Mast- och stolparbete............................................129 Då gäller föreskrifterna....................................................................... 129 Vem föreskrifterna riktar sig till ........................................................... 129 Definitioner....................................................................................... 130 Medicinska kontroller, kunskaper och utrustning................................... 130 Utrustning ........................................................................................ 131 Planering .......................................................................................... 132 Höjdarbete........................................................................................ 133 Åtgärder före arbete i stolpe av trä....................................................... 133 
+12 kap. Provning med över- eller undertryck.......................134 Då gäller föreskrifterna....................................................................... 134 Vem föreskrifterna riktar sig till ........................................................... 134 Definitioner....................................................................................... 135 Gemensamma bestämmelser för all provning ........................................ 136 Särskilda bestämmelser för provning med övertryck............................... 139 Särskilda bestämmelser för provning med undertryck ............................ 141 
+13 kap. Reparation och service av fordon  
+och fordonsmotorer............................................................143 Då gäller föreskrifterna....................................................................... 143 Vem föreskrifterna riktar sig till ........................................................... 143 Lokaler ............................................................................................. 143 Ventilation ........................................................................................ 144
+9 
+Lyft .................................................................................................. 145 Arbetsgrop ........................................................................................ 145 Tvättning och rengöring...................................................................... 146 Olika arbetsmoment........................................................................... 147 
+14 kap. Rök- och kemdykning ............................................150 Då gäller föreskrifterna....................................................................... 150 Vem föreskrifterna riktar sig till ........................................................... 150 Definitioner....................................................................................... 151 Undersökning och riskbedömning........................................................ 152 Bemanning ....................................................................................... 153 Arbetsförmåga ................................................................................... 155 Medicinska kontroller med bedömning för tjänstbarhetsintyg ................. 155 Gravida arbetstagare .......................................................................... 155 Utrustning ........................................................................................ 155 Kunskaper ........................................................................................ 156 
+15 kap. Smältning och gjutning av metall ...........................157 Då gäller föreskrifterna....................................................................... 157 Vem föreskrifterna riktar sig till ........................................................... 157 Definitioner....................................................................................... 158 Särskilda risker.................................................................................. 159 Arbetslokaler..................................................................................... 159 Ventilation och luftkvalitet.................................................................. 160 Arbetsrörelser och arbetsutrustning ..................................................... 160 Personlig skyddsutrustning ................................................................. 160 Övrigt ............................................................................................... 161 Provning med mera............................................................................ 161
+10 
+16 kap. Sprängarbete ........................................................164 Då gäller föreskrifterna....................................................................... 164 Vem föreskrifterna riktar sig till ........................................................... 164 Definitioner....................................................................................... 165 Undersökning och riskbedömning........................................................ 166 Personal ........................................................................................... 168 Hantering av explosiva varor och laddningsarbete.................................. 169 Initiering av sprängsalvor.................................................................... 171 Täckning........................................................................................... 172 Utrymning, bevakning och initiering .................................................... 173 Återvändande till sprängplats.............................................................. 175 
+17 kap. Arbete med vinterväghållning och  
+snöskottning på tak............................................................176 Då gäller föreskrifterna....................................................................... 176 Vem föreskrifterna riktar sig till ........................................................... 176 Definitioner....................................................................................... 177 Planering och utförande av vinterväghållning ........................................ 177 Planering och utförande av snöskottning på tak .................................... 178 
+Övergångsbestämmelser.....................................................180
+11 
+Bilagor 
+Bilaga 1 Maximalt tillåten oxygenbelastning .................................... 182 
+Bilaga 2 Tillvägagångssätt vid utredning och bedömning  av skyddsnivå samt klassificering vid  
+innesluten användning av GMM......................................... 184 
+Bilaga 3 Skyddsåtgärder och arbetssätt för innesluten 
+användning av genetiskt modifierade  
+mikroorganismer .............................................................. 186 Bilaga 4 Uppgifter vid anmälan av en F-verksamhet ......................... 201 
+Bilaga 5 Uppgifter vid anmälan av en L-verksamhet  
+och nya GMM-användningar.............................................. 203 
+Bilaga 6 Uppgifter vid ansökan om tillstånd för en  
+R-verksamhet och för nya GMM-användningar ........................207 Bilaga 7 Utbildningsprogram för rök- och kemdykare........................ 213
+12 
+
+Arbetsmiljöverkets 
+författningssamling 
+Arbetsmiljöverkets föreskrifter och allmänna  råd om risker vid vissa typer av arbeten; 
+beslutade den 15 september 2023. 
+
+AFS 2023:13  
+Utkom från trycket den 22 november 2023 
+
+Arbetsmiljöverket föreskriver1 följande med stöd av 18 § arbetsmiljöför ordningen (1977:1166), 7–9, 11, 12, 14 och 17 §§ förordningen (2000:271) om  innesluten användning av genetiskt modifierade organismer och 3 § andra  stycket förordningen (2011:811) om ackreditering och teknisk kontroll, och  beslutar följande allmänna råd. 
+1 kap. Allmänna bestämmelser 
+Varför föreskrifterna finns 
+1 § Syftet med dessa föreskrifter är att förebygga ohälsa och olycksfall  vid risker vid vissa typer av arbeten. De arbeten som avses är arbete med  djur (2 kap.), arbete med risk för exponering för asbest (3 kap.), berg- och  gruvarbete (4 kap.), byggnads- och anläggningsarbete (5 kap.),  
+1 Jämför 
+Rådets direktiv 92/57/EEG av den 24 juni 1992 om minimikrav för säkerhet och hälsa på tillfälliga  eller rörliga byggarbetsplatser (åttonde särdirektivet enligt artikel 16.1 i direktiv 89/391/EEG) i  lydelsen enligt Europaparlamentets och rådets förordning (EU) 2019/1243 av den 20 juni 2019, 
+Rådets direktiv 92/91/EEG av den 3 november 1992 om minimikrav för förbättring av  arbetstagarnas säkerhet och hälsa inom den del av utvinningsindustrin som utnyttjar borrning (elfte särdirektivet enligt artikel 16.1 i direktiv 89/391/EEG) i lydelsen enligt Europaparlamentets och rådets direktiv 2007/30/EG av den 20 juni 2007 om ändring av rådets direktiv 89/391/EEG,  dess särdirektiv samt rådets direktiv 83/477/EEG, 91/383/EEG, 92/29/EEG och 94/33/EG  för att förenkla och rationalisera rapporterna om det praktiska genomförandet,
+13 
+AFS 2023:13 
+Kapitel 1
+dykeriarbete (6 kap.), frisörarbete (7 kap.), hamnarbete (8 kap.), innesluten  användning av genetiskt modifierade mikroorganismer (9 kap.), arbete i  kylda livsmedelslokaler (10 kap.), mast- och stolparbete (11 kap.), provning  med över- eller undertryck (12 kap.), reparation och service av fordon  och fordonsmotorer (13 kap.), rök- och kemdykning (14 kap.), smältning  och gjutning av metall (15 kap.), sprängarbete (16 kap.) och arbete med  vinterväghållning och snöskottning på tak (17 kap.). 
+Systematiskt arbetsmiljöarbete 
+2 § I arbetsmiljölagen (1977:1160) och i Arbetsmiljöverkets föreskrifter  och allmänna råd (AFS 2023:1) om systematiskt arbetsmiljöarbete  – grundläggande skyldigheter för dig med arbetsgivaransvar finns  grundläggande bestämmelser om hur arbetsgivaren ska organisera,  genomföra och följa upp sitt arbetsmiljöarbete, för att förebygga risker för  ohälsa och olycksfall i arbetet och uppnå en tillfredställande arbetsmiljö.  Vidare framgår vilka som ska medverka i arbetet. 
+I dessa föreskrifter finns bestämmelser med preciserade krav för det  systematiska arbetsmiljöarbetet som kan gälla undersökningar av  arbetsmiljön, bedömningar av risker och åtgärder som ska vidtas. Det finns  också preciseringar som kan gälla särskilda krav på kunskaper eller hur vissa  arbetsmiljöuppgifter ska fördelas. 
+Rådets direktiv 92/104/EEG av den 3 december 1992 om minimikrav för förbättring av  arbetstagarnas säkerhet och hälsa inom utvinningsindustri ovan och under jord (tolfte  särdirektivet enligt artikel 16.1 i direktiv 89/391/EEG) i lydelsen enligt Europaparlamentets  och rådets direktiv 2007/30/EG av den 20 juni 2007 om ändring av rådets direktiv 89/391/EEG,  dess särdirektiv samt rådets direktiv 83/477/EEG, 91/383/EEG, 92/29/EEG och 94/33/EG för  att förenkla och rationalisera rapporterna om det praktiska genomförandet,  
+Europaparlamentets och rådets direktiv (EU) 2009/148 av den 30 november 2009 om  skydd för arbetstagare mot risker vid exponering för asbest i arbetet i lydelsen enligt  Europaparlamentets och rådets förordning (EU) 2019/1243 av den 20 juni 2019,  
+Europaparlamentets och rådets direktiv (EU) 2015/1535 av den 9 september 2015 om ett  informationsförfarande beträffande tekniska föreskrifter och beträffande föreskrifter för  informationssamhällets tjänster, och 
+Europaparlamentets och rådets direktiv 2009/41/EG av den 6 maj 2009 om innesluten  användning av genetiskt modifierade mikroorganismer. 
+14 
+AFS 2023:13 
+Kapitel 2
+2 kap. Arbete med djur 
+Då gäller föreskrifterna 
+1 § Bestämmelserna i detta kapitel reglerar all verksamhet där arbete med  djur utförs. 
+Vem föreskrifterna riktar sig till 
+2 § Arbetsgivaren ansvarar för att föreskrifterna i detta kapitel följs. Med  arbetsgivare likställs den som hyr in arbetskraft. 
+Av 1 och 3 kap. arbetsmiljölagen (1977:1160) följer att föreskrifterna i detta  kapitel under vissa omständigheter kan medföra skyldigheter även för andra  än arbetsgivaren. 
+Byggnader och anordningar 
+3 § Arbetsgivaren ska se till att stall, utrymmen, inredningar, stängsel och  andra anordningar är dimensionerade och underhålls så att arbetet med  djuren kan utföras med betryggande säkerhet. 
+4 § Arbetsgivaren ska se till att arbetstagarna i byggnader, eller på andra  platser för djurhållning för lösgående djur, ska kunna sätta sig i säkerhet  snabbt. 
+5 § Arbetsgivaren ska se till att dörrar, grindar och andra  öppningsanordningar 
+1. är säkrade, så att de inte går att lyfta av, och 
+2. har en tillförlitlig låsanordning, som lätt går att öppna inifrån med  en hand. 
+En dörr, som inte är en skjutdörr, ska ha en öppningsanordning som  öppnas utåt. 
+Åtgärder 
+Hjälpmedel 
+6 § Arbetsgivaren ska se till att det finns tillgång till hjälpmedel som vid  behov gör det möjligt att hantera djuren säkert vid förflyttning, behandling,  rengöring och andra åtgärder. 
+15 
+AFS 2023:13 
+Kapitel 2 
+Förflyttning av djur 
+7 § När djur förflyttas med transportfordon, från eller till byggnader  eller andra platser för djurhållning, ska arbetsgivaren se till att det finns en  angöringsplats som möjliggör att lastningen eller lossningen kan utföras på  ett säkert sätt. 
+8 § Arbetsgivaren ska se till att 
+1. drivningsgångar, fållor, grindar och andra hjälpmedel är  dimensionerade och förankrade så att djuren inte kan bryta sig ut, 2. bryggor, ramper och landgångar som används vid arbetet inte kan  orsaka olyckor, 
+3. det finns möjlighet att ta skydd, eller att det finns en reträttväg, för  den som utför förflyttningsarbetet, 
+4. arbetstagarna använder den metod som innebär minst risker, när  djur ska skiljas från varandra, och 
+5. djur kan flyttas på ett sätt som är säkert och ergonomiskt riktigt för  arbetstagaren. 
+9 § Arbetsgivaren ska se till att djur under transport förvaras så att de  inte kan komma loss och så att inte någon obehörig kan få tillträde till  förvaringsutrymmet. Förvaringsutrymme för djur som bedöms vara farliga  ska vara tydligt märkt med information om den djurart som transporteras. 
+Rutiner och kunskaper 
+10 § Arbetsgivaren ska se till att det finns rutiner för att överföra  information till de som arbetar med transport, seminering, provtagning eller  behandling av djur. 
+Arbetsgivaren ska även se till att det finns rutiner för hur arbetet ska kunna  utföras säkert med djur som tidigare har visat beteenden som kan innebära  risk för olycksfall. 
+Om ett djur har visat ett avvikande beteende, som kan medföra att djuret  utgör en allvarlig olycksrisk för människor, ska arbetsgivaren vidta åtgärder  så att en betryggande säkerhet uppnås. 
+11 § Arbetsgivaren ska se till att den som arbetar med djur har tillräckliga  kunskaper om djurets egenskaper, beteendemönster, och hur djuret reagerar  i olika situationer.
+16 
+AFS 2023:13 
+Kapitel 2 
+Den som kommer i kontakt med farliga djur, som normalt hålls i fångenskap,  ska ha tillräckliga kunskaper om hur man tar hand om djuret. Om det behövs  ska personer med tillräckliga kunskaper om hur man hanterar sådana djur  anlitas. 
+Behandling av djur 
+12 § När arbetstagarna ska behandla ett djur ska arbetsgivaren se till att  djuret bedöms med tanke på säker hantering för att undvika att någon får  skador som orsakas av att djuret sparkar, biter, stångar eller tränger. 
+Arbetsgivaren ska se till att djuret kan fixeras vid behandling om det behövs. 
+13 § Arbetsgivaren ska se till att det finns anordningar som gör det möjligt  att behandla ett lösgående djur avskilt från andra djur. 
+Bestämmelser för olika typer av djur 
+Arbete med nötkreatur 
+14 § Arbetsgivaren ska vidta åtgärder för att minska risken för stångskador  av nötkreatur. 
+15 § Arbetsgivaren ska se till att arbetstagarna arbetar med stor försiktighet  bland kvigor eller kor där det finns en lösgående tjur eller vid arbete med  nykalvade kor. 
+Arbetsgivaren ska se till att det finns reträttvägar eller skyddsanordningar  som går att nå vid en risksituation. 
+Arbete med hästar 
+16 § Arbetsgivaren ska se till att det finns ett utrymme för verkning och  skoning som 
+1. är placerat så att hästen som skos inte kan störas av passerande  hästar eller personer, 
+2. har en lämplig belysning och temperatur, 
+3. är dragfritt, och 
+4. har ett halksäkert golv. 
+Arbetsgivaren ska se till att hästen är uppbunden på ett säkert sätt. Det ska  finnas tillräckligt fritt utrymme runt hästen, så att den som skor hästen inte  riskerar att bli klämd.
+17 
+AFS 2023:13 
+Kapitel 2 
+17 § Arbetsgivaren ska se till att arbetet kan utföras så att arbetstagaren  undviker risk för sparkar och bett vid utgödsling i spiltor och boxar. En häst i  box ska kunna bindas under utgödslingen. 
+18 § Arbetsgivaren ska se till att utrustningsdetaljer alltid kontrolleras före  ridning eller körning. De ska vara hela, justerade och anpassade efter hästen,  och de får inte ha några allvarliga förslitningar. 
+Arbetsgivaren ska se till att sadling, selning och förspänning utförs på ett  säkert sätt. 
+19 § Arbetsgivaren ska se till att bara hästar som är lämpade för uppgiften  används vid utbildning av elever. 
+Arbete med svin 
+20 § Arbetsgivaren ska se till att det i en box för galtar eller suggor finns  möjlighet för arbetstagarna att ta skydd mot angrepp av djuren. Detta gäller  inte om det finns hjälpmedel tillgängliga för att skydda sig vid ett angrepp. 
+Vid arbete med smågrisar ska arbetsgivaren se till att suggan kan hållas  avskild från smågrisarna.
+18 
+AFS 2023:13 
+Kapitel 3 
+3 kap. Arbete med risk för exponering för asbest 
+Då gäller föreskrifterna 
+1 § Bestämmelserna i detta kapitel reglerar all verksamhet som medför risk  för exponering för asbesthaltigt damm i arbetet. 
+Bestämmelserna i 5–7, 21 och 28 §§ gäller inte när asbesthaltigt bergmaterial  hanteras i samband med att materialet bryts. 
+Vid transport av asbesthaltigt avfall till plats för slutligt omhändertagande  gäller endast bestämmelserna i 15–18, 20 och 21 §§. 
+Vid arbete på plats för slutligt omhändertagande av asbesthaltigt avfall  gäller endast bestämmelserna i 15–18, 20, 21 och 44–45 §§. 
+Vid hantering av asbesthaltigt material där halten av asbest är högst 1  viktprocent i ursprungsmaterialet gäller endast bestämmelserna i 3, 15–18,  22 och 23 §§. 
+Vem föreskrifterna riktar sig till 
+2 § Arbetsgivaren ansvarar för att föreskrifterna i detta kapitel följs. Med  arbetsgivare likställs den som hyr in arbetskraft. 
+Av 3 kap. 5 § andra stycket arbetsmiljölagen (1977:1160) följer att den som  ensam eller gemensamt med familjemedlem driver yrkesmässig verksamhet  utan anställda omfattas av bestämmelserna om såväl arbetsgivare som  arbetstagare i detta kapitel. Den som driver sådan verksamhet omfattas dock  inte av bestämmelserna i 9 § tredje stycket 3, 10 § tredje stycket 3, 11 § andra  stycket 4 och 13 § första stycket 4. 
+Av 1 och 3 kap. arbetsmiljölagen följer att föreskrifterna i detta kapitel  under vissa omständigheter kan medföra skyldigheter även för andra än  arbetsgivare. 
+19 
+AFS 2023:13 
+Kapitel 3 
+Definitioner 
+3 § I detta kapitel har följande begrepp dessa betydelser. 
+Begrepp Betydelse 
+Asbest Samlingsnamn för krysotil (vit  asbest), krokidolit (blå asbest)  
+och amosit (brun asbest) samt de  
+fibrösa formerna av silikatmineralen  
+antofyllit, tremolit och aktinolit. 
+Asbesthaltigt damm Damm som innehåller luftburna eller  på ytor avsatta asbestfibrer. 
+Bearbetning och behandling Hantering som innebär ingrepp i  asbest eller asbesthaltigt material  
+i samband med underhåll eller  
+reparation av byggnad eller teknisk  
+anordning. 
+
+Hantering av asbest eller  asbesthaltigt material 
+Arbete med asbest eller  
+asbesthaltigt material som medför  eller kan medföra exponering för  asbesthaltigt damm. 
+
+Rivning Demontering av en byggnad, en  byggnadsdel, en teknisk anordning  
+eller en del av en sådan anordning  
+som innehåller asbest eller  
+asbesthaltigt material.
+20 
+AFS 2023:13 
+Kapitel 3 
+Begrepp Betydelse 
+Sysselsatta Med sysselsatta avses, oavsett om  de arbetar heltid eller deltid: 
+– anställda arbetstagare, och 
+– inhyrd arbetskraft, jämför  
+3 kap. 12 § andra stycket  
+arbetsmiljölagen (1977:1160). 
+I fråga om verksamhet utan  
+anställda arbetstagare (jämför 3  
+kap. 5 § arbetsmiljölagen) avses  
+med sysselsatta, oavsett om de  
+arbetar heltid eller deltid: 
+– de personer som driver  
+verksamheten, och 
+– inhyrd arbetskraft. 
+Den aktuella fysiska personens  
+personnummer respektive juridiska  
+personens organisationsnummer  
+avgör vilka personer som ska anses  
+ingå i verksamheten. 
+Tillstånd 
+4 § Arbetsgivaren ska ha tillstånd för att bedriva verksamhet som innebär  hantering av asbest eller asbesthaltigt material. Det finns tre olika typer  av tillstånd 
+1. forskning, utveckling och analys enligt 5 §, 
+2. bearbetning och behandling enligt 6 §, och 
+3. rivning enligt 7 §. 
+Tillstånd ges antingen för en viss tid eller för ett visst arbete. Tillståndet kan  förenas med villkor och får inte överlåtas. Vid beslut om tillstånd kommer  Arbetsmiljöverket att beakta om den sökande tidigare har brutit mot  bestämmelser i dessa föreskrifter.
+21 
+AFS 2023:13 
+Kapitel 3 
+Tillstånd för forskning, utveckling och analys 
+5 § Arbetsgivaren ska ha tillstånd från Arbetsmiljöverket för att hantera  asbest eller asbesthaltigt material för forskning och utveckling samt analys. 
+Den arbetsgivare som bryter mot något eller några av kraven i första stycket  ska betala en sanktionsavgift. I antalet sysselsatta inräknas personer på  verksamhetens samtliga arbetsställen. Det är antalet sysselsatta dagen för  överträdelsen som ska utgöra underlag för beräkningen av avgiften. 
+Lägsta avgiften är 15 000 kronor och högsta avgiften är 150 000 kronor.  För den som har 500 eller fler sysselsatta är avgiften 150 000 kronor.  För den som har färre än 500 sysselsatta ska sanktionsavgiften beräknas  enligt följande: 
+Avgift = 15 000 kronor + (antal sysselsatta – 1) × 271 kronor. Summan ska avrundas nedåt till närmaste hela hundratal. 
+Tillstånd för bearbetning och behandling 
+6 § Arbetsgivaren ska ha tillstånd från Arbetsmiljöverket vid bearbetning  och behandling av asbest eller asbesthaltigt material som redan har  installerats eller tagits i bruk. 
+Tillstånd enligt första stycket behövs inte för att borra hål om följande villkor  är uppfyllda: 
+1. Antalet arbeten omfattar maximalt tre tillfällen per arbetsgivare  och kalenderår. 
+2. Den totala arbetsmängden för arbetet är mindre än en persontimme  per tillfälle. 
+3. En anordning för utsug används och är placerad i direkt anslutning  till håltagningen. 
+Den arbetsgivare som i en eller flera situationer av bearbetning och  behandling bryter mot kraven i denna bestämmelse ska betala en  sanktionsavgift. I antalet sysselsatta inräknas personer på verksamhetens  samtliga arbetsställen. Det är antalet sysselsatta dagen för överträdelsen som  ska utgöra underlag för beräkningen av avgiften.
+22 
+AFS 2023:13 
+Kapitel 3 
+Lägsta avgiften är 15 000 kronor och högsta avgiften är 150 000 kronor. För  den som har 500 eller fler sysselsatta är avgiften 150 000 kronor. För den som  har färre än 500 sysselsatta ska sanktionsavgiften beräknas enligt följande: 
+Avgift = 15 000 kronor + (antal sysselsatta – 1) × 271 kronor. Summan ska avrundas nedåt till närmaste hela hundratal. 
+Tillstånd för rivning 
+7 § Arbetsgivaren ska ha tillstånd från Arbetsmiljöverket vid hantering av  material som innehåller mer än 1 viktprocent asbest vid rivning av 1. en byggnad, 
+2. en byggnadsdel, eller 
+3. en teknisk anordning eller en del av en sådan anordning. 
+Ett sådant tillstånd behövs inte vid demontering av bromsbelägg och andra  friktionselement eller formgjutna packningar som kan demonteras hela. 
+Den arbetsgivare som i en eller flera situationer av rivning bryter mot kraven  i denna bestämmelse ska betala en sanktionsavgift. I antalet sysselsatta  inräknas personer på verksamhetens samtliga arbetsställen. Det är antalet  sysselsatta dagen för överträdelsen som ska utgöra underlag för beräkningen  av avgiften. 
+Lägsta avgiften är 40 000 kronor och högsta avgiften är 400 000 kronor.  För den som har 500 eller fler sysselsatta är avgiften 400 000 kronor.  För den som har färre än 500 sysselsatta ska sanktionsavgiften beräknas  enligt följande: 
+Avgift = 40 000 kronor + (antal sysselsatta – 1) × 721 kronor. Summan ska avrundas nedåt till närmaste hela hundratal. 
+Omprövning av tillstånd 
+8 § Arbetsmiljöverket kan ompröva ett beslut om tillstånd enligt 5 §  första stycket och 6 § första stycket eller 7 § första stycket om det behövs av  säkerhetsskäl eller om den som har fått ett tillstånd bryter mot bestämmelser  i 12 eller 13 §§.
+23 
+AFS 2023:13 
+Kapitel 3 
+Ansökan om tillstånd 
+Forskning, utveckling och analys 
+9 § Arbetsgivare vars arbetstagare ska utföra arbetet ska ansöka om  tillstånd enligt 5 § första stycket hos Arbetsmiljöverket. 
+Ansökan ska innehålla uppgifter om 
+1. adressen till den plats där arbetet ska utföras, 
+2. ändamålet med hanteringen, 
+3. vilken typ av asbest eller asbesthaltigt material som ska hanteras, 4. den beräknade mängden asbest eller asbesthaltigt material som ska  hanteras, 
+5. den tidsperiod ansökan avser, 
+6. den beräknade mängden asbesthaltigt avfall, 
+7. vem som ska transportera bort avfallet, och 
+8. var avfallet slutligt ska tas om hand. 
+Till ansökan ska bifogas 
+1. hanterings- och skyddsinstruktioner för arbetet, 
+2. intyg om asbestutbildning för de som ska leda arbetet och för de  som ska delta i arbetet, och 
+3. ett yttrande över ansökan från arbetstagarnas skyddsombud  alternativt arbetsmiljöombud eller, om sådant inte finns, ett  yttrande från ett regionalt skyddsombud (arbetsmiljöombud). 
+Bearbetning och behandling 
+10 § Den arbetsgivare vars arbetstagare ska utföra arbetet ska ansöka om  tillstånd enligt 6 § första stycket hos Arbetsmiljöverket. 
+Ansökan ska innehålla uppgifter om 
+1. adressen till den plats där arbetet ska utföras, 
+2. arbetsmetoden, 
+3. arbetets omfattning, 
+4. vilken typ av asbesthaltigt material som ska hanteras, 
+5. datum för arbetets början och slut,
+24 
+AFS 2023:13 
+Kapitel 3 
+6. den beräknade mängden asbesthaltigt avfall, 
+7. vem som ska transportera bort avfallet, och 
+8. var avfallet slutligt ska tas omhand. 
+Till ansökan ska bifogas 
+1. hanterings- och skyddsinstruktioner för arbetet, 
+2. intyg om asbestutbildning för de som ska leda och för de som ska  delta i arbetet, och 
+3. ett yttrande över ansökan från arbetstagarnas skyddsombud  (arbetsmiljöombud) eller, om sådant inte finns, ett yttrande från ett  regionalt skyddsombud (arbetsmiljöombud). 
+Rivning 
+11 § Den arbetsgivare vars arbetstagare ska utföra arbetet ska ansöka om  tillstånd enligt 7 § första stycket hos Arbetsmiljöverket. 
+Ansökan ska innehålla 
+1. allmänna hanterings- och skyddsinstruktioner som anger hur  rivningsarbete ska utföras för att förhindra ohälsa, 
+2. intyg om asbestutbildning för de som ska leda och för de som ska  delta i rivningsarbetet, 
+3. intyg om sådana medicinska kontroller som avses i 44 §  (tjänstbarhetsintyg) för de som ska delta i rivningsarbetet, och 4. ett yttrande över ansökan från arbetstagarnas skyddsombud  (arbetsmiljöombud) eller, om sådant inte finns, ett yttrande från ett  regionalt skyddsombud (arbetsmiljöombud). 
+Anmälan om rivning 
+12 § Den arbetsgivare som har fått ett tillstånd enligt 7 § första stycket  får påbörja ett rivningsarbete först när en skriftlig anmälan om rivning har  lämnats in till Arbetsmiljöverket. Anmälan ska lämnas in av den arbetsgivare  vars arbetstagare ska utföra rivningen. Anmälan ska ha kommit in till  Arbetsmiljöverket senast två helgfria vardagar innan rivningen ska påbörjas,  om inte Arbetsmiljöverket har medgivit något annat.
+25 
+AFS 2023:13 
+Kapitel 3 
+Anmälan ska innehålla uppgifter om 
+1. adressen till rivningsobjektet, 
+2. namn och adress till den som har beställt arbetet, 
+3. datum för rivningens början och slut, 
+4. rivningsarbetets art, omfattning och typ av asbesthaltigt material, 5. den beräknade mängden asbesthaltigt avfall, 
+6. vem som ska transportera bort avfallet, och 
+7. var avfallet slutligt ska tas omhand. 
+Handlingar på arbetsplatsen vid rivning 
+13 § Arbetsgivaren ska se till att följande handlingar finns tillgängliga på  den arbetsplats där sådan rivning som anges i 7 § första stycket utförs: 1. Arbetsmiljöverkets beslut om tillstånd. 
+2. Hanterings- och skyddsinstruktioner anpassade till det aktuella  rivningsarbetet. 
+3. Bevis om asbestutbildning för de som leder rivningsarbetet och för  de som deltar i rivningsarbetet. 
+4. Intyg om sådana medicinska kontroller som avses i 44 §  (tjänstbarhetsintyg) för de som deltar i rivningsarbetet. 
+5. Uppgifterna i anmälan enligt 12 § andra stycket. 
+På en plats där arbete som avses i 7 § andra stycket utförs, ska följande  handlingar finnas: 
+1. Hanterings- och skyddsinstruktioner anpassade till det aktuella  arbetet. 
+2. Bevis om asbestutbildning för de som leder arbetet och för de som  deltar i arbetet.
+26 
+AFS 2023:13 
+Kapitel 3 
+Allmänna åtgärder vid arbete med asbest eller  
+asbesthaltigt material 
+Utbildning och kunskaper 
+14 § Arbetsgivaren ska se till att den som leder och den som utför arbete  med asbest eller asbesthaltigt material inom forskning, utveckling och  analys enligt 5 § och bearbetning och behandling enligt 6 § har genomgått  utbildning om asbest och att kunskaperna uppdateras när det behövs.  Utbildningen ska minst omfatta avsnitt om 
+1. asbestens egenskaper, hälsoeffekter och förekomst, 
+2. skyddsåtgärder, 
+3. nödfallsåtgärder, 
+4. handhavande av personlig skyddsutrustning, 
+5. arbetsmetoder, 
+6. kontrollåtgärder, 
+7. avfallshantering, 
+8. saneringsåtgärder, och 
+9. bestämmelser om medicinska kontroller. 
+Undersökning och riskbedömning 
+15 § Innan ett arbete som medför eller kan medföra exponering för  asbesthaltigt damm påbörjas ska arbetsgivaren vidta alla åtgärder som  behövs för att identifiera de material som kan tänkas innehålla asbest. 
+16 § Arbetsgivaren ska i sin undersökning och riskbedömning beakta  risken för exponering för asbesthaltigt damm innan ett arbete i verksamhet  som omfattas av dessa föreskrifter påbörjas. 
+Hanterings- och skyddsinstruktioner 
+17 § Vid arbete som medför eller kan medföra exponering för asbesthaltigt  damm ska arbetsgivaren se till att det finns skriftliga hanterings- och  skyddsinstruktioner som leder till att arbetet kan utföras på ett säkert sätt.  De skriftliga hanterings- och skyddsinstruktionerna ska finnas tillgängliga  på arbetsplatsen.
+27 
+AFS 2023:13 
+Kapitel 3
+Hanterings- och skyddsinstruktionerna ska minst omfatta 
+1. åtgärder för att förhindra dammspridning, 
+2. personlig skyddsutrustning, 
+3. typ av andningsskydd, 
+4. arbetsmetod, 
+5. efterstädning, 
+6. avfallshantering, och 
+7. personlig hygien. 
+Förebyggande av dammspridning 
+18 § Arbetsgivaren ska se till att 
+1. allt arbete med asbest och asbesthaltigt material planeras, ordnas  och utförs så att exponeringen för asbesthaltigt damm blir så låg  som möjligt, 
+2. antalet personer som kan komma att exponeras för asbesthaltigt  damm begränsas till så få personer som möjligt, och 
+3. hänsyn tas till risken för oförutsedd exponering för asbesthaltigt  damm vid planeringen av arbetet. 
+19 § Vid sådan hantering av asbest som anges i 5 och 6 §§ ska arbetsgivaren  se till att platsen där verksamheten bedrivs är klart avgränsad och tydligt  märkt med texten: ”Asbestarbete – Tillträde förbjudet för obehöriga”. 
+20 § Arbetsgivaren ska se till att hytter på maskiner eller fordon som  används i dammande arbete där asbest eller asbesthaltigt material  förekommer har särskild tillförsel av luft som är så fri från luftföroreningar  som möjligt. 
+21 § Arbetsgivaren ska se till att asbesthaltigt material, asbesthaltigt avfall  och emballage som innehållit asbest eller asbesthaltigt material genast tas  tillvara och förvaras i slutna behållare eller på ett annat säkert sätt fram till  slutligt omhändertagande. 
+Till asbesthaltigt material eller avfall räknas även asbestförorenade  skyddskläder och annan personlig skyddsutrustning. 
+22 § Arbetsgivaren ska se till att frånluft från dammsugare eller punktutsug  endast återförs om luften renas så att minst 99,95 procent av det respirabla  asbestdammet avskiljs. 
+28 
+AFS 2023:13 
+Kapitel 3 
+Motsvarande krav på rening gäller frånluft från fläktaggregat som används  för att åstadkomma undertryck i sådan inneslutning som avses i 36 §. 
+Exponeringskontroller 
+23 § Arbetsgivaren ska se till att arbetstagarnas exponering för  asbesthaltigt damm kontrolleras regelbundet, om riskbedömningen  enligt bestämmelserna i 16 § visar att det behövs. Om exponeringen  inte är godtagbar, med hänsyn till det hygieniska gränsvärdet för asbest  enligt Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:14) om  gränsvärden för luftvägsexponering i arbetsmiljön, gäller följande: 
+1. Nödvändiga åtgärder ska omedelbart vidtas för att sänka  exponeringen till en acceptabel nivå. 
+2. Arbetet får inte fortsätta innan åtgärderna har vidtagits. 3. En ny kontroll av exponeringen ska utföras efter att åtgärder har  genomförts. Kontrollen ska ske så snart det är praktiskt möjligt,  dock senast innan arbetet slutförs. 
+Personlig skyddsutrustning och hygien 
+24 § Vid sådan hantering som anges i 6 och 7 §§ ska arbetsgivaren se till att  den som deltar i arbetet använder 
+1. heltäckande och tättslutande skyddskläder med huvudbonad, och 2. andningsskydd som är anpassade till exponeringsförhållandena  och användaren. 
+25 § Arbetsgivaren ska se till att skyddskläder som används i arbete med  asbest eller asbesthaltigt material är dammtäta och utan fickor, slag eller  liknande. 
+Skyddskläder och övrig personlig skyddsutrustning ska hållas åtskilda från  andra arbetskläder och privata kläder. 
+Asbestförorenade skyddskläder får inte tvättas tillsammans med andra  kläder. 
+26 § Arbetsgivaren ska se till att lokaler och utrustning som används vid  arbete med asbest eller asbesthaltigt material hålls väl rengjorda. 
+27 § Arbetsgivaren ska se till att rökning inte sker innanför avgränsat  område där asbest eller asbesthaltigt material hanteras.
+29 
+AFS 2023:13 
+Kapitel 3 
+Märkning 
+28 § Arbetsgivaren ska se till att märka följande med en varningstext som  innehåller ordet ”asbest”: 
+1. Asbesthaltigt avfall. 
+2. Asbestförorenade material. 
+3. Asbestförorenad personlig skyddsutrustning. 
+Den arbetsgivare som inte har märkt en eller flera förpackningar eller  behållare enligt kraven i första stycket ska betala en sanktionsavgift. I antalet  sysselsatta inräknas personer på verksamhetens samtliga arbetsställen. Det  är antalet sysselsatta dagen för överträdelsen som ska utgöra underlag för  beräkningen av avgiften. 
+Lägsta avgiften är 15 000 kronor och högsta avgiften är 150 000 kronor.  För den som har 500 eller fler sysselsatta är avgiften 150 000 kronor.  För den som har färre än 500 sysselsatta ska sanktionsavgiften beräknas  enligt följande: 
+Avgift = 15 000 kronor + (antal sysselsatta – 1) × 271 kronor. Summan ska avrundas nedåt till närmaste hela hundratal. 
+29 § Arbetsgivaren ska se till att asbesthaltigt material som kapslas in för  att förebygga spridning av asbesthaltigt damm är märkt med följande text:  ”Inkapslad asbest”. 
+Särskilda åtgärder vid arbete med asbest eller asbesthaltigt  material i samband med rivning 
+30 § Vid rivning av en byggnad, en byggnadsdel, en teknisk anordning  eller en del av en sådan anordning som innehåller material där asbest  ingår med en halt av mer än 1 viktprocent enligt 7 § gäller, utöver övriga  bestämmelser i detta kapitel, även särskilda åtgärder enligt bestämmelserna i  31–43 §§. 
+Utbildning och kunskaper vid rivning 
+31 § Arbetsgivaren ska se till att den som leder arbete och den som utför  arbete med rivning av en byggnad, en byggnadsdel, en teknisk anordning  eller en del av en sådan anordning som innehåller asbest eller asbesthaltigt 
+30 
+AFS 2023:13 
+Kapitel 3
+material enligt 7 § har genomgått en särskild utbildning om asbest.  Utbildningen ska minst innehålla avsnitt om 
+1. asbestens egenskaper, hälsoeffekter och förekomst, 
+2. skyddsåtgärder, 
+3. nödfallsåtgärder, 
+4. handhavande av personlig skyddsutrustning, 
+5. arbetsmetoder, 
+6. kontrollåtgärder, 
+7. avfallshantering, 
+8. saneringsåtgärder, 
+9. bestämmelser om medicinska kontroller, och 
+10. rivningsteknik med praktiska tillämpningsövningar. 
+De personer som avses i första stycket ska därefter, minst vart femte år,  gå en kompletterande utbildning om asbest. Utbildningen ska bestå av  kunskapsrepetition och information om aktuellt kunskapsläge. 
+Utbildningen enligt första stycket uppfyller även utbildningskravet för  sådan hantering som anges i 6 §. 
+Arbetsgivaren ska kunna uppvisa giltiga utbildningsbevis för de som avses i  första och andra stycket. 
+Den arbetsgivare som sysselsätter personer som avses i första eller andra  stycket och som inte kan uppvisa giltiga utbildningsbevis ska betala  sanktionsavgift om 50 000 kronor för varje sådan person. 
+Undersökning vid rivning 
+32 § När det finns minsta tveksamhet om en byggnad eller en teknisk  anordning innehåller asbest eller asbesthaltigt material, ska arbetsgivaren  begära ett skriftligt klarläggande om detta från byggnadens eller den  tekniska anordningens ägare. 
+Hanterings- och skyddsinstruktioner vid rivning 
+33 § Arbetsgivaren ska se till att de allmänna hanterings- och  skyddsinstruktioner som har lämnats in till Arbetsmiljöverket enligt  bestämmelserna i 11 § anpassas till det aktuella rivningsarbetet innan detta  arbete påbörjas. 
+31 
+AFS 2023:13 
+Kapitel 3 
+Förebyggande av dammspridning vid rivning 
+34 § Arbetsgivaren ska se till att de delar av en byggnad eller en teknisk  anordning som innehåller asbest eller asbesthaltigt material, så långt som  det är möjligt med hänsyn till risken för exponering för asbesthaltigt damm,  avlägsnas innan rivning av de övriga delarna av byggnaden påbörjas. 
+35 § Arbetsgivaren ska se till att en avgränsning görs av den arbetsplats  där rivning av asbest eller asbesthaltigt material utförs. Arbetsplatsen ska  vara tydligt markerad med texten: ”Varning – Rivning – Asbest – Tillträde  förbjudet för obehöriga”. 
+36 § Vid rivningsarbete inomhus ska arbetsgivaren se till att 1. platsen för rivningen är innesluten, 
+2. inneslutningen har undertryck så att spridning av asbesthaltigt  damm till angränsande lokaler eller andra utrymmen förhindras, 3. undertrycket i inneslutningen kan kontrolleras, och 
+4. tillträde till och utträde från det inneslutna området bara kan ske  genom en luftsluss. 
+Bestämmelserna i första stycket om kravet på luftsluss gäller inte när  spridning av asbesthaltigt damm förhindras genom en arbetsmetod som  innebär att rivningen utförs från inneslutningens utsida. 
+37 § Arbetsgivaren ska se till att handhållna och mobila maskiner som  används vid rivningsarbete är kopplade till en anordning som är avsedd för  utsugning av asbesthaltigt damm. 
+Ensamarbete vid rivning 
+38 § Vid ensamarbete innanför en sådan inneslutning med luftsluss som  avses i 36 § första stycket ska arbetsgivaren särskilt uppmärksamma den  ensamarbetandes behov av beredskap vid olycksfall. 
+Personlig skyddsutrustning och hygien vid rivning 
+39 § Vid rivningsarbete innanför en sådan inneslutning med luftsluss  som avses i 36 § första stycket ska arbetsgivaren se till att andningsskydd  som består av tryckluftsapparat med säkerhetstryck eller annan likvärdig  utrustning används.
+32 
+AFS 2023:13 
+Kapitel 3 
+40 § Arbetsgivaren ska se till att arbetstagare varje gång som de behöver  lämna ett inneslutet rivningsområde, dammsuger skyddskläderna och tar av  dem i ett särskilt utrymme i den luftsluss som avses i 36 § första stycket.  Detta ska ske innan arbetstagaren tar av andningsskyddet. Andra  arbetskläder och privata kläder får inte tas in i detta utrymme. 
+41 § Arbetsgivaren ska se till att andningsskyddens funktion kontrolleras  före varje användning. 
+All skyddsutrustning ska rengöras noga efter varje användning. 
+42 § Arbetsgivaren ska se till att 
+1. anordning för handtvätt finns i sådan luftsluss som avses i 36 §  första stycket, 
+2. dusch med varmt och kallt vatten samt toalett finns lätt tillgängliga  intill arbetsplatsen, 
+3. de som deltar i arbetet har möjlighet att tvätta sig före måltid och  duscha efter avslutat arbete, och 
+4. det finns tillgång till områden på eller intill arbetsplatsen där det  går att äta och dricka utan risk för exponering för asbesthaltigt damm. 
+43 § Arbetsgivaren ska se till att följande åtgärder vidtas efter avslutat  rivningsarbete: 
+1. Arbetsplatsen ska snarast rengöras från asbest eller asbesthaltigt  material. 
+2. Asbesthaltigt damm som har avsatts på ytor ska i första hand  dammsugas och tvättas bort. 
+3. Luftburet asbesthaltigt damm ska avlägsnas genom tillräckligt lång  efterventilering. 
+4. Den inneslutning med undertryck och luftsluss som avses i 36 §  första stycket får inte tas bort, och annat arbete får inte påbörjas på  platsen, innan rengöringen är avslutad och en kontroll visar att det  inte finns risk för exponering för asbesthaltigt damm.
+33 
+AFS 2023:13 
+Kapitel 3
+Medicinska kontroller 
+44 § I Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:15)  om medicinska kontroller i arbetslivet finns krav på att arbetsgivaren ska  anordna medicinska kontroller med bedömning för tjänstbarhetsintyg för de  arbetstagare som kommer att sysselsättas eller sysselsätts i 1. arbete enligt 5 §, när det anges i tillståndet, 
+2. arbete enligt 6 §, när det anges i tillståndet, eller om arbetet kan  medföra att arbetstagaren exponeras för asbesthaltigt damm i mer  än 50 timmar per kalenderår, 
+3. arbete enligt 7 §, eller 
+4. annat arbete än det som avses i 5–7 §§ och som medför att  arbetstagaren exponeras för asbesthaltigt damm i mer än 50 timmar  per kalenderår. 
+Bestämmelser om sanktionsavgifter för den arbetsgivare som sysselsätter  arbetstagare som inte har ett tjänstbarhetsintyg finns i Arbetsmiljöverkets  föreskrifter och allmänna råd (AFS 2023:15) om medicinska kontroller i  arbetslivet. 
+Exponeringsregister 
+45 § Arbetsgivaren ska föra ett exponeringsregister över de arbetstagare  som omfattas av bestämmelserna i 44 § första stycket vad avser medicinska  kontroller. Exponeringsregistret ska innehålla de uppgifter som anges i  Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:10) om risker  i arbetsmiljön, i kapitlet om ytterligare bestämmelser för vissa grupper av  kemiska ämnen, 20 §. 
+34 
+AFS 2023:13 
+Kapitel 4 
+4 kap. Berg- och gruvarbete 
+Då gäller föreskrifterna 
+1 § Bestämmelserna i detta kapitel reglerar all verksamhet där det sker  berg- och gruvarbete och prospektering efter malm och mineral. 
+Berg- och gruvarbete kan omfatta 
+1. tillredning och brytning av malmer och industrimineral i gruvor,  dagbrott, stenbrott och bergtag, 
+2. brytning av berg genom borrning, sprängning eller mekanisk  fragmentering, 
+3. bergbesiktning, skrotning och olika förstärkningsarbeten som  bergbultning, nätning och injektering, 
+4. betongsprutning, 
+5. undersökningsborrning och diamantborrning, 
+6. lastning, transport och deposition av det brutna berget, 7. krossning och siktning av bergmassor, 
+8. drivning av tunnlar, schakt och bergrum, och 
+9. installations-, service- och underhållsarbete i icke färdigställda  bergutrymmen. 
+Bestämmelserna i detta kapitel gäller inte arbete i färdigställda och inredda  bergrum och berganläggningar. 
+För prospekteringsarbeten som inte är berg- eller gruvarbete gäller endast  27 § i detta kapitel. 
+Vem föreskrifterna riktar sig till 
+2 § Arbetsgivaren ansvarar för att föreskrifterna i detta kapitel följs.  Med arbetsgivare likställs den som hyr in arbetskraft. Den som är  samordningsansvarig omfattas av 54 §. 
+Av 3 kap. 5 § andra stycket arbetsmiljölagen (1977:1160) följer att den som  ensam eller gemensamt med familjemedlem driver yrkesmässig verksamhet  utan anställda omfattas av bestämmelserna om såväl arbetsgivare som  arbetstagare i detta kapitel.
+35 
+AFS 2023:13 
+Kapitel 4 
+Av 1 och 3 kap. arbetsmiljölagen följer att föreskrifterna i detta kapitel  under vissa omständigheter kan medföra skyldigheter även för andra än  arbetsgivare.  
+Definitioner 
+3 § I detta kapitel har följande begrepp dessa betydelser. 
+Begrepp Betydelse 
+Autonom maskin Fordon eller maskin som kan  användas i arbete utan en operatör  
+och agerar utifrån förprogrammerade  
+villkor för den tänkta tillämpningen. 
+Deflagration Förbränning där den kemiska  omsättningen sker i en hastighet  
+som underskrider ljudhastigheten  
+i mediet. I allmänhet sker denna  
+förbränning på ytan av kroppar  
+eller partiklar. 
+Detonation Förbränning där den kemiska  omsättningen sker i en hastighet  
+som överskrider ljudhastigheten  
+i mediet. Vanligen sker denna  
+förbränning inuti massan efter  
+initiering av en stötvåg. 
+Dola Dold laddning av en odetonerad  eller odeflagrerad explosiv vara som  
+återfinns i sprängmassor eller fast  
+berg, efter det att sprängning har  
+genomförts. Dolor kan uppträda  
+även i betong, jord, mark, metall  
+och dylikt där sprängning tidigare  
+förekommit. 
+Flyktfilter Partikel- och/eller gasfilter som  används av en arbetstagare när  
+arbetstagaren räddar sig undan en  
+brand eller motsvarande som avger  
+farliga partiklar och rökgaser.
+36 
+AFS 2023:13 
+Kapitel 4
+Begrepp Betydelse 
+Hålavvikelse Avvikelsen mellan ett borrhåls  planerade utformning och den  
+utformning som uppstått i samband  
+med borrning. 
+Pall Del av ett berg som ska sönderdelas. 
+Prospektering Undersökning av berggrunden  med syfte att finna utvinningsbara  
+fyndigheter inför framtida berg 
+och gruvarbete. 
+Räddningskammare Utrymme som används för att  rädda personer från farliga  
+situationer. Exempel på detta kan  
+vara bränder eller andra oavsiktliga  
+händelser. Räddningskammare kan  
+vara fasta eller mobila. 
+Skrotning Nedtagning av lösa stycken från  berg som sönderdelats. Kan ske  
+både med maskin och manuellt av  
+arbetstagare. 
+Stuff/Ortgavel Bergvägg som finns längst inne i  en tunnel eller ort som är under  
+framdrivning. 
+37 
+AFS 2023:13 
+Kapitel 4 
+Begrepp Betydelse 
+Sysselsatta Med sysselsatta avses, oavsett om  de arbetar heltid eller deltid: 
+– anställda arbetstagare, och 
+– inhyrd arbetskraft, jämför  
+3 kap. 12 § andra stycket  
+arbetsmiljölagen (1977:1160). 
+I fråga om verksamhet utan  
+anställda arbetstagare (jämför  
+3 kap. 5 § arbetsmiljölagen) avses  
+med sysselsatta, oavsett om de  
+arbetar heltid eller deltid: 
+– de personer som driver  
+verksamheten, och 
+– inhyrd arbetskraft. 
+Den aktuella fysiska personens  
+personnummer respektive juridiska  
+personens organisationsnummer  
+avgör vilka personer som ska anses  
+ingå i verksamheten.  
+Undersökning och riskbedömning 
+4 § I sin undersökning och riskbedömning av bergarbetet eller gruvarbetet  ska arbetsgivaren särskilt beakta 
+1. geologiska förhållanden, 
+2. bergtekniska förhållanden, 
+3. bergmekaniska förhållanden, och 
+4. andra förhållanden i den omfattning som behövs för att kunna göra  en planering som gör det fortsatta arbetet säkert. 
+Riskbedömningen ska vara skriftlig.
+38 
+AFS 2023:13 
+Kapitel 4 
+Om arbetet berör områden under jord som har höga bergspänningar  ska undersökningen och riskbedömningen även innefatta en analys av  bergspänningarna. Detta för att ge underlag för att planera en lämplig profil  och storlek på orten, tunneln eller annat bergutrymme. 
+Åtgärder 
+Allmänt 
+5 § Arbetsgivaren ska välja arbetsmetoder och utrustning som förebygger  ohälsa och olycksfall orsakade exempelvis av 
+1. luftföroreningar, 
+2. syrebrist, 
+3. buller, 
+4. vibrationer, 
+5. otillräcklig belysning, eller 
+6. olämpliga arbetsställningar och arbetsrörelser under arbete. 
+I möjligaste mån ska motorer som inte avger förbränningsgaser till  omgivningen användas under jord. 
+6 § Arbetsgivaren ska se till att berg- och gruvarbetet vid projektering  och utförande tidsplaneras så att allt sådant arbete kan utföras på ett  omsorgsfullt och säkert sätt. 
+7 § Arbetsgivaren ska se till att de som arbetar med berg- och gruvarbete  har tillräckliga kunskaper för att kunna undvika ohälsa och olycksfall. Det  innefattar tillräckliga kunskaper om 
+1. utrymning, 
+2. farliga områden, 
+3. lokala trafik- och arbetsmiljöregler, och 
+4. andra förhållanden såsom dolor och stenfall på arbetsstället. 
+8 § Arbetsgivaren ska vid planering och utförande av arbetet beakta  möjligheten för arbetstagarna att ha kontakt med andra människor.  Arbetsgivaren ska se till att arbetstagarna regelbundet har personlig kontakt  eller annan kommunikation med andra människor. Om personlig kontakt  inte är möjlig ska trådlös kommunikation finnas.
+39 
+AFS 2023:13 
+Kapitel 4
+9 § Arbetsgivaren ska se till att skyddshjälm med hakrem, skyddsskor med  skyddståhätta och spiktrampskydd samt varselklädsel används, om inte  riskbedömningen visar att det är uppenbart onödigt. Annan personlig skydds utrustning ska användas i den utsträckning som arbetsförhållandena kräver. 
+Den som arbetar under jord ska medföra bärbar lampa. 
+10 § Arbetsgivaren ska se till att det finns markeringar och tillräcklig  belysning på platser där personer regelbundet uppehåller sig och där det  under mörker finns risk för att fordon kolliderar, personer störtar ned i  schakt, faller till lägre nivå eller där det finns risk för andra händelser som  kan orsaka olycksfall. 
+Ventilation 
+11 § Arbetsgivaren ska bedöma och dokumentera behovet av ventilation  innan arbetet påbörjas. Om ventilation behövs ska arbetsgivaren planera och  dokumentera ventilationssystemets utformning innan arbetet påbörjas. 
+Ventilationssystemet ska dimensioneras så att luftkvaliteten i  vistelseområdet blir tillfredsställande. Huvudfläktarnas luftflöde och tryck  ska mätas kontinuerligt. Larm ska finnas som indikerar oförutsedda stopp i  fläktsystemet. 
+Fjärrstyrning, arbetsutrustning, fordon och maskiner Fjärrstyrning, automation och autonomitet 
+12 § Arbetsgivaren ska hantera och underhålla styrsystem för fjärrstyrda,  automatiska och autonoma fordon, maskiner och utrustningar så att  funktionerna som avser personsäkerhet upprätthålls. 
+13 § Vid olycksfall eller tillbud som misstänks bero på felfunktion i  styrsystemet ska arbetsgivaren göra en särskild utredning för att finna  felfunktionen. Utredningen ska dokumenteras skriftligt och åtgärder vidtas  för att förebygga framtida olycksfall eller tillbud. 
+14 § När fjärrstyrda, automatiska eller autonoma fordon, maskiner eller  utrustningar är i bruk inom ett arbetsställe, ska arbetsgivaren se till att  området där denna typ av utrustning används är avstängt för obehöriga. 
+40 
+AFS 2023:13 
+Kapitel 4
+Arbetsutrustning, fordon och maskiner 
+15 § Arbetsgivaren ska se till att fortlöpande undersökningar görs av  dieselmotorer som regelbundet används under jord beträffande avgasernas  halter av kolmonoxid och partiklar (svärtning) och vid behov justera  motorerna. Motorerna ska även undersökas, åtgärdas och hållas rena för att  minska brandrisken. 
+16 § Arbetsgivaren ska se till att bensin, etanol eller gas inte används som  bränsle för förbränningsmotorer under jord. 
+Utryckningsfordon får vara bensin-, etanol- eller gasdrivna. 
+17 § Arbetsgivaren ska se till att det i fordon och maskiner som nyttjas  under jord finns tillräckligt många flyktfilter för det antal personer som kan  transporteras i fordonet eller maskinen. 
+Flyktfilter ska förvaras på ett sådant sätt att de inte skadas, är lättåtkomliga  samt hålls rena och funktionsdugliga. Flyktfilter kan även vara personliga. 
+18 § Arbetsgivaren ska se till att personer bara transporteras på särskilda  passagerarplatser i fordon eller maskiner. 
+19 § Arbetsgivaren ska se till att personer som arbetar med fordon eller  maskiner skyddas mot fallande sten på arbetsställen som inte säkrats  mot stenfall. 
+20 § Arbetsgivaren ska se till att fordon som används under jord har  belysning med för ändamålet tillräcklig ljusstyrka. 
+21 § Arbetsgivaren ska se till att operatörer av arbetsutrustning, fordon  och maskiner som används i berg- och gruvarbete är utbildade för uppgiften  att använda arbetsutrustningen, fordonen och maskinerna i dessa miljöer.  Utbildningen ska vara dokumenterad. 
+Transportvägar och tippställen 
+22 § Arbetsgivaren ska se till att det på arbetsställen som omfattas av dessa  föreskrifter och där fordonstrafik förekommer finns trafikregler för att främja  trafiksäkerheten. 
+41 
+AFS 2023:13 
+Kapitel 4
+23 § Arbetsgivaren ska se till att utrymmen under jord som är trafikerade  av fordon och maskiner är tillräckligt stora för den trafik som förekommer  och utformade så att riskerna för kollision, påkörning, vältning eller  nedstörtning minimeras. 
+Där gångtrafik regelbundet förekommer ska det normalt finnas ett särskilt  utrymme för de gående. Utrymmet ska minst vara 1,0 meter brett och 2,1  meter högt. Om detta inte går att ordna, ska särskilda åtgärder vidtas för att  skydda de gående. 
+24 § Arbetsgivaren ska se till att vägbanor under och ovan jord håller god  standard. Där det finns risk för att fordon eller maskiner störtar ned eller  välter ska effektiva förebyggande skyddsåtgärder vidtas. 
+25 § Arbetsgivaren ska se till att tillfälliga tillträdesvägar till arbetsställen  ovan jord där berg- eller gruvarbete förekommer är så utförda och beskaffade  att de kan användas för trafik med borraggregat, andra maskiner och fordon  utan risk för föraren. 
+26 § Arbetsgivaren ska se till att det finns en barriär vid tippställen som  förhindrar att fordon eller maskiner kör utför slänten vid tippstället. 
+Allmänna råd 
+Med tippställen avses upplagstippar, störtschakt och liknande. På  tippställen med höga slänter är det lämpligt att anordna ett stopp vars  höjd motsvarar minst halva hjuldiametern hos fordonet som tippar. Kan  inte detta genomföras är det lämpligt att tippa en bit från slänten varefter  en maskin med schaktblad knuffar tippmassorna nedför slänten. 
+Prospektering och geotekniska arbeten 
+27 § Vid prospekteringsarbeten, ovan och under jord, samt vid geotekniska  arbeten som kan innebära risker för personskador, ska arbetsgivaren se till  att det finns kommunikationsmedel tillgängliga som medger tillförlitlig  kontakt med de arbetstagare som är sysselsatta med sådant arbete. 
+Radon 
+28 § Arbetsgivaren ska eftersträva låg radonhalt på alla arbetsställen  under jord. 
+42 
+AFS 2023:13 
+Kapitel 4
+Vid arbete under jord ska radonhalten bestämmas genom mätningar.  Mätningar av radonhalten ska ske regelbundet, dock minst en gång per år. 
+Radonhalten ska bestämmas så snart nytt bergutrymme skapats eller vid  ändrade förhållanden som kan påverka radonhalten. 
+Den arbetsgivare som i strid med kraven i andra stycket inte genomför  mätning ska betala en sanktionsavgift. I antalet sysselsatta inräknas personer  på verksamhetens samtliga arbetsställen. Det är antalet sysselsatta dagen för  överträdelsen som ska utgöra underlag för beräkningen av avgiften. 
+Lägsta avgiften är 40 000 kronor och högsta avgiften är 400 000 kronor.  För den som har 500 eller fler sysselsatta är avgiften 400 000 kronor.  För den som har färre än 500 sysselsatta ska sanktionsavgiften beräknas  enligt följande: 
+Avgift = 40 000 kronor + (antal sysselsatta – 1) × 721 kronor. Summan ska avrundas nedåt till närmaste hela hundratal. 
+Utrymning, undsättning och brandskydd 
+29 § Arbetsgivaren ska se till att det vid varje arbetsställe som omfattas av  dessa föreskrifter finns utrymningslarm vid inträffad brand, inträffat ras  eller annan seismisk händelse samt vid utsläpp av skadliga gaser. 
+30 § Arbetsgivaren ska se till att det vid varje arbetsställe under jord finns  minst två av varandra oberoende utrymningsvägar. Om detta inte går att  ordna ska åtgärder vidtas som gör säker undsättning eller utrymning möjlig.  Mobila eller fasta räddningskammare ska finnas där så behövs. 
+Utrymningsvägarna får inte vara blockerade och ska vara tydligt markerade. 
+Allmänna råd 
+Åtgärder för säker undsättning eller utrymning kan till exempel vara att 1. installera räddningskammare, 
+2. hålla utrustning tillgänglig som ger tillgång till andningsluft, 3. utrusta fordon, elanläggningar och materialupplag med fasta  automatiska brandbekämpningsanordningar, och 
+4. använda ledningsmateriel bestående av svårantändligt material. 
+43 
+AFS 2023:13 
+Kapitel 4
+31 § Arbetsgivaren ska se till att det finns rutiner för åtgärder vid  olyckshändelser på arbetsställen under jord, samt för gruvor, bergtag,  dagbrott och stenbrott. 
+Rutinerna ska vara skriftliga, tillgängliga, och uppdateras vid förändringar  på arbetsstället. 
+32 § Arbetsgivaren ska se till att arbetstagarna övar utrymning av  arbetsställen under jord regelbundet och minst en gång per år. 
+33 § Arbetsgivaren ska se till att uppgifter om hur många personer som  befinner sig under jord, och var dessa befinner sig, finns tillgängliga och är  kontinuerligt uppdaterade så att man kan lokalisera eventuella nödställda  och genomföra räddningsåtgärder. 
+34 § På arbetsställen under jord ska arbetsgivaren se till att  brandbelastningen är så låg som möjligt, det vill säga att mängden föremål  eller andra faktorer som kan bidra till att öka eller sprida en brand är så låg  som möjligt. 
+Brandfarliga och explosiva varor ska hanteras och förvaras så att risken för  brand eller explosion minimeras. 
+35 § Arbetsgivaren ska se till att installationer av ledningar för tryckluft,  vätska eller elektricitet är utförda så att olycksfall förebyggs vid eventuella  skador eller brott på ledningarna. 
+36 § Arbetsgivaren ska vidta sådana åtgärder under jord att bränder kan  bekämpas snabbt och effektivt och att spridning av brandgaser effektivt  förebyggs eller kontrolleras. 
+Brandbekämpningsutrustning, inklusive handbrandsläckare, ska finnas på  motordrivna fordon och maskiner. 
+Bergarbete 
+Borrning i berg 
+37 § Vid bergborrning ska arbetsgivaren se till att uppkomst och spridning  av damm förebyggs. 
+38 § Arbetsgivaren ska vidta åtgärder som förebygger risken för att någon  borrar i dolor. Bergytan ska rensas noggrant innan borrning av nya hål påbörjas. 
+44 
+AFS 2023:13 
+Kapitel 4
+39 § Arbetsgivaren ska se till att bergborraggregat på lutande underlag  förankras om det finns risk för att aggregatet börjar glida. Om aggregatet ska  förflyttas på ett sådant underlag ska förflyttningen kunna genomföras utan  risk för operatören. 
+40 § Arbetsgivaren ska se till att det bara i undantagsfall vistas någon  annan än operatören intill aggregatet, vid borrning med bergborraggregat.  Vid horisontell eller uppåtriktad borrning får ingen vistas framför aggregatet  under drift. 
+41 § Arbetsgivaren ska se till att åtgärder vidtas så att den som arbetar på  manöverplatsen till bergborraggregatet skyddas mot fallande sten och mot  stenkastning eller splitter orsakade av en påborrad dola som detonerar eller  deflagrerar. 
+42 § När en pall, belägen ovan jord, har en pallhöjd som överstiger tio  meter ska arbetsgivaren se till att hålavvikelsen i borrhålen i de två främre  hålraderna normalt kontrolleras. Kontrollen ska utföras på ett sådant sätt  att den ger kännedom om den faktiska försättningen för varje borrhål i  dessa hålrader. 
+Allmänna råd 
+Inhomogeniteter i bergmassan, det vill säga sprickor, glidytor och  bergarter med olika egenskaper, liksom borrets egenrotation medför  att hålavvikelser ofta uppkommer även vid ringa borrhålsdjup. Det är  därför av betydelse att den faktiska försättningen är känd vid de främre  hålraderna så att mängden sprängämne kan anpassas till det faktiska  behovet. För stor laddning i förhållande till försättningen kan vid  sprängningen medföra okontrollerad stenkastning med flera hundra  meters kastlängd med uppenbara risker för personskador. Det innebär  att inmätning (skanning) av pallens frontyta normalt kan behöva göras.  Om pallens hela frontyta är täckt av bergmassor kan inmätning eller  skanning uteslutas för att förebygga stenkastning. 
+43 § Arbetsgivaren ska vidta lämpliga skyddsåtgärder där det finns risk för  personskador vid fall över pallkant. 
+45 
+AFS 2023:13 
+Kapitel 4
+Skuthantering, krossning och mekanisk demolering av berg 44 § När en hydraulhammare eller annan utrustning används, för att  sönderdela större stenar som är oönskade (skut) eller fast bergyta, ska  arbetsgivaren vidta åtgärder för att skydda de som arbetar från damm  och detonerande eller deflagerande dolor samt förhindra att de träffas  av stenkastning. 
+45 § Vid krossning av berg ska arbetsgivaren se till att uppkomst och  spridning av damm förebyggs. 
+46 § Arbetsgivaren ska vidta åtgärder så att den som arbetar på eller intill  krossanläggningen skyddas mot stenkastning eller splitter orsakade av en  detonerande eller deflagrerande dola. 
+Lastning av berg och annat material 
+47 § Arbetsgivaren ska se till att berg och annat material hanteras så att  uppkomst av vattenlås eller valv (häng) av material motverkas. Om sådana  misstänks ska det riskfyllda området utrymmas. Utlastning eller dränering  ska därefter ske från en säker plats. 
+Allmänna råd 
+Vattenlås kan uppstå då vatten ansamlas i schakt eller bergrum där  dräneringen är otillräcklig. Då vattnets vikt överskrider hållfastheten  i ”proppen” brister denna och ett okontrollerat flöde uppstår.  Valvbildning eller häng kan uppstå i bergschakt, särskilt om schakten är  för trånga eller om alltför grovstyckigt berg eller skräp tippas i schaktet.  Att ta ned sådana valv eller häng kräver stor kunskap och försiktighet. 
+48 § Arbetsgivaren ska se till att åtgärder vidtas vid maskinell lastning av  sprängt berg så att maskinoperatören skyddas mot stenkastning eller splitter  från en detonerande eller deflagrerande dola. 
+Bergbesiktning, skrotning och bergförstärkning 
+49 § Arbetsgivaren ska se till att bergbesiktning, skrotning och  bergförstärkning samt efterkontroll utförs efter sprängning i den omfattning  som behövs för att hindra stenfall och ras. Vid behov ska tak och väggar  förstärkas ända fram till stuffen (ortgaveln) efter varje sprängning. 
+Mekaniserad skrotning ska alltid eftersträvas. Under arbete med  skrotaggregat ska operatören skyddas mot fallande sten. 
+46 
+AFS 2023:13 
+Kapitel 4
+Vid bergbesiktning och vid manuell skrotning ska berget vara rengjort och  väl belyst och arbetsstället fritt från störande buller. 
+50 § Arbetsgivaren ska se till att en eller flera personer med ansvar för  bergbesiktning, skrotning och bergförstärkning utses och ansvarsområden  för dessa anges. Detta gäller inte arbetsställen ovan jord, om risken för  personskador på grund av fallande sten är liten. 
+Dessa utsedda personer ska utföra bergbesiktning, skrotning och  bergförstärkning inom sitt ansvarsområde. Om det finns risk för fallande  sten eller ras ska området stängas av till dess att risken undanröjts. 
+De ansvariga ska ha erfarenhet av bergbesiktning och skrotningsarbete och  därutöver kunskaper i bergförstärkning. 
+Manuell skrotning ska utföras av eller tillsammans med en person som har  erfarenhet av arbete med skrotning och bergförstärkning. 
+Underhåll och besiktning av bergutrymme 
+51 § Innan ett bergutrymme som omfattas av dessa föreskrifter tas i  bruk ska arbetsgivaren se till att bergbesiktning utförs. Återkommande  besiktning ska sedan utföras med tidsintervall som bestäms utifrån resultatet  från föregående besiktning. Vid behov ska bergförstärkning eller andra  skadeförebyggande åtgärder snarast vidtas. 
+Gruvhissar 
+52 § Arbetsgivaren ska se till att lindrivna gruvspel avsedda för berg- eller  personbefordran, gruvhissar, räddningshissar och schakthängställningar är  installerade och utförda så att de kan användas med betryggande säkerhet. 
+Gravida arbetstagare 
+53 § Bestämmelser om gravida arbetstagare finns i Arbetsmiljöverkets  föreskrifter och allmänna råd (AFS 2023:2) om planering och organisering av  arbetsmiljöarbete – grundläggande skyldigheter för dig med arbetsgivaransvar,  i kapitlet om gravida, nyförlösta och ammande. 
+47 
+AFS 2023:13 
+Kapitel 4
+Samordning mellan flera arbetsgivare 
+54 § Den som är samordningsansvarig enligt 3 kap. 7 d § arbetsmiljölagen  (1977:1160) på ett arbetsställe som omfattas av dessa föreskrifter ska upprätta  ett särskilt dokument för samordningen. 
+Den samordningsansvarige som inte upprättar ett särskilt dokument för  samordningen enligt vad som föreskrivs i denna bestämmelse ska betala  sanktionsavgift. I antalet sysselsatta inräknas personer på verksamhetens  samtliga arbetsställen. Det är antalet sysselsatta dagen för överträdelsen som  ska utgöra underlag för beräkningen av avgiften. 
+Lägsta avgiften är 5 000 kronor och högsta avgiften är 50 000 kronor.  För den som har 500 eller fler sysselsatta är avgiften 50 000 kronor.  För den som har färre än 500 sysselsatta ska sanktionsavgiften beräknas  enligt följande: 
+Avgift = 5 000 kronor + (antal sysselsatta – 1) × 90 kronor. 
+Summan ska avrundas nedåt till närmaste hela hundratal. 
+48 
+AFS 2023:13 
+Kapitel 5
+5 kap. Byggnads- och anläggningsarbete 
+Då gäller föreskrifterna 
+1 § Bestämmelserna i detta kapitel reglerar planering, projektering och  utförande av byggnads- eller anläggningsarbeten. 
+Exempel på byggnads- och anläggningsarbete är 
+1. schaktning, 
+2. markarbete, 
+3. anläggningsarbete, 
+4. byggnadsarbete, 
+5. montering och nedmontering av prefabricerade element, 6. inredning eller installation av utrustning, 
+7. ändringar, 
+8. renovering, 
+9. reparationer, 
+10. nedmontering, 
+11. rivning, 
+12. löpande underhåll, 
+13. periodiskt underhåll – måleri- och rengöringsarbeten, 14. dränering, och 
+15. sanering. 
+Bergsprängning i stenbrott eller under brytning i gruva räknas inte som  byggnads- eller anläggningsarbete. Det gör inte heller montering, underhåll  eller nedmontering av en fabriks processutrustning eller arbetsutrustning  eller installationer som hör till utrustningen. 
+Allmänna råd 
+Byggnads- och anläggningsarbeten kan vara alla arbeten som behövs  för att uppföra, underhålla, ändra eller riva en byggnad eller en  annan anläggning. Även arbeten som behövs för att byggnads- och  anläggningsarbetena ska fungera omfattas av föreskrifterna, till  exempel etableringsarbeten, uppförande av ställningar och montering  av lyftanordningar. 
+49 
+AFS 2023:13 
+Kapitel 5
+Som schaktning räknas exempelvis grävning och bergsprängning för  husgrunder eller anläggningar. Till markarbete hör grundförstärkning,  bärlager och ytskikt, rörläggning i mark med mera. Anläggningsarbete  är bland annat arbete med vägar, spår, ledningar, kraftverk eller parker.  Byggnadsarbete kan vara exempelvis trä-, betong- eller murningsarbeten. 
+Till installation av utrustning räknas arbete med utrustning som hör till  en byggnad eller en annan anläggning och som behövs för att den ska  fungera. Exempel på sådan utrustning är installationer för värme och  ventilation, belysning, el samt vatten och sanitet till personalutrymmen.  
+Trots att arbete med en fabriks processutrustning inte räknas som  byggnads- eller anläggningsarbete omfattas ändå de mer typiska  byggnads- och anläggningsarbetena av föreskrifterna. Exempel på  sådana arbeten är schaktning, betongarbeten för fundament, arbeten  med rörbryggor och stöd för kabelstegar. 
+Vid reparationer och vid löpande eller periodiskt underhåll görs ofta  något slags ingrepp i byggnaden eller anläggningen. Ommålning och  rengöring inför ommålning, skrapning av grusvägar och reparation  av asfaltbeläggning är också exempel på underhåll. Driften av en  byggnad eller anläggning räknas däremot inte som byggnads- eller  anläggningsarbete, förutom när sådana arbeten ingår som en del av ett  byggprojekt. Exempel på drift är städning, fönsterputsning, sotning,  rengöring av ventilationssystem och byte av filter, gräsklippning, röjning  av träd och grenar i ledningsgator samt renhållning av vägar och gator. 
+Vem föreskrifterna riktar sig till 
+2 § Arbetsgivaren ansvarar för att bestämmelserna i detta kapitel följs. Med  arbetsgivare likställs den som hyr in arbetskraft. 
+Den som ensam eller gemensamt med familjemedlem driver yrkesmässig  byggnads- eller anläggningsverksamhet utan anställda, omfattas av  bestämmelserna om såväl arbetsgivare som arbetstagare i detta kapitel.  Detsamma gäller två eller flera som för gemensam räkning yrkesmässigt  driver verksamhet utan att ha arbetstagare anställda. 
+50 
+AFS 2023:13 
+Kapitel 5
+Andra ansvariga som kan omfattas av bestämmelserna i detta kapitel, med  undantag för 5–11 och 70 §§, är 
+1. byggherren, 
+2. byggarbetsmiljösamordnaren för planeringen och projekteringen (Bas-P), 
+3. byggarbetsmiljösamordnaren för utförandet av arbetet (Bas-U), 4. byggherrens ställföreträdare, 
+5. projektörerna, 
+6. den som råder över ett arbetsställe, och 
+7. den som bedriver verksamhet på ett gemensamt arbetsställe. I detta kapitel benämns de andra ansvariga.  
+Vilka av de andra ansvariga som omfattas av respektive bestämmelse ska  bedömas utifrån möjligheten att påverka arbetsmiljön och kan variera utifrån  det skede som ett byggprojekt befinner sig i. Flera ansvarssubjekt kan ha  ansvar för att följa en och samma bestämmelse. Att det finns andra ansvariga  inskränker inte det arbetsmiljöansvar som varje enskild arbetsgivare har för  sina arbetstagare.  
+Av 1 och 3 kap. arbetsmiljölagen (1977:1160) följer att föreskrifterna i detta  kapitel under vissa omständigheter kan medföra skyldigheter även för andra. 
+Ytterligare bestämmelser för ensam- och familjeföretagare  om utökat arbetsmiljöansvar för att säkerställa deras hälsa  och säkerhet 
+3 § Den som ensam eller gemensamt med familjemedlem driver  yrkesmässig byggnads- eller anläggningsverksamhet utan anställda ska  även följa 2 kap. 1–8 §§ samt 3 kap. 2 § första och tredje styckena, 2 a § första  stycket, 3 och 4 §§ arbetsmiljölagen (1977:1160). 
+Därutöver ska de följa de föreskrifter som Arbetsmiljöverket har meddelat i  enlighet med första stycket eller 4 kap. 1–4 och 8 §§ arbetsmiljölagen. Även  det som sägs om arbetsgivare och arbetstagare i de angivna bestämmelserna  ska gälla för den som ensam eller gemensamt med familjemedlem driver  yrkesmässig byggnads- eller anläggningsverksamhet utan anställda. 
+51 
+AFS 2023:13 
+Kapitel 5
+Definitioner 
+4 § I detta kapitel har följande begrepp dessa betydelser. 
+Begrepp Betydelse 
+Arbetsberedning Detaljerad planering av hur  ett enskilt arbetsmoment ska  
+genomföras, där även hantering av  
+arbetsmiljörisker ingår. 
+Avspärrning Något som inte behöver uppfylla  kraven för skyddsräcke, men som  
+gör det tydligt för alla som är på  
+byggarbetsplatsen att området bakom  
+avspärrningen inte får beträdas och  
+är så hållbart att det inte förstörs av  
+exempelvis väder och vind. 
+Bas-P Byggarbetsmiljösamordnare för  planering och projektering av ett  
+byggnads- eller anläggningsarbete,  
+som utsetts enligt 3 kap. 6 §  
+första stycket 2 arbetsmiljölagen  
+(1977:1160) att utföra uppgifterna  
+i enlighet med 3 kap. 7 a §  
+arbetsmiljölagen.  
+Bas-U Byggarbetsmiljösamordnare för  utförande av ett byggnads- eller  
+anläggningsarbete, som utsetts  
+enligt 3 kap. 6 § första stycket 3 
+arbetsmiljölagen att utföra uppgifterna  
+i enlighet med 3 kap. 7 b §  
+arbetsmiljölagen. 
+Byggarbetsplats Plats eller område där det  utförs byggnadsarbete eller  
+anläggningsarbete, oavsett storlek,  
+komplexitet och risknivå. 
+52 
+AFS 2023:13 
+Kapitel 5
+Begrepp Betydelse 
+Byggherre Den som låter utföra ett byggnads eller anläggningsarbete enligt  
+3 kap. 6 § arbetsmiljölagen,  
+det vill säga varje fysisk eller  
+juridisk person för vars räkning ett  
+byggprojekt utförs. 
+Även privatpersoner kan bli  
+byggherrar när de anlitar andra  
+för att utföra byggnads- eller  
+anläggningsarbete. En privatperson  
+som själv utför arbetet för egen  
+räkning, utan att anlita entreprenör  
+eller att gå in i ett arbetsgivar 
+arbetstagar-förhållande, omfattas  
+inte av arbetsmiljölagstiftningen. 
+Byggherrens ställföreträdare I förekommande fall, en  uppdragstagare som självständigt  
+ansvarar för planering och  
+projektering och/eller arbetets  
+utförande för en byggherres räkning  
+och som byggherren har överlåtit  
+sitt arbetsmiljöansvar till enligt  
+3 kap. 7 c § arbetsmiljölagen.  
+Fallskyddsnät Nät som är avsett för att fånga  upp fallande personer, inklusive  
+kantlinor, monteringslinor,  
+konsoler och andra  
+upphängningsanordningar. 
+Förbindelseled Väg, utrymme eller annat som  förbinder två platser, inomhus eller  
+utomhus, till exempel en passage,  
+transportväg eller tillträdesled.  
+Den kan vara avsedd för personer  
+eller fordon. 
+53 
+AFS 2023:13 
+Kapitel 5
+Begrepp Betydelse 
+Passerande fordonstrafik Fordonstrafik som inte hör till  byggnads- eller anläggningsarbetet  
+men passerar förbi eller genom  
+platsen eller området där arbetet  
+utförs. Avser både väg- och  
+spårbunden trafik.  
+Projektörer Arkitekter, konstruktörer och andra  som medverkar i planeringen eller  
+projekteringen av ett byggnads 
+eller anläggningsarbete i enlighet  
+med 3 kap. 7 § arbetsmiljölagen.  
+Det omfattar till exempel konsulter  
+inom el, ventilation samt vatten  
+och avlopp, specialister inom  
+mekaniska tjänster, inredning och  
+tillfälliga stödkonstruktioner. Även  
+byggherrar och entreprenörer kan  
+omfattas när de planerar  
+och projekterar. 
+Alla projektörer i byggprojektet  
+omfattas, inte bara de som  
+byggherren har avtal med. 
+54 
+AFS 2023:13 
+Kapitel 5
+Begrepp Betydelse 
+Sysselsatta Med sysselsatta avses, oavsett om  de arbetar heltid eller deltid: 
+– anställda arbetstagare, och 
+– inhyrd arbetskraft, jämför  
+3 kap. 12 § andra stycket  
+arbetsmiljölagen. 
+I fråga om verksamhet utan  
+anställda arbetstagare (jämför  
+3 kap. 5 § arbetsmiljölagen) avses  
+med sysselsatta, oavsett om de  
+arbetar heltid eller deltid: 
+– de personer som driver  
+verksamheten, och 
+– inhyrd arbetskraft. 
+Den aktuella fysiska personens  
+personnummer respektive juridiska  
+personens organisationsnummer  
+avgör vilka personer som ska anses  
+ingå i verksamheten. 
+Takarbete Arbete där arbetstagare befinner  sig på taket eller arbete med taket  
+och sådant som hör till taket, om  
+arbetet räknas som byggnads- eller  
+anläggningsarbete. 
+55 
+AFS 2023:13 
+Kapitel 5
+Begrepp Betydelse 
+Tillfälliga konstruktioner Tillfälliga bärande eller stöttande  konstruktioner som monteras  
+ned efter byggskedet, exempelvis  
+formställningar, stämp, balksystem,  
+gjutformar för betong, stödsystem  
+för jordschakter och vattentryck,  
+bärande system för kranar och  
+körplåtar för trafik över schakt. 
+Ställningar räknas inte som  
+tillfälliga konstruktioner om de  
+enbart används som arbetsplatser  
+eller tillträdesleder, se  
+Arbetsmiljöverkets föreskrifter och  
+allmänna råd (AFS 2023:11) om  
+arbetsutrustning och personlig 
+skyddsutrustning – säker  
+användning, kapitlet om ställningar. 
+Tillträdesled Landgång, hiss, trappa eller liknande  som används för att tillträda ett  
+angränsande arbetsområde. 
+Ansvar och uppgifter för de som bedriver verksamhet på  byggarbetsplatsen 
+Lämna uppgifter till Bas-U om arbetsmiljörisker 
+5 § Arbetsgivaren ska lämna uppgifter till Bas-U om 
+1. arbeten med särskild risk vars åtgärder ska beskrivas i  arbetsmiljöplanen enligt Arbetsmiljöverkets föreskrifter  
+och allmänna råd (AFS 2023:3) om projektering och  
+byggarbetsmiljösamordning – grundläggande skyldigheter,  kapitlet om arbetsmiljöplan, 
+2. arbetsmiljörisker som arbetsgivarens eget arbete kan orsaka för  övriga som arbetar på byggarbetsplatsen, och 
+3. arbetsgivarens egna arbetsmiljörisker som kan åtgärdas  genom samordning. 
+56 
+
+Allmänna råd 
+AFS 2023:13 Kapitel 5
+
+Bas-U behöver löpande få veta sådant som har betydelse för säkerheten  på byggarbetsplatsen, för att kunna besluta om lämpliga åtgärder  och avgöra vem som ska vidta åtgärderna. Det kan vara en av  arbetsgivarna, eller Bas-U själv, som ska vidta dem. 
+Arbetsmiljörisker som arbetsgivarens eget arbete kan orsaka för andra  är exempelvis buller, damm, fallande föremål, påkörningsrisk eller  risker på grund av bristfällig ordning och städning. 
+Risker som kan åtgärdas genom samordning kan vara att förebygga  manuell hantering, genom att bland annat planera in lyft av material  löpande när det finns en lyftanordning på plats. Bas-U kan även  samordna inhyrning av saxlift eller bygghiss om flera arbetsgivare  behöver använda sådana. 
+Planering av arbetet 
+6 § Arbetsgivaren ska, så tidigt som möjligt, ta hänsyn till faktorer som har  betydelse för arbetsmiljön när arbetsgivaren planerar sitt arbete. 
+7 § Arbetsgivaren ska planera sitt arbete så att inte olika arbetsmoment  utförs samtidigt på samma plats på ett sådant sätt att det uppstår risk för  ohälsa eller olycksfall. 
+Tilldelningen av tid för olika arbeten och arbetsmoment ska anpassas till hur  arbetet går. 
+Allmänna råd 
+Tidsplaneringen behöver exempelvis ta hänsyn till att flera arbetsgivare  ofta behöver ha tillgång till samma utrymme för att färdigställa  byggnaden eller anläggningen i slutet av byggprojektet. 
+Bestämmelser om tidsplanering finns även för byggherren, Bas-P  och Bas-U i arbetsmiljölagen (1977:1160) och Arbetsmiljöverkets  föreskrifter och allmänna råd (AFS 2023:3) om projektering och  byggarbetsmiljösamordning – grundläggande skyldigheter. 
+57 
+AFS 2023:13 
+Kapitel 5
+Information och instruktioner 
+8 § Arbetsgivaren ska informera arbetstagarna om hur byggnads- eller  anläggningsarbetet ska genomföras på ett säkert sätt, vilka regler som ska  tillämpas och vilka arbetsmiljöåtgärder som är genomförda eller planerade. 
+Arbetsgivaren ska också ge tillräckliga instruktioner om hur arbetstagarna  ska utföra arbetet på ett säkert sätt. 
+Informationen och instruktionerna ska vara tillgängliga och begripliga  för de arbetstagare som de riktas till. Arbetsgivaren ska förvissa sig om att  arbetstagarna har förstått informationen och instruktionerna. 
+Allmänna råd 
+Det är lämpligt att de olika arbetsgivarna samlar sina arbetstagare  inför start av arbetet på byggprojektet för en genomgång av det som  ska utföras och eventuella avvikelser från det som normalt brukar  förekomma. Inför enskilda arbetsmoment kan instruktioner ges i form  av en arbetsberedning där arbetsmiljörisker hanteras. 
+Att information och instruktioner ska vara tillgängliga och begripliga  kan innebära att det behövs muntliga genomgångar eller bilder i  kombination med skriftlig information, och att de ges på ett språk som  arbetstagaren förstår. 
+Följa byggarbetsplatsens regler och delta i arbetsmiljöarbetet 9 § Arbetsgivaren ska se till att arbetstagarna följer de ordnings och skyddsregler som Bas-U utfärdar och att arbetstagarna deltar i  byggarbetsplatsens arbetsmiljöarbete. 
+Ordning och reda 
+10 § Arbetsgivaren ska medverka till god ordning på byggarbetsplatsen  och att onödigt material, redskap, emballage, avfall och liknande tas omhand. 
+Arbetsgivaren ska se till att städning utförs regelbundet. 
+58 
+AFS 2023:13 
+Kapitel 5
+Personlig skyddsutrustning 
+11 § Arbetsgivaren ska se till att skyddshjälm med hakrem och skydds skor med spiktrampskydd och skyddståhätta används, om det inte är  uppenbart onödigt. 
+I övrigt ska arbetsgivaren se till att den personliga skyddsutrustning som  behövs används. 
+Planera och ordna byggarbetsplatsen och etableringsområdet 
+12 § När arbetsgivaren, och andra ansvariga enligt 2 §, väljer platser för att  utföra byggnads- eller anläggningsarbete ska det vara möjligt för alla att ta  sig till sin arbetsplats på ett säkert sätt. Det gäller 
+1. hur personer och fordon ska kunna komma in på och ut från  byggarbetsplatsen på ett säkert sätt, och 
+2. hur förbindelseleder för personer respektive fordon kan förläggas  inom byggarbetsplatsen. 
+Allmänna råd 
+Vem som har möjlighet att påverka val av plats kan variera beroende på  det skede som byggprojektet befinner sig i. Det kan behövas tillstånd  från till exempel väghållare, spårinnehavare, kommun, räddningstjänst  eller ledningsägare för att arbetet ska kunna bedrivas på ett säkert sätt. 
+Det kan vara lämpligt att upprätta en arbetsplatsdispositionsplan  (APD-plan) för byggarbetsplatsen där det minst framgår placering av 1. förbindelseleder för fordon och gående, 
+2. lyftanordningar och lyftradier, 
+3. ytor för mottagning och förvaring av material, 
+4. personalutrymmen och kontor, 
+5. containrar och eventuella fältverkstäder, och 
+6. ledningar för el, vatten och tryckluft. 
+13 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att  personalutrymmen, materialupplag, förråd och verkstäder placeras så  att verksamheten kan bedrivas under sunda och säkra förhållanden.  Arbetstagarna ska ha tillgång till dricksvatten i närheten av arbetsplatserna. 
+59 
+AFS 2023:13 
+Kapitel 5
+Allmänna råd 
+Placeringen av personalutrymmen och materialupplag bör främja  att förbindelseleder för gående och fordon blir så lättillgängliga att  de används. 
+Avgränsa och skylta arbetsplatsen 
+14 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska avgränsa en plats  eller ett område där byggnads- eller anläggningsarbete utförs, på ett sätt som  är väl synligt och lätt att förstå. Det ska finnas skyltar på lämpliga platser  runt byggarbetsplatsen och i dess omedelbara närhet som informerar om  byggarbetsplatsen. 
+Allmänna råd 
+Avgränsning och skyltar bör användas dels för att hindra obehöriga  från att komma in på byggarbetsplatsen där de kan utgöra en risk för  arbetstagarna, dels för att avgränsa olika arbetsgivares riskområden  
+inom byggarbetsplatsen. Finns till exempel barn i området, ska  avgränsningarna vara tillräckliga för att hindra dem från att komma  in. Bestämmelser som syftar till att skydda allmänheten finns i  ordningslagen (1993:1617). 
+Planering för att ta emot och förvara material 
+15 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att det finns  tillräcklig plats för att kunna ta emot leveranser och förvara byggprodukter  och annat material som används i arbetet. 
+Utrymmen och ytor för mottagning eller lagring ska ha en stabilitet och en  bärighet som förebygger risker för ras. 
+16 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska avgränsa och  utforma utrymmen där farliga ämnen förvaras, så att risker för ohälsa och  olycksfall förebyggs. 
+17 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att det finns  säkra, och tillräckligt många, lastkajer, intagsbryggor och lastöppningar på  byggarbetsplatsen. 
+Lastkajer, intagsbryggor och lastöppningar ska ha sådana  
+skyddsanordningar och utformas, dimensioneras och placeras så att risker  för fall och ras är förebyggda. En lastkaj ska ha minst en utgång. 
+60 
+AFS 2023:13 
+Kapitel 5
+På intagsbryggor ska det normalt finnas en grind eller bom som lätt och  säkert kan öppnas och stängas i samband med transporter. 
+Allmänna råd 
+Dörrar till lastöppningar i väggar bör vara inåtgående eller utformade  som skjutdörrar.  
+Förbindelseleder 
+18 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att det finns  säkra förbindelseleder i tillräcklig omfattning på en byggarbetsplats. 
+En förbindelseled ska ha sådana skyddsanordningar och utformas,  dimensioneras och placeras så att risker för fall och ras är förebyggda. 
+19 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska märka ut  förbindelseleder på ett tydligt sätt om det finns riskzoner eller andra  förhållanden på arbetsplatsen som kan leda till arbetsmiljörisker. 
+Allmänna råd 
+Riskzoner kan vara områden där kranlyft utförs eller lastning och  lossning sker. Även på trånga byggarbetsplatser kan förbindelseled  behöva märkas ut.  
+Förbindelseleder för fordonstrafik inom byggarbetsplatsen 20 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska utforma säkra  förbindelseleder avsedda för motorfordon på byggarbetsplatsen, så att de  risker som fordonstrafik orsakar minimeras. 
+Allmänna råd 
+Vid utformning av säkra förbindelseleder bör hänsyn tas till  motorfordonens hastighet och eventuella hastighetsgränser, behov  av barriärer för att hindra påkörning av arbetstagare och förhindra  risk för nedstörtning av motorfordon. Hänsyn bör även tas till om  motorfordonen rör upp damm eller ojämnheter som kan orsaka  onödiga vibrationer för förare. 
+Förbindelseleders bredd bör alltid avgöras utifrån fordonens storlek.  Man bör även ta hänsyn till riskerna med backande fordon. 
+61 
+AFS 2023:13 
+Kapitel 5
+21 § Kring förbindelseleder för motorfordon ska arbetsgivaren, och andra  ansvariga enligt 2 §, se till att det finns antingen tillräckligt säkerhetsavstånd  eller tillräckliga skyddsanordningar som skydd för personer som vistas på  byggarbetsplatsen. 
+Om leder för gående, dörrar, portar eller trappor placeras bredvid en väg för  fordonstrafik ska det alltid lämnas ett tillräckligt stort fritt utrymme mellan  dem och vägen. 
+Allmänna råd 
+Skyddsanordningar bör vara så hållfasta och stabila att de stoppar  fordonen. Även tillräcklig belysning och speglar eller kameror, för att  eliminera döda vinklar, kan användas för att öka säkerheten. 
+Förbindelseleder och tillträdesleder för gående 
+22 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att det finns  en tillträdesled till varje arbetsplats som lätt, säkert och ändamålsenligt ger  tillträde. En tillträdesled ska ha sådana skyddsanordningar och utformas,  dimensioneras och placeras så att risker för fall och ras är förebyggda. 
+Allmänna råd 
+En lämplig tillträdesled kan vara en trappa eller ett trapptorn, men  en anliggande stege eller en lodrät eller nästan lodrät fastmonterad  stege, är i allmänhet inte lämplig som tillträdesled. De permanenta  tillträdesanordningar till tak som kan finnas i befintliga fastigheter,  exempelvis takluckor och anliggande stegar, motsvarar normalt inte  
+de bestämmelser om tillträdesleders utformning, dimensionering och  placering som gäller vid byggnadsarbete. 
+23 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att förbindelse leder till högre eller lägre nivå normalt utgörs av en trappa eller en ramp. 
+Om höjdskillnaden mellan nivån där en förflyttning startar och nivån där  arbetet utförs är mer än 10 meter, och detta medför att arbetstagarna måste  gå mycket i trappor, ska det finnas tillgång till hiss utöver trapporna. 
+Allmänna råd 
+Hur mycket arbetstagarna måste gå i trappor, och därmed hur stor  risken för ohälsa och olycksfall är, påverkas av hur hög nivåskillnaden  är, hur lång tid arbetet beräknas pågå och var personalutrymmen, som  lunchrum och toaletter, ligger. 
+62 
+AFS 2023:13 
+Kapitel 5
+Även om nivåskillnaden mellan planen är mindre än 10 meter, är det  lämpligt att det finns tillgång till hiss om arbetstagarna måste bära  material mellan planen eller liknande. Man bör ta hänsyn till att mycket  gående i trappor ökar riskerna för både belastningsbesvär och olyckor. 
+24 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att trappor  har tillräcklig bredd och lämplig lutning. En trappa ska även ha vilplan på  lämpliga avstånd om det behövs med hänsyn till trappans höjd. Trapporna  och vilplanen ska ha ledstänger respektive skyddsräcken. 
+Allmänna råd 
+Det är lämpligt att ett vilplan i en trappa ansluter till bjälklag,  ställningslag eller liknande. 
+25 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att en fast  monterad stege som är lodrät eller nästan lodrät och mer än 6 meter lång, har  ryggskydd ned till en höjd av cirka 2,5 meter över mark eller annat plan. 
+Allmänna råd 
+Ett ryggskydd kan ge en möjlighet till vila men räknas inte som fallskydd. 
+Installationer och ledningar för el, gas, vatten och liknande 26 § Innan byggnads- eller anläggningsarbete påbörjas, ska arbetsgivaren,  och andra ansvariga enligt 2 §, undersöka om det finns installationer eller  ledningar i marken eller i befintliga delar av en byggnad eller anläggning  som kan beröras av arbetena. 
+Om det finns installationer eller ledningar ska de identifieras, kontrolleras  och märkas ut tydligt så att risk för olycka minimeras. 
+Allmänna råd 
+I första hand bör el, gas, vatten, avlopp eller liknande stängas av  innan arbetet påbörjas. Arbetsgivaren, och andra ansvariga enligt  2 §, bör därför ta kontakt med ledningsägaren så tidigt som möjligt  och undersöka vilka avstängningsanordningar som finns för  installationerna eller ledningarna. 
+27 § När ett arbete ska utföras i närheten av en högspänningsanläggning  ska arbetsgivaren, och andra ansvariga enligt 2 §, förebygga riskerna  för olyckor. 
+63 
+AFS 2023:13 
+Kapitel 5
+Om det är möjligt ska befintliga elektriska luftledningar ledas förbi  byggarbetsplatsen eller göras spänningslösa. Är detta inte möjligt ska  arbetsgivaren, och andra ansvariga enligt 2 §, med hjälp av avspärrningar  och varningsskyltar se till att utrustning och fordon hålls på tillräckligt  avstånd från elledningarna. 
+28 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att  anläggningar för el, vatten, gas och liknande är utformade så att de kan  användas säkert under hela byggprojektet. Anläggningarna ska utformas  och placeras så att de är skyddade mot oavsiktlig påverkan. 
+Allmänna råd 
+Arbetsgivaren, och andra ansvariga enligt 2 §, bör planera den tillfälliga  elanläggningen så tidigt som möjligt.  
+Belysning 
+29 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att  arbetsplatser, förbindelse- och tillträdesleder samt andra utrymmen har  tillräckligt med ljus. Om det är möjligt ska det vara dagsljus. När dagsljuset  inte är tillräckligt ska artificiell belysning ordnas. Flyttbar, stötsäker  arbetsplatsbelysning ska användas när det behövs. 
+Det ska finnas lämplig reservbelysning om det behövs. 
+Där arbetstagarna är utsatta för särskilda risker om det blir strömavbrott, ska  det finnas nödbelysning av tillräcklig styrka. 
+Allmänna råd 
+Reservbelysning kan behövas i alla utrymmen där det saknas dagsljus.  Nödbelysning kan behövas bland annat där arbete med byggsåg eller  ställningsarbete pågår. 
+30 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att  ljusinstallationer är av sådant slag och placeras så att de inte medför någon  olycksrisk för arbetstagarna. 
+Färgen på det artificiella ljuset får inte påverka möjligheterna att se signaler,  skyltar eller varselkläder. 
+64 
+AFS 2023:13 
+Kapitel 5
+Förebygga och varna vid brand 
+31 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska förebygga risker för  att det börjar brinna och att branden sprider sig. 
+Allmänna råd 
+Åtgärder för att förebygga risker för brand kan vara att 
+1. välja produkter med sådana fysikaliska eller kemiska egenskaper  som inte lätt kan orsaka eller förvärra brand, 
+2. välja arbetsmetoder som inte alstrar höga temperaturer eller  orsakar gnistbildning, 
+3. planera leveranser och förvaring av brännbara produkter och  material, och 
+4. hålla mängden brännbart material i varje utrymme så liten som  möjligt. 
+Detta bör beaktas redan under planeringen och projekteringen. 
+32 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att det finns  brandredskap på byggarbetsplatsen. Det ska även finnas branddetektorer  och alarmsystem om det finns behov av det. 
+Allmänna råd 
+Det kan finnas behov av branddetektorer och alarmsystem i utrymmen  där ett stort antal arbetstagare vistas samtidigt, brandfarliga ämnen används, det finns stora mängder brännbart material, utrymnings vägarna är långa och där räddningstjänstens insatstid för att ta sig till  utrymmet är lång. 
+33 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att antalet  brandredskap, eventuella branddetektorer eller alarmsystem och  utformningen av dem är anpassade till 
+1. förhållandena där byggnads- eller anläggningsarbetet utförs, 2. utrymmenas storlek och användning, 
+3. den utrustning som används, 
+4. de fysikaliska och kemiska egenskaperna hos material och ämnen  som används på arbetsplatsen, och 
+5. det största antalet människor som samtidigt kan vistas i  utrymmena och på byggarbetsplatsen. 
+65 
+AFS 2023:13 
+Kapitel 5
+34 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att  brandredskap är lätt hanterbara och placeras så att de är lätt åtkomliga.  Platser för brandredskap ska märkas ut med skyltar. 
+Allmänna råd 
+Eftersom byggarbetsplatser är rörliga och förändras kontinuerligt  bör placeringen av brandredskap och skyltar för brandredskap  kontrolleras ofta. 
+35 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska regelbundet utföra  lämpliga provningar av brandredskap och eventuella branddetektorer och  alarmsystem. De ska även genomföra lämpliga övningar regelbundet. 
+Allmänna råd 
+När branddetektorer eller alarmsystem tillfälligt kopplas ifrån för  underhåll eller liknande, är det viktigt att systemen återställs så fort  anledningen till frånkopplingen är åtgärdad. 
+Säkerställa utrymning 
+36 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att alla delar  av byggarbetsplatsen kan utrymmas om det börjar brinna, det strömmar ut  gas eller annan fara uppstår. 
+Alla som arbetar på byggarbetsplatsen ska snabbt och säkert kunna nå ett  område som är riskfritt.  
+Allmänna råd 
+Ett område som är riskfritt kan vara utomhus men kan även vara en  räddningskammare eller ett annat brandsäkert avskilt utrymme. 
+Vid omfattande eller komplicerat byggnads- eller anläggningsarbete,  bör man kontakta räddningstjänsten för att samråda om  
+utrymningsfrågorna. 
+37 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska avgöra behovet  av antalet utrymningsvägar på byggarbetsplatsen, i utrymmena och  arbetslokalerna, och deras fördelning och mått med hänsyn till användning,  utrustning, storlek på området och det största antal människor som kan  vistas där samtidigt. 
+66 
+AFS 2023:13 
+Kapitel 5
+38 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska markera särskilt  anordnade utrymningsvägar och återsamlingsplatser med skyltar. Skyltarna  ska vara tillräckligt hållbara och placeras på lämpliga platser. Dörrar och  portar utmed utrymningsvägar ska markeras på lämpligt sätt. 
+Utrymningsvägar som kräver belysning ska ha nödbelysning med  tillräcklig styrka. 
+Allmänna råd 
+I utrymningsvägar kan skyltar behövas för att kunna orientera sig vid  till exempel riktningsändring eller förgrening, så att man enkelt kan  nå säkert område. Man bör kontrollera att skyltningen uppdateras när  byggarbetsplatsen förändras. Återsamlingsplatser kan framgå av en  arbetsplatsdispositionsplan (APD-plan). 
+39 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att  utrymningsvägarna, samt de förbindelseleder och dörrar som leder till dem,  hålls fria från hinder så att de när som helst kan användas utan problem. 
+40 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att dörrar i  utrymningsvägar öppnas utåt i utrymningsriktningen. Dörrarna får inte vara  låsta eller reglade utan ska lätt och omedelbart kunna öppnas av de som kan  behöva använda dem i en nödsituation. 
+Skjutdörrar eller roterande dörrar får inte förekomma som dörrar i särskilt  anordnade utrymningsvägar. 
+Första hjälpen 
+41 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att det alltid  är möjligt att ge första hjälpen på byggarbetsplatsen. Utrustning för första  hjälpen ska finnas och personal som är utbildad att ge första hjälpen ska  alltid kunna tillkallas. 
+42 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska vidta åtgärder så att  den som drabbats av olycksfall eller plötslig sjukdom kan föras från platsen  för medicinsk vård. 
+Allmänna råd 
+Vid planeringen är det särskilt viktigt att tänka på hur arbetstagare  i trånga utrymmen, på höga höjder eller liknande svåråtkomliga  arbetsplatser kan nås. 
+67 
+AFS 2023:13 
+Kapitel 5
+43 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att det finns  för ändamålet lämpliga utrymmen där man kan ge första hjälpen, om det  motiveras av verksamhetens art och omfattning. 
+Allmänna råd 
+Utrymmen för första hjälpen bör förläggas så att bårtransporter  underlättas. 
+44 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att utrustning  för första hjälpen är utmärkt med skyltar. Detsamma gäller eventuella  utrymmen för första hjälpen. 
+45 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att  telefonnummer till ambulans och räddningstjänst, adress till närmaste  sjukhus, adress eller koordinater och färdbeskrivning till byggarbetsplatsen  finns anslaget väl synligt på byggarbetsplatsen. 
+Välja arbetsmetoder och utrustning 
+46 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska välja arbetsmetoder  och utrustning som 
+1. motverkar olycksfall på grund av fall eller ras, 
+2. är anpassade till byggprodukternas egenskaper, 
+3. medför låg exponering för buller, vibrationer, farliga ämnen och  luftföroreningar, 
+4. är lämpliga vid utförande av konstruktioner för grundläggning och  stomsystem, och 
+5. är lämpliga vid montering av stomkomplettering, installationer och  inredningar. 
+Allmänna råd 
+Oavsett om nya eller beprövade metoder eller material används, bör  man redan vid planeringen tänka på vilken utrustning som behövs och  vilken utbildning och information arbetstagarna kan behöva för att  genomföra arbetet. 
+47 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att utrustning,  installationer och maskiner bara används av arbetstagare med tillräckliga  kunskaper och för det ändamål som de är konstruerade för. 
+Utrustning inkluderar även manuella och motordrivna handverktyg. 
+68 
+AFS 2023:13 
+Kapitel 5
+Kontrollera utrustning och installationer 
+48 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att utrustning  och installationer som skaffats för att användas i arbetet, kontrolleras innan  de tas i bruk. 
+När utrustning och installationer används ska de kontrolleras och  underhållas regelbundet men även efter händelser som kan ha påverkat  deras funktion. 
+Detta gäller särskilt 
+1. brandredskap, branddetektorer och alarmsystem, 
+2. installationer för energidistribution, 
+3. förbindelseleder, 
+4. trafikanordningar och avstängningsanordningar, 
+5. skyddsnät, 
+6. konstruktioner för högt eller djupt belägna arbetsplatser inklusive  ställningar, och 
+7. skyltar, markeringar och annan varselmärkning. 
+49 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska avbryta arbetet  omedelbart om brister som kan innebära allvarlig fara för säkerhet eller hälsa  upptäcks. Arbetet får inte återupptas förrän bristerna har rättats till. 
+Välja enligt ergonomiska principer 
+50 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska välja arbetsmetoder  och utrustning som innebär att hälsofarliga eller onödigt tröttande fysiska  belastningar undviks. 
+51 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att det finns  lämplig utrustning för att lyfta och transportera byggprodukter och annat  material om det behövs för att arbetstagarna inte ska utsättas för hälsofarliga  eller onödigt tröttande fysiska belastningar. 
+Allmänna råd 
+Utrustning som kan behövas är utrustning för transport och hantering  av byggprodukt såsom armering, byggskivor, murblock, markplattor,  kantsten, VA-rör, tak- och mattrullar och fönster. Utrustningen kan vara  bland annat lyftkranar, maskiner, liftar eller robotar för att lyfta och  montera material samt vagnar för transporter. 
+69 
+AFS 2023:13 
+Kapitel 5
+52 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska välja utrustning som  är lämpligt utformad enligt ergonomiska principer. Det gäller även manuella  och motordrivna handverktyg, installationer och maskiner. 
+53 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att utrymmen  där arbete ska utföras har tillräcklig yta och höjd för att arbetstagarna ska  kunna utföra sitt arbete utan allvarlig risk för sin säkerhet och hälsa. 
+Bestämmelsen gäller inte arbete i befintliga byggnader eller anläggningar om  det på grund av objektets egenskaper och utformning inte är tekniskt möjligt  att uppfylla kraven på tillräcklig yta eller höjd. I så fall ska risken för ohälsa  och olycksfall förebyggas genom att man använder tekniska hjälpmedel,  eller vidtar organisatoriska åtgärder. 
+Allmänna råd 
+Ett exempel på plats där det inte finns tillräckligt yta och höjd är  kryputrymmen där det är svårt att arbeta i naturliga arbetsställningar.  Exempel på organisatoriska åtgärder som kan vidtas är begränsning av  arbetspassets längd och av den totala tiden som arbetstagaren får arbeta  i utrymmet under en arbetsdag. 
+Hantera material och avfall 
+Transport av byggprodukter eller annat material 
+54 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska planera och  genomföra transporter av byggprodukter eller annat material på ett säkert  sätt så att ohälsa och olycksfall förebyggs. 
+55 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att transporter  upp eller ned från plan som ligger mer än 2 meter över markplanet  eller motsvarande utförs så att skyddsräcke eller någon annan typ av  skyddsanordning inte behöver tas bort. 
+Om transporten inte kan göras enligt första stycket ska transporten ske via  intagsbryggor, lastöppningar i fasader, särskilt iordningställda ramper eller  särskilt anordnade transportsystem. 
+70 
+AFS 2023:13 
+Kapitel 5
+56 § Om transporten av ett enstaka objekt kräver att ett skyddsräcke  eller någon annan skyddsanordning tas bort ska arbetsgivaren, och andra  ansvariga enligt 2 §, se till att 
+1. transporten planeras och övervakas särskilt, 
+2. särskilda skyddsåtgärder vidtas, 
+3. skyddsräcket eller skyddsanordningen sätts tillbaka så snart den  inte längre hindrar transporten, och 
+4. återställandet av skyddsräcket eller skyddsanordningen övervakas  särskilt. 
+Hantera avfall 
+57 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att det finns  möjlighet att sortera, lagra och föra bort bygg- och rivningsavfall i tillräcklig  omfattning. Det ska göras på ett säkert sätt. 
+Om farliga material och ämnen har använts eller om emballaget har  innehållit farliga ämnen ska arbetsgivaren, och andra ansvariga enligt 2 §,  vara särskilt uppmärksamma på hur avfallet förs bort från platsen. 
+Lagra och ställa upp material och utrustning 
+58 § Om byggprodukter, annat material och utrustning kan orsaka  olycksfall eller ohälsa om de kommer i rörelse ska arbetsgivaren, och andra  ansvariga enligt 2 §, se till att de stabiliseras på ett lämpligt och säkert sätt. 
+Allmänna råd 
+Emballage och andra stabiliserande anordningar som transporterats,  bör kontrolleras innan de lossas och tas emot för att förebygga risker  för ras. Arbetsgivaren, och andra ansvariga enligt 2 §, bör vara särskilt  uppmärksamma på hur trafikskyddsanordningar som barriärer monteras. 
+59 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska beakta vindens  inverkan när 
+1. byggprodukter och annat material placeras på tak eller andra högt  belägna platser, och 
+2. material med stor yta ska lagras eller ställas upp. 
+Förankringar och andra stabiliserande åtgärder ska alltid utformas och  dimensioneras med hänsyn till de vindlaster som kan förekomma. 
+71 
+AFS 2023:13 
+Kapitel 5
+Risk för fall till lägre nivå och takarbete 
+60 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att risk  för fall till lägre nivå är förebyggd. Det gäller både vid arbete och vid de  förflyttningar som görs i samband med arbetet. 
+När fallhöjden är 2 meter eller mer ska fallrisken normalt förebyggas genom att  man arbetar i skydd av gemensamma fallskyddsanordningar som skydds räcken, mobila eller fasta arbetsplattformar, arbetskorgar, på eller innanför  ställningar med skyddsräcken eller ovanför eller innanför fallskyddsnät. 
+Skyddsräcken ska vara hållfasta och minst 1 meter höga. De ska ha fotlist,  mellanledare och överledare eller ge motsvarande skydd. Det gäller även  på takkant vid gavel. Skyddsräcken på ställningar ska istället uppfylla  bestämmelserna i Arbetsmiljöverkets föreskrifter och allmänna råd (AFS  2023:11) om arbetsutrustning och personlig skyddsutrustning – säker  användning, kapitlet om användning av ställningar. Om permanenta räcken  utnyttjas som fallskydd, får fotlist utelämnas. 
+Skyddsräcken ska vara helt inklädda om det förekommer lösa föremål som  kan orsaka skada om föremålen faller genom skyddsräckena. 
+Allmänna råd 
+Beroende på arbetets art kan skyddsräcken behöva vara högre än  1 meter. Fallskyddsanordningar bör väljas, och monteras, så att de kan  användas under hela byggskedet, eller så länge det finns risk för att  någon faller. 
+61 § Om gemensamma fallskyddsanordningar, som anges i 60 §, inte kan  användas på grund av arbetets art ska arbetsgivaren, och andra ansvariga  enligt 2 §, se till att personligt fallskydd används. 
+62 § Om det vid takarbete inte är rimligt att använda gemensamma  fallskyddsanordningar enligt 60 § ska arbetsgivare och andra ansvariga  enligt 2 §, se till att personligt fallskydd används. Vid bedömningen ska  följande beaktas 
+1. tiden det tar att utföra hela takarbetet, 
+2. de risker som är förenade med takarbetet om personligt fallskydd  väljs, och 
+3. tiden som går åt för att montera skyddsräcket eller utrustningen  och de risker som är förenade med detta. 
+72 
+
+Allmänna råd 
+AFS 2023:13 Kapitel 5
+
+Arbeten med byte av enstaka takpannor och andra liknande kortvariga  tillfälliga takarbeten kan vara ett sådant tillfälle när gemensamma  fallskyddsanordningar inte är rimliga att använda. 
+63 § Personligt fallskydd ska bestå av en sele som är kopplad till lämpliga  fallskyddskomponenter för att skapa ett fallskyddssystem och det ska  vara förankrat i en säker förankringspunkt. Fallskyddssystemet ska  förhindra, eller stoppa och bromsa, ett fall till lägre nivå. De ingående  komponenterna, inklusive selen, får bara kombineras och användas enligt  bruksanvisningarna. 
+Allmänna råd 
+Det personliga fallskyddet ska vara ändamålsenligt i förhållande  till de risker det är avsett för, utan att det i sig leder till ökad risk  och det ska vara anpassat till förhållandena på arbetsplatsen, enligt  Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:11) om  arbetsutrustning och personlig skyddsutrustning – säker användning,  kapitlet om användning av personlig skyddsutrustning. 
+Tillverkaren anger i sin bruksanvisning hur det personliga fallskyddet  ska förankras och vad som är en säker förankringspunkt. 
+64 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska utan dröjsmål förse  öppningar och hål i bjälklag, tak eller liknande där någon kan falla eller trampa  ned, med skyddsräcke eller skyddstäckning som inte oavsiktligt kan rubbas. 
+Skyddstäckningen ska ha betryggande bärighet och antingen vara utförd så  att det framgår vad den är avsedd för, eller vara tydligt märkt. 
+65 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att underlag  som kan beträdas, normalt har tillräcklig bärighet och ytsträvhet för att  hindra genomtrampning, halkning, snubbling och fall. Arbetsplatsernas golv  får inte ha några farliga upphöjningar, hål eller lutningar. 
+Underlag som saknar tillräcklig bärighet eller som är hala ska förses med  avspärrningar och märkas ut, om det inte är uppenbart onödigt. Om ett  sådant underlag behöver beträdas ska särskilda skyddsåtgärder vidtas som  gör det möjligt att utföra arbetet på ett säkert sätt. 
+73 
+AFS 2023:13 
+Kapitel 5
+Innan reparations- eller underhållsarbete på tak påbörjas ska takets  beskaffenhet, särskilt dess bärighet och ytsträvhet, ha undersökts. 
+Allmänna råd 
+Om underlag saknar betryggande bärighet eller är hala, bör i första  hand arbetsmetoder väljas som innebär att underlaget inte behöver  beträdas. I andra hand kan hjälpmedel som till exempel landgång  användas. Tak där det finns risk för genomtrampning kan vara  underlagstak som inte är gjorda för att beträdas, tak av glas, plast och  gamla asbestcementtak, eftersom de ofta har blivit spröda. 
+66 § Vid takarbete ska arbetsgivaren, och andra ansvariga enligt 2 §, ta särskild hänsyn till riskerna för ohälsa på grund av olämpliga  arbetsställningar och arbetsrörelser. Hänsyn ska även tas till olika  klimatfaktorers betydelse för arbetet under de särskilda villkor som gäller  för takarbete. 
+67 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att material  och verktyg kan läggas på taket utan att de glider ned. Om det behövs, ska  material sättas fast på lämpligt sätt. 
+68 § Om takarbete utförs på en liten yta på tak som lutar mer än 1:4  (cirka 14 grader) och takarbetet beräknas pågå mer än 4 timmar ska  arbetsgivaren, och andra ansvariga enligt 2 §, anordna ett horisontellt  arbetsplan. 
+69 § Vid utförande av tak med fribärande plåt på balkar ska arbetsgivaren,  och andra ansvariga enligt 2 §, se till att plåtpaketens vikt anpassas  till konstruktionens bärighet. Plåtpaketen ska placeras ut med sådana  mellanrum att hanteringen underlättas.  
+Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att arbetstagarna  arbetar i skydd av ställning, arbetsplattform, eller arbetar från annan  säker plats när de lägger ut de första plåtarna på taket. Varje plåt ska fästas  omedelbart efter att den har lagts ut. 
+74 
+AFS 2023:13 
+Kapitel 5
+Sanktionsavgift vid fallrisk till lägre nivå och vid takarbete med risk  för att falla 
+70 § När arbete utförs där det finns risk att falla och fallhöjden är 2 meter  eller mer och fallskydd enligt 60–65 §§ saknas, ska sanktionsavgift betalas  om inte fallskydd motsvarar punkten 1 och är utformat och används enligt  punkten 2. Sanktionsavgift ska inte betalas i de fall som anges i punkten 3.  1. Skydd mot fall ska finnas vid arbetet genom att man 
+a) arbetar i skydd av skyddsräcken, 
+b) arbetar på mobila eller fasta arbetsplattformar, 
+c) arbetar i arbetskorgar, 
+d) arbetar på eller innanför ställningar med skyddsräcken, e) arbetar ovanför eller innanför skyddsnät, eller 
+f) använder personligt fallskydd. 
+2. Skydd mot fall ska vara utformat och användas enligt a–j nedan: a) Skyddsräcken ska uppfylla bestämmelserna i 60 §. 
+b) För takarbete ska dessutom skyddsräcke finnas även på takkant vid gavel. 
+c) Öppningar och hål med fallrisker, i underlag eller tak, ska förses med skyddstäckning eller skyddsräcken. 
+d) Om takarbete bara bedrivs på ett begränsat område av taket är det tillräckligt att fallskyddet skyddar mot fall inom detta område, om tydlig och hållbar avspärrning finns mot övriga delar av taket där arbete inte förekommer. 
+e) Område på tak eller underlag där det finns risk för 
+genomtrampning ska förses med avspärrning. 
+f) Personligt fallskydd ska bestå av en sele som är kopplad till lämpliga fallskyddskomponenter för att skapa ett 
+fallskyddssystem och det ska vara förankrat i en säker 
+förankringspunkt. 
+g) Personligt fallskydd ska förhindra, eller stoppa och bromsa, ett fall till lägre nivå. 
+h) Vid en förflyttning längs stege eller stegar, fasta eller lösa, ska personligt fallskydd användas och vara förankrat om 
+höjdskillnaden mellan nivån där förflyttningen startar och nivån där den slutar är mer än 4 meter. 
+75 
+AFS 2023:13 
+Kapitel 5
+i) Vid takarbete ska personligt fallskydd användas och vara  förankrat vid en förflyttning längs stege eller stegar, fasta  
+eller lösa, om höjdskillnaden mellan mark och nivån där  
+förflyttningen slutar är mer än 4 meter. Vid förflyttning mellan  olika nivåer på tak ska personligt fallskydd användas och vara  förankrat även om nivåskillnaden mellan nivåerna på taket är  mindre än 4 meter. 
+j) Vid förflyttning på tak ska personligt fallskydd användas och  löpande förankras. Detta gäller inte om det finns skyddsräcken  som skyddar mot fall. 
+3. Undantag från sanktionsavgift medges för följande: 
+a) Enstaka arbete med att installera förankringspunkt för  personligt fallskydd maximalt 7 meter över marknivå.  
+Befintliga förankringspunkter längs vägen upp ska användas,  om sådana finns. 
+b) Arbete med att första gången fästa personligt fallskydd i  befintlig förankringspunkt maximalt 7 meter över marknivån.  Befintliga förankringspunkter längs vägen upp ska användas,  om sådana finns. 
+c) Arbete från lös stege som inte utförs på tak, om endast enstaka  arbeten utförs, stegen är kortare än 5 meter, arbetet tar mindre  än 15 minuter per steguppställning och arbetet kan utföras  med en hand så att man håller sig fast i stegen med den andra  handen. 
+d) Arbete på tak med högst 6 graders lutning när arbetet utförs  mer än 2 meter från takkanten eller annan kant. Tydliga  
+och hållbara avspärrningar ska finnas som avgränsar  
+arbetsområdet, minst 2 meter från takkanten eller annan  
+kant. Om takytan lutar utåt och taket är så halt att det finns  risk att falla över kanten, gäller inte detta undantag från  
+sanktionsavgift. 
+Den arbetsgivare, den som ensam eller gemensamt med familjemedlem  driver yrkesmässig verksamhet utan anställda, de som för gemensam  räkning driver sådan verksamhet eller den som anlitar inhyrd arbetskraft i  sin verksamhet och som överträder en eller flera bestämmelser i punkterna  1 eller 2 ovan ska betala en sanktionsavgift. I antalet sysselsatta inräknas  personer på verksamhetens samtliga arbetsställen. Det är antalet sysselsatta  dagen för överträdelsen som ska utgöra underlag för beräkningen av avgiften. 
+76 
+AFS 2023:13 
+Kapitel 5
+Lägsta avgiften är 40 000 kronor och högsta avgiften är 400 000 kronor.  För den som har 500 eller fler sysselsatta är avgiften 400 000 kronor.  För den som har färre än 500 sysselsatta ska sanktionsavgiften beräknas  enligt följande: 
+Avgift = 40 000 kronor + (antal sysselsatta – 1) × 721 kronor. Summan ska avrundas nedåt till närmaste hela hundratal. 
+Den som för samma arbete överträder flera bestämmelser i punkterna 1 eller 2 ska endast betala en sanktionsavgift. 
+Allmänna råd 
+Bestämmelsen avser dels att fallskyddet ska förhindra fall under själva  arbetet, dels att det ska förhindra fall vid de förflyttningar som görs i  samband med arbetet, se 60 §. 
+För vad som avses med avspärrning, se 4 §. 
+Om ett skyddsräcke bara sätts upp längs en del av takfoten, i syfte att  vara fallskydd för ett begränsat område där arbetet ska utföras, behöver  räcket gå utanför arbetsområdet. Räcket bör sträcka sig minst så långt  utanför arbetsområdet som avståndet är mellan arbetsområdets högsta  punkt och skyddsräcket. Se avståndet X i figur 1 nedan. 
+Figur 1. Illustration av hur långt skyddsräcken minst bör sträcka sig  utanför arbetsområdet, där X är avståndet i takfallets riktning från  arbetsområdets högsta punkt till räcket. 
+77 
+AFS 2023:13 
+Kapitel 5
+Fallskyddsnät 
+71 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att  fallskyddsnät monteras så att fallskyddsnätet med tillfredsställande  säkerhet kan fånga upp fallande personer och att en fallande person som  fångas upp av fallskyddsnätet inte skadas vid kontakt med det, eller med  upphängningsanordningarna. Fallskyddsnätets förmåga att fånga upp en  fallande person, och att bromsa fallet, ska vara tillfredsställande under nätets  hela brukstid. 
+72 § Vid användning av fallskyddsnät ska arbetsgivaren, och andra  ansvariga enligt 2 §, se till att följa tillverkarens skriftliga instruktion och att  fallskyddsnätet bara monteras under överinseende av en kompetent person. 
+Vid monteringen ska en så liten fallhöjd som möjligt eftersträvas. Fallhöjden  får inte vara större än vad fallskyddsnätet enligt instruktionen är avsett för.  Fallhöjden får inte heller vara större än 6 meter. 
+Den fria höjden under fallskyddsnätet ska vara så stor att en person som  faller i nätet inte, när detta töjs, kan skadas genom kontakt med något som  finns under nätet. 
+Allmänna råd 
+Observera att för vissa typer av fallskyddsnät kan den största avsedda  fallhöjden vara lägre för vissa delar av nätet än för nätets mitt. 
+73 § Om ett fallskyddsnät har fångat en fallande person, eller ett föremål  som kan ha gett motsvarande påfrestning på nätet, ska arbetsgivaren, och  andra ansvariga enligt 2 §, se till att nätet därefter bara används om det har  granskats av en kompetent person. Denna person ska ha bedömt att nätet  fortfarande fyller sin funktion. 
+74 § Efter den tidpunkt då en provtråd senast ska provdras enligt den  skriftliga instruktionen, får ett fallskyddsnät med en eller flera provtrådar bara  användas om arbetsgivaren, och andra ansvariga enligt 2 §, har sett till att 1. provtråden har provdragits, 
+2. en bedömning av provningsresultatet enligt instruktionen  har visat att fallskyddsnätet fortfarande ger tillfredsställande  skyddsfunktion, och 
+3. en bedömning av provningsresultatet har visat att fallskyddsnätet  ger tillfredsställande skyddsfunktion fram till nästa provdragning. 
+78 
+AFS 2023:13 
+Kapitel 5
+Ett alternativ till punkt 3 är att tidpunkten efter vilken nätet inte längre ger  tillfredsställande skyddsfunktion har bestämts enligt instruktionen. 
+Provdragningen, bedömningen och bestämningen ska göras av en  kompetent person. 
+75 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska säkerställa att ett  fallskyddsnät 
+1. med bara en provtråd inte används efter den tidpunkt som  bestämts enligt 74 § 3, 
+2. med flera provtrådar inte används efter den tidpunkt som, efter  provdragning av den sista provtråden bestämts enligt 74 § 3, och 3. utan provtråd inte används efter den tidpunkt, då nätet inte  längre ger tillfredsställande skyddsfunktion enligt den skriftliga  instruktionen. 
+76 § Vid arbete när temperaturen är under –10 ºC ska arbetsgivaren, och  andra ansvariga enligt 2 §, välja sådana fallskyddsnät som behåller sin  energiupptagande förmåga även vid den aktuella temperaturen. 
+Andra risker 
+77 § Om det finns områden dit tillträdesrätten är begränsad, ska  arbetsgivaren, och andra ansvariga enligt 2 §, 
+1. förse områdena med anordningar som hindrar obehöriga  arbetstagare från att komma in där, 
+2. vidta lämpliga åtgärder för att skydda de arbetstagare som har  tillstånd att uppehålla sig på riskområdena, och 
+3. tydligt markera riskområdena med skyltar. 
+Allmänna råd 
+Områden med begränsad tillträdesrätt kan vara platser där det sker  sanering av asbest, sprutning av mineralullsisolering, målning med färg  som innehåller organiska lösningsmedel eller härdplastkomponenter.  Det kan också handla om områden med risk för fall, ras eller fallande  föremål eller områden där högt buller eller svetsblänk förekommer. 
+79 
+AFS 2023:13 
+Kapitel 5
+Instabilitet 
+78 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska se till att arbetsplatser,  oavsett var de är belägna, är hållfasta och stabila med hänsyn till 1. det största antal arbetstagare som kan komma att befinna sig på dem, 2. vilka övriga laster de ska kunna bära och hur dessa laster fördelas, och 3. vilken annan påverkan de kan utsättas för under användningen. 
+Arbetsplatsernas stabilitet och hållfasthet ska kontrolleras på lämpligt sätt.  Om arbetsplatser kan höjas eller sänkas ska det efter varje höjning eller  sänkning göras en kontroll av stabiliteten och hållfastheten. 
+79 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska vidta lämpliga  säkerhetsåtgärder för att skydda arbetstagarna mot risker som orsakas av 1. att stabilitet och bärförmåga inte är fullt utbildad under olika  stadier av byggskedet, och 
+2. att konstruktionen har övergående bräcklighet eller instabilitet. 
+Allmänna råd 
+Lämpliga säkerhetsåtgärder kan vara att montera säkerhetsstämp  vid rivning av valvform och tillfälliga stöd för trä-, stål- eller  betongkonstruktioner. Monteringsanvisningarna från leverantören  anger hur stabilitet uppnås. 
+Fallande föremål 
+80 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska spärra av och märka  ut områden där det finns risk för fallande föremål. Om sådana områden  måste beträdas, ska skyddstak, täckta gångar eller liknande anordnas. 
+Inverkan av klimat 
+81 § Arbetsgivaren, och andra ansvariga enligt 2 §, ska vid arbete utomhus  se till att arbetstagarna skyddas mot klimat som kan ha negativ påverkan på  deras hälsa och säkerhet. 
+Allmänna råd 
+Exempel på påverkan av klimat som kan vara negativ är arbete i stark  värme eller kyla, hård blåst, kraftigt eller underkylt regn, snöfall eller  åskväder. För att skydda arbetstagare mot negativ påverkan från  klimatet, kan väderskydd användas, men skyddet kan också vara  personligt i form av täckande kläder. 
+80 

@@ -1,0 +1,1204 @@
+AFS 2023:11 
+Arbetsmiljöverkets  
+föreskrifter och allmänna råd  (AFS 2023:11) om  
+arbetsutrustning och  
+personlig skyddsutrustning – säker användning 
+(Ändrad: t.o.m. AFS 2024:4)
+AFS 2023:11 
+Innehåll 
+1 kap. Allmänna bestämmelser..................................................................... 7 Varför föreskrifterna finns ............................................................................... 7 Systematiskt arbetsmiljöarbete ....................................................................... 7 
+2 kap. Användning av arbetsutrustning ...................................................... 9 Då gäller föreskrifterna .................................................................................... 9 Vem föreskrifterna riktar sig till ..................................................................... 9 Definitioner........................................................................................................ 9 Krav på den arbetsutrustning som används ............................................... 10 Krav vid användning av arbetsutrustning.................................................. 11 
+3 kap. Användning av bildskärmar............................................................ 15 Då gäller föreskrifterna .................................................................................. 15 Vem föreskrifterna riktar sig till ................................................................... 15 Definitioner...................................................................................................... 16 Organisering av bildskärmsarbete ............................................................... 16 Programvara och system ............................................................................... 16 Bildskärm och tangentbord ........................................................................... 17 Belysning och synförhållanden..................................................................... 17 Arbetsplatsen................................................................................................... 18 Synundersökning och glasögon för bildskärmsarbete .............................. 19 Omgivande miljö ............................................................................................ 20 
+4 kap. Användning av truckar..................................................................... 21 Då gäller föreskrifterna .................................................................................. 21 Vem föreskrifterna riktar sig till ................................................................... 21 Definitioner...................................................................................................... 21 Undersökning och riskbedömning............................................................... 23 Krav på en truck eller en utbytbar utrustning till truckar......................... 23 Krav vid användning av truckar och utbytbar utrustning till truckar.... 24 Krav vid användning av truck när det finns särskilda risker................... 25 Kunskaper och tillstånd................................................................................. 25 
+5 kap. Användning av motorkedjesågar och röjsågar.............................. 27 Då gäller föreskrifterna .................................................................................. 27 Vem föreskrifterna riktar sig till ................................................................... 27 Definitioner...................................................................................................... 28 Undersökning och riskbedömning............................................................... 28 Åtgärder........................................................................................................... 29 Kunskaper........................................................................................................ 31
+2 
+AFS 2023:11 
+6 kap. Användning av traktorer.................................................................. 34 Då gäller föreskrifterna...................................................................................34 Vem föreskrifterna riktar sig till....................................................................35 Definitioner......................................................................................................35 Krav på en traktor...........................................................................................36 Krav vid användning av en traktor ..............................................................38 Kunskaper........................................................................................................39 
+7 kap. Användning av stegar och arbetsbockar........................................ 40 Då gäller föreskrifterna...................................................................................40 Vem föreskrifterna riktar sig till....................................................................40 Definitioner......................................................................................................40 Användning .....................................................................................................41 
+8 kap. Användning av ställningar .............................................................. 44 Då gäller föreskrifterna...................................................................................44 Vem föreskrifterna riktar sig till....................................................................44 Definitioner......................................................................................................45 Planering ..........................................................................................................48 Underlag och placering ..................................................................................50 Utformning av ställningar och väderskydd ................................................50 Dimensionering ...............................................................................................56 Uppförande och nedmontering.....................................................................59 Användning .....................................................................................................65 
+9 kap. Användning av trycksatta anordningar......................................... 71 Då gäller föreskrifterna...................................................................................71 Definitioner......................................................................................................73 Undantag..........................................................................................................77 Vem föreskrifterna riktar sig till....................................................................77 Användning av gasflaskor, bärbara brandsläckare och flaskor för  
+andningsapparater..........................................................................................82 Trycksatta anordningar i klass A och B........................................................85 10 kap. Kontroll av trycksatta anordningar............................................. 100 Då gäller föreskrifterna.................................................................................100 Definitioner....................................................................................................102 
+Undantag för vissa cisterner och rörledningar för brandfarlig gas eller  vätska ..............................................................................................................106 Undantag från driftprov...............................................................................106 Undantag från in- och utvändig undersökning ........................................106 Vem föreskrifterna riktar sig till..................................................................107
+3 
+AFS 2023:11 
+Villkor för trycksättning .............................................................................. 108 Övervakning av pannor............................................................................... 118 Kontrollorgan ................................................................................................ 125 
+11 kap. Användning av lyftanordningar och lyftredskap ..................... 128 Då gäller föreskrifterna ................................................................................ 128 Vem föreskrifterna riktar sig till ................................................................. 128 Definitioner.................................................................................................... 128 Undersökning och riskbedömning............................................................. 130 Krav på produkter........................................................................................ 130 Planering och organisation.......................................................................... 131 Stabilitet och markförhållanden.................................................................. 131 Upplyft last.................................................................................................... 132 Lastsäkring..................................................................................................... 132 Användning utomhus .................................................................................. 133 Överlastdon och gränsbrytare..................................................................... 133 Personlig fallskyddsutrustning................................................................... 133 Tillträde till manöverplats ........................................................................... 133 Personlyft....................................................................................................... 133 Kollisionsrisk................................................................................................. 134 Samlyft ........................................................................................................... 134 Val av lyftredskap......................................................................................... 134 Förvaring av lyftredskap ............................................................................. 135 Hissar.............................................................................................................. 135 Lyftanordningar för att lyfta fritt hängande last ...................................... 136 Kunskaper...................................................................................................... 136 Underhåll och kontroll................................................................................. 137 
+12 kap. Krav vid tillfälliga personlyft med kranar eller truckar som inte  är konstruerade för personlyft .................................................................. 140 Då gäller föreskrifterna ................................................................................ 140 Vem föreskrifterna riktar sig till ................................................................. 140 Definitioner.................................................................................................... 140 Undersökning och riskbedömning............................................................. 142 Krav vid användning ................................................................................... 143 Underhåll och kontroll................................................................................. 145 Besiktning ...................................................................................................... 145 13 kap. Besiktning av lyftanordningar och vissa andra tekniska  anordningar ................................................................................................. 149 Då gäller föreskrifterna ................................................................................ 149 Vem föreskrifterna riktar sig till ................................................................. 149
+4 
+AFS 2023:11 
+Definitioner....................................................................................................150 Villkor för användning.................................................................................152 Besiktning.......................................................................................................153 Kontrollorgan.................................................................................................157 Åtgärder efter besiktning .............................................................................158 Dokumentation med mera...........................................................................160 
+14 kap. Användning av pressar och gradsaxar....................................... 162 Då gäller föreskrifterna.................................................................................162 Vem föreskrifterna riktar sig till..................................................................163 Definitioner....................................................................................................164 Allmänna krav...............................................................................................165 Kategoriindelning .........................................................................................166 Underhåll........................................................................................................167 
+15 kap. Val och användning av personlig skyddsutrustning ............... 169 Då gäller föreskrifterna.................................................................................169 Vem föreskrifterna riktar sig till..................................................................169 Definitioner....................................................................................................169 Bedömning och val av personlig skyddsutrustning.................................170 Användning av personlig skyddsutrustning ............................................172 Information och underhåll...........................................................................174 Ytterligare krav vid reparbete .....................................................................175 
+Övergångsbestämmelser............................................................................ 178 Bilaga 1 Tekniska krav för användning av arbetsutrustning................ 181 Bilaga 2 Organisatoriska krav för användning av arbetsutrustning.... 192 Bilaga 3 Tekniska krav för användning av truckar ................................ 197 Bilaga 4 Tekniska krav för användning av motorkedjesågar och röjsågar ....................................................................................................................... 200 Bilaga 5 Organisatoriska krav vid användning av motorkedjesågar och  
+röjsågar......................................................................................................... 203 Bilaga 6 Utbildning för ställningsbyggare ............................................... 211 Bilaga 7 Återkommande kontroll av trycksatta anordningar............... 217 Bilaga 8 Kunskapskrav för pannoperatörer som ska övervaka panna i  
+klass A eller B .............................................................................................. 225 Bilaga 9 Tekniska krav för användning av lyftanordningar och  lyftredskap ................................................................................................... 226 Bilaga 10 Tekniska krav för tillfälliga personlyft med kranar eller  truckar........................................................................................................... 230
+5 
+AFS 2023:11 
+Bilaga 11 Organisatoriska krav vid tillfälliga personlyft med kranar eller  truckar........................................................................................................... 234 Bilaga 12 Besiktning av lyftanordningar och vissa andra tekniska  anordningar ................................................................................................. 238 Bilaga 13 Tekniska krav på pressar och gradsaxar................................. 245 Bilaga 14 Organisatoriska krav vid användning av pressar och  gradsaxar...................................................................................................... 261
+6 
+
+Arbetsmiljöverkets författningssamling 
+Arbetsmiljöverkets föreskrifter och allmänna  råd om arbetsutrustning och personlig  skyddsutrustning – säker användning; 
+(Ändrad: t.o.m. AFS 2024:4)
+1 kap. Allmänna bestämmelser K a p i t e l 1 
+Varför föreskrifterna finns 
+AFS 2023:11 
+
+AFS 2023:11 
+
+1 § Föreskrifterna gäller användning av arbetsutrustning. Syftet  med dessa föreskrifter är att förebygga risk för ohälsa och  olyckor orsakade av användning av arbetsutrustningar. Dessa  föreskrifter finns även för att förbygga risk för ohälsa och olyckor  vid val och användning av personlig skyddsutrustning. 
+Systematiskt arbetsmiljöarbete 
+2 § I arbetsmiljölagen (1977:1160) och i Arbetsmiljöverkets  föreskrifter och allmänna råd (AFS 2023:1) om systematiskt  arbetsmiljöarbete – grundläggande skyldigheter för dig med  arbetsgivaransvar, finns grundläggande bestämmelser om hur  arbetsgivaren ska organisera, genomföra och följa upp sitt  arbetsmiljöarbete för att förebygga risker för ohälsa och olycksfall  i arbetet och uppnå en tillfredställande arbetsmiljö. Vidare  framgår vilka som ska medverka i arbetet. 
+I dessa föreskrifter finns bestämmelser med preciserade krav för  det systematiska arbetsmiljöarbetet, som kan gälla  undersökningar av arbetsmiljön, bedömningar av risker och  åtgärder som ska vidtas. Det finns också preciseringar som kan  
+7 
+AFS 2023:11 
+Kapitel 1 
+gälla särskilda krav på kunskaper eller hur vissa  arbetsmiljöuppgifter ska fördelas.
+8 
+AFS 2023:11 
+Kapitel 2 
+2 kap. Användning av arbetsutrustning K a p i t e l 2 
+Då gäller föreskrifterna 
+1 § Dessa bestämmelser gäller användning av arbetsutrustning i  arbetet. Bestämmelserna i dessa föreskrifter reglerar all  verksamhet där arbetstagarna utför arbete för arbetsgivares  räkning. 
+Vem föreskrifterna riktar sig till 
+2 § Arbetsgivaren ansvarar för att föreskrifterna i detta kapitel  följs. Med arbetsgivare likställs den som hyr in arbetskraft. 
+Den som ensam eller gemensamt med familjemedlem driver  yrkesmässig verksamhet utan anställd, ska följa bestämmelserna  i detta kapitel. Detta följer av 3 kap. 5 § andra stycket  arbetsmiljölagen (1977:1160). Det innebär att den som driver  sådan verksamhet ska följa det som sägs i detta kapitel om  arbetsgivare och om arbetstagare. 
+Av 1 och 3 kap. arbetsmiljölagen följer att föreskrifterna i detta  kapitel under vissa omständigheter kan medföra skyldigheter  även för andra än arbetsgivaren. Det som sägs i detta kapitel  gäller då även dem. 
+Definitioner 
+3 § I detta kapitel har följande begrepp dessa betydelser.
+Begrepp 
+Betydelse
+Användning av  
+arbetsutrustning
+Aktivitet med arbetsutrustning, som  start och stopp, nyttjande, transport,  montering, installation, demontering,  reparation, ändring, service,  
+rengöring och underhåll.
+
+
+
+9 
+AFS 2023:11 
+Kapitel 2 
+Begrepp 
+Betydelse
+Arbetsutrustning 
+Maskin, anordning, verktyg, redskap  eller installation som används i  arbetet.
+EES 
+Europeiska ekonomiska  
+samarbetsområdet.
+Riskområde 
+Område inom arbetsutrustningen  eller i dess omgivning, där  
+utrustningen kan medföra risk för  ohälsa eller olycksfall för någon som  helt eller delvis uppehåller sig där.
+Självgående  
+arbetsutrustning 
+Utrustning med eller utan förare, som  har någon form av maskinell  
+framdrivning av åkrörelsen.
+
+
+
+Krav på den arbetsutrustning som används 
+4 § Undersökning och riskbedömning ska göras för att bedöma  om den arbetsutrustning som väljs och används är lämplig för  det arbete som ska utföras, eller om den har anpassats till det på  lämpligt sätt så att den kan användas med betryggande säkerhet. De riskmoment som föreligger på grund av användningen av  arbetsutrustningen ska undersökas och riskbedömas. 
+5 § Om en arbetsutrustning omfattades av svenska föreskrifter,  som överför Europeiska unionens produktdirektiv till svensk rätt  eller produktförordningar när den släpptes ut på marknaden  eller togs i drift inom EES, gäller följande. Utrustningen får  användas bara om den uppfyller kraven på utformning och  information om användningen, som finns i de föreskrifterna eller  de produktförordningar som gällde för den när den släpptes ut  på marknaden eller togs i drift.
+10 
+AFS 2023:11 
+Kapitel 2 
+Detsamma gäller en arbetsutrustning, som omfattades av  motsvarande föreskrifter i något annat land inom EES. Vad  beträffar märkning, interaktiv programvara och bruksanvisning, gäller vid användningen dock alltid de krav på språk, som följer  av de svenska föreskrifterna. 
+6 § När en arbetsutrustning inte omfattas av 5 §, ska  arbetsgivaren se till att den uppfyller kraven i bilaga 1, när den  används. En arbetsutrustning som bara i vissa avseenden  omfattas av krav enligt 5 §, ska i övrigt uppfylla kraven i bilaga 1,  när den används. 
+Varor som lagligen saluförs i en annan medlemsstat i Europeiska  unionen eller i Turkiet, eller som har sitt ursprung i och som  lagligen saluförs i en Eftastat som är part i EES-avtalet förutsätts  vara förenliga med dessa föreskrifter. Tillämpningen av dessa  föreskrifter omfattas av Europaparlamentets och rådets  förordning (EU) 2019/515 av den 19 mars 2019 om ömsesidigt  erkännande av varor som är lagligen saluförda i en annan  medlemsstat och om upphävande av förordning  
+(EG) nr 764/2008. 
+Krav vid användning av arbetsutrustning 
+Allmänt 
+7 § Arbetsgivaren ska se till att arbetsutrustningen förvaras,  installeras, placeras och används, så att betryggande säkerhet  mot ohälsa och olycksfall finns. 
+8 § En arbetsutrustning får bara användas för det ändamål och  under de förutsättningar den är avsedd eller lämpad för. 
+9 § Arbetsgivaren ska vid användning av arbetsutrustning se till  att kraven i bilaga 2 är uppfyllda.
+11 
+AFS 2023:11 
+Kapitel 2 
+10 § Arbetsgivaren ska fortlöpande kontrollera att  instruktionerna om användning av arbetsutrustningen följs. 
+Ergonomi 
+11 § Arbetsgivaren ska se till att en arbetsutrustning används  med lämpliga arbetsställningar och arbetsrörelser och även i  övrigt på ett ergonomiskt lämpligt sätt. I Arbetsmiljöverkets  
+föreskrifter och allmänna råd (AFS 2023:10) om risker i  arbetsmiljön finns grundläggande bestämmelser om  belastningsergonomi. 
+Information och instruktioner 
+12 § Arbetsgivaren ska se till att alla arbetstagare får nödvändiga  instruktioner och information om 
+1. hur arbetsutrustningen ska användas, 
+2. onormala situationer som kan förutses vid användningen, 3. vilka erfarenheter som man gjort under tidigare  användning av arbetsutrustningen, och 
+4. vilken personlig skyddsutrustning de vid behov ska  använda. 
+De instruktioner som följer med arbetsutrustningen vid  leveransen, ska vara tillgängliga för de arbetstagare som berörs,  och vid behov kompletteras med skriftliga eller muntliga  instruktioner. 
+Information och instruktioner ska vara begripliga, för de  arbetstagare som berörs. 
+Arbetsutrustning med särskilda risker 
+13 § Om en arbetsutrustning kan medföra särskild risk för ohälsa  eller olycksfall, ska arbetsgivaren ordna arbetet så att bara de  som har till uppgift att använda utrustningen får göra detta. De  som sköter kontroll, reparation, ändring, service, rengöring och  underhåll av en sådan anordning, ska vara särskilt utsedda. (AFS 2024:4)
+12 
+AFS 2023:11 
+Kapitel 2 
+14 § Arbetsgivare, som låter en arbetstagare använda en  arbetsutrustning enligt 13 §, ska ha dokumentation över dennas praktiska och teoretiska kunskaper med avseende på säker  användning av utrustningen. 
+Arbetstagare, som inte omfattas av första stycket, men som  använder en arbetsutrustning enligt 13 § på ett gemensamt  arbetsställe, ska ha motsvarande dokumentation tillgänglig på  arbetsstället. 
+Underhåll och kontroll av arbetsutrustning 
+15 § Så länge en arbetsutrustning används, ska arbetsgivaren  säkerställa att utrustningen underhålls, så att den uppfyller  kraven i dessa föreskrifter. När det finns en underhållsjournal till  arbetsutrustningen, ska den hållas aktuell. 
+16 § Om säkerheten beror på hur installationen har utförts ska  arbetsgivaren säkerställa att arbetsutrustningen kontrolleras efter  installation, men innan den tas i bruk första gången, för att  säkerställa att den är korrekt installerad och fungerar väl.  Detsamma gäller när utrustningen har flyttats och monterats på  en ny plats. 
+17 § Arbetsgivaren ska se till att en arbetsutrustning som slits,  åldras eller utsätts för annan negativ påverkan som kan leda till  farliga situationer, genomgår regelbundna kontroller och vid  behov regelbundna prov. 
+18 § Arbetsgivaren ska se till att extra kontroller görs av  säkerheten hos en arbetsutrustning efter 
+1. ombyggnad, 
+2. olycka, 
+3. olika naturfenomen, 
+4. långa stilleståndsperioder, eller
+13 
+AFS 2023:11 
+Kapitel 2 
+5. varje gång något annat ovanligt har inträffat, som kan  påverka säkerheten hos en arbetsutrustning negativt. 
+19 § Resultaten av kontroller enligt 16–18 §§ ska dokumenteras  av arbetsgivaren och en bedömning ska göras, av vilka åtgärder  som behöver vidtas. När en arbetsutrustning används utanför  företaget, ska den åtföljas av ett bevis på när den senaste  kontrollen utfördes.
+14 
+AFS 2023:11 
+Kapitel 3 
+3 kap. Användning av bildskärmar 
+K a p i t e l 3 
+Då gäller föreskrifterna 
+1 § Bestämmelserna i detta kapitel gäller användning av  bildskärm med tillhörande utrustning. De preciserar och  kompletterar föreskrifterna om användning av arbetsutrustning i  kapitel 2. 
+Allmänna råd 
+Föreskrifterna gäller även när arbetet utförs på annan plats  än huvudarbetsplatsen, till exempel från det egna hemmet. 
+2 § Föreskrifterna gäller inte arbete med siffer- eller textvisande  display på mätinstrument, skrivmaskin, kassaregister,  miniräknare eller liknande. De gäller inte heller för kortvarig användning av bärbar utrustning. 
+Vem föreskrifterna riktar sig till 
+3 § Arbetsgivaren ansvarar för att föreskrifterna i detta kapitel  följs. Med arbetsgivare likställs den som hyr in arbetskraft.  Kraven i 14 § gäller inte den som enligt 1 kap. 3 §  arbetsmiljölagen (1977:1160) ska likställas med arbetstagare. 
+Den som ensam eller gemensamt med familjemedlem driver  yrkesmässig verksamhet utan anställd, ska följa bestämmelserna  i detta kapitel. Detta följer av 3 kap. 5 § andra stycket  arbetsmiljölagen. Det innebär att den som driver sådan  verksamhet ska följa det som sägs i detta kapitel om arbetsgivare  och om arbetstagare. 
+Av 1 och 3 kap. arbetsmiljölagen följer att föreskrifterna i detta  kapitel under vissa omständigheter kan medföra skyldigheter  även för andra än arbetsgivaren. Det som sägs i detta kapitel  gäller då även dem.
+15 
+AFS 2023:11 
+Kapitel 3 
+Definitioner 
+4 § I detta kapitel har följande begrepp denna betydelse. 
+Begrepp 
+Betydelse
+Bildskärm 
+Digital skärm som visar bokstäver,  siffror, bilder, tecken och grafik,  oavsett hur bilden framställs.
+
+
+
+Organisering av bildskärmsarbete 
+5 § Arbetsgivaren ska se till att arbete vid bildskärm, som är  starkt styrt eller bundet i fysiskt eller psykiskt avseende eller är  ensidigt upprepat, normalt inte förekommer. 
+6 § Arbetsgivaren ska se till att arbetet om möjligt ordnas så att  den arbetande kan växla till mindre ansträngande  arbetsuppgifter om synbesvär eller andra belastningsbesvär  uppträder till följd av bildskärmsarbete trots åtgärder. Om  arbetet inte kan ordnas på sådant sätt ska arbetsgivaren se till att  den arbetande får tillräckliga pauser så att besvär inte uppstår i  arbetet. 
+Programvara och system 
+7 § Arbetsgivaren ska se till att 
+1. programvara och system är lämpligt utformade med  hänsyn till arbetsuppgiftens krav och användarens  förutsättningar och behov, 
+2. programvaran är lätt att använda och kan anpassas till  användarens kunskaper och erfarenheter, 
+3. systemen så långt som möjligt ger användaren  återkoppling i fråga om det utförda arbetet, och 
+4. systemen visar information i ett format och i en takt, som  är anpassade till användaren.
+16 
+AFS 2023:11 
+Kapitel 3 
+8 § Arbetsgivaren ska, vid utformning, val och ändring av  programvara, ta särskild hänsyn till de ergonomiska principer  som gäller för människans förmåga att uppfatta, förstå och  bearbeta information. 
+9 § Arbetsgivaren får inte kontrollera arbetstagarnas arbetsinsats  via datasystemet, vare sig kvantitativt eller kvalitativt, utan att  arbetstagarna känner till det. 
+Bildskärm och tangentbord 
+10 § Arbetsgivaren ska se till att 
+1. bildskärmar och tangentbord är lätta att läsa av och lätta  att använda, 
+2. så långt det är praktiskt möjligt, skärmen och  tangentbordet kan vridas, vinklas och flyttas efter  användarens behov, 
+3. ljusstyrkan eller kontrasten mellan tecknen och  bakgrunden lätt ska kunna justeras av användaren och  anpassas till den omgivande miljön, 
+4. skärmen är fri från reflexer och speglingar, som kan  orsaka besvär för användaren, 
+5. tangentbordet har en matt yta, för att undvika reflexer, 6. det som visas på skärmen och tangentbordet har god  läsbarhet med tillräcklig skärpa, storlek och kontrast, 7. bilden på skärmen är fri från besvärande flimmer och  annan instabilitet, och 
+8. avstånden mellan tecken och rader är tillräckligt stora för  god läsbarhet. 
+Belysning och synförhållanden 
+11 § Arbetsgivaren ska se till att allmänbelysningen ger lämplig  kontrast mellan skärmen och den omgivande miljön, så att det  inte blir svårt att läsa på skärmen. Syn- och  
+belysningsförhållanden får inte orsaka olämpliga 
+arbetsställningar.
+17 
+AFS 2023:11 
+Kapitel 3 
+Allmänbelysningen ska anpassas till arbetstagarens  förutsättningar, synkraven i bildskärmsarbetet och arbetets art. 
+Om det behövs, ska det finnas platsbelysning. Den ska vara  justerbar och får inte blända. 
+Arbetsgivaren ska se till att bildskärmsarbetsplatsen är utformad  så att den inte har besvärande bländning och reflexer från den  omgivande miljön. Det ska man uppnå genom att samordna  utformningen av arbetsplatsen och lokalen med placeringen av  de artificiella ljuskällorna och deras tekniska egenskaper. Fönster  ska ha en justerbar anordning för att skärma av dagsljus som  lyser in på arbetsplatsen. Arbetsytor ska vara lågreflekterande där det behövs för att undvika besvärande reflexer. 
+Allmänna råd 
+Särskilt i lokaler med flera arbetsplatser är ljusfördelning  och avbländning av armaturen viktig. Besvärande  bländning och reflexer kan uppstå av artificiella ljuskällor, fönster och andra öppningar, genomskinliga eller  halvgenomskinliga väggar, och ljusa inventarier och väggar. 
+Arbetsplatsen 
+12 § Arbetsgivaren ska se till att arbetsplatsen är dimensionerad,  utformad och utrustad så att arbetstagaren kan variera och arbeta  med bekväma arbetsställningar och arbetsrörelser. I  Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:10)  om risker i arbetsmiljön finns grundläggande bestämmelser om  belastningsergonomi. 
+Bildskärmen, tangentbordet eller motsvarande, ska placeras så  att arbetshöjden och blickvinkeln till skärmen blir lämplig och  passar användarens kroppsmått.
+18 
+AFS 2023:11 
+Kapitel 3 
+Arbetsbord och arbetsytor ska vara tillräckligt stora, så att skärm,  tangentbord, datormus, dokument och övrig utrustning kan  placeras flexibelt. Arbetstagaren ska kunna avlasta armar och  händer på bordsytan. 
+Om man använder manushållare, ska den vara stabil och  reglerbar och placeras så att man undviker olämpliga huvud- och  ögonrörelser. 
+13 § Arbetsstolen ska vara stadig, ge möjlighet till rörelsefrihet  och en bekväm arbetsställning. Stolen ska vara lätt att ställa in.  Sitsen och ryggstödet ska vara reglerbara i höjdled och  ryggstödet ska kunna vinklas. 
+Synundersökning och glasögon för bildskärmsarbete 
+14 § Arbetsgivaren ska erbjuda arbetstagare, som normalt ska  arbeta vid bildskärm mer än en timme under arbetsdagen, att  genomgå en synundersökning. En person med tillräckliga  kvalifikationer ska utföra undersökningen. 
+Om arbetstagaren nyligen har genomgått en synundersökning  hos en annan arbetsgivare, ska en ny synundersökning  genomföras bara om 
+1. det finns nya eller förändrade synkrav i det aktuella  bildskärmsarbetet, eller 
+2. arbetstagarens syn har förändrats sedan den förra  synundersökningen. 
+Arbetsgivaren ska därefter ordna synundersökningar  regelbundet, samt när arbetstagaren uppger besvär som kan ha  samband med synkraven i arbetet. 
+Arbetsgivaren ska stå för kostnaderna för synundersökningen.  Denna ska även bekosta glasögon om
+19 
+AFS 2023:11 
+Kapitel 3 
+1. synundersökningen visar att arbetstagaren behöver  särskilda glasögon, som är utprovade för  
+bildskärmsarbetet, och 
+2. glasögon som arbetstagaren normalt använder, inte kan  användas. 
+Om synundersökningen visar att det behövs en kompletterande  undersökning av en ögonläkare på grund av synkraven i arbetet  med bildskärm, ska arbetsgivaren ordna en sådan undersökning. 
+Allmänna råd 
+Synundersökningen kan man dela upp i två steg: 1. Synscreening för att bedöma om arbetstagaren  behöver en synkorrektion. 
+2. Fullständig synundersökning för de arbetstagare  som behöver synkorrektion. 
+En person med tillräckliga kvalifikationer för att utföra en  synscreening kan till exempel vara personal från  företagshälsovården med utbildning i synundersökning. 
+En fullständig synundersökning omfattar bestämning av  synskärpa och eventuell ordination av särskilda  
+arbetsglasögon. Det är viktigt att ta hänsyn till synkraven i  den aktuella arbetssituationen. En person med tillräckliga  kvalifikationer för att utföra en fullständig  
+synundersökning, är ögonläkare eller optiker med  kunskaper inom synergonomi och arbetsmedicin. 
+Omgivande miljö 
+15 § Arbetsgivaren ska se till att buller, värme, kemiska ämnen  samt elektriska och magnetiska fält från bildskärmen och den  tillhörande utrustningen, inte stör eller orsakar besvär eller  obehag, som är en risk för arbetstagarens säkerhet och hälsa.
+20 
+AFS 2023:11 
+Kapitel 4 
+4 kap. Användning av truckar 
+K a p i t e l 4 
+Då gäller föreskrifterna 
+1 § Bestämmelserna i detta kapitel gäller användning av truckar  och utbytbar utrustning till dessa. De preciserar och kompletterar  föreskrifterna om användning av arbetsutrustning i kapitel 2. 
+Föreskrifterna gäller, med undantag av 6 §, även andra mobila  maskiner, när de används med gaffelarmar eller annat  lyftaggregat med liknande funktion på plana och hårdgjorda  underlag, och för annat ändamål än byggnads- och  anläggningsarbete. 
+Vem föreskrifterna riktar sig till 
+2 § Arbetsgivaren ansvarar för att föreskrifterna i detta kapitel  följs. Med arbetsgivare likställs den som hyr in arbetskraft. 
+Den som ensam eller gemensamt med familjemedlem driver  yrkesmässig verksamhet utan anställd, ska följa bestämmelserna  i detta kapitel. Detta följer av 3 kap. 5 § andra stycket  arbetsmiljölagen (1977:1160). Det innebär att den som driver  sådan verksamhet ska följa det som sägs i detta kapitel om  arbetsgivare och om arbetstagare. 
+Av 1 och 3 kap. arbetsmiljölagen följer att föreskrifterna i detta  kapitel under vissa omständigheter kan medföra skyldigheter  även för andra än arbetsgivaren. Det som sägs i detta kapitel  gäller då även dem. 
+Definitioner 
+3 § I dessa föreskrifter har följande begrepp dessa betydelser.21 
+AFS 2023:11 
+Kapitel 4 
+Begrepp 
+Betydelse
+Ledtruck 
+Truck avsedd att manövreras av en  gående förare. En ledtruck kan ha en  plattform, som föraren tillfälligt kan  åka på.
+Sysselsatta 
+Med sysselsatta avses, oavsett om de  arbetar heltid eller deltid: 
+− anställda arbetstagare, och 
+− inhyrd arbetskraft, jämför 3  kap. 12 § andra stycket  
+arbetsmiljölagen (1977:1160). 
+I fråga om verksamhet utan anställda  arbetstagare (jämför 3 kap. 5 §  arbetsmiljölagen) avses med  
+sysselsatta, oavsett om de arbetar  heltid eller deltid: 
+− de personer som driver  
+verksamheten, och 
+− inhyrd arbetskraft. 
+Den aktuella fysiska personens  personnummer respektive juridiska  personens organisationsnummer  avgör vilka personer som ska anses  ingå i verksamheten.
+Truck 
+Självgående arbetsutrustning avsedd  att med gaffelarmar eller andra  lyftaggregat med liknande funktion  lyfta, sänka och bära gods inom ett  begränsat område och huvudsakligen  användas på plana och hårdgjorda  underlag.
+
+
+
+22
+AFS 2023:11 
+Kapitel 4 
+Begrepp 
+Betydelse
+Utbytbar utrustning 
+Utrustning som ändrar truckens  funktion och som är tillverkad för att  användaren ska kunna montera den  på gafflar eller en gaffelvagn.
+Åktruck 
+Truck avsedd att manövreras av en  åkande förare.
+
+
+
+Undersökning och riskbedömning 
+4 § Vid undersökning och riskbedömning av arbeten där truckar  används, ska arbetsgivaren alltid minst uppmärksamma 1. egenskaperna hos trucken och eventuell utbytbar  utrustning till trucken, 
+2. risken att föraren blir belastad på ett skadligt eller onödigt  tröttande sätt, 
+3. miljön där man ska använda trucken, 
+4. hur man ska använda trucken, 
+5. behovet av skyddsutrustning, 
+6. behovet av skötsel och underhåll av trucken och eventuell  utbytbar utrustning till truckar, och 
+7. arbetstagarnas praktiska och teoretiska kunskaper. Krav på en truck eller en utbytbar utrustning till truckar 
+5 § Arbetsgivaren ska se till att kraven i 2 kap. 5 § är uppfyllda  när en truck eller en utbytbar utrustning till truckar används. 
+6 § Arbetsgivaren ska se till att om kraven i 2 kap. 5 § inte är  tillämpbara, ska en truck eller en utbytbar utrustning till truckar  uppfylla kraven i bilaga 3 när den används. 
+En truck, som bara i vissa avseenden omfattas av 2 kap. 5 §, ska i  övrigt uppfylla kraven i bilaga 3 när den används.
+23 
+AFS 2023:11 
+Kapitel 4 
+Varor som lagligen saluförs i en annan medlemsstat i Europeiska  unionen eller i Turkiet, eller som har sitt ursprung i och som  lagligen saluförs i en Eftastat som är part i EES-avtalet förutsätts  vara förenliga med dessa föreskrifter. Tillämpningen av dessa  föreskrifter omfattas av Europaparlamentets och rådets  förordning (EU) 2019/515 av den 19 mars 2019 om ömsesidigt  erkännande av varor som är lagligen saluförda i en annan  medlemsstat och om upphävande av förordning  
+(EG) nr 764/2008. 
+Krav vid användning av truckar och utbytbar utrustning  till truckar 
+7 § Arbetsgivaren ska se till att truckar bara används i miljöer  som är lämpade för det. 
+Allmänna råd 
+Lastenheter kan behöva förankras, så att de inte glider på  varandra. Exempel på förebyggande åtgärder är lämpliga  barriärer, som kan förhindra att en truck störtar ned från en  lastkaj. Exempel på miljöer som inte är lämpade för  användning av truckar, kan vara där det finns risk att  truckföraren klämmer sig eller arbetar i olämpliga  arbetsställningar på grund av höga pallställ och ständigt  ändrade färdriktningar. 
+8 § Arbetsgivaren ska, om det är möjligt, avgränsa trucktrafik  från gående och annan verksamhet där personer befinner sig. Om det inte är möjligt, ska arbetsgivaren förebygga risk för  personskador och då särskilt uppmärksamma områden med  begränsat siktfält och områden där truckar kan köra utan att  gående blir varnade innan de kommer in på området. 
+9 § Arbetsgivaren ska organisera arbeten med truck så att föraren  alltid har tillräcklig sikt i körriktningen från truckens förarplats.
+24 
+AFS 2023:11 
+Kapitel 4 
+10 § Arbetsgivaren ska se till att en utbytbar utrustning till  truckar bara används tillsammans med den truck eller de truckar  som den är avsedd för. 
+11 § Arbetsgivaren ska se till att en truck inte kommer i rullning, när den står stilla, samt att lasten och rörliga maskindelar säkras  vid behov. 
+12 § Om trucken har ett bälte eller någon annan anordning för att  hålla kvar föraren på förarplatsen, ska arbetsgivaren se till att  föraren använder det, om det inte är uppenbart onödigt enligt  riskbedömningen. 
+13 § Arbetsgivaren ska se till att den som kör en truck eller  arbetar med godshantering inom ett område där man kör truck  använder skyddsskor. 
+14 § Arbetsgivaren ska se till att föraren och eventuella  passagerare bara åker på en sådan plats på trucken, som är  särskilt avsedd för detta. 
+Krav vid användning av truck när det finns särskilda  risker 
+15 § Arbetsgivaren ska se till att flak och eventuella lastbryggor  är säkrade, så att de inte kan röra sig av misstag, när man lastar  eller lossar på ett fordonsflak med en truck. 
+Kunskaper och tillstånd 
+16 § Arbetsgivaren ska se till att den som använder en truck, har  dokumenterade teoretiska och praktiska kunskaper för att  använda trucken säkert. 
+17 § Den som använder en truck ska ha ett skriftligt tillstånd för  att få använda trucken. Arbetsgivaren ska utfärda tillståndet. Om 
+25 
+AFS 2023:11 
+Kapitel 4 
+den som kör trucken är inhyrd för att använda en truck i  inhyrarens verksamhet, ska istället inhyraren utfärda tillståndet.  Tillståndet ska vara personligt och upplysa om vilka typer av  truckar och vilka arbetsuppgifter det gäller för. 
+På ett gemensamt arbetsställe ska den samordningsansvariga ha  rutiner för att kontrollera att den som använder en truck har ett  giltigt tillstånd från sin arbetsgivare eller inhyrare. Den  samordningsansvariga ska även informera om hur man säkert  använder en truck på arbetsstället. 
+Den arbetsgivare, som i strid med kraven i första stycket låter en  eller flera använda en truck, ska betala en sanktionsavgift. I  antalet sysselsatta inräknas personer på verksamhetens samtliga  arbetsställen. Det är antalet sysselsatta dagen för överträdelsen  som ska utgöra underlag för beräkningen av avgiften. 
+Den lägsta avgiften är 15 000 kronor och den högsta avgiften är  150 000 kronor. För den som har 500 eller fler sysselsatta är  avgiften 150 000 kronor. För den som har färre än 500 sysselsatta  ska sanktionsavgiften beräknas enligt följande: 
+Avgift = 15 000 kronor + (antal sysselsatta – 1) × 271 kronor. Summan ska avrundas nedåt till närmaste hela hundratal.
+26 
+AFS 2023:11 
+Kapitel 5 
+5 kap. Användning av motorkedjesågar och  röjsågar 
+K a p i t e l 5 
+Då gäller föreskrifterna 
+1 § Bestämmelserna i detta kapitel gäller användning av  motorkedjesågar och röjsågar. De preciserar och kompletterar  föreskrifterna om användning av arbetsutrustning i 2 kap. 
+Föreskrifterna gäller inte användning av motorkedjesågar på  skaft eller med riggrör, eller sådana tekniska anordningar, där en  motorkedjesåg ingår som en del av anordningen. 
+Vem föreskrifterna riktar sig till 
+2 § Arbetsgivaren ansvarar för att föreskrifterna i detta kapitel  följs. Med arbetsgivare likställs den som hyr in arbetskraft. 
+Den som ensam eller gemensamt med familjemedlem driver  yrkesmässig verksamhet utan anställd, ska följa bestämmelserna  i detta kapitel. Detta följer av 3 kap. 5 § andra stycket  arbetsmiljölagen (1977:1160). Det innebär att den som driver  sådan verksamhet ska följa det som sägs i detta kapitel om  arbetsgivare och om arbetstagare. Den som driver sådan  verksamhet behöver dock inte följa bestämmelserna i 4–6 §§, bilaga 5 punkt 2 om ensamarbete, punkt 3.1 och 4.5 första  meningen om instruktioner för arbete, och punkt 4.5 andra  meningen om kommunikation mellan arbetstagare, samt 15– 17 §§. 
+Undantagen i andra stycket gäller dock inte för den som  använder en motorkedjesåg eller en röjsåg på ett gemensamt  arbetsställe eller inom byggnads- och anläggningsarbete. 
+Av 1 och 3 kap. arbetsmiljölagen följer, att föreskrifterna i detta  kapitel under vissa omständigheter kan medföra skyldigheter 
+27 
+AFS 2023:11 
+Kapitel 5 
+även för andra än arbetsgivaren. Det som sägs i detta kapitel  gäller då även dem. 
+Definitioner 
+3 § I detta kapitel har följande begrepp dessa betydelser. 
+Begrepp 
+Betydelse
+Motorkedjesåg 
+Motordriven maskin som bärs av  användaren. Maskinen har ett  
+skärande verktyg, som består av en  ändlös sågkedja som löper och styrs i  ett för sågkedjan avsett spår i ett blad  (också kallat svärd). En sådan maskin  kan vara förbränningsmotordriven,  eldriven eller drivas med någon form  av tryckmedium.
+Röjsåg 
+Motordriven maskin som bärs av  användaren. Maskinen har ett riggrör, som innesluter en drivaxel och kan  med en klinga eller ett liknande  skärverktyg användas för att bland  annat röja gräs, ogräs, buskar, små  träd och liknande vegetation.  
+Maskinen har förutom drivaxeln och  skärverktyget även en drivenhet.
+
+
+
+Undersökning och riskbedömning 
+4 § Arbetsgivaren ska, i sin undersökning av arbetsförhållandena  och i sin riskbedömning av verksamheter, där en motorkedjesåg  eller en röjsåg ska användas, särskilt uppmärksamma 
+1. arbetstagarnas praktiska och teoretiska kunskaper, 2. risker i samband med in- och uthyrning av arbetskraft, 3. underhållet av motorsågar och röjsågar, 
+4. skyddsutrustningen,
+28 
+AFS 2023:11 
+Kapitel 5 
+5. instruktionerna från tillverkaren, 
+6. särskilt riskfyllda arbeten, och 
+7. risker vid ensamarbete. 
+Åtgärder 
+5 § Bestämmelserna i 6–18 §§ ska alltid vara uppfyllda, oavsett  riskbedömningens utfall. 
+6 § Arbetsgivaren ska följa upp riskbedömningen och de  vidtagna åtgärderna och vid behov regelbundet uppdatera dem,  för att säkerställa att riskbedömningen är riktig och att  åtgärderna gett förväntat resultat. 
+Krav på produkter 
+7 § Arbetsgivaren ska se till att kraven i 2 kap. 5 § är uppfyllda  när en motorkedjesåg eller röjsåg används. 
+8 § Arbetsgivaren ska se till att en motorkedjesåg eller en röjsåg  som inte omfattas av 2 kap. 5 §, uppfyller kraven i bilaga 4, när  den används. En motorkedjesåg eller en röjsåg som bara i vissa  avseenden omfattas av 2 kap. 5 §, ska i övrigt uppfylla kraven i  bilaga 4, när den används. 
+Varor som lagligen saluförs i en annan medlemsstat i Europeiska  unionen eller i Turkiet, eller som har sitt ursprung i och som  lagligen saluförs i en Eftastat som är part i EES-avtalet förutsätts  vara förenliga med dessa föreskrifter. Tillämpningen av dessa  föreskrifter omfattas av Europaparlamentets och rådets  förordning (EU) 2019/515 av den 19 mars 2019 om ömsesidigt  erkännande av varor som är lagligen saluförda i en annan  medlemsstat och om upphävande av förordning  
+(EG) nr 764/2008.
+29 
+AFS 2023:11 
+Kapitel 5 
+Regler vid arbete 
+9 § Arbetsgivaren ska se till att kraven i bilaga 5 är uppfyllda, vid  arbete med en motorkedjesåg eller en röjsåg. 
+10 § Arbetsgivaren ska se till att den som arbetar med en  motorkedjesåg eller en röjsåg, skyddas mot skador från fallande  eller flygande föremål, olja, avgaser, buller, vibrationer, sågkedjan, klingan och tillbehör som monteras på  motorkedjesågen eller röjsågen. 
+11 § Arbetsgivaren ska se till att motorkedjesågar och röjsågar  kontrolleras regelbundet. Kontrollen ska utföras av en person  med god kännedom om sågens säkerhetsanordningar, användning, och skötsel. 
+Arbetsgivaren ska se till att sågkedjor, klingor och tillbehör  kontrolleras och underhålls fortlöpande under arbetet. Kontroller  ska utföras dagligen på de motorkedjesågar eller röjsågar som  används. 
+Arbetsgivaren ska se till att kassera en sliten eller skadad  sågkedja, klingor med synliga sprickor eller andra skador och ett  klingskydd som är skadat på ett sådant sätt att det inte uppfyller  sin funktion på fullgott sätt. 
+Om det vid en kontroll eller under arbetet med en motorkedjesåg  eller en röjsåg upptäcks någon skada eller brist, som kan  äventyra säkerheten, får motorkedjesågen eller röjsågen inte  användas vidare, förrän skadan reparerats eller bristen åtgärdats. 
+12 § Arbetsgivaren ska se till att den som arbetar med en  motorkedjesåg använder hörselskydd, skyddshjälm, ögonskydd  eller ansiktsskydd mot skador genom mekanisk påverkan, skyddskängor eller skyddsstövlar med sågskydd mot skador från  motorsågskedjan, skyddsbyxa eller byxholkar med sågskydd mot 
+30 
+AFS 2023:11 
+Kapitel 5 
+skador från motorsågskedjan, arbetshandskar och varselkläder  på överkroppen. 
+Bestämmelserna i första stycket gäller inte, när en motorkedjesåg  används till andra arbeten än fällning eller upparbetning av träd,  om riskbedömningen visar att en viss typ av skyddsutrustning  inte behövs. 
+Bestämmelsen i första stycket om varselkläder på överkroppen gäller inte vid krigsliknande övningar som Försvarsmakten utför. 
+13 § Arbetsgivaren ska se till att den som arbetar med en röjsåg  använder hörselskydd, ögonskydd, skyddshjälm om  röjningsstammarna är högre än två meter, arbetshandskar, skyddskängor eller skyddsstövlar med sågskydd och varselkläder på överkroppen. 
+14 § Arbetsgivaren ska se till att den som arbetar med en  motorkedjesåg eller en röjsåg har med sig första förband. 
+15 § Arbetsgivaren ska se till att det, nära en arbetsplats där en  förbränningsmotordriven kedjesåg eller en röjsåg används, vid  behov finns ett rum (motorsågsrum) för kontroll, vård och  förvaring av sågar. Där ska också finnas möjlighet till förvaring  av mindre mängder smörj- och drivmedel. I rummet ska det  finnas anordningar för uppvärmning och belysning.  Anordningarna ska vara utförda och placerade så att risken för  brand minimeras. Rummet ska vara skilt från personalutrymmen  med en tät vägg utan dörr eller lucka. 
+Kunskaper 
+16 § Arbetsgivaren ska se till att den som arbetar med en  motorkedjesåg har avlagt ett teoretiskt och praktiskt prov med  godkänt resultat, som visar att personen har kunskaper, som  motsvarar de arbetsuppgifter som ska utföras.
+31 
+AFS 2023:11 
+Kapitel 5 
+Det ska finnas dokumentation, som styrker att den som arbetar  med en motorkedjesåg har avlagt ett teoretiskt och praktiskt prov  för motorsågsanvändning med godkänt resultat. 
+Den som låter någon använda en motorkedjesåg i strid med  kraven i andra stycket, ska betala en sanktionsavgift om  10 000 kronor per användare. 
+Allmänna råd 
+Exempel på vad som i regel bör ingå i utbildningen för  arbete med en motorkedjesåg, är kunskaper om 
+1. underhåll och kontroll av sågar, 
+2. arbetsutrustningens egenskaper, 
+3. lämplig personlig skyddsutrustning, 
+4. hur utrustningen ska användas, 
+5. olika typer av redskap för trädfällning och 
+nedtagning av fastfällda träd, 
+6. moment som ingår vid trädfällning och  
+upparbetning av träd, 
+7. teknik och metoder vid fällning av svårfällda träd, 8. metoder för nedtagning av hängande och fastfällda  träd, 
+9. arbete i stormfälld skog, och 
+10. riskbedömningar vid olika arbetssituationer. 
+Det är viktigt att utbildningen också omfattar instruktioner  och träningsmoment, som är anpassade till de speciella  arbetsuppgifterna, så att riskerna vid användning av  motorkedjesåg blir kända och olycksfall därigenom kan  undvikas. 
+Det är lämpligt att proven görs om vart femte år.
+32 
+AFS 2023:11 
+Kapitel 5 
+Dokumentationen, som visar på att den arbetstagare som  använder motorkedjesåg har genomgått proven med  godkänt resultat behöver inte finnas tillgänglig hos  arbetstagaren. Dokumentationen ska på begäran från  Arbetsmiljöverket kunna visas upp. Exempel på  
+dokumentation som avses i 16 § andra stycket kan vara ett  så kallat motorsågskörkort eller något annat  
+utbildningsbevis. 
+17 § Arbetsgivaren ska se till att den som arbetar med en röjsåg,  har genomgått en utbildning för den typ av arbete som ska  utföras och har kunskaper för det arbetet. Utbildningen ska ta  upp de olycksrisker, som förekommer i arbetet.
+33 
+AFS 2023:11 
+Kapitel 6 
+6 kap. Användning av traktorer 
+K a p i t e l 6 
+Då gäller föreskrifterna 
+1 § Bestämmelserna i detta kapitel gäller jordbruks- och  skogsbrukstraktorer, som är konstruerade och tillverkade för en  hastighet mellan 6 och 40 kilometer i timmen. De preciserar och  kompletterar föreskrifterna om användning av arbetsutrustning i  kapitel 2. 
+Bestämmelserna i 4 och 7–9 §§ gäller inte för en traktor 1. för vilken bestämmelserna i Vägverkets föreskrifter  (VVFS 1993:1) om traktorer, Vägverkets föreskrifter  (VVFS 2003:26) om traktorer, Transportstyrelsens  föreskrifter och allmänna råd (TSFS 2012:97) om traktorer  gällde eller ett EU-typgodkännande har blivit utfärdat,  när den släpptes ut på marknaden eller togs i drift inom  EES, eller 
+2. för vilken bestämmelser i Arbetsmiljöverkets föreskrifter  (AFS 2008:3) om maskiner eller Arbetsmiljöverkets  föreskrifter (AFS 2023:4) om produkter – maskiner gällde,  eller för vilken motsvarande bestämmelser i något annat  land än Sverige inom EES gällde, när man släppte ut den  på marknaden eller tog den i drift. 
+Bestämmelserna i 8 § och 9 § 1, gäller inte traktorer som tagits i  bruk före den 1 juli 1986. 
+Bestämmelserna i 9 § 2 och 4, gäller inte traktorer som tagits i  bruk före den 1 januari 1990. 
+Varor som lagligen saluförs i en annan medlemsstat i Europeiska  unionen eller i Turkiet, eller som har sitt ursprung i och som  lagligen saluförs i en Eftastat som är part i EES-avtalet förutsätts  vara förenliga med dessa föreskrifter. Tillämpningen av dessa föreskrifter omfattas av Europaparlamentets och rådets 
+34 
+AFS 2023:11 
+Kapitel 6 
+förordning (EU) 2019/515 av den 19 mars 2019 om ömsesidigt  erkännande av varor som är lagligen saluförda i en annan  medlemsstat och om upphävande av förordning  
+(EG) nr 764/2008. 
+Vem föreskrifterna riktar sig till 
+2 § Arbetsgivaren ansvarar för att föreskrifterna i detta kapitel  följs. Med arbetsgivare likställs den som hyr in arbetskraft. 
+Den som ensam eller gemensamt med familjemedlem driver  yrkesmässig verksamhet utan anställd, ska följa bestämmelserna  i detta kapitel. Detta följer av 3 kap. 5 § andra stycket  arbetsmiljölagen (1977:1160). Det innebär att den som driver  sådan verksamhet ska följa det som sägs i detta kapitel om  arbetsgivare och om arbetstagare. 
+Av 1 och 3 kap. arbetsmiljölagen följer att föreskrifterna i detta  kapitel under vissa omständigheter kan medföra skyldigheter  även för andra än arbetsgivaren. Det som sägs i detta kapitel  gäller då även dem. 
+Definitioner 
+3 § I dessa föreskrifter har följande begrepp dessa betydelser.
+Begrepp 
+Betydelse
+Traktor 
+Motordrivet fordon med minst två  axlar, som är försett med hjul  
+och/eller band och vars  
+huvuduppgift grundas på dess  dragkraft. Fordonet ska vara särskilt  konstruerat för att dra, skjuta, bära  eller driva redskap, maskiner eller  släpvagnar avsedda för jordbruk och 
+
+
+
+35 
+AFS 2023:11 
+Kapitel 6 
+Begrepp 
+Betydelse
+
+
+skogsbruk. Fordonet kan vara utrustat  för transport av gods och passagerare. 
+Tjänstevikt 
+Fordonets vikt inklusive bränsle,  smörjolja, vatten och verktyg. I  tjänstevikten inräknas även förarens  vikt som ska anses vara 70 kg.  Fordonets överrullningsskydd räknas  inte in i tjänstevikten.
+Överrullningsskydd 
+Förarhytt eller skyddsram avsedd att  skydda föraren om fordonet välter  eller överstegras.
+
+
+
+Krav på en traktor 
+4 § En hjulburen traktor med en tjänstevikt av 600 kg eller mer  ska ha ett överrullningsskydd. Överrullningsskyddet ska vara så  konstruerat, att föraren och andra personer som är på traktorn, har tillräckligt skyddsutrymme, om traktorn välter eller  överstegrar. Andra personer får vara på traktorn bara om  traktorn är utrustad för detta. 
+5 § Arbetsgivaren ska se till att ett överrullningsskydd på en  traktor undersöks regelbundet, med avseende på sprickbildning  eller andra skador. 
+Är överrullningsskyddet så skadat att hållfastheten påverkas, får  traktorn inte användas, förrän detta bytts ut eller reparerats. Ett  överrullningsskydd som har blivit väsentligt deformerat, ska kasseras. 
+Ett överrullningsskydd ska efter reparation ha minst samma  hållfasthet som före skadan.
+36 
+AFS 2023:11 
+Kapitel 6 
+6 § Vid förarplatsen får inte finnas oskyddade trycksatta  hydraulslangar från maskiner eller redskap som är kopplade  till traktorn. 
+7 § En förarhytt ska in- och utvändigt vara utförd så att  utstående delar, hörn och kanter inte medför skaderisker.  Förarhyttens dörrar får heller inte oavsiktligt kunna gå upp eller  slå igen. 
+8 § Förarsitsen ska vara utformad så att föraren inte utsätts för  skadlig belastning. Sitsen ska vara väl förankrad och placerad på  ett sådant avstånd från väggar, tak och liknande ytor, att föraren  kan arbeta obehindrat och utan risk för att skada sig. Sitsen ska  gå att reglera och vara vibrationsdämpande. 
+9 § Arbetsgivaren ska se till att en traktor bara används om 1. motorn kan startas via startmotor, bara om  
+kraftöverföringen till drivhjulen är frånkopplad, 
+2. differentialspärren har en indikator, som tydligt anger när  spärren är inkopplad, om traktorn har en  
+differentialspärr. 
+3. separata bromsfunktioner för höger och vänster hjul kan  kopplas ihop, och 
+4. ett manöverorgan utanför förarhytten för lägesreglering  av trepunktskoppling är utfört och placerat så att ingen  kan skadas, när redskap kopplas till och från traktorn,  samt att manöverorganet är utfört som ett hålldon. 
+10 § Bestämmelserna om överrullningsskydd i 4 § gäller inte för  en traktor 
+1. som man kör inomhus och när rumshöjden är så låg att  överrullningsskyddet inte får plats, 
+2. som man använder utan att hjulen rullar, 
+3. som man använder i fruktodling, eller
+37 
+AFS 2023:11 
+Kapitel 6 
+4. som man kör kortare sträckor i direkt anslutning till  någon av de användningar som anges i 1–3. 
+11 § Arbetsgivaren ska se till att en traktor, som man använder  vid ett skogsarbete, har skydd, som hindrar att föremål kan  tränga in till förarplatsen. 
+12 § Arbetsgivaren ska se till att förarplatsen går att värma upp, om traktorn används under den kalla årstiden. Detta krav gäller  inte för kortare arbetspass. 
+13 § Arbetsgivaren ska se till att förarhytten har en taklucka, om  man kör en traktor med förarhytt på isbelagt vatten eller på en  fryst mosse. 
+14 § Arbetsgivaren ska se till att det går att hålla en lämplig  temperatur i förarhytten vid varm väderlek. 
+Krav vid användning av en traktor 
+15 § Arbetsgivaren ska se till att lösa föremål inte ligger på golvet  runt förarplatsen. 
+16 § Arbetsgivaren ska se till att föraren säkrar traktorn och de  maskiner eller redskap som man kopplat till traktorn, så att  traktorn inte kan komma i rörelse av misstag, efter det att föraren  har lämnat förar- eller manöverplatsen. 
+17 § Arbetsgivaren ska se till att ingen person är under de  redskap som sitter i trepunktskopplingen eller under en  frontlastare, om de är i ett upplyft läge och inte är säkrade. 
+18 § Arbetsgivaren ska se till att maskiner och redskap som  kopplas till en traktor är anpassade till denna, så att  kombinationen är en säker enhet.
+38 
+
+Kunskaper 
+AFS 2023:11 Kapitel 6 
+
+19 § Arbetsgivaren ska se till att den som arbetar med en traktor 1. känner till traktorns konstruktion, dess  
+säkerhetsanordningar och egenskaper för att kunna  använda den på ett säkert sätt, 
+2. använder lämplig arbetsteknik för att undvika ohälsa och  olycksfall, och 
+3. tar hänsyn till de risker för ohälsa och olycksfall som  terrängen och väderleken kan medföra.
+39 
+AFS 2023:11 
+Kapitel 7 
+7 kap. Användning av stegar och arbetsbockar K a p i t e l 7 
+Då gäller föreskrifterna 
+1 § Bestämmelserna i detta kapitel gäller vid användning av  stegar och arbetsbockar. De preciserar och kompletterar  föreskrifterna om användning av arbetsutrustning i kapitel 2. 
+Bestämmelserna i 4, 6 och 7 §§ gäller inte vid räddningstjänst, som staten eller kommunerna ansvarar för enligt 2 § lagen  (2003:778) om skydd mot olyckor. De gäller inte heller de  övningar som behöver genomföras, för att sådan räddningstjänst  ska kunna utföras. 
+Vem föreskrifterna riktar sig till 
+2 § Arbetsgivaren ansvarar för att föreskrifterna i detta kapitel  följs. Med arbetsgivare likställs den som hyr in arbetskraft. 
+Den som ensam eller gemensamt med familjemedlem driver  yrkesmässig verksamhet utan anställd, ska följa bestämmelserna  i detta kapitel. Detta följer av 3 kap. 5 § andra stycket  arbetsmiljölagen (1977:1160). Det innebär att den som driver  sådan verksamhet ska följa det som sägs i detta kapitel om  arbetsgivare och om arbetstagare. 
+Av 1 och 3 kap. arbetsmiljölagen följer att föreskrifterna i detta  kapitel under vissa omständigheter kan medföra skyldigheter  även för andra än arbetsgivaren. Det som sägs i detta kapitel  gäller då även dem. 
+Definitioner 
+3 § I dessa föreskrifter har följande begrepp dessa betydelser.40 
+AFS 2023:11 
+Kapitel 7 
+Begrepp 
+Betydelse
+Arbetsbock 
+Fristående arbetsplan med trappsteg, där höjden till planet är högst 1250 mm  och planets sidor minst 600 mm  respektive 250 mm.
+Fristående stege 
+Stege som i rest läge står utan stöd.
+
+
+
+Användning 
+4 § Arbetsgivaren ska se till att stegar och arbetsbockar som  används, uppfyller Arbetsmiljöverkets föreskrifter och allmänna  råd (AFS 2023:9) om produkter – stegar, ställningar, och viss  annan utrustning för arbete på höjd, samt vissa trycksatta  anordningar. De får bara användas som tillträdesled och för  kortvarigt arbete. Riskerna ska vara så små att säkrare utrustning  inte är befogad. 
+Allmänna råd 
+Kortvariga arbeten på en stege kan vara städning, byte av  trasiga lampor, enklare smörjning, enstaka  
+monteringsarbeten, utbyten och justeringar. 
+5 § Arbetsgivaren ska se till att stegar bara används på ett sådant  sätt, att man kan stå stadigt och hålla sig fast på ett säkert sätt.  Detta gäller särskilt om något måste bäras i handen. 
+6 § Arbetsgivaren ska se till att bara lätta verktyg, redskap och  bördor, som kan hanteras säkert, bärs och används på stegar eller  arbetsbockar. 
+7 § Arbetsgivaren ska se till att bärbara stegar bara beträds av en  person åt gången. 
+8 § Arbetsgivaren ska se till att stegar och arbetsbockar har  lämplig längd respektive höjd för sitt ändamål. När man 
+41 
+AFS 2023:11 
+Kapitel 7 
+använder en stege som tillträdesled, ska tillträdet kunna göras på  ett säkert sätt. Stegen ska vara tillräckligt mycket högre än det  plan som ska nås med hjälp av stegen, om inte andra  anordningar ändå gör det möjligt att hålla sig fast på ett säkert  sätt. 
+Allmänna råd 
+Man bör normalt kunna arbeta från högst fjärde steget  uppifrån räknat. Från en fristående stege med plattform och  knästöd kan man dock arbeta från alla steg och även från  plattformen. 
+9 § Arbetsgivaren ska se till att en utskjutande stegdel i toppen på  en fristående stege, inte beträds. 
+10 § Arbetsgivaren ska se till att stegar och arbetsbockar placeras  på ett sådant sätt, att deras stabilitet under användningen säkras.  De som inte kan ställas upp säkert, ska stagas eller förankras. De  ska hindras från att glida under användningen, antingen genom  
+att den nedre eller övre delen av stegens bärande ben förankras,  eller genom en annan anordning som förhindrar glidning lika  effektivt. 
+Stegar eller arbetsbockar ska vila på ett stadigt, hållfast och  orörligt underlag av lämplig storlek, så att stegpinnarna eller  trappstegen är horisontella. 
+Stegar eller arbetsbockar med hjul ska säkras mot  lägesförändring, innan de används. 
+11 § Arbetsgivaren ska se till att stegar, som är sammansatta av  flera delar, används på ett sådant sätt att de olika delarna inte  kan rubbas oavsiktligt i förhållande till varandra. Upphängda  stegar ska vara fastsatta på ett säkert sätt och, med undantag för  repstegar, så att de inte kan rubbas eller komma i svängning.
+42 
+AFS 2023:11 
+Kapitel 7 
+12 § Arbetsgivaren ska se till att följande typer av stegar bara  används om de är stagade eller förankrade: 
+1. En stege som i rest läge lutar mot en vägg eller liknande  och är längre än 5 meter. 
+2. En fristående stege med plattform och knästöd och mer  än 2 meters höjd till plattformen. 
+3. En annan fristående stege som är högre än 3 meter. 
+13 § Arbetsgivaren ska se till att stegar och arbetsbockar  underhålls och kontrolleras fortlöpande. De får inte användas om  deras hållfasthet eller säkerhet är nedsatt.
+43 
+AFS 2023:11 
+Kapitel 8 
+8 kap. Användning av ställningar 
+K a p i t e l 8 
+Då gäller föreskrifterna 
+1 § Bestämmelserna i detta kapitel gäller vid uppförande av och  arbete på och under ställningar och väderskydd. De preciserar  och kompletterar föreskrifterna om användning av  arbetsutrustning i kapitel 2. Föreskrifterna gäller ställningar som  används som 
+1. arbetsplats, 
+2. tillträdesled, 
+3. skydd mot fall vid arbete på tak eller annan hög höjd, 4. skyddstak, eller 
+5. upplag för väderskydd. 
+De gäller inte temporära konstruktioner för förvaring, eller  temporära konstruktioner på mässor, festivaler och liknande.  Föreskrifterna gäller inte heller för scener och läktare. Föreskrifterna gäller inte för väderskydd som är mindre än  3 meter höga, eller för väderskydd som har en horisontell yta  som är mindre än 6 m2. Föreskrifterna gäller dock alltid för  väderskydd som är uppförda på ställningar eller andra  temporära konstruktioner. 
+Vem föreskrifterna riktar sig till 
+2 § Arbetsgivaren ansvarar för att bestämmelserna i detta kapitel  följs. Med arbetsgivare likställs den som hyr in arbetskraft. 
+Den som ensam eller gemensamt med familjemedlem driver  yrkesmässig verksamhet utan anställd, ska följa bestämmelserna  i detta kapitel. Detta följer av 3 kap. 5 § andra stycket  arbetsmiljölagen (1977:1160). Det innebär att den som driver  sådan verksamhet ska följa det som sägs i detta kapitel om  arbetsgivare och om arbetstagare.
+44 
+AFS 2023:11 
+Kapitel 8 
+Av 1 och 3 kap. arbetsmiljölagen följer att bestämmelserna i detta  kapitel under vissa omständigheter kan medföra skyldigheter  även för andra än arbetsgivaren. Det som sägs i detta kapitel  gäller då även dem. 
+Bestämmelserna i detta kapitel gäller inte för Försvarsmakten vid  fältmässiga övningar och utbildning inför insatser. 
+Bestämmelserna i 5, 24, 30, 32–34 §§ gäller inte vid undervisning, som är förlagd till en skollokal eller någon annan plats, som är  anordnad särskilt för undervisning. 
+Bestämmelser om byggarbetsmiljösamordnare finns i  Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:3) om  projektering och byggarbetsmiljösamordning – grundläggande  skyldigheter. 
+Definitioner 
+3 § I dessa föreskrifter har följande begrepp dessa betydelser.
+Begrepp 
+Betydelse
+Arbetsplan 
+Horisontell yta i en ställning, bestående  av arbetsplanskomponenter, som kan  beträdas och belastas. Ett arbetsplan är  oftast avsett för arbete eller som  tillträdesled, men behöver inte vara  det.
+Komponent 
+Enskild del till en ställning eller till ett  väderskydd, som inte kan fungera  självständigt. En komponent kan vara  prefabricerad, men behöver inte vara  det.
+Koppling 
+Lös teknisk anordning som används för  att koppla ihop två rör, där minst ett av 
+
+
+
+45 
+AFS 2023:11 
+Kapitel 8 
+Begrepp 
+Betydelse
+
+
+rören har en nominell ytterdiameter av  ca 48,3 mm (kallas även rörkoppling).
+Prefabricerad  
+fasadställning
+Prefabricerad ställning utan hjul, som  främst är avsedd att användas vid  fasader.
+Prefabricerad  
+rullställning
+Prefabricerad ställning med hjul, som  är avsedd att användas fristående och  som har en maximal höjd till arbetsplan  av 2,0 till 12,0 meter.
+Prefabricerad  
+hantverkarställning
+Prefabricerad ställning med eller utan  hjul, som är avsedd att användas  fristående och som har en maximal  höjd till arbetsplan av 1,25 till 2,0 meter.
+Prefabricerad  
+ställning 
+Ställning där alla eller vissa delar är  förtillverkade med givna mått och som  har förbandsanordningar, som är  varaktigt fästade (kallas även  
+systemställning).
+Ställningsprodukt 
+Prefabricerad ställning, en koppling  eller en prefabricerad komponent till en  prefabricerad ställning.
+Sysselsatta 
+Med sysselsatta avses, oavsett om de  arbetar heltid eller deltid: 
+− anställda arbetstagare, och 
+− inhyrd arbetskraft, jämför 3 kap.  12 § andra stycket  
+arbetsmiljölagen (1977:1160). 
+I fråga om verksamhet utan anställda  arbetstagare (jämför 3 kap. 5 §  
+arbetsmiljölagen) avses med 
+
+
+
+46
+AFS 2023:11 
+Kapitel 8 
+Begrepp 
+Betydelse
+
+
+sysselsatta, oavsett om de arbetar heltid  eller deltid: 
+− de personer som driver  
+verksamheten, och 
+− inhyrd arbetskraft. 
+Den aktuella fysiska personens  personnummer respektive juridiska  personens organisationsnummer avgör  vilka personer som ska anses ingå i  verksamheten.
+Rörställning 
+Ställning där stommen består av rör  som är sammankopplade med lösa  kopplingar (kallas även rör- och  kopplingsställning).
+Skyddstak 
+Tät och inklädd eller inbrädad  
+konstruktion på en ställning, som är  avsedd att fånga föremål som faller  från ställningens högre partier.  Skyddstak är oftast utkragande, men  kan även finnas inne i ställningen.
+Ställning 
+Teknisk anordning som är temporärt  uppställd eller upphängd, som består  av minst två komponenter och som är  avsedd som arbetsplats, tillträdesled,  
+skyddstak eller skydd mot fall vid  arbete på tak eller annan höjd. Höjden  från marken eller annat underliggande  plan till ett horisontellt arbetsplan eller  motsvarande är minst 1,25 meter. 
+Typkontroll 
+Aktivitet där ett ackrediterat organ  granskat och funnit att en produkt 
+
+
+
+47
+AFS 2023:11 
+Kapitel 8 
+Begrepp 
+Betydelse
+
+
+uppfyller kraven i gällande  
+bestämmelser, och har utfärdat ett  typkontrollintyg.
+Väderskydd 
+Temporär konstruktion som är avsedd  att täcka över eller kapsla in en yta, där  man arbetar med en byggnad eller en  anläggning, för att skydda arbetstagare  och byggnadsverk från klimatisk  påverkan. I ett väderskydd ingår alltid  ett tak, men även väggar kan ingå.  Inklädda fasadställningar är inte  väderskydd, även om inklädnaden är  invikt mot fasaden ovanför ställningen. 
+På byggarbetsplatser finns ofta  temporära byggnader, till exempel  lagerhallar, verkstäder och  
+personalutrymmen. Dessa byggnader  är inte väderskydd.
+
+
+
+Planering 
+4 § Arbetsgivaren ska välja en ställning som bidrar till en god  arbetsmiljö, både för dem som uppför ställningen och för dem  som använder den. Följande ska beaktas: 
+1. ställningskomponenternas vikt och hanterbarhet, 2. ställningens bärförmåga och stabilitet, 
+3. skydd mot fall vid uppförande, nedmontering och  användning, 
+4. ergonomi vid användning, och 
+5. tillträdesledernas egenskaper. 
+5 § Arbetsgivaren ska upprätta en plan för hur uppförande,  användning och nedmontering av ställningen kan ske på ett 
+48 
+AFS 2023:11 
+Kapitel 8 
+säkert sätt, innan arbetet med att uppföra ställningen påbörjas.  Om ett väderskydd ingår i konstruktionen, ska även  väderskyddet omfattas av planen. Planen ska upprättas av en  person som har god kunskap om och erfarenhet av arbete med  ställningar. 
+Planen ska innehålla uppgifter om 
+1. den ställning eller det väderskydd som ska användas, 2. hur ställningen eller väderskyddet ska uppföras,  användas och monteras ned, 
+3. hur de som uppför eller monterar ned ställningen eller  väderskyddet ska skyddas mot fall och  
+belastningsskador, och 
+4. hur de övriga risker som kan uppkomma ska förebyggas. Utformningen av ställningen ska baseras på planen. 
+Allmänna råd 
+Planens omfång och detaljeringsgrad beror på hur  komplexa de aktuella ställningskonstruktionerna är. 
+För ställningar som uppförs, används och monteras ned på  likartat sätt och i jämförbar miljö kan planen gälla för flera  olika användningstillfällen. 
+I Arbetsmiljöverkets föreskrifter och allmänna råd  (AFS 2023:3) om projektering och  
+byggarbetsmiljösamordning – grundläggande skyldigheter finns det krav på att en arbetsmiljöplan ska upprättas och  finnas tillgänglig innan arbetsplatsen etableras, och att den  fortlöpande ska anpassas till arbetsförhållandena. Det är  lämpligt att dokumentationen om ställningar infogas som  bilaga till arbetsmiljöplanen.
+49 
+AFS 2023:11 
+Kapitel 8 
+Underlag och placering 
+6 § Arbetsgivaren ska kontrollera att underlaget med  betryggande säkerhet kan bära upp den belastning som kan  uppstå, vid både uppförandet och användningen, då en ställning  eller ett väderskydd planeras. Detsamma gäller för fasader eller  andra konstruktioner, som ställningen behöver förankras till. 
+Ställningen ska kunna uppföras och användas med betryggande  säkerhet på den aktuella platsen. 
+Utformning av ställningar och väderskydd 
+Skydd mot fall och ras 
+7 § Arbetsgivaren ska se till att en ställning är försedd med  skyddsräcke, där det finns en risk att falla två meter eller mer.  Där det finns särskild risk, ska det finnas skyddsräcke även vid  en lägre fallhöjd. 
+Arbetsgivaren ska se till att skyddsräcket har tillräcklig höjd och styrka, och att det är säkert fastsatt. Det ska bestå av överledare,  mellanledare och fotlist, eller ge motsvarande skydd på annat  sätt. 
+På de delar av ställningen som varken används för arbete eller  som tillträdesled, kan fotlisten utelämnas. Fotlist behövs normalt  inte heller längs trappor, utom på vilplanens kortsidor. I  rullställningar behövs fotlist bara på arbetsplanet. 
+Skyddsräcket ska vara monterat i anslutning till arbetsplanet, så  att inget farligt mellanrum uppstår mellan arbetsplanet och  skyddsräcket. Om ett väderskyddstak behöver beträdas, ska det  vara försett med tekniska anordningar som skyddar mot fall till en lägre nivå.
+50 
+
+Allmänna råd 
+AFS 2023:11 Kapitel 8 
+
+Exempel på en särskild risk när ett skyddsräcke kan  behövas vid en lägre fallhöjd, är när en ställning uppförs  intill vatten eller vätskefyllda behållare, bassänger med  mera. 
+Ett skyddsräcke bör vara utfört enligt svensk standard SS EN 12811-1:2004 Temporära konstruktioner – 
+Del 1: Ställningar – Krav och utförande, respektive SS EN 1004-1:2020 Prefabricerade rullställningar - Del 1:  Material, dimensioner, dimensionerande laster och  säkerhetskrav, där en absolut minsta höjd av 950 mm anges.  Beroende på riskerna, kan ett skyddsräcke dock behöva  vara högre. 
+Springor eller öppningar mellan arbetsplan och fotlister bör  vara så små som möjligt. 
+Tekniska anordningar, som skyddar mot fall från  väderskyddstak, är oftast skyddsräcken eller  
+förankringspunkter för personlig skyddsutrustning. 
+8 § Arbetsgivaren ska se till att ställningen har skyddstak, om det  finns en särskild risk för att nedfallande föremål kan skada  någon. Taket ska vara tillräckligt stort, starkt och tätt, för att  kunna fånga nedfallande material och föremål på ett säkert sätt.  Det ska dessutom vara säkert fastsatt. 
+Allmänna råd 
+Exempel på områden där det kan vara nödvändigt med  skyddstak, är i anslutning till trapptorn, andra  
+tillträdesleder eller vid arbetsplatser i direkt anslutning till  ställningen. Ett skyddstak som utformas enligt standarden  SS-EN 12811-4:2013 Temporära konstruktioner –
+51 
+AFS 2023:11 
+Kapitel 8 
+Del 4: Skyddstak för ställningar – Krav och utformning, är  normalt tillräckligt säkert. 
+9 § Arbetsgivaren ska se till att en ställning, som används som  skydd mot fall från en angränsande konstruktion, är så stark och  så förankrad att den med betryggande säkerhet kan fånga upp de  personer som kan falla emot den. Ett skyddsräcke ska normalt  vara minst 0,95 meter högt, mätt vertikalt, och 1,00 meter högt,  mätt vinkelrätt mot arbetsområdets yta. 
+Allmänna råd 
+En angränsande konstruktion kan till exempel vara taket på  en byggnad. Svensk standard SS-EN 13374:2013 + A1:2019  Temporära konstruktioner – Temporära  
+skyddsräckessystem – Specifikationer, produktkrav och  provningsmetoder anger exempel på hur skyddsräcken på  en ställning kan utföras med betryggande säkerhet. Om  skyddsräcken, ställningar och infästningar tål fall från en  angränsande konstruktion kan, vid en lutning av 0–10° hos  arbetsytan på den angränsande konstruktionen, ett  tvåledigt räcke med fotlist vara tillräckligt. Vid 10–30°  behöver räcket vara tätare, och vid mer än 30° behövs  normalt ett nät eller något annat som fyller samma funktion  som ett nät. 
+10 § Arbetsgivaren ska se till att avståndet mellan ett arbetsplan  och en vägg eller någon annan angränsande konstruktion, är så  litet som det är praktiskt möjligt. Detta är både för att undvika att  personer faller till en lägre nivå, och för att undvika en olämplig  arbetsbelastning. Avståndet får normalt inte överstiga 0,30 meter. 
+Allmänna råd 
+Exempel på när avståndet mellan arbetsplan och  
+angränsande konstruktioner kan överstiga 0,30 meter är vid  hushörn, oregelbundna fasader och liknande.
+52 
+AFS 2023:11 
+Kapitel 8 
+Om det inte är möjligt att uppföra ställningen tillräckligt  nära fasaden, kan man montera ett konsolplan eller sätta  upp ett skyddsräcke även på ställningens insida. 
+Tillträde 
+11 § Arbetsgivaren ska se till att det finns tillträdesleder till varje  arbetsplan respektive del av ett arbetsplan, där arbete ska  utföras. De ska vara tillräckligt många med hänsyn till det arbete  som ska utföras och de ska utformas på ett sätt som är lämpligt  för arbetet. Där det behövs, ska det också finnas en lämplig  transportled. 
+En ställning, som består av två eller flera fack i längdled, ska vara  utförd så att tillträde kan ske på ett säkert sätt till varje fack.  Tillträdeslederna ska vara ergonomiskt utformade och ska  normalt bestå av trappor eller landgångar. Trappor och  landgångar ska ha tillräcklig bredd och lämplig lutning.  Landgångar ska vara minst 0,60 meter breda. 
+Denna paragraf gäller inte för tillträdesleder i rullställningar och  hantverkarställningar. 
+Allmänna råd 
+Det är viktigt att tillträde kan ske på ett säkert sätt runt  hörn, förbi balkonger och liknande. I långa  
+ställningskonstruktioner, där flera tillträdesleder behövs,  bör avståndet mellan dem inte överstiga 25 meter. 
+En lodrät eller nästan lodrät stege är normalt olämplig som  tillträdesled. Trappor bör utformas enligt svensk standard  SS-EN 12811-1:2004, Temporära konstruktioner – 
+Del 1: Ställningar – Krav och utförande. Regler om  tillträdes- och förbindelseleder finns även i kapitlet om  byggnads- och anläggningsarbete i Arbetsmiljöverkets 
+53 
+AFS 2023:11 
+Kapitel 8 
+föreskrifter och allmänna råd (AFS 2023:13) om risker vid  vissa typer av arbeten. 
+12 § Arbetsgivaren ska se till att det i en rullställning finns en  tillträdesled i form av antingen en lutande stege, en trappstege  eller en trappa, om höjden till arbetsplanet är mer än 2,5 meter.  Om tillträdesleden är en lutande stege, ska varje nivå som kan  beträdas vara fullt intäckt med arbetsplanskomponenter. 
+Allmänna råd 
+Rullställningar utformade enligt svensk standard SS EN 1004-1:2020 Prefabricerade rullställningar - Del 1:  Material, dimensioner, dimensionerande laster och  säkerhetskrav, är normalt tillräckligt säkert. Vid byggnads och anläggningsarbete krävs det normalt en trappa som  tillträdesled i rullställningar. 
+13 § Arbetsgivaren ska se till att det finns en säker tillträdesled  till taket på ett väderskydd, om taket kan komma att beträdas. 
+Allmänna råd 
+Tillträde till väderskyddets tak kan behövas för  
+snöskottning och reparationer. 
+Arbetsplan 
+14 § Arbetsgivaren ska se till att de nivåer och ytor som man  behöver använda för arbete eller som tillträdesleder, inte har  farliga hål, svagheter och springor, utan är helt täckta. 
+Arbetsplanet ska vara monterat på ett sådant sätt att dess delar  inte oavsiktligt kommer ur sitt läge. 
+Allmänna råd 
+Andra stycket innebär att arbetsplanskomponenterna  normalt behöver vara mekaniskt säkrade till ställningen. 
+54 
+AFS 2023:11 
+Kapitel 8 
+Detta gäller dock normalt inte för okade ställningsplank  annat än i ändfacken. 
+15 § Arbetsgivaren ska se till att arbetsplan är så plana som  möjligt. Om det finns nivåskillnader, ska riskerna för att någon  snubblar förebyggas. 
+Allmänna råd 
+För att underlätta transporter och minska risken för att  snubbla, är det lämpligt att man lägger en bockad plåt eller  en kilformad träkloss vid ställningsplankens ändar, om  ställningsplanken ligger omlott. 
+16 § Arbetsgivaren ska se till att båda ändarna för ställningsplank  som ligger omlott, skjuter över stödet så långt att riskerna för ras  minimeras. 
+Vid ändstöd ska möjligheterna att beträda utskjutande delar av  ställningsplank, trall eller andra arbetsplanskomponenter  förhindras, om de inte kan beträdas med betryggande säkerhet. 
+Allmänna råd 
+Ställningsplank bör skjuta ut minst 0,15 meter över stöden. 
+17 § Arbetsgivaren ska se till att samtliga enskilda  ställningsplank förbinds, när man har arbetsplan av  ställningsplank på en fasadställning. 
+Allmänna råd 
+För ställningsplank finns det särskilda tvärförbindningar för  sådana ändamål, så kallade ok. 
+Väderskydd 
+18 § Arbetsgivaren ska se till att det finns utrymme, så att arbetet  kan bedrivas under ett väderskydd utan risker för ohälsa och 
+55 
+AFS 2023:11 
+Kapitel 8 
+olycksfall. Den fria höjden där arbetstagare behöver vistas, ska  normalt inte understiga 2,10 meter. 
+Allmänna råd 
+Det kan ibland behövas dragstag eller liknande, som kan  inkräkta något på den fria höjden. 
+Dimensionering 
+Ställningar 
+19 § Arbetsgivaren ska se till att ställningen är dimensionerad  med betryggande säkerhet, innan man påbörjar arbetet med att  uppföra en ställning. Hänsyn ska tas till risken för materialbrott,  instabilitet och deformationer, som har betydelse för säkerheten  när ställningen uppförs, används och monteras ned. Ställningen  ska dimensioneras för den mest ogynnsamma kombinationen av  yttre laster, som inte rimligen utesluter varandra. De yttre laster  som man normalt ska ta hänsyn till, är last på arbetsplan och  vindlast. Vid uppskattningen av de laster som belastar ett  arbetsplan, ska man ta hänsyn till tyngden av personer, material  och redskap. Dimensioneringen ska baseras på beräkningar och  ska dokumenteras skriftligt i dimensioneringshandlingar. 
+Allmänna råd 
+Normalt väljs en lastklass ur svensk standard SS-EN 12811- 1:2004 Temporära konstruktioner – Del 1: Ställningar – Krav  och utförande. Dimensioneringen utförs vanligen genom  något av följande alternativ 
+1. överensstämmelse med standardutföranden i  typkontrollintyg (för prefabricerade ställningar), 
+2. överensstämmelse med standardutföranden i typfall  (för rörställningar), 
+3. typkontrollintyg eller typfall och kompletterande,  förenklade beräkningar vid avvikelser från de  
+utföranden som är angivna i typkontrollintyg eller  typfall, eller
+56 
+AFS 2023:11 
+Kapitel 8 
+4. särskilda beräkningar i det enskilda fallet. 
+20 § Arbetsgivaren ska se till att en särskild utredning görs, för  att visa att säkerheten är betryggande, om komponenter från  andra prefabricerade ställningssystem används i en enskild  ställning. Utredningen ska dokumenteras i  
+dimensioneringshandlingarna. 
+Allmänna råd 
+Den särskilda utredningen består normalt av en  
+kombination av provningar och beräkningar. 
+Väderskydd 
+21 § Arbetsgivaren ska se till att ett väderskydd är dimensionerat  med betryggande säkerhet mot materialbrott, instabilitet och  deformationer, som har betydelse för säkerheten, innan man  påbörjar arbetet med att uppföra ett väderskydd. 
+Om följande laster kan uppstå, ska väderskyddet vara  dimensionerat för dem: 
+1. Snölast motsvarande minst den snömängd, som kan falla  under en tidsrymd av sju dagar baserat på 50-årsvärdet. 2. Vindlast. 
+3. Personlast som motsvarar minst två punktlaster om  1,2 kN vardera. De behöver inte förutsättas vara  
+placerade närmare varandra än 2,0 meter. 
+Det är de mest ogynnsamma kombinationerna av lasterna, som  man ska ta hänsyn till. När väderskydd och ställningar  kombineras, ska de dimensioneras som en samverkande enhet. 
+Dimensioneringen ska baseras på beräkningar och dokumenteras  skriftligt i dimensioneringshandlingar.
+57 
+AFS 2023:11 
+Kapitel 8 
+Allmänna råd 
+Väderskydd kan dimensioneras enligt svensk standard SS EN 16508:2015 Temporära konstruktioner – Väderskydd – Krav och utförande, med beaktande av de avvikelser som  gäller för Sverige enligt Annex B i standarden. 
+Karakteristiska lastvärden för vindlast bör väljas enligt  svensk standard SS-EN 12811-1:2004, Temporära  
+konstruktioner – Del 1: Ställningar – Krav och utförande. Dimensioneringshandlingar 
+22 § Arbetsgivaren ska se till att beräkningar och övriga  handlingar, som avses i 19–22 §§, är på ett språk som  arbetstagarna förstår. 
+En dimensioneringshandling ska normalt delas upp i 1. en beskrivning av konstruktionens läge och utformning, 2. lastförutsättningar och imperfektioner (avvikelser från  ideala förhållanden), 
+3. en sammanställning och bedömning av förekommande  lastfall, 
+4. en beräkning av de lastfall som bedöms vara  dimensionerande, och 
+5. en slutlig bedömning av konstruktionens säkerhet. 
+Allmänna råd 
+I lastförutsättningarna ska normalt anges värden på  vertikal- och horisontallaster. Avvikelser att ta hänsyn till är  bland annat snedställning av spiror och excentriciteter i  anslutningar. 
+Handlingarna i 19–22 §§ kan infogas som bilaga till den  plan för uppförande, användning och nedmontering som  krävs enligt 5 §.
+58 
+AFS 2023:11 
+Kapitel 8 
+De som kan behöva ta del av handlingarna är arbetsgivare,  arbetstagare, byggarbetsmiljösamordnare för  
+utförandeskedet, beställare, inspektörer med flera. 
+Vid beräkningar används ofta internationella  
+beräkningsprogram. Utskrifter med mera på andra språk  behöver inte finnas på svenska om resultatet förklaras i de  övriga handlingarna. 
+Uppförande och nedmontering 
+Arbetsledning 
+23 § Arbetsgivaren ska se till att den som leder arbetet med att  uppföra, göra väsentliga ändringar i eller montera ned en  ställning eller ett väderskydd har kompetens, som minst  motsvarar de krav som anges i bilaga 6, även om denna person  inte själv arbetar i ställningen. 
+Arbetsgivaren ska se till att den som leder arbetet och de  arbetstagare som utför arbetet har tillgång till den plan för  uppförande och nedmontering som krävs i 5 §. (AFS 2024:4) 
+Kunskaper och kvalifikationer 
+24 § Arbetsgivaren ska se till att de som uppför, gör väsentliga  ändringar i eller monterar ned ställningar eller väderskydd har  kunskap för detta arbete. 
+Arbetstagarna ska som lägst ha fått särskild information eller  lämplig utbildning enligt vad som står i bilaga 6. Bilaga 6 anger  även för vilka arbetsuppgifter respektive utbildning gäller. 
+Dokumentation, i enlighet med bilaga 6, som styrker att den som  uppför, väsentligen ändrar eller monterar ned ställningar eller  väderskydd har genomgått en utbildning med godkänt resultat 
+59 
+AFS 2023:11 
+Kapitel 8 
+ska finnas. Särskilda förutsättningar gäller för dem som  genomgår lärlingsutbildning, se bilaga 6. 
+Den arbetsgivare som inte följer kraven i andra och tredje stycket  ska, för varje arbetstagare för vilken någon dokumentation om  utbildning inte kan visas upp, betala en sanktionsavgift.  Sanktionsavgiftens storlek avgörs av vilken utbildning som krävs  för arbetsuppgiften enligt följande uppställning. 
+Tabell 1 anger sanktionsavgift för den som inte följer kraven på  utbildning. 
+Tabell 1. Brist på utbildning – sanktionsavgift 
+Utbildning 
+Sanktionsavgift
+Särskild information om  
+rullställningar
+5 000 kronor
+Allmän utbildning om ställningar 
+10 000 kronor
+Särskild utbildning om ställningar 
+20 000 kronor
+Tilläggsutbildning om väderskydd 
+10 000 kronor
+Tilläggsutbildning om speciella  ställningskonstruktioner
+10 000 kronor
+
+
+
+Om en tilläggsutbildning krävs för arbetsuppgiften, krävs även  en allmän eller särskild utbildning om ställningar. Om inte något  utbildningsbevis kan visas upp, ska sanktionsavgiften betalas för  båda överträdelserna. 
+Allmänna råd 
+De olika utbildningsnivåerna är minimikrav. För  
+arbetstagare vars huvudsakliga sysselsättning är att  uppföra, ändra och montera ned ställningar, behövs ofta en  längre utbildning. Som exempel på sådan utbildning kan 
+60 
+AFS 2023:11 
+Kapitel 8 
+nämnas den, som leder till yrkesbevis eller kompetensbevis  som ställningsbyggare. 
+Arbetstagarna bör ha fått utbildning av en  
+utbildningsgivare, vars ledningssystem är certifierat av ett  ackrediterat certifieringsorgan. 
+Avgränsning 
+25 § Arbetsgivaren ska tydligt avgränsa ställningar, väderskydd,  eller delar av dessa som inte är färdiga att användas, så att tillträde till dem förhindras. 
+Om det är förenat med risker att beträda området runt en  ställning eller ett väderskydd, ska även det området märkas ut  med skyltning. 
+Om detta bara gäller delar av en ställning eller ett väderskydd,  ska motsvarande avgränsning och skyltning utföras för dessa  delar. 
+Allmänna råd 
+I Arbetsmiljöverkets föreskrifter och allmänna råd (AFS  2023:12) om utformning av arbetsplatser finns särskilda  bestämmelser om skyltar och signaler. 
+26 § Arbetsgivaren ska, när en ställning eller ett väderskydd  uppförs på en särskilt riskutsatt plats, såsom vid vatten, vägar,  gator, järnvägar, kranspår eller intill en starkströmsanläggning,  ordna skydd mot de särskilda risker som kan uppkomma,  exempelvis påkörning. 
+Allmänna råd 
+Det kan ibland behövas särskilda tillstånd för att ha en  ställning på platsen.
+61 
+AFS 2023:11 
+Kapitel 8 
+Kontroll av komponenter 
+27 § Arbetsgivaren ska granska material till ställningar och  väderskydd noga före varje uppsättning. Material eller  komponenter med defekter av betydelse för säkerheten får inte  användas. 
+Det gäller till exempel defekter som skadade komponenter, komponenter med rost eller andra korrosionsangrepp eller trämaterial eller komponenter med röta, skevhet eller sprickor. 
+Allmänna råd 
+Det är särskilt viktigt att kontrollera att spiror och  arbetsplanskomponenter är fullgoda. 
+Underlag och placering 
+28 § Arbetsgivaren ska se till att ställningar och väderskydd bara  uppförs på underlag, och förankras till konstruktioner, som kan  ta upp de laster som kan uppstå. Glidning och excentrisk  lastöverföring mellan ställningen och underlaget ska förhindras. 
+Allmänna råd 
+Om man är osäker på förankringarnas lastupptagande  förmåga, kan förankringarna behöva provdras. 
+Det är viktigt att vara uppmärksam på risken att  
+rullställningar kan börja glida, i synnerhet vid lutande eller  glatt underlag, eller om friktionen är liten mellan  rullställningens hjul och underlaget. 
+Skydd mot fall 
+29 § Arbetsgivaren ska, när fallhöjden är två meter eller mer, se  till att arbetstagaren är skyddad mot risken att falla till en lägre  nivå, när en ställning eller ett väderskydd uppförs eller monteras  ned.
+62 
+AFS 2023:11 
+Kapitel 8 
+30 § Arbetsgivaren ska i första hand se till att skyddsräcket till så  stor del som möjligt finns på plats, när man kommer upp på en  högre nivå. 
+I andra hand ska man använda ett temporärt räckessystem. 
+I tredje hand ska skyddet mot fall åstadkommas genom att  arbetstagaren använder personlig skyddsutrustning. 
+Ergonomi 
+31 § Arbetsgivaren ska planera arbetet och se till att de som utför  arbetet med att uppföra eller montera ned ställningar och  väderskydd har den arbetsutrustning som behövs, för att arbetet  ska kunna utföras på ett ergonomiskt bra sätt. 
+Arbetsgivaren ska minst se till att 
+1. material och komponenter transporteras fram och läggs  upp så nära montageplatsen som möjligt, 
+2. maskinell utrustning normalt används när material och  komponenter ska tas upp på respektive ned från  
+ställningen, 
+3. tillträdeslederna monteras tidigt så att de kan användas  även av den personal som monterar ställningen eller  väderskyddet, och 
+4. det finns tillräckligt utrymme på ställningen vid  uppförandet. 
+Allmänna råd 
+Maskinell utrustning för lyft är viktigare, ju högre  ställningarna är. Om man ska använda hiss, bör den  monteras så tidigt som möjligt och byggas på uppåt allt  eftersom. För väderskydd är det ofta en fördel, om de i så  stor utsträckning som möjligt kan monteras ihop på marken  och sedan lyftas upp i sektioner. Det är därför viktigt att  utrymmet för dessa arbetsmoment är tillräckligt stort.
+63 
+AFS 2023:11 
+Kapitel 8 
+Utrymmet är normalt tillräckligt, om arbetsplanen är minst  0,6 meter breda. 
+Kontroll 
+32 § Den arbetsgivare som uppfört ställningen eller  väderskyddet, ska kontrollera att de är korrekt byggda och  fungerar väl, när de är klara att användas. 
+Om den arbetsgivare som ska använda ställningen eller  väderskyddet är en annan juridisk person än den som uppfört  den, ska användaren, om möjligt, delta i kontrollen. 
+33 § Arbetsgivaren som uppfört ställningen eller väderskyddet  ska se till att den som utför kontrollen, säkerställer att  ställningens eller väderskyddets utförande stämmer överens med  de handlingar som ligger till grund för utformningen. Kontrollen  ska dokumenteras i en särskild handling. 
+Allmänna råd 
+Ställningsbyggarens representant bör skriva under  handlingen, och även användarens representant, om denna  deltagit. Stöd för dokumentationen kan vara att man  fotograferar ställningen, särskilt om den är stor. Exempel på  vad som ska kontrolleras framgår av de allmänna råden till  37 §. 
+Överlämning 
+34 § Arbetsgivaren som uppfört ställningen eller väderskyddet  ska, i samband med att ställningen eller väderskyddet lämnas  över till arbetsgivaren för användare, även lämna över följande  handlingar: 
+1. Planen för uppförande, användning och nedmontering  enligt 5 §. 
+2. Dimensioneringshandlingarna enligt 19–22 §§. 3. Dokumentation av kontrollen enligt 32–33 §§.
+64 
+AFS 2023:11 
+Kapitel 8 
+4. Information om snöskottning, tillträde till taket och  skydd mot fall från väderskyddet. 
+5. Information om hur väderskyddet ska kontrolleras. 6. Särskilda instruktioner för uppförande, användning,  nedmontering och skötsel av väderskyddet, om sådana  finns. 
+7. Instruktionerna för uppförande, användning,  nedmontering och skötsel om det är fråga om en  
+prefabricerad ställning. 
+Allmänna råd 
+Det är viktigt att den som samordnar åtgärder till skydd  mot ohälsa och olycksfall, får tillgång till handlingarna. Om  det är fråga om byggnads- och anläggningsarbete, bör  byggarbetsmiljösamordnaren för utförandeskedet hålla dem  tillgängliga. 
+Användning 
+Undersökning och riskbedömning 
+35 § Arbetsgivaren för användare ska, innan arbeten påbörjas på  en ställning eller under ett väderskydd, ta reda på förhållandena  på arbetsplatsen och bedöma de särskilda riskerna.  Arbetsgivaren ska också förvissa sig om att den valda ställningen  är lämplig för arbetet. 
+36 § Arbetsgivaren för användare ska försäkra sig om att  dokumentationen om ställningen eller väderskyddet enligt 34 § finns tillgänglig. En arbetsgivare som mottagit handlingar enligt  34 §, ska se till att handlingarna enligt 34 § 1 och 3–7 finns  tillgängliga på arbetsplatsen. 
+Arbetsgivaren ska se till att information om ställningen eller  väderskyddet även når arbetstagare med kognitiv  funktionsnedsättning.
+65 
+AFS 2023:11 
+Kapitel 8 
+Innan ställningar eller väderskydd som ska användas av flera  arbetsgivare i byggnads- och anläggningsarbete börjar användas,  ska arbetsgivaren lämna kopior av samtliga handlingar till  byggarbetsmiljösamordnaren för utförandet. 
+Allmänna råd 
+Dimensioneringshandlingarna enligt 34 § 2 kan vara  omfattande och de behöver därför normalt inte finnas  tillgängliga på arbetsplatsen. 
+Kontroll 
+37 § Arbetsgivaren för användare ska kontrollera ställningar och  väderskydd innan de tas i bruk och även fortlöpande under den  tid som de används. 
+Om ställningar eller väderskydd har brister, som har betydelse  från arbetsmiljösynpunkt, får de inte användas innan bristerna  har åtgärdats. 
+När ställningar eller väderskydd används, gäller bestämmelserna  i 4–22, 26, 28 och 32–34 §§ även för de arbetsgivare som använder  ställningen eller väderskyddet. 
+Det är särskilt viktigt att kontrollera en ställning som har varit  utsatt för stark vind, annan väderlek som kan ha påverkat den,  samt när den varit utsatt för någon annan oförutsedd händelse  eller har stått oanvänd en längre tid. 
+Allmänna råd 
+Kontrollen bör omfatta följande: 
+1. Underpallning. 
+2. Att förankringarna är fullständiga och korrekt  utförda, och att man provdrar dem, om man är  
+osäker på deras förmåga att uppta last. 
+3. Att skyddsräcken finns där de behövs.
+66 
+AFS 2023:11 
+Kapitel 8 
+4. Att avståndet mellan arbetsplan och angränsande  konstruktioner inte är för stort. 
+5. Att komponenter, till exempel arbetsplan, är korrekt  monterade och säkrade. 
+6. Tillträdesleder. 
+7. Väderskyddets tak, inklusive fastsättning och behov  av snöskottning. 
+Handlingarna, som nämns i 36 §, kan vara till hjälp vid  kontrollerna. 
+Arbetsplatserna 
+38 § Arbetsgivaren ska se till att lösa stegar inte används på  arbetsplan till fasad-, rull- och hantverkarställningar. 
+Eventuella luckor för tillträde genom arbetsplan ska alltid hållas  stängda, utom när de används för passage. 
+39 § Arbetsgivaren ska se till att ställningar inte används som  återledare vid elektrisk svetsning. 
+Bärförmåga och stabilitet 
+40 § Arbetsgivaren ska lämna information till dem som arbetar  på en ställning eller under ett väderskydd. Informationen ska  minst omfatta 
+- tillåten belastning på ställningens olika delar, och - för vilken snö- och personlast väderskyddet är  dimensionerat. 
+Allmänna råd 
+Det är viktigt att ställningen inte överbelastas av byggnads och rivningsmaterial, blästersand eller liknande. 
+Om flera företag använder ställningen eller väderskyddet, bör man informera om tillåten last genom ett tydligt anslag.
+67 
+AFS 2023:11 
+Kapitel 8 
+41 § Arbetsgivaren ska se till att arbete utförs bara på ett  arbetsplan mellan samma bärande spiror, om inte ställningen är  särskilt dimensionerad för arbete på mer än en nivå. 
+Allmänna råd 
+De förutsättningar som ligger till grund för typkontrollintyg  (för prefabricerade ställningar) och typfall (för  
+rörställningar) gäller normalt bara arbete på en nivå (mellan  samma bärande spiror) åt gången. 
+42 § Arbetsgivaren ska se till att tung utrustning, tunga maskiner  eller dylikt bara finns på ställningen, om den är dimensionerad  för det. Motsvarande gäller för maskiner eller annat, som ger  upphov till dynamiska tilläggslaster. 
+Ergonomi 
+43 § Arbetsgivaren ska se till att en ställning bara används om det  finns tillräckligt utrymme för det avsedda arbetet, för transporter  och för att lägga upp material. Arbetet ska kunna utföras med  lämpliga arbetsställningar och arbetsrörelser. 
+Allmänna råd 
+Standarden SS-EN 12811-1:2004, Temporära konstruktioner  – Del 1: Ställningar – Krav och utförande är normalt  tillämplig. Den anger 
+1. minst 1,80 meter bredd för arbeten där såväl  
+uppläggning som kärrning av material förekommer  (till exempel vid murning enligt traditionell svensk  metod), 
+2. minst 1,20 meter bredd för arbeten där antingen  uppläggning eller annan transport än kärrning av  material förekommer, och 
+3. minst 0,60 meter bredd för övriga arbeten.
+68 
+AFS 2023:11 
+Kapitel 8 
+Upplastning och uppläggning av material 
+44 § Arbetsgivaren ska se till att upplastning och uppläggning av  material på ställningar planeras noga och övervakas särskilt.  Upplastning och uppläggning får bara göras om ställningen och  intagsbryggorna är dimensionerade och anpassade för detta. 
+45 § Arbetsgivaren ska se till att material sätts ner försiktigt och  vertikalt, för att undvika att ställningen utsätts för dynamiska  och horisontella krafter. 
+Truckars lastgafflar och liknande ska lyftas och sväva fritt, innan  de dras ut horisontellt. Arbetstagare som inte är sysselsatta med  att lasta upp material, får inte uppehålla sig på den del av  ställningen där upplastning eller uppläggning pågår. 
+Särskilda krav för användning av rullställningar 
+46 § Arbetsgivaren ska se till att rullställningar normalt bara används för kortvariga arbeten, där ställningen behöver flyttas  ofta och där förhållandena på arbetsplatsen medger detta. Bara arbeten som medför att ställningen inte utsätts för några större  horisontella krafter, får utföras. 
+Rullställningar får inte användas för större fasadarbeten. Vid  fasadmålning av enfamiljshus såsom villor, par- och radhus kan  dock rullställning användas, om arbetsgivarens undersökning  och riskbedömning medger detta. 
+Det är då viktigt att 
+1. underlaget är sådant att rullställningen lätt kan flyttas, 2. arbetet från rullställningen i huvudsak kan utföras från  första arbetsplansnivån (maximalt cirka 2,5 meter över  mark), och 
+3. tillträdeslederna är säkra och ändamålsenliga.69 
+AFS 2023:11 
+Kapitel 8 
+Allmänna råd 
+Byte av lampor och armaturer, upp- eller nedsättning av  skyltar samt mindre målnings-, el-, ventilations- och  plåtslageriarbeten är exempel på kortvariga arbeten. 
+47 § Arbetsgivaren ska se till att en rullställnings hjul är låsta när  den används. 
+48 § Arbetsgivaren ska se till att personer eller material, som kan  falla ner, inte finns på rullställningen när den flyttas, oavsett på  vilken höjd arbetsplanet är placerat. 
+Om en rullställning har stödben, får de inte tas bort under  flyttningen. 
+Allmänna råd 
+Det är viktigt att rullställningen flyttas försiktigt, så att den  inte blir instabil. Vid flyttning av en rullställning med  stödben, kan stödbenen behöva lyftas något. 
+Särskilda krav för användning av hantverkarställningar 49 § Arbetsgivaren ska se till att hantverkarställningar normalt  bara används för lätta arbeten, där ställningen behöver flyttas  ofta. De får bara användas på plana och hårdgjorda eller  förstärkta ytor och, om benen inte kan justeras i höjdled, bara på  horisontella ytor. 
+Hantverkarställningar får bara användas av en person åt gången.  När de används måste hjulen vara låsta, oavsett på vilken höjd  arbetsplanet är placerat. 
+Bara arbeten, som medför att ställningen utsätts för små  horisontella krafter, får utföras.
+70 
+AFS 2023:11 
+Kapitel 9 
+9 kap. Användning av trycksatta anordningar K a p i t e l 9 
+Då gäller föreskrifterna 
+1 § Bestämmelserna i detta kapitel gäller användning av  trycksatta anordningar och tillhörande säkerhetsutrustning. De  preciserar och kompletterar föreskrifterna om användning av  arbetsutrustning i kapitel 2. 
+Bestämmelserna gäller inte anordningar som 
+1. finns i kärntekniska anläggningar, för vilka det har  utfärdats motsvarande föreskrifter med stöd av  
+förordningen (1984:14) om kärnteknisk verksamhet, eller  annan författning som har ersatt den förordningen, 2. ingår i raketer, luftfartyg eller mobila offshore-enheter,  samt utrustning som är speciellt avsedd för installation  ombord på dessa farkoster eller för deras framdrivning, 3. ingår i vapen, ammunition eller annan materiel som är  avsedd speciellt för militära ändamål, 
+4. är bildäck, luftkuddar, bollar och ballonger för lek och  idrott, uppblåsbara båtar och andra liknande  
+tryckbärande anordningar som består av ett mjukt hölje, 5. är eller ingår i masugnar, med tillhörande kylsystem,  varmluftsrekuperatorer, rökgasrenare till masugnar samt  direktreduktionsugnar med tillhörande kylsystem,  gaskonvertrar, ugnar och skänkar för smältning,  
+omsmältning, avgasning och gjutning av stål, järn och  icke-järnmetaller, 
+6. är radiatorer och rörledningar i system för uppvärmning  med vatten, 
+7. är ventilationskanaler, rökgaskanaler eller liknande, 8. ingår i system för tillförsel, fördelning och utsläpp av  vatten med tillhörande utrustning, samt turbinrör,  trycktunnlar, tryckschakt och andra tilloppskanaler i  vattenkraftverk och tillhörande utrustningsdelar,
+71 
+AFS 2023:11 
+Kapitel 9 
+9. är avsedda för transport och distribution av drycker, och  vars tryck inte överstiger 7 bar, samtidigt som trycket  gånger volymen inte överstiger 500 barliter, 
+10. är höljen eller maskindelar för vilka dimensioneringen,  valet av material och konstruktionsreglerna i huvudsak  baseras på krav på tillräcklig hållfasthet, styvhet och  stabilitet när det gäller statisk och dynamisk påkänning  under drift, eller med hänsyn till andra egenskaper som  påverkar deras funktion och där trycket inte har väsentlig  betydelse för konstruktionen, 
+11. är andra anordningar än enkla tryckkärl, som är avsedda  för fordons funktion och som definieras i  
+Europaparlamentets och rådets förordning (EU) 2018/858  av den 30 maj 2018 om godkännande av och  
+marknadskontroll över motorfordon och släpfordon till  dessa fordon samt av system, komponenter och separata  tekniska enheter som är avsedda för dessa fordon, om  ändring av förordningarna (EG) nr 715/2007 och (EG) nr  595/2009 samt om upphävande av direktiv 2007/46/EG,  Europaparlamentets och rådets förordning (EU) nr  167/2013 av den 5 februari 2013 om godkännande och  marknadskontroll av jordbruks- och skogsbruksfordon  och Europaparlamentets och rådets förordning (EU) nr  168/2013 av den 15 januari 2013 om godkännande av och  marknadskontroll för två- och trehjuliga fordon och  fyrhjulingar, eller 
+12. ingår i elektriska apparater för elproduktion eller  eldistribution. 
+De begrepp som används ovan, har samma innebörd som  motsvarande begrepp i 2 § i Arbetsmiljöverkets föreskrifter (AFS  2023:5) om produkter – tryckbärande anordningar. Med  begreppet enkla tryckkärl avses anordningar som omfattas av  Arbetsmiljöverkets föreskrifter (AFS 2023:6) om produkter –
+72 
+AFS 2023:11 
+Kapitel 9 
+enkla tryckkärl, eller skulle omfattats av motsvarande  föreskrifter, som gällde när tryckkärlet togs i bruk. 
+Definitioner 
+2 § I dessa föreskrifter har följande begrepp dessa betydelser.
+Begrepp 
+Betydelse
+Användning 
+Förutom det som står i 2 kap. om  användning av arbetsutrustning, även  aktiviteter såsom nyttjande,  
+övervakning, fortlöpande tillsyn,  underhåll, rengöring och förvaring.
+Behållare 
+Trycksatt anordning som inte är en  rörledning.
+Cistern 
+Behållare som är konstruerad för att  innehålla vätska eller kondenserad gas, i vilken gastrycket ovanför innehållet  varken understiger atmosfärstrycket  med mer än 0,0065 bar eller överstiger  atmosfärstrycket med mer än 0,5 bar.
+Fluid 
+Gas, vätska och ånga i ren fas samt  blandningar av dessa, oavsett om fasta  ämnen ingår som suspension eller inte.
+Inställelsetid 
+Den tid det tar för personal att inställa  sig på en plats, där åtgärder som olika  larm kräver, kan vidtas.
+Panna 
+Annat tryckkärl än vattenvärmare i  vilket värme, som frigörs ur bränsle,  elenergi eller någon annan energikälla  överförs till en fluid, för användning  utanför kärlet.
+Rörledning 
+Ledning som består av rör, inklusive  slangar, med tillhörande rördelar och 
+
+
+
+73 
+AFS 2023:11 
+Kapitel 9 
+Begrepp 
+Betydelse
+
+
+tryckbärande tillbehör. Gränsen mellan  en behållare och en rörledning går vid  svetsen mot behållarens stuts eller, vid  
+flänsad anslutning, vid behållarens  fläns. Svetsen tillhör rörledningen.  Värmeväxlare, som består av rör för  kylning eller uppvärmning av luft,  anses som rörledning på samma sätt  som enligt Arbetsmiljöverkets  
+föreskrifter (AFS 2023:5) om produkter  – tryckbärande anordningar. 
+Vanligen används ledningarna för  transport av fluider men även  
+ledningar såsom hydraulledningar  ingår.
+Sysselsatta 
+Med sysselsatta avses, oavsett om de  arbetar heltid eller deltid: 
+− anställda arbetstagare, och 
+− inhyrd arbetskraft, jämför 3  kap. 12 § andra stycket  
+arbetsmiljölagen (1977:1160). 
+I fråga om verksamhet utan anställda  arbetstagare (jämför 3 kap. 5 §  arbetsmiljölagen) avses med  
+sysselsatta, oavsett om de arbetar  heltid eller deltid: 
+− de personer som driver  
+verksamheten, och 
+− inhyrd arbetskraft.
+
+
+
+74
+AFS 2023:11 
+Kapitel 9 
+Begrepp 
+Betydelse
+
+
+Den aktuella fysiska personens  personnummer respektive juridiska  personens organisationsnummer avgör  vilka personer som ska anses ingå i  verksamheten.
+Säkerhetsrelaterat  larm
+Indikation om en avvikelse från de  avsedda driftbetingelserna, som kan  påverka säkerheten negativt.
+Säkerhetsutrustning 
+Utrustning som hindrar att tryck,  temperatur, fluidnivå, effekt eller  andra parametrar, som är av betydelse  för trycksatta anordningars säkerhet,  når nivåer som avviker från de gränser  som fastställts som nödvändiga, vid  konstruktion eller kontroll av en  trycksatt anordning.
+Tryck 
+Tryck jämfört med atmosfärstrycket.  Övertryck anges med ett positivt  värde. Undertryck anges med ett  negativt värde.
+Tryckbärande  
+tillbehör
+Anordningar med en driftsfunktion  och ett tryckbärande hölje.
+Tryckkontroll 
+Fastställande av om en anordning som  genomgått tryckprovning uppfyller  ställda krav på hållfasthet.
+Tryckkärl 
+Behållare som konstruerats och  tillverkats för att innehålla fluider  under tryck, inkluderande till  
+behållaren direkt sammanfogade delar  fram till anslutningspunkten till annan  anordning. Ett tryckkärl kan innehålla  ett eller flera rum. 
+
+
+
+75
+AFS 2023:11 
+Kapitel 9 
+Begrepp 
+Betydelse
+Trycksatt anordning 
+Anordning som antingen är en cistern,  ett vakuumkärl, ett tryckkärl eller en  rörledning.
+Trycksättning 
+Aktivitet där en trycksatt anordnings  skal belastas, så att tryck- eller  dragspänningar uppstår på grund av  ett inre negativt eller positivt tryck.  Med trycksättning avses för cisterner  de spänningar, som uppkommer av  det statiska tryck, som vätska i  cisternen ger upphov till, då cisternen  fylls.
+Vakuumkärl 
+Behållare som är konstruerad för ett  tryck, som understiger  
+atmosfärstrycket med mer än  
+0,0065 bar.
+Vattenvärmare 
+Tryckkärl för eluppvärmning av  tappvatten till en temperatur över  65 °C men högst 110 °C.
+Övervakning 
+Arbetsuppgift som vidtas, för att  säkerställa att driften av den trycksatta  anordningen sker på ett korrekt och  säkert sätt.
+
+
+
+Med begreppen gasflaska, batterivagn, batterifordon, tank, MEG container, fordon och vagn avses i detta kapitel samma som i  Myndigheten för samhällsskydd och beredskaps föreskrifter  (MSBFS 2022:3) om transport av farligt gods på väg och i terräng  och Myndigheten för samhällsskydd och beredskaps föreskrifter  (MSBFS 2022:4) om transport av farligt gods på järnväg.
+76 
+AFS 2023:11 
+Kapitel 9 
+Med begreppen bärbar brandsläckare och flaska för  
+andningsapparat avses i dessa föreskrifter samma som i  Arbetsmiljöverkets föreskrifter (AFS 2023:5) om produkter – tryckbärande anordningar. (AFS 2024:4) 
+Undantag 
+3 § Dessa föreskrifter gäller inte sådan användning av trycksatta  anordningar, som är sådan transport som avses i 3 § i lagen  (2006:263) om transport av farligt gods. 
+För en sådan trycksatt anordning som är avsedd att användas för  transport enligt första stycket, men som även ska användas på  annat sätt, gäller bara 11 §. För gasflaskor som är påfyllningsbara, gäller dock även kraven i 9, 10 och 15–22 §§. 
+Bärbara brandsläckare och flaskor för andningsapparater  undantas från alla bestämmelser i dessa föreskrifter, utom 9, 10 och 15–22 §§. 
+4 § Följande anordningar omfattas inte av bestämmelserna om  sammanfogning, reparation eller ändring i 40–42 §§: 1. Cisterner och rörledningar för brandfarlig vätska som  omfattas av krav på kontroll i föreskrifter, som har  meddelats med stöd av förordningen (2010:1075) om  brandfarliga och explosiva varor. 
+2. Sådana rörledningar som avses i 2 § a Arbetsmiljöverkets  föreskrifter (AFS 2023:5) om produkter – tryckbärande  anordningar, om de är avsedda att innehålla en  
+gasblandning, som till övervägande del innehåller metan. Vem föreskrifterna riktar sig till 
+5 § Arbetsgivaren ansvarar för att föreskrifterna i detta kapitel  följs. Med arbetsgivare likställs den som hyr in arbetskraft.
+77 
+AFS 2023:11 
+Kapitel 9 
+Den som ensam eller gemensamt med familjemedlem driver  yrkesmässig verksamhet utan anställd, ska följa bestämmelserna  i detta kapitel. Detta följer av 3 kap. 5 § andra stycket  arbetsmiljölagen (1977:1160). Det innebär att den som driver  sådan verksamhet ska följa det som sägs i detta kapitel om  arbetsgivare och om arbetstagare. 
+Av 1 och 3 kap. arbetsmiljölagen följer att föreskrifterna i detta  kapitel under vissa omständigheter kan medföra skyldigheter  även för andra än arbetsgivaren. Det som sägs i detta kapitel  gäller då även dem. 
+Undersökning och riskbedömning 
+6 § Arbetsgivaren ska bedöma riskerna med användning av  trycksatta anordningar. Vid bedömningen ska hänsyn tas till 1. erfarenheter från användningen av anordningen, 2. uppgifter om anordningens återstående livslängd, 3. reparationer och ändringar som utförts, 
+4. olyckor och tillbud som inträffat, och 
+5. eventuella avvikelserapporter och resultat från kontroller  av de trycksatta anordningarna. 
+Av 7–10 §§ framgår ytterligare risker, som är förknippade med  användningen av trycksatta anordningar och som arbetsgivaren  ska bedöma i det systematiska arbetsmiljöarbetet. 
+Hur trycksatta anordningar ska vara placerade 
+7 § Arbetsgivaren ska se till att den riskbedömning, som avgör  var en trycksatt anordning ska vara placerad, tar hänsyn till  betydelsen av 
+1. att det är möjligt att utföra underhåll, fortlöpande tillsyn  och kontroll på ett enkelt och säkert sätt, 
+2. de förebyggande åtgärder som förhindrar att  anordningen skadas av arbeten eller andra aktiviteter,  som bedrivs i närheten, och 
+3. att konsekvenserna av en olycka förvärras genom att78 
+AFS 2023:11 
+Kapitel 9 
+a) de som befinner sig på arbetsstället utsätts för  skadliga tryckvågor eller träffas av delar av  
+anordningen inom ett område, där de normalt  
+arbetar, 
+b) de som befinner sig på arbetsstället inte kan 
+stänga av anordningen, 
+c) de som befinner sig på arbetsstället inte kan ta sig  från platsen, och 
+d) byggnader eller konstruktioners bärande delar  skadas. 
+Allmänna råd 
+Exempel på risker för att anordningen skadas av arbete eller  andra aktiviteter som bedrivs i närheten, är att föremål  faller ned på anordningen eller att anordningen blir påkörd  av trafik. För att följa bestämmelsen, när det finns risk för  att anordningen ska bli påkörd, bör man använda ett  påkörningsskydd som är utformat enligt Trafikverkets  rådgivande dokument om vägar och gators utformning  (VGU) eller Boverkets konstruktionsregler. 
+8 § Arbetsgivaren ska se till att trycksatta anordningar, som ska  vara trycksatta, inte är placerade där omgivningens temperatur  kan bli lägre än den temperatur, som anordningen tillverkats för  att användas i, om det inte finns rutiner för hur anordningen ska  hållas uppvärmd. 
+Fortlöpande tillsyn 
+9 § För att en anordning med tillhörande säkerhetsutrustning ska  få vara trycksatt, ska arbetsgivaren fortlöpande undersöka den.  Arbetsgivaren ska bedöma om den trycksatta anordningen och  eventuell säkerhetsutrustning har skadats eller på annat sätt  försämrats. 
+Den fortlöpande tillsynen ska minst omfatta tillsyn av att 1. anordningen fungerar tillfredsställande,
+79 
+AFS 2023:11 
+Kapitel 9 
+2. inga otätheter har uppkommit, 
+3. anordningen eller säkerhetsutrustningen inte har utsatts  för skadlig yttre eller inre påverkan, 
+4. inga andra fel eller avvikelser har uppstått, 
+5. en trycksatt anordning, ventiler och nödstopp är korrekt  märkta, och 
+6. en eventuell föreskriven kontroll enligt 15–22 §§ eller  10 kap. 7–26 §§ eller 10 kap. 3 §, har utförts. 
+10 § För anordningar, som inte omfattas av krav på rutiner för  fortlöpande tillsyn eller en journal över den återstående  livslängden enligt 38 och 39 §§, ska arbetsgivaren bedöma om  riskerna med användningen kräver att det ändå upprättas rutiner  och en journal enligt 38 och 39 §§. 
+Allmänna råd 
+Exempel på anordningar där en riskbedömning kan visa att  det finns behov av rutiner för fortlöpande tillsyn och en  journal över den återstående livslängden, är anordningar  som är sammanfogade med en anordning som omfattas av  38 och 39 §§, och även slangar. 
+Fyllning och tömning mellan trycksatta anordningar och  anordningar placerade på fordon eller vagn 
+11 § Arbetsgivaren ska säkerställa att en eventuell slang eller  någon annan anslutning är säkert fastsatt, innan innehållet i en  tank eller en MEG-container, som är placerad på ett fordon eller  en vagn, eller innehållet i en batterivagn eller ett batterifordon,  överförs till eller från en trycksatt anordning. 
+Arbetsgivaren ska också säkerställa att övervakning sker av fyllningen eller tömningen enligt första stycket, så att åtgärder  kan vidtas omedelbart vid läckage eller överfyllning. 
+Arbetsgivaren ska även säkerställa att platsen avgränsas genom  varselmärkning, för att motverka att andra arbetstagare, än de 
+80 

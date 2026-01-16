@@ -1,0 +1,31 @@
+ELSÄKERHET PÅ BYGGARBETSPLATSEN & REGLER (SAMMANFATTNING)
+
+Ansvarig Myndighet: Elsäkerhetsverket (Elsäkerhetslagen 2016:732).
+
+1. INNEHAVARENS ANSVAR
+- Vem är innehavare? Den som råder över anläggningen (ofta Byggherren eller Byggentreprenören för byggel).
+- Ansvar: Innehavaren ansvarar för att anläggningen är säker och kontrolleras löpande ("Fortlöpande kontroll").
+- Byggström: Skåp ska vara låsta. Kablar ska hängas upp eller skyddas mot mekanisk åverkan (körplåtar).
+
+2. BEHÖRIGHET & AUKTORISATION
+- Olagligt arbete: Det är ett BROTT att utföra elinstallationsarbete utan auktorisation (eller ingå i ett egenkontrollprogram hos ett elinstallationsföretag).
+- "Får jag dra röret?" Nej. Att förlägga tomrör och dosor räknas som elinstallationsarbete. Byggare får INTE göra detta själva ("ful-el").
+- Undantag "Koppla Säkert": Byte av strömbrytare/uttag i egen bostad (om du vet hur man gör). På ett bygge? Nej.
+
+3. KABELFÖRLÄGGNING I VÄGG (Regler för Byggaren)
+- Spikskydd: Kablar och rör ska skyddas mot spik/skruv.
+- Genomföringar: Täning vid brandceller.
+- Dragavlastning: Kablar ska sitta fast (klamras) så de inte rycks loss.
+
+4. IP-KLASSER (Zoner i Badrum)
+- Område 0 (I badkar/dusch): IPX7.
+- Område 1 (Ovanför badkar/dusch upp till 225 cm): IPX4.
+- Område 2 (60 cm utanför Område 1): IPX4.
+- Resten av rummet: IPX1 (men oftast IP21/IP44 praxis).
+- Uttag: Får endast placeras utanför Område 2 (eller skyddat av JFB).
+
+5. ARBETSMILJÖ (Elolyckor)
+- Alla tillbud (strömgenomgång) SKA anmälas till Arbetsmiljöverket och Elsäkerhetsverket.
+- Även "liten stöt" kan ge hjärtproblem senare. Vårdkontakt rekommenderas.
+
+TUMREGEL: Rör inte elen. Låt elektrikern dra slangen. Bygg in, men bygg inte för.

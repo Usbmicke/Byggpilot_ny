@@ -1,0 +1,1411 @@
+AFS 2023:10 
+Arbetsmiljöverkets  
+föreskrifter och allmänna råd  (AFS 2023:10) om risker i  arbetsmiljön 
+(Ändrad: t.o.m. AFS 2024:3)
+AFS 2023:10 
+Innehåll 
+Avdelning I: Allmänna bestämmelser.......................................................... 7 1 kap. Allmänna bestämmelser....................................................................... 7 Varför föreskrifterna finns........................................................................... 7 Systematiskt arbetsmiljöarbete ................................................................... 7 Avdelning II: Buller och vibrationer............................................................. 8 2 kap. Buller....................................................................................................... 8 Då gäller föreskrifterna................................................................................ 8 Vem föreskrifterna riktar sig till ................................................................. 8 Definitioner ................................................................................................... 8 Exponeringsvärden .................................................................................... 10 Undersökning och riskbedömning........................................................... 12 Åtgärder....................................................................................................... 13 Kunskaper ................................................................................................... 16 Hörselundersökning .................................................................................. 17 3 kap. Vibrationer ........................................................................................... 19 Då gäller föreskrifterna.............................................................................. 19 Vem föreskrifterna riktar sig till ............................................................... 19 Definitioner ................................................................................................. 19 Undersökning och riskbedömning........................................................... 20 Åtgärder....................................................................................................... 22 Kunskaper ................................................................................................... 24 Medicinska kontroller................................................................................ 24 Avdelning III: Fall och ras............................................................................ 26 4 kap. Skydd mot skada genom fall ............................................................. 26 Då gäller föreskrifterna.............................................................................. 26 Vem föreskrifterna riktar sig till ............................................................... 26 Definitioner ................................................................................................. 26 Undersökning och riskbedömning........................................................... 27 Åtgärder....................................................................................................... 27 Särskild risk för fall .................................................................................... 29 5 kap. Skydd mot skada genom ras.............................................................. 31 Då gäller föreskrifterna.............................................................................. 31 Vem föreskrifterna riktar sig till ............................................................... 31 Definitioner ................................................................................................. 31 Undersökning och riskbedömning........................................................... 31 Åtgärder....................................................................................................... 32
+2 
+AFS 2023:10 
+Särskild risk för ras .....................................................................................33 Avdelning IV: Hälsofarliga eller onödigt tröttande fysiska belastningar ......................................................................................................................... 36 6 kap. Belastningsergonomi...........................................................................36 Då gäller föreskrifterna ..............................................................................36 Vem föreskrifterna riktar sig till ...............................................................36 Definitioner..................................................................................................36 Undersökning och riskbedömning...........................................................37 Åtgärder.......................................................................................................38 Kunskaper....................................................................................................40 Medicinska kontroller ................................................................................41 Avdelning V: Kemiska riskkällor................................................................ 42 7 kap. Övergripande bestämmelser för kemiska riskkällor.......................42 Då gäller föreskrifterna ..............................................................................42 Vem föreskrifterna riktar sig till ...............................................................42 Definitioner..................................................................................................43 Generella bestämmelser.............................................................................46 Undersökning och riskbedömning...........................................................46 Åtgärder.......................................................................................................50 Kunskaper....................................................................................................53 Märkning......................................................................................................54 Skyltning ......................................................................................................57 Förvaring......................................................................................................57 Avfall ............................................................................................................58 8 kap. Ytterligare bestämmelser för vissa grupper av kemiska ämnen ...59 Då gäller föreskrifterna ..............................................................................59 Vem föreskrifterna riktar sig till ...............................................................59 Definitioner..................................................................................................59 Allergiframkallande kemiska ämnen.......................................................60 Cancerframkallande, mutagena och reproduktionsstörande kemiska  ämnen ...........................................................................................................65 Förbud och krav på tillstånd .....................................................................68 Obligatoriska mätningar och tjänstbarhetsintyg ....................................70 9 kap. Kompletterande bestämmelser för vissa riskfyllda arbeten i  kombination med kemiska riskkällor...........................................................73 Då gäller föreskrifterna ..............................................................................73 Vem föreskrifterna riktar sig till ...............................................................74 Definitioner..................................................................................................74
+3 
+AFS 2023:10 
+Arbetstillstånd............................................................................................. 76 Arbete i cistern, brunn, silo, lastutrymme eller i miljö med begränsad  luftomsättning............................................................................................. 77 Brandfarliga heta arbeten i eller på behållare, rörledningar eller  liknande anordningar ................................................................................ 78 Explosionsfarlig miljö ................................................................................ 78 
+10 kap. Kompletterande bestämmelser för vissa kemiska riskkällor....... 86 Vem föreskrifterna riktar sig till ............................................................... 86 Definitioner ................................................................................................. 86 Anestesigaser .............................................................................................. 88 Bekämpningsmedel.................................................................................... 89 Blybatterier.................................................................................................. 91 Cytostatika och andra läkemedel som kan orsaka bestående ohälsa .. 92 Färg och lack ............................................................................................... 97 Gaser............................................................................................................. 98 Kvartshaltigt damm ................................................................................... 99 Syntetiska oorganiska fibrer.................................................................... 104 
+Avdelning VI: Smitta .................................................................................. 107 11 kap. Smittrisker........................................................................................ 107 Då gäller föreskrifterna............................................................................ 107 Vem föreskrifterna riktar sig till ............................................................. 108 Definitioner ............................................................................................... 108 Undersökning och riskbedömning......................................................... 112 Åtgärder..................................................................................................... 112 
+Kompletterande bestämmelser vid arbete med risk för kontakt med  kroppsvätskor........................................................................................... 115 Kompletterande bestämmelser vid arbete med smittämnen i  laboratorier, i rum för försöksdjur och i industriella processer ......... 119 
+Avdelning VII: Strålning............................................................................ 130 12 kap. Artificiell optisk strålning .............................................................. 130 Då gäller föreskrifterna............................................................................ 130 Vem föreskrifterna riktar sig till ............................................................. 130 Definitioner ............................................................................................... 130 Undersökning och riskbedömning......................................................... 133 Åtgärder..................................................................................................... 135 Kunskaper ................................................................................................. 136 Läkarundersökning.................................................................................. 137 Uppföljning ............................................................................................... 137 Arbete med laser....................................................................................... 138
+4 
+AFS 2023:10 
+13 kap. Elektromagnetiska fält ....................................................................141 Då gäller föreskrifterna ............................................................................141 Vem föreskrifterna riktar sig till .............................................................141 Definitioner................................................................................................142 Undersökning och riskbedömning.........................................................144 Exponeringsbedömning...........................................................................148 Åtgärder.....................................................................................................150 Kunskaper..................................................................................................153 Hälsoundersökning ..................................................................................154 Undantag för magnetisk resonanstomografi ........................................155 
+Övergångsbestämmelser............................................................................ 156 Bilaga 1 Beräkning av daglig bullerexponeringsnivå ............................ 158 Bilaga 2 Hand- och armvibrationer .......................................................... 159 Bilaga 3 Helkroppsvibrationer.................................................................. 161 Bilaga 4 Exponeringsvärden för vibrationer ........................................... 164 Bilaga 5 Påverkande faktorer vid manuell hantering ............................ 165 Bilaga 6 Ämnen med förbud eller tillståndskrav.................................... 167 Bilaga 7 Tabeller över smittämnen med tillhörande riskklass.............. 171 Bilaga 8 Artificiell icke-koherent optisk strålning .................................. 224 Bilaga 9 Artificiell optisk strålning från laser.......................................... 239 Bilaga 10 Fysikaliska storheter.................................................................. 253 Bilaga 11 Gränsvärden för exponering för statiska magnetiska fält .... 255 Bilaga 12 Insatsnivåer för statiska magnetiska fält................................. 256 Bilaga 13 Gränsvärden för exponering för tidsvarierande elektriska och  magnetiska fält ............................................................................................ 257 Bilaga 14 Insatsnivåer för tidsvarierande elektriska fält........................ 258 Bilaga 15 Insatsnivåer för tidsvarierande magnetiska fält .................... 260 Bilaga 16 Gränsvärden för exponering för elektromagnetiska fält ...... 262 Bilaga 17 Insatsnivåer för elektromagnetiska fält................................... 264 Bilaga 18 Insatsnivåer för kontaktström och inducerad ström............. 266
+5 
+
+AFS 2023:10 
+Arbetsmiljöverkets författningssamling 
+Arbetsmiljöverkets föreskrifter och allmänna  råd om risker i arbetsmiljön; 
+(Ändrad: t.o.m. AFS 2024:3) 
+
+AFS 2023:10
+6 
+
+AFS 2023:10 
+Kapitel 1 
+Avdelning I: Allmänna bestämmelser 
+1 kap. Allmänna bestämmelser 
+Kapi tel 1 
+Varför föreskrifterna finns 
+1 § Syftet med dessa föreskrifter är att förebygga ohälsa eller olyckor  som kan orsakas av buller (2 kap.), vibrationer (3 kap.), fall (4 kap.), ras (5 kap.), hälsofarliga eller onödigt tröttande belastningar (6 kap.), kemiska riskkällor (7–10 kap.), smitta (11 kap.), artificiell optisk  strålning (12 kap.) och elektromagnetiska fält (13 kap.). 
+Systematiskt arbetsmiljöarbete 
+2 § I arbetsmiljölagen (1977:1160) och i Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:1) om systematiskt arbetsmiljöarbete – grundläggande skyldigheter för dig med arbetsgivaransvar, finns  grundläggande bestämmelser om hur arbetsgivaren ska organisera,  genomföra och följa upp sitt arbetsmiljöarbete, för att förebygga risker  för ohälsa och olycksfall i arbetet och uppnå en tillfredställande  arbetsmiljö. Vidare framgår vilka som ska medverka i arbetet. 
+I dessa föreskrifter finns bestämmelser med preciserade krav för det  systematiska arbetsmiljöarbetet, som kan gälla undersökningar av  arbetsmiljön, bedömningar av risker och åtgärder som ska vidtas. Det  finns också preciseringar som kan gälla särskilda krav på kunskaper  eller hur vissa arbetsmiljöuppgifter ska fördelas.
+7 
+AFS 2023:10 
+Kapitel 2 
+Avdelning II: Buller och vibrationer 
+2 kap. Buller 
+Kapi tel 2 
+Då gäller föreskrifterna 
+1 § Bestämmelserna i detta kapitel reglerar all verksamhet där  arbetstagare kan utsättas för buller. 
+Bestämmelserna i 4 § om toppvärde gäller inte vid skjutning eller  sprängning inom Försvarsmakten. 
+Vem föreskrifterna riktar sig till 
+2 § Arbetsgivaren ansvarar för att föreskrifterna i detta kapitel följs. Med arbetsgivare likställs den som hyr in arbetskraft. 
+Av 3 kap. 5 § andra stycket arbetsmiljölagen (1977:1160) följer att den  som ensam eller gemensamt med familjemedlem driver yrkesmässig  verksamhet utan anställd, omfattas av bestämmelserna om såväl  arbetsgivare som arbetstagare i detta kapitel. 
+Av 1 och 3 kap. arbetsmiljölagen följer att föreskrifterna i detta kapitel  under vissa omständigheter kan medföra skyldigheter även för andra  än arbetsgivare. 
+Definitioner 
+3 § I detta kapitel har följande begrepp dessa betydelser.
+Begrepp 
+Betydelse
+A-vägd ljudtrycksnivå,  LpA
+Vägt medeltal av ljudtrycksnivån inom  det hörbara frekvensområdet mätt med  vägningsfilter A enligt standard SS-EN  61672–1:2014 Elektroakustik - 
+Ljudnivåmätare - Del 1: Specifikationer.
+
+
+
+8 
+AFS 2023:10 
+Kapitel 2 
+Begrepp 
+Betydelse
+
+
+Utgåva 2. Anges i enheten decibel (dB).  Som förkortat skrivsätt för A-vägd  ljudtrycksnivå används även begreppet  ljudnivå med enheten dB(A).
+Buller 
+Icke önskvärt ljud. Omfattar både  hörselskadligt och störande ljud. Begreppet störande ljud omfattar både  psykologiska och fysiologiska effekter.
+C-vägd ljudtrycksnivå,  LpC
+Vägt medeltal av ljudtrycksnivån inom  det hörbara frekvensområdet mätt med  vägningsfilter C enligt standard SS-EN  61672–1:2014 Elektroakustik - 
+Ljudnivåmätare - Del 1: Specifikationer. Utgåva 2. Anges i enheten dB. Som  förkortat skrivsätt för C-vägd  
+ljudtrycksnivå används även begreppet  ljudnivå med enheten dB(C).
+Daglig  
+bullerexponeringsnivå,  LEX,8h
+Ekvivalent A-vägd ljudtrycksnivå  normaliserad till en åttatimmars  arbetsdag. Omfattar allt buller på  arbetsplatsen, inklusive impulsbuller.  (Se bilaga 1).
+Ekvivalent A-vägd  
+ljudtrycksnivå, LpAeq,Te
+Energiekvivalent medelvärde av en  varierande A-vägd ljudtrycksnivå under  en given tidsperiod Te. Anges i enheten  dB. (Exempel på skrivsätt: LpAeq,4 =  85 dB, om exponeringstiden är  
+4 timmar).
+Gränsvärde 
+Värde som inte får överskridas.
+Insatsvärde för buller 
+Värde som innebär krav på insatser om  det uppnås eller överskrids.
+
+
+
+9
+AFS 2023:10 
+Kapitel 2 
+Begrepp 
+Betydelse
+Ljudtrycksnivå, Lp 
+Logaritmiskt mått på ljudets styrka  baserat på ljudtrycket i förhållande till  referensvärdet 20 µPa (mikropascal).  Anges i enheten dB. (Exempel på  skrivsätt: Lp = 85 dB).
+Maximal A-vägd  
+ljudtrycksnivå, LpAFmax
+Maximal A-vägd ljudtrycksnivå  bestämd med tidsvägningen ”F” (Fast)  enligt standard SS-EN 61672–1:2014 Elektroakustik – Ljudnivåmätare – Del 1:  Specifikationer. Utgåva 2.
+Ototoxiska ämnen 
+Kemiska ämnen som vid inandning eller  hudexponering kan skada eller förändra  innerörats eller hörselnervens funktion  eller struktur och därigenom orsaka akut  eller kronisk hörselnedsättning eller  balansstörning. 
+Toppvärde, LpCpeak 
+Maximal C-vägd momentan  
+ljudtrycksnivå under mätperioden med  inställningen ”peak” på instrumentet.
+
+
+
+Exponeringsvärden 
+4 § I detta kapitel gäller insatsvärdena och gränsvärdena i tabellerna 1  och 2. 
+Tabell 1 och 2 anger insatsvärden och gränsvärden för buller utifrån  risken för hörselskada. 
+Tabell 1. Insatsvärden för buller – risk för hörselskada
+Typ av exponeringsmått 
+Undre  
+insatsvärden 
+[dB]
+Övre  
+insatsvärden 
+[dB]
+Daglig bullerexponeringsnivå LEX,8h 
+80 
+85
+
+
+
+10 
+AFS 2023:10 
+Kapitel 2 
+Typ av exponeringsmått 
+Undre  
+insatsvärden 
+[dB]
+Övre  
+insatsvärden 
+[dB]
+Maximal A-vägd ljudtrycksnivå  LpAFmax
+- 
+115
+Toppvärde LpCpeak 
+1351 
+1351
+
+
+
+1 Exponeringsvärdet ska inte tillämpas vid skjutning eller sprängning inom  Försvarsmakten. 
+Vid tillämpning av insatsvärdena i tabell 1 ska arbetsgivaren inte ta  hänsyn till om arbetstagarna använder hörselskydd. 
+Tabell 2. Gränsvärden för buller – risk för hörselskada 
+Typ av exponeringsmått 
+Gränsvärden 
+[dB]
+Daglig bullerexponeringsnivå LEX,8h 
+85
+Maximal A-vägd ljudtrycksnivå LpAFmax 
+115
+Toppvärde LpCpeak 
+1351
+
+
+
+1 Exponeringsvärdet ska inte tillämpas vid skjutning eller sprängning inom  Försvarsmakten. 
+Vid tillämpning av gränsvärdena i tabell 2 ska arbetsgivaren ta  hänsyn till dämpningen hos hörselskydden när man bestämmer  bullerexponeringen, i de fall arbetstagarna använder hörselskydd. 
+Allmänna råd 
+En metod för bestämning av bullerexponering finns i standarden  SS-EN ISO 9612:2009. Akustik – Bestämning av bullerexponering  i arbetsmiljön – Teknisk metod (ISO 9612:2009). Utgåva 1. 
+Boverket har bestämmelser och vägledningar om ljud i vissa  arbetslokaler. Folkhälsomyndigheten har vägledningar om buller 
+11 
+AFS 2023:10 
+Kapitel 2 
+i lokaler för undervisning, vård eller annat omhändertagande  och ger rekommendationer om buller inomhus. 
+Undersökning och riskbedömning 
+5 § Vid undersökning och riskbedömning av exponering för buller ska  arbetsgivaren särskilt uppmärksamma följande: 
+1. Exponeringens nivå, typ och varaktighet, inklusive all  exponering för impulsbuller. 
+2. Insatsvärden och gränsvärden enligt 4 § tabellerna 1 och 2. 3. Negativa effekter på hälsa och säkerhet för arbetstagare som  kan vara särskilt känsliga för buller. 
+4. Negativa effekter på hälsa och säkerhet som beror på  samverkan mellan buller och arbete med ototoxiska ämnen  eller mellan buller och vibrationer, så långt det är  
+genomförbart. 
+5. Indirekta negativa effekter på hälsa och säkerhet, till följd av  att buller maskerar varningssignaler eller andra ljud som  behöver uppmärksammas för att minska risken för olycksfall. 
+6. Tillverkarnas information om buller från arbetsutrustning. 7. Om det finns alternativ utrustning som ger mindre buller. 8. Om arbetstagarna är exponerade för buller på arbetsplatsen  utanför arbetstid. 
+9. Resultat från hörselundersökningar av arbetstagarna  sysselsatta i verksamheten och, om det är möjligt, publicerade  resultat från andra hörselundersökningar. 
+10. Om arbetstagarna har tillgång till hörselskydd med lämpliga  dämpningsegenskaper. 
+Bestämmelser om bullerexponering för gravida arbetstagare finns i  Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:2) om  planering och organisering av arbetsmiljöarbete – grundläggande  skyldigheter för dig med arbetsgivaransvar, i kapitlet om gravida,  nyförlösta och ammande arbetstagare.
+12 
+
+Allmänna råd 
+AFS 2023:10 Kapitel 2 
+
+Situationer när arbetstagarna är exponerade för buller på  arbetsplatsen utanför arbetstid kan vara raster, vila och andra  tillfällen då arbetstagarna inte kan lämna arbetsplatsen. 
+6 § Arbetsgivaren ska bedöma bullerexponeringen och, i den  omfattning som behövs, utföra mätningar för att klarlägga om  exponeringsvärdena i 4 § tabellerna 1 och 2 uppnås eller överskrids. Mätningar ska planeras och genomföras med lämpliga intervall. 
+Vid mätning ska arbetsgivaren särskilt uppmärksamma följande: 1. De metoder och den utrustning som används ska vara  anpassade till de aktuella förhållandena. Arbetsgivaren ska ta  särskild hänsyn till 
+a) egenskaperna hos det buller som ska mätas, 
+b) exponeringens varaktighet, 
+c) miljöfaktorer, och 
+d) mätutrustningens specifika egenskaper. 
+2. Metoderna och utrustningen ska göra det möjligt att bestämma  parametrarna i 4 § tabellerna 1 och 2. Det ska gå att avgöra om  värdena i 4 § tabellerna 1 och 2 har uppnåtts eller överskridits. 
+3. Metoderna kan omfatta stickprovsundersökningar. De ska då  vara representativa för en arbetstagares personliga exponering. 4. Vid bedömning av de uppmätta värdena ska hänsyn tas till  mätosäkerheter enligt praxis. 
+Åtgärder 
+7 § Om bullerexponeringen är lika med, eller överstiger, något av de  övre insatsvärdena i 4 § tabell 1, ska arbetsgivaren utreda orsaken och  vidta åtgärder för att minska exponeringen. När arbetsgivaren väljer  åtgärder ska åtgärderna i 10 § särskilt övervägas. 
+8 § Arbetstagarna får inte exponeras för buller som överskrider något  av gränsvärdena i 4 § tabell 2. Om detta ändå sker ska arbetsgivaren
+13 
+AFS 2023:10 
+Kapitel 2 
+1. vidta omedelbara åtgärder för att minska exponeringen så att  den ligger under gränsvärdena, 
+2. utreda orsakerna till att gränsvärdena har överskridits, och 3. vidta åtgärder så att gränsvärdena inte överskrids i  fortsättningen. 
+9 § Om arbetstagarna i en bullrande verksamhet av säkerhetsskäl  behöver meddela sig med andra, ska arbetsgivaren vidta åtgärder så  att detta är möjligt. 
+10 § Arbetsgivaren ska planera, bedriva och följa upp arbetet så att  bullerexponeringen minskas genom att bullret elimineras vid källan  eller sänks till lägsta möjliga nivå. Hänsyn ska då tas till den tekniska  utvecklingen. Arbetsgivaren ska särskilt överväga följande åtgärder: 
+1. Ändra arbetsmetoder så att arbetstagarnas exponering för  buller minskas. 
+2. Välja arbetsutrustning som ger en så låg ljudnivå som möjligt. 3. Vidta bullerbegränsande åtgärder på maskiner och andra  bullerkällor. 
+4. Ändra utformningen och planeringen av arbetsplatsen. 5. Ge arbetstagarna information och utbildning, så att de vet hur  arbetsutrustningen ska användas och därmed har möjlighet att  minska sin exponering för buller. 
+6. Vidta tekniska åtgärder för att minska bullret 
+a) för luftburet buller, med skärmar, inbyggnader eller  ljudabsorbenter i tak och på väggar, och 
+b) för strukturburet buller, genom dämpning eller  
+isolering. 
+7. Ha lämpliga underhållsprogram för arbetsutrustning,  arbetsplatser och kringutrustning. 
+8. Organisera arbetet så att bullerexponeringen minskar, genom  att 
+a) begränsa tiden eller intensiteten för arbetstagarnas  exponering, och
+14 
+AFS 2023:10 
+Kapitel 2 
+b) anpassa arbetstiderna så att viloperioderna blir  
+tillräckliga. 
+Bestämmelser om utformning av arbetsplatser finns i  Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:12) om  utformning av arbetsplatser. 
+Allmänna råd 
+Hörselskydd kan godtas som åtgärd för att begränsa risken för  hörselskada till exempel vid följande situationer: 
+1. I verksamheter där man inte rimligen kan genomföra  tekniska eller organisatoriska åtgärder för att sänka  
+exponeringen för buller till en riskfri nivå. 
+2. Arbete under en begränsad övergångstid medan man  genomför permanenta åtgärder för att minska  
+bullerexponeringen. 
+3. Arbete som medför exponering för buller under korta,  sällan förekommande tillfällen och där det är svårt att  genomföra andra bullerbegränsande åtgärder. 
+Personer som är särskilt känsliga för buller 
+11 § Arbetsgivaren ska anpassa åtgärderna i 7, 9, 10 och 12 §§ för de  arbetstagare som kan vara särskilt känsliga för buller. 
+Allmänna råd 
+Arbetstagare som kan vara särskilt känsliga för buller är de som  är gravida eller har någon form av hörselnedsättning. 
+Påbudsskylt 
+12 § Arbetsgivaren ska se till att det finns en påbudsskylt Hörselskydd  måste användas, utformad i enlighet med bilaga 3 till  Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:12) om  utformning av arbetsplatser, på de arbetsplatser där arbetstagarna kan  exponeras för buller som är lika med eller överstiger något av de övre  insatsvärdena i 4 § tabell 1. Där det är möjligt ska arbetsgivaren avgränsa dessa områden och begränsa tillträdet till dem.
+15 
+AFS 2023:10 
+Kapitel 2 
+Hörselskydd 
+13 § Om de risker som uppstår vid bullerexponering inte kan  förebyggas på annat sätt ska arbetsgivaren se till att berörda  arbetstagare 
+1. får tillgång till hörselskydd om bullerexponeringen är lika  med, eller överstiger, något av de undre insatsvärdena i 4 §  tabell 1, eller 
+2. får tillgång till och använder hörselskydd om  
+bullerexponeringen är lika med, eller överstiger, något av de  övre insatsvärdena i 4 § tabell 1. 
+Arbetsgivaren ska kontrollera att de åtgärder som vidtas är effektiva. 
+Om användningen av hörselskydd medför risk för olyckor, ska  arbetsgivaren vidta åtgärder för att minska risken. 
+Arbetsgivaren ska ge berörda arbetstagare möjlighet att medverka vid  val av hörselskydd. 
+Allmänna råd 
+Olycksrisker på grund av hörselskydd kan bero på att arbetstagarna inte hör varningssignaler eller inte hör att en fara  finns i närheten. 
+Kunskaper 
+14 § Om bullerexponeringen är lika med, eller överstiger, något av de  undre insatsvärdena i 4 § tabell 1, ska arbetsgivaren se till att  arbetstagarna får information och utbildning om de risker som  uppkommer i samband med exponering för buller. 
+Vid information och utbildning ska arbetsgivaren särskilt  uppmärksamma följande: 
+1. Vad riskerna med bullerexponering kan innebära.16 
+AFS 2023:10 
+Kapitel 2 
+2. Vilka åtgärder som har vidtagits, eller kommer att vidtas,  enligt detta kapitel för att eliminera eller minimera riskerna till  följd av buller. 
+3. Gränsvärdena och insatsvärdena i 4 §. 
+4. Resultaten av bedömningar och mätningar enligt 5 och 6 §§  samt beskrivning av deras innebörd och möjliga risker. 5. Korrekt användning av hörselskydd. 
+6. Att arbetstagarna har skyldighet att bära hörselskydd om de  övre insatsvärdena uppnås eller överskrids. 
+7. Nyttan med, samt metoder för, att upptäcka och rapportera  tecken på hörselskador. 
+8. När arbetstagarna har rätt till hörselundersökningar, och vad  dessa syftar till enligt 15 §. 
+9. Säkra arbetsrutiner för att minimera exponeringen för buller. Hörselundersökning 
+15 § Arbetsgivaren ska erbjuda hörselundersökning till de  arbetstagare som exponeras för buller som är lika med, eller  överstiger, något av de övre insatsvärdena i 4 § tabell 1.  Undersökningen ska utföras av läkare eller av annan person som har  lämpliga kvalifikationer och då på en läkares ansvar. 
+Syftet med hörselundersökningen är att tidigt upptäcka  hörselnedsättningar på grund av buller och att bevara hörseln. 
+Tiden mellan hörselundersökningarna ska anpassas till rådande  exponeringsförhållanden. 
+Arbetsgivaren ska även erbjuda hörselundersökning till de  arbetstagare som exponeras för buller som är lika med, eller  överstiger, något av de undre insatsvärdena i 4 § tabell 1, om  riskbedömningen och bestämningen av arbetstagarnas bullerexponering enligt 5 och 6 §§ visar att det finns risk för  hörselskada.
+17 
+AFS 2023:10 
+Kapitel 2 
+16 § Arbetsgivaren ska ta del av resultaten från  
+hörselundersökningarna enligt 15 § om det inte hindras av sekretess  eller tystnadsplikt. 
+17 § Om en hörselundersökning enligt 15 § visar att en arbetstagare  har drabbats av en hörselskada, ska arbetsgivaren se till att en läkare  eller, om läkaren anser det nödvändigt, en specialist bedömer om det  är sannolikt att skadan beror på exponering för buller på  arbetsplatsen. I så fall ska arbetsgivaren 
+1. se till att arbetstagaren informeras om resultatet, av en läkare  eller en annan person med lämpliga kvalifikationer, 
+2. revidera den befintliga undersökningen och riskbedömningen, 3. följa upp och revidera de åtgärder som vidtagits för att minska  riskerna enligt 7, 9–13 §§ och vid behov anlita  
+företagshälsovård eller motsvarande sakkunnig hjälp, 4. överväga möjligheten att erbjuda arbetstagaren en annan  sysselsättning där det inte finns risk för ytterligare skadlig  exponering, och 
+5. erbjuda alla andra arbetstagare, som har exponerats på  liknande sätt, regelbundna hörselundersökningar.
+18 
+AFS 2023:10 
+Kapitel 3 
+3 kap. Vibrationer 
+Kapi tel 3 
+Då gäller föreskrifterna 
+1 § Bestämmelserna i detta kapitel reglerar all verksamhet där  arbetstagare kan utsättas för vibrationer. 
+Vem föreskrifterna riktar sig till 
+2 § Arbetsgivaren ansvarar för att föreskrifterna i detta kapitel följs.  Med arbetsgivare likställs den som hyr in arbetskraft. 
+Av 3 kap. 5 § andra stycket arbetsmiljölagen (1977:1160) följer att den  som ensam eller gemensamt med familjemedlem driver yrkesmässig  verksamhet utan anställd, omfattas av bestämmelserna om såväl  arbetsgivare som arbetstagare i detta kapitel. 
+Av 1 och 3 kap. arbetsmiljölagen följer att föreskrifterna i detta kapitel  under vissa omständigheter kan medföra skyldigheter även för andra  än arbetsgivare. 
+Definitioner 
+3 § I detta kapitel har följande begrepp dessa betydelser.
+Begrepp 
+Betydelse
+Gränsvärde 
+Värde som inte får överskridas.
+Hand- och  
+armvibrationer
+Vibrationer som överförs från utrustning  som hålls, styrs eller stöds av hand eller  arm och medför risker för ohälsa eller olycksfall.
+Helkroppsvibrationer 
+Vibrationer som överförs till hela  kroppen genom en stödjande yta,  exempelvis en stående persons fötter eller  en sittande persons säte, och som medför  risker för ohälsa eller olycksfall.
+
+
+
+19 
+AFS 2023:10 
+Kapitel 3 
+Begrepp 
+Betydelse
+Insatsvärde för  
+vibrationer
+Värde som innebär krav på åtgärder om  det överskrids.
+Vibration 
+Mekanisk svängningsrörelse hos fasta  föremål, som kan vara kontinuerlig,  intermittent (ojämn, ryckvist  
+återkommande) eller innehålla  
+upprepade stötar.
+Vibrationsexponering 
+Att utsättas för vibrationer under en viss  tid.
+
+
+
+Undersökning och riskbedömning 
+4 § Arbetsgivaren ska planera så att riskerna till följd av exponering  för vibrationer elimineras eller sänks till lägsta möjliga nivå. Hänsyn  ska tas till den tekniska utvecklingen och möjligheten att begränsa  vibrationer. 
+5 § Vid undersökning och riskbedömning av vibrationer ska  arbetsgivaren uppskatta hur stor arbetstagarnas vibrationsexponering är. Detta ska göras antingen genom att klarlägga exponeringen via  mätningar under utfört arbetsmoment eller genom att observera  förekommande arbetsmoment och hänvisa till relevant information  från tillverkaren om arbetsutrustningens sannolika vibrationsvärde  under dessa användningsförhållanden. 
+Uppskattning av vibrationsexponeringen ska göras enligt bilaga 2 eller bilaga 3. 
+Allmänna råd 
+Vid uppskattning av vibrationsexponeringen enligt bilaga 2 och  3 kan följande svenska standarder användas: 
+- SS-EN ISO 5349-1:2001. Vibration och stöt – Mätning och  bedömning av vibrationer som överförs till handen – 
+Del 1: Allmänna riktlinjer. Utgåva 1.
+20 
+AFS 2023:10 
+Kapitel 3 
+- SS-ISO 2631-1:1998 Vibration och stöt – Vägledning för  bedömning av helkroppsvibrationers inverkan på  
+människan – Del 1: Allmänna krav med de ändringar  som framgår i SS-ISO 2631-1:1998/Amd 1:2010. 
+6 § Vid undersökning och riskbedömning av vibrationer ska  arbetsgivaren särskilt uppmärksamma 
+1. insatsvärden och gränsvärden för vibrationsexponering som  anges i bilaga 4 tabell 4, 
+2. nivå, typ och varaktighet för vibrationsexponeringen, och om  exponeringen innehåller intermittenta (ojämna, ryckvist återkommande) vibrationer eller upprepade stötar, 
+3. information från arbetsutrustningens tillverkare, 
+4. särskilda arbetsförhållanden, 
+5. förhöjd risk för ohälsa eller olycksfall hos arbetstagarna som  kan vara särskilt känsliga för vibrationer, 
+6. risken för olycksfall till följd av växelverkan mellan vibrationer  och arbetsplatsen eller annan utrustning, 
+7. om arbetstagarna, inom ramen för verksamheten, exponeras  för vibrationer även utanför arbetstid, och 
+8. om det finns ersättningsutrustning som är avsedd att minska  vibrationsexponeringen. 
+Allmänna råd 
+Till punkt 4. Särskilda arbetsförhållanden kan vara ergonomisk  belastning, temperatur- och klimatförhållanden och  
+arbetsbelastning. 
+Till punkt 5. Särskilt känsliga för helkroppsvibrationer kan vara gravida. Särskilt känsliga för hand- och armvibrationer kan vara  arbetstagare med dokumenterad grav vibrationsskada eller  annan dokumenterad sjukdom i händerna, såsom kärl- och  nervskador, och arbetstagare som använder  
+kärlsammandragande medicin.
+21 
+AFS 2023:10 
+Kapitel 3 
+Till punkt 7. Situationer när arbetstagarna är exponerade för  vibrationer på arbetsplatsen utanför arbetstid kan vara raster,  vila och andra tillfällen när arbetstagarna inte kan lämna  arbetsplatsen. 
+Till punkt 8. Vid val av ersättningsutrustning, för att minska  vibrationsexponeringen, behöver arbetsgivaren både ta hänsyn  till vibrationsvärdet och effektiviteten hos arbetsutrustningen.  Om en ersättningsutrustning med lägre vibrationsvärde är  mindre effektiv kan det ta längre tid att utföra ett arbetsmoment.  Detta kan i sin tur ge längre exponeringstider och kan på så sätt  ge en högre vibrationsexponering. 
+Vibrationsskador kan uppkomma även när 
+vibrationsexponeringen ligger under de exponeringsvärden som  omnämns i föreskrifterna. Det beror på individuella skillnader i  känslighet för vibrationer. 
+Åtgärder 
+7 § Arbetsgivaren ska vidta åtgärder för att minska riskerna på grund  av vibrationsexponering om vibrationsexponeringen överstiger något  av insatsvärdena i bilaga 4 tabell 4, eller om riskbedömningen  motiverar det. 
+Vid val av åtgärder ska arbetsgivaren särskilt beakta möjligheten att 1. använda alternativa arbetsmetoder, så att arbetstagarnas  exponering för vibrationer minskas, 
+2. välja arbetsutrustning med lämplig ergonomisk utformning  som ger så liten vibrationsexponering som möjligt, med tanke  på det arbete som ska utföras, 
+3. använda teknisk arbetsutrustning som minskar risken för  vibrationsskador, till exempel säten som effektivt dämpar  helkroppsvibrationer eller handtag som dämpar vibrationer  som överförs till händer och armar,
+22 
+AFS 2023:10 
+Kapitel 3 
+4. ha lämpliga underhållsprogram för arbetsutrustningar,  arbetsplatser och kringutrustningar, 
+5. utforma och planera arbetsplatser, 
+6. informera och utbilda arbetstagarna så att arbetsutrustningen  används på ett riktigt och säkert sätt, för att minimera  exponeringen för vibrationer, 
+7. organisera arbetet på annat sätt, genom att 
+a) begränsa tiden och intensiteten för arbetstagarens vibrationsexponering, och 
+b) anpassa arbetstiderna så att viloperioderna blir tillräckliga,  samt 
+8. tillhandahålla arbetskläder som skyddar exponerade mot fukt  och kyla. 
+8 § Vibrationsexponeringen får inte överskrida något av gränsvärdena  i bilaga 4 tabell 4. Om detta sker ska arbetsgivaren 
+1. vidta omedelbara åtgärder för att minska  
+vibrationsexponeringen så att den ligger under gränsvärdet, 2. utreda orsakerna till att gränsvärdet överskridits, och 3. vidta åtgärder så att gränsvärdet inte överskrids i  fortsättningen. 
+Om det, med hänsyn till den aktuella tekniska utvecklingen och  arbetsplatsens särskilda karaktär, inte är möjligt att iaktta något av  gränsvärdena i bilaga 4 tabell 4 gäller inte kraven i första stycket vid  arbete inom luftfart för helkroppsvibrationer och Försvarsmakten för  både helkroppsvibrationer och hand- och armvibrationer. 
+9 § Arbetsgivaren ska anpassa åtgärderna i 7 och 8 §§ till arbetstagare  som kan vara särskilt känsliga för vibrationer. 
+Allmänna råd 
+Särskilt känsliga för helkroppsvibrationer kan vara gravida.  Särskilt känsliga för hand- och armvibrationer kan vara  arbetstagare med dokumenterad grav vibrationsskada eller 
+23 
+AFS 2023:10 
+Kapitel 3 
+annan dokumenterad sjukdom i händerna, såsom kärl- och  nervskador, och arbetstagare som använder  
+kärlsammandragande medicin. 
+Kunskaper 
+10 § Arbetsgivaren ska se till att arbetstagarna som utsätts för  vibrationer i arbetet får information och utbildning om riskerna.  
+Vid information och utbildning ska arbetsgivaren särskilt  uppmärksamma 
+1. resultaten av genomförda riskbedömningar, 
+2. de gränsvärden och insatsvärden som anges i bilaga 4 tabell 4, 3. de åtgärder som vidtagits eller kommer att vidtas enligt detta  kapitel för att eliminera eller minimera riskerna från  vibrationer, 
+4. arbetsrutiner för att minimera vibrationsexponeringen, 5. innebörden av de hälsorisker som kan uppstå vid  vibrationsexponering, 
+6. varför och hur arbetstagarna ska rapportera tecken på skada,  och hur de kan upptäcka tecknen, och 
+7. när arbetstagarna har rätt till medicinska kontroller, och syftet  med kontrollerna. 
+Medicinska kontroller 
+11 § I Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:15)  om medicinska kontroller i arbetslivet finns krav på att arbetsgivaren  ska anordna medicinska kontroller för de arbetstagare som kommer  att sysselsättas eller sysselsätts i arbete som innebär exponering för  vibrationer, om exponeringen 
+1. överstiger insatsvärdet för hand- och armvibrationer enligt  bilaga 4 tabell 4, 
+2. sker på sådant sätt att misstanke finns om att exponeringen  kan orsaka ohälsa, eller 
+3. orsakat vibrationsskador, eller gett misstanke om  vibrationsskador, hos en annan arbetstagare som har  exponerats på ett liknande sätt.
+24 
+AFS 2023:10 
+Kapitel 3 
+Allmänna råd 
+Exponeringen för vibrationer kan orsaka ohälsa hos  
+tandvårdspersonal, bilmekaniker, nitare, fotvårdspersonal och  andra som arbetar mycket med vibrerande handhållna maskiner  eller verktyg, trots att deras vibrationsexponering ofta ligger  under insatsvärdena. Dessa yrkeskategorier använder ofta  vibrerande handhållna maskiner eller verktyg (maskiner med  slagmekanism eller med mycket höga varvtal) där risken för  ohälsa lätt underskattas med dagens mätmetoder. Det är därför  lämpligt att låta dessa yrkeskategorier regelbundet genomgå  medicinska kontroller. 
+12 § Om det framkommer tecken på vibrationsskada hos en arbetstagare som har genomgått hälsoundersökning, eller om  arbetsgivaren har bedömt att arbetsförhållandena kan innebära risk  för belastningsbesvär, ska arbetsgivaren göra en ny undersökning och  riskbedömning enligt 6 §.
+25 
+AFS 2023:10 
+Kapitel 4 
+Avdelning III: Fall och ras 
+4 kap. Skydd mot skada genom fall 
+Kapi tel 4 
+Då gäller föreskrifterna 
+1 § Bestämmelserna i detta kapitel reglerar all verksamhet där  arbetstagare kan utsättas för fallrisker. 
+Vem föreskrifterna riktar sig till 
+2 § Arbetsgivaren ansvarar för att föreskrifterna i detta kapitel följs.  Med arbetsgivare likställs den som hyr in arbetskraft. 
+Av 3 kap. 5 § andra stycket arbetsmiljölagen (1977:1160) följer att den  som ensam eller gemensamt med familjemedlem driver yrkesmässig  verksamhet utan anställd, omfattas av bestämmelserna om såväl  arbetsgivare som arbetstagare i detta kapitel. Den som driver sådan  verksamhet behöver dock inte följa de delar av bestämmelserna i 18 §  som reglerar medgivande från arbetsgivaren och om underrättelse till  arbetsgivaren, förutom när arbetet utförs på gemensamt arbetsställe. 
+Av 1 och 3 kap. arbetsmiljölagen följer att föreskrifterna i detta kapitel  under vissa omständigheter kan medföra skyldigheter även för andra  än arbetsgivare. 
+Definitioner 
+3 § I detta kapitel har följande begrepp denna betydelse.
+Begrepp 
+Betydelse
+Fall 
+Fall från samma nivå, såsom att  
+arbetstagare faller omkull, halkar, snavar,  trampar snett, trampar genom något  underlag eller liknande, och fall till en  lägre nivå.
+
+
+
+26 
+AFS 2023:10 
+Kapitel 4 
+Undersökning och riskbedömning 
+4 § Vid undersökning och riskbedömning ska arbetsgivaren särskilt ta  hänsyn till risken för skada genom fall. 
+Arbetsgivaren ska särskilt ta hänsyn till om det finns hål, öppningar  eller liknande och stup eller annan större nivåskillnad, där  arbetstagarna uppehåller sig eller förflyttar sig under arbetet. 
+Om det behövs, ska arbetsgivaren se till att det finns lämpliga  skyddsanordningar mot fall, inklusive stabila infästningar. 
+Allmänna råd 
+Skyddsräcken eller skyddstäckning kan vara lämpliga  skyddsanordningar. 
+5 § Arbetsgivaren ska särskilt beakta behovet av skyddsåtgärder om  underlaget är lutande. 
+6 § Arbetsgivaren ska undersöka behovet av belysning för att  förebygga fall. Om undersökningen visar att det behövs, ska  arbetsgivaren se till att belysningen är tillräcklig för att synliggöra förhållanden som kan orsaka fall. 
+Åtgärder 
+7 § Arbetsgivaren ska se till att underlag som är avsedda att beträdas  har betryggande bärighet. Underlag som inte har betryggande  bärighet får beträdas först sedan särskilda skyddsåtgärder har  vidtagits. 
+Allmänna råd 
+Underlag som inte alltid har betryggande bärighet kan vara is,  gamla tak och tak med glaspartier.
+27 
+AFS 2023:10 
+Kapitel 4 
+Särskilda åtgärder kan vara att fördela belastningen över  underlaget. 
+8 § Vid anordnande av underlag som är avsett att beträdas ska  arbetsgivaren eftersträva att underlaget har lämplig ytsträvhet och är  fritt från hinder och ojämnheter som innebär risk för fall. 
+Allmänna råd 
+Genom att underlaget är fast och stadigt, jämnt och dränerat kan  risk för fall motverkas. 
+9 § Arbetsgivaren ska se till att man vidtar nödvändiga  skyddsåtgärder och iakttar särskild försiktighet vid arbete och  förflyttning på underlag som rör sig eller kan komma i rörelse. 
+10 § Arbetsgivaren ska se till att arbetsplatser och transportvägar inom  arbetsstället har tillräckligt utrymme för att arbete och förflyttning kan  ske utan risk för fall. 
+11 § Arbetsgivaren ska se till att arbetsplatser och transportvägar inom  arbetsstället är fria från spill, avfall och onödiga föremål. 
+12 § Arbetsgivaren ska se till att anordningar som är avsedda att stå  eller gå på utformas, anordnas och underhålls så att risken för fall  motverkas. 
+Allmänna råd 
+Anordningar som avses kan vara trappor, stegar, arbetsbockar,  ramper, ställningar, plattformar eller arbetsflottar. En anordning  kan också vara fotsteg på maskin, fordon och annan teknisk  anordning. 
+13 § Arbetsgivaren ska se till att en skyddsanordning mot fall, och  skyddsanordningars infästningar, är dimensionerade för den  belastning som kan uppstå.
+28 
+AFS 2023:10 
+Kapitel 4 
+Arbetsgivaren ska se till att skyddsanordningar och infästningar  kontrolleras regelbundet och underhålls väl. Bland annat ska det  kontrolleras att materialet inte har skadats. 
+14 § Arbetsgivaren ska se till att skyddstäckningen över hål,  öppningar och motsvarande är säkrad så att den inte kan avlägsnas oavsiktligt. En skyddstäckning ska vara tydligt och varaktigt märkt, så  att det framgår att den är en skyddsanordning mot fall. 
+15 § Om en lämplig skyddsanordning mot fall inte kan ordnas, ska  arbetsgivaren se till att annan lämplig skyddsåtgärd, som inte är ett  personligt fallskydd, används. 
+Bara i de fall en sådan skyddsanordning eller skyddsåtgärd som avses  i första stycket inte är rimlig eller lämplig, ska personligt fallskydd  användas. 
+Allmänna råd 
+En annan lämplig skyddsåtgärd kan vara att använda skyddsnät. 
+Särskild risk för fall 
+16 § Arbetsgivaren ska se till att anordningar för räddning finns lätt  tillgängliga, om ett fall på arbetsplatsen eller på transportvägar inom  arbetsstället kan medföra risk för drunkning. Anordningen ska vara klar att omedelbart användas, och lätt att se även under dåliga  siktförhållanden, genom färgsättning eller annan åtgärd. 
+Förvaringsplatser för transportabla anordningar ska vara tydligt  markerade och väl synliga. 
+Där det behövs ska arbetsgivaren se till att det finns fasta stegar eller  andra möjligheter för en nödställd att ta sig upp. Stegar och 
+29 
+AFS 2023:10 
+Kapitel 4 
+motsvarande anordningar ska finnas med lämpliga mellanrum, och nå  så långt ner under ytan att en nödställd lätt kan ta sig upp. 
+17 § Arbetsgivaren ska se till att arbetet förändras eller avbryts i  tillräcklig omfattning när någon under arbetet uppmärksammar en  särskild risk för fall. 
+Arbetsgivaren ska, där det behövs, spärra av riskområdet tills risken  har undanröjts.  
+Om ett arbete måste utföras inom riskområdet ska arbetsgivaren se till  att särskilda skyddsåtgärder vidtas. 
+18 § Om en skyddsanordning tillfälligt måste tas bort för att arbete ska  kunna utföras, får detta göras bara efter medgivande från  arbetsgivaren. Arbetsgivaren ska se till att särskilda  
+försiktighetsåtgärder vidtas och att skyddsanordningen sätts tillbaka  så snart som möjligt. 
+Arbetsgivaren ska underrättas om skyddsanordningen inte kan  återställas. Ytterligare skyddsåtgärder ska också vidtas, om det  behövs. Det gäller även om arbetsplatsen tillfälligt måste lämnas. 
+Av 8 kap. 2 § andra stycket 4 arbetsmiljölagen (1997:1160) följer att det  är straffbart att utan giltigt skäl ta bort en skyddsanordning eller sätta  den ur bruk.
+30 
+AFS 2023:10 
+Kapitel 5 
+5 kap. Skydd mot skada genom ras 
+Kapi tel 5 
+Då gäller föreskrifterna 
+1 § Bestämmelserna i detta kapitel reglerar all verksamhet där  arbetstagare kan utsättas för rasrisker. 
+Vem föreskrifterna riktar sig till 
+2 § Arbetsgivaren ansvarar för att föreskrifterna i detta kapitel följs.  Med arbetsgivare likställs den som hyr in arbetskraft. 
+Av 3 kap. 5 § andra stycket arbetsmiljölagen (1977:1160) följer att den  som ensam eller gemensamt med familjemedlem driver yrkesmässig  verksamhet utan anställd, omfattas av bestämmelserna om såväl  arbetsgivare som arbetstagare i detta kapitel. Den som driver sådan  verksamhet behöver dock inte följa de delar av bestämmelserna i 18 §  som reglerar medgivande från arbetsgivaren och om underrättelse till  arbetsgivaren, förutom när arbetet utförs på gemensamt arbetsställe. 
+Av 1 och 3 kap. arbetsmiljölagen följer att föreskrifterna i detta kapitel  under vissa omständigheter kan medföra skyldigheter även för andra  än arbetsgivare. 
+Definitioner 
+3 § I detta kapitel har följande begrepp denna betydelse. 
+Begrepp 
+Betydelse
+Ras 
+Ras av gods, sten, massor, löst material  och liknande samt vältande eller fallande  föremål, anordningar och liknande.
+
+
+
+Undersökning och riskbedömning 
+4 § Vid undersökning och riskbedömning ska arbetsgivaren ta hänsyn  till risken för skada genom ras. 
+31 
+AFS 2023:10 
+Kapitel 5 
+Arbetsgivaren ska se till att underlag och konstruktioner som belastas  har betryggande bärighet och ska beakta förändringar i bärighet på  grund av 
+1. belastning, 
+2. vibrationer, 
+3. fuktighetsändringar, 
+4. väderlek, och 
+5. reparations- eller ändringsarbeten. 
+5 § Arbetsgivaren ska se till att arbetet utförs från en skyddad plats om det behövs. Arbetsgivaren ska särskilt beakta detta vid  rivningsarbete eller annat arbete där ras framkallas avsiktligt. 
+Åtgärder 
+6 § Arbetsgivaren ska se till att arbetsplatser och transportvägar inom  arbetsstället ordnas så att risk för ras inte orsakas av otillräckligt utrymme för hantering av material eller annat gods eller för  manövrering av fordon. 
+Belysningen ska vara tillräcklig för att synliggöra förhållanden som  kan orsaka ras. 
+7 § Arbetsgivaren ska se till att maskiner, ställningar och andra fasta  eller rörliga anordningar placeras, monteras och förankras så att risk  för ras motverkas. 
+8 § Arbetsgivaren ska se till att det normalt finns skyddsanordningar  som så långt möjligt minskar risken för att fordon, föremål, eller  liknande kan störta ner vid kant, stup eller annan nivåskillnad. 
+Allmänna råd 
+Skyddsanordning vid stup eller andra avsatser kan vara avkörningsskydd.
+32 
+AFS 2023:10 
+Kapitel 5 
+9 § Arbetsgivaren ska se till att skyddsanordningar mot ras, och  skyddsanordningars infästningar, är dimensionerade för den  belastning som kan uppstå. 
+Arbetsgivaren ska också se till att skyddsanordningar och infästningar  kontrolleras regelbundet och underhålls väl. Bland annat ska det  kontrolleras att materialet inte har skadats. 
+10 § Arbetsgivaren ska se till att gods och andra föremål ställs, läggs,  hängs, staplas, förflyttas eller på annat sätt hanteras och placeras så att  risk för ras motverkas. En stapel ska utföras så att den blir stabil.  Hänsyn ska tas till eventuell fortsatt hantering. 
+Arbetsgivaren ska se till att uttag ur massgods, stapel eller  motsvarande görs, så att ras undviks. 
+11 § Arbetsgivaren ska vidta åtgärder så att inte föremål som finns  ovanför en arbetsplats rasar ner på denna. Om det behövs ska gods  och andra föremål hållas på plats med lämpliga skyddsanordningar  mot ras. 
+Arbetsgivaren ska se till att man så långt som möjligt undviker att  förflytta hängande last över platser där personer befinner sig. Där det  finns hängande last ska arbetsgivaren se till att det finns tydliga  anslag som varnar för detta.  
+Allmänna råd 
+Lämplig skyddsanordning som håller gods och andra föremål på  plats kan vara förankring eller stötta. 
+Särskild risk för ras 
+12 § Vid grävning, schaktning eller annat motsvarande arbete ska  arbetsgivaren se till att slänter och väggar utförs eller stöttas så att risk  för ras motverkas.
+33 
+AFS 2023:10 
+Kapitel 5 
+Allmänna råd 
+Slänt eller vägg kan utföras med lutning eller i avsatser, med  stöttning, spontning eller annan lämplig förstärkning. Överhäng  som inte kan tas bort kan behöva stöttas. 
+Vid val av släntlutning eller stödkonstruktion kan man behöva beakta materialets beskaffenhet, schaktdjup, grundvattennivå,  väderleksförhållanden, vibrationer, belastning från byggnader,  massor, maskiner och liknande. 
+13 § Arbetsgivaren ska se till att arbetsplatser med särskild risk för ras  spärras av. Arbetsgivaren ska vidta lämpliga skyddsåtgärder innan  någon arbetstagare beträder eller trafikerar en sådan plats. Lavinfara  samt risk för jordskred och motsvarande ska beaktas. 
+Allmänna råd 
+Plats där det finns särskild risk för ras kan vara tillträdes- och  transportled vid arbete på till exempel fasad, tak, i bergrum,  tunnel, tunnelöppning eller plats där det finns risk för snöras  eller fallande isklumpar. Det kan också vara plats vid ställning,  stapel, höglager och liknande som av någon anledning är eller  förväntas bli osäker. 
+Lämpliga skyddsåtgärder kan vara skyddstak eller skydd för  arbetstagare i fordon. Bergvägg och bergtak kan behöva säkras  mot stenfall och ras. 
+14 § Arbetsgivaren ska se till att arbetet förändras eller avbryts i  tillräcklig omfattning när någon under arbetet uppmärksammar en  särskild risk för ras.  
+Arbetsgivaren ska, där det behövs, spärra av riskområdet till dess att  risken har undanröjts.
+34 
+AFS 2023:10 
+Kapitel 5 
+Om ett arbete måste utföras inom riskområdet ska arbetsgivaren se till  att särskilda skyddsåtgärder vidtas. 
+Allmänna råd 
+Om föremål kan fångas av vinden kan även måttlig vindstyrka  innebära särskild risk för ras. 
+15 § Arbetsgivaren ska se till att avspärrningar vid rasrisk är tydligt  och varaktigt märkta så att det framgår att det finns en rasrisk. 
+16 § Arbetsgivaren ska se till att ingen vistas inom områden med  rasrisk eller på platser dit rasmassor, fallande eller vältande föremål  och liknande kan komma, annat än för speciella skyddsuppgifter.  
+Arbetsgivaren ska se till att särskilda skyddsåtgärder vidtas om ett  arbete måste utföras inom riskområdet. 
+17 § Arbetsgivaren ska se till att arbetstagare använder skyddshjälm  där det finns risk för fallande föremål. 
+18 § Om en skyddsanordning tillfälligt måste tas bort för att arbete ska  kunna utföras, får detta göras bara efter medgivande från  arbetsgivaren. Arbetsgivaren ska se till att särskilda  
+försiktighetsåtgärder vidtas och att skyddsanordningen sätts tillbaka  så snart som möjligt. 
+Arbetsgivaren ska underrättas om skyddsanordningen inte kan  återställas. Ytterligare skyddsåtgärder ska också vidtas, om det  behövs. Det gäller även om arbetsplatsen tillfälligt måste lämnas.  
+Av 8 kap. 2 § andra stycket 4 arbetsmiljölagen (1997:1160) följer att det  är straffbart att utan giltigt skäl ta bort en skyddsanordning eller sätta  den ur bruk.
+35 
+AFS 2023:10 
+Kapitel 6 
+Avdelning IV: Hälsofarliga eller onödigt  tröttande fysiska belastningar 
+6 kap. Belastningsergonomi 
+Kapi tel 6 
+Då gäller föreskrifterna 
+1 § Bestämmelserna i detta kapitel reglerar all verksamhet där  arbetstagare kan utsättas för belastningar eller andra förhållanden  som, direkt eller indirekt, kan påverka rörelseorganen eller  stämbanden negativt. 
+Vem föreskrifterna riktar sig till 
+2 § Arbetsgivaren ansvarar för att föreskrifterna i detta kapitel följs.  Med arbetsgivare likställs den som hyr in arbetskraft. 
+Av 1 och 3 kap. arbetsmiljölagen (1977:1160) följer att föreskrifterna i  detta kapitel under vissa omständigheter kan medföra skyldigheter  även för andra än arbetsgivare. 
+Definitioner 
+3 § I detta kapitel har följande begrepp dessa betydelser.
+Begrepp 
+Betydelse
+Belastningsbesvär 
+Besvär i rörelseorganen. Alla  former av ohälsa i  
+rörelseorganen som kan ha  samband med förhållanden i  arbetet. Besvären kan ha  
+orsakats av arbetet eller något  annat, men förvärras av arbetet.  I begreppet ingår allt ifrån lätta,  övergående besvär till livslånga  skador.
+
+
+
+36 
+AFS 2023:10 
+Kapitel 6 
+Begrepp 
+Betydelse
+Belastningsergonomi 
+Del inom området ergonomi  som behandlar hur belastningar  i arbetet påverkar  
+rörelseorganen.
+Handintensivt arbete 
+Ihållande snabba  
+handledsrörelser i kombination  med kraft.
+Last 
+Person, djur eller objekt.
+Manuell hantering 
+Alla slags transporter eller  förflyttningar av laster där en  eller flera arbetstagare lyfter,  sätter ned, skjuter på, drar, bär  eller flyttar en last.
+Repetitivt arbete 
+Arbete som innebär att man  upprepar liknande  
+arbetsrörelser om och om igen. 
+Rörelseorganen 
+De kroppsdelar och de  
+strukturer (muskler, senor,  skelett, brosk, ledband och  nerver) som gör att människan  kan inta olika kroppsställningar  och röra på sig.
+
+
+
+Undersökning och riskbedömning 
+4 § När arbetstagare utför arbetsmoment som kan vara hälsofarliga  eller onödigt tröttande, ska arbetsgivaren i sin undersökning av  arbetsförhållandena, särskilt ta hänsyn till 
+1. arbetsställningar, 
+2. arbetsrörelser, 
+3. manuell hantering, 
+4. repetitivt arbete, 
+5. handintensivt arbete, och
+37 
+AFS 2023:10 
+Kapitel 6 
+6. synförhållanden som kan påverka arbetsställningarna och  arbetsrörelserna negativt. 
+Utifrån undersökningen ska arbetsgivaren bedöma om  belastningarna, enskilt eller i kombination, kan innebära en risk för  skador i rörelseorganen eller på stämbanden. Vid riskbedömningen  ska arbetsgivaren utgå från belastningarnas 
+1. duration – hur länge, 
+2. frekvens – hur ofta, och 
+3. intensitet – hur mycket. 
+I riskbedömningen ska man också beakta fysiska, organisatoriska och  sociala förhållanden i arbetsmiljön som kan påverka riskerna. 
+Allmänna råd 
+Vid riskbedömning av hälsofarliga eller onödigt tröttande  belastningar bör man välja en evidensbaserad metod som är  lämplig för den belastning som bedöms. 
+Åtgärder 
+Arbetsställningar och arbetsrörelser 
+5 § Arbetsgivaren ska, så långt det är praktiskt möjligt, ordna och  utforma arbetsuppgifter och arbetsplatser, så att arbetstagarna kan  använda arbetsställningar och arbetsrörelser som är gynnsamma för  kroppen. Arbetsgivaren ska se till att arbetstagarna undviker att 
+1. arbeta långvarigt eller ofta återkommande med bålen böjd eller  vriden, 
+2. arbeta långvarigt eller ofta återkommande med händerna över  axelhöjd, eller under knähöjd, eller 
+3. utöva kraft i ogynnsamma arbetsställningar. 
+Arbetsgivaren ska tillhandahålla särskilda glasögon eller andra  synhjälpmedel om det behövs, så att arbetstagarna kan använda  gynnsamma arbetsställningar och arbetsrörelser.
+38 
+AFS 2023:10 
+Kapitel 6 
+Manuell hantering och annan kraftutövning 
+6 § Arbetsgivaren ska ordna arbetsplatsen så att man undviker eller  minskar risken för belastningsbesvär, särskilt i ryggen, för  arbetstagarna som utför manuell hantering eller andra arbetsuppgifter  som kräver kraftutövning. 
+Arbetsgivaren ska vidta lämpliga åtgärder, framför allt när det gäller  arbetsmiljöns utformning och de krav som arbetsuppgiften ställer. Det  innebär både organisatoriska åtgärder, och att använda sig av  arbetsutrustning, framför allt teknisk utrustning, för att undvika  manuell hantering. 
+Om det inte går att undvika manuell hantering, ska arbetsgivaren  vidta åtgärder med hänsyn till de påverkande faktorerna i bilaga 5. 
+Allmänna råd 
+Arbetsgivaren bör minska riskerna för belastningsbesvär vid  manuell hantering i följande prioritetsordning: 
+1. Helt undvika hälsofarlig och onödigt tröttande manuell  hantering. 
+2. Vidta åtgärder för att minska hälsofarlig och onödigt  tröttande manuell hantering till en acceptabel nivå, om  det inte går att undvika den helt, utifrån bedömningen av  risken för belastningsbesvär. Åtgärder kan vara att 
+a) anpassa utformningen av laster och ha tillgång till  lämplig arbetsutrustning, eller 
+b) se över arbetsorganisationen samt arbetsmiljön i  
+övrigt. 
+3. Utbilda och informera arbetstagarna, så att de kan bidra  till att riskerna minimeras totalt sett. 
+Repetitivt, starkt styrt eller bundet arbete 
+7 § Arbetsgivaren ska se till att det normalt inte förekommer arbete  som är repetitivt, starkt styrt eller bundet. Om en arbetstagare ändå  måste utföra sådant, på grund av särskilda omständigheter, ska 
+39 
+AFS 2023:10 
+Kapitel 6 
+arbetsgivaren förebygga riskerna för ohälsa eller olycksfall till följd av  hälsofarliga eller onödigt tröttande belastningar. Det förebyggande  arbetet ska leda till ökad variation i belastningen, till exempel genom  arbetsväxling, arbetsutvidgning eller pauser. 
+Allmänna råd 
+Variation i belastningen innebär att den fysiska belastningen  förändras över tid. Det är viktigt att ta hänsyn till hur ofta  belastningen varierar. Variationen påverkas även av  
+belastningarnas storlek och vilken sorts belastning det är. Handlingsutrymme 
+8 § Arbetsgivaren ska se till att arbetstagarna har möjligheter att  påverka hur det egna arbetet planeras och genomförs, så att de får  tillräcklig rörelsevariation och återhämtning. 
+Kunskaper 
+9 § Arbetsgivaren ska se till att arbetstagarna har tillräckliga  kunskaper om 
+1. lämpliga arbetsställningar och arbetsrörelser, 
+2. hur arbetsutrustningen ska användas, 
+3. riskerna med olämpliga arbetsställningar och arbetsrörelser, 4. riskerna med olämplig manuell hantering, och 
+5. tidiga tecken på överbelastning av leder och muskler. 
+Arbetsgivaren ska se till att arbetstagarna får information om vikten  på de laster som hanteras. Där det är möjligt ska arbetstagarna få  exakta upplysningar om lastens vikt och var lastens tyngdpunkt eller  tyngsta sida finns, när innehållet i den är ojämnt fördelat. 
+Arbetsgivaren ska se till att arbetstagarna får instruktioner och  möjlighet att träna in lämplig arbetsteknik för den aktuella  arbetsuppgiften. Arbetsgivaren ska också försäkra sig om att  arbetstagarna följer instruktionerna.
+40 
+
+Allmänna råd 
+AFS 2023:10 Kapitel 6 
+
+För att arbetstagarna ska kunna anpassa sin kraftinsats är det  viktigt att veta hur mycket en last väger eller vilken förmåga en  person har att bidra till sin egen förflyttning. Om tyngdpunkten i  en last ändras, kan belastningen bli många gånger större än  normalt. Det är därför viktigt att kunna planera hur ett lyft eller  en förflyttning ska utföras på bästa sätt. 
+Medicinska kontroller 
+10 § I Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:15)  om medicinska kontroller i arbetslivet finns krav på att arbetsgivaren  ska anordna medicinska kontroller för de arbetstagare som sysselsätts  i handintensivt arbete, där riskbedömningen enligt 4 § visat att  exponeringen ger en ökad risk för belastningsbesvär i nacke, skuldra,  arm eller hand, trots vidtagna åtgärder.
+41 
+AFS 2023:10 
+Kapitel 7 
+Avdelning V: Kemiska riskkällor 
+7 kap. Övergripande bestämmelser för kemiska  riskkällor 
+Kapi tel 7 
+Då gäller föreskrifterna 
+1 § Bestämmelserna i detta kapitel reglerar all verksamhet där  kemiska riskkällor hanteras. 
+Bestämmelserna i detta kapitel reglerar inte kemiska riskkällor som 1. finns i arbetsgivarens hushåll och som arbetstagaren inte  exponeras för i någon arbetsuppgift, eller 
+2. är allmänt tillgängliga och används av arbetstagaren för eget  bruk vid disk, tvätt och städning i pentryn, lunchrum eller  liknande. 
+Vem föreskrifterna riktar sig till 
+2 § Arbetsgivaren ansvarar för att föreskrifterna i detta kapitel följs. 
+Den som bara är arbetsgivare i egenskap av uthyrare av arbetstagare, är endast skyldig att följa föreskrifterna i detta kapitel när det gäller  att se till att de uthyrda arbetstagarna inte påbörjar sitt arbete innan en  undersökning och riskbedömning är gjord och nödvändiga  riskbegränsande åtgärder har vidtagits. 
+Av 3 kap. 5 § andra stycket arbetsmiljölagen (1977:1160) följer att den  som ensam eller gemensamt med familjemedlem driver yrkesmässig  verksamhet utan anställd, omfattas av bestämmelserna om såväl  arbetsgivare som arbetstagare i detta kapitel. Den som driver sådan  verksamhet omfattas dock inte av bestämmelserna i 23 §. 
+Av 1 och 3 kap. arbetsmiljölagen följer att föreskrifterna i detta kapitel  under vissa omständigheter kan medföra skyldigheter även för andra  än arbetsgivare.
+42 
+AFS 2023:10 
+Kapitel 7 
+Definitioner 
+3 § I 7–10 kap. har följande begrepp dessa betydelser.
+Begrepp 
+Betydelse
+CLP-förordningen 
+Europaparlamentets och rådets  
+förordning (EG) nr 1272/2008 av den  16 december 2008 om klassificering,  märkning och förpackning av ämnen och  blandningar, ändring och upphävande av  direktiven 67/548/EEG och 1999/45/EG  samt ändring av förordning  
+(EG) nr 1907/2006.
+Exponering för kemisk  riskkälla
+Att utsättas för kemisk riskkälla genom  inandning, förtäring eller via kontakt med  hud, slemhinnor eller ögon.
+Farlig kemisk produkt 
+Kemiska ämnen eller blandningar eller explosiva föremål som medför fysikalisk  fara eller hälsofara enligt kriterierna i  förordningen (EG) nr 1272/2008 (CLP). 
+Begreppet innefattar även kemiska ämnen  och blandningar som uppfyller kriterierna  ovan, men som inte släpps ut på  
+marknaden. 
+Begreppet innefattar alla gaser med minst  2 bar övertryck, inklusive tryckluft. 
+Farlig kemisk produkt omfattas alltid av  begreppet kemisk riskkälla.
+Gas 
+1. Kemiska ämnen och blandningar som är
+
+
+
+43 
+AFS 2023:10 
+Kapitel 7 
+Begrepp 
+Betydelse
+
+
+a) fullständigt gasformiga vid  
+20 °C, vid ett normaltryck  
+på 101,3 kPa, eller 
+b) är i flytande tillstånd med  
+ett ångtryck på över 3 bar  
+(300 kPa, absoluttryck) vid  
+50 °C, även kallad  
+kondenserad gas. 
+2. Koldioxid i fast tillstånd.
+Hantering 
+Tillverkning, bearbetning, behandling,  rivning, förpackning, förvaring, lastning  och lossning, transport, användning,  omhändertagande, destruktion,  
+konvertering och liknande förfaranden.
+Hygieniskt gränsvärde 
+Gränsvärde för genomsnittshalt av en  luftförorening i inandningsluften beräknat  som ett tidsvägt medelvärde.
+Kemisk riskkälla 
+Kemiska ämnen och blandningar som kan  medföra ohälsa eller olycksfall genom − sina hälsofarliga egenskaper, 
+− sina egenskaper beroende på hur  de används eller i vilken form de  
+förekommer, 
+− sin temperatur, 
+− att minska syrgashalten i luften,  eller 
+− att öka risken för brand, explosion  eller annan farlig kemisk reaktion.
+Kemiska ämnen och  blandningar
+Kemiskt grundämne, eller när två eller  flera grundämnen är en blandning eller en  kemisk förening. Kemiska ämnen och 
+
+
+
+44
+AFS 2023:10 
+Kapitel 7 
+Begrepp 
+Betydelse
+
+
+blandningar kan ha utvunnits, bildats eller tillverkats. 
+I begreppet ingår bland annat alla former  av damm, kosmetiska produkter,  hygieniska produkter, läkemedel, avfall,  mögelsporer och kemiska ämnen som  frisätts från mikroorganismer.
+Reach-förordningen 
+Europaparlamentets och rådets  
+förordning (EG) nr 1907/2006 av den 18 december 2006 om registrering,  utvärdering, godkännande och  
+begränsning av kemikalier (Reach),  inrättande av en europeisk kemikalie myndighet, ändring av direktiv  
+1999/45/EG och upphävande av rådets  förordning (EEG) nr 793/93 och  
+kommissionens förordning  
+(EG) nr 1488/94 samt rådets direktiv  76/769/EEG och kommissionens direktiv  91/155/EEG, 93/67/EEG, 93/105/EG och  2000/21/EG.
+Sysselsatta 
+Med sysselsatta avses, oavsett om de  arbetar heltid eller deltid: 
+− anställda arbetstagare, och 
+− inhyrd arbetskraft, jämför  
+3 kap. 12 § andra stycket  
+arbetsmiljölagen (1977:1160). 
+I fråga om verksamhet utan anställda  arbetstagare (jämför 3 kap. 5 §  
+arbetsmiljölagen) avses med sysselsatta,  oavsett om de arbetar heltid eller deltid:
+
+
+
+45
+AFS 2023:10 
+Kapitel 7 
+Begrepp 
+Betydelse
+
+
+− de personer som driver  
+verksamheten, och 
+− inhyrd arbetskraft. 
+Den aktuella fysiska personens  
+personnummer respektive juridiska  personens organisationsnummer avgör  vilka personer som ska anses ingå i  verksamheten. 
+
+
+
+Generella bestämmelser 
+4 § All dokumentation riktad till arbetstagarna om kemiska riskkällor ska vara 
+1. skriven på svenska eller annat språk som hela personalen  använder, 
+2. överskådlig, 
+3. lättläst, och 
+4. tydlig. 
+Undersökning och riskbedömning 
+5 § Arbetsgivaren ska undersöka om det hanteras eller bildas några  kemiska riskkällor i verksamheten. Om så är fallet, ska arbetsgivaren  se till att 
+1. inget arbete påbörjas innan 
+a) en riskbedömning är gjord, 
+b) nödvändiga åtgärder vidtagits, och 
+2. en ny undersökning och riskbedömning genomförs, om ny  information om risker kommer fram. 
+Förteckning och andra underlag som behövs för undersökning och  riskbedömning 
+6 § Arbetsgivaren ska förteckna de kemiska riskkällor som hanteras  eller bildas i verksamheten och ange datum när förteckningen senast  uppdaterades. För varje kemisk riskkälla ska det anges
+46 
+AFS 2023:10 
+Kapitel 7 
+1. namn, 
+2. farliga egenskaper, 
+3. var den förvaras, används eller bildas, 
+4. om det finns ett hygieniskt gränsvärde eller inte, och 5. vilka andra bestämmelser om arbetsmiljö som gäller specifikt  för riskkällan. 
+Riskkällans namn, enligt första stycket 1, får inte skilja sig från namnet  som används vid märkning enligt 25 §. 
+Allmänna råd 
+Andra bestämmelser om arbetsmiljö som gäller specifikt för  riskkällan, kan vara krav gällande 
+1. allergiframkallande ämnen, 
+2. cancerframkallande ämnen, 
+3. mutagena ämnen, 
+4. reproduktionsstörande ämnen, 
+5. medicinska kontroller, eller 
+6. förordningen (EG) nr 1907/2006 (Reach). 
+7 § Vid riskbedömningen av de förtecknade kemiska riskkällorna ska  arbetsgivaren använda information i 
+1. säkerhetsdatablad eller annat material som leverantören är  skyldig att lämna, eller 
+2. andra underlag som behövs för riskbedömningen. 
+Allmänna råd 
+Andra underlag som kan behövas vid riskbedömningen är 1. yrkeshygieniska mätningar, 
+2. statistik över ohälsa, olycksfall eller tillbud i  
+verksamheten, 
+3. erfarenheter från medicinska kontroller, samt 
+4. erfarenheter och kunskap från branschorganisationer.47 
+AFS 2023:10 
+Kapitel 7 
+Det som ska undersökas och riskbedömas 
+8 § Arbetsgivaren ska se till att undersökningen och riskbedömningen  av kemiska riskkällor omfattar de moment och situationer som kan  innebära risk för 
+1. exponering via inandning, hud, ögon eller intag via mun, 2. brand eller explosion, 
+3. syrefattig miljö, och 
+4. att gas tillsammans med luft blir antändningsbar. 
+9 § Arbetsgivaren ska, vid undersökningen och riskbedömningen av  kemiska riskkällor, ta hänsyn till 
+1. vilka farliga egenskaper ämnet har, 
+2. vilken mängd som finns på arbetsplatsen, 
+3. vilka konsekvenser som exponeringen kan medföra, 4. exponeringsnivån, 
+5. hur ofta och hur länge exponeringen pågår, 
+6. effekterna som de förebyggande åtgärderna medför, 7. reaktioner med andra kemiska riskkällor, 
+8. samverkande effekter med andra kemiska riskkällor, och 9. samverkande effekter med andra arbetsmiljörisker. 
+10 § Arbetsgivaren ska bedöma om halten av kemiska riskkällor i  luften är godtagbar i förhållande till de hygieniska gränsvärden som  anges i bilaga 1 till Arbetsmiljöverkets föreskrifter och allmänna råd  (AFS 2023:14) om gränsvärden för luftvägsexponering i arbetsmiljön.  Om de hygieniska gränsvärdena överskrids, måste arbetsgivaren  omedelbart vidta åtgärder. 
+Vid bedömningen ska arbetsgivaren även ta hänsyn till 1. sammantagen risk för kemiska riskkällor, 
+2. fysiskt påfrestande arbete som ökar upptaget av ämnet, 3. om ämnet kan tas upp via huden, och 
+4. under vilka förutsättningar som halten bedöms vara  godtagbar.
+48 
+AFS 2023:10 
+Kapitel 7 
+Skälen till att halten av kemiska riskkällor i luften bedöms som  godtagbar eller inte ska dokumenteras skriftligt. 
+11 § Arbetsgivaren ska se till att yrkeshygieniska mätningar  genomförs, om man inte på annat sätt kan bedöma om halten av  kemiska riskkällor i luften är godtagbar i förhållande till de  hygieniska gränsvärden som anges i bilaga 1 till Arbetsmiljöverkets  föreskrifter och allmänna råd (AFS 2023:14) om gränsvärden för  luftvägsexponering i arbetsmiljön. 
+Om bedömningen visar att yrkeshygieniska mätningar inte behövs,  ska skälen för detta dokumenteras skriftligt. 
+Dokumentera resultatet av riskbedömningen 
+12 § Arbetsgivaren ska skriftligt dokumentera resultatet av  riskbedömningen och vilka åtgärder man har valt. Av  dokumentationen ska det framgå 
+1. vilka delar av verksamheten som ingått i undersökningen och  riskbedömningen, 
+2. i vilka situationer exponeringen behöver minskas eller  elimineras, 
+3. vilka skyddsåtgärder som ska användas i olika situationer, 4. förväntade effekter av planerade skyddsåtgärder, 5. vilka åtgärder och vilken skadebegränsande utrustning som  ska vara förberedda vid ett eventuellt olycksfall, 
+6. vilka övriga åtgärder eller undersökningar som är beslutade,  när de ska vara genomförda och vem som är ansvarig, 7. vilka personer som deltagit i undersökningen och  riskbedömningen, 
+8. tidpunkt för nästa planerade undersökning och  
+riskbedömning, samt 
+9. vilket datum dokumentet skapades och vilken ansvarig person  som har godkänt dokumentet.
+49 
+AFS 2023:10 
+Kapitel 7 
+Allmänna råd 
+Skadebegränsande utrustning och åtgärder kan vara  brandsläckare, ögonspolning och utrymningsplan. 
+Åtgärder 
+Prioriteringsordning – åtgärdstrappan 
+13 § Vid beslut om åtgärder ska arbetsgivaren utgå från  riskbedömning eller mätning enligt 8–11 §§. Arbetsgivaren ska  planera arbetet och vidta åtgärder enligt 12 §, så att exponeringen för  kemiska riskkällor blir så låg som möjligt under hela arbetsprocessen.  Åtgärderna ska väljas i följande prioritetsordning: 
+1. Eliminera risken. 
+2. Byta till en annan kemisk riskkälla eller metod som medför  mindre risk. 
+3. Minimera exponeringen genom att använda ett slutet system  eller liknande. 
+4. Begränsa risken genom att välja de arbetsmetoder, processer eller tekniska anordningar som ger så låg exponering som  möjligt. 
+5. Använda processventilation eller andra tekniska  skyddsåtgärder så nära källan som möjligt, för att begränsa  spridningen. 
+6. Organisera arbetet så att det utförs vid sådan tid och plats, att  bara den personal som behövs för arbetet är närvarande. 7. Använda personlig skyddsutrustning. 
+Mängden av varje kemisk riskkälla ska begränsas till vad som behövs  vid det enskilda arbetsmomentet, om risken för ohälsa eller olycksfall  kan minskas genom denna åtgärd. 
+Minska risker vid inandning 
+14 § Arbetsgivaren ska vidta åtgärder för att ingen ska skadas av  kemiska riskkällor genom inandning. Arbetsgivaren ska vidta  åtgärder så att inandningsluften, så långt det är möjligt, är fri från  damm, gas, rök och andra luftföroreningar.
+50 
+AFS 2023:10 
+Kapitel 7 
+15 § Arbetsgivaren ska se till att rengöring och städning av ytor och  golv utförs regelbundet och så att damm inte virvlar upp eller sprids. 
+16 § För att kontrollera om åtgärder för att minska halten  luftföroreningar har haft avsedd effekt, det vill säga är godtagbar i  förhållande till de hygieniska gränsvärden som anges i bilaga 1 till  Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:14) om  gränsvärden för luftvägsexponering i arbetsmiljö, ska arbetsgivaren se  till att yrkeshygieniska mätningar genomförs. 
+Mätningar enligt första stycket ska genomföras senast 3 månader efter  att man vidtagit åtgärden. Mätningar behöver inte genomföras om det  är uppenbart onödigt. 
+Minska risker för hud- och ögonkontakt eller intag via munnen 17 § Arbetsgivaren ska vidta åtgärder för att ingen ska skadas av  kemiska riskkällor genom hud- eller ögonkontakt eller intag via  munnen. Arbetsgivaren ska se till att 
+1. behållare och utrustning hålls rena utvändigt, 
+2. ögonskydd används när det finns risk för stänk, frätande  ångor eller annat som kan skada ögonen, 
+3. arbets- och skyddskläder byts, om de förorenats med en kemisk riskkälla i en mängd som kan medföra en risk, 4. skyddskläder tas av och händerna tvättas, innan man går in i  lokaler där skyddskläder inte behövs, och 
+5. mat eller dryck inte tillagas eller äts, tobaksvaror inte används,  personliga tillhörigheter inte tas med och att kosmetika, för  eget bruk, inte appliceras där en kemisk riskkälla kan orsaka  ohälsa. 
+Minska risker för brand, explosion och okontrollerade kemiska  reaktioner 
+18 § För att förebygga risk för brand och explosion, ska arbetsgivaren överväga följande åtgärder i prioritetsordning:
+51 
+AFS 2023:10 
+Kapitel 7 
+1. Begränsa hanteringen av kemiska riskkällor som kan medföra  att antändbara halter i luften bildas. 
+2. Begränsa antändningskällor. 
+3. Utforma arbetslokaler och tekniska anordningar så att risken  för personskada minimeras. 
+Bestämmelser om explosionsfarlig miljö finns i kapitlet om  kompletterande bestämmelser för vissa riskfyllda arbeten i  kombination med kemiska riskkällor. Bestämmelser om utrustning för  explosionsfarlig miljö finns i Arbetsmiljöverkets föreskrifter  (AFS 2023:7) om produkter – utrustning för potentiellt explosiva  atmosfärer. 
+Allmänna råd 
+Bestämmelser om brandfarliga och explosiva varor finns i lagen  (2010:1011) om brandfarliga och explosiva varor och i  förordningen (2010:1075) om brandfarliga och explosiva varor  samt i tillämpningsföreskrifter till dessa. 
+19 § Där en kemisk riskkälla kan orsaka brand eller explosion ska  arbetsgivaren se till att lämplig utrustning för brandsläckning och  livräddning finns tillgänglig. Denna typ av utrustning ska även finnas  där man förvarar kemiska riskkällor som vid brand kan utveckla  farlig mängd gas eller aerosol. 
+20 § Arbetsgivaren ska se till att kemiskt instabila ämnen och  blandningar hanteras på ett sådant sätt, att man undviker  okontrollerade kemiska reaktioner eller sönderdelning. 
+Beredskapsplan 
+21 § Om riskbedömningen visar att kemiska riskkällor kan orsaka  olycksfall och nödsituationer som omedelbart måste åtgärdas, ska  arbetsgivaren ta fram en beredskapsplan. Beredskapsplanen ska  innehålla instruktioner om 
+1. vid vilka olycksfall och händelser det krävs omedelbara  åtgärder,
+52 
+AFS 2023:10 
+Kapitel 7 
+2. vilka uppgifter särskilt utsedda personer har vid olycksfall och  nödsituationer, 
+3. vilka skadebegränsande åtgärder som omedelbart ska  genomföras, 
+4. vilken skyddsutrustning som behövs och var den finns, 5. vilka varningssystem som finns och hur de fungerar, 6. hur berörda arbetstagare ska informeras om olycksfall och  nödsituationer, 
+7. när utrymning ska ske, och 
+8. var utrustning för första hjälpen finns. 
+För att beredskapsplanen ska kunna följas vid olycksfall och  nödsituationer ska arbetsgivaren genomföra övningar i tillräcklig  omfattning. 
+Kunskaper 
+Hanterings- och skyddsinstruktioner och andra rutiner 22 § Arbetsgivaren ska utgå från riskbedömningen av kemiska  riskkällor, när skriftliga hanterings- och skyddsinstruktioner tas fram. 
+När det handlar om en enkel hantering, där riskerna lätt kan  överblickas, behöver instruktionerna inte vara skriftliga. 
+Arbetsgivaren ska också ta fram andra nödvändiga rutiner. 
+Allmänna råd 
+Andra nödvändiga rutiner kan gälla inköp. 
+Informera om risker 
+23 § Arbetsgivaren ska informera berörda arbetstagare om vilka hälso och olycksfallsrisker som finns med de kemiska riskkällor som  hanteras eller bildas och hur dessa risker ska förebyggas. När  informationen tas fram, ska man använda 
+1. förteckning över kemiska riskkällor, 
+2. säkerhetsdatablad eller annan information från leverantör,53 
+AFS 2023:10 
+Kapitel 7 
+3. dokumentationen av bedömningen av yrkeshygieniska  mätningar, 
+4. dokumentationen av resultatet av riskbedömningen och valet  av åtgärder, 
+5. beredskapsplanen, 
+6. hanterings- och skyddsinstruktionerna, 
+7. tillstånd med villkor för hantering, enligt 8 kap. 21–23 §§, av de  ämnen som anges i bilaga 6, och 
+8. Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:14)  om gränsvärden för luftvägsexponering i arbetsmiljö samt  andra föreskrifter som gäller för arbetet. 
+Arbetsgivaren ska se till att de dokument som nämns i första stycket  finns tillgängliga för de berörda arbetstagarna. 
+Arbetsgivaren ska informera arbetstagarna om deras skyldighet att  meddela arbetsgivaren vid misstanke om att en kemisk riskkälla  orsakat ohälsa, olycksfall eller tillbud. 
+Arbetsgivaren ska försäkra sig om att arbetstagarna har förstått  hanterings- och skyddsinstruktionerna samt övrig relevant  information. 
+Märkning 
+Behållare 
+24 § Arbetsgivaren ska se till att behållare som innehåller kemiska  riskkällor är märkta så att man kan identifiera innehållet och de risker  som ämnet kan medföra. 
+25 § Arbetsgivaren ska se till att behållare som innehåller farliga  kemiska produkter är märkta enligt förordningen (EG) nr 1272/2008  (CLP) eller åtminstone med 
+1. produktens namn, 
+2. produktens faropiktogram och tilläggstext enligt tabell 3.1 och  3.2 nedan, och
+54 
+AFS 2023:10 
+Kapitel 7 
+3. information om att produkten klassificeras som 
+a) allergiframkallande, 
+b) cancerframkallande, 
+c) mutagen, eller 
+d) reproduktionsstörande. 
+Faropiktogram enligt CLP-förordningen 
+Tabell 3.1 Fysikaliska faror 
+Faropiktogram 
+
+
+
+
+Tilläggstext 
+Explosiv 
+Brandfarlig 
+Oxiderande 
+Gas under  
+tryck
+
+
+
+Tabell 3.2 Hälsofaror 
+Faropiktogram 
+
+
+
+
+Tilläggstext 
+Giftig 
+Frätande 
+Hälsofarlig 
+Skadlig
+
+
+
+Behållare som innehåller farliga kemiska produkter behöver bara märkas enligt 24 § om de är en del av en teknisk anordning och behövs för anordningens funktion. 
+Märkning kan begränsas till produktens namn eller utelämnas om  man använder farliga kemiska produkter kortvarigt eller om  innehållet ofta byts ut. Detta gäller bara om åtgärder vidtas så att  risken för ohälsa eller olycksfall inte ökar.
+55 
+AFS 2023:10 
+Kapitel 7 
+Allmänna råd 
+Situationer där farliga kemiska produkter används kortvarigt  eller ofta byts ut kan omfatta färg i ett målartråg eller hantering  av provrör vid kromatografi. 
+Rörledningar 
+26 § Arbetsgivaren ska se till att rörledningar som innehåller kemiska  riskkällor är märkta så att man kan identifiera innehållet och de risker  som ämnet kan medföra. 
+Rörledningar ska vara märkta med en pil som anger  
+strömningsriktningen. Om strömningsriktningen växlar, ska  rörledningen märkas med en pil i den aktuella strömningsriktningen eller med pilar i båda riktningarna. 
+Rörledningar som inte innehåller kemiska riskkällor ska vara märkta,  om det finns risk för felkoppling som kan leda till ohälsa eller  olycksfall. 
+27 § Utöver bestämmelserna i 26 § ska arbetsgivaren se till att synliga  rörledningar som innehåller en farlig kemisk produkt är märkta med  produktens faropiktogram enligt förordningen (EG) nr 1272/2008  (CLP). En rörledning som används för flera produkter kan märkas  med alla aktuella faropiktogram. 
+Märkningar ska placeras väl synliga, med lämpliga mellanrum och  nära farliga ställen där det finns risk för läckage, såsom ventiler och  kopplingar. 
+Om en eller flera rörledningar med farliga kemiska produkter inte är  märkta enligt kravet i första stycket, ska arbetsgivaren betala en  sanktionsavgift. I antalet sysselsatta inräknas personer på  verksamhetens samtliga arbetsställen. Det är antalet sysselsatta dagen  för överträdelsen som ska utgöra underlag för beräkning av avgiften.
+56 
+AFS 2023:10 
+Kapitel 7 
+För rörledningar som bara innehåller tryckluft utgår ingen  sanktionsavgift om faropiktogram saknas. 
+Lägsta avgiften är 15 000 kronor och högsta avgiften är  150 000 kronor. För den som har 500 eller fler sysselsatta är avgiften  150 000 kronor. För den som har färre än 500 sysselsatta ska  sanktionsavgiften beräknas enligt följande: 
+Avgift = 15 000 kronor + (antal sysselsatta – 1) × 271 kronor. 
+Summan ska avrundas nedåt till närmaste hela hundratal. Skyltning 
+28 § Arbetsgivaren ska sätta upp skyltar med relevanta faropiktogram  vid områden, lokaler och inhägnader där farliga kemiska produkter  lagras. Skyltar behövs inte om 
+1. behållarnas märkning kan läsas utifrån, eller 
+2. riskbedömningen visar att det inte behövs för säkerheten. 
+29 § Arbetsgivaren ska sätta upp skyltar med förbud, påbud och  varningar som gäller kemiska risker, om riskbedömningen visar att  det behövs. 
+Bestämmelser om varningsskylt för gasflaskor finns i  Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:11) om  arbetsutrustning och personlig skyddsutrustning – säker användning i  kapitlet om trycksatta anordningar. 
+Förvaring 
+Utrymmen 
+30 § Vid förvaring av kemiska riskkällor ska arbetsgivaren se till att 1. förvaringsutrymmen, vad gäller material, utformning och  hållfasthet, är anpassade till de kemiska riskkällornas  egenskaper, 
+57 
+AFS 2023:10 
+Kapitel 7 
+2. förvaringsskåp och förråd inomhus har fläktstyrd ventilation,  när hälsofarliga gaser eller ångor kan avges från behållarna,  och 
+3. behållare förvaras åtskilda, om två eller flera kemiska  riskkällor tillsammans kan ge upphov till ökade risker. 
+Behållare 
+31 § Vid förvaring av behållare med kemiska riskkällor, ska  arbetsgivaren se till att behållarna 
+1. är anpassade, vad gäller material, utformning och hållfasthet, till de kemiska riskkällornas egenskaper, 
+2. är förslutna när de inte används, 
+3. kontrolleras, för att upptäcka läckage, och 
+4. har säkerhetsutrustning, när det behövs. 
+Kemiska riskkällor får inte förvaras i behållare som kan förväxlas, och  därigenom orsaka ohälsa eller olycksfall. 
+Allmänna råd 
+Säkerhetsutrustning kan vara överfyllnadsskydd, nivåmätare,  säkerhetsventil och kylanordning. 
+Avfall 
+32 § När kemiska riskkällor skickas som avfall, ska arbetsgivaren se  till att avfallsmottagaren får relevant information, så att avfallet kan  hanteras på ett säkert sätt.
+58 
+AFS 2023:10 
+Kapitel 8 
+8 kap. Ytterligare bestämmelser för vissa grupper av  kemiska ämnen 
+Kapi tel 8 
+Då gäller föreskrifterna 
+1 § Bestämmelserna i detta kapitel preciserar och kompletterar  bestämmelserna i 7 kap. och reglerar 
+1. alla verksamheter där vissa allergiframkallande ämnen och  CMR-ämnen hanteras, 
+2. tillstånd och förbud för vissa ämnen, och 
+3. obligatoriska mätningar för vissa ämnen. 
+Vem föreskrifterna riktar sig till 
+2 § Arbetsgivaren ansvarar för att föreskrifterna i detta kapitel följs. 
+Den som bara är arbetsgivare i egenskap av uthyrare av arbetstagare,  är endast skyldig att följa föreskrifterna i detta kapitel när det gäller  att 
+1. se till att de uthyrda arbetstagarna inte påbörjar sitt arbete  innan en undersökning och riskbedömning är gjord och  nödvändiga riskbegränsande åtgärder har vidtagits, och 2. föra register enligt 20 §. 
+Av 3 kap. 5 § andra stycket arbetsmiljölagen (1977:1160) följer att den  som ensam eller gemensamt med familjemedlem driver yrkesmässig  verksamhet utan anställd, omfattas av bestämmelserna om såväl  arbetsgivare som arbetstagare i detta kapitel.  
+Av 1 och 3 kap. arbetsmiljölagen följer att föreskrifterna i detta kapitel  under vissa omständigheter kan medföra skyldigheter även för andra  än arbetsgivare. 
+Definitioner 
+3 § I detta kapitel har, utöver vad som definieras i 7 kap. 3 §, följande  begrepp dessa betydelser.
+59 
+AFS 2023:10 
+Kapitel 8 
+Begrepp 
+Betydelse
+CMR-ämnen 
+Cancerframkallande, mutagena eller reproduktionsstörande ämnen.
+Epoxiplastkomponent 
+Reaktionsprodukt mellan en epoxid,  vanligtvis epiklorhydrin, och exempelvis  bisfenol A.
+Försumbar exponering 
+Exponering där risken för ohälsa eller  olycksfall är på samma nivå som om  arbetstagaren inte utsätts för  
+exponeringen.
+Kvarts 
+Kiseldioxid som är kristallin eller delvis  kristallin.
+Respirabelt damm 
+Dammpartiklar som kan inandas och  som kan nå alveolerna längst ut i  lungorna.
+Specialfibrer 
+Syntetiska oorganiska icke-kristallina  (silikat-)fibrer, som är slumpvis  
+orienterade och vars totala innehåll av  oxider av alkalimetaller och alkaliska  jordartsmetaller  
+(Na2O+K2O+CaO+MgO+BaO) är lika  med eller understiger 18 viktprocent.
+Syntetiska oorganiska  fibrer
+Tillverkade fibrer, både kristallina och  icke-kristallina (amorfa).
+Särskilt farliga  
+syntetiska oorganiska  fibrer
+Syntetiska oorganiska eldfasta keramiska  fibrer, specialfibrer eller kristallina fibrer.
+
+
+
+Allergiframkallande kemiska ämnen 
+4 § Bestämmelserna i 5–12 §§ reglerar när arbetstagare exponeras för  följande allergiframkallande ämnen:
+60 
+AFS 2023:10 
+Kapitel 8 
+1. Farliga kemiska produkter som uppfyller kriterierna i  förordningen (EG) nr 1272/2008 (CLP) för att märkas med  faroangivelserna 
+a) H317 kan orsaka allergisk hudreaktion, eller 
+b) H334 kan orsaka allergi- eller astmasymtom eller  andningssvårigheter vid inandning. 
+2. Kemiska ämnen och blandningar som innehåller 
+a) etyl-2-cyanoakrylat, eller 
+b) metyl-2-cyanoakrylat. 
+3. Isocyanater som frisätts vid termisk nedbrytning. 
+4. Formaldehyd som frisätts under processer. 
+Om riskbedömningen visar att exponeringen för allergiframkallande  ämnen enligt första stycket är försumbar och att skyddsåtgärder  därför inte behövs för säkerheten, gäller inte kraven i 5–12 §§. Skälen  till att exponeringen bedöms som försumbar ska dokumenteras  skriftligt. 
+Allmänna råd 
+Skyddsåtgärder kan vara att använda punktutsug eller personlig  skyddsutrustning. 
+Dokumentation 
+5 § Vid hantering av allergiframkallande ämnen enligt 4 § ska  arbetsgivaren se till att det finns skriftlig dokumentation som anger  hur funktionen hos ventilation och arbetsutrustning ska kontrolleras. 
+Skyltning 
+6 § Vid öppen hantering av allergiframkallande ämnen enligt 4 § ska  arbetsgivaren sätta upp skyltar i anslutning till arbetsplatsen för att  varna andra arbetstagare om att arbete pågår. Skyltarna ska visa vilka  ämnen det handlar om. Skyltarna kan uteslutas, om risken för andra  arbetstagare är försumbar.
+61 
+AFS 2023:10 
+Kapitel 8 
+Allmänna råd 
+Det kan vara lämpligt att välja varningsskylten Fara som finns i  bilaga 3 till Arbetsmiljöverkets föreskrifter och allmänna råd  (AFS 2023:12) om utformning av arbetsplatser. 
+Kunskaper 
+7 § Det krävs särskild utbildning för dem som leder eller utför arbete  som innebär exponering för 
+1. farliga kemiska produkter som enligt förordningen  (EG) nr 1272/2008 (CLP) klassificeras som H317 eller H334 på  grund av sitt innehåll av 
+a) akrylater, 
+b) epoxiplastkomponenter, 
+c) formaldehydhartser, eller 
+d) organiska syraanhydrider, 
+2. farliga kemiska produkter som enligt CLP-förordningen klassificeras som H317 eller H334 på grund av sitt innehåll av  diisocyanater och inte omfattas av utbildningskraven i post 74  bilaga XVII förordningen (EG) nr 1907/2006 (Reach), 3. kemiska ämnen och blandningar som innehåller 
+a) etyl-2-cyanoakrylat, eller 
+b) metyl-2-cyanoakrylat 
+om arbetet sammanlagt pågår mer än 30 minuter per vecka,  4. diisocyanater som frisätts vid termisk nedbrytning, eller 5. formaldehyd som frisätts under processer. 
+Allmänna råd 
+Diisocyanater som omfattas av utbildningskraven i Reach förordningen är diisocyanater med strukturen 
+O=C=N–R–N=C=O, där R är en alifatisk eller aromatisk  kolväteenhet av ospecificerad längd. Om R innehåller till  exempel uretan eller ureabindningar så omfattas dessa ämnen  inte av utbildningskravet i Reach-förordningen. Det innebär att  prepolymeriserade och oligomera diisocyanater är exempel på  diisocyanater som omfattas av utbildningskravet i föreskriften 
+62 
+AFS 2023:10 
+Kapitel 8 
+men som inte omfattas av utbildningskraven i Reach 
+förordningen. Genomgår man en utbildning som krävs enligt  Reach-förordningen, har man även uppfyllt Arbetsmiljöverkets  krav på utbildning. 
+8 § Den som leder utbildningen som avses i 7 § ska ha goda kunskaper  om 
+1. kemiska arbetsmiljörisker, 
+2. allergiframkallande ämnen, 
+3. specifika risker som arbetet medför, och 
+4. hur riskerna ska minimeras. 
+9 § Utbildningen som krävs enligt 7 § ska vara anpassad till  målgruppen och minst omfatta 
+1. vilka risker arbetet innebär, 
+2. vilka skyddsåtgärder som behövs, och 
+3. hur rengöring och sanering ska utföras. 
+10 § Utbildning som uppfyller kraven i 7–9 §§ ska kunna styrkas med  ett utbildningsintyg som får högst vara 5 år gammalt. 
+Utbildningsintyget ska innehålla 
+1. namn och födelsedatum på den som gått utbildningen, 2. vilka moment som ingått i utbildningen, och 
+3. när intyget utfärdades. 
+Den arbetsgivare som låter en eller flera arbetstagare utan sådant  utbildningsintyg som anges i första och andra styckena leda eller  utföra arbete som avses i 7 § ska betala en sanktionsavgift om  10 000 kronor för varje sådan arbetstagare. 
+Medicinska kontroller 
+11 § I Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:15)  om medicinska kontroller i arbetslivet finns krav på att arbetsgivaren ska anordna medicinska kontroller för de arbetstagare som kommer 
+63 
+AFS 2023:10 
+Kapitel 8 
+att sysselsättas eller sysselsätts i arbete som innebär exponering för  farliga kemiska produkter som enligt förordningen (EG) nr 1272/2008  (CLP) klassificeras som H317 eller H334 på grund av sitt innehåll av 1. akrylater, 
+2. epoxiplastkomponenter, eller 
+3. formaldehydhartser. 
+Första stycket gäller inte om arbetsgivarens riskbedömning visar att  exponeringen för ovan nämnda ämnen är försumbar även om personlig skyddsutrustning inte används. 
+Skälen till att exponeringen bedöms som försumbar ska dokumenteras  skriftligt. 
+12 § I Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:15)  om medicinska kontroller i arbetslivet finns krav på att arbetsgivaren ska anordna medicinska kontroller med bedömning för  tjänstbarhetsintyg för de arbetstagare, som kommer att sysselsättas  eller sysselsätts i arbete som innebär exponering för följande: 
+1. Farliga kemiska produkter som enligt förordningen  (EG) nr 1272/2008 (CLP) klassificeras som H334 på grund av  sitt innehåll av 
+a) diisocyanater, eller 
+b) organiska syraanhydrider. 
+2. Kemiska ämnen och blandningar som innehåller 
+a) etyl-2-cyanoakrylat, eller 
+b) metyl-2-cyanoakrylat 
+och om arbetet sammanlagt pågår mer än 30 minuter per  vecka. 
+3. Diisocyanater som bildas vid termisk nedbrytning. 
+Första stycket gäller inte om arbetsgivarens riskbedömning visar att  exponeringen för ovan nämnda ämnen i luften är försumbar även om andningsskydd inte används.
+64 
+AFS 2023:10 
+Kapitel 8 
+Skälen till att exponeringen bedöms som försumbar ska dokumenteras  skriftligt. 
+Bestämmelser om sanktionsavgifter för den arbetsgivare som sysselsätter arbetstagare som inte har ett tjänstbarhetsintyg finns i  Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:15) om  medicinska kontroller i arbetslivet. 
+Cancerframkallande, mutagena och reproduktionsstörande  kemiska ämnen 
+13 § Bestämmelserna i 14–20 §§ reglerar all hantering av  cancerframkallande, mutagena eller reproduktionsstörande ämnen, så  kallade CMR-ämnen, som är kemiska ämnen och blandningar, vilka  har tillverkats eller utvunnits, samt uppfyller kriterierna i  förordningen (EG) nr 1272/2008 (CLP) för att märkas med följande  faroangivelser 
+1. H350 kan orsaka cancer, 
+2. H340 kan orsaka genetiska defekter, eller 
+3. H360 kan skada fertiliteten eller det ofödda barnet. 
+Bestämmelserna i 15 och 18–20 §§ reglerar följande verksamheter och  arbeten: 
+1. Arbete som innebär exponering för 
+a) trädamm från lövträd, 
+b) respirabelt kristallint kvartsdamm, 
+c) asbesthaltigt damm, 
+d) dieselavgaser, 
+e) polycykliska aromatiska kolväten i sot, tjära eller beck  av kol, eller 
+f) damm, rökgaser eller stänk som uppstått vid  
+avbränning och elektroraffinering av  
+kopparnickelskärsten. 
+2. Arbete som innebär hudexponering för mineraloljor som  tidigare har använts för att smörja och kyla rörliga delar i en  förbränningsmotor.
+65 
+AFS 2023:10 
+Kapitel 8 
+3. Framställning av auramin. 
+4. Processer där stark syra ingår vid framställningen av  isopropylalkohol. 
+Utredning om CMR-ämne eller process kan ersättas 
+14 § Ett CMR-ämne enligt 13 § första stycket får bara hanteras om det  inte är tekniskt möjligt att ersätta CMR-ämnet eller använda ämnet i  en process som medför lägre risk. 
+Arbetsgivaren ska utreda om det är tekniskt möjligt att ersätta CMR ämnen med andra ämnen, produkter eller processer som medför lägre  risk. Utredningen ska dokumenteras skriftligt. 
+Kraven i första och andra stycket gäller inte CMR-ämnen som  används för motordrift eller uppvärmning, eller förvaras för sådan  användning. 
+Dokumentera resultatet av riskbedömningen 
+15 § Vid hantering av CMR-ämnen, eller vid sådana arbeten och  verksamheter som anges i 13 §, ska arbetsgivaren se till att  dokumentationen om resultatet av riskbedömningen och valet av  åtgärder tydligt anger 
+1. vilka skyddsåtgärder som är nödvändiga för att minimera  exponeringen, 
+2. i vilka situationer personlig skyddsutrustning krävs, samt 3. rutiner för underhåll och kontroll av 
+a) funktion hos ventilation, och 
+b) arbets- och processutrustning. 
+Åtgärder 
+16 § Arbetsgivaren ska se till att CMR-ämnen enligt 13 § första stycket hanteras i ett slutet system, om det är tekniskt möjligt. 
+17 § Om det inte är tekniskt möjligt att hantera CMR-ämnen enligt  13 § första stycket i ett slutet system, ska arbetsgivaren se till att 
+66 
+AFS 2023:10 
+Kapitel 8 
+exponeringen hålls så låg som det är tekniskt möjligt genom att vidta  alla åtgärder nedan: 
+1. Använda arbetssätt och processer som minskar riskerna. 2. Välja och anpassa utrustning och metoder, så att  
+luftföroreningar bildas i så liten omfattning som möjligt. 3. Använda punktutsug eller annan processventilation, så nära  källan som möjligt. 
+4. Använda skyddskläder och skyddshandskar, om det finns risk  för kontakt med CMR-ämnen. De ska bytas vid övergång till  annat arbete. 
+5. Ordna separata förvaringsplatser för arbets- eller skyddskläder  och för privata kläder. 
+6. Samla upp spill så snabbt och säkert som möjligt. 
+7. Rengöra ytor som har förorenats. Detta ska göras när  arbetsuppgiften slutförts, dock minst dagligen. 
+8. Förvara och transportera avfall från hanteringen i stötsäkra,  förslutna och tydligt märkta behållare. 
+9. Övervaka funktionen hos utrustning, process eller ventilation,  för att kunna upptäcka oförutsedda händelser eller olycksfall som kan innebära ökad risk för exponering av CMR-ämnen. 
+18 § Arbetsgivaren ska planera arbetet med CMR-ämnen eller sådana  arbeten och verksamheter som anges i 13 § så att bara de arbetstagare som behövs för arbetet finns i närheten av hanteringen. 
+Kunskaper 
+19 § De hanterings- och skyddsinstruktioner som arbetsgivaren ska ta  fram enligt 7 kap. 22 § ska alltid vara skriftliga för hantering av CMR ämnen samt för sådana arbeten och verksamheter som anges i 13 §. 
+Register 
+20 § Arbetsgivaren ska föra register över de arbetstagare som  exponerats för CMR-ämnen eller sådana arbeten och verksamheter  som anges i 13 § i en sådan omfattning att det kan innebära risk för  ohälsa.
+67 
+AFS 2023:10 
+Kapitel 8 
+Registret ska innehålla uppgifter om 
+1. arbetstagarens namn, 
+2. arbetsuppgifter, 
+3. vilka CMR-ämnen som arbetstagaren exponerats för, och 4. uppmätt eller uppskattad exponering. 
+Arbetsgivaren ska spara register som ska föras enligt första stycket,  och som avser kemiska ämnen och blandningar som uppfyller  kriterierna för att märkas med faroangivelsen H360, i minst fem år  efter att exponeringen har upphört.  
+För andra kemiska ämnen och blandningar än de som avses i tredje stycket, följer av 3 § arbetsmiljöförordningen (1977:1166) att  arbetsgivare ska spara register som ska föras enligt första stycket under minst 40 år efter att exponeringen har upphört. 
+Förbud och krav på tillstånd 
+21 § Det är förbjudet att hantera en kemisk riskkälla som innehåller  0,1 viktprocent eller mer av de ämnen som anges i bilaga 6 tabell 5 grupp A. För erionit gäller förbudet om halten är 1 viktprocent eller  mer. 
+Förbudet gäller inte vid lagerhållning för försäljning och transport av  obrutna originalförpackningar. 
+Förbudet gäller inte heller när det finns ett tillstånd utfärdat av  Arbetsmiljöverket för 
+1. forskning om effekter av cancerframkallande ämnen, 2. utveckling av analysmetoder för ett ämne som tillhör grupp A,  eller 
+3. verksamhet där det finns särskilda skäl att hantera ett sådant  ämne. 
+Den arbetsgivare, som låter en eller flera arbetstagare hantera en eller  flera kemiska riskkällor i strid med kraven i första stycket, ska betala 
+68 
+AFS 2023:10 
+Kapitel 8 
+en sanktionsavgift. I antalet sysselsatta inräknas personer på  verksamhetens samtliga arbetsställen. Det är antalet sysselsatta dagen  för överträdelsen som ska utgöra underlag för beräkning av avgiften. 
+Lägsta avgiften är 40 000 kronor och högsta avgiften är  400 000 kronor. För den som har 500 eller fler sysselsatta, är avgiften  400 000 kronor. För den som har färre än 500 sysselsatta ska  sanktionsavgiften beräknas enligt följande: 
+Avgift 40 000 kronor + (antal sysselsatta – 1) × 721 kronor. Summan ska avrundas nedåt till närmaste hela hundratal. 
+22 § Det är förbjudet att hantera en kemisk riskkälla som innehåller  1 viktprocent eller mer av de ämnen som anges i bilaga 6 tabell 6–8 grupp B utan tillstånd utfärdat av Arbetsmiljöverket. 
+Förbudet gäller inte vid lagerhållning för försäljning och transport av  obrutna originalförpackningar. 
+Den arbetsgivare som låter en eller flera arbetstagare hantera en eller  flera kemiska riskkällor i strid med kravet i första stycket, ska betala  en sanktionsavgift. I antalet sysselsatta inräknas personer på  verksamhetens samtliga arbetsställen. Det är antalet sysselsatta dagen  för överträdelsen som ska utgöra underlag för beräkning av avgiften. 
+Lägsta avgiften är 15 000 kronor och högsta avgiften är  150 000 kronor. För den som har 500 eller fler sysselsatta är avgiften  150 000 kronor. För den som har färre än 500 sysselsatta ska  sanktionsavgiften beräknas enligt följande: 
+Avgift = 15 000 kronor + (antal sysselsatta – 1) × 271 kronor. Summan ska avrundas nedåt till närmaste hela hundratal.
+69 
+AFS 2023:10 
+Kapitel 8 
+Vid överträdelse av både 21 och 22 §§ utgår sanktionsavgift bara  enligt 21 §. 
+23 § I ansökan om tillstånd enligt 21 eller 22 §§ ska följande anges: 1. vilken kemisk riskkälla som ska hanteras, 
+2. syftet med hanteringen, 
+3. beskrivning av arbetsmetoden, 
+4. antal personer som berörs, 
+5. den största mängd som används under en arbetsdag, 6. den största mängd som finns på arbetsplatsen, 
+7. årsförbrukning, 
+8. för vilken tidsperiod tillstånd söks, 
+9. skälen till att den kemiska riskkällan inte kan ersättas av en mindre farlig kemisk riskkälla, 
+10. dokumentation om resultatet av riskbedömningen och valet av  åtgärder, 
+11. hanterings- och skyddsinstruktioner, och 
+12. yttrande från skyddsombud alternativt arbetsmiljöombud, om  sådant finns. 
+Obligatoriska mätningar och tjänstbarhetsintyg Exponeringsmätningar 
+24 § Arbetsgivaren ska se till att genomföra yrkeshygieniska  mätningar i andningszonen, när det kan förekomma exponering via  inandning av 
+1. bly och oorganiska blyföreningar, 
+2. etylenoxid, 
+3. kadmium och oorganiska kadmiumföreningar, 
+4. styren, vinyltoluen eller andra reaktiva monomerer vid  esterplastframställning, eller 
+5. särskilt farliga syntetiska oorganiska fibrer. 
+Mätningar enligt första stycket behöver inte genomföras om  riskbedömningen visar att exponeringen är försumbar. Skälen till att  exponeringen bedöms som försumbar ska dokumenteras skriftligt.
+70 
+AFS 2023:10 
+Kapitel 8 
+25 § Mätningar som krävs enligt 24 §, ska genomföras 1. senast 3 månader efter att 
+a) hanteringen påbörjats, eller 
+b) ändrats så att exponeringen kan ha ökat, och därefter 2. minst 1 gång per år. 
+26 § Om båda mätresultaten från de 2 senaste mätningarna enligt 25 § 1. är under 1/2 nivågränsvärdet kan mätning genomföras var  3:e år, eller 
+2. är under 1/5 av nivågränsvärdet kan mätning genomföras var  5:e år. 
+Tidsintervallen mellan mätningarna får överskridas med högst  2 månader. 
+27 § Mätningen enligt 24–26 §§ ska dokumenteras skriftligt i en  mätrapport, enligt anvisningar i bilaga 2 till Arbetsmiljöverkets  föreskrifter och allmänna råd (AFS 2023:14) om gränsvärden för  luftvägsexponering i arbetsmiljön. 
+Senast 3 månader efter att en mätning har gjorts, ska en kopia av  mätrapporten skickas till Arbetsmiljöverket. 
+Medicinska kontroller och biologiska exponeringskontroller 28 § I Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:15)  om medicinska kontroller i arbetslivet finns krav på att arbetsgivaren ska anordna medicinska kontroller med bedömning för  tjänstbarhetsintyg och biologiska exponeringskontroller för  arbetstagare, som kommer att sysselsättas eller sysselsätts i arbete som  innebär exponering för 
+1. bly, 
+2. kadmium, eller 
+3. kvicksilver.
+71 
+AFS 2023:10 
+Kapitel 8 
+Första stycket gäller inte om riskbedömningen visar att exponeringen  är försumbar även om personlig skyddsutrustning inte används. 
+Skälen till att exponeringen bedöms som försumbar ska dokumenteras  skriftligt. 
+Bestämmelser om sanktionsavgifter, för den arbetsgivare som  sysselsätter arbetstagare som inte har ett tjänstbarhetsintyg, finns i  Arbetsmiljöverkets föreskrifter och allmänna råd (AFS 2023:15) om  medicinska kontroller i arbetslivet.
+72 
+AFS 2023:10 
+Kapitel 9 
+9 kap. Kompletterande bestämmelser för vissa  riskfyllda arbeten i kombination med kemiska  riskkällor 
+Kapi tel 9 
+Då gäller föreskrifterna 
+1 § Bestämmelserna i 5–10 §§ i detta kapitel preciserar och  kompletterar bestämmelserna i 7 och 8 kap. och reglerar 1. arbetstillstånd vid vissa typer av arbeten, 
+2. arbeten i cisterner, brunnar, silor, lastutrymmen eller i miljöer med begränsad luftomsättning, och 
+3. brandfarliga heta arbeten i eller på behållare, rörledningar eller  liknande anordningar. 
+2 § Bestämmelserna i 11–23 §§ i detta kapitel preciserar och  kompletterar bestämmelserna i 7 och 8 kap. och reglerar all  verksamhet där arbetstagare kan utsättas för explosionsfarlig miljö  som beror på damm. 
+Bestämmelserna i 11–23 §§ i detta kapitel reglerar även 1. vätskor med flampunkt över 100 °C, 
+2. oavsiktligt bildade brandfarliga gaser, och 
+3. fordon som används i explosionsfarliga miljöer. 
+Bestämmelserna i 11–23 §§ i detta kapitel reglerar inte 1. hantering av brandfarliga vätskor och gaser, 
+2. lokaler som används för medicinsk behandling, 
+3. användning av anordningar för förbränning av gasformiga  bränslen1, 
+4. hantering av explosiva varor enligt lagen (2010:1011) om  brandfarliga och explosiva varor, 
+______________ 
+1 Europaparlamentets och rådets direktiv 2009/142/EG av den 30 november 2009 om  anordningar för förbränning av gasformiga bränslen.
+73 
+AFS 2023:10 
+Kapitel 9 
+5. hantering där explosionsrisken bara beror på kemiskt instabila  ämnen eller blandningar, 
+6. gas- och petroleumutvinningsindustrin, 
+7. gruvverksamhet, eller 
+8. land-, sjö- eller lufttransporter. 
+Allmänna råd 
+Brandfarliga vätskor och gaser regleras i den del av  
+Europaparlamentets och rådets direktiv 1999/92/EG som  genomförs i föreskrifter från Myndigheten för samhällsskydd  och beredskap, med stöd av lagen om brandfarliga och explosiva  varor. 
+Vem föreskrifterna riktar sig till 
+3 § Arbetsgivaren ansvarar för att föreskrifterna i detta kapitel följs. 
+Den som bara är arbetsgivare i egenskap av uthyrare av arbetstagare,  är endast skyldig att följa föreskrifterna i detta kapitel när det gäller  att se till att de uthyrda arbetstagarna inte påbörjar sitt arbete innan en  undersökning och riskbedömning är gjord och nödvändiga  riskbegränsande åtgärder har vidtagits. 
+Av 3 kap. 5 § andra stycket arbetsmiljölagen (1977:1160) följer att den  som ensam eller gemensamt med familjemedlem driver yrkesmässig  verksamhet utan anställd, omfattas av bestämmelserna om såväl  arbetsgivare som arbetstagare i detta kapitel.  
+Av 1 och 3 kap. arbetsmiljölagen följer att föreskrifterna i detta kapitel  under vissa omständigheter kan medföra skyldigheter även för andra  än arbetsgivare. 
+Definitioner 
+4 § I detta kapitel har, utöver vad som definieras i 7 kap. 3 §, följande  begrepp dessa betydelser.
+74 
+AFS 2023:10 
+Kapitel 9 
+Begrepp 
+Betydelse
+Explosionsfarlig miljö 
+Område där explosiv atmosfär kan  förekomma och intilliggande områden där arbetstagare kan utsättas för fara orsakad  av den explosiva atmosfären.
+Explosiv atmosfär 
+Blandning under atmosfäriska  
+förhållanden av luft och brännbara ämnen  i form av gas, ånga, dimma eller damm,  där förbränningen efter antändning  sprider sig till hela den oförbrända  blandningen.
+Tryckavlastningszon 
+Område som är farligt att befinna sig i när  ett tryckavlastningssystem fungerar som  det är tänkt, till exempel när ett  
+sprängbleck öppnas.
+Zon 0 
+Områden där explosiv atmosfär som  består av gas, ånga eller aerosol  
+förekommer ständigt, långvarigt eller ofta.
+Zon 1 
+Områden där explosiv atmosfär som  består av gas, ånga eller aerosol förväntas  förekomma vid normal hantering.
+Zon 2 
+Områden där explosiv atmosfär som  består av gas, ånga eller aerosol inte  uppstår vid normal hantering men om det  ändå gör det bara har kort varaktighet. 
+Zon 20 
+Områden där explosiv atmosfär som  består av brännbart damm förekommer  ständigt, långvarigt eller ofta.
+Zon 21 
+Områden där explosiv atmosfär som består av brännbart damm förväntas  förekomma vid normal hantering.
+
+
+
+75
+AFS 2023:10 
+Kapitel 9 
+Begrepp 
+Betydelse
+Zon 22 
+Områden där explosiv atmosfär som  består av brännbart damm inte uppstår  vid normal hantering men om det ändå  gör det bara har kort varaktighet.
+
+
+
+Arbetstillstånd 
+5 § Arbetstillstånd krävs vid 
+1. arbete i cistern, brunn, silo, lastutrymme eller i miljö med  begränsad luftomsättning, där en brandfarlig vätska, gas eller  aerosol, enligt förordningen (EG) nr 1272/2008 (CLP), hanteras  eller bildas, 
+2. svetsning, slipning, skärning eller annat arbete, som kan  medföra hög temperatur, i eller på behållare, rörledning eller  liknande anordning som innehåller, eller har innehållit någon  brandfarlig kemisk riskkälla, eller 
+3. arbete som kan orsaka brand eller explosion inom ett område  där explosiv atmosfär kan förekomma. 
+6 § Innan man påbörjar arbete som kräver arbetstillstånd, enligt 5 §,  ska arbetsgivaren ha utfärdat ett arbetstillstånd. Det ska innehålla 1. arbetsgivarens skriftliga godkännande att arbetstagarna får  utföra arbetsuppgiften, 
+2. hanterings- och skyddsinstruktioner för det aktuella arbetet,  och 
+3. ett skriftligt intygande av arbetstagarna att de kommer att följa  instruktionerna. 
+Arbetsgivaren ska se till att arbetstillståndet sparas i minst 3 månader  efter att arbetet avslutats. 
+7 § På en gemensam arbetsplats ska arbetsgivaren ge information till  den som är samordningsansvarig för arbetsmiljöfrågor angående
+76 
+AFS 2023:10 
+Kapitel 9 
+1. det arbete man kommer att utföra som kräver arbetstillstånd  enligt 5 §, 
+2. hanterings- och skyddsinstruktionerna i arbetstillståndet enligt  6 §, och 
+3. de risker i arbetet som kan påverka arbetstagarna som arbetar  för andra bolag eller liknande. 
+Den samordningsansvariga ska ha fått och godkänt denna  information innan arbetet får påbörjas. 
+Arbete i cistern, brunn, silo, lastutrymme eller i miljö med  begränsad luftomsättning 
+8 § Innan man påbörjar ett arbete i cistern, brunn, silo, lastutrymme  eller i miljö med begränsad luftomsättning, ska arbetsgivaren se till att  mäta halten 
+1. syrgas, 
+2. hälsofarliga ämnen, och 
+3. brännbara gaser och ångor. 
+Arbetsgivaren ska bedöma om luften ska kontrolleras fortlöpande och  om åtgärder behöver vidtas. 
+Kravet i första stycket gäller inte om riskbedömningen visar att  mätningar är uppenbart onödiga. Skälen till bedömningen att  mätningar är onödiga ska dokumenteras skriftligt. 
+9 § Vid arbete i cistern, brunn, silo, lastutrymme eller i miljö med  begränsad luftomsättning ska arbetsgivaren se till att 
+1. en andningsapparat används, om luftens sammansättning är  okänd, 
+2. arbetet övervakas, så att den som utför arbetet snabbt kan få  hjälp, och 
+3. en lyftanordning för att snabbt kunna få ut arbetstagarna ur  utrymmet är förberedd, om det inte är uppenbart onödigt.
+77 
+AFS 2023:10 
+Kapitel 9 
+Det kan behövas arbetstillstånd enligt 5 § vid arbete i cistern, brunn,  silo, lastutrymme eller i miljö med begränsad luftomsättning. 
+Brandfarliga heta arbeten i eller på behållare, rörledningar eller liknande anordningar 
+10 § Innan man börjar svetsa, slipa, skära eller utföra annat arbete som  kan medföra hög temperatur i eller på en behållare, rörledning eller  liknande anordning, ska arbetsgivaren se till att tömma anordningen  på kemiska riskkällor. 
+Kravet i första stycket gäller inte om riskbedömningen visar att det är  uppenbart onödigt att tömma anordningen innan arbetet utförs. 
+Det kan behövas arbetstillstånd enligt 5 § vid arbete med svetsning,  slipning, skärning eller annat arbete som kan medföra hög  temperatur. 
+Explosionsfarlig miljö 
+11 § Den arbetsgivare som sysselsätter arbetstagare i en  explosionsfarlig miljö ska även följa 12–23 §§ som preciserar och  kompletterar bestämmelserna i 7 och 8 kap. som i övrigt gäller för  kemiska riskkällor. 
+Det finns även krav på arbetstillstånd enligt 5 § vid arbete som kan  orsaka brand eller explosion inom ett område där explosiv atmosfär  kan förekomma. 
+Undersökning och riskbedömning 
+12 § Arbetsgivaren ska undersöka om explosiv atmosfär kan bildas i  verksamheten. Alla kemiska ämnen och blandningar som vid  hanteringen kan förekomma i form av gas, ånga, aerosol eller damm,  ska betraktas som ämnen och blandningar som kan bilda explosiv  atmosfär. 
+Kravet i första stycket gäller inte om en undersökning har visat att  sådana kemiska ämnen och blandningar inte kan orsaka en explosion.
+78 
+AFS 2023:10 
+Kapitel 9 
+13 § Om undersökningen visar att en explosiv atmosfär kan bildas, ska  arbetsgivaren upprätta en skriftlig riskbedömning. 
+Riskbedömningen ska innehålla uppgifter om 
+1. vilka ämnen som bedömts kunna bilda en explosiv atmosfär, 2. blandningens explosionsbenägenhet, 
+3. vilka tändkällor som finns och var de finns, 
+4. hur man har kommit fram till i vilka zoner en explosiv  atmosfär kan uppstå, 
+5. sannolikheten för att en explosiv atmosfär antänds och vilka  konsekvenser det kan få, 
+6. vilka utrymmen, utrustningar, installationer, material eller  liknande som har betydelse för explosionsrisken, och 
+7. vilka tryckavlastningszoner som måste märkas ut, så att  personer inte befinner sig inom farligt område under drift. 
+Riskbedömningen ska ha utförts av någon som har lämplig utbildning  och kunskap för att göra riskbedömningar av explosiv atmosfär. 
+Riskbedömningen ska omfatta normalt arbete, underhåll och  förväntade avvikelser och fel. 
+Den arbetsgivare som inte har upprättat en riskbedömning enligt  första stycket ska betala en sanktionsavgift. I antalet sysselsatta  inräknas personer på verksamhetens samtliga arbetsställen. Det är  antalet sysselsatta dagen för överträdelsen som ska utgöra underlag  för beräkning av avgiften. 
+Lägsta avgiften är 5 000 kronor och högsta avgiften är 50 000 kronor.  För den som har 500 eller fler sysselsatta, är avgiften 50 000 kronor.  För den som har färre än 500 sysselsatta, ska sanktionsavgiften  beräknas enligt följande: 
+Avgift = 5 000 kronor + (antal sysselsatta – 1) × 90 kronor.79 
+AFS 2023:10 
+Kapitel 9 
+Summan ska avrundas nedåt till närmaste hela hundratal. 
+Allmänna råd 
+Vid behov av tryckavlastning bör man alltid eftersträva att göra  det säkert på en lämplig plats utanför byggnaden så att inte  personer eller säkerhetsutrustning skadas av utströmmande  medier, tryckvågor, flammor, splitter eller liknande. Det är inte  ovanligt med eldsflammor som sträcker sig flera tiotals meter  från en avlastningsmynning. 
+14 § Arbetsgivaren ska se till att undersökningen och  riskbedömningen även omfattar 
+1. vilka rutiner som behövs för en säker hantering, 
+2. vilken skyddsutrustning och vilka säkerhetsåtgärder som är  nödvändiga, 
+3. att utrustning, installationer, skyddssystem, komponenter,  anordningar, verktyg och material är lämpliga, 
+4. vilka rutiner som behövs för att på ett säkert sätt ta hand om  spill och läckage, 
+5. vilka områden som, genom öppningar, har eller kan få  förbindelse med områden som har betydelse för  
+explosionsrisken, och 
+6. vilka brandsläckmedel som behövs och hur släckningen ska gå  till för att förhindra explosion. 
+Zonklassificering 
+15 § Arbetsgivaren ska klassificera explosionsfarliga områden eller  lokaler i zoner, zon 0–2 eller zon 20–22, efter hur ofta explosiv  atmosfär uppkommer och hur länge den varar. Områdena ska  klassificeras enligt gällande Europastandard eller på annat sätt, som  ger minst motsvarande skyddsnivå. 
+För områden eller lokaler med sådana zoner ska arbetsgivaren sätta  upp varningsskylten Explosiv atmosfär, utformad i enlighet med bilaga 3 till Arbetsmiljöverkets föreskrifter och allmänna råd 
+80 

@@ -76,7 +76,7 @@ export default function SettingsPage() {
             }
         }
 
-        const res = await saveCompanyProfileAction(user.uid, { profile: updatedProfile, context });
+        const res = await saveCompanyProfileAction({ profile: updatedProfile, context });
         setSaving(false);
         if (res.success) {
             setMsg('✅ Sparat! AI:n är nu uppdaterad.');

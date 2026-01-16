@@ -1,143 +1,110 @@
-Allmänna Bestämmelser AB 04 
-FÖR BYGGNADS-, ANLÄGGNINGS OCH INSTALLATIONSENTREPRENADER 
-
-BYGGANDETS KONTRAKTSKOMMITTÉ
-
-Allmänna Bestämmelser FÖR BYGGNADS-, ANLÄGGNINGS-OCH INSTALLATIONSENTREPRENADER AB 04 
-
-
-Dessa bestämmelser med kommentartexter har utarbetats av Föreningen Byggandets Kontraktskommitté, BKK. Medlemmar i BKK är BANVERKET BYGGHERREFORUM ELEKTRISKA INSTALLATÖRSORGANISATIONEN EIO FASTIGHETSÄGARNA FORTIFIKATIONSVERKET HSBs RIKSFÖRBUND ISOLERFIRMORNAS FÖRENING KYLENTREPRENÖRERNAS FÖRENING LANDSTINGSFÖRBUNDET LUFTFARTSVERKЕТ RIKSBYGGEN STATENS FASTIGHETSVERK STD SVENSK TEKNIK OCH DESIGN SVENSK VENTILATION SVENSKA KOMMUNFÖRBUNDET SVERIGES ALLMÄNNYTTIGA BOSTADSFÖRETAG, SABО SVERIGES BYGGINDUSTRIER VVS-INSTALLATÖRERNA VÄGVERKET 
-
-INNEHÅLL 
-Förord... 3
-Begreppsbestämningar med anmärkningar... 4
-Kapitel 1 Omfattning... 7
-Kapitel 2 Utförande... 11
-Kapitel 3 Organisation... 14
-Kapitel 4 Tider... 17
-Kapitel 5 Ansvar och avhjälpande... 19
-Kapitel 6 Ekonomi... 25
-Kapitel 7 Besiktning... 30
-Kapitel 8 Hävning... 35
-Kapitel 9 Tvistelösning... 38 
-Kapitel 10 Förenklad tvistelösning...... 38
-
-Förord 
-Dessa allmänna bestämmelser är avsedda att användas vid byggnads-, anläggnings- och installationsentreprenader. Kommentartexterna och anmärkningar till begreppsbestämningarna skall vara vägledande vid tillämpning och tolkning av bestämmelserna. Bestämmelserna är skrivna med utgångspunkt i delad entreprenad, där var och en av entreprenörerna står i direkt avtalsförhållande med beställaren. Bestämmelserna är även avsedda för generalentreprenad, där en entreprenör ansvarar inför beställaren för hela produktionen. För båda entreprenadformerna gäller att det är fråga om utförandeentreprenader, vilket innebär att beställaren svarar för projekteringen och entreprenören för utförandet. Ansvaret för att objektet i sin slutliga utformning uppfyller avsedd funktion åvilar då beställaren. För vissa typer av arbeten som normalt ingår i en utförandeentreprenad anges inte hur arbetet skall utföras utan beställaren låter entreprenören välja system eller produkt. Det kan exempelvis gälla hur undertak skall hängas upp och infästas. Härigenom får entreprenören enligt AB 04 ansvar för valet av teknisk lösning. För avgränsbar del av en entreprenad som kräver mer omfattande projektering av entreprenören kan allmänna bestämmelser för totalentreprenad åberopas. AB 04 bygger på en rimlig balans mellan rättigheter och skyldigheter som syftar till en ekonomiskt optimal riskfördelning mellan parterna. Ändringar i dessa bestämmelser skall därför undvikas. I AB 04 har genom s.k. täckbestämmelser lämnats öppet för parterna att avtala om en annan reglering än den som framgår av AB 04. Dessa markeras med formuleringen "om inte annat föreskrivits" eller motsvarande. Paragrafer som innehåller täckbestämmelser markeras med *. Övriga bestämmelser är s.k. fasta bestämmelser. Vid utarbetandet av AB 04 har ökad vikt lagts på kvalitets- och miljöfrågor. Utöver föreskrifterna i AB 04 har även kontraktstidens längd samt parternas planering och organisation betydelse för att uppnå de kontraktsenliga fordringarna. Med hänsyn till den komplexitet som ofta sammanhänger med genomförandet av entreprenader är en god kommunikation och samverkan nödvändig för ett gott resultat. Parterna bör därför finna former för en fortlöpande dialog samt inom ramen för den allmänna lojalitetsplikten visa varandra förtroende och öppenhet. I AB 04 har begreppet "vårdslöshet" ersatt formuleringen "vårdslöshet eller försummelse" i AB 92. I sak innebär detta ingen ändring.
-
-Begreppsbestämningar med anmärkningar
- 
-À-pris: pris exklusive mervärdesskatt för enhet av arbete. À-priset skall avse samtliga kostnader, inklusive kostnader för räntor och centraladministration samt vinst för en i entreprenadhandlingarnas mening färdig enhet av arbete eller, om så föreskrivs, en eller flera delar av kostnaderna. 
-À-prislista: förteckning över à-priser. 
-Arbete: arbetsprestation, hjälpmedel, material och varor. Arbetsprestation innefattar även handhavande av material och varor. 
-Arbetsområde: område som under entreprenadtiden står till entreprenörens disposition för entreprenadens utförande. 
-Besiktningsplan: handling som anger plan för genomförande av besiktningar. 
-Beskrivning: handling med föreskrifter om och/eller krav på utförande av och kvalitet på arbete. I beskrivningen kan ingå bilder som kompletterar eller förklarar vad som anges i texten. 
-Betalningsplan: handling med föreskrifter om den ordning som gäller för betalning. Byggherre: den som för egen räkning utför eller låter utföra byggnads-, anläggnings- och installationsentreprenader. 
-Entreprenad: kontraktsarbeten jämte förekommande ÄTA-arbeten. 
-Entreprenadhandlingar: kontraktshandlingar jämte handlingar som tillkommer från kontraktets tecknande och intillgarantitidens början och som enligt kontraktshandlingarna eller senare överenskommelser skall gälla för entreprenaden. 
-Entreprenadsumma: kontraktssumma med justering för tillägg och avdrag samt i förekommande fall belopp avseende indexersättning, allt exklusive mervärdesskatt. Entreprenadtid: tid från entreprenadens påbörjande till och med den dag då entreprenaden är godkänd. 
-Fel: avvikelse som innebär att en del av en entreprenad inte utförts alls eller inte utförts på kontraktsenligt sätt.
-Författning: lag, förordning och andra bindande regler enligt kapitel 8 regeringsformen. 
-Förfrågningsunderlag: det underlag som beställaren tillhandahåller för utarbetande av anbud. 
-Hjälpmedel: anordningar som erfordras för entreprenadens utförande samt transporter. Exempel på hjälpmedel är maskiner, redskap, ställningar, bodar, formvirke och instrument. 
-Huvuddel: del av kontraktsarbetena som anges som huvuddel i kontraktshandlingarna och för vilken en angiven del av kontraktssumman har fastställts. 
-Kontrakt: handling som undertecknats av parterna och som utvisar deras överenskommelse. Exempel på kontrakt är – utöver handling som rubricerats som kontrakt - uppgörelseprotokoll och beställningsskrivelse som undertecknats av parterna och som utvisar parternas överenskommelse. 
-Kontraktsarbete: arbete som enligt kontraktshandlingarna ingår i entreprenörens åtagande. 
-Kontraktshandlingar: kontrakt jämte handlingar som är fogade till detta eller som i någon av dessa är angivna som gällande för kontraktsarbetena. Om parterna inte har upprättat ett kontrakt är de handlingar som utvisar parternas överenskommelse att betrakta som kontraktshandlingar. 
-Kontraktssumma: i kontraktshandlingarna angiven ersättning för kontraktsarbetena, exklusive mervärdesskatt. 
-Kontraktstid: i kontraktshandlingarna angiven tid för utförande av kontraktsarbetena eller huvuddel därav. 
-Kvalitetsplan: handling som anger särskilda kvalitetspåverkande åtgärder för att säkerställa entreprenadens kontraktsenliga utförande. Kvalitetsplanen kan exempelvis ange aktiviteter som krävs för att säkerställa och beskriva systematiken i kvalitetsarbetet. 
-Miljöplan: handling som anger särskilda åtgärder för att säkerställa gällande miljökrav. Miljöplanen kan exempelvis ange vilka åtgärder som kommer att vidtas vid val av arbetsmetodik och byggmaterial, materialhantering, källsortering och omhändertagande av avfall. 
-Mängdförteckning: förteckning över mängder av skilda slag med eller utan beskrivning av utförande, funktion eller kvalitet. En mängdförteckning kan exempelvis omfatta mängder av arbetsprestationer, hjälpmedel, material eller varor. 
-Prisbasbelopp: prisbasbelopp enligt lagen (1962:381) om allmän försäkring. 
-Sidoentreprenör: den som vid sidan av entreprenören utför entreprenad åt beställaren i anslutning till eller inom arbetsområdet. 
-Skriftligen: information som kan läsas och lagras. Exempel på överföringssätt av sådan information är post, fax och e-post. 
-Teknisk lösning: material, vara, konstruktion eller utförande som angetts på ritning, i beskrivning eller på annat sätt. 
-Tidplan: handling med uppgifter om tider. Tidplanen kan exempelvis innehålla uppgifter om tider för utförande av arbeten, provningar eller tillhandahållande av handlingar, hjälpmedel, material eller varor. 
-Totalentreprenad: entreprenad eller del av entreprenad där entreprenören i förhållande till beställaren svarar för projektering och utförande. 
-Underentreprenör: den som inom arbetsområdet utför entreprenad åt entreprenören. Utförandeentreprenad: entreprenad eller del av entreprenad där beställaren svarar för projektering och entreprenören svarar för utförande. 
-Utsättning: överföring av givna mätdata från karta, ritning e.d. till en punkt i terrängen, på byggnadskonstruktion e.d. och därefter markering av punkten. 
-ÄTA-arbete: Ändringsarbete, Tilläggsarbete som står i omedelbart samband med kontraktsarbetena och som inte är av väsentligt annan natur än dessa, samt Avgående arbete.
-
 KAPITEL 1 OMFATTNING
-§ 1 Omfattningen av kontraktsarbetena bestäms av kontraktshandlingarna. Kontraktsarbetena omfattar även sådana detaljarbeten som, utan att vara särskilt angivna i kontraktshandlingarna, uppenbarligen är avsedda att utföras utan tillägg till kontraktssumman.
-Kommentar till kapitel 1 § 1 Villkoret att omfattningen av entreprenörens åtagande bestäms av kontraktshandlingarna är ett av de mest grundläggande villkoren i AB 04. AB 04 är främst skrivna för utförandeentreprenader. Vid utförandeentreprenader har beställaren gjort eller låtit göra produktbestämning genom de beskrivningar eller ritningar, som legat till grund för anbudsgivning och som efter avtal ingår bland kontraktshandlingarna. Den kanske viktigaste konsekvensen av första stycket är att arbeten som inte redovisats i kontraktshandlingarna inte heller omfattas av entreprenörens åtagande. Detta gäller även, med det undantag som anges i andra stycket, arbeten som uppenbarligen är nödvändiga för att åstadkomma en normenlig och fungerande byggnad eller anläggning.
-§ 2 Kontraktshandlingarna kompletterar varandra om inte omständigheterna föranleder annat.
-Kommentar till kapitel 1 § 2 Att kontraktshandlingarna kompletterar varandra är ett uttryck för principen att arbete som skall omfattas av entreprenörens åtagande enbart behöver redovisas på ett ställe i kontraktshandlingarna. Förutsättning för detta är i sin tur att handlingarna är upprättade efter god sed, bl.a. lämpligt och konsekvent samordnade, eller – om så inte är fallet – att entreprenören i anbudsskedet i varje fall inte skall behöva missta sig på vilka arbeten som skall ingå i hans åtagande. Undantaget ”om inte omständigheterna föranleder annat” syftar på sådana fall där man inte rimligen av entreprenören kan begära att han i anbudsskedet borde ha insett viss förpliktelse.
+§ 1
+Omfattningen av kontraktsarbetena bestäms av kontraktshandlingarna. Kontraktsarbetena omfattar även sådana detaljarbeten som, utan att vara särskilt angivna i kontraktshandlingarna, uppenbarligen är avsedda att utföras utan tillägg till kontraktssumman.
+Kommentar till kapitel 1 § 1
+Villkoret att omfattningen av entreprenörens åtagande bestäms av kontraktshandlingarna är ett av de mest grundläggande villkoren i AB 04. AB 04 är främst skrivna för utförandeentreprenader. Vid utförandeentreprenader har beställaren gjort eller låtit göra produktbestämning genom de beskrivningar eller ritningar, som legat till grund för anbudsgivning och som efter avtal ingår bland kontraktshandlingarna.
+Den kanske viktigaste konsekvensen av första stycket är att arbeten som inte redovisats i kontraktshandlingarna inte heller omfattas av entreprenörens åtagande. Detta gäller även, med det undantag som anges i andra stycket, arbeten som uppenbarligen är nödvändiga för att åstadkomma en normenlig och fungerande byggnad eller anläggning.
+§ 2
+Kontraktshandlingarna kompletterar varandra om inte omständigheterna föranleder annat.
+Kommentar till kapitel 1 § 2
+Att kontraktshandlingarna kompletterar varandra är ett uttryck för principen att arbete som skall omfattas av entreprenörens åtagande enbart behöver redovisas på ett ställe i kontraktshandlingarna. Förutsättning för detta är i sin tur att handlingarna är upprättade efter god sed, bl.a. lämpligt och konsekvent samordnade, eller – om så inte är fallet – att entreprenören i anbudsskedet i varje fall inte skall behöva missta sig på vilka arbeten som skall ingå i hans åtagande. Undantaget ”om inte omständigheterna föranleder annat” syftar på sådana fall där man inte rimligen av entreprenören kan begära att han i anbudsskedet borde ha insett viss förpliktelse.
 Bestämmelserna är skrivna med utgångspunkt i delade entreprenader. Att de olika kontraktshandlingarna är sinsemellan samordnade mellan olika fackområden är beställarens ansvar. Även vid generalentreprenader gäller att beställaren är ansvarig för att handlingarna är konsekvent uppdelade i fackområden och sinsemellan samordnade. Därav följer att den beställare som avser att låta visst arbete inom ett fackområde, exempelvis håltagning, ingå i åtagandet inom ett annat fackområde, måste se till att håltagningsåtagandet framgår av de handlingar som är avsedda för respektive fackområde. I annat fall kan den entreprenör som skall tillhandahålla arbetet vara berättigad till ersättning utöver kontraktssumman.
-Motstridiga uppgifter § 3 
+§ 3 Motstridiga uppgifter
 Vid motstridiga uppgifter i kontraktshandlingarna gäller de i följande ordning, om inte omständigheterna uppenbarligen föranleder annat:
-kontrakt
-ändringar i AB 04 som är upptagna i sammanställning i administrativa föreskrifter
+Kontrakt
+Ändringar i AB 04 som är upptagna i sammanställning i administrativa föreskrifter
 AB 04
-beställning
-anbud
-särskilda mät- och ersättningsregler
-à-prislista eller prissatt mängdförteckning
-kompletterande föreskrifter för entreprenaden lämnade före anbudets avgivande
-administrativa föreskrifter
-ej prissatt mängdförteckning
-beskrivningar
-ritningar
-övriga handlingar.
+Beställning
+Anbud
+Särskilda mät- och ersättningsregler
+À-prislista eller prissatt mängdförteckning
+Kompletterande föreskrifter för entreprenaden lämnade före anbudets avgivande
+Administrativa föreskrifter
+Ej prissatt mängdförteckning
+Beskrivningar
+Ritningar
+Övriga handlingar
 Vid motstridighet mellan uppgift om antal i mängdförteckning och uppgift i övrigt förfrågningsunderlag skall kontraktsarbetenas omfattning dock bestämmas till det antal som anges i förteckningen.
-Kommentar till kapitel 1 § 3 Om beställaren i sina administrativa föreskrifter intar bestämmelser som skiljer sig från vad som anges i AB 04, s.k. särregleringar, måste dessa vara tydliga för att gälla före AB 04. För såväl fasta bestämmelser som täckbestämmelser (se förordet) gäller att en särreglering uppfyller kravet på tydlighet om särregleringen i sig är tydlig och om den återfinns under rätt kod och rubrik i de administrativa föreskrifterna. För att en ändring av en fast bestämmelse skall anses vara tydlig krävs därutöver att hänvisning görs till den i en sammanställning i de administrativa föreskrifterna över ändringar i förhållande till AB 04. I en sådan hänvisning skall anges under vilken kod och rubrik som ändringen återfinns.
+Kommentar till kapitel 1 § 3
+Om beställaren i sina administrativa föreskrifter intar bestämmelser som skiljer sig från vad som anges i AB 04, s.k. särregleringar, måste dessa vara tydliga för att gälla före AB 04. För såväl fasta bestämmelser som täckbestämmelser (se förordet) gäller att en särreglering uppfyller kravet på tydlighet om särregleringen i sig är tydlig och om den återfinns under rätt kod och rubrik i de administrativa föreskrifterna. För att en ändring av en fast bestämmelse skall anses vara tydlig krävs därutöver att hänvisning görs till den i en sammanställning i de administrativa föreskrifterna över ändringar i förhållande till AB 04. I en sådan hänvisning skall anges under vilken kod och rubrik som ändringen återfinns.
 Om en mängduppgift för viss post i mängdförteckningen har utelämnats och tydlig hänvisning inte gjorts till annat ställe i förfrågningsunderlaget, skall mängden normalt anses vara noll. Om en mängduppgift beträffande väsentlig del av åtagandet saknas i mängdförteckningen, exempelvis pannan i ett värmeverk, kan dock bestämmelsen i § 2 om att kontraktshandlingarna kompletterar varandra vara tillämplig.
-§ 4 Om det i en och samma handling eller i en och samma grupp av handlingar enligt § 3 i detta kapitel, förekommer mot varandra stridande uppgifter eller föreskrifter, skall den uppgift eller föreskrift gälla som medför lägsta kostnad för entreprenören, om inte omständigheterna uppenbarligen föranleder annat.
-§ 5 Måttuppgifter, som angetts med siffror eller bokstäver och som inte är uppenbart felaktiga, gäller före skalmått.
-Ansvar för uppgifter § 6 För riktigheten av uppgifter, undersökningsmaterial och tekniska lösningar ansvarar den part som tillhandahållit dem. Detsamma gäller utsättning som en part tillhandahållit.
-Motpartens godkännande inskränker inte ansvaret enligt föregående stycke. Beställaren förutsätts i förfrågningsunderlaget ha lämnat de uppgifter som kan erhållas vid en fackmässig undersökning av den fastighet eller del av fastighet som berörs av kontraktsarbetena.
-Förutsättningar § 7 Entreprenören förutsätts innan anbud lämnas ha skaffat sig den kännedom om arbetsområdet och andra förhållanden av betydelse för bedömningen av vad som erfordras för kontraktsarbetenas utförande och som kan erhållas genom besök på platsen. Härigenom inskränks inte beställarens ansvar enligt § 6 i detta kapitel.
+§ 4
+Om det i en och samma handling eller i en och samma grupp av handlingar enligt § 3 i detta kapitel, förekommer mot varandra stridande uppgifter eller föreskrifter, skall den uppgift eller föreskrift gälla som medför lägsta kostnad för entreprenören, om inte omständigheterna uppenbarligen föranleder annat.
+§ 5
+Måttuppgifter, som angetts med siffror eller bokstäver och som inte är uppenbart felaktiga, gäller före skalmått.
+§ 6 Ansvar för uppgifter
+För riktigheten av uppgifter, undersökningsmaterial och tekniska lösningar ansvarar den part som tillhandahållit dem. Detsamma gäller utsättning som en part tillhandahållit.
+§ 7 Förutsättningar
+Entreprenören förutsätts innan anbud lämnas ha skaffat sig den kännedom om arbetsområdet och andra förhållanden av betydelse för bedömningen av vad som erfordras för kontraktsarbetenas utförande och som kan erhållas genom besök på platsen. Härigenom inskränks inte beställarens ansvar enligt § 6 i detta kapitel.
 Arbetsområdet skall vid entreprenörens övertagande förutsättas befinna sig i det skick som det hade då entreprenören lämnade anbud. Om annat arbete skall utföras inom arbetsområdet innan entreprenaden påbörjas skall arbetsområdet vid entreprenörens övertagande förutsättas vara i det skick det kunnat antas befinna sig i efter det att ifrågavarande arbete utförts.
-Kommentar till kapitel 1 §§ 6 och 7 Entreprenörens undersökning omfattar endast sådana uppgifter om förhållanden som kan erhållas genom besök på platsen. Entreprenören är inte skyldig att utföra demontering, förstörande åtgärder eller markundersökningar.
+Kommentar till kapitel 1 §§ 6 och 7
+Entreprenörens undersökning omfattar endast sådana uppgifter om förhållanden som kan erhållas genom besök på platsen. Entreprenören är inte skyldig att utföra demontering, förstörande åtgärder eller markundersökningar.
 Entreprenören har i anbudsskedet rätt att utgå från att beställarens projektering bygger på en fackmässigt utförd undersökning av den fastighet eller del av fastighet som berörs av kontraktsarbetena. Exempelvis har entreprenören rätt att utgå från att asbest inte förekommer och asbestsanering således inte ingår i kontraktsarbetena om detta ej angetts i förfrågningsunderlaget.
-Fackmässig bedömning § 8 Saknas vid tiden för avgivande av anbud uppgifter som avser arbetsområdet eller det område som berörs av entreprenaden skall förhållandena antas vara sådana som kunnat förutsättas vid en fackmässig bedömning.
-Kommentar till kapitel 1 § 8 Bestämmelsen avser endast uppgifter om förhållanden som föreligger vid tidpunkten för anbudets avgivande. Den gäller således inte för senare inträffade händelser.
-Material m.m. § 9* Om inte annat föreskrivits i kontraktshandlingarna gäller följande. Entreprenören skall på egen bekostnad anskaffa allt som behövs för entreprenadens utförande.
+§ 8 Fackmässig bedömning
+Saknas vid tiden för avgivande av anbud uppgifter som avser arbetsområdet eller det område som berörs av entreprenaden skall förhållandena antas vara sådana som kunnat förutsättas vid en fackmässig bedömning.
+Kommentar till kapitel 1 § 8
+Bestämmelsen avser endast uppgifter om förhållanden som föreligger vid tidpunkten för anbudets avgivande. Den gäller således inte för senare inträffade händelser.
+§ 9* Material m.m.
+Om inte annat föreskrivits i kontraktshandlingarna gäller följande. Entreprenören skall på egen bekostnad anskaffa allt som behövs för entreprenadens utförande.
 Entreprenören får utan ersättning använda eller tillgodogöra sig massor, material och varor som tas tillvara eller tas ut vid utförandet av entreprenaden. En part får mot skälig ersättning använda motpartens hjälpmedel på arbetsområdet, om det kan ske utan hinder för motparten.
-Tillstånd § 10* Beställaren skall utverka och bekosta erforderliga tillstånd till överenskommet utförande av entreprenaden. Entreprenören skall hos beställaren förvissa sig om att tillstånd erhållits, innan därav beroende arbeten påbörjas.
+§ 10* Tillstånd
+Beställaren skall utverka och bekosta erforderliga tillstånd till överenskommet utförande av entreprenaden. Entreprenören skall hos beställaren förvissa sig om att tillstånd erhållits, innan därav beroende arbeten påbörjas.
 Beställaren skall föranstalta om och bekosta sådan besiktning eller kontroll av utfört arbete som föreskrivs i författning eller krävs av en myndighet, om inte annat föreskrivits i kontraktshandlingarna.
-§ 11 Entreprenören skall bekosta sådan extra besiktning eller kontroll som utförs av en myndighet och som föranleds av att han åsidosätter föreskrifter i entreprenadhandlingarna.
-§ 12 Entreprenören skall ombesörja och bekosta erforderliga anmälningar för entreprenadens utförande. Han skall också träffa nödvändiga överenskommelser med myndigheter och andra, som berörs av entreprenaden angående sättet för dess utförande. Om kostnader uppkommer som enligt entreprenadhandlingarna åvilar beställaren, skall överenskommelsen träffas i samråd med denne.
-Författningar § 13 Entreprenören ansvarar för att författningar följs i den utsträckning de berör hans åtagande. Entreprenören är inte skyldig att utföra arbete som strider mot författning.
+§ 11 (Om kontroll och besiktning)
+Entreprenören skall bekosta sådan extra besiktning eller kontroll som utförs av en myndighet och som föranleds av att han åsidosätter föreskrifter i entreprenadhandlingarna.
+§ 12
+Entreprenören skall ombesörja och bekosta erforderliga anmälningar för entreprenadens utförande. Han skall också träffa nödvändiga överenskommelser med myndigheter och andra, som berörs av entreprenaden angående sättet för dess utförande. Om kostnader uppkommer som enligt entreprenadhandlingarna åvilar beställaren, skall överenskommelsen träffas i samråd med denne.
+§ 13 Författningar
+Entreprenören ansvarar för att författningar följs i den utsträckning de berör hans åtagande. Entreprenören är inte skyldig att utföra arbete som strider mot författning.
 Författningar, som träder i kraft efter anbudets avgivande och som medför ändringar i kontraktsarbetenas omfattning eller i sättet för deras utförande, skall föranleda reglering av kontraktssumman enligt kapitel 6 §§ 1–7 och 11. Kostnadsreglering beträffande sättet för arbetenas utförande skall dock inte göras i de fall författningen beslutats före avgivande av anbudet och entreprenören vid den tidpunkten kände till eller borde ha känt till den nya författningen.
-Kommentar till kapitel 1 § 13 Ett särskilt fall avseende tillämpningen av andra stycket gäller de allmänna hänsynsregler som finns i miljöbalken (1998:808). Dessa riktar sig till alla som bedriver en verksamhet eller vidtar en åtgärd. De gäller därmed för såväl beställare som entreprenör. En av hänsynsreglerna gäller produktval. Enligt den skall man inte använda sådana kemiska produkter som kan befaras medföra risker för människors hälsa eller miljön om de kan ersättas med mindre farliga produkter. Bedömningen av farlighet skall ske utifrån försiktighetsprincipen. Enligt den skall försiktighetsmått vidtas så snart det finns skäl att anta att människors hälsa eller miljön skadas.
-Skydd av handling § 14 En handling med förslag och idéer, som ställs till förfogande av den som infordrar eller avger anbud, får inte av den andre parten utan medgivande användas annat än i förhållandet mellan anbudsgivaren och anbudsinfordraren.
+Kommentar till kapitel 1 § 13
+Ett särskilt fall avseende tillämpningen av andra stycket gäller de allmänna hänsynsregler som finns i miljöbalken (1998:808). Dessa riktar sig till alla som bedriver en verksamhet eller vidtar en åtgärd. De gäller därmed för såväl beställare som entreprenör. En av hänsynsreglerna gäller produktval. Enligt den skall man inte använda sådana kemiska produkter som kan befaras medföra risker för människors hälsa eller miljön om de kan ersättas med mindre farliga produkter. Bedömningen av farlighet skall ske utifrån försiktighetsprincipen. Enligt den skall försiktighetsmått vidtas så snart det finns skäl att anta att människors hälsa eller miljön skadas.
+§ 14 Skydd av handling
+En handling med förslag och idéer, som ställs till förfogande av den som infordrar eller avger anbud, får inte av den andre parten utan medgivande användas annat än i förhållandet mellan anbudsgivaren och anbudsinfordraren.
 Om anbudsinfordraren i det med upphandlingen avsedda objektet utnyttjar sådan handling från anbudsgivare vars anbud inte antagits och vars medgivande inte inhämtats och detta medför ekonomisk fördel för anbudsinfordraren, skall anbudsinfordraren betala skälig ekonomisk ersättning till anbudsgivaren.
 Vid fastställandet av ersättningens storlek skall hänsyn tas till dels den kostnad som anbudsgivaren haft för att utarbeta förslaget, dels den vinning anbudsinfordraren får.
-Kommentar till kapitel 1 § 14 Bestämmelserna inskränker inte eventuellt skydd enligt immaterialrättslig lagstiftning eller lagen (1990:409) om skydd för företagshemligheter. Bestämmelsen gäller även om förslaget inte skulle åtnjuta sådant skydd. Vid fastställandet av ersättningen kan ledning också hämtas från lagen (1960:729) om upphovsrätt till litterära och konstnärliga verk och lagen (1949:345) om rätten till arbetstagares uppfinningar.
-§ 15 Den som efter det att entreprenaden slutförts, i egenskap av ägare eller brukare av objektet, avser att ändra i detta eller vidta någon annan åtgärd för dess förvaltning får utan entreprenörens medgivande och utan att betala ersättning, använda handlingar avseende entreprenaden. 
 KAPITEL 2 UTFÖRANDE
-Entreprenadens utförande § 1 Entreprenaden skall utföras i överensstämmelse med entreprenadhandlingarna. Om kvalitetsangivelse i visst avseende inte lämnats, skall arbetet i detta avseende utföras i klass med entreprenaden i övrigt.
+§ 1 Entreprenadens utförande
+Entreprenaden skall utföras i överensstämmelse med entreprenadhandlingarna. Om kvalitetsangivelse i visst avseende inte lämnats, skall arbetet i detta avseende utföras i klass med entreprenaden i övrigt.
 Entreprenaden skall utföras fackmässigt. Detta inskränker inte beställarens ansvar enligt kapitel 1 § 6.
-Kvalitets- och miljöarbete § 2* Entreprenören skall sedan avtalet ingåtts upprätta kvalitetsplan och miljöplan för entreprenaden och därvid inarbeta kvalitets- och miljöåtgärder som beställaren föreskrivit i förfrågningsunderlaget, om inte annat föreskrivits i kontraktshandlingarna.
+§ 2* Kvalitets- och miljöarbete
+Entreprenören skall sedan avtalet ingåtts upprätta kvalitetsplan och miljöplan för entreprenaden och därvid inarbeta kvalitets- och miljöåtgärder som beställaren föreskrivit i förfrågningsunderlaget, om inte annat föreskrivits i kontraktshandlingarna.
 Innan arbetena påbörjas skall entreprenören överlämna dessa planer till beställaren för granskning och godkännande. Sådant godkännande inskränker inte entreprenörens kontraktsenliga ansvar för utförandet av entreprenaden.
 Entreprenören skall under entreprenadtiden utföra och dokumentera åtaganden enligt avtalad kvalitetsplan och miljöplan. Beställaren har rätt att ta del av dokumentationen.
 Om entreprenören underlåter att utföra sitt åtagande enligt avtalad kvalitetsplan eller miljöplan har beställaren rätt att vidta rimliga åtgärder på entreprenörens bekostnad.
-Kommentar till kapitel 2 § 2 Inget hindrar att kvalitets- och miljöåtgärder redovisas i en handling, exempelvis en projektplan, i stället för i två separata handlingar. En sådan projektplan kan också avse andra åtgärder som entreprenören ålagts enligt kontraktshandlingarna, exempelvis upprättandet av en arbetsmiljöplan.
-ÄTA-arbete § 3 Entreprenören är, om inte annat följer av författning, berättigad och skyldig att under entreprenadtiden utföra sådana ÄTA-arbeten som föreskrivs av beställaren.
-Kommentar till kapitel 2 § 3 ÄTA-arbete definieras i begreppsbestämningarna. Genom det där använda uttrycket ”omedelbart samband” betonas, att de tilläggsarbeten som avses skall vara så nära förknippade med kontraktsarbetena eller del därav att de tillsammans utgör en teknisk helhet. Sådant samband föreligger exempelvis inte om beställaren utan nackdel kan vänta med utförandet till dess entreprenaden blivit färdigställd.
+Kommentar till kapitel 2 § 2
+Inget hindrar att kvalitets- och miljöåtgärder redovisas i en handling, exempelvis en projektplan, i stället för i två separata handlingar. En sådan projektplan kan också avse andra åtgärder som entreprenören ålagts enligt kontraktshandlingarna, exempelvis upprättandet av en arbetsmiljöplan.
+§ 3 ÄTA-arbete
+Entreprenören är, om inte annat följer av författning, berättigad och skyldig att under entreprenadtiden utföra sådana ÄTA-arbeten som föreskrivs av beställaren.
+Kommentar till kapitel 2 § 3
+ÄTA-arbete definieras i begreppsbestämningarna. Genom det där använda uttrycket ”omedelbart samband” betonas, att de tilläggsarbeten som avses skall vara så nära förknippade med kontraktsarbetena eller del därav att de tillsammans utgör en teknisk helhet. Sådant samband föreligger exempelvis inte om beställaren utan nackdel kan vänta med utförandet till dess entreprenaden blivit färdigställd.
 Regeln innebär således ingen given företrädesrätt för entreprenören. Tillämpningen måste likväl ske med beaktande av den olägenhet som det från ansvarssynpunkt och i övrigt kan medföra för parterna eller en av dem, om arbetet utförs av en annan entreprenör eller av beställaren själv. Gränsdragningsproblem kan uppstå vid bedömningen av om arbetena är av ”annan natur” än kontraktsarbetena. Regeln hindrar inte att två eller flera entreprenörer utför kontraktsarbeten av samma eller nära nog samma natur.
 Beträffande påföljd vid handlande i strid mot bestämmelsen hänvisas till kapitel 6 § 2.
 I lagen (1992:1528) om offentlig upphandling finns regler som i vissa situationer innebär att beställaren inte utan ny upphandling är berättigad att låta entreprenören utföra tillkommande arbeten.
-§ 4 Med ÄTA-arbeten föreskrivna av beställaren likställs arbeten som föranleds av att uppgifter m.m. enligt kapitel 1 § 6 för vilka beställaren svarar, inte är riktiga, att arbetsområdet eller andra förhållanden av betydelse avviker från vad som skall förutsättas enligt kapitel 1 § 7 eller att förhållande som avses i kapitel 1 § 8 inte är sådant som det skall förutsättas vara.
-§ 5 Som ÄTA-arbete räknas inte ändrad mängd av arbete till följd av entreprenörens sätt att utföra entreprenaden, såvida inte beställaren beordrat sättet för utförandet.
+§ 4
+Med ÄTA-arbeten föreskrivna av beställaren likställs arbeten som föranleds av att uppgifter m.m. enligt kapitel 1 § 6 för vilka beställaren svarar, inte är riktiga, att arbetsområdet eller andra förhållanden av betydelse avviker från vad som skall förutsättas enligt kapitel 1 § 7 eller att förhållande som avses i kapitel 1 § 8 inte är sådant som det skall förutsättas vara.
+§ 5
+Som ÄTA-arbete räknas inte ändrad mängd av arbete till följd av entreprenörens sätt att utföra entreprenaden, såvida inte beställaren beordrat sättet för utförandet.
 Som ÄTA-arbete räknas inte heller åtgärd som avser detaljarbete och som kontrollerande myndighet fordrar vid granskning av handlingar som tillhandahållits av entreprenören.
-Beställning av ÄTA-arbete § 6 ÄTA-arbete enligt § 3 i detta kapitel skall beställas skriftligen innan det påbörjas.
+§ 6 Beställning av ÄTA-arbete
+ÄTA-arbete enligt § 3 i detta kapitel skall beställas skriftligen innan det påbörjas.
 Kravet på skriftlig beställning är uppfyllt, om beställaren överlämnar ritning eller annan handling som innefattar ÄTA-arbete till entreprenören.
-Underrättelse om ÄTA-arbete § 7* Entreprenören skall utan dröjsmål inhämta beställarens synpunkter om han gör bedömningen att omständighet som avses i § 4 i detta kapitel föreligger och att kostnaden för det ÄTA-arbete som omständigheten medför kommer att överstiga gränsbeloppet. Gränsbeloppet är ett halvt prisbasbelopp, om inte annat föreskrivits i kontraktshandlingarna.
+§ 7* Underrättelse om ÄTA-arbete
+Entreprenören skall utan dröjsmål inhämta beställarens synpunkter om han gör bedömningen att omständighet som avses i § 4 i detta kapitel föreligger och att kostnaden för det ÄTA-arbete som omständigheten medför kommer att överstiga gränsbeloppet. Gränsbeloppet är ett halvt prisbasbelopp, om inte annat föreskrivits i kontraktshandlingarna.
 Om entreprenören gör bedömningen att kostnaden för ÄTA-arbetet kommer att understiga gränsbeloppet har han rätt att omgående påbörja arbetet.
 Entreprenören är dock skyldig att därefter utan dröjsmål underrätta beställaren om arbetet.
 Om så föreskrivits i entreprenadhandlingarna skall underrättelse enligt denna paragraf lämnas skriftligen.
-§ 8 ÄTA-arbete enligt § 3 i detta kapitel som har utförts utan skriftlig beställning eller enligt § 4 i detta kapitel som har utförts utan att beställarens synpunkter har inhämtats, trots att kostnaden för arbetet bedömts överstiga gränsbeloppet, berättigar inte till ersättning utöver kontraktssumman, om inte sådan påföljd skulle vara oskälig.
+§ 8
+ÄTA-arbete enligt § 3 i detta kapitel som har utförts utan skriftlig beställning eller enligt § 4 i detta kapitel som har utförts utan att beställarens synpunkter har inhämtats, trots att kostnaden för arbetet bedömts överstiga gränsbeloppet, berättigar inte till ersättning utöver kontraktssumman, om inte sådan påföljd skulle vara oskälig.
 Motsvarande gäller om entreprenören underlåtit att underrätta beställaren enligt § 7 andra stycket i detta kapitel om inte sådan påföljd skulle vara oskälig.
-Kommentar till kapitel 2 §§ 7 och 8 Om entreprenören påbörjar arbeten som han bedömer kostar mindre än gränsbeloppet och det därefter visar sig att kostnaden överstiger detta belopp, kan entreprenören ha rätt till ersättning för överstigande kostnad om denna beror på förhållanden som han inte bort känna till eller om hans ursprungliga bedömning annars får anses ha varit fackmässig.
+Kommentar till kapitel 2 §§ 7 och 8
+Om entreprenören påbörjar arbeten som han bedömer kostar mindre än gränsbeloppet och det därefter visar sig att kostnaden överstiger detta belopp, kan entreprenören ha rätt till ersättning för överstigande kostnad om denna beror på förhållanden som han inte bort känna till eller om hans ursprungliga bedömning annars får anses ha varit fackmässig.
 Tidsförlängnings- och ersättningsfrågor på grund av att beställarens synpunkter måste inhämtas regleras i kapitel 4 § 3 p. 1 och kapitel 5 § 4.
 Undantagsbestämmelsen, ”om inte sådan påföljd skulle vara oskälig”, i § 8 blir exempelvis tillämplig om beställaren inte lämnar besked utan dröjsmål eller förklarar sig inte dela entreprenörens uppfattning om att arbetet utgör ÄTA-arbete. Om entreprenören ändå utför arbetet och entreprenörens uppfattning visar sig riktig skall entreprenören erhålla ersättning.
 Undantagsbestämmelsen kan vidare bli tillämplig dels då entreprenören först under utförandet av ett visst arbete upptäcker och anmäler att arbetet ifråga eller en del av detta föranletts av sådana förhållanden som framgår av § 4 dels då omedelbara åtgärder måste vidtas och entreprenören inte har möjlighet att lämna underrättelse eller invänta beställning innan arbetet utförs.
 Entreprenörens underrättelse till beställaren enligt § 7 skall normalt innehålla besked om vilket ÄTA-arbete som han anser tillkommer. Denna bedömning är inte att betrakta som en av entreprenören tillhandahållen teknisk lösning för vilken han svarar, utan endast som ett förslag till åtgärd som beställaren skall lämna besked om.
-Underrättelseskyldighet § 9* Part skall, utöver vad som särskilt föreskrivs i § 7 i detta kapitel, utan dröjsmål underrätta motparten, om han upptäcker
+§ 9* Underrättelseskyldighet
+Part skall, utöver vad som särskilt föreskrivs i § 7 i detta kapitel, utan dröjsmål underrätta motparten, om han upptäcker:
 att uppgifter eller föreskrifter i kontraktshandlingarna inte överensstämmer med varandra,
 att uppgifter i kontraktshandlingarna i väsentligt avseende avviker från verkliga förhållanden,
 att kontraktshandlingarna på annat sätt är så bristfälliga eller så utformade att det skulle medföra olägenheter eller vara olämpligt att utföra kontraktsarbetena enligt dessa,
@@ -145,96 +112,137 @@ att under entreprenadtiden lämnade handlingar eller uppgifter eller meddelade f
 att omständigheter av betydelse för entreprenaden ändras eller tillkommer.
 Om så föreskrivits i entreprenadhandlingarna skall underrättelse enligt denna paragraf lämnas skriftligen.
 Om part inte fullgör sin underrättelseskyldighet enligt ovan, skall han ersätta den skada som därigenom uppkommer.
-§ 10 Uppgifter och handlingar som en part skall tillhandhålla skall tillställas motparten i avtalad tid. Om tid inte avtalats skall tillhandahållande ske i sådan tid att entreprenaden kan utföras och färdigställas planenligt.
+§ 10
+Uppgifter och handlingar som en part skall tillhandahålla skall tillställas motparten i avtalad tid. Om tid inte avtalats skall tillhandahållande ske i sådan tid att entreprenaden kan utföras och färdigställas planenligt.
 Part är skyldig att utan dröjsmål granska mottagna handlingar. Denna granskningsskyldighet innebär ingen inskränkning av motpartens ansvar enligt kapitel 1 § 6.
-§ 11 Entreprenören skall i god tid rekvirera arbete som beställaren skall tillhandahålla och som inte redovisats i tidplanen.
-§ 12 Entreprenören skall utan dröjsmål bortskaffa av honom anskaffade ej kontraktsenliga material eller varor från arbetsområdet. I annat fall har beställaren rätt att göra det på entreprenörens bekostnad.
-Utsättning § 13 Beställaren skall föranstalta om och bekosta sådan utsättning som skall utföras av myndighet.
+§ 11
+Entreprenören skall i god tid rekvirera arbete som beställaren skall tillhandahålla och som inte redovisats i tidplanen.
+§ 12
+Entreprenören skall utan dröjsmål bortskaffa av honom anskaffade ej kontraktsenliga material eller varor från arbetsområdet. I annat fall har beställaren rätt att göra det på entreprenörens bekostnad.
+§ 13 Utsättning
+Beställaren skall föranstalta om och bekosta sådan utsättning som skall utföras av myndighet.
 Då utsättning inte sker genom myndighets försorg, skall beställaren ange de utgångspunkter som erfordras.
-§ 14 Entreprenören skall utföra och bekosta utsättning, som inte skall ombesörjas av beställaren, av en sidoentreprenör eller myndighet och som erfordras för kontraktsarbetenas utförande.
+§ 14
+Entreprenören skall utföra och bekosta utsättning, som inte skall ombesörjas av beställaren, av en sidoentreprenör eller myndighet och som erfordras för kontraktsarbetenas utförande.
 I entreprenörens åliggande ingår även sådan utsättning, som beställaren eller sidoentreprenören behöver för sina arbeten i den mån den inte kan utföras utan entreprenörens medverkan. För sådana arbeten skall entreprenören även lämna de måttuppgifter som beställaren eller sidoentreprenör inte har tillgång till.
-Provning § 15 Entreprenören skall ombesörja och bekosta sådan provning som angetts i entreprenadhandlingarna. Därutöver har beställaren rätt att föranstalta om provning enligt eget bestämmande.
+§ 15 Provning
+Entreprenören skall ombesörja och bekosta sådan provning som angetts i entreprenadhandlingarna. Därutöver har beställaren rätt att föranstalta om provning enligt eget bestämmande.
 Beställaren skall bekosta sådan provning och därmed direkt förenade kostnader. Ger provningen inte godkänt resultat, svarar dock entreprenören för kostnaderna för samtliga provningar som föranleds av detta.
-Provning för konstaterande av likvärdighet beträffande arbetsprestation, material eller vara, som entreprenören föreslår i stället för vad som föreskrivits, bekostas av entreprenören. 
+Provning för konstaterande av likvärdighet beträffande arbetsprestation, material eller vara, som entreprenören föreslår i stället för vad som föreskrivits, bekostas av entreprenören.
 KAPITEL 3 ORGANISATION
-Ombud § 1 Vardera parten skall utse ombud för entreprenaden. Ombudet har behörighet att med bindande verkan företräda sin huvudman i frågor som rör entreprenaden samt att träffa ekonomiska och andra uppgörelser.
-Startmöte § 2 Ett startmöte skall hållas innan entreprenaden påbörjas. Vid mötet skall parterna gå igenom kontraktshandlingarna, klargöra frågor om behörighet för andra än ombuden, precisera formerna för informationsutbyte mellan parterna samt behandla övriga frågor av betydelse för parternas samverkan. Beställaren skall föra protokoll vid startmöte och protokollet skall godkännas av respektive parts ombud genom underskrift. Beställaren skall kalla till startmöte.
+§ 1 Ombud
+Vardera parten skall utse ombud för entreprenaden. Ombudet har behörighet att med bindande verkan företräda sin huvudman i frågor som rör entreprenaden samt att träffa ekonomiska och andra uppgörelser.
+§ 2 Startmöte
+Ett startmöte skall hållas innan entreprenaden påbörjas. Vid mötet skall parterna gå igenom kontraktshandlingarna, klargöra frågor om behörighet för andra än ombuden, precisera formerna för informationsutbyte mellan parterna samt behandla övriga frågor av betydelse för parternas samverkan. Beställaren skall föra protokoll vid startmöte och protokollet skall godkännas av respektive parts ombud genom underskrift. Beställaren skall kalla till startmöte.
 Mellan parterna är krav på skriftlighet uppfyllt genom anteckning i protokoll från startmöte.
-Byggmöte § 3 Parterna är skyldiga att delta i byggmöte och därvid företrädas av behörig person. Byggmöten skall hållas i erforderlig utsträckning och behandla för parterna gemensamma frågor. Beställaren skall föra protokoll vid byggmöte och protokollet skall utan dröjsmål och i god tid före nästa byggmöte tillställas entreprenören. Entreprenören skall justera protokollet.
+§ 3 Byggmöte
+Parterna är skyldiga att delta i byggmöte och därvid företrädas av behörig person. Byggmöten skall hållas i erforderlig utsträckning och behandla för parterna gemensamma frågor. Beställaren skall föra protokoll vid byggmöte och protokollet skall utan dröjsmål och i god tid före nästa byggmöte tillställas entreprenören. Entreprenören skall justera protokollet.
 Mellan parterna är krav på skriftlighet uppfyllt genom anteckning i protokoll från byggmöte.
-Kommentar till kapitel 3 §§ 2 och 3 Till startmötet bör även företrädare för konsulter, sidoentreprenörer och underentreprenörer kallas. Dessa bör även kallas till byggmöten i den utsträckning detta är av vikt för entreprenaden.
+Kommentar till kapitel 3 §§ 2 och 3
+Till startmötet bör även företrädare för konsulter, sidoentreprenörer och underentreprenörer kallas. Dessa bör även kallas till byggmöten i den utsträckning detta är av vikt för entreprenaden.
 Även om det inte föreskrivits i kontraktshandlingarna kan parterna vid startmötet komma överens om att underrättelser enligt kapitel 2 §§ 7 och 9 samt kapitel 4 § 4 skall lämnas skriftligen.
-§ 4 Entreprenören är ensam behörig att leda entreprenadens utförande.
-Beställarens kontroll § 5* Beställaren utövar den kontroll över entreprenaden som han anser lämplig. Sådan kontroll medför inte någon inskränkning i entreprenörens kontraktsenliga ansvar. Kontroller skall så långt som möjligt genomföras så att de inte hindrar entreprenadens utförande.
+§ 4
+Entreprenören är ensam behörig att leda entreprenadens utförande.
+§ 5* Beställarens kontroll
+Beställaren utövar den kontroll över entreprenaden som han anser lämplig. Sådan kontroll medför inte någon inskränkning i entreprenörens kontraktsenliga ansvar. Kontroller skall så långt som möjligt genomföras så att de inte hindrar entreprenadens utförande.
 En av beställaren utsedd kontrollant får vidta de åtgärder som krävs för att genomföra kontrollen. Andra åtgärder får han vidta endast om han bemyndigats till detta.
 Kontrollant har för kontrollens utövande fritt tillträde till arbetsområdet och till annan plats där arbete utförs på uppdrag av entreprenören. Han har i detta syfte även rätt att utan ersättning använda entreprenörens instrument, kontrollanordningar och kontrollverktyg som finns på arbetsplatsen samt att därvid erhålla behövlig handräckning. För sådan handräckning utgår ingen ersättning, om inte annat anges i entreprenadhandlingarna.
-§ 6 Entreprenören skall anmäla när arbetsprestation, material och vara som enligt entreprenadhandlingarna skall kontrolleras av beställaren är tillgängliga för kontroll. Anmälan skall ske i så god tid att åtgärder som föranleds av kontrollen kan vidtas utan att entreprenadens planenliga utförande äventyras. Kontrollen skall verkställas utan dröjsmål.
-§ 7 Anmärkningar som föranleds av beställarens kontroll skall utan dröjsmål meddelas entreprenören, som då skall vidta erforderliga åtgärder. Om sådant meddelande uteblir skall vad som föreskrivs i kapitel 5 § 15 äga motsvarande tillämpning, om inte detta är oskäligt.
+§ 6
+Entreprenören skall anmäla när arbetsprestation, material och vara som enligt entreprenadhandlingarna skall kontrolleras av beställaren är tillgängliga för kontroll. Anmälan skall ske i så god tid att åtgärder som föranleds av kontrollen kan vidtas utan att entreprenadens planenliga utförande äventyras. Kontrollen skall verkställas utan dröjsmål.
+§ 7
+Anmärkningar som föranleds av beställarens kontroll skall utan dröjsmål meddelas entreprenören, som då skall vidta erforderliga åtgärder. Om sådant meddelande uteblir skall vad som föreskrivs i kapitel 5 § 15 äga motsvarande tillämpning, om inte detta är oskäligt.
 Om entreprenören anser att av kontroll föranledd anmärkning saknar grund, skall han skriftligen med angivande av skälet utan dröjsmål underrätta beställaren om detta. I sådant fall skall beställaren, för att anmärkningen skall anses vidhållen, skriftligen meddela entreprenören detta.
 Arbete som föranletts av anmärkning skall anses som ÄTA-arbete, i den mån anmärkningen saknar grund.
-Anställda § 8 Om entreprenadens utförande skulle äventyras genom att entreprenören brister i fullgörandet av sina skyldigheter gentemot anställd, har beställaren rätt att på entreprenörens vägnar samt på hans bekostnad och risk fullgöra vad som brister.
+§ 8 Anställda
+Om entreprenadens utförande skulle äventyras genom att entreprenören brister i fullgörandet av sina skyldigheter gentemot anställd, har beställaren rätt att på entreprenörens vägnar samt på hans bekostnad och risk fullgöra vad som brister.
 Innan beställaren vidtar en åtgärd i detta syfte skall han underrätta entreprenören. Denne skall då tillhandahålla beställaren erforderliga uppgifter och handlingar till upplysning om skyldigheternas innehåll och omfattning.
-Ansvar för samordning § 9* Om inte annat föreskrivits i kontraktshandlingarna, svarar beställaren för att hans egna arbeten samordnas med entreprenörens och med sidoentreprenörernas liksom för att deras arbeten samordnas med varandra, så att arbetena kan utföras och färdigställas enligt tidplanen. Arbetena skall i möjlig utsträckning utföras så att de inte hindrar någon annans arbete.
-Tillhandahållande av arbete m.m. § 10 Om kontraktshandlingarna föreskriver att en part är skyldig att tillhandahålla motparten eller någon annan allmänt arbete eller hjälpmedel, förutsätts detta i allt väsentligt kunna ske enligt tidplan eller, om så inte är möjligt, utan kostnadsökning.
+§ 9* Ansvar för samordning
+Om inte annat föreskrivits i kontraktshandlingarna, svarar beställaren för att hans egna arbeten samordnas med entreprenörens och med sidoentreprenörernas liksom för att deras arbeten samordnas med varandra, så att arbetena kan utföras och färdigställas enligt tidplanen. Arbetena skall i möjlig utsträckning utföras så att de inte hindrar någon annans arbete.
+§ 10 Tillhandahållande av arbete m.m.
+Om kontraktshandlingarna föreskriver att en part är skyldig att tillhandahålla motparten eller någon annan allmänt arbete eller hjälpmedel, förutsätts detta i allt väsentligt kunna ske enligt tidplan eller, om så inte är möjligt, utan kostnadsökning.
 Om kostnadsökning uppkommer för den tillhandahållande, skall kostnadsreglering ske enligt kapitel 6 §§ 1–7 och 11.
-Arbetsområdet § 11 Entreprenören får efter samråd med beställaren utan ersättning disponera arbetsområdet på det sätt som erfordras för entreprenadens utförande.
-§ 12 Entreprenören får inte utan beställarens medgivande inkvartera anställda i eller på annat sätt upplåta lokaler i en anläggning eller byggnad som berörs av entreprenaden.
-Dagbok § 13 Entreprenören skall föra dagbok över omständigheter av betydelse för entreprenaden.
-Uppmätning § 14* Parterna skall i erforderlig utsträckning fastställa omfattningen av utförda arbeten. Om uppmätning erfordras, skall den verkställas av parterna gemensamt. Om inte annat föreskrivits i kontraktshandlingarna, skall sådan mätning ske enligt praxis i vederbörande delbransch. Vardera parten svarar för sina kostnader för mätningen.
+§ 11 Arbetsområdet
+Entreprenören får efter samråd med beställaren utan ersättning disponera arbetsområdet på det sätt som erfordras för entreprenadens utförande.
+§ 12
+Entreprenören får inte utan beställarens medgivande inkvartera anställda i eller på annat sätt upplåta lokaler i en anläggning eller byggnad som berörs av entreprenaden.
+§ 13 Dagbok
+Entreprenören skall föra dagbok över omständigheter av betydelse för entreprenaden.
+§ 14* Uppmätning
+Parterna skall i erforderlig utsträckning fastställa omfattningen av utförda arbeten. Om uppmätning erfordras, skall den verkställas av parterna gemensamt. Om inte annat föreskrivits i kontraktshandlingarna, skall sådan mätning ske enligt praxis i vederbörande delbransch. Vardera parten svarar för sina kostnader för mätningen.
 Om part i övrigt genom uppmätning vill kontrollera motpartens uppgift om entreprenaden, svarar han för kostnaderna för detta, om uppmätningen visar att uppgiften var i huvudsak riktig eller för parten gynnsam. I motsatt fall svarar motparten för kostnaden.
-Uppmätning som inte kan anstå till arbetets färdigställande verkställs före eller under arbetets utförande. Om part trots motpartens kallelse skulle försumma att delta i uppmätning, gäller motpartens mätning, såvida den inte är uppenbart felaktig. 
-KAPITEL 4 
-TIDER
-Tidplan § 1 Entreprenören skall planera kontraktsarbetenas utförande så att de kan färdigställas inom kontraktstiden. Entreprenören skall för beställaren redovisa planeringen i tidplan. Jämkning enligt § 2 eller 3 i detta kapitel skall föranleda motsvarande justering av tidplanen.
+Uppmätning som inte kan anstå till arbetets färdigställande verkställs före eller under arbetets utförande. Om part trots motpartens kallelse skulle försumma att delta i uppmätning, gäller motpartens mätning, såvida den inte är uppenbart felaktig.
+KAPITEL 4 TIDER
+§ 1 Tidplan
+Entreprenören skall planera kontraktsarbetenas utförande så att de kan färdigställas inom kontraktstiden. Entreprenören skall för beställaren redovisa planeringen i tidplan. Jämkning enligt § 2 eller 3 i detta kapitel skall föranleda motsvarande justering av tidplanen.
 Beställaren skall tillhandahålla tillgängligt underlag för entreprenörens planering. Entreprenören skall på beställarens begäran lämna uppgift om hur arbetet fortskrider i förhållande till tidplanen.
-Färdigställande § 2 Kontraktsarbetena skall vara färdigställda och tillgängliga för slutbesiktning eller avlämnade på annat sätt vid kontraktstidens utgång. Kontraktstiden skall förlängas eller avkortas i den utsträckning ÄTA-arbete eller förändringar i förhållande till angiven mängd i kontraktshandlingarna påverkar möjligheten att hålla kontraktstiden.
+§ 2 Färdigställande
+Kontraktsarbetena skall vara färdigställda och tillgängliga för slutbesiktning eller avlämnade på annat sätt vid kontraktstidens utgång. Kontraktstiden skall förlängas eller avkortas i den utsträckning ÄTA-arbete eller förändringar i förhållande till angiven mängd i kontraktshandlingarna påverkar möjligheten att hålla kontraktstiden.
 Entreprenaden får avlämnas före kontraktstidens utgång endast om parterna kommer överens om det.
 Provning och injustering som ingår i kontraktsarbetena skall vara fullgjord inom entreprenadtiden, om inte lämplig årstid eller entreprenadens ibruktagande rimligen bör avvaktas.
-Hinder och förlängning § 3 Entreprenören har rätt till erforderlig förlängning av kontraktstiden om han hindras att färdigställa kontraktsarbetena inom kontraktstiden på grund av:
-omständighet som beror på beställaren eller något förhållande på hans sida
-myndighetsbeslut som medför allmän brist på hjälpmedel, material eller vara eller begränsning av arbetskraft
-krig, försvarsberedskap, epidemi, strejk, blockad eller lockout, dock inte strejk eller blockad till följd av att entreprenören eller någon av hans underentreprenörer inte fullgjort sina skyldigheter gentemot anställd
-väderleks- eller vattenståndsförhållande som är osedvanliga för byggnadsorten och inverkar särskilt ogynnsamt på arbetena
+§ 3 Hinder och förlängning
+Entreprenören har rätt till erforderlig förlängning av kontraktstiden om han hindras att färdigställa kontraktsarbetena inom kontraktstiden på grund av:
+omständighet som beror på beställaren eller något förhållande på hans sida,
+myndighetsbeslut som medför allmän brist på hjälpmedel, material eller vara eller begränsning av arbetskraft,
+krig, försvarsberedskap, epidemi, strejk, blockad eller lockout, dock inte strejk eller blockad till följd av att entreprenören eller någon av hans underentreprenörer inte fullgjort sina skyldigheter gentemot anställd,
+väderleks- eller vattenståndsförhållande som är osedvanliga för byggnadsorten och inverkar särskilt ogynnsamt på arbetena, eller
 annat av entreprenören ej vållat förhållande, som entreprenören inte bort räkna med och vars menliga inverkan han inte rimligen kunnat undanröja.
-Kommentar till kapitel 4 § 3 Vid bedömningen av vad som utgör ”erforderlig förlängning av kontraktstiden” i det enskilda fallet skall, inom ramen för den allmänna lojalitetsplikt som råder mellan parterna, beaktas entreprenörens möjlighet att begränsa tidsförlängningen genom en rationell användning av de resurser han avsatt för berörd del.
+Kommentar till kapitel 4 § 3
+Vid bedömningen av vad som utgör ”erforderlig förlängning av kontraktstiden” i det enskilda fallet skall, inom ramen för den allmänna lojalitetsplikt som råder mellan parterna, beaktas entreprenörens möjlighet att begränsa tidsförlängningen genom en rationell användning av de resurser han avsatt för berörd del.
 Vid tolkning av p. 1 kan vägledning hämtas från den praxis som utvecklats inom köprätten beträffande kontrollansvar.
-Underrättelse om hinder § 4* Part skall utan dröjsmål underrätta motparten om förhållande som parten insett eller bort inse skulle medföra rubbning av tidplan eller försening av entreprenaden.
+§ 4* Underrättelse om hinder
+Part skall utan dröjsmål underrätta motparten om förhållande som parten insett eller bort inse skulle medföra rubbning av tidplan eller försening av entreprenaden.
 Om part underlåter att lämna motparten sådan underrättelse, får parten inte åberopa förhållandet annat än om motparten insett eller bort inse detsamma och att förhållandet inverkar på tidplanen.
 Om så föreskrivits i entreprenadhandlingarna skall underrättelse enligt denna paragraf lämnas skriftligen.
-Forcering § 5 Efter underrättelse enligt § 4 i detta kapitel skall parterna försöka komma överens om den ändring av kontraktstiden som förhållandena föranleder. Härvid skall hänsyn tas till om återstående arbeten kommer att utföras under avsevärt gynnsammare eller ogynnsammare förhållanden.
-§ 6 För att undvika eller minska en förlängning av kontraktstiden är entreprenören skyldig att vidta åtgärd (forcering) på beställarens bekostnad, som entreprenören kan utföra utan att väsentlig olägenhet åsamkas honom. Sådan forcering skall beställas skriftligen innan åtgärden påbörjas.
+§ 5 Forcering
+Efter underrättelse enligt § 4 i detta kapitel skall parterna försöka komma överens om den ändring av kontraktstiden som förhållandena föranleder. Härvid skall hänsyn tas till om återstående arbeten kommer att utföras under avsevärt gynnsammare eller ogynnsammare förhållanden.
+§ 6
+För att undvika eller minska en förlängning av kontraktstiden är entreprenören skyldig att vidta åtgärd (forcering) på beställarens bekostnad, som entreprenören kan utföra utan att väsentlig olägenhet åsamkas honom. Sådan forcering skall beställas skriftligen innan åtgärden påbörjas.
 Om beställaren inte medger tidsförlängning och entreprenören trots det väljer att vidta forcering för att undvika eller minska förlängning, har entreprenören rätt till ersättning för forceringen om det visar sig att entreprenören varit berättigad till förlängning av kontraktstiden.
 Entreprenören skall innan forcering enligt andra stycket påbörjas skriftligen underrätta beställaren om detta med angivande av beräknad kostnad för forceringen.
 Om beställaren efter sådan underrättelse medger tidsförlängning får entreprenören inte vidta ytterligare forcering på beställarens bekostnad.
-Ansvarstid och garantitid § 7* Ansvarstiden är tio år från entreprenadens godkännande och inleds med garantitid. Om inte annat föreskrivs i kontraktshandlingarna gäller följande.
+§ 7* Ansvarstid och garantitid
+Ansvarstiden är tio år från entreprenadens godkännande och inleds med garantitid. Om inte annat föreskrivs i kontraktshandlingarna gäller följande.
 Garantitiden är fem år för entreprenörens arbetsprestation och två år för material och varor. Om entreprenören har erhållit eller erhåller en längre garantitid för material eller vara, gäller denna längre garantitid även mellan entreprenören och beställaren.
-Förlängning av garantitiden § 8 Om entreprenören efter slutbesiktning dröjer avsevärt med att avhjälpa fel får besiktningsmannen, om särskilda skäl föreligger, vid efterbesiktning förlänga garantitiden för arbetet i fråga med en tid som motsvarar tiden mellan slutbesiktningen och efterbesiktningen.
-§ 9 Besiktningsmannen får förlänga garantitiden för arbetet i fråga med högst två år
-om åtagande enligt den avtalade kvalitetsplanen eller miljöplanen inte har utförts och dokumenterats och särskilda skäl föreligger
-för arbete till avhjälpande av fel som framträtt under garantitiden om särskilda skäl föreligger
+§ 8 Förlängning av garantitiden
+Om entreprenören efter slutbesiktning dröjer avsevärt med att avhjälpa fel får besiktningsmannen, om särskilda skäl föreligger, vid efterbesiktning förlänga garantitiden för arbetet i fråga med en tid som motsvarar tiden mellan slutbesiktningen och efterbesiktningen.
+§ 9
+Besiktningsmannen får förlänga garantitiden för arbetet i fråga med högst två år:
+om åtagande enligt den avtalade kvalitetsplanen eller miljöplanen inte har utförts och dokumenterats och särskilda skäl föreligger,
+för arbete till avhjälpande av fel som framträtt under garantitiden om särskilda skäl föreligger, eller
 om flera fel av samma slag har konstaterats under garantitiden och det kan befaras att ytterligare fel av samma slag kommer att framträda.
-Kommentar till kapitel 4 § 9 Vid bedömning av om särskilda skäl föreligger bör bland annat beaktas hur lång tid som kvarstår av den ursprungliga garantitiden.
+Kommentar till kapitel 4 § 9
+Vid bedömning av om särskilda skäl föreligger bör bland annat beaktas hur lång tid som kvarstår av den ursprungliga garantitiden.
 Om kontraktet hävs enligt kapitel 8 § 1 eller 2, löper ansvars- och garantitid för den utförda delen av entreprenaden från den dag då kontraktet hävdes.
-Huvuddelar § 10 Om kontraktsarbetena är uppdelade i huvuddelar, tillämpas bestämmelserna i detta kapitel på varje huvuddel för sig.
-§ 11 Om kontraktstiden avseende en huvuddel skall jämkas enligt § 2 eller 3 i detta kapitel, skall kontraktstiden jämkas även beträffande efterföljande huvuddel i den mån färdigställandet av denna är beroende av en tidigare huvuddel.
-KAPITEL 5 
-ANSVAR OCH AVHJÄLPANDE
-Ansvar under entreprenadtiden § 1 Entreprenören ansvarar under entreprenadtiden för skada på ej avlämnad del av entreprenaden. Entreprenören ansvarar dock inte för skada på entreprenaden som beror på beställaren.
+§ 10 Huvuddelar
+Om kontraktsarbetena är uppdelade i huvuddelar, tillämpas bestämmelserna i detta kapitel på varje huvuddel för sig.
+§ 11
+Om kontraktstiden avseende en huvuddel skall jämkas enligt § 2 eller 3 i detta kapitel, skall kontraktstiden jämkas även beträffande efterföljande huvuddel i den mån färdigställandet av denna är beroende av en tidigare huvuddel.
+KAPITEL 5 ANSVAR OCH AVHJÄLPANDE
+§ 1 Ansvar under entreprenadtiden
+Entreprenören ansvarar under entreprenadtiden för skada på ej avlämnad del av entreprenaden. Entreprenören ansvarar dock inte för skada på entreprenaden som beror på beställaren.
 Entreprenören ansvarar – hjälpmedel undantagna – inte heller för skada på entreprenaden som beror på krig, terrorhandling, uppror, naturkatastrof eller liknande omständighet.
-§ 2 Beställaren har rätt att efter samråd med entreprenören under entreprenadtiden ta ej avlämnad del av entreprenaden i bruk, men ansvarar därvid för skada på entreprenaden på grund av brukandet samt för ökade kostnader för entreprenadens utförande och färdigställande.
-Vite vid försening § 3 För varje påbörjad vecka varmed entreprenören överskrider kontraktstiden eller den ändrade tid för färdigställandet som skall gälla enligt kapitel 4 § 2 eller 3, skall han betala vite enligt kontraktshandlingarna. Vite kan även avtalas för överskridande av den tid som bestämts för utförande av viss del av entreprenaden. Om vite avtalats är beställaren därutöver inte berättigad till skadestånd för förseningen.
+§ 2
+Beställaren har rätt att efter samråd med entreprenören under entreprenadtiden ta ej avlämnad del av entreprenaden i bruk, men ansvarar därvid för skada på entreprenaden på grund av brukandet samt för ökade kostnader för entreprenadens utförande och färdigställande.
+§ 3 Vite vid försening
+För varje påbörjad vecka varmed entreprenören överskrider kontraktstiden eller den ändrade tid för färdigställandet som skall gälla enligt kapitel 4 § 2 eller 3, skall han betala vite enligt kontraktshandlingarna. Vite kan även avtalas för överskridande av den tid som bestämts för utförande av viss del av entreprenaden. Om vite avtalats är beställaren därutöver inte berättigad till skadestånd för förseningen.
 Om beställaren före färdigställandet har tagit entreprenaden eller del därav i avsett bruk, skall vitet jämkas i skälig mån. Jämkning skall även göras om beställaren har haft en icke oväsentlig ekonomisk nytta av annat ibruktagande av entreprenaden eller del därav.
 Anspråk på vite skall framställas skriftligen till motparten senast tre månader efter entreprenadens godkännande. Anspråk på vite är förfallet, om det inte framställs skriftligen i rätt tid.
-Kommentar till kapitel 5 § 3 Vitesbeloppet bestäms normalt som en procentsats av kontraktssumman. Vid löpande räkning är den ordningen inte möjlig. I sådant fall kan vitet bestämmas till ett visst belopp att utgå för varje påbörjad vecka varmed färdigställandet av kontraktsarbetena blivit fördröjt. På motsvarande sätt kan ett visst belopp anges för varje påbörjad vecka varmed färdigställandet av viss del av entreprenaden blivit fördröjt.
-Hinder och ersättning § 4 Vid hinder enligt kapitel 4 § 3 p. 1 har entreprenören rätt att erhålla ersättning av beställaren för den kostnad som därigenom orsakas. Om beställaren kan visa att han inte skäligen kunnat räkna med hindret och inte heller skäligen kunnat undvika eller övervinna följderna av det, skall kostnaderna delas lika mellan beställaren och entreprenören.
-Ansvar under garantitid § 5 Entreprenören ansvarar för fel som framträder under garantitid.
-Kommentar till kapitel 5 § 5 Garantiansvarets omfattning inom ramen för en utförandeentreprenad innebär ett ansvar under fem år för arbetsprestationen och två år för av entreprenören valda material och varor. Entreprenören är under sistnämnda period också ansvarig för fel i material och varor som föreskrivits av beställaren om felet innebär avvikelse från den normala beskaffenheten hos det särskilda materialet eller den vara (fabrikat) som föreskrivits.
+Kommentar till kapitel 5 § 3
+Vitesbeloppet bestäms normalt som en procentsats av kontraktssumman. Vid löpande räkning är den ordningen inte möjlig. I sådant fall kan vitet bestämmas till ett visst belopp att utgå för varje påbörjad vecka varmed färdigställandet av kontraktsarbetena blivit fördröjt. På motsvarande sätt kan ett visst belopp anges för varje påbörjad vecka varmed färdigställandet av viss del av entreprenaden blivit fördröjt.
+§ 4 Hinder och ersättning
+Vid hinder enligt kapitel 4 § 3 p. 1 har entreprenören rätt att erhålla ersättning av beställaren för den kostnad som därigenom orsakas. Om beställaren kan visa att han inte skäligen kunnat räkna med hindret och inte heller skäligen kunnat undvika eller övervinna följderna av det, skall kostnaderna delas lika mellan beställaren och entreprenören.
+§ 5 Ansvar under garantitid
+Entreprenören ansvarar för fel som framträder under garantitid.
+Kommentar till kapitel 5 § 5
+Garantiansvarets omfattning inom ramen för en utförandeentreprenad innebär ett ansvar under fem år för arbetsprestationen och två år för av entreprenören valda material och varor. Entreprenören är under sistnämnda period också ansvarig för fel i material och varor som föreskrivits av beställaren om felet innebär avvikelse från den normala beskaffenheten hos det särskilda materialet eller den vara (fabrikat) som föreskrivits.
 Om en leverantör har lämnat en garanti för material eller vara som gäller under en längre tid än två år från entreprenadens godkännande, löper entreprenörens garantitid under samma tid. Omfattningen av entreprenörens garantiansvar under den förlängda garantitiden motsvarar omfattningen av leverantörens garantiåtagande.
 En garanti i AB 04:s bemärkelse innebär en skyldighet för entreprenören att avhjälpa de fel som framträder under garantitiden. Entreprenören ansvarar dock inte för sådant som beror på felaktig projektering, bristande underhåll, felaktig skötsel eller förslitning.
 Om entreprenören har uppfattningen att han inte ansvarar för påtalat fel åligger det entreprenören att visa, att han utfört entreprenaden kontraktsenligt eller göra sannolikt att det påtalade felet beror på felaktig projektering, vanvård, onormalt brukande eller annat som kan hänföras till beställaren.
 Av kapitel 4 § 7 framgår att garantitiden är olika lång för å ena sidan arbetsprestation och å andra sidan material och varor. Om entreprenören har uppfattningen att han inte ansvarar för påtalat fel i arbetsprestationen efter utgången av garantitiden för material eller vara, åligger det honom att visa att han utfört sin arbetsprestation kontraktsenligt eller göra sannolikt att det är fråga om fel i material eller vara eller göra sannolikt att det påtalade felet beror på omständighet som kan hänföras till beställaren enligt ovanstående stycken.
-Ansvar efter garantitid § 6 Entreprenören ansvarar för väsentligt fel som framträder efter utgången av respektive garantitid enligt kapitel 4 § 7, om felet visas ha sin grund i vårdslöshet av entreprenören.
-Kommentar till kapitel 5 § 6 Det åligger beställaren att visa att entreprenören ansvarar för fel.
+§ 6 Ansvar efter garantitid
+Entreprenören ansvarar för väsentligt fel som framträder efter utgången av respektive garantitid enligt kapitel 4 § 7, om felet visas ha sin grund i vårdslöshet av entreprenören.
+Kommentar till kapitel 5 § 6
+Det åligger beställaren att visa att entreprenören ansvarar för fel.
 Vid bedömning av om ett fel är väsentligt kan avseende inte fästas endast vid själva felet, utan hänsyn bör även tas till vilken skada som uppkommit eller kan befaras uppkomma. Fel som medför stora kostnader för beställaren är vanligtvis väsentliga.
 Vid väsentlighetsbedömningen bör gälla att det skall vara fråga om ett fel, som påverkar beställarens möjlighet att använda en byggnad eller anläggning för avsett ändamål eller om ett fel, som påverkar byggnadens eller anläggningens goda bestånd. En byggnad skall sålunda ha fungerande väggar, tak, golv och grund samt vara tät. Fel som innebär fara för hälsa och säkerhet är normalt väsentliga.
 När det gäller sammanhängande tekniska system, såsom för el och VA, är fel som medför avbrott i regel väsentliga, om avbrotten inte är kortvariga eller om de är återkommande.
@@ -243,155 +251,215 @@ Det är svårt att härutöver ange vilka fel som skall anses väsentliga. Fel, 
 Parterna kan – i kontraktet eller i de administrativa föreskrifterna på det sätt som föreskrivs i kapitel 1 § 3 i fråga om ändring av en fast bestämmelse – avtala om att ett väsentligt fel skall anses föreligga om kostnaderna för att avhjälpa felet och en följdskada på grund av felet överstiger ett visst belopp. Parterna kan därvid även avtala om att flera fel av samma slag skall anses som ett fel vid tillämpningen av den avtalade kostnadsgränsen.
 För ansvar fordras vidare att beställaren kan visa på vårdslöshet av entreprenören. Vid bedömning om vårdslöshet föreligger måste det prövas om entreprenören handlat på något annat sätt än vad som kan fordras av honom. Utgången av en sådan bedömning kan i det enskilda fallet bli beroende på om entreprenören har frångått anvisningar som beställaren lämnat. Detsamma gäller om entreprenören förfarit på ett sätt som strider mot kravet på fackmässighet. En sådan avvikelse kan förutsättas vara ett vårdslöst handlande. För att undgå ansvar måste entreprenören i en sådan situation visa godtagbara skäl för avvikelsen.
 Entreprenörens ansvar för fel i utförande omfattar inte fel som beror på felaktig projektering, bristande underhåll eller felaktig skötsel.
-§ 7 För ÄTA-arbete gäller samma ansvar som för kontraktsarbetena.
-Ansvar för skada § 8 Om entreprenören är ansvarig för fel, ansvarar han också för skada på entreprenaden på grund av fel. För skada på entreprenaden genom brand på grund av fel svarar entreprenören dock inte längre än två år efter entreprenadens godkännande.
-§ 9 Part är skyldig att ersätta skada som han åstadkommer på motpartens arbete genom vårdslöshet vid utförande av eget arbete.
+§ 7
+För ÄTA-arbete gäller samma ansvar som för kontraktsarbetena.
+§ 8 Ansvar för skada
+Om entreprenören är ansvarig för fel, ansvarar han också för skada på entreprenaden på grund av fel. För skada på entreprenaden genom brand på grund av fel svarar entreprenören dock inte längre än två år efter entreprenadens godkännande.
+§ 9
+Part är skyldig att ersätta skada som han åstadkommer på motpartens arbete genom vårdslöshet vid utförande av eget arbete.
 Part ansvarar även för skada som på grund av underlåten eller bristfällig vård från hans sida uppstår på hjälpmedel, material eller vara, som motparten tillhandahåller honom.
-§ 10 Entreprenören ansvarar för skada på hjälpmedel, material och vara, som beställaren tillhandahåller, enligt vad som anges i §§ 1, 5–8 och 9 andra stycket i detta kapitel.
-§ 11 Part är skyldig att ersätta motparten för sådan skada som inte skall ersättas enligt bestämmelserna ovan i detta kapitel, om han varit vårdslös eller om skadan beror på fel för vilket entreprenören är ansvarig. Ersättningsskyldigheten är begränsad till 15% av kontraktssumman. Denna begränsning gäller inte, om den ansvarige har försäkringsskydd till högre belopp. I sådant fall maximeras ersättningsskyldigheten till detta belopp jämte förekommande självrisk.
+§ 10
+Entreprenören ansvarar för skada på hjälpmedel, material och vara, som beställaren tillhandahåller, enligt vad som anges i §§ 1, 5–8 och 9 andra stycket i detta kapitel.
+§ 11
+Part är skyldig att ersätta motparten för sådan skada som inte skall ersättas enligt bestämmelserna ovan i detta kapitel, om han varit vårdslös eller om skadan beror på fel för vilket entreprenören är ansvarig. Ersättningsskyldigheten är begränsad till 15% av kontraktssumman. Denna begränsning gäller inte, om den ansvarige har försäkringsskydd till högre belopp. I sådant fall maximeras ersättningsskyldigheten till detta belopp jämte förekommande självrisk.
 För skada på grund av avbrott eller störning i industriell produktion eller annan kommersiell verksamhet föreligger ingen ersättningsskyldighet.
 De ansvarsbegränsningar som följer av denna paragraf gäller inte när part gjort sig skyldig till grov vårdslöshet.
-§ 12 Part är ansvarig gentemot motparten för åtgärder i fråga om entreprenaden som vidtas eller underlåts av hans anställda samt av honom anlitade entreprenörer, leverantörer och övriga personer. Om en sidoentreprenör eller någon av denne eller av beställaren anlitad person genom vårdslöshet orsakat entreprenören egendomsskada, är beställaren dock skyldig att betala ersättning endast om han är medvållande.
-Tredje man § 13 Entreprenören är i förhållande till beställaren ansvarig för dennes skadeståndsskyldighet gentemot tredje man till följd av entreprenaden.
+§ 12
+Part är ansvarig gentemot motparten för åtgärder i fråga om entreprenaden som vidtas eller underlåts av hans anställda samt av honom anlitade entreprenörer, leverantörer och övriga personer. Om en sidoentreprenör eller någon av denne eller av beställaren anlitad person genom vårdslöshet orsakat entreprenören egendomsskada, är beställaren dock skyldig att betala ersättning endast om han är medvållande.
+§ 13 Tredje man
+Entreprenören är i förhållande till beställaren ansvarig för dennes skadeståndsskyldighet gentemot tredje man till följd av entreprenaden.
 Entreprenören är dock fri från skadeståndsskyldighet enligt föregående stycke, om han kan visa att han rimligen inte kunnat förebygga eller begränsa skadan.
 Beställaren är i förhållande till entreprenören ansvarig för den skadeståndsskyldighet som entreprenören enligt kapitel 32 i miljöbalken (1998:808) har gentemot tredje man, om entreprenören kan visa att han rimligen inte kunnat förebygga eller begränsa skadan.
-Solidariskt ansvar § 14 Om flera fysiska eller juridiska personer såsom endera beställare eller entreprenör har ingått avtalet, svarar de solidariskt.
-Underrättelseskyldighet § 15 Beställaren skall utan dröjsmål skriftligen underrätta entreprenören då han, efter det att entreprenaden eller en del av den avlämnats eller tagits i bruk, upptäcker fel eller skada på grund av fel.
+§ 14 Solidariskt ansvar
+Om flera fysiska eller juridiska personer såsom endera beställare eller entreprenör har ingått avtalet, svarar de solidariskt.
+§ 15 Underrättelseskyldighet
+Beställaren skall utan dröjsmål skriftligen underrätta entreprenören då han, efter det att entreprenaden eller en del av den avlämnats eller tagits i bruk, upptäcker fel eller skada på grund av fel.
 Beställaren är ersättningsskyldig för den merkostnad som för sent framförd underrättelse orsakat entreprenören. Sådan ersättningsskyldighet föreligger också om beställaren borde ha upptäckt fel eller skada tidigare än vad som faktiskt skett.
-§ 16 Entreprenören skall utan dröjsmål underrätta beställaren innan ingrepp av betydelse görs i tredje mans egendom.
-Avhjälpande § 17 Entreprenören är berättigad och skyldig att avhjälpa vad som i besiktningsutlåtande antecknats utgöra fel samt fel som beställaren skriftligen underrättat om enligt § 15 i detta kapitel.
+§ 16
+Entreprenören skall utan dröjsmål underrätta beställaren innan ingrepp av betydelse görs i tredje mans egendom.
+§ 17 Avhjälpande
+Entreprenören är berättigad och skyldig att avhjälpa vad som i besiktningsutlåtande antecknats utgöra fel samt fel som beställaren skriftligen underrättat om enligt § 15 i detta kapitel.
 Avhjälpande skall fullgöras utan dröjsmål och senast inom två månader räknat från det att besiktningsutlåtandet eller skriftlig underrättelse om fel tillställts entreprenören, såvida inte lämplig årstid bör avvaktas. Fel som inte medför risk för skada på entreprenaden eller olägenhet av betydelse för beställaren, får avhjälpas vid annan tidpunkt som parterna kommer överens om, dock senast i samband med garantitidens utgång.
 Entreprenören skall utan dröjsmål skriftligen underrätta beställaren när fel avhjälpts.
 Om entreprenören anser att han inte är ansvarig för ett fel, skall han skriftligen underrätta beställaren om detta. Om entreprenören inte avhjälper felet inom föreskriven tid eller skriftligen har underrättat att han inte avser att avhjälpa felet, får beställaren låta avhjälpa felet.
 Om entreprenören inte ansvarar för felet har han rätt till ersättning enligt kapitel 6 §§ 1-7 och 11. Om entreprenören ansvarar för felet sker avhjälpandet på hans bekostnad. Vid entreprenad på löpande räkning då felet avser arbete som inte har utförts sker avhjälpandet dock på beställarens bekostnad, om entreprenören inte tidigare erhållit ersättning för arbetet ifråga.
-§ 18 Fel som inte i väsentlig grad påverkar entreprenadens bestånd, utseende eller möjligheten att använda den på ändamålsenligt sätt är entreprenören inte skyldig att avhjälpa, i den utsträckning detta skulle vara oskäligt med hänsyn till avhjälpandekostnader och andra omständigheter.
+§ 18
+Fel som inte i väsentlig grad påverkar entreprenadens bestånd, utseende eller möjligheten att använda den på ändamålsenligt sätt är entreprenören inte skyldig att avhjälpa, i den utsträckning detta skulle vara oskäligt med hänsyn till avhjälpandekostnader och andra omständigheter.
 Vid tillämpning av föregående stycke är beställaren berättigad till avdrag på entreprenadsumman med belopp motsvarande skillnaden mellan värdet på entreprenaden i kontraktsenligt respektive felaktigt skick. Beloppet skall dock inte vara mindre än den besparing entreprenören gjort genom det felaktiga utförandet.
 Motsvarande gäller om åtagande inte har utförts enligt miljöplanen eller kvalitetsplanen, såvida inte detta lett till förlängning av garantitiden enligt kapitel 4 § 9.
-§ 19 Beställaren skall lämna entreprenören erforderligt tillträde för avhjälpande av fel.
+§ 19
+Beställaren skall lämna entreprenören erforderligt tillträde för avhjälpande av fel.
 Avhjälpandet av fel skall i skälig utsträckning ske så att olägenhet inte uppkommer för beställaren.
 Om beställaren förorsakas kostnader i samband med att ett fel avhjälps, är entreprenören ersättningsskyldig i den omfattning som framgår av § 11 i detta kapitel.
-Skadeståndsanspråk § 20 Anspråk på skadestånd skall framställas skriftligen till motparten:
-om skadan framträtt under entreprenadtiden, senast tre månader efter dess utgång
-om skadan framträtt under garantitiden, senast tre månader efter dess utgång
-om skadan framträtt efter garantitidens utgång, senast tre månader efter det att skadan framträtt
-om anspråk på skadestånd grundas på krav från någon som part har avtal med avseende entreprenaden, senast inom tre månader från utgången av de i p. 1-3 angivna fristerna
+§ 20 Skadeståndsanspråk
+Anspråk på skadestånd skall framställas skriftligen till motparten:
+om skadan framträtt under entreprenadtiden, senast tre månader efter dess utgång,
+om skadan framträtt under garantitiden, senast tre månader efter dess utgång,
+om skadan framträtt efter garantitidens utgång, senast tre månader efter det att skadan framträtt,
+om anspråk på skadestånd grundas på krav från någon som part har avtal med avseende entreprenaden, senast inom tre månader från utgången av de i p. 1–3 angivna fristerna, eller
 om anspråk på skadestånd grundas på krav från någon annan än de som avses i p. 4, senast tre månader efter att kravet mottagits.
 Anspråk på skadestånd är förfallet, om det inte framställs skriftligen i rätt tid.
-Kvittning § 21 Oavsett vad som föreskrivs i § 3 och § 20 i detta kapitel har part kvittningsvis rätt att framställa anspråk på vite eller annat skadestånd inom en månad efter det att motparten har framställt krav på skadestånd eller annan fordran med anledning av entreprenaden.
-Försäkringar § 22* Om inte annat föreskrivits i kontraktshandlingarna beträffande parternas försäkringar, gäller följande.
+§ 21 Kvittning
+Oavsett vad som föreskrivs i § 3 och § 20 i detta kapitel har part kvittningsvis rätt att framställa anspråk på vite eller annat skadestånd inom en månad efter det att motparten har framställt krav på skadestånd eller annan fordran med anledning av entreprenaden.
+§ 22* Försäkringar
+Om inte annat föreskrivits i kontraktshandlingarna beträffande parternas försäkringar, gäller följande.
 Entreprenören skall ha allriskförsäkring för skador på entreprenaden. Om beställaren är byggherre skall denne vara medförsäkrad. Försäkringen skall gälla under entreprenadtiden och, i fråga om skador för vilka entreprenören ansvarar, under minst två år efter entreprenadens godkännande. Försäkringsbeloppet skall motsvara återanskaffningsvärdet av entreprenaden jämte arbete, som beställaren tillhandahåller. Självrisken skall högst vara tre prisbasbelopp.
 Entreprenören skall vidare ha ansvarsförsäkring för entreprenadverksamhet under entreprenadtiden och under minst två år efter entreprenadens godkännande. Försäkringsbeloppet skall lägst vara 200 prisbasbelopp. Självrisken skall högst vara tre prisbasbelopp.
 Med prisbasbelopp förstås prisbasbeloppet vid tiden för avtalets ingående. Entreprenören skall tillställa beställaren bevis om att överenskomna försäkringar finns.
 Om entreprenören underlåter detta och rättelse inte sker, får beställaren på entreprenörens bekostnad själv teckna försäkring.
 Vid skada åligger det part att utnyttja avtalad försäkring.
-Huvuddelar § 23 Om kontraktsarbetena är uppdelade i huvuddelar, tillämpas bestämmelserna i detta kapitel på varje huvuddel för sig.
+§ 23 Huvuddelar
+Om kontraktsarbetena är uppdelade i huvuddelar, tillämpas bestämmelserna i detta kapitel på varje huvuddel för sig.
 Om vite erläggs för försening av en viss huvuddel, skall vite inte utges för efterföljande huvuddel, om färdigställandet av denna är beroende av förstnämnda huvuddel.
 Vite som erlagts för försening av en huvuddel skall avräknas från vite för försening av kontraktsarbetena, i den mån sistnämnda försening beror på förseningen av huvuddelen.
 KAPITEL 6 EKONOMI
-Ersättning § 1 Kontraktssumman avser ersättning för kontraktsarbetena. ÄTA-arbeten skall regleras genom avräkning mellan tillkommande och avgående arbeten.
+§ 1 Ersättning
+Kontraktssumman avser ersättning för kontraktsarbetena. ÄTA-arbeten skall regleras genom avräkning mellan tillkommande och avgående arbeten.
 Sådan reglering skall ske utan dröjsmål, om möjligt före utförandet av ÄTA-arbetet.
-§ 2 Om beställaren anlitar någon annan än entreprenören för sådant arbete som anges i kapitel 2 § 3 eller själv utför sådant arbete, är entreprenören berättigad till ersättning för därigenom uppkomna kostnader jämte ersättning för utebliven vinst.
-§ 3 Avtalat pris skall ändras med hänsyn till dels kostnadsändring på grund av myndighets åtgärd, dels kostnadsändring som är förorsakad av krig eller annat krisförhållande med liknande effekt och som avser förnödenhet eller tjänst som är nödvändig för entreprenaden, dels kostnadsändring som beror på onormala prisförändringar avseende material som ingår i entreprenaden.
+§ 2
+Om beställaren anlitar någon annan än entreprenören för sådant arbete som anges i kapitel 2 § 3 eller själv utför sådant arbete, är entreprenören berättigad till ersättning för därigenom uppkomna kostnader jämte ersättning för utebliven vinst.
+§ 3
+Avtalat pris skall ändras med hänsyn till dels kostnadsändring på grund av myndighets åtgärd, dels kostnadsändring som är förorsakad av krig eller annat krisförhållande med liknande effekt och som avser förnödenhet eller tjänst som är nödvändig för entreprenaden, dels kostnadsändring som beror på onormala prisförändringar avseende material som ingår i entreprenaden.
 Ändring av det avtalade priset skall dock ske endast om kostnadsändringen varit oförutsebar och väsentligt påverkar hela kostnaden för entreprenaden.
-§ 4 Vid ÄTA-arbete skall ersättning utgå även för åtgärder, arbeten eller utgifter, som föranletts av entreprenadhandlingarna men som på grund av ÄTA-arbete inte blir till avsedd nytta.
+§ 4
+Vid ÄTA-arbete skall ersättning utgå även för åtgärder, arbeten eller utgifter, som föranletts av entreprenadhandlingarna men som på grund av ÄTA-arbete inte blir till avsedd nytta.
 Anspråk på ersättning enligt föregående stycke skall, vid påföljd att annars vara förfallet, framställas senast sex månader efter entreprenadens godkännande.
-Väsentlig rubbning § 5 Om ÄTA-arbete eller förändring i förhållande till angiven mängd i kontraktshandlingarna föranleder en väsentlig rubbning av förutsättningarna för entreprenadens utförande i övrigt skall kostnadsreglering ske härför.
+§ 5 Väsentlig rubbning
+Om ÄTA-arbete eller förändring i förhållande till angiven mängd i kontraktshandlingarna föranleder en väsentlig rubbning av förutsättningarna för entreprenadens utförande i övrigt skall kostnadsreglering ske härför.
 Entreprenören får inte åberopa en sådan rubbning om han inte lämnat skriftligt besked till beställaren utan dröjsmål efter det att han insett eller borde ha insett rubbningen.
 Anspråk på ersättning på grund av väsentligt rubbade förutsättningar skall framställas utan dröjsmål och, vid påföljd att annars vara förfallet, senast sex månader efter entreprenadens godkännande.
-Kommentar till kapitel 6 § 5 Ändrade förutsättningar kan bl.a. uppstå som en följd av ÄTA-arbeten. I vilken mån sådana ÄTA-arbeten har inneburit en väsentlig rubbning av förutsättningarna för entreprenadens utförande i övrigt, får bedömas utifrån arten och omfattningen av ÄTA-arbetena, tidsåtgången för att utföra dem samt vilken påverkan ÄTA-arbetena har haft på entreprenadarbetena i övrigt.
+Kommentar till kapitel 6 § 5
+Ändrade förutsättningar kan bl.a. uppstå som en följd av ÄTA-arbeten. I vilken mån sådana ÄTA-arbeten har inneburit en väsentlig rubbning av förutsättningarna för entreprenadens utförande i övrigt, får bedömas utifrån arten och omfattningen av ÄTA-arbetena, tidsåtgången för att utföra dem samt vilken påverkan ÄTA-arbetena har haft på entreprenadarbetena i övrigt.
 Ersättning för ÄTA-arbeten förutsätts ha reglerats i samband med att dessa beställts och utförts. De kostnader som avses i denna bestämmelse är tillkommande kostnader på entreprenadarbetena i övrigt som uppkommit som en följd av dessa ÄTA-arbeten. Fråga kan exempelvis vara om att vissa arbeten – till följd av förskjutningar i tidplanen – kommer att genomföras under andra produktionsbetingelser än vad som varit förutsatt.
 Om entreprenören gör gällande att förutsättningarna för entreprenadens genomförande väsentligt har rubbats, skall han – för att rätt till extra ersättning skall föreligga – visa såväl i vilka avseenden och på vilket sätt förutsättningarna har ändrats för genomförandet av entreprenaden i övrigt som vilka extra kostnader som uppstått till följd av detta.
 Vid bedömning av vad som skall anses utgöra väsentligt rubbade förutsättningar kan parterna särskilt avtala om att sådana förutsättningar skall anses föreligga till exempel när den del av kostnaderna för ÄTA-arbete som omfattas av § 9 p. 2–7 överstiger viss procentandel av motsvarande poster i kontraktssumman. Parterna kan då även bestämma hur kostnadsregleringen skall ske, exempelvis genom olika påslag på ersättningen för ÄTA-arbete i förhållande till kontraktssumman inom olika intervall.
-§ 6 Värdet av ÄTA-arbete skall beräknas enligt avtalad à-prislista, prissatt mängdförteckning, eller annan avtalad debiteringsnorm.
+§ 6
+Värdet av ÄTA-arbete skall beräknas enligt avtalad à-prislista, prissatt mängdförteckning, eller annan avtalad debiteringsnorm.
 Angivet à-pris gäller intill 25 % ökning eller minskning av sådant kontraktsarbete som priset avser dock alltid intill ett värde motsvarande 0,5 % av kontraktssumman.
 Varje angivet à-pris gäller dock till dess att part skriftligen anmält att han anser att à-priset inte längre gäller.
 Ett à-pris som angivits i debiteringsnorm, à-prislista eller motsvarande handling gäller inte arbete som tillkommer eller avgår under andra förutsättningar än dem som à-priset är grundat på, såvida kostnaderna för arbetet påverkas.
 Om ett angivet à-pris inte gäller skall parterna försöka att komma överens om ett nytt à-pris med utgångspunkt i gällande à-pris för samma eller likartat arbete.
-§ 7 Om värdet av ÄTA-arbete inte kan beräknas enligt § 6 i detta kapitel, skall värdet, om inte parterna träffar särskild överenskommelse, beräknas enligt följande:
-värdet av tillkommande arbete bestäms enligt självkostnadsprincipen (löpande räkning) enligt detta kapitel
+§ 7
+Om värdet av ÄTA-arbete inte kan beräknas enligt § 6 i detta kapitel, skall värdet, om inte parterna träffar särskild överenskommelse, beräknas enligt följande:
+värdet av tillkommande arbete bestäms enligt självkostnadsprincipen (löpande räkning) enligt detta kapitel, och
 värdet av avgående arbete fastställs till det belopp varmed arbetet ingår eller beräknas ingå i kontraktssumman.
-Mervärdesskatt § 8 Beställaren skall utöver entreprenadsumman betala därpå belöpande mervärdesskatt.
-Löpande räkning § 9 Enligt självkostnadsprincipen utgår ersättning för
-kostnader för material och varor
-kostnader för arbetsledning
-kostnader för arbetare
-kostnader för hjälpmedel
-kostnader för underentreprenader
-kostnader för försäkringar i den mån de avser entreprenörens risk samt avgifter enligt lag och till företagarorganisationer
-kostnader i övrigt som inte anges i § 10 p. 2 i detta kapitel
+§ 8 Mervärdesskatt
+Beställaren skall utöver entreprenadsumman betala därpå belöpande mervärdesskatt.
+§ 9 Löpande räkning
+Enligt självkostnadsprincipen utgår ersättning för:
+kostnader för material och varor,
+kostnader för arbetsledning,
+kostnader för arbetare,
+kostnader för hjälpmedel,
+kostnader för underentreprenader,
+kostnader för försäkringar i den mån de avser entreprenörens risk samt avgifter enligt lag och till företagarorganisationer,
+kostnader i övrigt som inte anges i § 10 p. 2 i detta kapitel, samt
 a) entreprenörarvode beräknat som procent av kostnaderna enligt p. 1–7 ovan, exklusive mervärdesskatt eller b) entreprenörarvode beräknat som procent av kostnaderna enligt p. 1–7 ovan, för arbetare, hjälpmedel, material eller vara, som tillhandahålls av beställaren, exklusive mervärdesskatt.
-§ 10 Vid tillämpning av självkostnadsprincipen gäller följande.
+§ 10
+Vid tillämpning av självkostnadsprincipen gäller följande.
 Entreprenören skall fullgöra sin uppgift så att beställaren erhåller bästa tekniska och ekonomiska resultat.
 I entreprenörarvodet inbegrips, förutom vinst, kostnader för räntor och centraladministration med beaktande av eventuella årsomsättningsrabatter. Övriga rabatter som entreprenören kan tillgodoräkna sig i entreprenaden skall gottskrivas beställaren.
 Entreprenören skall vid upphandling av material, vara eller underentreprenad såvitt möjligt infordra anbud från flera leverantörer eller entreprenörer. Upphandling skall ske till så förmånliga villkor för beställaren som förhållandena medger.
 Beställaren har rätt att granska samtliga originalverifikationer i den mån de avser kostnader enligt § 9 p. 1–7 i detta kapitel.
-Kommentar till kapitel 6 §§ 9 och 10 Till underlättande av bedömningen av vad som skall anses utgöra skäligt entreprenörarvode kan parterna i kontraktshandlingarna fastställa de procentsatser som skall gälla enligt § 9 p. 8 a respektive 8 b. Till förenkling av debitering och kontroll kan vidare avtalas att vissa kostnader skall beräknas procentuellt på annan kostnad eller på grundval av arbetad tid eller med ledning av à-priser eller annan debiteringsnorm.
-Slutavräkning § 11 Efter entreprenadtiden skall slutavräkning ske mellan summan av tillägg och summan av avdrag.
+Kommentar till kapitel 6 §§ 9 och 10
+Till underlättande av bedömningen av vad som skall anses utgöra skäligt entreprenörarvode kan parterna i kontraktshandlingarna fastställa de procentsatser som skall gälla enligt § 9 p. 8 a respektive 8 b. Till förenkling av debitering och kontroll kan vidare avtalas att vissa kostnader skall beräknas procentuellt på annan kostnad eller på grundval av arbetad tid eller med ledning av à-priser eller annan debiteringsnorm.
+§ 11 Slutavräkning
+Efter entreprenadtiden skall slutavräkning ske mellan summan av tillägg och summan av avdrag.
 Om denna avräkning resulterar i att värdet av avgående arbeten överstiger värdet av tillkommande arbeten, skall 10 % av skillnaden gottskrivas entreprenören.
 Om skillnaden mellan värdet av avgående och tillkommande arbete överstiger 20 % av kontraktssumman, skall entreprenören utöver vad som föreskrivs i första stycket erhålla skälig ersättning för den uteblivna vinst som belöper på den del av skillnaden som överstiger 20 %.
-Kommentar till kapitel 6 § 11 Bestämmelsen är utformad för fastprisentreprenader. Även vid löpande räkning skall dock entreprenören vid slutavräkning kompenseras för därigenom orsakad kostnad samt i skälig utsträckning för den uteblivna vinst som följer av avbeställningen.
-Betalning under entreprenadtiden § 12* Kontraktssumman erläggs enligt betalningsplan och mot faktura. Saknas betalningsplan gäller följande under entreprenadtiden.
+Kommentar till kapitel 6 § 11
+Bestämmelsen är utformad för fastprisentreprenader. Även vid löpande räkning skall dock entreprenören vid slutavräkning kompenseras för därigenom orsakad kostnad samt i skälig utsträckning för den uteblivna vinst som följer av avbeställningen.
+§ 12* Betalning under entreprenadtiden
+Kontraktssumman erläggs enligt betalningsplan och mot faktura. Saknas betalningsplan gäller följande under entreprenadtiden.
 Beställaren är skyldig att mot faktura erlägga delbetalning av kontraktssumman för utfört kontraktsarbete.
 Av de fakturerade beloppen får beställaren innehålla 10 % av värdet av utförda kontraktsarbeten som säkerhet för framtida avhjälpande av fel. Sålunda innehållna medel får dock inte överstiga 5 % av kontraktssumman.
-Förskott § 13* Erhållet förskott på kontraktssumman avräknas, om inte annat föreskrivits i kontraktshandlingarna, successivt genom ett särskilt procentavdrag vid varje delbetalning, varvid procentsatsen skall motsvara förhållandet mellan förskott och kontraktssumma.
-Betalning efter entreprenadtiden § 14 ÄTA-arbete regleras fortlöpande genom debitering eller kreditering.
-§ 15 Beställaren är skyldig att mot faktura utge ersättning för utfört ÄTA-arbete.
+§ 13* Förskott
+Erhållet förskott på kontraktssumman avräknas, om inte annat föreskrivits i kontraktshandlingarna, successivt genom ett särskilt procentavdrag vid varje delbetalning, varvid procentsatsen skall motsvara förhållandet mellan förskott och kontraktssumma.
+§ 14 Betalning efter entreprenadtiden
+ÄTA-arbete regleras fortlöpande genom debitering eller kreditering.
+§ 15
+Beställaren är skyldig att mot faktura utge ersättning för utfört ÄTA-arbete.
 Beställaren får dock innehålla 5 % av fakturerat belopp för ÄTA-arbete jämte därpå belöpande mervärdesskatt.
 Efter entreprenadens godkännande får beställaren innehålla 5 % av entreprenadsumman jämte mervärdesskatt på det innehållna beloppet för avhjälpande av fel som konstaterats i utlåtandet över slutbesiktning till dess fel avhjälpts, dock längst i två månader. Därefter får beställaren innehålla ett betryggande belopp för avhjälpande av fel som konstaterats vid slutbesiktning till dess fel avhjälpts eller reglering skett enligt kapitel 5 § 18.
-§ 16 Utöver vad som föreskrivs i § 12 och § 15 i detta kapitel får beställaren under entreprenadtiden och efter godkänd slutbesiktning innehålla skäligt belopp avseende krav på viten, skadestånd och annan fordran i anledning av kontraktet eller annat entreprenadkontrakt mellan parterna om beställaren skriftligen redovisar skälen för detta. Undanröjs omständighet som ligger till grund för sådant innehållande är beställaren skyldig att utan dröjsmål utge däremot svarande innehållet belopp.
-Faktura § 17* Arbeten som anges i faktura skall vara utförda när fakturering sker, om inte annat föreskrivits i entreprenadhandlingarna.
+§ 16
+Utöver vad som föreskrivs i § 12 och § 15 i detta kapitel får beställaren under entreprenadtiden och efter godkänd slutbesiktning innehålla skäligt belopp avseende krav på viten, skadestånd och annan fordran i anledning av kontraktet eller annat entreprenadkontrakt mellan parterna om beställaren skriftligen redovisar skälen för detta. Undanröjs omständighet som ligger till grund för sådant innehållande är beställaren skyldig att utan dröjsmål utge däremot svarande innehållet belopp.
+§ 17* Faktura
+Arbeten som anges i faktura skall vara utförda när fakturering sker, om inte annat föreskrivits i entreprenadhandlingarna.
 Om inte annat föreskrivits i entreprenadhandlingarna, skall en faktura betalas inom 30 dagar efter mottagandet. Om parterna är oense om någon del av fakturan, skall dock ostridigt belopp betalas inom denna tid.
-Dröjsmålsränta § 18* Om inte betalning erläggs i rätt tid, skall part från förfallodagen betala dröjsmålsränta enligt räntelagen (1975:635), om inte annan räntesats föreskrivits i kontraktshandlingarna. På belopp som beställaren felaktigt har innehållit enligt § 12 eller § 15 i detta kapitel räknas sådan ränta från den dag då likvid rätteligen skulle ha erlagts.
+§ 18* Dröjsmålsränta
+Om inte betalning erläggs i rätt tid, skall part från förfallodagen betala dröjsmålsränta enligt räntelagen (1975:635), om inte annan räntesats föreskrivits i kontraktshandlingarna. På belopp som beställaren felaktigt har innehållit enligt § 12 eller § 15 i detta kapitel räknas sådan ränta från den dag då likvid rätteligen skulle ha erlagts.
 Underlåter beställaren att skriftligen redovisa skälen för innehållande i enlighet med vad som stadgas i § 16 i detta kapitel är han skyldig att utge ränta på innehållet belopp från den dag då likvid rätteligen skulle ha erlagts till dess betalning eller redovisning skett.
-Preskriptionstid § 19 För entreprenörens fordringar avseende entreprenaden gäller en preskriptionstid om sex månader räknat från entreprenadens godkännande. Om entreprenören kan visa att han inte känt till eller bort känna till sin fordran, räknas preskriptionstiden om sex månader från den tidpunkt då han först borde ha känt till sin fordran.
+§ 19 Preskriptionstid
+För entreprenörens fordringar avseende entreprenaden gäller en preskriptionstid om sex månader räknat från entreprenadens godkännande. Om entreprenören kan visa att han inte känt till eller bort känna till sin fordran, räknas preskriptionstiden om sex månader från den tidpunkt då han först borde ha känt till sin fordran.
 För entreprenörens fordringar till den del de avser kontraktssumman eller mervärdesskatt gäller dock en preskriptionstid om två år räknat från entreprenadens godkännande. För arbeten utförda efter entreprenadtidens utgång räknas preskriptionstiden om två år från det att arbetena utförts.
 Efter preskriptionsavbrott gäller en preskriptionstid om två år. I övrigt gäller preskriptionslagen (1981:130).
-§ 20 Beställarens fordran på entreprenören för arbete, som beställaren tillhandahållit under entreprenadtiden, jämte beställarens krav på kreditering för avgående arbete, preskriberas sex månader efter entreprenadens godkännande.
+§ 20
+Beställarens fordran på entreprenören för arbete, som beställaren tillhandahållit under entreprenadtiden, jämte beställarens krav på kreditering för avgående arbete, preskriberas sex månader efter entreprenadens godkännande.
 Efter preskriptionsavbrott gäller en preskriptionstid om två år. I övrigt gäller preskriptionslagen (1981:130).
-Säkerhet § 21* Om part enligt kontraktshandlingarna är skyldig att ställa säkerhet för sina förpliktelser, skall säkerhet lämnas till motparten inom två veckor efter det att avtal har träffats.
+§ 21* Säkerhet
+Om part enligt kontraktshandlingarna är skyldig att ställa säkerhet för sina förpliktelser, skall säkerhet lämnas till motparten inom två veckor efter det att avtal har träffats.
 Den säkerhet entreprenören ställer skall, om inte annat föreskrivits i kontraktshandlingarna, gälla för ett belopp om 10 % av kontraktssumman under entreprenadtiden och 5 % för tid därefter intill två år efter entreprenadens godkännande eller, om fel konstateras vid besiktning inom denna tid, till dess att felet har avhjälpts, eller entreprenörens åliggande har fullgjorts på annat sätt.
 Den säkerhet beställaren ställer skall, om inte annat föreskrivits i kontraktshandlingarna, gälla för ett belopp om 10 % av kontraktssumman.
 Säkerhet skall genast återlämnas sedan parten har fullgjort sina förpliktelser enligt avtalet.
-Kommentar till kapitel 6 § 21 Av entreprenören ställd säkerhet gäller enligt bestämmelsen under två år efter entreprenadens godkännande och är sålunda inte kopplad till den längre garantitid som gäller för entreprenörens arbetsprestation. Anledningen till detta är att kostnaden för ställande av säkerhet kan vara hög. Bestämmelsen är utformad som en täckbestämmelse. Det är därmed möjligt för beställaren att avstå från säkerhet eller begränsa tiden. Den beställare som önskar förlänga tiden för säkerhet bör överväga de konsekvenser av kravet på förlängd säkerhet kan ha i fråga om kostnader, konkurrensaspekter m.m.
-§ 22 Om entreprenören enligt kontraktshandlingarna är berättigad att uppbära förskott på kontraktssumman, skall på beställarens begäran särskild säkerhet lämnas därför. Säkerheten skall återställas eller minskas i den mån avräkning av förskottet sker enligt § 13 i detta kapitel.
-§ 23 Om säkerhet försämras så att den inte längre har åsyftat värde, skall parten på motpartens begäran utan dröjsmål ställa betryggande fyllnadssäkerhet.
-Huvuddelar § 24 Om kontraktsarbetena är uppdelade i huvuddelar, tillämpas bestämmelserna i detta kapitel på varje huvuddel för sig. 
+Kommentar till kapitel 6 § 21
+Av entreprenören ställd säkerhet gäller enligt bestämmelsen under två år efter entreprenadens godkännande och är sålunda inte kopplad till den längre garantitid som gäller för entreprenörens arbetsprestation. Anledningen till detta är att kostnaden för ställande av säkerhet kan vara hög. Bestämmelsen är utformad som en täckbestämmelse. Det är därmed möjligt för beställaren att avstå från säkerhet eller begränsa tiden. Den beställare som önskar förlänga tiden för säkerhet bör överväga de konsekvenser av kravet på förlängd säkerhet kan ha i fråga om kostnader, konkurrensaspekter m.m.
+§ 22
+Om entreprenören enligt kontraktshandlingarna är berättigad att uppbära förskott på kontraktssumman, skall på beställarens begäran särskild säkerhet lämnas därför. Säkerheten skall återställas eller minskas i den mån avräkning av förskottet sker enligt § 13 i detta kapitel.
+§ 23
+Om säkerhet försämras så att den inte längre har åsyftat värde, skall parten på motpartens begäran utan dröjsmål ställa betryggande fyllnadssäkerhet.
+§ 24 Huvuddelar
+Om kontraktsarbetena är uppdelade i huvuddelar, tillämpas bestämmelserna i detta kapitel på varje huvuddel för sig.
 KAPITEL 7 BESIKTNING
-Förbesiktning § 1 Part har rätt att påkalla förbesiktning om
+§ 1 Förbesiktning
+Part har rätt att påkalla förbesiktning om:
 arbete efter färdigställandet av entreprenaden inte är eller inte utan väsentligt ingrepp blir åtkomligt för besiktning,
 avhjälpande av fel i arbete efter färdigställandet skulle vara till väsentlig olägenhet för parten,
-arbete före färdigställandet tas i bruk av beställaren eller
+arbete före färdigställandet tas i bruk av beställaren, eller
 i övrigt särskilda skäl föreligger.
 Förbesiktning verkställs utan dröjsmål efter påkallandet.
-Kommentar till kapitel 7 § 1 Ett särskilt skäl för förbesiktning kan vara att parterna i förväg vill få besiktningsmannens bedömning av kontraktsenligheten av visst arbete som antingen återkommer i ett stort antal eller gäller principer eller kvalitetskrav för utförandet, s.k. normerande förbesiktning.
-Slutbesiktning § 2* Slutbesiktning skall, om inte parterna avtalat om annat, verkställas vid kontraktstidens utgång eller, om entreprenaden färdigställs senare, utan dröjsmål efter det att entreprenaden anmälts vara färdigställd.
+Kommentar till kapitel 7 § 1
+Ett särskilt skäl för förbesiktning kan vara att parterna i förväg vill få besiktningsmannens bedömning av kontraktsenligheten av visst arbete som antingen återkommer i ett stort antal eller gäller principer eller kvalitetskrav för utförandet, s.k. normerande förbesiktning.
+§ 2* Slutbesiktning
+Slutbesiktning skall, om inte parterna avtalat om annat, verkställas vid kontraktstidens utgång eller, om entreprenaden färdigställs senare, utan dröjsmål efter det att entreprenaden anmälts vara färdigställd.
 Entreprenören skall i god tid underrätta beställaren när entreprenaden beräknas vara färdigställd och tillgänglig för slutbesiktning, om inte parterna genom besiktningsplan har träffat särskild överenskommelse.
 En del av entreprenaden kan efter parternas överenskommelse göras till föremål för kompletterande slutbesiktning. Kompletterande slutbesiktning utgör inte hinder för entreprenadens godkännande, om inte annat avtalats.
 Part har rätt att påkalla slutbesiktning av en färdigställd del av entreprenaden, om beställaren tar eller begär att få ta delen i bruk. Garantitiden för del som godkänns vid sådan besiktning löper från godkännandet av delen intill utgången av garantitiden för den sist godkända delen i entreprenaden.
-Kommentar till kapitel 7 §§ 1 och 2 Parterna kan avtala om fortlöpande besiktning. Sådan besiktning genomförs som förbesiktning eller slutbesiktning.
-Garantibesiktning § 3* Före utgången av den kortaste garantitiden verkställs garantibesiktning, om parterna inte kommer överens om annat. Garantibesiktning påkallas av beställaren.
-Särskild besiktning § 4 Part har rätt att efter entreprenadtidens utgång påkalla särskild besiktning avseende sådant fel som beställaren har påtalat.
+Kommentar till kapitel 7 §§ 1 och 2
+Parterna kan avtala om fortlöpande besiktning. Sådan besiktning genomförs som förbesiktning eller slutbesiktning.
+§ 3* Garantibesiktning
+Före utgången av den kortaste garantitiden verkställs garantibesiktning, om parterna inte kommer överens om annat. Garantibesiktning påkallas av beställaren.
+§ 4 Särskild besiktning
+Part har rätt att efter entreprenadtidens utgång påkalla särskild besiktning avseende sådant fel som beställaren har påtalat.
 Särskild besiktning verkställs utan dröjsmål efter påkallandet.
-Efterbesiktning § 5 Part har rätt att påkalla efterbesiktning för konstaterande av om ett fel avhjälpts. Efterbesiktning verkställs utan dröjsmål efter avhjälpandet. Beställaren får också påkalla efterbesiktning om entreprenören underlåter att avhjälpa felet i rätt tid.
+§ 5 Efterbesiktning
+Part har rätt att påkalla efterbesiktning för konstaterande av om ett fel avhjälpts. Efterbesiktning verkställs utan dröjsmål efter avhjälpandet. Beställaren får också påkalla efterbesiktning om entreprenören underlåter att avhjälpa felet i rätt tid.
 Om entreprenören har påkallat efterbesiktning men någon sådan inte kommer till stånd på grund av beställarens underlåtenhet, skall de fel som efterbesiktningen avsågs omfatta anses vara avhjälpta.
-Överbesiktning § 6 Part har rätt att påkalla överbesiktning av besiktning enligt §§ 1–5 i detta kapitel. Genom överbesiktning prövas de frågor som har föranlett denna, t.ex. frågan om entreprenadens godkännande, förekomsten av fel eller ansvar för fel. Överbesiktning ersätter den besiktning eller del av besiktning som har föranlett påkallandet av överbesiktning.
+§ 6 Överbesiktning
+Part har rätt att påkalla överbesiktning av besiktning enligt §§ 1–5 i detta kapitel. Genom överbesiktning prövas de frågor som har föranlett denna, t.ex. frågan om entreprenadens godkännande, förekomsten av fel eller ansvar för fel. Överbesiktning ersätter den besiktning eller del av besiktning som har föranlett påkallandet av överbesiktning.
 Överbesiktning skall skriftligen påkallas inom tre veckor efter det att part fått del av besiktningsutlåtandet.
-Besiktningsman § 7 Besiktning enligt §§ 1–5 i detta kapitel verkställs av en därtill lämpad person som beställaren utser. Om parterna kommer överens om det kan besiktningen i stället verkställas av en person som de gemensamt utser.
+§ 7 Besiktningsman
+Besiktning enligt §§ 1–5 i detta kapitel verkställs av en därtill lämpad person som beställaren utser. Om parterna kommer överens om det kan besiktningen i stället verkställas av en person som de gemensamt utser.
 Om part underlåter att medverka till att besiktningsman utses för besiktning enligt § 1 eller § 4 i detta kapitel får motparten utse besiktningsman.
-Kommentar till kapitel 7 § 7 Kravet på lämplighet tar inte bara sikte på tekniskt kunnande utan även på besiktningsmannens förmåga att, i enlighet med § 11, noggrant beakta såväl entreprenörens som beställarens intressen vid besiktningen. Besiktningsmannen skall således iaktta objektivitet vid utförandet av uppdraget.
-§ 8 Överbesiktning verkställs av en person som parterna gemensamt utser eller av en överbesiktningsnämnd.
+Kommentar till kapitel 7 § 7
+Kravet på lämplighet tar inte bara sikte på tekniskt kunnande utan även på besiktningsmannens förmåga att, i enlighet med § 11, noggrant beakta såväl entreprenörens som beställarens intressen vid besiktningen. Besiktningsmannen skall således iaktta objektivitet vid utförandet av uppdraget.
+§ 8
+Överbesiktning verkställs av en person som parterna gemensamt utser eller av en överbesiktningsnämnd.
 En sådan nämnd skall bestå av tre personer, av vilka parterna vardera utser en och dessa båda personer utser den tredje, som skall vara ordförande. Ledamot får inte tidigare ha verkställt besiktning av entreprenaden. Vid förfall för en ledamot i nämnden skall ny ledamot utses på samma sätt.
 Om part inte inom två veckor utser ledamot i besiktningsnämnden, skall på motpartens ansökan ledamot utses av Byggandets Kontraktskommitté. Om de ledamöter som utsetts av parterna inte inom två veckor efter det att uppdraget meddelats dem enats om val av en tredje ledamot, skall denne på ansökan av endera parten likaledes utses av Byggandets Kontraktskommitté.
 Om olika meningar uppkommer mellan ledamöterna i överbesiktningsnämnd, gäller den mening som flertalet enar sig om. Om samtliga ledamöter har olika meningar, gäller ordförandens mening.
-Jäv § 9 Den person som parterna gemensamt utser till besiktningsman eller som skall ingå i en överbesiktningsnämnd skall vara ojävig, varvid frågan om jäv skall bedömas enligt förvaltningslagen (1986:223).
-Kallelse § 10 Besiktningsmannen eller i förekommande fall ordföranden i överbesiktningsnämnd skall i god tid kalla parterna till besiktning.
+§ 9 Jäv
+Den person som parterna gemensamt utser till besiktningsman eller som skall ingå i en överbesiktningsnämnd skall vara ojävig, varvid frågan om jäv skall bedömas enligt förvaltningslagen (1986:223).
+§ 10 Kallelse
+Besiktningsmannen eller i förekommande fall ordföranden i överbesiktningsnämnd skall i god tid kalla parterna till besiktning.
 Att en part utan godtagbart skäl underlåter att närvara vid besiktning utgör inte hinder för besiktningens verkställande.
-Besiktningens genomförande § 11 Vid besiktning skall med noggrant iakttagande av parternas rätt undersökas och bedömas i vad mån entreprenaden eller en del av den uppfyller kontraktsenliga fordringar.
+§ 11 Besiktningens genomförande
+Vid besiktning skall med noggrant iakttagande av parternas rätt undersökas och bedömas i vad mån entreprenaden eller en del av den uppfyller kontraktsenliga fordringar.
 Besiktningsmannen skall upprätta ett besiktningsutlåtande. Fel som vid tiden för besiktningen finns på den besiktigade delen av entreprenaden skall antecknas i utlåtandet.
 Beställaren har utöver de fel som antecknats i besiktningsutlåtandet endast rätt att göra gällande fel:
 som förelegat vid besiktning, men då inte märkts och inte heller bort märkas (dolt fel), eller
 som beställaren skriftligen anmält till entreprenören inom sex månader efter entreprenadtidens utgång eller, om felet är väsentligt, inom 18 månader efter entreprenadtidens utgång.
-Godkännande och avlämnande § 12 Vid slutbesiktning skall besiktningsmannen godkänna entreprenaden om det inte föreligger fel. Fel av mindre betydelse som förekommer i begränsad omfattning får dock inte hindra att entreprenaden godkänns.
+§ 12 Godkännande och avlämnande
+Vid slutbesiktning skall besiktningsmannen godkänna entreprenaden om det inte föreligger fel. Fel av mindre betydelse som förekommer i begränsad omfattning får dock inte hindra att entreprenaden godkänns.
 Besiktningsmannen skall vid slutbesiktningen avgöra om skriftlig dokumentation som upprättats av entreprenören och som visar att en del av entreprenaden är kontraktsenligt utförd utgör tillräckligt underlag för bedömningen av delen i fråga.
 Slutbesiktningen skall avslutas med ett slutsammanträde varvid besked i godkännandefrågan skall lämnas. Efter godkännande vid slutbesiktning är entreprenaden avlämnad.
 Godkännandet gäller med verkan från dagen för slutsammanträdet.
@@ -400,96 +468,116 @@ Om entreprenaden vid slutbesiktningen uppenbarligen inte är så färdigställd 
 Om entreprenaden inte godkänns eller besiktningen avbryts skall besiktningsmannen i sitt utlåtande ange skälen för beslutet.
 Om inte slutbesiktning verkställs inom föreskriven tid på grund av beställarens underlåtenhet anses entreprenaden godkänd och avlämnad från den dag då besiktning rätteligen skulle ha verkställts.
 Om parterna avtalat om att avlämnandet skall genomföras på annat sätt än genom slutbesiktning anses entreprenaden godkänd och avlämnad när förutsättningarna för godkännande enligt avtalet är uppfyllda.
-Kommentar till kapitel 7 § 12 Frågan om i vilken omfattning och på vilket sätt besiktningen skall genomföras får bedömas utifrån förutsättningarna i det aktuella projektet.
+Kommentar till kapitel 7 § 12
+Frågan om i vilken omfattning och på vilket sätt besiktningen skall genomföras får bedömas utifrån förutsättningarna i det aktuella projektet.
 För att säkra ett kontraktsenligt genomförande av entreprenaden träffar parterna ofta överenskommelse om former för kvalitetsstyrning av projektet, innefattande exempelvis krav på verifikationer och intyg under genomförandet. Om entreprenören därvid skriftligen intygar att viss del av entreprenaden är kontraktsenligt utförd, kan detta påverka besiktningsförfarandet. Om ett fel konstateras i en sådan del, som innebär en avvikelse i förhållande till uppgifterna i det lämnade intyget, är felet att anse som ett dolt fel.
-§ 13 Fel som enligt besiktningsmannen föreligger, liksom anmärkningar som beställaren har påtalat men som enligt besiktningsmannens mening ej utgör fel, skall antecknas i utlåtandet. Om besiktningsmannen anser att entreprenaden i något avseende är bristfällig trots att den är kontraktsenligt utförd, skall detta anmärkas med angivande av skälen för detta. Om besiktningsmannen finner skäl till anmärkningar av annat slag, är han oförhindrad att notera detta i utlåtandet.
+§ 13
+Fel som enligt besiktningsmannen föreligger, liksom anmärkningar som beställaren har påtalat men som enligt besiktningsmannens mening ej utgör fel, skall antecknas i utlåtandet. Om besiktningsmannen anser att entreprenaden i något avseende är bristfällig trots att den är kontraktsenligt utförd, skall detta anmärkas med angivande av skälen för detta. Om besiktningsmannen finner skäl till anmärkningar av annat slag, är han oförhindrad att notera detta i utlåtandet.
 I besiktningsutlåtandet får fel inte antecknas utan att part fått tillfälle att yttra sig om detta.
 Om fel som avses i kapitel 5 § 18 föreligger, skall besiktningsmannen efter att ha hört parterna i utlåtandet ange i vilken utsträckning han anser entreprenören vara skyldig att avhjälpa felet samt den nedsättning av entreprenadsumman som föranleds av vad som kommer att kvarstå av felet.
 Om särskild utredning behövs rörande fel, skall sådan efter parternas hörande verkställas och tillställas parterna utan dröjsmål. I besiktningsutlåtandet skall anges om och i vilket avseende särskild utredning kommer att verkställas. Besiktningsmannen skall ta ställning till utredningen.
 Besiktningsutlåtandet skall tillställas parterna utan dröjsmål och senast inom tre veckor efter besiktningen. Utlåtande från överbesiktning skall avges utan dröjsmål.
-Besiktningsutlåtande § 14 Besiktningsutlåtande skall avfattas skriftligen och undertecknas av besiktningsmannen. I utlåtandet skall i tillämpliga delar antecknas följande:
-typ av besiktning
-besiktningens omfattning
-tid för besiktningen
-entreprenaden samt parterna
-besiktningsmannen med uppgift om vem som utsett denne
-närvarande personer med uppgift om vem som för respektive parts talan
-sättet för kallelse till besiktningen
-fråga om jäv
-tidigare besiktningar och provningar
-entreprenadhandlingarna och andra överenskommelser rörande entreprenadens omfattning och utförande
-delar som inte är åtkomliga för besiktning
-delar som inte besiktigas okulärt, utan endast på grundval av entreprenörens dokumentation över avtalade kvalitets- och miljöåtgärder
-fel för vilka besiktningsmannen anser entreprenören ansvarig
-bristfälligheter och anmärkningar enligt § 13 i detta kapitel för vilka besiktningsmannen inte anser entreprenören ansvarig
-förhållanden med vilkas slutliga bedömande bör anstå till besiktning vid senare tillfälle
-fel vilka enligt § 13 i detta kapitel hänskjuts till särskild utredning med uppgift om vem som skall utföra utredningen samt tidpunkt då den beräknas vara slutförd
-fel enligt kapitel 5 § 18 med angivande av i vilken utsträckning besiktningsmannen anser entreprenören skyldig att avhjälpa felet enligt § 13 i detta kapitel samt uppskattad nedsättning av entreprenadsumman
-besked om godkännande och dag för beskedet samt, om godkännande inte lämnas, skälen därtill
-föreskrift om fortsatt eller ny slutbesiktning enligt § 12 i detta kapitel
-tidpunkt för garantitidens slut och eventuellt förlängd garantitid
-besiktningskostnadens fördelning
-meningsskiljaktigheter mellan ledamöter i besiktningsnämnden
-av beställaren gjord anmärkning, som enligt besiktningsmannens mening inte utgör fel
-parternas överenskommelse om när fel skall vara avhjälpta om annan tid än som föreskrivs i kapitel 5 § 17 skall gälla
+§ 14 Besiktningsutlåtande
+Besiktningsutlåtande skall avfattas skriftligen och undertecknas av besiktningsmannen. I utlåtandet skall i tillämpliga delar antecknas följande:
+typ av besiktning,
+besiktningens omfattning,
+tid för besiktningen,
+entreprenaden samt parterna,
+besiktningsmannen med uppgift om vem som utsett denne,
+närvarande personer med uppgift om vem som för respektive parts talan,
+sättet för kallelse till besiktningen,
+fråga om jäv,
+tidigare besiktningar och provningar,
+entreprenadhandlingarna och andra överenskommelser rörande entreprenadens omfattning och utförande,
+delar som inte är åtkomliga för besiktning,
+delar som inte besiktigas okulärt, utan endast på grundval av entreprenörens dokumentation över avtalade kvalitets- och miljöåtgärder,
+fel för vilka besiktningsmannen anser entreprenören ansvarig,
+bristfälligheter och anmärkningar enligt § 13 i detta kapitel för vilka besiktningsmannen inte anser entreprenören ansvarig,
+förhållanden med vilkas slutliga bedömande bör anstå till besiktning vid senare tillfälle,
+fel vilka enligt § 13 i detta kapitel hänskjuts till särskild utredning med uppgift om vem som skall utföra utredningen samt tidpunkt då den beräknas vara slutförd,
+fel enligt kapitel 5 § 18 med angivande av i vilken utsträckning besiktningsmannen anser entreprenören skyldig att avhjälpa felet enligt § 13 i detta kapitel samt uppskattad nedsättning av entreprenadsumman,
+besked om godkännande och dag för beskedet samt, om godkännande inte lämnas, skälen därtill,
+föreskrift om fortsatt eller ny slutbesiktning enligt § 12 i detta kapitel,
+tidpunkt för garantitidens slut och eventuellt förlängd garantitid,
+besiktningskostnadens fördelning,
+meningsskiljaktigheter mellan ledamöter i besiktningsnämnden,
+av beställaren gjord anmärkning, som enligt besiktningsmannens mening inte utgör fel,
+parternas överenskommelse om när fel skall vara avhjälpta om annan tid än som föreskrivs i kapitel 5 § 17 skall gälla, samt
 sändlista för besiktningsutlåtandet.
-Besiktningskostnad § 15 Ersättning till besiktningsmannen betalas av beställaren. Om besiktningen verkställs av en person som parterna gemensamt har utsett, svarar parterna till lika delar för ersättningen.
+§ 15 Besiktningskostnad
+Ersättning till besiktningsmannen betalas av beställaren. Om besiktningen verkställs av en person som parterna gemensamt har utsett, svarar parterna till lika delar för ersättningen.
 Ersättning till besiktningsman skall betalas av entreprenören då det är fråga om fortsatt slutbesiktning, avbruten slutbesiktning enligt § 12 femte stycket i detta kapitel och efterbesiktning samt av entreprenören påkallad särskild besiktning.
 Om fel som entreprenören ansvarar för har konstaterats vid särskild besiktning skall ersättning till besiktningsmannen betalas av entreprenören.
 Besiktningsmannen kan dock, om särskilda skäl föreligger, besluta att ersättningen enligt andra eller tredje stycket helt eller delvis skall betalas av beställaren.
 Vid överbesiktning skall överbesiktningsnämnden eller den gemensamt utsedda besiktningsmannen med hänsyn till utgången av överbesiktningen besluta, vem av parterna som skall svara för ersättningen eller hur denna skall fördelas mellan parterna.
 I förhållande till överbesiktningsnämnden och den gemensamt utsedda besiktningsmannen är parterna solidariskt ansvariga för betalning av ersättningen.
 Entreprenören tillhandahåller den handräckning som erfordras vid besiktningen.
-§ 16 Part som inte är nöjd med besiktningsutlåtandet kan påkalla prövning i den ordning som gäller för tvister.
-Huvuddelar § 17 Om kontraktsarbetena är uppdelade i huvuddelar, tillämpas bestämmelserna i detta kapitel på varje huvuddel för sig. 
+§ 16
+Part som inte är nöjd med besiktningsutlåtandet kan påkalla prövning i den ordning som gäller för tvister.
+§ 17 Huvuddelar
+Om kontraktsarbetena är uppdelade i huvuddelar, tillämpas bestämmelserna i detta kapitel på varje huvuddel för sig.
 KAPITEL 8 HÄVNING
-Beställarens rätt att häva § 1 Beställaren har rätt att skriftligen häva kontraktet såvitt avser återstående arbeten om
-entreprenaden har försenats så att den uppenbarligen inte kan färdigställas inom kontraktstiden under förutsättning dels att förseningen inte beror på omständigheter som berättigar till tidsförlängning dels att en försening av färdigställandet skulle medföra väsentlig olägenhet för beställaren
-entreprenören inte i rätt tid återupptar arbetet sedan det avbrutits enligt § 3 i detta kapitel
-utförd del av entreprenaden i väsentligt hänseende inte är kontraktsenlig och avhjälpande inte sker utan dröjsmål efter erinran, eller om entreprenören på annat sätt brister i fullgörandet av sina åligganden så att entreprenadens kontraktsenliga färdigställande därigenom äventyras
-entreprenören försätts i konkurs eller i annat fall är på sådant obestånd att han inte kan förväntas fullgöra sina åligganden och betryggande säkerhet för rätta fullgörandet av entreprenörens förpliktelser mot beställaren inte ofördröjligen ställs efter begäran om detta
-entreprenören underlåter att inom den i kapitel 6 § 21 angivna tiden ställa föreskriven säkerhet eller om erbjuden säkerhet inte är tillräcklig
-entreprenören underlåter att ställa fyllnadssäkerhet enligt kapitel 6 § 23
-entreprenören utan beställarens medgivande helt eller delvis överlåter kontraktet och detta är av beaktansvärd betydelse för beställaren
-entreprenören avlider eller då god man eller förvaltare enligt föräldrabalken (1949:381) har förordnats för honom, eller om entreprenören på grund av sjukdom eller olycksfall blir ur stånd att färdigställa entreprenaden, såvida det inte utan dröjsmål visas att den kan kontraktsenligt färdigställas av hans rättsinnehavare för hans räkning
-ej avlämnad del av entreprenaden genom krig, uppror, naturkatastrof eller därmed jämförlig omständighet drabbas av skada som är väsentlig eller som på annat sätt väsentligt rubbar förutsättningarna för kontraktets fullgörande
-Byggnads- och reparationsberedskapen träder i verksamhet eller om myndighet vid krig eller krigsfara tar beställarens eller entreprenörens organisation i anspråk
+§ 1 Beställarens rätt att häva
+Beställaren har rätt att skriftligen häva kontraktet såvitt avser återstående arbeten om:
+entreprenaden har försenats så att den uppenbarligen inte kan färdigställas inom kontraktstiden under förutsättning dels att förseningen inte beror på omständigheter som berättigar till tidsförlängning dels att en försening av färdigställandet skulle medföra väsentlig olägenhet för beställaren,
+entreprenören inte i rätt tid återupptar arbetet sedan det avbrutits enligt § 3 i detta kapitel,
+utförd del av entreprenaden i väsentligt hänseende inte är kontraktsenlig och avhjälpande inte sker utan dröjsmål efter erinran, eller om entreprenören på annat sätt brister i fullgörandet av sina åligganden så att entreprenadens kontraktsenliga färdigställande därigenom äventyras,
+entreprenören försätts i konkurs eller i annat fall är på sådant obestånd att han inte kan förväntas fullgöra sina åligganden och betryggande säkerhet för rätta fullgörandet av entreprenörens förpliktelser mot beställaren inte ofördröjligen ställs efter begäran om detta,
+entreprenören underlåter att inom den i kapitel 6 § 21 angivna tiden ställa föreskriven säkerhet eller om erbjuden säkerhet inte är tillräcklig,
+entreprenören underlåter att ställa fyllnadssäkerhet enligt kapitel 6 § 23,
+entreprenören utan beställarens medgivande helt eller delvis överlåter kontraktet och detta är av beaktansvärd betydelse för beställaren,
+entreprenören avlider eller då god man eller förvaltare enligt föräldrabalken (1949:381) har förordnats för honom, eller om entreprenören på grund av sjukdom eller olycksfall blir ur stånd att färdigställa entreprenaden, såvida det inte utan dröjsmål visas att den kan kontraktsenligt färdigställas av hans rättsinnehavare för hans räkning,
+ej avlämnad del av entreprenaden genom krig, uppror, naturkatastrof eller därmed jämförlig omständighet drabbas av skada som är väsentlig eller som på annat sätt väsentligt rubbar förutsättningarna för kontraktets fullgörande,
+Byggnads- och reparationsberedskapen träder i verksamhet eller om myndighet vid krig eller krigsfara tar beställarens eller entreprenörens organisation i anspråk, eller
 entreprenaden på grund av en omständighet, som har uppkommit utan parternas vållande, måste avbrytas under så lång tid att förutsättningarna för kontraktets fullgörande väsentligt rubbas.
-Entreprenörens rätt att häva § 2 Entreprenören har rätt att skriftligen häva kontraktet såvitt avser återstående arbeten om
-beställaren underlåter att i rätt tid fullgöra sin betalningsskyldighet eller sina åligganden i övrigt och om rättelse inte sker utan dröjsmål efter erinran, under förutsättning att underlåtenheten är av väsentlig betydelse
-beställaren försätts i konkurs eller i annat fall är på sådant obestånd att han inte kan förväntas fullgöra sina åligganden och betryggande säkerhet för rätta fullgörandet av beställarens förpliktelser mot entreprenören inte ofördröjligen ställs efter begäran om detta. Om sådan begäran har framställts har entreprenören rätt att avbryta arbetena. Om arbetena återupptas skall entreprenören ersättas för de kostnader avbrytandet förorsakat
-beställaren underlåter att inom den i kapitel 6 § 21 angivna tiden ställa avtalad säkerhet, eller om erbjuden säkerhet inte är tillräcklig
-beställaren underlåter att ställa fyllnadssäkerhet enligt kapitel 6 § 23
-beställaren, utan att ställa betryggande säkerhet på annan överlåter sin rätt till entreprenaden eller en del av den eller egendom, som entreprenaden avser, och därigenom kan befaras komma att brista i fullgörandet av sina åligganden
-beställaren utan entreprenörens medgivande helt eller delvis överlåter kontraktet och detta är av beaktansvärd betydelse för entreprenören
-ej avlämnad del av entreprenaden genom krig, uppror, naturkatastrof eller därmed jämförlig omständighet drabbas av skada, som är väsentlig eller som på annat sätt väsentligt rubbar förutsättningarna för kontraktets fullgörande
-Byggnads- och reparationsberedskapen träder i verksamhet eller om myndighet vid krig eller krigsfara tar beställarens eller entreprenörens organisation i anspråk
+§ 2 Entreprenörens rätt att häva
+Entreprenören har rätt att skriftligen häva kontraktet såvitt avser återstående arbeten om:
+beställaren underlåter att i rätt tid fullgöra sin betalningsskyldighet eller sina åligganden i övrigt och om rättelse inte sker utan dröjsmål efter erinran, under förutsättning att underlåtenheten är av väsentlig betydelse,
+beställaren försätts i konkurs eller i annat fall är på sådant obestånd att han inte kan förväntas fullgöra sina åligganden och betryggande säkerhet för rätta fullgörandet av beställarens förpliktelser mot entreprenören inte ofördröjligen ställs efter begäran om detta. Om sådan begäran har framställts har entreprenören rätt att avbryta arbetena. Om arbetena återupptas skall entreprenören ersättas för de kostnader avbrytandet förorsakat,
+beställaren underlåter att inom den i kapitel 6 § 21 angivna tiden ställa avtalad säkerhet, eller om erbjuden säkerhet inte är tillräcklig,
+beställaren underlåter att ställa fyllnadssäkerhet enligt kapitel 6 § 23,
+beställaren, utan att ställa betryggande säkerhet på annan överlåter sin rätt till entreprenaden eller en del av den eller egendom, som entreprenaden avser, och därigenom kan befaras komma att brista i fullgörandet av sina åligganden,
+beställaren utan entreprenörens medgivande helt eller delvis överlåter kontraktet och detta är av beaktansvärd betydelse för entreprenören,
+ej avlämnad del av entreprenaden genom krig, uppror, naturkatastrof eller därmed jämförlig omständighet drabbas av skada, som är väsentlig eller som på annat sätt väsentligt rubbar förutsättningarna för kontraktets fullgörande,
+Byggnads- och reparationsberedskapen träder i verksamhet eller om myndighet vid krig eller krigsfara tar beställarens eller entreprenörens organisation i anspråk, eller
 entreprenaden på grund av en omständighet, som har uppkommit utan parternas vållande, måste avbrytas under så lång tid att förutsättningarna för kontraktets fullgörande väsentligt rubbas.
-Entreprenörens rätt att avbryta § 3 Om det föreligger en sådan omständighet som avses i § 2 p. 1 och 3–6 i detta kapitel har entreprenören i stället för att häva kontraktet rätt att efter skriftlig underrättelse till beställaren avbryta arbetena till dess att omständigheten inte längre föreligger dock längst en månad. Inom denna månad skall entreprenören skriftligen underrätta beställaren om han avser att återuppta arbetena eller om han häver kontraktet.
+§ 3 Entreprenörens rätt att avbryta
+Om det föreligger en sådan omständighet som avses i § 2 p. 1 och 3–6 i detta kapitel har entreprenören i stället för att häva kontraktet rätt att efter skriftlig underrättelse till beställaren avbryta arbetena till dess att omständigheten inte längre föreligger dock längst en månad. Inom denna månad skall entreprenören skriftligen underrätta beställaren om han avser att återuppta arbetena eller om han häver kontraktet.
 Om entreprenören har haft fog för att avbryta arbetet har han, för det fall arbetet återupptas, rätt till tidsförlängning enligt kapitel 4 § 3 p. 1 och rätt till ersättning för merkostnader enligt kapitel 5 § 4.
-§ 4 Om överlåtelse sker i enlighet med § 2 p. 5 i detta kapitel, skall beställaren utan dröjsmål underrätta entreprenören om detta.
-Värdering § 5 Vid hävning av kontraktet skall värdet av utförd del av entreprenaden gottskrivas entreprenören. På parts begäran skall värdering verkställas. Denna skall ske med hänsyn till beskaffenheten av det utförda arbetet och på grundval av kontraktssumman som värde på kontraktsarbetena i deras helhet.
+§ 4
+Om överlåtelse sker i enlighet med § 2 p. 5 i detta kapitel, skall beställaren utan dröjsmål underrätta entreprenören om detta.
+§ 5 Värdering
+Vid hävning av kontraktet skall värdet av utförd del av entreprenaden gottskrivas entreprenören. På parts begäran skall värdering verkställas. Denna skall ske med hänsyn till beskaffenheten av det utförda arbetet och på grundval av kontraktssumman som värde på kontraktsarbetena i deras helhet.
 I fall som avses i § 1 p. 8–11 och § 2 p. 7–9 i detta kapitel skall entreprenören därutöver gottskrivas sina kostnader för material och varor, som anskaffats eller beställts men inte byggts in, samt för underentreprenader.
 Material och varor skall värderas efter anskaffningskostnaden. I den mån beställaren betalar ersättning inträder han i entreprenörens rätt till material, varor och underentreprenader.
 Vid värderingen skall avdrag för skada genom krig, terrorhandling, uppror, naturkatastrof eller därmed jämförlig omständighet göras endast i den mån entreprenören rimligen kunnat undvika eller minska skadan.
 Om parterna inte enas om värdet, utförs värderingen av en nämnd som tillsätts enligt kapitel 7 § 8 eller en person som tillsätts enligt kapitel 7 § 7. Därvid svarar parterna till lika delar för ersättningen för värderingen. Om samtliga ledamöter i en sådan nämnd stannar vid olika värderingar, gäller den värdering som ligger mellan den högsta och den lägsta.
 Värdering skall ske utan dröjsmål efter hävandet och den skall verkställas på sådant sätt att arbetenas fortsatta utförande inte hindras.
-Skada § 6 Om kontraktet hävs enligt § 1 p. 1–7 i detta kapitel, är entreprenören skyldig att ersätta beställaren för den kostnadsökning som på grund av hävningen uppkommer för entreprenadens färdigställande, samt för den skada hävningen i övrigt åsamkar beställaren.
+§ 6 Skada
+Om kontraktet hävs enligt § 1 p. 1–7 i detta kapitel, är entreprenören skyldig att ersätta beställaren för den kostnadsökning som på grund av hävningen uppkommer för entreprenadens färdigställande, samt för den skada hävningen i övrigt åsamkar beställaren.
 Beställaren är efter hävningen berättigad att själv utföra återstående arbeten eller låta dessa utföras av någon annan till det pris som kan erhållas utan föregående tävlan.
 Anspråk på ersättning på grund av hävningen medför inte rätt till ersättning, om det inte framställs skriftligen senast tre månader efter det att de arbeten som återstår vid hävningen slutförts.
-§ 7 Om kontraktet hävs enligt § 2 p. 1–6 i detta kapitel är beställaren, utöver att betala ersättning för vad entreprenören utfört av entreprenaden, skyldig att ersätta den skada som hävningen åsamkar entreprenören.
+§ 7
+Om kontraktet hävs enligt § 2 p. 1–6 i detta kapitel är beställaren, utöver att betala ersättning för vad entreprenören utfört av entreprenaden, skyldig att ersätta den skada som hävningen åsamkar entreprenören.
 Anspråk på ersättning på grund av hävningen medför inte rätt till ersättning, om det inte framställs skriftligen senast tre månader efter det att skadan blivit känd.
-Övertagande § 8 Om kontraktet hävs enligt § 1 p. 1–8 i detta kapitel, är entreprenören skyldig att låta beställaren eller den nytillträdande entreprenören mot skälig ersättning överta eller hyra hjälpmedel, material och varor som finns inom arbetsområdet.
+§ 8 Övertagande
+Om kontraktet hävs enligt § 1 p. 1–8 i detta kapitel, är entreprenören skyldig att låta beställaren eller den nytillträdande entreprenören mot skälig ersättning överta eller hyra hjälpmedel, material och varor som finns inom arbetsområdet.
 Entreprenören är även skyldig att medverka till att beställaren eller den nytillträdande entreprenören får överta träffade avtal angående material, varor och underentreprenader mot ersättning för entreprenörens kostnader, i den mån de avser ännu ej fullgjorda delar av sådana avtal.
-§ 9 Vid hävning skall parternas mellanhavanden regleras utan dröjsmål, efter det att uppkommande kostnadsökning och skada har kunnat fastställas. 
+§ 9
+Vid hävning skall parternas mellanhavanden regleras utan dröjsmål, efter det att uppkommande kostnadsökning och skada har kunnat fastställas.
 KAPITEL 9 TVISTELÖSNING
-§ 1* Om inte parterna kommer överens om annat gäller följande.
+§ 1*
+Om inte parterna kommer överens om annat gäller följande.
 Tvist på grund av kontraktet, som inte slutligt avgjorts enligt kapitel 10, skall avgöras av allmän domstol, om det omtvistade beloppet inte uppenbart överstiger 150 prisbasbelopp, exklusive mervärdesskatt. I annat fall skall tvist avgöras genom skiljedom enligt lagen (1999:116) om skiljeförfarande.
 Med prisbasbelopp avses prisbasbeloppet vid tidpunkten för väckande av talan.
-§ 2 Den omständigheten att en tvist har hänskjutits till rättsligt avgörande berättigar inte entreprenören att avbryta entreprenaden. Beställaren har inte heller på sådan grund rätt att innehålla belopp som inte direkt omfattas av tvisten, eller underlåta att i övrigt fullgöra sina åligganden.
-§ 3 Oberoende av vad som föreskrivs i detta kapitel har part rätt att väcka talan vid allmän domstol eller ansöka hos myndighet om betalning av ostridig och förfallen fordran avseende entreprenaden. 
+§ 2
+Den omständigheten att en tvist har hänskjutits till rättsligt avgörande berättigar inte entreprenören att avbryta entreprenaden. Beställaren har inte heller på sådan grund rätt att innehålla belopp som inte direkt omfattas av tvisten, eller underlåta att i övrigt fullgöra sina åligganden.
+§ 3
+Oberoende av vad som föreskrivs i detta kapitel har part rätt att väcka talan vid allmän domstol eller ansöka hos myndighet om betalning av ostridig och förfallen fordran avseende entreprenaden.
+
 KAPITEL 10 FÖRENKLAD TVISTELÖSNING
-Förenklad tvistelösning § 1* Råder oenighet mellan parterna på grund av kontraktet kan de gemensamt hänskjuta frågan till avgörande av en därtill lämpad ojävig skiljeperson (förenklad tvistelösning), varvid frågan om jäv skall bedömas enligt förvaltningslagen (1986:223).
+§ 1* Förenklad tvistelösning
+Råder oenighet mellan parterna på grund av kontraktet kan de gemensamt hänskjuta frågan till avgörande av en därtill lämpad ojävig skiljeperson (förenklad tvistelösning), varvid frågan om jäv skall bedömas enligt förvaltningslagen (1986:223).
 Sedan parterna kommit överens om att pröva en fråga genom förenklad tvistelösning, skall de gemensamt utse en skiljeperson, om inte sådan utsetts i kontraktshandlingarna.
 Part skall inom en vecka från det att en skiljeperson utsetts eller, om sådan utsetts i kontraktshandlingarna, inom en vecka från det att parterna kommit överens om förenklad tvistelösning, skriftligen yttra sig och därvid klargöra sin inställning i frågan. Yttrandet och de handlingar som parten vill åberopa skall skickas över till såväl skiljepersonen som motparten. Part skall därvid även ange om han begär sammanträde inför skiljepersonen.
 Part har därefter rätt att yttra sig en gång över vad motparten anfört, om inte skiljepersonen anser det nödvändigt med ytterligare skriftväxling. Yttrandet skall skickas till skiljepersonen och motparten inom en vecka från det att parten mottagit motpartens yttrande enligt stycket ovan.

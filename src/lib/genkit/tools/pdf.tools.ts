@@ -436,3 +436,60 @@ export const generateInvoiceTool = ai.defineTool(
         }
     }
 );
+export const finalizeDocToPdfTool = ai.defineTool(
+    {
+        name: 'finalizeDocToPdf',
+        description: 'Finalizes a "Living Document" (Google Doc) by exporting it to PDF, saving it to Drive, and renaming the original Doc to "[LÅST]...". Use this when a document cycle is complete (e.g. Project Done).',
+        inputSchema: z.object({
+            sourceDocId: z.string().describe("The Google Drive ID of the source Google Doc."),
+            targetFolderId: z.string().optional().describe("Where to save the PDF. Defaults to same as source if possible, or root."),
+            newName: z.string().optional().describe("Name of the final PDF. Defaults to Doc name."),
+        }),
+        outputSchema: z.object({
+            pdfFileId: z.string(),
+            pdfLink: z.string(),
+            message: z.string()
+        }),
+    },
+    async (input, context: any) => {
+        const accessToken = context?.accessToken || context?.context?.accessToken as string | undefined;
+        try {
+            const { GoogleDriveService } = await import('@/lib/google/drive');
+
+            // 1. Export content
+            const { buffer } = await GoogleDriveService.exportPdf(input.sourceDocId, accessToken);
+            const { Readable } = await import('stream');
+            const stream = Readable.from(buffer);
+
+            // 2. Upload PDF
+            const pdfName = input.newName ? (input.newName.endsWith('.pdf') ? input.newName : `${input.newName}.pdf`) : `Finalized_Doc.pdf`; // fallback
+
+            // Note: We might need to fetch the Doc metadata to get real name if newName isn't passed, but for now we assume input.
+
+            const uploadRes = await GoogleDriveService.uploadFile(
+                pdfName,
+                'application/pdf',
+                stream,
+                input.targetFolderId,
+                accessToken
+            );
+
+            // 3. Rename Original Doc
+            await GoogleDriveService.renameFolder(input.sourceDocId, `[LÅST] ${input.newName || 'Original Doc'}`, accessToken);
+
+            return {
+                pdfFileId: uploadRes.id,
+                pdfLink: uploadRes.webViewLink,
+                message: `Document finalized! PDF saved: ${uploadRes.webViewLink}`
+            };
+
+        } catch (e: any) {
+            console.error("Finalize Doc Failed:", e);
+            return {
+                pdfFileId: 'error',
+                pdfLink: '',
+                message: `Finalization failed: ${e.message}`
+            };
+        }
+    }
+);

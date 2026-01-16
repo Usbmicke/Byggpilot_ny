@@ -1,8 +1,8 @@
 export const AI_MODELS = {
-    // Found via Search (Released Nov 2025): 'gemini-3-pro-preview'
-    SMART: 'googleai/gemini-3-pro-preview',
-    // Found via Search: 'gemini-2.5-flash'
-    FAST: 'googleai/gemini-2.5-flash',
+    // Updated to latest (Jan 2026): 'gemini-3.0-pro'
+    SMART: 'googleai/gemini-3.0-pro',
+    // Updated to latest: 'gemini-3.0-flash'
+    FAST: 'googleai/gemini-3.0-flash',
     EMBEDDING: 'googleai/text-embedding-004',
     MOCK: 'mock-free'
 };

@@ -113,8 +113,12 @@ export const InvoiceService = {
         customerEmail: string,
         emailSubject: string,
         emailBody: string,
-        generatePdf?: boolean // Optional override
-    }, accessToken?: string) {
+        generatePdf?: boolean, // Optional override
+        applyRot?: boolean, // [NEW] ROT-avdrag (30% på arbete)
+        applyReverseVat?: boolean, // [NEW] Omvänd byggmoms
+        invoiceType?: 'final' | 'on_account', // [NEW] A-konto
+        amount?: number // [NEW] Manual amount for A-konto
+    }, accessToken?: string, customPdfBuffer?: Buffer) {
 
         console.log(`🔒 [InvoiceService] Finalizing Project: ${input.projectId}`);
         const { ProjectRepo } = await import('@/lib/dal/project.repo');
@@ -140,15 +144,132 @@ export const InvoiceService = {
             }
         }
 
-        // 2. Calculate Totals (Simplified Logic)
-        const pdfItems: any[] = [];
-        if (projectData.offer?.items) projectData.offer.items.forEach((i: any) => pdfItems.push(i));
-        projectData.changeOrders.approved.forEach((a: any) => pdfItems.push({ description: `ÄTA: ${a.description}`, total: a.estimatedCost }));
-        logs.forEach(l => pdfItems.push({ description: `${l.type}: ${l.description}`, total: l.amount * (l.type === 'time' ? 650 : 25) }));
+        // AUTO-DETECT REVERSE VAT (Business Logic Requirement 1)
+        // If applyReverseVat is undefined, check customer type.
+        if (input.applyReverseVat === undefined && project.customerId) {
+            const { CustomerRepo } = await import('@/lib/dal/customer.repo');
+            const customer = await CustomerRepo.get(project.customerId);
+            if (customer && (customer.type === 'company' || customer.type === 'subcontractor')) {
+                console.log("⚖️ Auto-Enabling Reverse VAT (B2B Detected)");
+                input.applyReverseVat = true;
+            }
+        }
 
-        const subtotal = pdfItems.reduce((sum, i) => sum + (i.total || 0), 0);
-        const vat = subtotal * 0.25;
-        const totalToPay = subtotal + vat; // Add ROT logic if needed
+        // 2. Calculate Totals with ROT & Reverse VAT Logic
+        let invoiceItems: any[] = [];
+        let totalLabor = 0;
+        let totalMaterial = 0;
+        let totalOther = 0;
+
+        // --- A-KONTO LOGIC (PHASE 8) ---
+        if (input.invoiceType === 'on_account') {
+            if (!input.amount) throw new Error("Amount is required for On-Account invoice.");
+            console.log(`🧾 Generating ON-ACCOUNT invoice: ${input.amount} kr`);
+
+            invoiceItems.push({
+                description: `A-konto / Lyft (Enligt överenskommelse)`,
+                cost: input.amount,
+                type: 'other' // A-konto is usually flat, hard to split Labor/Material for ROT unless specified.
+            });
+            totalOther = input.amount;
+            // NOTE: ROT is usually not applicable on pure A-konto unless specified. 
+            // We assume NO ROT for generic A-konto in Phase 1.
+            if (input.applyRot) {
+                console.warn("⚠️ ROT request ignored for A-konto (Phase 1 limitation). Only Final Invoice handles ROT splits.");
+                input.applyRot = false;
+            }
+
+        } else {
+            // --- STANDARD FINAL INVOICE LOGIC ---
+
+            // A. Process Offer Items (Assume mixed/material unless specified? For now treat as 'Other'/Material to be safe, OR split if structure allows)
+            // Note: Offer usually implies strict fixed price, harder to split for ROT unless defined.
+            // STRATEGY: Treat Offer as 'Other' (No ROT) unless we implement detailed Offer item types later.
+            if (projectData.offer?.items) {
+                projectData.offer.items.forEach((i: any) => {
+                    invoiceItems.push({ ...i, type: 'contract' });
+                    totalOther += (i.total || 0); // Safe fallback
+                });
+            }
+
+            // B. Process ÄTA
+            projectData.changeOrders.approved.forEach((a: any) => {
+                const cost = a.estimatedCost || 0;
+                if (a.type === 'work') {
+                    totalLabor += cost;
+                } else {
+                    totalMaterial += cost; // Material or Other
+                }
+                invoiceItems.push({
+                    description: `ÄTA: ${a.description}`,
+                    cost: cost,
+                    type: a.type
+                });
+            });
+
+            // C. Process Logs (Time & Mileage)
+            logs.forEach(l => {
+                const price = l.type === 'time' ? 650 : 25;
+                const cost = l.amount * price;
+                if (l.type === 'time') {
+                    totalLabor += cost;
+                    invoiceItems.push({ description: `Arbete: ${l.description}`, cost, type: 'work' });
+                } else {
+                    // Mileage is technically not 'material' but definitely not 'labor' for ROT.
+                    totalOther += cost;
+                    invoiceItems.push({ description: `Resor: ${l.description} (${l.amount}km)`, cost, type: 'other' });
+                }
+            });
+        }
+
+        // CALCULATION ENGINE
+        const subtotal = totalLabor + totalMaterial + totalOther;
+
+        // ROT Logic (30% on Labor)
+        let rotDeduction = 0;
+        if (input.applyRot) {
+            rotDeduction = Math.floor(totalLabor * 0.30); // 30% av arbetskostnad
+            // Note: Max limit (50k/person) is USER responsibility to check via Skatteverket. We just do the math.
+        }
+
+        // VAT / Reverse VAT Logic
+        const vatRate = input.applyReverseVat ? 0 : 0.25;
+        const vatAmount = subtotal * vatRate;
+
+        // Grand Total
+        // (Subtotal - ROT) + Moms? 
+        // NO. ROT is a partial payment.
+        // Customer pays: (Subtotal + Moms) - ROT.
+        // Wait, ROT is on Labor ONLY. 
+        // Moms is calculated on the FULL Amount (before ROT deduction).
+        // Standard:
+        //   Arbete: 1000
+        //   Moms: 250
+        //   Totalt: 1250
+        //   ROT: -300 (30% av 1000)
+        //   Att betala: 950.
+
+        // Reverse VAT:
+        //   Arbete: 1000
+        //   Moms: 0
+        //   Totalt: 1000
+        //   ROT? Usually not combined with Reverse VAT (B2B only).
+        //   Rule: ROT is for Private Individuals. Reverse VAT is for Construction Companies.
+        //   They are Mutually Exclusive.
+
+        let totalToPay = 0;
+        let legalText = "";
+
+        if (input.applyReverseVat) {
+            // Case B2B
+            totalToPay = subtotal; // No VAT
+            legalText = `Omvänd skattskyldighet för byggtjänster gäller. Köparen (${projectData.customerName}) är skattskyldig.`;
+            rotDeduction = 0; // Force disable ROT if RevVAT is on
+        } else {
+            // Case Standard / ROT
+            totalToPay = subtotal + vatAmount - rotDeduction;
+        }
+
 
         // 3. Generate Invoice ID & Record
         const invoiceId = `FAK-${crypto.randomUUID().substring(0, 8).toUpperCase()}`;
@@ -162,7 +283,9 @@ export const InvoiceService = {
             status: 'sent',
             sentAt: Timestamp.now(),
             dueDate: Timestamp.fromMillis(Date.now() + 10 * 24 * 60 * 60 * 1000), // 10 days default
-            items: pdfItems
+            items: invoiceItems,
+            rotDeduction,
+            reverseVat: !!input.applyReverseVat
         });
 
         // 5. Generate HTML Email Body
@@ -170,30 +293,52 @@ export const InvoiceService = {
         const host = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
         const trackingUrl = `${host}/api/invoice/track?id=${invoiceId}`;
 
-        // Simple, Clean HTML Design
+        // HTML Generator
         const htmlInvoice = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #eee; padding: 20px; border-radius: 8px;">
             <div style="text-align: center; margin-bottom: 20px;">
-                <h2 style="margin: 0;">FAKTURA</h2>
+                <h2 style="margin: 0;">${input.invoiceType === 'on_account' ? 'A-KONTO FAKTURA' : 'SLUTFAKTURA'}</h2>
                 <p style="color: #666;">Ref: ${invoiceId}</p>
             </div>
             
             <p>Hej ${projectData.customerName},</p>
             <p>Här kommer din faktura för projektet <strong>${projectData.projectTitle}</strong>.</p>
             
+            ${legalText ? `<div style="background: #eef; border: 1px solid #ccd; padding: 10px; margin: 10px 0; font-size: 0.9em; color: #335;">ℹ️ ${legalText}</div>` : ''}
+
             <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
                 <tr style="background: #f9f9f9; text-align: left;">
                     <th style="padding: 10px;">Beskrivning</th>
                     <th style="padding: 10px; text-align: right;">Belopp</th>
                 </tr>
-                ${pdfItems.map(item => `
+                ${invoiceItems.map(item => `
                     <tr>
                         <td style="padding: 10px; border-bottom: 1px solid #eee;">${item.description}</td>
-                        <td style="padding: 10px; border-bottom: 1px solid #eee; text-align: right;">${item.total} kr</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee; text-align: right;">${item.cost} kr</td>
                     </tr>
                 `).join('')}
+                
+                <!-- Totals Block -->
+                <tr><td colspan="2" style="border-bottom: 2px solid #ccc;"></td></tr>
+                
                 <tr>
-                    <td style="padding: 10px; font-weight: bold;">ATT BETALA (Inkl moms)</td>
+                    <td style="padding: 5px 10px; color: #666;">Delsumma (exkl moms)</td>
+                    <td style="padding: 5px 10px; text-align: right;">${subtotal} kr</td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px 10px; color: #666;">Moms (${input.applyReverseVat ? '0%' : '25%'})</td>
+                    <td style="padding: 5px 10px; text-align: right;">${vatAmount} kr</td>
+                </tr>
+
+                ${rotDeduction > 0 ? `
+                <tr style="color: #28a745;">
+                    <td style="padding: 5px 10px;"><strong>- ROT-avdrag (30% av arbete)</strong></td>
+                    <td style="padding: 5px 10px; text-align: right;"><strong>-${rotDeduction} kr</strong></td>
+                </tr>
+                ` : ''}
+
+                <tr>
+                    <td style="padding: 10px; font-weight: bold; font-size: 1.1em;">ATT BETALA</td>
                     <td style="padding: 10px; font-weight: bold; text-align: right; font-size: 1.2em;">${totalToPay} kr</td>
                 </tr>
             </table>
@@ -223,19 +368,34 @@ export const InvoiceService = {
         `;
 
         // 6. Send Email (HTML First, no PDF unless requested)
-        if (input.generatePdf) {
-            // ... (Keep legacy PDF logic if specifically requested, optional)
+        let attachments: any[] = [];
+        if (customPdfBuffer) {
+            attachments.push({
+                filename: `Faktura_${invoiceId}.pdf`,
+                content: customPdfBuffer
+            });
+        }
+
+        if (input.generatePdf && !customPdfBuffer) {
+            // Legacy: Generate PDF on the fly if requested and not provided
+            // For now we skip implementing the legacy "generate on fly" here to keep it simple, 
+            // assuming the Tool handles generation or we strictly rely on HTML-first.
         }
 
         // Use GmailService to send HTML
-        await GmailService.sendEmail(accessToken!, input.customerEmail, `Faktura ${invoiceId} - ${projectData.projectTitle}`, htmlInvoice);
+        await GmailService.sendEmail(accessToken!, input.customerEmail, `Faktura ${invoiceId} - ${projectData.projectTitle}`, htmlInvoice, attachments);
 
         // 7. Update Project Status
-        await ProjectRepo.update(input.projectId, { status: 'completed' });
+        // 7. Update Project Status (Only complete if Final Invoice)
+        if (input.invoiceType !== 'on_account') {
+            await ProjectRepo.update(input.projectId, { status: 'completed' });
+        } else {
+            console.log("Invoice sent, but Project remains ACTIVE (A-konto)");
+        }
 
         return {
             success: true,
-            message: "Faktura skickad via email (HTML) med spårning.",
+            message: `Faktura skickad! (ROT: ${rotDeduction}kr, Omvänd Moms: ${input.applyReverseVat ? 'JA' : 'NEJ'})`,
             invoiceId
         };
     }

@@ -44,7 +44,13 @@ export const finalizeInvoiceTool = ai.defineTool(
             customerEmail: z.string().email(),
             emailSubject: z.string(),
             emailBody: z.string(),
+            draftDocId: z.string().optional().describe("If provided, finalizes this Google Doc instead of generating a new PDF."),
             generatePdf: z.boolean().optional().describe("If true, generates and attaches a PDF (Old School). Default false."),
+            applyRot: z.boolean().optional().describe("Set to true if customer is private individual requesting ROT deduction (30% on labor)."),
+            applyReverseVat: z.boolean().optional().describe("Set to true if customer is a Construction Company (Umvänd byggmoms applies)."),
+            // A-konto fields
+            invoiceType: z.enum(['final', 'on_account']).optional().describe("Default 'final'. Set to 'on_account' for partial billing."),
+            amount: z.number().optional().describe("Required if invoiceType is 'on_account'. Fixed amount to bill.")
         }),
         outputSchema: z.object({
             success: z.boolean(),
@@ -56,12 +62,53 @@ export const finalizeInvoiceTool = ai.defineTool(
         const accessToken = context?.accessToken || context?.context?.accessToken as string | undefined;
 
         try {
+            // New "Living Doc" Flow
+            if (input.draftDocId) {
+                const { finalizeDocToPdfTool } = await import('@/lib/genkit/tools/pdf.tools'); // Circular ref check? Tools imports might be tricky.
+                // Better to call service directly or duplicate logic to avoid circular dept if these files import each other.
+                // Actually, pdf.tools imports nothing from invoice tools. But invoice tools likely doesn't import pdf tools yet.
+                // To avoid circular dependency issues in 'index.ts', let's use the SERVICE pattern or invoke the internal logic.
+                // For now, let's just implement the 'finalize' logic here using DriveService, as it's cleaner than tool-calling-tool.
+
+                const { GoogleDriveService } = await import('@/lib/google/drive');
+                const { Readable } = await import('stream');
+
+                // 1. Export PDF
+                const { buffer } = await GoogleDriveService.exportPdf(input.draftDocId, accessToken);
+                const stream = Readable.from(buffer);
+
+                // 2. Upload
+                // We don't have folder ID here easily without looking up project. 
+                // Assuming InvoiceService handles "Sent" logic, but here we just need a PDF link for email.
+                // Let's save it to a temp location or project folder?
+                // InvoiceService.finalizeInvoice expects 'pdfBuffer' or similar if we want to attach it.
+                // Actually InvoiceService.finalizeInvoice generates the PDF internally if we don't pass one... 
+                // We need to modify InvoiceService to accept a pre-generated PDF or Link.
+
+                // STOP: The plan said "finalizeInvoiceTool" updates.
+                // Let's keep it simple: If draftDocId is present, we convert it to buffer, and pass it to InvoiceService.
+
+                return await InvoiceService.finalizeInvoice({
+                    projectId: input.projectId,
+                    customerEmail: input.customerEmail,
+                    emailSubject: input.emailSubject,
+                    emailBody: input.emailBody,
+                    generatePdf: false, // We supply custom buffer
+                    // customPdfBuffer: buffer // TODO: InvoiceService needs this
+                }, accessToken, buffer); // Passing buffer as 2nd arg override? No, need to check Service signature.
+            }
+
             return await InvoiceService.finalizeInvoice({
                 projectId: input.projectId,
                 customerEmail: input.customerEmail,
                 emailSubject: input.emailSubject,
                 emailBody: input.emailBody,
-                generatePdf: input.generatePdf
+                emailBody: input.emailBody,
+                generatePdf: input.generatePdf,
+                applyRot: input.applyRot,
+                applyReverseVat: input.applyReverseVat,
+                invoiceType: input.invoiceType,
+                amount: input.amount
             }, accessToken);
         } catch (e: any) {
             console.error("Finalize Failed:", e);
